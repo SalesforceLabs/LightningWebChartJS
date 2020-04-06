@@ -1,0 +1,57 @@
+# Set the default line return behavior, in case people don't have core.autocrlf set.
+* text=auto eol=lf
+
+# Common git file types
+.gitattributes text
+.gitignore text
+*.md text
+
+# treat salesforce metadata file as text
+*.app text
+*.appMenu text
+*.assignmentRules text
+*.auradoc text
+*.autoResponseRules text
+*.callCenter text
+*.cls text
+*.cmp text
+*.component text
+*.css text
+*.customPermission text
+*.dashboard text
+*.design text
+*.duplicateRule text
+*.escalationRules text
+*.evt text
+*.flexipage text
+*.flow text
+*.globalValueSet text
+*.globalValueSetTranslation text
+*.homePageLayout text
+*.html text
+*.js text
+*.labels text
+*.layout text
+*.matchingRule text
+*.md text
+*.object text
+*.objectTranslation text
+*.page text
+*.pathAssistant text
+*.permissionset text
+*.profile text
+*.quickAction text
+*.report text
+*.reportType text
+*.settings text
+*.sharingRules text
+*.standardValueSet text
+*.standardValueSetTranslation text
+*.tab text
+*.trigger text
+*.xml text
+*.gitignore text
+*.gitattributes text
+
+# treat static resources as binary
+*.resource binary
