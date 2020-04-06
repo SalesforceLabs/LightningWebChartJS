@@ -45,7 +45,6 @@ IlluminatedCloud/
 .metadata
 .salesforce
 build.properties
-config
 
 # Apex Log as optional
 apex-scripts/log
@@ -55,7 +54,6 @@ salesforce.schema
 Referenced Packages
 bin/
 tmp/
-config/
 *.tmp
 *.bak 
 local.properties
