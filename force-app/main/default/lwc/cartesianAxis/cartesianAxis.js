@@ -1,7 +1,6 @@
 import BaseAxis from 'c/baseAxis';
 import { api } from 'lwc';
 import { ATTRIBUTE_CARTESIAN_AXES } from 'c/constants';
-import { v4 as uuidv4 } from 'c/uuid';
 
 /**
  * https://www.chartjs.org/docs/latest/axes/cartesian/
@@ -381,6 +380,7 @@ export default class CartesianAxis extends BaseAxis {
     this._axis = 'yAxes';
     this._payload[this._axis] = [{}];
     this._content = this._payload[this._axis][0];
+    // eslint-disable-next-line no-undef
     this._content.uuid = uuidv4();
     this._content.gridLines = {};
     this._content.scaleLabel = {};

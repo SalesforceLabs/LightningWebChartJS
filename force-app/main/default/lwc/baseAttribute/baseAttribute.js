@@ -1,6 +1,8 @@
 import { LightningElement } from 'lwc';
 import { OPTION_EVENT_NAME, DISCONNECT_EVENT_NAME } from 'c/constants';
 import MicroTaskHandler from 'c/microTaskHandler';
+// eslint-disable-next-line no-unused-vars
+import { v4 } from 'c/uuid';
 
 export default class BaseAttribute extends LightningElement {
   constructor() {

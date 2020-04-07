@@ -2,5 +2,5 @@
 <StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
     <cacheControl>Public</cacheControl>
     <contentType>text/javascript</contentType>
-    <description>Chart js v2.9.3</description>
+    <description>Chart js bundle v2.8.0</description>
 </StaticResource>

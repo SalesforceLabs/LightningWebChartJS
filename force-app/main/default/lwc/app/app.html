@@ -1,297 +1,299 @@
 <template>
-  <h1>LWCC</h1>
+  <div class="slds-card">
+    <!-- Bar chart -->
+    <c-bar-chart height="400px" width="400px">
+      <c-dataset
+        labels='["Red", "Blue", "Yellow", "Green", "Purple", "Orange"]'
+      >
+        <c-data
+          label="# of Votes"
+          detail="[12, 19, 3, 5, 2, 3]"
+          backgroundcolor='[
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)"
+            ]'
+          bordercolor='[
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)"
+            ]'
+          borderwidth="1"
+        ></c-data>
+      </c-dataset>
+      <c-title text="Bar Chart"></c-title>
+      <c-legend position="right"></c-legend>
+      <c-layout
+        padding-top="10"
+        padding-right="10"
+        padding-left="10"
+        padding-bottom="10"
+      ></c-layout>
+      <c-animation
+        duration="2000"
+        easing="easeInBounce"
+        callback-oncomplete={animationOnComplete}
+        callback-onprogress={animationOnProgress}
+      >
+      </c-animation>
+      <c-cartesian-category-axis
+        axis="x"
+        position="top"
+        ticks-min="Yellow"
+      ></c-cartesian-category-axis>
+    </c-bar-chart>
 
-  <!-- Bar chart -->
-  <c-bar-chart height="400px" width="400px">
-    <c-dataset labels='["Red", "Blue", "Yellow", "Green", "Purple", "Orange"]'>
-      <c-data
-        label="# of Votes"
-        detail="[12, 19, 3, 5, 2, 3]"
-        backgroundcolor='[
-            "rgba(255, 99, 132, 0.2)",
+    <!-- Progress bar linked to the animationOnProgress callback -->
+    <progress value={barChartCurrentPercentage} max="100"></progress>
+
+    <!-- Line chart -->
+    <c-line-chart height="400px" width="400px">
+      <c-dataset
+        labels='["January", "February", "March", "April", "May", "June", "July"]'
+      >
+        <c-data
+          label="My First dataset"
+          detail="[10, 30, 46, 2, 8, 50, 0]"
+          backgroundcolor="rgba(44, 130, 201, 1)"
+          bordercolor="rgba(44, 130, 201, 1)"
+          fill="false"
+        ></c-data>
+        <c-data
+          label="My Second dataset"
+          detail="[7, 49, 46, 13, 25, 30, 22]"
+          backgroundcolor="rgba(240, 52, 52, 1)"
+          bordercolor="rgba(240, 52, 52, 1)"
+          fill="false"
+        ></c-data>
+      </c-dataset>
+      <c-title text="Line Chart"></c-title>
+      <c-tooltip position="nearest" mode="index" enabled="true"></c-tooltip>
+      <c-animation duration="2000" easing="easeInExpo"></c-animation>
+      <c-line-configuration tension="0.4"></c-line-configuration>
+      <c-cartesian-axis
+        axis="x"
+        position="top"
+        type="category"
+      ></c-cartesian-axis>
+      <c-cartesian-linear-axis
+        axis="y"
+        position="right"
+        ticks-min="-10"
+        title-display="true"
+        title-labelstring="yAxis items"
+        grid-zerolinecolor="#FFA500"
+        grid-zerolinewidth="4"
+      >
+      </c-cartesian-linear-axis>
+    </c-line-chart>
+
+    <!-- Pie chart -->
+    <c-pie-chart height="400px" width="400px">
+      <c-dataset labels='["OK", "WARNING", "CRITICAL", "UNKNOWN"]'>
+        <c-data
+          label="# of Tomatoes"
+          detail="[12, 19, 3, 5]"
+          backgroundcolor='[
+            "rgba(255, 99, 132, 0.5)",
             "rgba(54, 162, 235, 0.2)",
             "rgba(255, 206, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(153, 102, 255, 0.2)",
-            "rgba(255, 159, 64, 0.2)"
-         ]'
-        bordercolor='[
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(153, 102, 255, 1)",
-            "rgba(255, 159, 64, 1)"
-         ]'
-        borderwidth="1"
-      ></c-data>
-    </c-dataset>
-    <c-title text="Bar Chart"></c-title>
-    <c-legend position="right"></c-legend>
-    <c-layout
-      padding-top="10"
-      padding-right="10"
-      padding-left="10"
-      padding-bottom="10"
-    ></c-layout>
-    <c-animation
-      duration="2000"
-      easing="easeInBounce"
-      callback-oncomplete={animationOnComplete}
-      callback-onprogress={animationOnProgress}
-    >
-    </c-animation>
-    <c-cartesian-category-axis
-      axis="x"
-      position="top"
-      ticks-min="Yellow"
-    ></c-cartesian-category-axis>
-  </c-bar-chart>
+            "rgba(75, 192, 192, 0.2)"
+        ]'
+        ></c-data>
+      </c-dataset>
+      <c-title text="Pie Chart"></c-title>
+      <c-legend position="right"></c-legend>
+      <c-layout
+        padding-top="10"
+        padding-right="10"
+        padding-left="10"
+        padding-bottom="10"
+      ></c-layout>
+    </c-pie-chart>
 
-  <!-- Progress bar linked to the animationOnProgress callback -->
-  <progress value={barChartCurrentPercentage} max="100"></progress>
+    <!-- Doughnut chart -->
+    <c-doughnut-chart height="400px" width="400px">
+      <c-dataset labels='["OK", "WARNING", "CRITICAL", "UNKNOWN"]'>
+        <c-data
+          label="# of Tomatoes"
+          detail="[12, 19, 3, 5]"
+          backgroundcolor='[
+            "rgba(255, 99, 132, 0.5)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(75, 192, 192, 0.2)"
+        ]'
+        ></c-data>
+      </c-dataset>
+      <c-title text="Doughnut Chart"></c-title>
+      <c-legend position="left"></c-legend>
+      <c-layout
+        padding-top="10"
+        padding-right="10"
+        padding-left="10"
+        padding-bottom="10"
+      ></c-layout>
+      <c-arc-configuration
+        bordercolor="#000"
+        backgroundcolor="#000"
+      ></c-arc-configuration>
+    </c-doughnut-chart>
 
-  <!-- Line chart -->
-  <c-line-chart height="400px" width="400px">
-    <c-dataset
-      labels='["January", "February", "March", "April", "May", "June", "July"]'
-    >
-      <c-data
-        label="My First dataset"
-        detail="[10, 30, 46, 2, 8, 50, 0]"
-        backgroundcolor="rgba(44, 130, 201, 1)"
-        bordercolor="rgba(44, 130, 201, 1)"
-        fill="false"
-      ></c-data>
-      <c-data
-        label="My Second dataset"
-        detail="[7, 49, 46, 13, 25, 30, 22]"
-        backgroundcolor="rgba(240, 52, 52, 1)"
-        bordercolor="rgba(240, 52, 52, 1)"
-        fill="false"
-      ></c-data>
-    </c-dataset>
-    <c-title text="Line Chart"></c-title>
-    <c-tooltip position="nearest" mode="index" enabled="true"></c-tooltip>
-    <c-animation duration="2000" easing="easeInExpo"></c-animation>
-    <c-line-configuration tension="0.4"></c-line-configuration>
-    <c-cartesian-axis
-      axis="x"
-      position="top"
-      type="category"
-    ></c-cartesian-axis>
-    <c-cartesian-linear-axis
-      axis="y"
-      position="right"
-      ticks-min="-10"
-      title-display="true"
-      title-labelstring="yAxis items"
-      grid-zerolinecolor="#FFA500"
-      grid-zerolinewidth="4"
-    >
-    </c-cartesian-linear-axis>
-  </c-line-chart>
+    <!-- Bubble chart -->
+    <c-bubble-chart height="400px" width="400px">
+      <c-dataset>
+        <c-data
+          label="John"
+          detail='[\{"x": 3,"y": 7,"r": 10\}]'
+          backgroundcolor="#ff6384"
+        ></c-data>
+        <c-data
+          label="Paul"
+          detail='[\{"x": 2,"y": 6,"r": 10\}]'
+          backgroundcolor="#ff6384"
+        ></c-data>
+        <c-data
+          label="Ringo"
+          detail='[\{"x": 5,"y": 3,"r": 10\}]'
+          backgroundcolor="#ff6384"
+        ></c-data>
+      </c-dataset>
+      <c-title text="Bubble Chart"></c-title>
+      <c-legend position="bottom"></c-legend>
+      <c-layout
+        padding-top="10"
+        padding-right="10"
+        padding-left="10"
+        padding-bottom="10"
+      ></c-layout>
+    </c-bubble-chart>
 
-  <!-- Pie chart -->
-  <c-pie-chart height="400px" width="400px">
-    <c-dataset labels='["OK", "WARNING", "CRITICAL", "UNKNOWN"]'>
-      <c-data
-        label="# of Tomatoes"
-        detail="[12, 19, 3, 5]"
-        backgroundcolor='[
-         "rgba(255, 99, 132, 0.5)",
-         "rgba(54, 162, 235, 0.2)",
-         "rgba(255, 206, 86, 0.2)",
-         "rgba(75, 192, 192, 0.2)"
-       ]'
-      ></c-data>
-    </c-dataset>
-    <c-title text="Pie Chart"></c-title>
-    <c-legend position="right"></c-legend>
-    <c-layout
-      padding-top="10"
-      padding-right="10"
-      padding-left="10"
-      padding-bottom="10"
-    ></c-layout>
-  </c-pie-chart>
-
-  <!-- Doughnut chart -->
-  <c-doughnut-chart height="400px" width="400px">
-    <c-dataset labels='["OK", "WARNING", "CRITICAL", "UNKNOWN"]'>
-      <c-data
-        label="# of Tomatoes"
-        detail="[12, 19, 3, 5]"
-        backgroundcolor='[
-         "rgba(255, 99, 132, 0.5)",
-         "rgba(54, 162, 235, 0.2)",
-         "rgba(255, 206, 86, 0.2)",
-         "rgba(75, 192, 192, 0.2)"
-       ]'
-      ></c-data>
-    </c-dataset>
-    <c-title text="Doughnut Chart"></c-title>
-    <c-legend position="left"></c-legend>
-    <c-layout
-      padding-top="10"
-      padding-right="10"
-      padding-left="10"
-      padding-bottom="10"
-    ></c-layout>
-    <c-arc-configuration
-      bordercolor="#000"
-      backgroundcolor="#000"
-    ></c-arc-configuration>
-  </c-doughnut-chart>
-
-  <!-- Bubble chart -->
-  <c-bubble-chart height="400px" width="400px">
-    <c-dataset>
-      <c-data
-        label="John"
-        detail='[\{"x": 3,"y": 7,"r": 10\}]'
-        backgroundcolor="#ff6384"
-      ></c-data>
-      <c-data
-        label="Paul"
-        detail='[\{"x": 2,"y": 6,"r": 10\}]'
-        backgroundcolor="#ff6384"
-      ></c-data>
-      <c-data
-        label="Ringo"
-        detail='[\{"x": 5,"y": 3,"r": 10\}]'
-        backgroundcolor="#ff6384"
-      ></c-data>
-    </c-dataset>
-    <c-title text="Bubble Chart"></c-title>
-    <c-legend position="bottom"></c-legend>
-    <c-layout
-      padding-top="10"
-      padding-right="10"
-      padding-left="10"
-      padding-bottom="10"
-    ></c-layout>
-  </c-bubble-chart>
-
-  <!-- Scatter chart -->
-  <c-scatter-chart height="400px" width="400px">
-    <c-dataset
-      labels='["January", "February", "March", "April", "May", "June", "July"]'
-    >
-      <c-data
-        label="My First dataset"
-        detail='[\{"x":10,"y":5\}, \{"x":30,"y":10\}, \{"x":46,"y":12\}, \{"x":2,"y":20\}, \{"x":8,"y":15\}, \{"x":50,"y":10\}, \{"x":0,"y":25\}]'
-        backgroundcolor="rgba(44, 130, 201, 1)"
-        bordercolor="rgba(44, 130, 201, 1)"
-        fill="false"
-      ></c-data>
-    </c-dataset>
-    <c-title text="Scatter Chart"></c-title>
-    <c-tooltip position="nearest" mode="index" enabled="true"></c-tooltip>
-  </c-scatter-chart>
-
-  <!-- Mix chart -->
-  <c-bar-chart height="400px" width="400px">
-    <c-dataset
-      labels='["January", "February", "March", "April", "May", "June", "July"]'
-    >
-      <c-data
-        label="My First dataset"
-        detail="[10, 30, 46, 2, 8, 50, 0]"
-        backgroundcolor="rgba(44, 130, 201, 1)"
-        bordercolor="rgba(44, 130, 201, 1)"
-        fill="false"
-        order="2"
-      ></c-data>
-      <c-data
-        label="My Second dataset"
-        detail="[7, 49, 46, 13, 25, 30, 22]"
-        backgroundcolor="rgba(240, 52, 52, 1)"
-        bordercolor="rgba(240, 52, 52, 1)"
-        fill="false"
-        order="1"
-        type="line"
-      ></c-data>
-    </c-dataset>
-    <c-title text="Mix Chart"></c-title>
-    <c-tooltip position="nearest" mode="index" enabled="true"></c-tooltip>
-  </c-bar-chart>
-
-  <!-- Radar Chart -->
-  <c-radar-chart height="400px" width="400px">
-    <c-dataset
-      labels='["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"]'
-    >
-      <c-data
-        label="My First dataset"
-        detail="[65, 59, 90, 81, 56, 55, 40]"
-        backgroundcolor="rgba(179,181,198,0.2)"
-        bordercolor="rgba(179,181,198,1)"
-        pointhoverbackgroundcolor="#000"
-        pointhoverbordercolor="#000"
-      ></c-data>
-      <c-data
-        label="My Second dataset"
-        detail="[28, 48, 40, 19, 96, 27, 100]"
-        backgroundcolor="rgba(255,99,132,0.2)"
-        bordercolor="rgba(255,99,132,1)"
-      ></c-data>
-    </c-dataset>
-    <c-title text="Radar Chart"></c-title>
-  </c-radar-chart>
-
-  <!-- PolarArea Chart -->
-  <c-polar-area-chart height="400px" width="400px">
-    <c-dataset labels='["Eating", "Drinking", "Sleeping"]'>
-      <c-data
-        label="My First dataset"
-        detail="[41, 38, 35]"
-        backgroundcolor='["rgba(103, 182, 93,.75)", "rgba(182, 87, 56,.75)","rgba(83, 134, 155,.75)"]'
-        bordercolor='["rgba(103, 182, 93,1)", "rgba(182, 87, 56,1)","rgba(83, 134, 155,1)"]'
+    <!-- Scatter chart -->
+    <c-scatter-chart height="400px" width="400px">
+      <c-dataset
+        labels='["January", "February", "March", "April", "May", "June", "July"]'
       >
-      </c-data>
-    </c-dataset>
-    <c-title text="Polar Area Chart"></c-title>
-  </c-polar-area-chart>
+        <c-data
+          label="My First dataset"
+          detail='[\{"x":10,"y":5\}, \{"x":30,"y":10\}, \{"x":46,"y":12\}, \{"x":2,"y":20\}, \{"x":8,"y":15\}, \{"x":50,"y":10\}, \{"x":0,"y":25\}]'
+          backgroundcolor="rgba(44, 130, 201, 1)"
+          bordercolor="rgba(44, 130, 201, 1)"
+          fill="false"
+        ></c-data>
+      </c-dataset>
+      <c-title text="Scatter Chart"></c-title>
+      <c-tooltip position="nearest" mode="index" enabled="true"></c-tooltip>
+    </c-scatter-chart>
 
-  <!-- Scales -->
-  <c-line-chart height="400px" width="400px">
-    <c-title text="Logarithmic"></c-title>
-    <c-cartesian-logarithmic-axis></c-cartesian-logarithmic-axis>
-  </c-line-chart>
+    <!-- Mix chart -->
+    <c-bar-chart height="400px" width="400px">
+      <c-dataset
+        labels='["January", "February", "March", "April", "May", "June", "July"]'
+      >
+        <c-data
+          label="My First dataset"
+          detail="[10, 30, 46, 2, 8, 50, 0]"
+          backgroundcolor="rgba(44, 130, 201, 1)"
+          bordercolor="rgba(44, 130, 201, 1)"
+          fill="false"
+          order="2"
+        ></c-data>
+        <c-data
+          label="My Second dataset"
+          detail="[7, 49, 46, 13, 25, 30, 22]"
+          backgroundcolor="rgba(240, 52, 52, 1)"
+          bordercolor="rgba(240, 52, 52, 1)"
+          fill="false"
+          order="1"
+          type="line"
+        ></c-data>
+      </c-dataset>
+      <c-title text="Mix Chart"></c-title>
+      <c-tooltip position="nearest" mode="index" enabled="true"></c-tooltip>
+    </c-bar-chart>
 
-  <c-line-chart height="400px" width="400px">
-    <c-title text="Time"></c-title>
-    <c-cartesian-time-axis axis="y"></c-cartesian-time-axis>
-    <c-cartesian-linear-axis axis="x"></c-cartesian-linear-axis>
-  </c-line-chart>
-  <c-bar-chart height="400px" width="400px">
-    <c-title text="Category"></c-title>
-    <c-dataset labels='["OK", "WARNING", "CRITICAL", "UNKNOWN"]'>
-      <c-data
-        label="# of Tomatoes"
-        detail="[12, 19, 3, 5]"
-        backgroundcolor='[
-         "rgba(255, 99, 132, 0.5)",
-         "rgba(54, 162, 235, 0.2)",
-         "rgba(255, 206, 86, 0.2)",
-         "rgba(75, 192, 192, 0.2)"
-       ]'
-      ></c-data>
-    </c-dataset>
-    <c-cartesian-category-axis
-      axis="x"
-      position="top"
-      title-display="true"
-      title-labelstring="Category axis here"
-    >
-    </c-cartesian-category-axis>
-    <c-cartesian-linear-axis
-      axis="y"
-      ticks-stepsize="15"
-      position="right"
-      title-display="true"
-      title-labelstring="Linear axis here"
-    ></c-cartesian-linear-axis>
-  </c-bar-chart>
+    <!-- Radar Chart -->
+    <c-radar-chart height="400px" width="400px">
+      <c-dataset
+        labels='["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"]'
+      >
+        <c-data
+          label="My First dataset"
+          detail="[65, 59, 90, 81, 56, 55, 40]"
+          backgroundcolor="rgba(179,181,198,0.2)"
+          bordercolor="rgba(179,181,198,1)"
+          pointhoverbackgroundcolor="#000"
+          pointhoverbordercolor="#000"
+        ></c-data>
+        <c-data
+          label="My Second dataset"
+          detail="[28, 48, 40, 19, 96, 27, 100]"
+          backgroundcolor="rgba(255,99,132,0.2)"
+          bordercolor="rgba(255,99,132,1)"
+        ></c-data>
+      </c-dataset>
+      <c-title text="Radar Chart"></c-title>
+    </c-radar-chart>
+
+    <!-- PolarArea Chart -->
+    <c-polar-area-chart height="400px" width="400px">
+      <c-dataset labels='["Eating", "Drinking", "Sleeping"]'>
+        <c-data
+          label="My First dataset"
+          detail="[41, 38, 35]"
+          backgroundcolor='["rgba(103, 182, 93,.75)", "rgba(182, 87, 56,.75)","rgba(83, 134, 155,.75)"]'
+          bordercolor='["rgba(103, 182, 93,1)", "rgba(182, 87, 56,1)","rgba(83, 134, 155,1)"]'
+        >
+        </c-data>
+      </c-dataset>
+      <c-title text="Polar Area Chart"></c-title>
+    </c-polar-area-chart>
+
+    <!-- Scales -->
+    <c-line-chart height="400px" width="400px">
+      <c-title text="Logarithmic"></c-title>
+      <c-cartesian-logarithmic-axis></c-cartesian-logarithmic-axis>
+    </c-line-chart>
+
+    <c-line-chart height="400px" width="400px">
+      <c-title text="Time"></c-title>
+      <c-cartesian-time-axis axis="y"></c-cartesian-time-axis>
+      <c-cartesian-linear-axis axis="x"></c-cartesian-linear-axis>
+    </c-line-chart>
+    <c-bar-chart height="400px" width="400px">
+      <c-title text="Category"></c-title>
+      <c-dataset labels='["OK", "WARNING", "CRITICAL", "UNKNOWN"]'>
+        <c-data
+          label="# of Tomatoes"
+          detail="[12, 19, 3, 5]"
+          backgroundcolor='[
+            "rgba(255, 99, 132, 0.5)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(75, 192, 192, 0.2)"
+        ]'
+        ></c-data>
+      </c-dataset>
+      <c-cartesian-category-axis
+        axis="x"
+        position="top"
+        title-display="true"
+        title-labelstring="Category axis here"
+      >
+      </c-cartesian-category-axis>
+      <c-cartesian-linear-axis
+        axis="y"
+        ticks-stepsize="15"
+        position="right"
+        title-display="true"
+        title-labelstring="Linear axis here"
+      ></c-cartesian-linear-axis>
+    </c-bar-chart>
+  </div>
 </template>

@@ -1,5 +1,8 @@
-import { LightningElement, api /*getComponentDef*/ } from 'lwc';
-import Chart from '@salesforce/resourceUrl/chartjs_v293';
+import { LightningElement, api } from 'lwc';
+import ChartJS from '@salesforce/resourceUrl/chartjs_v280';
+
+import { loadScript } from 'lightning/platformResourceLoader';
+
 import {
   ATTRIBUTE_DATA,
   OPTION_EVENT_NAME,
@@ -11,6 +14,9 @@ export default class BaseChart extends LightningElement {
   @api width = 400;
   @api height = 400;
   @api stylecss;
+
+  _baseChartInitialized = false;
+  _chartjsLoaded = false;
 
   get chartStyle() {
     return `width: ${this.width}; height: ${this.height}; ${this.stylecss ||
@@ -44,16 +50,27 @@ export default class BaseChart extends LightningElement {
     });
   }
 
-  //renderedCallback() {
-  //this.renderChart();
-  //}
+  renderedCallback() {
+    if (this._baseChartInitialized) {
+      return;
+    }
+    this._baseChartInitialized = true;
+
+    loadScript(this, ChartJS).then(() => {
+      this._chartjsLoaded = true;
+      this.renderChart();
+    });
+  }
 
   getCanvas() {
     return this.template.querySelector('canvas').getContext('2d');
   }
 
   renderChart() {
+    if (!this._chartjsLoaded) return;
+
     if (!this._chart) {
+      // eslint-disable-next-line no-undef
       this._chart = new Chart(this.getCanvas(), {
         type: this.constructor.type,
         data: this._details,

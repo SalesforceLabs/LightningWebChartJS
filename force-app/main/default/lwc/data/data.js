@@ -1,6 +1,5 @@
 import BaseAttribute from 'c/baseAttribute';
 import { api } from 'lwc';
-import { v4 as uuidv4 } from 'c/uuid';
 import { ATTRIBUTE_DATA, DATA_EVENT_NAME } from 'c/constants';
 
 export default class Data extends BaseAttribute {
@@ -134,6 +133,7 @@ export default class Data extends BaseAttribute {
   constructor() {
     super();
     this._eventName = DATA_EVENT_NAME;
+    // eslint-disable-next-line no-undef
     this._payload.uuid = uuidv4();
     this._option = ATTRIBUTE_DATA;
   }
