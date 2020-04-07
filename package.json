@@ -4,13 +4,16 @@
   "version": "1.0.0",
   "description": "Salesforce App",
   "scripts": {
-    "lint": "npm run lint:lwc",
+    "lint": "npm run lint:lwc && npm run lint:apex",
     "lint:lwc": "eslint force-app/main/default/lwc",
-    "test": "npm run test:unit",
+    "lint:apex": "pmd pmd -minimumpriority 2 -d force-app -R apex-ruleset.xml -f text -l apex",
+    "test": "npm run test:unit && npm run test:apex",
+    "test:apex": "sfdx force:apex:test:run -r human -d ./tests/apex -t lwcc -w 20",
+    "test:apex:coverage": "sfdx force:apex:test:run -c -r human -d ./tests/apex -w 20",
     "test:unit": "sfdx-lwc-jest",
     "test:unit:watch": "sfdx-lwc-jest --watch",
     "test:unit:debug": "sfdx-lwc-jest --debug",
-    "test:unit:coverage": "sfdx-lwc-jest --coverage",
+    "test:unit:coverage": "sfdx-lwc-jest --coverage -- --passWithNoTests",
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\""
   },
@@ -19,7 +22,23 @@
     "@salesforce/eslint-config-lwc": "^0.4.0",
     "@salesforce/sfdx-lwc-jest": "^0.7.0",
     "eslint": "^5.16.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.2",
     "prettier": "^1.19.1",
     "prettier-plugin-apex": "^1.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run lint",
+      "pre-push": "npm run test:unit:coverage"
+    }
+  },
+  "lint-staged": {
+    "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}": [
+      "prettier --write"
+    ],
+    "**/lwc/**": [
+      "eslint"
+    ]
   }
 }

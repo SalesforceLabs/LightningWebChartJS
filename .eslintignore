@@ -3,4 +3,5 @@
 **/lwc/**/*.json
 **/lwc/**/*.svg
 **/lwc/**/*.xml
+**/uuid.js
 .sfdx

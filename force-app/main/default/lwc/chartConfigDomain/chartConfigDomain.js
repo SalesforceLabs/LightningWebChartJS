@@ -1,10 +1,7 @@
-
 export default class ChartConfigDomain {
-
-    defaultConfiguration = {
-        legend: {
-            display: false
-        }
+  defaultConfiguration = {
+    legend: {
+      display: false
     }
-
+  };
 }

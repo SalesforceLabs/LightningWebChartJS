@@ -84,3 +84,5 @@ mm.log
 .tern-project
 TestCache.xml
 TestsResultsCache.xml
+
+tests/
