@@ -24,7 +24,6 @@ export default class Dataset extends BaseAttribute {
   }
 
   connectedCallback() {
-    super.connectedCallback();
     this.addEventListener(DATA_EVENT_NAME, evt => {
       evt.stopPropagation();
       this._details[evt.detail.payload.uuid] = evt.detail.payload;

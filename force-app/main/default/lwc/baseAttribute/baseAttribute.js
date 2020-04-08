@@ -11,13 +11,13 @@ export default class BaseAttribute extends LightningElement {
     this._payload = {};
   }
 
-  connectedCallback() {
-    this.parent = this.parentNode;
+  renderedCallback() {
+    this._parent = this.template.host.parentNode;
   }
 
   disconnectedCallback() {
-    if (this.parent) {
-      this.parent.dispatchEvent(
+    if (this._parent) {
+      this._parent.dispatchEvent(
         new CustomEvent(DISCONNECT_EVENT_NAME, {
           bubbles: true,
           detail: {

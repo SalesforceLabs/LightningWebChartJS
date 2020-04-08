@@ -134,7 +134,6 @@ export default class Data extends BaseAttribute {
   constructor() {
     super();
     this._eventName = DATA_EVENT_NAME;
-    // eslint-disable-next-line no-undef
     this._payload.uuid = nanoid(10);
     this._option = ATTRIBUTE_DATA;
   }

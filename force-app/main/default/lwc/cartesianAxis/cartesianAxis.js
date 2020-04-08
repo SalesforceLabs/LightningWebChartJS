@@ -381,7 +381,6 @@ export default class CartesianAxis extends BaseAxis {
     this._axis = 'yAxes';
     this._payload[this._axis] = [{}];
     this._content = this._payload[this._axis][0];
-    // eslint-disable-next-line no-undef
     this._content.uuid = nanoid(10);
     this._content.gridLines = {};
     this._content.scaleLabel = {};
