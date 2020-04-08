@@ -55,7 +55,7 @@ export default class BaseChart extends LightningElement {
 
     loadScript(this, ChartJS).then(() => {
       this._chartjsLoaded = true;
-      this.renderChart();
+      this._mt.waitNextTask();
     });
   }
 
