@@ -60,7 +60,9 @@ export default class BaseChart extends LightningElement {
   }
 
   getCanvas() {
-    return this.template.querySelector('canvas').getContext('2d');
+    const canvas = document.createElement('canvas');
+    this.template.querySelector('div').appendChild(canvas);
+    return canvas.getContext('2d');
   }
 
   renderChart() {
