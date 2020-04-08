@@ -33,6 +33,7 @@ export default class BaseChart extends LightningElement {
 
   connectedCallback() {
     this.addEventListener(OPTION_EVENT_NAME, evt => {
+      evt.stopPropagation();
       const { payload, option } = evt.detail;
       if (option === ATTRIBUTE_DATA) {
         this._details = payload;
@@ -43,7 +44,17 @@ export default class BaseChart extends LightningElement {
     });
 
     this.addEventListener(DISCONNECT_EVENT_NAME, evt => {
-      this.handleChildDisconnect(evt);
+      evt.stopPropagation();
+      const { payload, option } = evt.detail;
+      if (option === ATTRIBUTE_DATA) {
+        this._details = null;
+        if (this._chart) {
+          this._chart.destroy();
+        }
+      } else {
+        this._configService.removeConfig(payload, option);
+        this._mt.waitNextTask();
+      }
     });
   }
 
@@ -80,10 +91,5 @@ export default class BaseChart extends LightningElement {
       this._chart.options = this._configService.getConfig();
       this._chart.update();
     }
-  }
-
-  handleChildDisconnect(evt) {
-    this._configService.removeConfig(evt.detail.payload, evt.detail.option);
-    this._mt.waitNextTask();
   }
 }
