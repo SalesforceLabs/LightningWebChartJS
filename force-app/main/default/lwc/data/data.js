@@ -1,6 +1,7 @@
 import BaseAttribute from 'c/baseAttribute';
 import { api } from 'lwc';
 import { ATTRIBUTE_DATA, DATA_EVENT_NAME } from 'c/constants';
+import { nanoid } from 'c/nanoid';
 
 export default class Data extends BaseAttribute {
   @api
@@ -134,7 +135,7 @@ export default class Data extends BaseAttribute {
     super();
     this._eventName = DATA_EVENT_NAME;
     // eslint-disable-next-line no-undef
-    this._payload.uuid = uuidv4();
+    this._payload.uuid = nanoid(10);
     this._option = ATTRIBUTE_DATA;
   }
 }

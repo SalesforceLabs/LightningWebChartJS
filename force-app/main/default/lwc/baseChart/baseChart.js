@@ -1,6 +1,5 @@
 import { LightningElement, api } from 'lwc';
 import ChartJS from '@salesforce/resourceUrl/chartjs_v280';
-
 import { loadScript } from 'lightning/platformResourceLoader';
 
 import {
@@ -30,7 +29,6 @@ export default class BaseChart extends LightningElement {
     this._chart = null;
     this._mt = new MicroTaskHandler();
     this._mt.registerCallback(() => this.renderChart());
-    //this._mt.registerCallback(()=>this.renderedCallback());
   }
 
   connectedCallback() {
@@ -42,7 +40,6 @@ export default class BaseChart extends LightningElement {
         this._configService.updateConfig(payload, option);
       }
       this._mt.waitNextTask();
-      //this._mt.waitNextTask(()=>this.renderedCallback());
     });
 
     this.addEventListener(DISCONNECT_EVENT_NAME, evt => {
@@ -86,11 +83,5 @@ export default class BaseChart extends LightningElement {
   handleChildDisconnect(evt) {
     this._configService.removeConfig(evt.detail.payload, evt.detail.option);
     this._mt.waitNextTask();
-    //this.renderChart();
   }
-
-  /*render() {
-        return this.template;
-        //return getComponentDef(BaseChart).template;
-    }*/
 }
