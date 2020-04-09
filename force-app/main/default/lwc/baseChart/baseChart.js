@@ -77,7 +77,7 @@ export default class BaseChart extends LightningElement {
   }
 
   renderChart() {
-    if (!this._chartjsLoaded) return;
+    if (!this._chartjsLoaded || !this._details) return;
 
     if (!this._chart) {
       // eslint-disable-next-line no-undef
