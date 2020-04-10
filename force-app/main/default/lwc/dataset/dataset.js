@@ -24,7 +24,6 @@ export default class Dataset extends BaseAttribute {
   }
 
   connectedCallback() {
-    super.connectedCallback();
     this.addEventListener(DATA_EVENT_NAME, evt => {
       evt.stopPropagation();
       this._details[evt.detail.payload.uuid] = evt.detail.payload;
@@ -34,8 +33,7 @@ export default class Dataset extends BaseAttribute {
 
     this.addEventListener(DISCONNECT_EVENT_NAME, evt => {
       evt.stopPropagation();
-      this.handleChildDisconnect(evt);
-      this._details[evt.detail.payload.uuid] = undefined;
+      delete this._details[evt.detail.payload.uuid];
       this._payload.datasets = Object.values(this._details);
       this._mt.waitNextTask();
     });

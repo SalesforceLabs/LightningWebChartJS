@@ -29,15 +29,16 @@ export default class ChartConfigService {
         } else {
           this._config[option][attribut].push(payload[attribut]);
         }
+      } else if (
+        typeof this._config[option][attribut] === 'object' &&
+        this._config[option][attribut] !== null
+      ) {
+        this._config[option][attribut] = {
+          ...this._config[option][attribut],
+          ...payload[attribut]
+        };
       } else {
-        if (this._config[option][attribut] !== undefined) {
-          this._config[option][attribut] = {
-            ...this._config[option][attribut],
-            ...payload[attribut]
-          };
-        } else {
-          this._config[option][attribut] = payload[attribut];
-        }
+        this._config[option][attribut] = payload[attribut];
       }
     });
   }

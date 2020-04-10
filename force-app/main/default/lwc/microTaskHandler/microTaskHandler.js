@@ -3,7 +3,6 @@ export default class MicroTaskHandler {
     this._ready = false;
   }
 
-  //isReady(){return this._ready}
   registerCallback(cb) {
     this.callback = cb;
   }

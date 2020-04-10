@@ -1,6 +1,5 @@
 import { LightningElement, api } from 'lwc';
 import ChartJS from '@salesforce/resourceUrl/chartjs_v280';
-
 import { loadScript } from 'lightning/platformResourceLoader';
 
 import {
@@ -30,11 +29,11 @@ export default class BaseChart extends LightningElement {
     this._chart = null;
     this._mt = new MicroTaskHandler();
     this._mt.registerCallback(() => this.renderChart());
-    //this._mt.registerCallback(()=>this.renderedCallback());
   }
 
   connectedCallback() {
     this.addEventListener(OPTION_EVENT_NAME, evt => {
+      evt.stopPropagation();
       const { payload, option } = evt.detail;
       if (option === ATTRIBUTE_DATA) {
         this._details = payload;
@@ -42,11 +41,20 @@ export default class BaseChart extends LightningElement {
         this._configService.updateConfig(payload, option);
       }
       this._mt.waitNextTask();
-      //this._mt.waitNextTask(()=>this.renderedCallback());
     });
 
     this.addEventListener(DISCONNECT_EVENT_NAME, evt => {
-      this.handleChildDisconnect(evt);
+      evt.stopPropagation();
+      const { payload, option } = evt.detail;
+      if (option === ATTRIBUTE_DATA) {
+        this._details = null;
+        if (this._chart) {
+          this._chart.destroy();
+        }
+      } else {
+        this._configService.removeConfig(payload, option);
+        this._mt.waitNextTask();
+      }
     });
   }
 
@@ -58,16 +66,18 @@ export default class BaseChart extends LightningElement {
 
     loadScript(this, ChartJS).then(() => {
       this._chartjsLoaded = true;
-      this.renderChart();
+      this._mt.waitNextTask();
     });
   }
 
   getCanvas() {
-    return this.template.querySelector('canvas').getContext('2d');
+    const canvas = document.createElement('canvas');
+    this.template.querySelector('div').appendChild(canvas);
+    return canvas.getContext('2d');
   }
 
   renderChart() {
-    if (!this._chartjsLoaded) return;
+    if (!this._chartjsLoaded || !this._details) return;
 
     if (!this._chart) {
       // eslint-disable-next-line no-undef
@@ -82,15 +92,4 @@ export default class BaseChart extends LightningElement {
       this._chart.update();
     }
   }
-
-  handleChildDisconnect(evt) {
-    this._configService.removeConfig(evt.detail.payload, evt.detail.option);
-    this._mt.waitNextTask();
-    //this.renderChart();
-  }
-
-  /*render() {
-        return this.template;
-        //return getComponentDef(BaseChart).template;
-    }*/
 }
