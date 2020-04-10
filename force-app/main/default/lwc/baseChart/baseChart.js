@@ -4,23 +4,89 @@ import { loadScript } from 'lightning/platformResourceLoader';
 
 import {
   ATTRIBUTE_DATA,
+  ATTRIBUTE_TITLE,
   OPTION_EVENT_NAME,
   DISCONNECT_EVENT_NAME
 } from 'c/constants';
 import ChartConfigService from 'c/chartConfigService';
 import MicroTaskHandler from 'c/microTaskHandler';
+
 export default class BaseChart extends LightningElement {
-  @api width = 400;
-  @api height = 400;
+  @api width;
+  @api height;
   @api stylecss;
 
-  _baseChartInitialized = false;
-  _chartjsLoaded = false;
+  @api
+  get responsive() {
+    return this._payload.responsive;
+  }
+  set responsive(v) {
+    this._payload.responsive = Boolean(v);
+    this._configService.updateConfig(this._payload, null);
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get responsiveanimationduration() {
+    return this._payload.responsiveAnimationDuration;
+  }
+  set responsiveanimationduration(v) {
+    this._payload.responsiveAnimationDuration = v;
+    this._configService.updateConfig(this._payload, null);
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get maintainaspectratio() {
+    return this._payload.maintainAspectRatio;
+  }
+  set maintainaspectratio(v) {
+    this._payload.maintainAspectRatio = Boolean(v);
+    this._configService.updateConfig(this._payload, null);
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get aspectratio() {
+    return this._payload.aspectRatio;
+  }
+  set aspectratio(v) {
+    this._payload.aspectRatio = v;
+    this._configService.updateConfig(this._payload, null);
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackResize() {
+    return this._payload.onResize;
+  }
+  set callbackResize(v) {
+    this._payload.onResize = v;
+    this._configService.updateConfig(this._payload, null);
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get devicepixelratio() {
+    return this._payload.pointHoverBorderColor;
+  }
+  set devicepixelratio(v) {
+    this._payload.pointHoverBorderColor = v;
+    this._configService.updateConfig(this._payload, null);
+    this._mt.waitNextTask();
+  }
 
   get chartStyle() {
     return `width: ${this.width}; height: ${this.height}; ${this.stylecss ||
       ''}`;
   }
+
+  get ariaLabel() {
+    return `${this._ariaLabel}`;
+  }
+
+  _baseChartInitialized = false;
+  _chartjsLoaded = false;
 
   constructor() {
     super();
@@ -29,6 +95,8 @@ export default class BaseChart extends LightningElement {
     this._chart = null;
     this._mt = new MicroTaskHandler();
     this._mt.registerCallback(() => this.renderChart());
+    this._payload = {};
+    this._ariaLabel = `${this.constructor.type} chart`; // default accessibility title
   }
 
   connectedCallback() {
@@ -38,6 +106,10 @@ export default class BaseChart extends LightningElement {
       if (option === ATTRIBUTE_DATA) {
         this._details = payload;
       } else {
+        // get title to set the accessibility
+        if (option === ATTRIBUTE_TITLE) {
+          this._ariaLabel = payload.text;
+        }
         this._configService.updateConfig(payload, option);
       }
       this._mt.waitNextTask();
@@ -52,6 +124,10 @@ export default class BaseChart extends LightningElement {
           this._chart.destroy();
         }
       } else {
+        // reset title to set the accessibility
+        if (option === ATTRIBUTE_TITLE) {
+          this._ariaLabel = `${this.constructor.type} chart`;
+        }
         this._configService.removeConfig(payload, option);
         this._mt.waitNextTask();
       }
