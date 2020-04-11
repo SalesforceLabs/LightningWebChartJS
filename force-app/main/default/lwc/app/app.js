@@ -11,4 +11,6 @@ export default class App extends LightningElement {
   };
 
   getCustomTooltip = () => {};
+
+  handleCallbackClick = () => {};
 }

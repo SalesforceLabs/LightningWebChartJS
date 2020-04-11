@@ -10,6 +10,7 @@ import {
 } from 'c/constants';
 import ChartConfigService from 'c/chartConfigService';
 import MicroTaskHandler from 'c/microTaskHandler';
+import BaseAttribute from 'c/baseAttribute';
 
 export default class BaseChart extends LightningElement {
   @api width;
@@ -72,6 +73,36 @@ export default class BaseChart extends LightningElement {
   }
   set devicepixelratio(v) {
     this._payload.pointHoverBorderColor = v;
+    this._configService.updateConfig(this._payload, null);
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get events() {
+    return this._payload.events;
+  }
+  set events(v) {
+    this._payload.events = BaseAttribute.sanitize(v);
+    this._configService.updateConfig(this._payload, null);
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackClick() {
+    return this._payload.onClick;
+  }
+  set callbackClick(v) {
+    this._payload.onClick = v;
+    this._configService.updateConfig(this._payload, null);
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackHover() {
+    return this._payload.onHover;
+  }
+  set callbackHover(v) {
+    this._payload.onHover = v;
     this._configService.updateConfig(this._payload, null);
     this._mt.waitNextTask();
   }

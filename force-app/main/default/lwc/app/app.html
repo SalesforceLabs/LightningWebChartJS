@@ -2,11 +2,12 @@
   <div class="slds-card">
     <!-- Bar chart -->
     <c-bar-chart
-      height="80vh"
       width="80vw"
       responsive="true"
-      maintainaspectratio="false"
+      maintainaspectratio="true"
       stylecss="position: relative; margin: auto;"
+      events='["click"]'
+      callback-click={handleCallbackClick}
     >
       <c-dataset
         labels='["Red", "Blue", "Yellow", "Green", "Purple", "Orange"]'
