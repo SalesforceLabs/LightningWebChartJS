@@ -57,24 +57,24 @@ export function checkReactivity(constructor, testData) {
   });
 }
 
-export function checkDisconnectAttribute(constructor, baseAttributeName){
-    test(`Disconnect ${constructor}`, () => {
-        const element = createElement('x-test', { is: constructor });
-        document.body.appendChild(element);
+export function checkDisconnectAttribute(constructor, baseAttributeName) {
+  test(`Disconnect ${constructor}`, () => {
+    const element = createElement('x-test', { is: constructor });
+    document.body.appendChild(element);
 
-        let detail;
-        document.body.addEventListener(DISCONNECT_EVENT_NAME, evt => {
-            detail = evt.detail;
-        });
-
-        document.body.removeChild(element);
-
-        return Promise.resolve().then(() => {
-            expect(typeof detail).toBe('object');
-            expect(detail.option).toBe(baseAttributeName);
-            expect(typeof detail.payload).toBe('object');
-
-            // TODO: To test that payload is filled with attributes?
-          });
+    let detail;
+    document.body.addEventListener(DISCONNECT_EVENT_NAME, evt => {
+      detail = evt.detail;
     });
+
+    document.body.removeChild(element);
+
+    return Promise.resolve().then(() => {
+      expect(typeof detail).toBe('object');
+      expect(detail.option).toBe(baseAttributeName);
+      expect(typeof detail.payload).toBe('object');
+
+      // TODO: To test that payload is filled with attributes?
+    });
+  });
 }

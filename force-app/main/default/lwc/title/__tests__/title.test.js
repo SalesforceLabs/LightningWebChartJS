@@ -1,7 +1,11 @@
 // hello.test.js
 import Title from 'c/title';
 import { ATTRIBUTE_TITLE } from 'c/constants';
-import { checkInsertElement, checkReactivity, checkDisconnectAttribute } from 'c/testUtils';
+import {
+  checkInsertElement,
+  checkReactivity,
+  checkDisconnectAttribute
+} from 'c/testUtils';
 
 const TEST_DATA_REACTIVITY = [
   {
@@ -22,7 +26,7 @@ describe('c-title', () => {
       });
       */
 
-    checkInsertElement(Title);
-    checkReactivity(Title, TEST_DATA_REACTIVITY);
-    checkDisconnectAttribute(Title, ATTRIBUTE_TITLE);
+  checkInsertElement(Title);
+  checkReactivity(Title, TEST_DATA_REACTIVITY);
+  checkDisconnectAttribute(Title, ATTRIBUTE_TITLE);
 });
