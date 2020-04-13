@@ -1,7 +1,7 @@
 import { createElement } from 'lwc';
 import { OPTION_EVENT_NAME } from 'c/constants';
 
-export class AttributePropertyTest {
+export class ChartOptionMock {
   constructor(propertyName, propertyValue, expectedProperty) {
     this.propertyName = propertyName;
     this.propertyValue = propertyValue;

@@ -5,7 +5,7 @@ import BaseChart from 'c/baseChart';
 const STATIC_RESOURCE_NAME = 'chartjs_v280';
 
 describe('BaseChart: ChartJs library', () => {
-  it('Load the ChartJS static resource', () => {
+  test('Load the ChartJS static resource', () => {
     const element = createElement('x-basechart', {
       is: BaseChart
     });
@@ -17,3 +17,12 @@ describe('BaseChart: ChartJs library', () => {
     expect(loadScript.mock.calls[0][1]).toEqual(STATIC_RESOURCE_NAME);
   });
 });
+
+
+// TODO: checkOptions()
+
+// TODO: Option event Listener & Disconnect Event Listener
+
+// TODO: Create VS Update chart
+
+// TODO: For each type of Chart: test that can be created, that contains canvas and that elements can be inserted

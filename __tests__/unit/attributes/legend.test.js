@@ -1,13 +1,13 @@
 import Legend from 'c/legend';
 import {
-  AttributePropertyTest,
+  ChartOptionMock,
   testAttributeProperties
-} from '../../__utils__/testAttributeUtils.js';
+} from '../../__utils__/testAttributeHandler.js';
 
 const TEST_DATA_PROPERTIES = [
-  new AttributePropertyTest('display', true, { display: true }),
-  new AttributePropertyTest('position', 'top', { position: 'top' }),
-  new AttributePropertyTest('labelBoxwidth', '35px', {
+  new ChartOptionMock('display', true, { display: true }),
+  new ChartOptionMock('position', 'top', { position: 'top' }),
+  new ChartOptionMock('labelBoxwidth', '35px', {
     labels: { boxWidth: '35px' }
   })
 ];

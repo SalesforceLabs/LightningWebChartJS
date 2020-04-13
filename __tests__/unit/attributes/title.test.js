@@ -1,11 +1,11 @@
 import Title from 'c/title';
 import {
-  AttributePropertyTest,
+  ChartOptionMock,
   testAttributeProperties
-} from '../../__utils__/testAttributeUtils.js';
+} from '../../__utils__/testAttributeHandler.js';
 
 const TEST_DATA_PROPERTIES = [
-  new AttributePropertyTest('text', 'foo', { display: true, text: 'foo' })
+  new ChartOptionMock('text', 'foo', { display: true, text: 'foo' })
 ];
 
 describe('c-title', () => {
