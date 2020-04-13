@@ -1,8 +1,8 @@
 {
-  "name": "salesforce-app",
+  "name": "lwcc",
   "private": true,
   "version": "1.0.0",
-  "description": "Salesforce App",
+  "description": "Lightning Web Chart.js Component",
   "scripts": {
     "lint": "npm run lint:lwc && npm run lint:apex",
     "lint:lwc": "eslint force-app/main/default/lwc",
