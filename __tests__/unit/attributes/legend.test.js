@@ -1,6 +1,7 @@
 import Legend from 'c/legend';
 import * as Handler from '../../__utils__/testAttributeHandler.js';
 
+// TODO: Missing attributes
 const TEST_DATA_PROPERTIES = [
   new Handler.ChartOptionMock('display', true, { display: true }),
   new Handler.ChartOptionMock('position', 'top', { position: 'top' }),

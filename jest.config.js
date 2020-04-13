@@ -26,11 +26,7 @@ module.exports = {
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: [
-    '/__tests__/__utils__/',
-    '/coverage/',
-    '/docs/'
-  ],
+  coveragePathIgnorePatterns: ['/__tests__/__utils__/', '/coverage/', '/docs/'],
 
   // A list of reporter names that Jest uses when writing coverage reports
   coverageReporters: [
@@ -43,11 +39,11 @@ module.exports = {
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
     global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80,
-    },
+    //  branches: 80,
+    //  functions: 80,
+    //  lines: 80,
+    //  statements: 80
+    }
   },
 
   // A path to a custom dependency extractor
@@ -152,11 +148,7 @@ module.exports = {
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: [
-    '/__tests__/__utils__/',
-    '/coverage/',
-    '/docs/'
-  ],
+  testPathIgnorePatterns: ['/__tests__/__utils__/', '/coverage/', '/docs/']
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
@@ -192,4 +184,4 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-}
+};

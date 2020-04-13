@@ -11,7 +11,6 @@ import {
 } from 'c/constants';
 import ChartConfigService from 'c/chartConfigService';
 import MicroTaskHandler from 'c/microTaskHandler';
-import BaseAttribute from 'c/baseAttribute';
 
 export default class BaseChart extends LightningElement {
   @api width;
