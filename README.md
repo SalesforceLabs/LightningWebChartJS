@@ -98,15 +98,13 @@ sfdx force:org:open
 
 8. Start composing application using the chart components or by creating your own using the library.
 
-## How it Works
+## How it Works TODO
 
-### LWC Components
+TODO lien github page documentation
 
-#### How to use them
+### LWC Components TODO github page
 
-TODO github page
-
-#### Chart API
+#### Chart API TODO github page
 
 - Line chart
 - Bar chart
@@ -117,7 +115,7 @@ TODO github page
 - Scatter chart
 - Area chart
 
-#### Option API
+#### Option API TODO github page
 
 - Common option
 - Animation option
@@ -127,7 +125,7 @@ TODO github page
 - Tooltip option
 - Elements option
 
-#### Axes API
+#### Axes API TODO github page
 
 - Cartesian Category axes
 - Cartesian Linear axes
@@ -135,13 +133,17 @@ TODO github page
 - Cartesian Time axes
 - Radial Linear axes
 
-### App builder Components TODO
+### App builder Components TODO github page
 
-#### Description
+#### Description TODO github page
 
-#### How to compose
+#### Compose pages using chart component TODO github page
 
-#### How to build yours
+## How to use it TODO
+
+### How to build your App builder embeddable chart component TODO
+
+### How to build custom Lightning application TODO
 
 ## Contributing
 
