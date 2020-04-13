@@ -1,6 +1,7 @@
 import { LightningElement, api } from 'lwc';
 import ChartJS from '@salesforce/resourceUrl/chartjs_v280';
 import { loadScript } from 'lightning/platformResourceLoader';
+import { sanitize } from 'c/utils';
 
 import {
   ATTRIBUTE_DATA,
@@ -82,7 +83,7 @@ export default class BaseChart extends LightningElement {
     return this._payload.events;
   }
   set events(v) {
-    this._payload.events = BaseAttribute.sanitize(v);
+    this._payload.events = sanitize(v);
     this._configService.updateConfig(this._payload, null);
     this._mt.waitNextTask();
   }
