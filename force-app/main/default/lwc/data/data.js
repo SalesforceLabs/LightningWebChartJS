@@ -117,10 +117,10 @@ export default class Data extends BaseAttribute {
 
   @api
   get pointhoverborderwidth() {
-    return this._payload.pointhoverborderwidth;
+    return this._payload.pointHoverBorderWidth;
   }
   set pointhoverborderwidth(v) {
-    this._payload.pointhoverborderwidth = v;
+    this._payload.pointHoverBorderWidth = v;
     this._mt.waitNextTask();
   }
 

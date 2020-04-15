@@ -1,6 +1,13 @@
 import { createElement } from 'lwc';
 import { OPTION_EVENT_NAME } from 'c/constants';
 import BaseAttribute from 'c/baseAttribute';
+import * as crypto from 'crypto';
+
+Object.defineProperty(global.self, 'crypto', {
+  value: {
+    getRandomValues: arr => crypto.randomBytes(arr.length)
+  }
+});
 
 export class ChartOptionMock {
   /**
@@ -40,7 +47,11 @@ function testDOMElementCreation(className) {
 /**
  * Check that the exposed property of the attribute is matching correctly the ChartJs option (getter & setter)
  */
-function testChartOptions(constructor, listChartOptionMock) {
+function testChartOptions(
+  constructor,
+  listChartOptionMock,
+  eventName = OPTION_EVENT_NAME
+) {
   describe.each(listChartOptionMock)(
     'Exposed property matches ChartJS option',
     item => {
@@ -49,7 +60,7 @@ function testChartOptions(constructor, listChartOptionMock) {
         document.body.appendChild(element);
 
         let detail;
-        document.body.addEventListener(OPTION_EVENT_NAME, evt => {
+        document.body.addEventListener(eventName, evt => {
           detail = evt.detail;
         });
 
@@ -63,7 +74,7 @@ function testChartOptions(constructor, listChartOptionMock) {
   );
 }
 
-export function testAttribute(constructor, listChartOptionMock) {
+export function testAttribute(constructor, listChartOptionMock, eventName) {
   testDOMElementCreation(constructor);
-  testChartOptions(constructor, listChartOptionMock);
+  testChartOptions(constructor, listChartOptionMock, eventName);
 }
