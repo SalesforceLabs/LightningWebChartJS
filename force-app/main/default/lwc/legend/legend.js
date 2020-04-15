@@ -132,26 +132,26 @@ export default class Legend extends BaseAttribute {
   }
 
   @api
-  get callbackOnclick() {
+  get labelCallbackOnclick() {
     return this._payload.labels.onClick;
   }
-  set callbackOnclick(v) {
+  set labelCallbackOnclick(v) {
     this._payload.labels.onClick = v;
     this._mt.waitNextTask();
   }
   @api
-  get callbackOnhover() {
+  get labelCallbackOnhover() {
     return this._payload.labels.onHover;
   }
-  set callbackOnhover(v) {
+  set labelCallbackOnhover(v) {
     this._payload.labels.onHover = v;
     this._mt.waitNextTask();
   }
   @api
-  get callbackOnleave() {
+  get labelCallbackOnleave() {
     return this._payload.labels.onLeave;
   }
-  set callbackOnleave(v) {
+  set labelCallbackOnleave(v) {
     this._payload.labels.onLeave = v;
     this._callbackOnleave = v;
     this._mt.waitNextTask();
@@ -161,7 +161,7 @@ export default class Legend extends BaseAttribute {
   get labelCallbackGeneratelabels() {
     return this._payload.labels.generateLabels;
   }
-  set callbackGeneratelabels(v) {
+  set labelCallbackGeneratelabels(v) {
     this._payload.labels.generateLabels = v;
     this._mt.waitNextTask();
   }

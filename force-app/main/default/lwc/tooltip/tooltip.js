@@ -49,20 +49,128 @@ export default class Tooltip extends BaseAttribute {
   }
 
   @api
-  get callbacks() {
-    return this._payload.callbacks;
+  get callbackBeforetitle() {
+    return this._payload.callbacks.beforeTitle;
   }
-  set callbacks(v) {
-    this._payload.callbacks = v;
+  set callbackBeforetitle(v) {
+    this._payload.callbacks.beforeTitle = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackTitle() {
+    return this._payload.callbacks.title;
+  }
+  set callbackTitle(v) {
+    this._payload.callbacks.title = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackAftertitle() {
+    return this._payload.callbacks.afterTitle;
+  }
+  set callbackAftertitle(v) {
+    this._payload.callbacks.afterTitle = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackBeforebody() {
+    return this._payload.callbacks.beforeBody;
+  }
+  set callbackBeforebody(v) {
+    this._payload.callbacks.beforeBody = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackBeforelabel() {
+    return this._payload.callbacks.beforeLabel;
+  }
+  set callbackBeforelabel(v) {
+    this._payload.callbacks.beforeLabel = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackLabel() {
+    return this._payload.callbacks.label;
+  }
+  set callbackLabel(v) {
+    this._payload.callbacks.label = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackLabelcolor() {
+    return this._payload.callbacks.labelColor;
+  }
+  set callbackLabelcolor(v) {
+    this._payload.callbacks.labelColor = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackLabeltextcolor() {
+    return this._payload.callbacks.labelTextColor;
+  }
+  set callbackLabeltextcolor(v) {
+    this._payload.callbacks.labelTextColor = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackAfterlabel() {
+    return this._payload.callbacks.afterLabel;
+  }
+  set callbackAfterlabel(v) {
+    this._payload.callbacks.afterLabel = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackAfterbody() {
+    return this._payload.callbacks.afterBody;
+  }
+  set callbackAfterbody(v) {
+    this._payload.callbacks.afterBody = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackBeforefooter() {
+    return this._payload.callbacks.beforeFooter;
+  }
+  set callbackBeforefooter(v) {
+    this._payload.callbacks.beforeFooter = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackFooter() {
+    return this._payload.callbacks.footer;
+  }
+  set callbackFooter(v) {
+    this._payload.callbacks.footer = v;
+    this._mt.waitNextTask();
+  }
+
+  @api
+  get callbackAfterfooter() {
+    return this._payload.callbacks.afterFooter;
+  }
+  set callbackAfterfooter(v) {
+    this._payload.callbacks.afterFooter = v;
     this._mt.waitNextTask();
   }
 
   @api
   get itemsort() {
-    return this._payload.itemsort;
+    return this._payload.itemSort;
   }
   set itemsort(v) {
-    this._payload.itemsort = v;
+    this._payload.itemSort = v;
     this._mt.waitNextTask();
   }
 
@@ -302,7 +410,7 @@ export default class Tooltip extends BaseAttribute {
 
   @api
   get cornerradius() {
-    return this._payload.cRrnerEadius;
+    return this._payload.cornerRadius;
   }
   set cornerradius(v) {
     this._payload.cornerRadius = v;
@@ -356,7 +464,7 @@ export default class Tooltip extends BaseAttribute {
 
   @api
   get textdirection() {
-    return this._payload.textdirection;
+    return this._payload.textDirection;
   }
   set textdirection(v) {
     this._payload.textDirection = v;
@@ -366,5 +474,6 @@ export default class Tooltip extends BaseAttribute {
   constructor() {
     super();
     this._option = ATTRIBUTE_TOOLTIPS;
+    this._payload.callbacks = {};
   }
 }
