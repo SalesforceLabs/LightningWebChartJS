@@ -15,7 +15,6 @@ export default class Dataset extends BaseAttribute {
   }
   set labels(v) {
     this._payload.labels = sanitize(v);
-    this._mt.waitNextTask();
   }
 
   constructor() {
@@ -30,14 +29,12 @@ export default class Dataset extends BaseAttribute {
       evt.stopPropagation();
       this._details[evt.detail.payload.uuid] = evt.detail.payload;
       this._payload.datasets = Object.values(this._details);
-      this._mt.waitNextTask();
     });
 
     this.addEventListener(DISCONNECT_EVENT_NAME, evt => {
       evt.stopPropagation();
       delete this._details[evt.detail.payload.uuid];
       this._payload.datasets = Object.values(this._details);
-      this._mt.waitNextTask();
     });
   }
 }

@@ -12,7 +12,6 @@ export default class Data extends BaseAttribute {
   }
   set label(v) {
     this._payload.label = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -21,7 +20,6 @@ export default class Data extends BaseAttribute {
   }
   set yaxisid(v) {
     this._payload.yAxisID = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -30,7 +28,6 @@ export default class Data extends BaseAttribute {
   }
   set xaxisid(v) {
     this._payload.xAxisID = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -39,7 +36,6 @@ export default class Data extends BaseAttribute {
   }
   set detail(v) {
     this._payload.data = sanitize(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -48,7 +44,6 @@ export default class Data extends BaseAttribute {
   }
   set backgroundcolor(v) {
     this._payload.backgroundColor = sanitize(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -57,7 +52,6 @@ export default class Data extends BaseAttribute {
   }
   set bordercolor(v) {
     this._payload.borderColor = sanitize(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -66,7 +60,6 @@ export default class Data extends BaseAttribute {
   }
   set borderwidth(v) {
     this._payload.borderWidth = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -75,7 +68,6 @@ export default class Data extends BaseAttribute {
   }
   set fill(v) {
     this._payload.fill = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -84,7 +76,6 @@ export default class Data extends BaseAttribute {
   }
   set order(v) {
     this._payload.order = Number.parseInt(v, 10);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -93,7 +84,6 @@ export default class Data extends BaseAttribute {
   }
   set type(v) {
     this._payload.type = v;
-    this._mt.waitNextTask();
   }
 
   // Radar chart specific
@@ -103,7 +93,6 @@ export default class Data extends BaseAttribute {
   }
   set pointhoverbackgroundcolor(v) {
     this._payload.pointHoverBackgroundColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -112,7 +101,6 @@ export default class Data extends BaseAttribute {
   }
   set pointhoverbordercolor(v) {
     this._payload.pointHoverBorderColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -121,7 +109,6 @@ export default class Data extends BaseAttribute {
   }
   set pointhoverborderwidth(v) {
     this._payload.pointHoverBorderWidth = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -130,7 +117,6 @@ export default class Data extends BaseAttribute {
   }
   set pointhoverradius(v) {
     this._payload.pointHoverRadius = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

@@ -26,7 +26,6 @@ export default class CartesianAxis extends BaseAxis {
       this._content = this._payload[this._axis][0];
       this._payload[otherAxe] = undefined;
     }
-    this._mt.waitNextTask();
   }
 
   @api
@@ -35,7 +34,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set type(v) {
     this._content.type = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -44,7 +42,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set position(v) {
     this._content.position = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -53,7 +50,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set offset(v) {
     this._content.offset = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -62,7 +58,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set id(v) {
     this._content.id = v;
-    this._mt.waitNextTask();
   }
 
   // Ticks Configuration: https://www.chartjs.org/docs/latest/axes/cartesian/#tick-configuration
@@ -72,7 +67,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set ticksMin(v) {
     this._content.ticks.min = Number(v) || v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -81,7 +75,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set ticksMax(v) {
     this._content.ticks.max = Number(v) || v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -90,7 +83,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set ticksSamplesize(v) {
     this._content.ticks.sampleSize = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -99,7 +91,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set ticksAutoskip(v) {
     this._content.ticks.autoSkip = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -108,7 +99,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set ticksAutoskippadding(v) {
     this._content.ticks.autoSkipPadding = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -117,7 +107,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set ticksLabeloffset(v) {
     this._content.ticks.labelOffset = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -126,7 +115,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set ticksMaxrotation(v) {
     this._content.ticks.maxRotation = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -135,7 +123,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set ticksMinrotation(v) {
     this._content.ticks.minRotation = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -144,7 +131,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set ticksMirror(v) {
     this._content.ticks.mirror = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -153,7 +139,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set ticksPadding(v) {
     this._content.ticks.padding = Number(v);
-    this._mt.waitNextTask();
   }
 
   // ScaleTitle Configuration: https://www.chartjs.org/docs/latest/axes/labelling.html#scale-title-configuration
@@ -164,7 +149,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set titleDisplay(v) {
     this._content.scaleLabel.display = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -173,7 +157,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set titleLabelstring(v) {
     this._content.scaleLabel.labelString = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -182,7 +165,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set titleLineheight(v) {
     this._content.scaleLabel.lineHeight = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -191,7 +173,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set titleFontcolor(v) {
     this._content.scaleLabel.fontColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -200,7 +181,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set titleFontfamily(v) {
     this._content.scaleLabel.fontFamily = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -209,7 +189,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set titleFontsize(v) {
     this._content.scaleLabel.fontSize = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -218,7 +197,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set titleFontstyle(v) {
     this._content.scaleLabel.fontStyle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -227,7 +205,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set titlePadding(v) {
     this._content.scaleLabel.padding = v;
-    this._mt.waitNextTask();
   }
 
   // GridLines Configuration: https://www.chartjs.org/docs/latest/axes/styling.html#grid-line-configuration
@@ -238,7 +215,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridDisplay(v) {
     this._content.gridLines.display = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -247,7 +223,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridCircular(v) {
     this._content.gridLines.circular = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -256,7 +231,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridColor(v) {
     this._content.gridLines.color = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -265,7 +239,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridBorderdash(v) {
     this._content.gridLines.borderDash = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -274,7 +247,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridBorderdashoffset(v) {
     this._content.gridLines.borderDashOffset = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -283,7 +255,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridLinewidth(v) {
     this._content.gridLines.lineWidth = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -292,7 +263,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridDrawborder(v) {
     this._content.gridLines.drawBorder = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -301,7 +271,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridDrawonchartarea(v) {
     this._content.gridLines.drawOnChartArea = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -310,7 +279,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridDrawticks(v) {
     this._content.gridLines.drawTicks = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -319,7 +287,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridTickmarklength(v) {
     this._content.gridLines.tickMarkLength = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -328,7 +295,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridZerolinewidth(v) {
     this._content.gridLines.zeroLineWidth = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -337,7 +303,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridZerolinecolor(v) {
     this._content.gridLines.zeroLineColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -346,7 +311,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridZerolineborderdash(v) {
     this._content.gridLines.zeroLineBorderDash = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -355,7 +319,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridZerolineborderdashoffset(v) {
     this._content.gridLines.zeroLineBorderDashOffset = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -364,7 +327,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridOffsetgridlines(v) {
     this._content.gridLines.offsetGridLines = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -373,7 +335,6 @@ export default class CartesianAxis extends BaseAxis {
   }
   set gridZ(v) {
     this._content.gridLines.z = Number(v);
-    this._mt.waitNextTask();
   }
 
   constructor() {

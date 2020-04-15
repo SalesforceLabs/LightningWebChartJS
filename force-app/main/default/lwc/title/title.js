@@ -9,7 +9,6 @@ export default class Title extends BaseAttribute {
   }
   set text(v) {
     this._payload.text = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

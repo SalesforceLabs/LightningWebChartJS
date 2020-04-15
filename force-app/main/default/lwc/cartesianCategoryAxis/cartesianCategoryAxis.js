@@ -12,7 +12,6 @@ export default class CartesianCategoryAxis extends CartesianAxis {
   }
   set ticksLabels(v) {
     this._content.ticks.labels = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

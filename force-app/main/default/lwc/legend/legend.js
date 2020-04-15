@@ -12,7 +12,6 @@ export default class Legend extends BaseAttribute {
   }
   set display(v) {
     this._payload.display = Boolean(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -21,7 +20,6 @@ export default class Legend extends BaseAttribute {
   }
   set position(v) {
     this._payload.position = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -30,7 +28,6 @@ export default class Legend extends BaseAttribute {
   }
   set align(v) {
     this._payload.align = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -39,7 +36,6 @@ export default class Legend extends BaseAttribute {
   }
   set fullwidth(v) {
     this._payload.fullWidth = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -48,7 +44,6 @@ export default class Legend extends BaseAttribute {
   }
   set reverse(v) {
     this._payload.reverse = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -57,7 +52,6 @@ export default class Legend extends BaseAttribute {
   }
   set rtl(v) {
     this._payload.rtl = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -66,7 +60,6 @@ export default class Legend extends BaseAttribute {
   }
   set textdirection(v) {
     this._payload.textDirection = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -75,7 +68,6 @@ export default class Legend extends BaseAttribute {
   }
   set labelBoxwidth(v) {
     this._payload.labels.boxWidth = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -84,7 +76,6 @@ export default class Legend extends BaseAttribute {
   }
   set labelFontsize(v) {
     this._payload.labels.fontSize = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -93,7 +84,6 @@ export default class Legend extends BaseAttribute {
   }
   set labelFontstyle(v) {
     this._payload.labels.fontStyle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -102,7 +92,6 @@ export default class Legend extends BaseAttribute {
   }
   set labelFontcolor(v) {
     this._payload.labels.fontColor = v;
-    this._mt.waitNextTask();
   }
   @api
   get labelFontfamily() {
@@ -110,7 +99,6 @@ export default class Legend extends BaseAttribute {
   }
   set labelFontfamily(v) {
     this._payload.labels.fontFamily = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -119,7 +107,6 @@ export default class Legend extends BaseAttribute {
   }
   set labelPadding(v) {
     this._payload.labels.padding = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -128,7 +115,6 @@ export default class Legend extends BaseAttribute {
   }
   set labelUsepointstyle(v) {
     this._payload.labels.usePointStyle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -137,7 +123,6 @@ export default class Legend extends BaseAttribute {
   }
   set labelCallbackOnclick(v) {
     this._payload.labels.onClick = v;
-    this._mt.waitNextTask();
   }
   @api
   get labelCallbackOnhover() {
@@ -145,7 +130,6 @@ export default class Legend extends BaseAttribute {
   }
   set labelCallbackOnhover(v) {
     this._payload.labels.onHover = v;
-    this._mt.waitNextTask();
   }
   @api
   get labelCallbackOnleave() {
@@ -154,7 +138,6 @@ export default class Legend extends BaseAttribute {
   set labelCallbackOnleave(v) {
     this._payload.labels.onLeave = v;
     this._callbackOnleave = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -163,7 +146,6 @@ export default class Legend extends BaseAttribute {
   }
   set labelCallbackGeneratelabels(v) {
     this._payload.labels.generateLabels = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -172,7 +154,6 @@ export default class Legend extends BaseAttribute {
   }
   set labelCallbackFilter(v) {
     this._payload.labels.filter = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

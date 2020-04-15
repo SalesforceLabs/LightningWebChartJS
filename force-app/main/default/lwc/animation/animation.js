@@ -13,7 +13,6 @@ export default class Animation extends BaseAttribute {
   }
   set duration(v) {
     this._payload.duration = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -22,7 +21,6 @@ export default class Animation extends BaseAttribute {
   }
   set easing(v) {
     this._payload.easing = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -31,7 +29,6 @@ export default class Animation extends BaseAttribute {
   }
   set callbackOncomplete(v) {
     this._payload.onComplete = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -40,7 +37,6 @@ export default class Animation extends BaseAttribute {
   }
   set callbackOnprogress(v) {
     this._payload.onProgress = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

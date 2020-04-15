@@ -8,7 +8,15 @@ export default class BaseAttribute extends LightningElement {
     this._eventName = OPTION_EVENT_NAME;
     this._mt = new MicroTaskHandler();
     this._mt.registerCallback(() => this.dispatchOption());
-    this._payload = {};
+    const mt = this._mt;
+    const reactivityHandler = {
+      set: function(obj, prop, value) {
+        obj[prop] = value;
+        mt.waitNextTask();
+        return true;
+      }
+    };
+    this._payload = new Proxy({}, reactivityHandler);
   }
 
   renderedCallback() {
