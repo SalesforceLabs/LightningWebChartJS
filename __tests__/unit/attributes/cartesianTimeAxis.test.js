@@ -38,6 +38,6 @@ const TEST_DATA_PROPERTIES = [
   })
 ];
 
-describe('c-layout', () => {
+describe('c-cartesian-time-axis', () => {
   Handler.testAttribute(CartesianTimeAxis, TEST_DATA_PROPERTIES);
 });

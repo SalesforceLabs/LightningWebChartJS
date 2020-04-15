@@ -17,6 +17,6 @@ const TEST_DATA_PROPERTIES = [
   })
 ];
 
-describe('c-layout', () => {
+describe('c-arc-configuration', () => {
   Handler.testAttribute(ArcConfiguration, TEST_DATA_PROPERTIES);
 });

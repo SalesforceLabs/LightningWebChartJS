@@ -22,6 +22,6 @@ const TEST_DATA_PROPERTIES = [
   })
 ];
 
-describe('c-layout', () => {
+describe('c-cartesian-linear-axis', () => {
   Handler.testAttribute(CartesianLinearAxis, TEST_DATA_PROPERTIES);
 });

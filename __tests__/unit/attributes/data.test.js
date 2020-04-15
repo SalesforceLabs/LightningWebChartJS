@@ -29,6 +29,6 @@ const TEST_DATA_PROPERTIES = [
   })
 ];
 
-describe('c-layout', () => {
+describe('c-data', () => {
   Handler.testAttribute(Data, TEST_DATA_PROPERTIES, DATA_EVENT_NAME);
 });

@@ -12,6 +12,6 @@ const TEST_DATA_PROPERTIES = [
   })
 ];
 
-describe('c-layout', () => {
+describe('c-animation', () => {
   Handler.testAttribute(Animation, TEST_DATA_PROPERTIES);
 });
