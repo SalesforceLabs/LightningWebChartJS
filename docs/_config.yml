@@ -1,0 +1,4 @@
+theme: jekyll-theme-minimal
+title: Welcome to Lightning Web Chart.js Component documentation
+description: Documentation pages for the lwcc component library on top of Chart.js
+markdown: kramdown
