@@ -98,48 +98,9 @@ sfdx force:org:open
 
 8. Start composing application using the chart components or by creating your own using the library.
 
-## How it Works TODO
+## How to use it
 
-TODO lien github page documentation
-
-### LWC Components TODO github page
-
-#### Chart API TODO github page
-
-- Line chart
-- Bar chart
-- Radar chart
-- Doughnut & Pie chart
-- Polar Area chart
-- Bubble chart
-- Scatter chart
-- Area chart
-
-#### Option API TODO github page
-
-- Common option
-- Animation option
-- Layout option
-- Legend option
-- Title option
-- Tooltip option
-- Elements option
-
-#### Axes API TODO github page
-
-- Cartesian Category axes
-- Cartesian Linear axes
-- Cartesian Logarithmic axes
-- Cartesian Time axes
-- Radial Linear axes
-
-### App builder Components TODO github page
-
-#### Description TODO github page
-
-#### Compose pages using chart component TODO github page
-
-## How to use it TODO
+cf [documentation](https://scolladon.github.io/lwcc/)
 
 ### How to build your App builder embeddable chart component TODO
 
