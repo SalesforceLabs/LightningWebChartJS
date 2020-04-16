@@ -1,22 +1,14 @@
 import { LightningElement } from 'lwc';
 import { OPTION_EVENT_NAME, DISCONNECT_EVENT_NAME } from 'c/constants';
-import MicroTaskHandler from 'c/microTaskHandler';
+import ReactivityManager from 'c/reactivityManager';
 
 export default class BaseAttribute extends LightningElement {
   constructor() {
     super();
     this._eventName = OPTION_EVENT_NAME;
-    this._mt = new MicroTaskHandler();
-    this._mt.registerCallback(() => this.dispatchOption());
-    const mt = this._mt;
-    const reactivityHandler = {
-      set: function(obj, prop, value) {
-        obj[prop] = value;
-        mt.waitNextTask();
-        return true;
-      }
-    };
-    this._payload = new Proxy({}, reactivityHandler);
+    this._reactivityManager = new ReactivityManager();
+    this._reactivityManager.registerJob(() => this.dispatchOption());
+    this._payload = this._reactivityManager.getReactivityProxy();
   }
 
   renderedCallback() {

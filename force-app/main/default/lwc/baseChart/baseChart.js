@@ -10,7 +10,7 @@ import {
   DISCONNECT_EVENT_NAME
 } from 'c/constants';
 import ChartConfigService from 'c/chartConfigService';
-import MicroTaskHandler from 'c/microTaskHandler';
+import ReactivityManager from 'c/reactivityManager';
 
 export default class BaseChart extends LightningElement {
   @api width;
@@ -106,17 +106,9 @@ export default class BaseChart extends LightningElement {
     this._configService = new ChartConfigService();
     this._details = null;
     this._chart = null;
-    this._mt = new MicroTaskHandler();
-    this._mt.registerCallback(() => this.renderChart());
-    const mt = this._mt;
-    const reactivityHandler = {
-      set: function(obj, prop, value) {
-        obj[prop] = value;
-        mt.waitNextTask();
-        return true;
-      }
-    };
-    this._payload = new Proxy({}, reactivityHandler);
+    this._reactivityManager = new ReactivityManager();
+    this._reactivityManager.registerJob(() => this.renderChart());
+    this._payload = this._reactivityManager.getReactivityProxy();
     this._ariaLabel = `${this.constructor.type} chart`; // default accessibility title
   }
 
@@ -133,7 +125,7 @@ export default class BaseChart extends LightningElement {
         }
         this._configService.updateConfig(payload, option);
       }
-      this._mt.waitNextTask();
+      this._reactivityManager.throttleRegisteredJob();
     });
 
     this.addEventListener(DISCONNECT_EVENT_NAME, evt => {
@@ -150,7 +142,7 @@ export default class BaseChart extends LightningElement {
           this._ariaLabel = `${this.constructor.type} chart`;
         }
         this._configService.removeConfig(payload, option);
-        this._mt.waitNextTask();
+        this._reactivityManager.throttleRegisteredJob();
       }
     });
   }
@@ -163,7 +155,7 @@ export default class BaseChart extends LightningElement {
 
     loadScript(this, ChartJS).then(() => {
       this._chartjsLoaded = true;
-      this._mt.waitNextTask();
+      this._reactivityManager.throttleRegisteredJob();
     });
   }
 
