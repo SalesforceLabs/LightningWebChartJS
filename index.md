@@ -17,7 +17,7 @@ Data component define the data to put in the chart. Data component
 TODO explanation
 
 - namespace svg not editable
-- Custom Event to propagate information
+- Custom Event to propagate information from children to parent when the api attributs are changed
 - Reactivity
 - Performance
 
