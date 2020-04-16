@@ -9,7 +9,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set enabled(v) {
     this._payload.enabled = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -18,7 +17,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set custom(v) {
     this._payload.custom = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -27,7 +25,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set mode(v) {
     this._payload.mode = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -36,7 +33,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set intersect(v) {
     this._payload.intersect = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -45,7 +41,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set position(v) {
     this._payload.position = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -54,7 +49,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackBeforetitle(v) {
     this._payload.callbacks.beforeTitle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -63,7 +57,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackTitle(v) {
     this._payload.callbacks.title = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -72,7 +65,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackAftertitle(v) {
     this._payload.callbacks.afterTitle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -81,7 +73,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackBeforebody(v) {
     this._payload.callbacks.beforeBody = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -90,7 +81,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackBeforelabel(v) {
     this._payload.callbacks.beforeLabel = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -99,7 +89,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackLabel(v) {
     this._payload.callbacks.label = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -108,7 +97,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackLabelcolor(v) {
     this._payload.callbacks.labelColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -117,7 +105,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackLabeltextcolor(v) {
     this._payload.callbacks.labelTextColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -126,7 +113,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackAfterlabel(v) {
     this._payload.callbacks.afterLabel = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -135,7 +121,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackAfterbody(v) {
     this._payload.callbacks.afterBody = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -144,7 +129,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackBeforefooter(v) {
     this._payload.callbacks.beforeFooter = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -153,7 +137,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackFooter(v) {
     this._payload.callbacks.footer = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -162,7 +145,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set callbackAfterfooter(v) {
     this._payload.callbacks.afterFooter = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -171,7 +153,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set itemsort(v) {
     this._payload.itemSort = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -180,7 +161,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set filter(v) {
     this._payload.filter = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -189,7 +169,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set backgroundcolor(v) {
     this._payload.backgroundColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -198,7 +177,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set titlefontfamily(v) {
     this._payload.titleFontFamily = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -207,7 +185,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set titlefontsize(v) {
     this._payload.titleFontSize = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -216,7 +193,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set titlefontstyle(v) {
     this._payload.titleFontStyle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -225,7 +201,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set titlefontcolor(v) {
     this._payload.titleFontColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -234,7 +209,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set titlealign(v) {
     this._payload.titleAlign = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -243,7 +217,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set titlespacing(v) {
     this._payload.titleSpacing = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -252,7 +225,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set titlemarginbottom(v) {
     this._payload.titleMarginBottom = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -261,7 +233,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set bodyfontfamily(v) {
     this._payload.bodyFontFamily = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -270,7 +241,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set bodyfontsize(v) {
     this._payload.bodyFontSize = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -279,7 +249,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set bodyfontstyle(v) {
     this._payload.bodyFontStyle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -288,7 +257,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set bodyfontcolor(v) {
     this._payload.bodyFontColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -297,7 +265,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set bodyalign(v) {
     this._payload.bodyAlign = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -306,7 +273,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set bodyspacing(v) {
     this._payload.bodySpacing = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -315,7 +281,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set footerfontfamily(v) {
     this._payload.footerFontFamily = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -324,7 +289,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set footerfontsize(v) {
     this._payload.footerFontSize = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -333,7 +297,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set footerfontstyle(v) {
     this._payload.footerFontStyle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -342,7 +305,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set footerfontcolor(v) {
     this._payload.footerFontColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -351,7 +313,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set footeralign(v) {
     this._payload.footerAlign = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -360,7 +321,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set footerspacing(v) {
     this._payload.footerSpacing = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -369,7 +329,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set footermargintop(v) {
     this._payload.footerMarginTop = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -378,7 +337,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set xpadding(v) {
     this._payload.xPadding = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -387,7 +345,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set ypadding(v) {
     this._payload.yPadding = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -396,7 +353,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set caretpadding(v) {
     this._payload.caretPadding = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -405,7 +361,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set caretsize(v) {
     this._payload.caretSize = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -414,7 +369,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set cornerradius(v) {
     this._payload.cornerRadius = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -423,7 +377,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set multikeybackground(v) {
     this._payload.multiKeyBackground = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -432,7 +385,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set displaycolors(v) {
     this._payload.displayColors = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -441,7 +393,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set bordercolor(v) {
     this._payload.borderColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -450,7 +401,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set borderwidth(v) {
     this._payload.borderWidth = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -459,7 +409,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set rtl(v) {
     this._payload.rtl = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -468,7 +417,6 @@ export default class Tooltip extends BaseAttribute {
   }
   set textdirection(v) {
     this._payload.textDirection = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

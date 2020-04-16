@@ -13,7 +13,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set anglelineDisplay(v) {
     this._payload.angleLines.display = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -22,7 +21,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set anglelineColor(v) {
     this._payload.angleLines.color = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -31,7 +29,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set anglelineLinewidth(v) {
     this._payload.angleLines.lineWidth = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -40,7 +37,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set anglelineBorderdash(v) {
     this._payload.angleLines.borderDash = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -49,7 +45,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set anglelineBorderdashoffset(v) {
     this._payload.angleLines.borderDashOffset = Number(v);
-    this._mt.waitNextTask();
   }
 
   // GridLines Options: https://www.chartjs.org/docs/latest/axes/styling.html#grid-line-configuration
@@ -60,7 +55,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineDisplay(v) {
     this._payload.gridLines.display = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -69,7 +63,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineCircular(v) {
     this._payload.gridLines.circular = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -78,7 +71,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineColor(v) {
     this._payload.gridLines.color = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -87,7 +79,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineBorderdash(v) {
     this._payload.gridLines.borderDash = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -96,7 +87,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineBorderdashoffset(v) {
     this._payload.gridLines.borderDashOffset = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -105,7 +95,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineLinewidth(v) {
     this._payload.gridLines.lineWidth = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -114,7 +103,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineDrawborder(v) {
     this._payload.gridLines.drawBorder = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -123,7 +111,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineDrawonchartarea(v) {
     this._payload.gridLines.drawOnChartArea = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -132,7 +119,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineDrawticks(v) {
     this._payload.gridLines.drawTicks = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -141,7 +127,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineTickmarklength(v) {
     this._payload.gridLines.tickMarkLength = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -150,7 +135,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineZerolinewidth(v) {
     this._payload.gridLines.zeroLineWidth = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -159,7 +143,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineZerolinecolor(v) {
     this._payload.gridLines.zeroLineColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -168,7 +151,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineZerolineborderdash(v) {
     this._payload.gridLines.zeroLineBorderDash = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -177,7 +159,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineZerolineborderdashoffset(v) {
     this._payload.gridLines.zeroLineBorderDashOffset = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -186,7 +167,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineOffsetGridLines(v) {
     this._payload.gridLines.offsetGridLines = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -195,7 +175,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set gridlineZ(v) {
     this._payload.gridLines.z = Number(v);
-    this._mt.waitNextTask();
   }
 
   // PointLabels Options: https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options
@@ -206,7 +185,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set pointlabelDisplay(v) {
     this._payload.pointLabels.display = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -215,7 +193,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set pointlabelCallback(v) {
     this._payload.pointLabels.callback = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -224,7 +201,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set pointlabelFontcolor(v) {
     this._payload.pointLabels.fontColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -233,7 +209,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set pointlabelFontfamily(v) {
     this._payload.pointLabels.fontFamily = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -242,7 +217,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set pointlabelFontsize(v) {
     this._payload.pointLabels.fontSize = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -251,7 +225,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set pointlabelFontstyle(v) {
     this._payload.pointLabels.fontStyle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -260,7 +233,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set pointlabelLineheight(v) {
     this._payload.pointLabels.lineHeight = v;
-    this._mt.waitNextTask();
   }
 
   // Ticks Options: https://www.chartjs.org/docs/latest/axes/radial/linear.html#tick-options
@@ -271,7 +243,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickBackdropcolor(v) {
     this._payload.ticks.backdropColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -280,7 +251,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickBackdroppaddingx(v) {
     this._payload.ticks.backdropPaddingX = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -289,7 +259,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickBackdroppaddingy(v) {
     this._payload.ticks.backdropPaddingY = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -298,7 +267,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickBeginatzero(v) {
     this._payload.ticks.beginAtZero = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -307,7 +275,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickMin(v) {
     this._payload.ticks.min = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -316,7 +283,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickMax(v) {
     this._payload.ticks.max = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -325,7 +291,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickMaxtickslimit(v) {
     this._payload.ticks.maxTicksLimit = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -334,7 +299,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickPrecision(v) {
     this._payload.ticks.precision = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -343,7 +307,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickStepsize(v) {
     this._payload.ticks.stepSize = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -352,7 +315,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickSuggestedmax(v) {
     this._payload.ticks.suggestedMax = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -361,7 +323,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickSuggestedmin(v) {
     this._payload.ticks.suggestedMin = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -370,7 +331,6 @@ export default class RadialLinearAxis extends RadialAxis {
   }
   set tickShowlabelbackdrop(v) {
     this._payload.ticks.showLabelBackdrop = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

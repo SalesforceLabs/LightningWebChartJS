@@ -10,7 +10,7 @@ import {
   DISCONNECT_EVENT_NAME
 } from 'c/constants';
 import ChartConfigService from 'c/chartConfigService';
-import MicroTaskHandler from 'c/microTaskHandler';
+import ReactivityManager from 'c/reactivityManager';
 
 export default class BaseChart extends LightningElement {
   @api width;
@@ -23,8 +23,6 @@ export default class BaseChart extends LightningElement {
   }
   set responsive(v) {
     this._payload.responsive = Boolean(v);
-    this._configService.updateConfig(this._payload, null);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -33,8 +31,6 @@ export default class BaseChart extends LightningElement {
   }
   set responsiveanimationduration(v) {
     this._payload.responsiveAnimationDuration = v;
-    this._configService.updateConfig(this._payload, null);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -43,8 +39,6 @@ export default class BaseChart extends LightningElement {
   }
   set maintainaspectratio(v) {
     this._payload.maintainAspectRatio = Boolean(v);
-    this._configService.updateConfig(this._payload, null);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -53,8 +47,6 @@ export default class BaseChart extends LightningElement {
   }
   set aspectratio(v) {
     this._payload.aspectRatio = v;
-    this._configService.updateConfig(this._payload, null);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -63,8 +55,6 @@ export default class BaseChart extends LightningElement {
   }
   set callbackResize(v) {
     this._payload.onResize = v;
-    this._configService.updateConfig(this._payload, null);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -73,8 +63,6 @@ export default class BaseChart extends LightningElement {
   }
   set devicepixelratio(v) {
     this._payload.pointHoverBorderColor = v;
-    this._configService.updateConfig(this._payload, null);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -83,8 +71,6 @@ export default class BaseChart extends LightningElement {
   }
   set events(v) {
     this._payload.events = sanitize(v);
-    this._configService.updateConfig(this._payload, null);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -93,8 +79,6 @@ export default class BaseChart extends LightningElement {
   }
   set callbackClick(v) {
     this._payload.onClick = v;
-    this._configService.updateConfig(this._payload, null);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -103,8 +87,6 @@ export default class BaseChart extends LightningElement {
   }
   set callbackHover(v) {
     this._payload.onHover = v;
-    this._configService.updateConfig(this._payload, null);
-    this._mt.waitNextTask();
   }
 
   get chartStyle() {
@@ -124,9 +106,9 @@ export default class BaseChart extends LightningElement {
     this._configService = new ChartConfigService();
     this._details = null;
     this._chart = null;
-    this._mt = new MicroTaskHandler();
-    this._mt.registerCallback(() => this.renderChart());
-    this._payload = {};
+    this._reactivityManager = new ReactivityManager();
+    this._reactivityManager.registerJob(() => this.renderChart());
+    this._payload = this._reactivityManager.getReactivityProxy();
     this._ariaLabel = `${this.constructor.type} chart`; // default accessibility title
   }
 
@@ -143,7 +125,7 @@ export default class BaseChart extends LightningElement {
         }
         this._configService.updateConfig(payload, option);
       }
-      this._mt.waitNextTask();
+      this._reactivityManager.throttleRegisteredJob();
     });
 
     this.addEventListener(DISCONNECT_EVENT_NAME, evt => {
@@ -160,7 +142,7 @@ export default class BaseChart extends LightningElement {
           this._ariaLabel = `${this.constructor.type} chart`;
         }
         this._configService.removeConfig(payload, option);
-        this._mt.waitNextTask();
+        this._reactivityManager.throttleRegisteredJob();
       }
     });
   }
@@ -173,7 +155,7 @@ export default class BaseChart extends LightningElement {
 
     loadScript(this, ChartJS).then(() => {
       this._chartjsLoaded = true;
-      this._mt.waitNextTask();
+      this._reactivityManager.throttleRegisteredJob();
     });
   }
 
@@ -186,6 +168,7 @@ export default class BaseChart extends LightningElement {
   renderChart() {
     if (!this._chartjsLoaded || !this._details) return;
 
+    this._configService.updateConfig(this._payload, null);
     if (!this._chart) {
       // eslint-disable-next-line no-undef
       this._chart = new Chart(this.getCanvas(), {

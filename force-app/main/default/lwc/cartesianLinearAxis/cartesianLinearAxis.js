@@ -12,7 +12,6 @@ export default class CartesianLinearAxis extends CartesianAxis {
   }
   set ticksBeginatzero(v) {
     this._content.ticks.beginAtZero = Boolean(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -21,7 +20,6 @@ export default class CartesianLinearAxis extends CartesianAxis {
   }
   set ticksMaxtickslimit(v) {
     this._content.ticks.maxTicksLimit = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -30,7 +28,6 @@ export default class CartesianLinearAxis extends CartesianAxis {
   }
   set ticksPrecision(v) {
     this._content.ticks.precision = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -39,7 +36,6 @@ export default class CartesianLinearAxis extends CartesianAxis {
   }
   set ticksStepsize(v) {
     this._content.ticks.stepSize = Number(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -48,7 +44,6 @@ export default class CartesianLinearAxis extends CartesianAxis {
   }
   set ticksSuggestedmax(v) {
     this._content.ticks.suggestedMax = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -57,7 +52,6 @@ export default class CartesianLinearAxis extends CartesianAxis {
   }
   set ticksSuggestedmin(v) {
     this._content.ticks.suggestedMin = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

@@ -12,7 +12,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set adapterDate(v) {
     this._content.adapters.date = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -21,7 +20,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set distribution(v) {
     this._content.distribution = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -30,7 +28,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set bounds(v) {
     this._content.bounds = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -39,7 +36,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set tickSource(v) {
     this._content.ticks.source = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -48,7 +44,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set timeDisplayformats(v) {
     this._content.time.displayFormats = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -57,7 +52,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set timeIsoweekday(v) {
     this._content.time.isoWeekday = Boolean(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -66,7 +60,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set timeParser(v) {
     this._content.time.parser = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -75,7 +68,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set timeRound(v) {
     this._content.time.round = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -84,7 +76,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set timeTooltipformat(v) {
     this._content.time.tooltipFormat = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -93,7 +84,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set timeUnit(v) {
     this._content.time.unit = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -102,7 +92,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set timeStepsize(v) {
     this._content.time.stepSize = Number(v);
-    this._mt.waitNextTask();
   }
   _timeMinunit;
   @api
@@ -111,7 +100,6 @@ export default class CartesianTimeAxis extends CartesianAxis {
   }
   set timeMinunit(v) {
     this._content.time.minUnit = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

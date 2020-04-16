@@ -9,7 +9,6 @@ export default class RectangleConfiguration extends BaseAttribute {
   }
   set backgroundcolor(v) {
     this._payload.rectangle.backgroundColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -18,7 +17,6 @@ export default class RectangleConfiguration extends BaseAttribute {
   }
   set borderwidth(v) {
     this._payload.rectangle.borderWidth = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -27,7 +25,6 @@ export default class RectangleConfiguration extends BaseAttribute {
   }
   set bordercolor(v) {
     this._payload.rectangle.borderColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -36,7 +33,6 @@ export default class RectangleConfiguration extends BaseAttribute {
   }
   set borderskipped(v) {
     this._payload.rectangle.borderSkipped = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

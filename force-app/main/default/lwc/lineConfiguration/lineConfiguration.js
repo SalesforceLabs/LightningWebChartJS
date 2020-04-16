@@ -9,7 +9,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set tension(v) {
     this._payload.line.tension = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -18,7 +17,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set backgroundcolor(v) {
     this._payload.line.backgroundColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -27,7 +25,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set borderwidth(v) {
     this._payload.line.borderWidth = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -36,7 +33,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set bordercolor(v) {
     this._payload.line.borderColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -45,7 +41,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set bordercapstyle(v) {
     this._payload.line.borderCapStyle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -54,7 +49,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set borderdash(v) {
     this._payload.line.borderDash = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -63,7 +57,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set borderdashoffset(v) {
     this._payload.line.borderDashOffset = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -72,7 +65,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set borderjoinstyle(v) {
     this._payload.line.borderJoinStyle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -81,7 +73,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set capbezierpoints(v) {
     this._payload.line.capBezierPoints = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -90,7 +81,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set cubicinterpolationmode(v) {
     this._payload.line.cubicInterpolationMode = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -99,7 +89,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set fill(v) {
     this._payload.line.fill = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -108,7 +97,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set stepped(v) {
     this._payload.line.stepped = v;
-    this._mt.waitNextTask();
   }
 
   // Radar Chart specific
@@ -118,7 +106,6 @@ export default class LineConfiguration extends BaseAttribute {
   }
   set spangaps(v) {
     this._payload.line.spanGaps = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

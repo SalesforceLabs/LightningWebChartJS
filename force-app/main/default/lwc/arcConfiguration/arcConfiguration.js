@@ -9,7 +9,6 @@ export default class ArcConfiguration extends BaseAttribute {
   }
   set angle(v) {
     this._payload.arc.angle = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -18,7 +17,6 @@ export default class ArcConfiguration extends BaseAttribute {
   }
   set backgroundcolor(v) {
     this._payload.arc.backgroundColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -27,7 +25,6 @@ export default class ArcConfiguration extends BaseAttribute {
   }
   set borderalign(v) {
     this._payload.arc.borderAlign = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -36,7 +33,6 @@ export default class ArcConfiguration extends BaseAttribute {
   }
   set bordercolor(v) {
     this._payload.arc.borderColor = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -45,7 +41,6 @@ export default class ArcConfiguration extends BaseAttribute {
   }
   set borderwidth(v) {
     this._payload.arc.borderWidth = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

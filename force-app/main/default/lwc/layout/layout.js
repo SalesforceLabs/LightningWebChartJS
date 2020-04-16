@@ -12,7 +12,6 @@ export default class Layout extends BaseAttribute {
   }
   set paddingBottom(v) {
     this._payload.padding.bottom = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -21,7 +20,6 @@ export default class Layout extends BaseAttribute {
   }
   set paddingLeft(v) {
     this._payload.padding.left = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -30,7 +28,6 @@ export default class Layout extends BaseAttribute {
   }
   set paddingRight(v) {
     this._payload.padding.right = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -39,7 +36,6 @@ export default class Layout extends BaseAttribute {
   }
   set paddingTop(v) {
     this._payload.padding.top = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {

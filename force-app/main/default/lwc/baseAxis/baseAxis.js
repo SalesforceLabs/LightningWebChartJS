@@ -11,7 +11,6 @@ export default class BaseAxis extends BaseAttribute {
   }
   set display(v) {
     this._content.display = Boolean(v);
-    this._mt.waitNextTask();
   }
 
   @api
@@ -20,7 +19,6 @@ export default class BaseAxis extends BaseAttribute {
   }
   set weight(v) {
     this._content.weight = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -31,7 +29,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackBeforeupdate(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.beforeUpdate = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -42,7 +39,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackBeforesetdimensions(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.beforeSetDimensions = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -53,7 +49,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackAftersetdimensions(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.afterSetDimensions = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -64,7 +59,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackBeforedatalimits(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.beforeDataLimits = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -75,7 +69,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackAfterdatalimits(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.afterDataLimits = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -86,7 +79,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackBeforebuildticks(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.beforeBuildTicks = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -97,7 +89,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackAfterbuildticks(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.afterBuildTicks = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -108,7 +99,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackBeforeticktolabelconversion(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.beforeTickToLabelConversion = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -119,7 +109,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackAfterticktolabelconversion(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.afterTickToLabelConversion = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -130,7 +119,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackBeforecalculatetickrotation(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.beforeCalculateTickRotation = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -141,7 +129,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackAftercalculatetickrotation(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.afterCalculateTickRotation = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -152,7 +139,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackBeforefit(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.beforeFit = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -163,7 +149,6 @@ export default class BaseAxis extends BaseAttribute {
   set callbackAfterfit(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.afterFit = v;
-    this._mt.waitNextTask();
   }
 
   @api
@@ -174,11 +159,5 @@ export default class BaseAxis extends BaseAttribute {
   set callbackAfterupdate(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.afterUpdate = v;
-    this._mt.waitNextTask();
-  }
-
-  constructor() {
-    super();
-    this._mt.waitNextTask();
   }
 }

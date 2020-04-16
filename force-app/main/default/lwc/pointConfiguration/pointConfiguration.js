@@ -9,7 +9,6 @@ export default class PointConfiguration extends BaseAttribute {
   }
   set radius(v) {
     this._payload.point.radius = v;
-    this._mt.waitNextTask();
   }
   @api
   get pointstyle() {
@@ -17,7 +16,6 @@ export default class PointConfiguration extends BaseAttribute {
   }
   set pointstyle(v) {
     this._payload.point.pointStyle = v;
-    this._mt.waitNextTask();
   }
   @api
   get rotation() {
@@ -25,7 +23,6 @@ export default class PointConfiguration extends BaseAttribute {
   }
   set rotation(v) {
     this._payload.point.rotation = v;
-    this._mt.waitNextTask();
   }
   @api
   get backgroundcolor() {
@@ -33,7 +30,6 @@ export default class PointConfiguration extends BaseAttribute {
   }
   set backgroundcolor(v) {
     this._payload.point.backgroundColor = v;
-    this._mt.waitNextTask();
   }
   @api
   get borderwidth() {
@@ -41,7 +37,6 @@ export default class PointConfiguration extends BaseAttribute {
   }
   set borderwidth(v) {
     this._payload.point.borderWidth = v;
-    this._mt.waitNextTask();
   }
   @api
   get bordercolor() {
@@ -49,7 +44,6 @@ export default class PointConfiguration extends BaseAttribute {
   }
   set bordercolor(v) {
     this._payload.point.borderColor = v;
-    this._mt.waitNextTask();
   }
   @api
   get hitradius() {
@@ -57,7 +51,6 @@ export default class PointConfiguration extends BaseAttribute {
   }
   set hitradius(v) {
     this._payload.point.hitRadius = v;
-    this._mt.waitNextTask();
   }
   @api
   get hoverradius() {
@@ -65,7 +58,6 @@ export default class PointConfiguration extends BaseAttribute {
   }
   set hoverradius(v) {
     this._payload.point.hoverRadius = v;
-    this._mt.waitNextTask();
   }
   @api
   get hoverborderwidth() {
@@ -73,7 +65,6 @@ export default class PointConfiguration extends BaseAttribute {
   }
   set hoverborderwidth(v) {
     this._payload.point.hoverBorderWidth = v;
-    this._mt.waitNextTask();
   }
 
   constructor() {
