@@ -8,46 +8,46 @@ export default class RadialLinearAxis extends RadialAxis {
   // AngleLines Options: https://www.chartjs.org/docs/latest/axes/radial/linear.html#angle-line-options
 
   @api
-  get anglelinesDisplay() {
+  get anglelineDisplay() {
     return this._payload.angleLines.display;
   }
-  set anglelinesDisplay(v) {
+  set anglelineDisplay(v) {
     this._payload.angleLines.display = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get anglelinesColor() {
+  get anglelineColor() {
     return this._payload.angleLines.color;
   }
-  set anglelinesColor(v) {
+  set anglelineColor(v) {
     this._payload.angleLines.color = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get anglelinesLinewidth() {
+  get anglelineLinewidth() {
     return this._payload.angleLines.lineWidth;
   }
-  set anglelinesLinewidth(v) {
+  set anglelineLinewidth(v) {
     this._payload.angleLines.lineWidth = Number(v);
     this._mt.waitNextTask();
   }
 
   @api
-  get anglelinesBorderdash() {
+  get anglelineBorderdash() {
     return this._payload.angleLines.borderDash;
   }
-  set anglelinesBorderdash(v) {
+  set anglelineBorderdash(v) {
     this._payload.angleLines.borderDash = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get anglelinesBorderdashoffset() {
+  get anglelineBorderdashoffset() {
     return this._payload.angleLines.borderDashOffset;
   }
-  set anglelinesBorderdashoffset(v) {
+  set anglelineBorderdashoffset(v) {
     this._payload.angleLines.borderDashOffset = Number(v);
     this._mt.waitNextTask();
   }
@@ -55,145 +55,145 @@ export default class RadialLinearAxis extends RadialAxis {
   // GridLines Options: https://www.chartjs.org/docs/latest/axes/styling.html#grid-line-configuration
 
   @api
-  get gridDisplay() {
+  get gridlineDisplay() {
     return this._payload.gridLines.display;
   }
-  set gridDisplay(v) {
+  set gridlineDisplay(v) {
     this._payload.gridLines.display = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get gridCircular() {
+  get gridlineCircular() {
     return this._payload.gridLines.circular;
   }
-  set gridCircular(v) {
+  set gridlineCircular(v) {
     this._payload.gridLines.circular = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get gridColor() {
+  get gridlineColor() {
     return this._payload.gridLines.color;
   }
-  set gridColor(v) {
+  set gridlineColor(v) {
     this._payload.gridLines.color = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get gridBorderdash() {
+  get gridlineBorderdash() {
     return this._payload.gridLines.borderDash;
   }
-  set gridBorderdash(v) {
+  set gridlineBorderdash(v) {
     this._payload.gridLines.borderDash = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get gridBorderdashoffset() {
+  get gridlineBorderdashoffset() {
     return this._payload.gridLines.borderDashOffset;
   }
-  set gridBorderdashoffset(v) {
+  set gridlineBorderdashoffset(v) {
     this._payload.gridLines.borderDashOffset = Number(v);
     this._mt.waitNextTask();
   }
 
   @api
-  get gridLinewidth() {
+  get gridlineLinewidth() {
     return this._payload.gridLines.lineWidth;
   }
-  set gridLinewidth(v) {
+  set gridlineLinewidth(v) {
     this._payload.gridLines.lineWidth = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get gridDrawborder() {
+  get gridlineDrawborder() {
     return this._payload.gridLines.drawBorder;
   }
-  set gridDrawborder(v) {
+  set gridlineDrawborder(v) {
     this._payload.gridLines.drawBorder = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get gridDrawonchartarea() {
+  get gridlineDrawonchartarea() {
     return this._payload.gridLines.drawOnChartArea;
   }
-  set gridDrawonchartarea(v) {
+  set gridlineDrawonchartarea(v) {
     this._payload.gridLines.drawOnChartArea = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get gridDrawticks() {
+  get gridlineDrawticks() {
     return this._payload.gridLines.drawTicks;
   }
-  set gridDrawticks(v) {
+  set gridlineDrawticks(v) {
     this._payload.gridLines.drawTicks = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get gridTickmarklength() {
+  get gridlineTickmarklength() {
     return this._payload.gridLines.tickMarkLength;
   }
-  set gridTickmarklength(v) {
+  set gridlineTickmarklength(v) {
     this._payload.gridLines.tickMarkLength = Number(v);
     this._mt.waitNextTask();
   }
 
   @api
-  get gridZerolinewidth() {
+  get gridlineZerolinewidth() {
     return this._payload.gridLines.zeroLineWidth;
   }
-  set gridZerolinewidth(v) {
+  set gridlineZerolinewidth(v) {
     this._payload.gridLines.zeroLineWidth = Number(v);
     this._mt.waitNextTask();
   }
 
   @api
-  get gridZerolinecolor() {
+  get gridlineZerolinecolor() {
     return this._payload.gridLines.zeroLineColor;
   }
-  set gridZerolinecolor(v) {
+  set gridlineZerolinecolor(v) {
     this._payload.gridLines.zeroLineColor = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get gridZerolineborderdash() {
+  get gridlineZerolineborderdash() {
     return this._payload.gridLines.zeroLineBorderDash;
   }
-  set gridZerolineborderdash(v) {
+  set gridlineZerolineborderdash(v) {
     this._payload.gridLines.zeroLineBorderDash = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get gridZerolineborderdashoffset() {
+  get gridlineZerolineborderdashoffset() {
     return this._payload.gridLines.zeroLineBorderDashOffset;
   }
-  set gridZerolineborderdashoffset(v) {
+  set gridlineZerolineborderdashoffset(v) {
     this._payload.gridLines.zeroLineBorderDashOffset = Number(v);
     this._mt.waitNextTask();
   }
 
   @api
-  get gridOffsetGridLines() {
+  get gridlineOffsetGridLines() {
     return this._payload.gridLines.offsetGridLines;
   }
-  set gridOffsetGridLines(v) {
+  set gridlineOffsetGridLines(v) {
     this._payload.gridLines.offsetGridLines = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get gridZ() {
+  get gridlineZ() {
     return this._payload.gridLines.z;
   }
-  set gridZ(v) {
+  set gridlineZ(v) {
     this._payload.gridLines.z = Number(v);
     this._mt.waitNextTask();
   }
@@ -201,64 +201,64 @@ export default class RadialLinearAxis extends RadialAxis {
   // PointLabels Options: https://www.chartjs.org/docs/latest/axes/radial/linear.html#point-label-options
 
   @api
-  get pointlabelsDisplay() {
+  get pointlabelDisplay() {
     return this._payload.pointLabels.display;
   }
-  set pointlabelsDisplay(v) {
+  set pointlabelDisplay(v) {
     this._payload.pointLabels.display = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get pointlabelsCallback() {
+  get pointlabelCallback() {
     return this._payload.pointLabels.callback;
   }
-  set pointlabelsCallback(v) {
+  set pointlabelCallback(v) {
     this._payload.pointLabels.callback = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get pointlabelsFontcolor() {
+  get pointlabelFontcolor() {
     return this._payload.pointLabels.fontColor;
   }
-  set pointlabelsFontcolor(v) {
+  set pointlabelFontcolor(v) {
     this._payload.pointLabels.fontColor = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get pointlabelsFontfamily() {
+  get pointlabelFontfamily() {
     return this._payload.pointLabels.fontFamily;
   }
-  set pointlabelsFontfamily(v) {
+  set pointlabelFontfamily(v) {
     this._payload.pointLabels.fontFamily = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get pointlabelsFontsize() {
+  get pointlabelFontsize() {
     return this._payload.pointLabels.fontSize;
   }
-  set pointlabelsFontsize(v) {
+  set pointlabelFontsize(v) {
     this._payload.pointLabels.fontSize = Number(v);
     this._mt.waitNextTask();
   }
 
   @api
-  get pointlabelsFontstyle() {
+  get pointlabelFontstyle() {
     return this._payload.pointLabels.fontStyle;
   }
-  set pointlabelsFontstyle(v) {
+  set pointlabelFontstyle(v) {
     this._payload.pointLabels.fontStyle = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get pointlabelsLineheight() {
+  get pointlabelLineheight() {
     return this._payload.pointLabels.lineHeight;
   }
-  set pointlabelsLineheight(v) {
+  set pointlabelLineheight(v) {
     this._payload.pointLabels.lineHeight = v;
     this._mt.waitNextTask();
   }
@@ -266,109 +266,109 @@ export default class RadialLinearAxis extends RadialAxis {
   // Ticks Options: https://www.chartjs.org/docs/latest/axes/radial/linear.html#tick-options
 
   @api
-  get ticksBackdropcolor() {
+  get tickBackdropcolor() {
     return this._payload.ticks.backdropColor;
   }
-  set ticksBackdropcolor(v) {
+  set tickBackdropcolor(v) {
     this._payload.ticks.backdropColor = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get ticksBackdroppaddingx() {
+  get tickBackdroppaddingx() {
     return this._payload.ticks.backdropPaddingX;
   }
-  set ticksBackdroppaddingx(v) {
+  set tickBackdroppaddingx(v) {
     this._payload.ticks.backdropPaddingX = Number(v);
     this._mt.waitNextTask();
   }
 
   @api
-  get ticksBackdroppaddingy() {
+  get tickBackdroppaddingy() {
     return this._payload.ticks.backdropPaddingY;
   }
-  set ticksBackdroppaddingy(v) {
+  set tickBackdroppaddingy(v) {
     this._payload.ticks.backdropPaddingY = Number(v);
     this._mt.waitNextTask();
   }
 
   @api
-  get ticksBeginatzero() {
+  get tickBeginatzero() {
     return this._payload.ticks.beginAtZero;
   }
-  set ticksBeginatzero(v) {
+  set tickBeginatzero(v) {
     this._payload.ticks.beginAtZero = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get ticksMin() {
+  get tickMin() {
     return this._payload.ticks.min;
   }
-  set ticksMin(v) {
+  set tickMin(v) {
     this._payload.ticks.min = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get ticksMax() {
+  get tickMax() {
     return this._payload.ticks.max;
   }
-  set ticksMax(v) {
+  set tickMax(v) {
     this._payload.ticks.max = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get ticksMaxtickslimit() {
+  get tickMaxtickslimit() {
     return this._payload.ticks.maxTicksLimit;
   }
-  set ticksMaxtickslimit(v) {
+  set tickMaxtickslimit(v) {
     this._payload.ticks.maxTicksLimit = Number(v);
     this._mt.waitNextTask();
   }
 
   @api
-  get ticksPrecision() {
+  get tickPrecision() {
     return this._payload.ticks.precision;
   }
-  set ticksPrecision(v) {
+  set tickPrecision(v) {
     this._payload.ticks.precision = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get ticksStepsize() {
+  get tickStepsize() {
     return this._payload.ticks.stepSize;
   }
-  set ticksStepsize(v) {
+  set tickStepsize(v) {
     this._payload.ticks.stepSize = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get ticksSuggestedmax() {
+  get tickSuggestedmax() {
     return this._payload.ticks.suggestedMax;
   }
-  set ticksSuggestedmax(v) {
+  set tickSuggestedmax(v) {
     this._payload.ticks.suggestedMax = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get ticksSuggestedmin() {
+  get tickSuggestedmin() {
     return this._payload.ticks.suggestedMin;
   }
-  set ticksSuggestedmin(v) {
+  set tickSuggestedmin(v) {
     this._payload.ticks.suggestedMin = v;
     this._mt.waitNextTask();
   }
 
   @api
-  get ticksShowlabelbackdrop() {
+  get tickShowlabelbackdrop() {
     return this._payload.ticks.showLabelBackdrop;
   }
-  set ticksShowlabelbackdrop(v) {
+  set tickShowlabelbackdrop(v) {
     this._payload.ticks.showLabelBackdrop = v;
     this._mt.waitNextTask();
   }

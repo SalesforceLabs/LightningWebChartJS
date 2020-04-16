@@ -40,16 +40,4 @@ export default class BaseAttribute extends LightningElement {
       })
     );
   }
-
-  static sanitize(attribut) {
-    let value = attribut;
-    if (value) {
-      try {
-        value = JSON.parse(value.replace(/\\/g, ''));
-      } catch (e) {
-        /* Silently */
-      }
-    }
-    return value;
-  }
 }

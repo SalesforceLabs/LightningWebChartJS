@@ -6,13 +6,15 @@ import {
   DATA_EVENT_NAME
 } from 'c/constants';
 
+import { sanitize } from 'c/utils';
+
 export default class Dataset extends BaseAttribute {
   @api
   get labels() {
     return this._payload.labels;
   }
   set labels(v) {
-    this._payload.labels = BaseAttribute.sanitize(v);
+    this._payload.labels = sanitize(v);
     this._mt.waitNextTask();
   }
 

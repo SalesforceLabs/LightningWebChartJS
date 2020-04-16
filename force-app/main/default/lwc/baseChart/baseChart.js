@@ -1,6 +1,7 @@
 import { LightningElement, api } from 'lwc';
 import ChartJS from '@salesforce/resourceUrl/chartjs_v280';
 import { loadScript } from 'lightning/platformResourceLoader';
+import { sanitize } from 'c/utils';
 
 import {
   ATTRIBUTE_DATA,
@@ -10,7 +11,6 @@ import {
 } from 'c/constants';
 import ChartConfigService from 'c/chartConfigService';
 import MicroTaskHandler from 'c/microTaskHandler';
-import BaseAttribute from 'c/baseAttribute';
 
 export default class BaseChart extends LightningElement {
   @api width;
@@ -82,7 +82,7 @@ export default class BaseChart extends LightningElement {
     return this._payload.events;
   }
   set events(v) {
-    this._payload.events = BaseAttribute.sanitize(v);
+    this._payload.events = sanitize(v);
     this._configService.updateConfig(this._payload, null);
     this._mt.waitNextTask();
   }

@@ -98,7 +98,7 @@ export default class LineConfiguration extends BaseAttribute {
     return this._payload.line.fill;
   }
   set fill(v) {
-    this._payload.line.fill._fill = v;
+    this._payload.line.fill = v;
     this._mt.waitNextTask();
   }
 

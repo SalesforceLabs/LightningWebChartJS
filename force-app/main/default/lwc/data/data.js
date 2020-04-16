@@ -3,6 +3,8 @@ import { api } from 'lwc';
 import { ATTRIBUTE_DATA, DATA_EVENT_NAME } from 'c/constants';
 import { nanoid } from 'c/nanoid';
 
+import { sanitize } from 'c/utils';
+
 export default class Data extends BaseAttribute {
   @api
   get label() {
@@ -36,7 +38,7 @@ export default class Data extends BaseAttribute {
     return this._payload.data;
   }
   set detail(v) {
-    this._payload.data = BaseAttribute.sanitize(v);
+    this._payload.data = sanitize(v);
     this._mt.waitNextTask();
   }
 
@@ -45,7 +47,7 @@ export default class Data extends BaseAttribute {
     return this._payload.backgroundColor;
   }
   set backgroundcolor(v) {
-    this._payload.backgroundColor = BaseAttribute.sanitize(v);
+    this._payload.backgroundColor = sanitize(v);
     this._mt.waitNextTask();
   }
 
@@ -54,7 +56,7 @@ export default class Data extends BaseAttribute {
     return this._payload.borderColor;
   }
   set bordercolor(v) {
-    this._payload.borderColor = BaseAttribute.sanitize(v);
+    this._payload.borderColor = sanitize(v);
     this._mt.waitNextTask();
   }
 
@@ -115,10 +117,10 @@ export default class Data extends BaseAttribute {
 
   @api
   get pointhoverborderwidth() {
-    return this._payload.pointhoverborderwidth;
+    return this._payload.pointHoverBorderWidth;
   }
   set pointhoverborderwidth(v) {
-    this._payload.pointhoverborderwidth = v;
+    this._payload.pointHoverBorderWidth = v;
     this._mt.waitNextTask();
   }
 
