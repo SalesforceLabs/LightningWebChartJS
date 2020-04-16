@@ -1,123 +1,122 @@
 import RadialLinearAxis from 'c/radialLinearAxis';
-import * as Handler from '../../__utils__/testAttributeHandler.js';
 
 const TEST_DATA_PROPERTIES = [
-  new Handler.ChartOptionMock('anglelineDisplay', 'foo', {
+  ChartOptionMock('anglelineDisplay', 'foo', {
     angleLines: { display: 'foo' }
   }),
-  new Handler.ChartOptionMock('anglelineColor', 'foo', {
+  ChartOptionMock('anglelineColor', 'foo', {
     angleLines: { color: 'foo' }
   }),
-  new Handler.ChartOptionMock('anglelineLinewidth', 1, {
+  ChartOptionMock('anglelineLinewidth', 1, {
     angleLines: { lineWidth: 1 }
   }),
-  new Handler.ChartOptionMock('anglelineBorderdash', 'foo', {
+  ChartOptionMock('anglelineBorderdash', 'foo', {
     angleLines: { borderDash: 'foo' }
   }),
-  new Handler.ChartOptionMock('anglelineBorderdashoffset', 1, {
+  ChartOptionMock('anglelineBorderdashoffset', 1, {
     angleLines: { borderDashOffset: 1 }
   }),
-  new Handler.ChartOptionMock('gridlineDisplay', 'foo', {
+  ChartOptionMock('gridlineDisplay', 'foo', {
     gridLines: { display: 'foo' }
   }),
-  new Handler.ChartOptionMock('gridlineCircular', 'foo', {
+  ChartOptionMock('gridlineCircular', 'foo', {
     gridLines: { circular: 'foo' }
   }),
-  new Handler.ChartOptionMock('gridlineColor', 'foo', {
+  ChartOptionMock('gridlineColor', 'foo', {
     gridLines: { color: 'foo' }
   }),
-  new Handler.ChartOptionMock('gridlineBorderdash', 'foo', {
+  ChartOptionMock('gridlineBorderdash', 'foo', {
     gridLines: { borderDash: 'foo' }
   }),
-  new Handler.ChartOptionMock('gridlineBorderdashoffset', 1, {
+  ChartOptionMock('gridlineBorderdashoffset', 1, {
     gridLines: { borderDashOffset: 1 }
   }),
-  new Handler.ChartOptionMock('gridlineLinewidth', 'foo', {
+  ChartOptionMock('gridlineLinewidth', 'foo', {
     gridLines: { lineWidth: 'foo' }
   }),
-  new Handler.ChartOptionMock('gridlineDrawborder', 'foo', {
+  ChartOptionMock('gridlineDrawborder', 'foo', {
     gridLines: { drawBorder: 'foo' }
   }),
-  new Handler.ChartOptionMock('gridlineDrawonchartarea', 'foo', {
+  ChartOptionMock('gridlineDrawonchartarea', 'foo', {
     gridLines: { drawOnChartArea: 'foo' }
   }),
-  new Handler.ChartOptionMock('gridlineDrawticks', 'foo', {
+  ChartOptionMock('gridlineDrawticks', 'foo', {
     gridLines: { drawTicks: 'foo' }
   }),
-  new Handler.ChartOptionMock('gridlineTickmarklength', 1, {
+  ChartOptionMock('gridlineTickmarklength', 1, {
     gridLines: { tickMarkLength: 1 }
   }),
-  new Handler.ChartOptionMock('gridlineZerolinewidth', 1, {
+  ChartOptionMock('gridlineZerolinewidth', 1, {
     gridLines: { zeroLineWidth: 1 }
   }),
-  new Handler.ChartOptionMock('gridlineZerolinecolor', 'foo', {
+  ChartOptionMock('gridlineZerolinecolor', 'foo', {
     gridLines: { zeroLineColor: 'foo' }
   }),
-  new Handler.ChartOptionMock('gridlineZerolineborderdash', 'foo', {
+  ChartOptionMock('gridlineZerolineborderdash', 'foo', {
     gridLines: { zeroLineBorderDash: 'foo' }
   }),
-  new Handler.ChartOptionMock('gridlineZerolineborderdashoffset', 1, {
+  ChartOptionMock('gridlineZerolineborderdashoffset', 1, {
     gridLines: { zeroLineBorderDashOffset: 1 }
   }),
-  new Handler.ChartOptionMock('gridlineOffsetGridLines', 'foo', {
+  ChartOptionMock('gridlineOffsetGridLines', 'foo', {
     gridLines: { offsetGridLines: 'foo' }
   }),
-  new Handler.ChartOptionMock('gridlineZ', 1, { gridLines: { z: 1 } }),
-  new Handler.ChartOptionMock('pointlabelDisplay', 'foo', {
+  ChartOptionMock('gridlineZ', 1, { gridLines: { z: 1 } }),
+  ChartOptionMock('pointlabelDisplay', 'foo', {
     pointLabels: { display: 'foo' }
   }),
-  new Handler.ChartOptionMock('pointlabelCallback', 'foo', {
+  ChartOptionMock('pointlabelCallback', 'foo', {
     pointLabels: { callback: 'foo' }
   }),
-  new Handler.ChartOptionMock('pointlabelFontcolor', 'foo', {
+  ChartOptionMock('pointlabelFontcolor', 'foo', {
     pointLabels: { fontColor: 'foo' }
   }),
-  new Handler.ChartOptionMock('pointlabelFontfamily', 'foo', {
+  ChartOptionMock('pointlabelFontfamily', 'foo', {
     pointLabels: { fontFamily: 'foo' }
   }),
-  new Handler.ChartOptionMock('pointlabelFontsize', 1, {
+  ChartOptionMock('pointlabelFontsize', 1, {
     pointLabels: { fontSize: 1 }
   }),
-  new Handler.ChartOptionMock('pointlabelFontstyle', 'foo', {
+  ChartOptionMock('pointlabelFontstyle', 'foo', {
     pointLabels: { fontStyle: 'foo' }
   }),
-  new Handler.ChartOptionMock('pointlabelLineheight', 'foo', {
+  ChartOptionMock('pointlabelLineheight', 'foo', {
     pointLabels: { lineHeight: 'foo' }
   }),
-  new Handler.ChartOptionMock('tickBackdropcolor', 'foo', {
+  ChartOptionMock('tickBackdropcolor', 'foo', {
     ticks: { backdropColor: 'foo' }
   }),
-  new Handler.ChartOptionMock('tickBackdroppaddingx', 1, {
+  ChartOptionMock('tickBackdroppaddingx', 1, {
     ticks: { backdropPaddingX: 1 }
   }),
-  new Handler.ChartOptionMock('tickBackdroppaddingy', 1, {
+  ChartOptionMock('tickBackdroppaddingy', 1, {
     ticks: { backdropPaddingY: 1 }
   }),
-  new Handler.ChartOptionMock('tickBeginatzero', 'foo', {
+  ChartOptionMock('tickBeginatzero', 'foo', {
     ticks: { beginAtZero: 'foo' }
   }),
-  new Handler.ChartOptionMock('tickMin', 'foo', { ticks: { min: 'foo' } }),
-  new Handler.ChartOptionMock('tickMax', 'foo', { ticks: { max: 'foo' } }),
-  new Handler.ChartOptionMock('tickMaxtickslimit', 1, {
+  ChartOptionMock('tickMin', 'foo', { ticks: { min: 'foo' } }),
+  ChartOptionMock('tickMax', 'foo', { ticks: { max: 'foo' } }),
+  ChartOptionMock('tickMaxtickslimit', 1, {
     ticks: { maxTicksLimit: 1 }
   }),
-  new Handler.ChartOptionMock('tickPrecision', 'foo', {
+  ChartOptionMock('tickPrecision', 'foo', {
     ticks: { precision: 'foo' }
   }),
-  new Handler.ChartOptionMock('tickStepsize', 'foo', {
+  ChartOptionMock('tickStepsize', 'foo', {
     ticks: { stepSize: 'foo' }
   }),
-  new Handler.ChartOptionMock('tickSuggestedmax', 'foo', {
+  ChartOptionMock('tickSuggestedmax', 'foo', {
     ticks: { suggestedMax: 'foo' }
   }),
-  new Handler.ChartOptionMock('tickSuggestedmin', 'foo', {
+  ChartOptionMock('tickSuggestedmin', 'foo', {
     ticks: { suggestedMin: 'foo' }
   }),
-  new Handler.ChartOptionMock('tickShowlabelbackdrop', 'foo', {
+  ChartOptionMock('tickShowlabelbackdrop', 'foo', {
     ticks: { showLabelBackdrop: 'foo' }
   })
 ];
 
 describe('c-radial-linear-axis', () => {
-  Handler.testAttribute(RadialLinearAxis, TEST_DATA_PROPERTIES);
+  testAttribute(RadialLinearAxis, TEST_DATA_PROPERTIES);
 });

@@ -1,36 +1,34 @@
 import { createElement } from 'lwc';
 import { OPTION_EVENT_NAME } from 'c/constants';
 import BaseAttribute from 'c/baseAttribute';
-import * as crypto from 'crypto';
+import { randomBytes } from 'crypto';
 
 Object.defineProperty(global.self, 'crypto', {
   value: {
-    getRandomValues: arr => crypto.randomBytes(arr.length)
+    getRandomValues: arr => randomBytes(arr.length)
   }
 });
 
-export class ChartOptionMock {
-  /**
-   * @param {*} propertyName - The name of the LWC exposed attribute
-   * @param {*} propertyValue - The value of the LWC exposed attribute
-   * @param {*} expectedProperty - An object representing the property name and its value in a Chart's options
-   * @example
-   *  LWCC Attribute: <c-attribute propertyName="propertyValue">
-   *  ChartJS configuration: Chart.options = { attribute: expectedProperty }
-   */
-  constructor(propertyName, propertyValue, expectedProperty) {
-    this.propertyName = propertyName;
-    this.propertyValue = propertyValue;
-    this.expectedProperty = expectedProperty;
-  }
-}
+/**
+ * @param {*} propertyName - The name of the LWC exposed attribute
+ * @param {*} propertyValue - The value of the LWC exposed attribute
+ * @param {*} expectedProperty - An object representing the property name and its value in a Chart's options
+ * @example
+ *  LWCC Attribute: <c-attribute propertyName="propertyValue">
+ *  ChartJS configuration: Chart.options = { attribute: expectedProperty }
+ */
+global.ChartOptionMock = (propertyName, propertyValue, expectedProperty) => ({
+  propertyName: propertyName,
+  propertyValue: propertyValue,
+  expectedProperty: expectedProperty
+});
 
-export class TestAttribute extends BaseAttribute {
+global.TestAttribute = class TestAttribute extends BaseAttribute {
   constructor() {
     super();
     this.option = 'TestAttribute';
   }
-}
+};
 
 /**
  * Check that the DOM element can be created
@@ -74,7 +72,7 @@ function testChartOptions(
   );
 }
 
-export function testAttribute(constructor, listChartOptionMock, eventName) {
+global.testAttribute = (constructor, listChartOptionMock, eventName) => {
   testDOMElementCreation(constructor);
   testChartOptions(constructor, listChartOptionMock, eventName);
-}
+};

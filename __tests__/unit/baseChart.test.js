@@ -1,6 +1,5 @@
 import { createElement } from 'lwc';
 import { loadScript } from 'lightning/platformResourceLoader';
-import { TestAttribute } from '../__utils__/testAttributeHandler.js';
 
 import { BAR_CHART_TYPE, LINE_CHART_TYPE } from 'c/constants';
 
