@@ -94,22 +94,20 @@ export default class BaseChart extends LightningElement {
       ''}`;
   }
 
-  get ariaLabel() {
-    return `${this._ariaLabel}`;
-  }
-
-  _baseChartInitialized = false;
-  _chartjsLoaded = false;
+  ariaLabel;
 
   constructor() {
     super();
+    this._baseChartInitialized = false;
+    this._chartjsLoaded = false;
     this._configService = new ChartConfigService();
     this._details = null;
     this._chart = null;
     this._reactivityManager = new ReactivityManager();
     this._reactivityManager.registerJob(() => this.renderChart());
     this._payload = this._reactivityManager.getReactivityProxy();
-    this._ariaLabel = `${this.constructor.type} chart`; // default accessibility title
+    this._type = this.constructor.type;
+    this.ariaLabel = `${this._type} chart`;
   }
 
   connectedCallback() {
@@ -121,7 +119,7 @@ export default class BaseChart extends LightningElement {
       } else {
         // get title to set the accessibility
         if (option === ATTRIBUTE_TITLE) {
-          this._ariaLabel = payload.text;
+          this.ariaLabel = payload.text;
         }
         this._configService.updateConfig(payload, option);
       }
@@ -139,7 +137,7 @@ export default class BaseChart extends LightningElement {
       } else {
         // reset title to set the accessibility
         if (option === ATTRIBUTE_TITLE) {
-          this._ariaLabel = `${this.constructor.type} chart`;
+          this.ariaLabel = `${this._type} chart`;
         }
         this._configService.removeConfig(payload, option);
         this._reactivityManager.throttleRegisteredJob();
@@ -172,11 +170,12 @@ export default class BaseChart extends LightningElement {
     if (!this._chart) {
       // eslint-disable-next-line no-undef
       this._chart = new Chart(this.getCanvas(), {
-        type: this.constructor.type,
+        type: this._type,
         data: this._details,
         options: this._configService.getConfig()
       });
     } else {
+      this._chart.type = this._type;
       this._chart.data = this._details;
       this._chart.options = this._configService.getConfig();
       this._chart.update();

@@ -1,6 +1,22 @@
 <template>
   <div class="slds-card">
     <!-- Bar chart -->
+    <c-dynamic-chart height="400px" width="400px" type="line">
+      <c-dataset
+        labels='["January", "February", "March", "April", "May", "June", "July"]'
+      >
+        <c-data
+          label="My First dataset"
+          detail="[10, 30, 46, 2, 8, 50, 0]"
+          backgroundcolor="rgba(44, 130, 201, 1)"
+          bordercolor="rgba(44, 130, 201, 1)"
+          fill="false"
+        ></c-data>
+      </c-dataset>
+      <c-title text="Line Chart"></c-title>
+    </c-dynamic-chart>
+
+    <!-- Bar chart -->
     <c-bar-chart
       width="80vw"
       responsive="true"
