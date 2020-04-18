@@ -3,23 +3,22 @@ import { loadScript } from 'lightning/platformResourceLoader';
 
 import { BAR_CHART_TYPE, LINE_CHART_TYPE } from 'c/constants';
 
-import BaseChart from 'c/baseChart';
-import BarChart from 'c/barChart';
-import LineChart from 'c/lineChart';
+import Chart from 'c/chart';
 
 const STATIC_RESOURCE_NAME = 'chartjs_v280';
 
 const CHARTS = [
-  { class: BarChart, type: BAR_CHART_TYPE },
-  { class: LineChart, type: LINE_CHART_TYPE }
+  { class: Chart, type: BAR_CHART_TYPE },
+  { class: Chart, type: LINE_CHART_TYPE }
   // TODO
 ];
 
-describe('BaseChart: ChartJs library', () => {
+describe('Chart: ChartJs library', () => {
   test('Load the ChartJS static resource', () => {
-    const element = createElement('x-basechart', {
-      is: BaseChart
+    const element = createElement('x-chart', {
+      is: Chart
     });
+    element.type = LINE_CHART_TYPE;
     document.body.appendChild(element);
 
     // Validation that the loadScript promise is called once.
@@ -35,6 +34,8 @@ describe.each(CHARTS)('DOM Tests for individual charts', chart => {
   const element = createElement('x-chart', {
     is: chart.class
   });
+  element.setAttribute('type', chart.type);
+  console.log(element);
   document.body.appendChild(element);
 
   describe('DOM Element created correctly', () => {
@@ -53,7 +54,7 @@ describe.each(CHARTS)('DOM Tests for individual charts', chart => {
 
   describe('Chart type is correct', () => {
     test(`${chartName} is of type ${chart.type}`, () => {
-      expect(chart.class.type).toBe(chart.type);
+      expect(chart.class.type).toBe(element.type);
     });
   });
 
