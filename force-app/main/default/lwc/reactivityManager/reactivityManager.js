@@ -25,8 +25,10 @@ export default class ReactivityManager {
     const self = this;
     const reactivityProxy = {
       set: function(obj, prop, value) {
-        obj[prop] = value;
-        self.throttleRegisteredJob();
+        if (obj[prop] !== value) {
+          obj[prop] = value;
+          self.throttleRegisteredJob();
+        }
         return true;
       }
     };

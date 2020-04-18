@@ -1,7 +1,7 @@
 <template>
   <div class="slds-card">
     <!-- Bar chart -->
-    <c-dynamic-chart height="400px" width="400px" type="line">
+    <c-chart height="400px" width="400px" type="line">
       <c-dataset
         labels='["January", "February", "March", "April", "May", "June", "July"]'
       >
@@ -14,10 +14,11 @@
         ></c-data>
       </c-dataset>
       <c-title text="Line Chart"></c-title>
-    </c-dynamic-chart>
+    </c-chart>
 
     <!-- Bar chart -->
-    <c-bar-chart
+    <c-chart
+      type="bar"
       width="80vw"
       responsive="true"
       maintainaspectratio="true"
@@ -70,13 +71,13 @@
         position="top"
         ticks-min="Yellow"
       ></c-cartesian-category-axis>
-    </c-bar-chart>
+    </c-chart>
 
     <!-- Progress bar linked to the animationOnProgress callback -->
     <progress value={barChartCurrentPercentage} max="100"></progress>
 
     <!-- Line chart -->
-    <c-line-chart height="400px" width="400px">
+    <c-chart height="400px" width="400px" type="line">
       <c-dataset
         labels='["January", "February", "March", "April", "May", "June", "July"]'
       >
@@ -114,10 +115,10 @@
         grid-zerolinewidth="4"
       >
       </c-cartesian-linear-axis>
-    </c-line-chart>
+    </c-chart>
 
     <!-- Pie chart -->
-    <c-pie-chart height="400px" width="400px">
+    <c-chart height="400px" width="400px" type="pie">
       <c-dataset labels='["OK", "WARNING", "CRITICAL", "UNKNOWN"]'>
         <c-data
           label="# of Tomatoes"
@@ -138,10 +139,10 @@
         padding-left="10"
         padding-bottom="10"
       ></c-layout>
-    </c-pie-chart>
+    </c-chart>
 
     <!-- Doughnut chart -->
-    <c-doughnut-chart height="400px" width="400px">
+    <c-chart height="400px" width="400px" type="doughtnut">
       <c-dataset labels='["OK", "WARNING", "CRITICAL", "UNKNOWN"]'>
         <c-data
           label="# of Tomatoes"
@@ -166,10 +167,10 @@
         bordercolor="#000"
         backgroundcolor="#000"
       ></c-arc-configuration>
-    </c-doughnut-chart>
+    </c-chart>
 
     <!-- Bubble chart -->
-    <c-bubble-chart height="400px" width="400px">
+    <c-chart height="400px" width="400px" type="bubble">
       <c-dataset>
         <c-data
           label="John"
@@ -195,10 +196,10 @@
         padding-left="10"
         padding-bottom="10"
       ></c-layout>
-    </c-bubble-chart>
+    </c-chart>
 
     <!-- Scatter chart -->
-    <c-scatter-chart height="400px" width="400px">
+    <c-chart height="400px" width="400px" type="scatter">
       <c-dataset
         labels='["January", "February", "March", "April", "May", "June", "July"]'
       >
@@ -212,10 +213,10 @@
       </c-dataset>
       <c-title text="Scatter Chart"></c-title>
       <c-tooltip position="nearest" mode="index" enabled="true"></c-tooltip>
-    </c-scatter-chart>
+    </c-chart>
 
     <!-- Mix chart -->
-    <c-bar-chart height="400px" width="400px">
+    <c-chart height="400px" width="400px" type="bar">
       <c-dataset
         labels='["January", "February", "March", "April", "May", "June", "July"]'
       >
@@ -239,10 +240,10 @@
       </c-dataset>
       <c-title text="Mix Chart"></c-title>
       <c-tooltip position="nearest" mode="index" enabled="true"></c-tooltip>
-    </c-bar-chart>
+    </c-chart>
 
     <!-- Radar Chart -->
-    <c-radar-chart height="400px" width="400px">
+    <c-chart height="400px" width="400px" type="radar">
       <c-dataset
         labels='["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"]'
       >
@@ -262,10 +263,10 @@
         ></c-data>
       </c-dataset>
       <c-title text="Radar Chart"></c-title>
-    </c-radar-chart>
+    </c-chart>
 
     <!-- PolarArea Chart -->
-    <c-polar-area-chart height="400px" width="400px">
+    <c-chart height="400px" width="400px" type="polarArea">
       <c-dataset labels='["Eating", "Drinking", "Sleeping"]'>
         <c-data
           label="My First dataset"
@@ -276,20 +277,20 @@
         </c-data>
       </c-dataset>
       <c-title text="Polar Area Chart"></c-title>
-    </c-polar-area-chart>
+    </c-chart>
 
     <!-- Scales -->
-    <c-line-chart height="400px" width="400px">
+    <c-chart height="400px" width="400px" type="line">
       <c-title text="Logarithmic"></c-title>
       <c-cartesian-logarithmic-axis></c-cartesian-logarithmic-axis>
-    </c-line-chart>
+    </c-chart>
 
-    <c-line-chart height="400px" width="400px">
+    <c-chart height="400px" width="400px" type="line">
       <c-title text="Time"></c-title>
       <c-cartesian-time-axis axis="y"></c-cartesian-time-axis>
       <c-cartesian-linear-axis axis="x"></c-cartesian-linear-axis>
-    </c-line-chart>
-    <c-bar-chart height="400px" width="400px">
+    </c-chart>
+    <c-chart height="400px" width="400px" type="bar">
       <c-title text="Category"></c-title>
       <c-dataset labels='["OK", "WARNING", "CRITICAL", "UNKNOWN"]'>
         <c-data
@@ -317,6 +318,6 @@
         title-display="true"
         title-labelstring="Linear axis here"
       ></c-cartesian-linear-axis>
-    </c-bar-chart>
+    </c-chart>
   </div>
 </template>
