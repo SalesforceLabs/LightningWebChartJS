@@ -1,9 +1,10 @@
-# Base Chart
+# Chart
 
 https://www.chartjs.org/docs/latest/general/
 
-BaseChart is the chart component.
-baseChart host the rendering logic, the reactivity logic, the options gathering and the data gathering.
+Chart is the chart component.
+Chart host the rendering logic, the reactivity logic, the options gathering and the data gathering.
+The type of the chart is dynamic and need to be set in the component Attribute (easier declaratively or programmatically)
 
 ## API
 
@@ -19,3 +20,10 @@ baseChart host the rendering logic, the reactivity logic, the options gathering 
   events | string[] |
   callbackClick | function |
   callbackHover | function |
+
+## Usage Example
+
+```
+<c-chart type="bar">
+</c-chart>
+```
