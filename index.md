@@ -28,19 +28,9 @@ Chart composition is done using them to configure the Chart.
 
 ### Chart.js Chart component
 
-Every chart extends BaseChart:
+There is one Chart component exposing attributes and encapsulating rendering logic and reactivity processing
 
-- [Base chart](https://scolladon.github.io/lwcc/docs/Base-chart.html)
-
-- [Line chart](https://scolladon.github.io/lwcc/docs/Line-chart.html)
-- [Bar chart](https://scolladon.github.io/lwcc/docs/Bar-chart.html)
-- [Radar chart](https://scolladon.github.io/lwcc/docs/Radar-chart.html)
-- [Doughnut chart](https://scolladon.github.io/lwcc/docs/Doughnut-chart.html)
-- [Pie chart](https://scolladon.github.io/lwcc/docs/Pie-chart.html)
-- [Polar Area chart](https://scolladon.github.io/lwcc/docs/Polar-Area-chart.html)
-- [Bubble chart](https://scolladon.github.io/lwcc/docs/Bubble-chart.html)
-- [Scatter chart](https://scolladon.github.io/lwcc/docs/Scatter-chart.html)
-- [Area chart](https://scolladon.github.io/lwcc/docs/Area-chart.html)
+- [Chart](https://scolladon.github.io/lwcc/docs/Chart.html)
 
 ### Chart.js Attributes components
 
