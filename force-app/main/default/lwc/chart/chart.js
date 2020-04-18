@@ -12,7 +12,7 @@ import {
 import ChartConfigService from 'c/chartConfigService';
 import ReactivityManager from 'c/reactivityManager';
 
-export default class BaseChart extends LightningElement {
+export default class Chart extends LightningElement {
   @api width;
   @api height;
   @api stylecss;
@@ -89,6 +89,22 @@ export default class BaseChart extends LightningElement {
     this._payload.onHover = v;
   }
 
+  @api
+  get type() {
+    return this._type;
+  }
+  set type(v) {
+    if (v !== this._type) {
+      this._type = v;
+      this.ariaLabel =
+        this._payload[ATTRIBUTE_TITLE] && this._payload[ATTRIBUTE_TITLE].text
+          ? this._payload[ATTRIBUTE_TITLE].text
+          : `${this._type} chart`;
+      this.resetChart();
+      this._reactivityManager.throttleRegisteredJob();
+    }
+  }
+
   get chartStyle() {
     return `width: ${this.width}; height: ${this.height}; ${this.stylecss ||
       ''}`;
@@ -106,8 +122,6 @@ export default class BaseChart extends LightningElement {
     this._reactivityManager = new ReactivityManager();
     this._reactivityManager.registerJob(() => this.renderChart());
     this._payload = this._reactivityManager.getReactivityProxy();
-    this._type = this.constructor.type;
-    this.ariaLabel = `${this._type} chart`;
   }
 
   connectedCallback() {
@@ -131,9 +145,7 @@ export default class BaseChart extends LightningElement {
       const { payload, option } = evt.detail;
       if (option === ATTRIBUTE_DATA) {
         this._details = null;
-        if (this._chart) {
-          this._chart.destroy();
-        }
+        this.resetChart();
       } else {
         // reset title to set the accessibility
         if (option === ATTRIBUTE_TITLE) {
@@ -158,9 +170,11 @@ export default class BaseChart extends LightningElement {
   }
 
   getCanvas() {
-    const canvas = document.createElement('canvas');
-    this.template.querySelector('div').appendChild(canvas);
-    return canvas.getContext('2d');
+    if (!this._canvas) {
+      this._canvas = document.createElement('canvas');
+      this.template.querySelector('div').appendChild(this._canvas);
+    }
+    return this._canvas.getContext('2d');
   }
 
   renderChart() {
@@ -175,10 +189,16 @@ export default class BaseChart extends LightningElement {
         options: this._configService.getConfig()
       });
     } else {
-      this._chart.type = this._type;
       this._chart.data = this._details;
       this._chart.options = this._configService.getConfig();
       this._chart.update();
+    }
+  }
+
+  resetChart() {
+    if (this._chart) {
+      this._chart.destroy();
+      this._chart = null;
     }
   }
 }
