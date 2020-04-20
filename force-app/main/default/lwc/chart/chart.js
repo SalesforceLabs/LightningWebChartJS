@@ -127,33 +127,12 @@ export default class Chart extends LightningElement {
   connectedCallback() {
     this.addEventListener(OPTION_EVENT_NAME, evt => {
       evt.stopPropagation();
-      const { payload, option } = evt.detail;
-      if (option === ATTRIBUTE_DATA) {
-        this._details = payload;
-      } else {
-        // get title to set the accessibility
-        if (option === ATTRIBUTE_TITLE) {
-          this.ariaLabel = payload.text;
-        }
-        this._configService.updateConfig(payload, option);
-      }
-      this._reactivityManager.throttleRegisteredJob();
+      this._handleOption(evt.detail);
     });
 
     this.addEventListener(DISCONNECT_EVENT_NAME, evt => {
       evt.stopPropagation();
-      const { payload, option } = evt.detail;
-      if (option === ATTRIBUTE_DATA) {
-        this._details = null;
-        this.resetChart();
-      } else {
-        // reset title to set the accessibility
-        if (option === ATTRIBUTE_TITLE) {
-          this.ariaLabel = `${this._type} chart`;
-        }
-        this._configService.removeConfig(payload, option);
-        this._reactivityManager.throttleRegisteredJob();
-      }
+      this._handleDisconnect(evt.detail);
     });
   }
 
@@ -183,7 +162,7 @@ export default class Chart extends LightningElement {
     this._configService.updateConfig(this._payload, null);
     if (!this._chart) {
       // eslint-disable-next-line no-undef
-      this._chart = new Chart(this.getCanvas(), {
+      this._chart = new window.Chart(this.getCanvas(), {
         type: this._type,
         data: this._details,
         options: this._configService.getConfig()
@@ -199,6 +178,35 @@ export default class Chart extends LightningElement {
     if (this._chart) {
       this._chart.destroy();
       this._chart = null;
+    }
+  }
+
+  _handleOption(detail) {
+    const { payload, option } = detail;
+    if (option === ATTRIBUTE_DATA) {
+      this._details = payload;
+    } else {
+      // get title to set the accessibility
+      if (option === ATTRIBUTE_TITLE) {
+        this.ariaLabel = payload.text;
+      }
+      this._configService.updateConfig(payload, option);
+    }
+    this._reactivityManager.throttleRegisteredJob();
+  }
+
+  _handleDisconnect(detail) {
+    const { payload, option } = detail;
+    if (option === ATTRIBUTE_DATA) {
+      this._details = null;
+      this.resetChart();
+    } else {
+      // reset title to set the accessibility
+      if (option === ATTRIBUTE_TITLE) {
+        this.ariaLabel = `${this._type} chart`;
+      }
+      this._configService.removeConfig(payload, option);
+      this._reactivityManager.throttleRegisteredJob();
     }
   }
 }
