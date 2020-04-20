@@ -24,6 +24,9 @@ node_modules/
 # LWC Jest coverage reports
 coverage/
 
+# LWC Playground
+dist/
+
 # Windows system files
 Thumbs.db
 ehthumbs.db
