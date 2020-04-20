@@ -22,12 +22,11 @@ export default class ReactivityManager {
   }
 
   getReactivityProxy() {
-    const self = this;
     const reactivityProxy = {
-      set: function(obj, prop, value) {
+      set: (obj, prop, value) => {
         if (obj[prop] !== value) {
           obj[prop] = value;
-          self.throttleRegisteredJob();
+          this.throttleRegisteredJob();
         }
         return true;
       }
