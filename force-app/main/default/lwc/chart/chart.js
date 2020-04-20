@@ -183,7 +183,7 @@ export default class Chart extends LightningElement {
     this._configService.updateConfig(this._payload, null);
     if (!this._chart) {
       // eslint-disable-next-line no-undef
-      this._chart = new Chart(this.getCanvas(), {
+      this._chart = new window.Chart(this.getCanvas(), {
         type: this._type,
         data: this._details,
         options: this._configService.getConfig()
