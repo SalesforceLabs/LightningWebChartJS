@@ -35,7 +35,6 @@ describe.each(CHARTS)('DOM Tests for individual charts', chart => {
     is: chart.class
   });
   element.setAttribute('type', chart.type);
-  console.log(element);
   document.body.appendChild(element);
 
   describe('DOM Element created correctly', () => {
