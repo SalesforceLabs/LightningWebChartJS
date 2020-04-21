@@ -10,7 +10,7 @@ const STATIC_RESOURCE_NAME = 'chartjs_v280';
 const CHARTS = [
   { class: Chart, type: BAR_CHART_TYPE },
   { class: Chart, type: LINE_CHART_TYPE }
-  // TODO
+  // TODO other type
 ];
 
 describe('Chart: ChartJs library', () => {
@@ -35,7 +35,6 @@ describe.each(CHARTS)('DOM Tests for individual charts', chart => {
     is: chart.class
   });
   element.setAttribute('type', chart.type);
-  console.log(element);
   document.body.appendChild(element);
 
   describe('DOM Element created correctly', () => {

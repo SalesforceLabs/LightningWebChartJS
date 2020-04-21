@@ -1,9 +1,12 @@
-import ChartConfigDomain from 'c/chartConfigDomain';
-
 export default class ChartConfigService {
+  static DefaultConfiguration = {
+    legend: {
+      display: false
+    }
+  };
+
   constructor() {
-    this._configDomain = new ChartConfigDomain();
-    this._config = this._configDomain.defaultConfiguration;
+    this._config = { ...ChartConfigService.DefaultConfiguration };
     this._scales = {
       xAxes: {},
       yAxes: {}

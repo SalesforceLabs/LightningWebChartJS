@@ -100,7 +100,7 @@ export default class Chart extends LightningElement {
         this._payload[ATTRIBUTE_TITLE] && this._payload[ATTRIBUTE_TITLE].text
           ? this._payload[ATTRIBUTE_TITLE].text
           : `${this._type} chart`;
-      this.resetChart();
+      this.destroyChart();
       this._reactivityManager.throttleRegisteredJob();
     }
   }
@@ -112,6 +112,106 @@ export default class Chart extends LightningElement {
 
   ariaLabel;
 
+  @api
+  destroyChart() {
+    if (this._chart) {
+      this._chart.destroy();
+    }
+  }
+
+  @api
+  updateChart(duration, lazy) {
+    if (this._chart) {
+      this._chart.update(duration, lazy);
+    }
+  }
+
+  @api
+  resetChart() {
+    if (this._chart) {
+      this._chart.reset();
+    }
+  }
+
+  @api
+  renderChart(duration, lazy) {
+    if (this._chart) {
+      this._chart.render(duration, lazy);
+    }
+  }
+
+  @api
+  stopChart() {
+    if (this._chart) {
+      this._chart.stop();
+    }
+    return this;
+  }
+
+  @api
+  resizeChart() {
+    if (this._chart) {
+      this._chart.resize();
+    }
+    return this;
+  }
+
+  @api
+  clearChart() {
+    if (this._chart) {
+      this._chart.clear();
+    }
+    return this;
+  }
+
+  @api
+  toBase64ImageChart() {
+    if (this._chart) {
+      return this._chart.toBase64Image();
+    }
+    return null;
+  }
+
+  @api
+  generateLegendChart() {
+    if (this._chart) {
+      return this._chart.generateLegend();
+    }
+    return null;
+  }
+
+  @api
+  getElementAtEventChart(e) {
+    if (this._chart) {
+      return this._chart.getElementAtEvent(e);
+    }
+    return null;
+  }
+
+  @api
+  getElementsAtEventChart(e) {
+    if (this._chart) {
+      return this._chart.getElementsAtEvent(e);
+    }
+    return null;
+  }
+
+  @api
+  getDatasetAtEventChart(e) {
+    if (this._chart) {
+      return this._chart.getDatasetAtEvent(e);
+    }
+    return null;
+  }
+
+  @api
+  getDatasetMetaChart(index) {
+    if (this._chart) {
+      return this._chart.getDatasetMeta(index);
+    }
+    return null;
+  }
+
   constructor() {
     super();
     this._baseChartInitialized = false;
@@ -120,40 +220,19 @@ export default class Chart extends LightningElement {
     this._details = null;
     this._chart = null;
     this._reactivityManager = new ReactivityManager();
-    this._reactivityManager.registerJob(() => this.renderChart());
+    this._reactivityManager.registerJob(() => this.drawChart());
     this._payload = this._reactivityManager.getReactivityProxy();
   }
 
   connectedCallback() {
     this.addEventListener(OPTION_EVENT_NAME, evt => {
       evt.stopPropagation();
-      const { payload, option } = evt.detail;
-      if (option === ATTRIBUTE_DATA) {
-        this._details = payload;
-      } else {
-        // get title to set the accessibility
-        if (option === ATTRIBUTE_TITLE) {
-          this.ariaLabel = payload.text;
-        }
-        this._configService.updateConfig(payload, option);
-      }
-      this._reactivityManager.throttleRegisteredJob();
+      this._handleOption(evt.detail);
     });
 
     this.addEventListener(DISCONNECT_EVENT_NAME, evt => {
       evt.stopPropagation();
-      const { payload, option } = evt.detail;
-      if (option === ATTRIBUTE_DATA) {
-        this._details = null;
-        this.resetChart();
-      } else {
-        // reset title to set the accessibility
-        if (option === ATTRIBUTE_TITLE) {
-          this.ariaLabel = `${this._type} chart`;
-        }
-        this._configService.removeConfig(payload, option);
-        this._reactivityManager.throttleRegisteredJob();
-      }
+      this._handleDisconnect(evt.detail);
     });
   }
 
@@ -177,13 +256,13 @@ export default class Chart extends LightningElement {
     return this._canvas.getContext('2d');
   }
 
-  renderChart() {
+  drawChart() {
     if (!this._chartjsLoaded || !this._details) return;
 
     this._configService.updateConfig(this._payload, null);
     if (!this._chart) {
       // eslint-disable-next-line no-undef
-      this._chart = new Chart(this.getCanvas(), {
+      this._chart = new window.Chart(this.getCanvas(), {
         type: this._type,
         data: this._details,
         options: this._configService.getConfig()
@@ -195,10 +274,32 @@ export default class Chart extends LightningElement {
     }
   }
 
-  resetChart() {
-    if (this._chart) {
-      this._chart.destroy();
-      this._chart = null;
+  _handleOption(detail) {
+    const { payload, option } = detail;
+    if (option === ATTRIBUTE_DATA) {
+      this._details = payload;
+    } else {
+      // get title to set the accessibility
+      if (option === ATTRIBUTE_TITLE) {
+        this.ariaLabel = payload.text;
+      }
+      this._configService.updateConfig(payload, option);
+    }
+    this._reactivityManager.throttleRegisteredJob();
+  }
+
+  _handleDisconnect(detail) {
+    const { payload, option } = detail;
+    if (option === ATTRIBUTE_DATA) {
+      this._details = null;
+      this.destroyChart();
+    } else {
+      // reset title to set the accessibility
+      if (option === ATTRIBUTE_TITLE) {
+        this.ariaLabel = `${this._type} chart`;
+      }
+      this._configService.removeConfig(payload, option);
+      this._reactivityManager.throttleRegisteredJob();
     }
   }
 }
