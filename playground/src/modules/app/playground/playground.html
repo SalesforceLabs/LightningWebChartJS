@@ -16,66 +16,6 @@
       <c-title text="Line Chart"></c-title>
     </c-chart>
 
-    <!-- Bar chart -->
-    <c-chart
-      type="bar"
-      width="80vw"
-      responsive="true"
-      maintainaspectratio="true"
-      stylecss="position: relative; margin: auto;"
-      events='["click"]'
-      callback-click={handleCallbackClick}
-    >
-      <c-dataset
-        labels='["Red", "Blue", "Yellow", "Green", "Purple", "Orange"]'
-      >
-        <c-data
-          label="# of Votes"
-          detail="[12, 19, 3, 5, 2, 3]"
-          backgroundcolor='[
-                "rgba(255, 99, 132, 0.2)",
-                "rgba(54, 162, 235, 0.2)",
-                "rgba(255, 206, 86, 0.2)",
-                "rgba(75, 192, 192, 0.2)",
-                "rgba(153, 102, 255, 0.2)",
-                "rgba(255, 159, 64, 0.2)"
-            ]'
-          bordercolor='[
-                "rgba(255, 99, 132, 1)",
-                "rgba(54, 162, 235, 1)",
-                "rgba(255, 206, 86, 1)",
-                "rgba(75, 192, 192, 1)",
-                "rgba(153, 102, 255, 1)",
-                "rgba(255, 159, 64, 1)"
-            ]'
-          borderwidth="1"
-        ></c-data>
-      </c-dataset>
-      <c-title text="Bar Chart"></c-title>
-      <c-legend position="right"></c-legend>
-      <c-layout
-        padding-top="10"
-        padding-right="10"
-        padding-left="10"
-        padding-bottom="10"
-      ></c-layout>
-      <c-animation
-        duration="2000"
-        easing="easeInBounce"
-        callback-oncomplete={animationOnComplete}
-        callback-onprogress={animationOnProgress}
-      >
-      </c-animation>
-      <c-cartesian-category-axis
-        axis="x"
-        position="top"
-        ticks-min="Yellow"
-      ></c-cartesian-category-axis>
-    </c-chart>
-
-    <!-- Progress bar linked to the animationOnProgress callback -->
-    <progress value={barChartCurrentPercentage} max="100"></progress>
-
     <!-- Line chart -->
     <c-chart height="400px" width="400px" type="line">
       <c-dataset
@@ -277,47 +217,6 @@
         </c-data>
       </c-dataset>
       <c-title text="Polar Area Chart"></c-title>
-    </c-chart>
-
-    <!-- Scales -->
-    <c-chart height="400px" width="400px" type="line">
-      <c-title text="Logarithmic"></c-title>
-      <c-cartesian-logarithmic-axis></c-cartesian-logarithmic-axis>
-    </c-chart>
-
-    <c-chart height="400px" width="400px" type="line">
-      <c-title text="Time"></c-title>
-      <c-cartesian-time-axis axis="y"></c-cartesian-time-axis>
-      <c-cartesian-linear-axis axis="x"></c-cartesian-linear-axis>
-    </c-chart>
-    <c-chart height="400px" width="400px" type="bar">
-      <c-title text="Category"></c-title>
-      <c-dataset labels='["OK", "WARNING", "CRITICAL", "UNKNOWN"]'>
-        <c-data
-          label="# of Tomatoes"
-          detail="[12, 19, 3, 5]"
-          backgroundcolor='[
-            "rgba(255, 99, 132, 0.5)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)"
-        ]'
-        ></c-data>
-      </c-dataset>
-      <c-cartesian-category-axis
-        axis="x"
-        position="top"
-        title-display="true"
-        title-labelstring="Category axis here"
-      >
-      </c-cartesian-category-axis>
-      <c-cartesian-linear-axis
-        axis="y"
-        ticks-stepsize="15"
-        position="right"
-        title-display="true"
-        title-labelstring="Linear axis here"
-      ></c-cartesian-linear-axis>
     </c-chart>
   </div>
 </template>

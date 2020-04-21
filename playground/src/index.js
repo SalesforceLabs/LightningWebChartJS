@@ -1,6 +1,6 @@
 import { createElement } from 'lwc';
 
-import App from 'app/app';
+import Playground from 'app/playground';
 
-const app = createElement('app-app', { is: App });
-document.querySelector('#app').appendChild(app);
+const playground = createElement('app-playground', { is: Playground });
+document.querySelector('#playground').appendChild(playground);
