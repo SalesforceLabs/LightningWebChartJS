@@ -24,7 +24,7 @@ function staticResource() {
 
       const resource = id.replace(STATIC_RESOURCE_PREFIX, '');
       return `
-        export default '/src/staticresources/${resource}';
+        export default '../src/staticresources/${resource}';
       `;
     }
   };

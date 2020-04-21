@@ -242,10 +242,16 @@ export default class Chart extends LightningElement {
     }
     this._baseChartInitialized = true;
 
-    loadScript(this, ChartJS).then(() => {
-      this._chartjsLoaded = true;
-      this._reactivityManager.throttleRegisteredJob();
-    });
+    loadScript(this, ChartJS).then(
+      () => {
+        this._chartjsLoaded = true;
+        this._reactivityManager.throttleRegisteredJob();
+      },
+      reason => {
+        // eslint-disable-next-line no-console
+        console.error('[LWCC] Error loading Chart.js', reason);
+      }
+    );
   }
 
   getCanvas() {
