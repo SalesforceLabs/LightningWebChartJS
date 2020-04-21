@@ -86,3 +86,4 @@ TestCache.xml
 TestsResultsCache.xml
 
 tests/
+_site/

@@ -1,0 +1,47 @@
+name: GH-Pages
+
+on:
+  pull_request:
+    branches: [ gh-pages ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkoud the code in the pull request
+    - name: Checkout source code
+      uses: actions/checkout@v2
+    
+    # Set up Ruby
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+
+    # Cache ruby gems to speed up the process
+    - name: Restore Ruby gems from cache
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
+    # Install the version of bundler specified in Gemfile.lock
+    - name: Install bundler
+      run: |
+          gem install bundler
+          bundle config path vendor/bundle
+
+    # Install gems in Gemfile.lock
+    - name: Install Ruby gems
+      run: bundle install --jobs 4 --retry 3
+
+    # Jekyll
+    - name: Build site with Jekyll
+      run: bundle exec jekyll build
+
+    # HTMLProofer
+    - name: Test site with HTMLProofer
+      run: bundle exec htmlproofer ./_site
