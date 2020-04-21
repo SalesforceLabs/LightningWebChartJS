@@ -1,4 +1,3 @@
-theme: jekyll-theme-minimal
 title: Welcome to Lightning Web Chart.js Component documentation
 description: Documentation pages for the lwcc component library on top of Chart.js
 markdown: GFM
@@ -7,3 +6,5 @@ plugins:
 relative_links:
   enabled: true
   collections: true
+sass:
+  sass_dir: assets/css

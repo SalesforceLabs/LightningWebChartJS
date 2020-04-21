@@ -86,4 +86,6 @@ TestCache.xml
 TestsResultsCache.xml
 
 tests/
+
+# Github pages
 _site/
