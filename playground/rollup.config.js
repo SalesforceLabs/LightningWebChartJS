@@ -4,11 +4,12 @@ const lwc = require('@lwc/rollup-plugin');
 const replace = require('@rollup/plugin-replace');
 const html = require('@rollup/plugin-html');
 const cleanup = require('rollup-plugin-cleanup');
-const copy = require('rollup-plugin-copy-assets');
+const copy = require('rollup-plugin-copy');
 const cleaner = require('rollup-plugin-cleaner');
+const multi = require('@rollup/plugin-multi-entry');
 
-const STATIC_RESOURCE_ORIGIN = '@salesforce/resourceUrl/';
-const STATIC_RESOURCE_TARGET = `staticresources/`;
+const STATIC_RESOURCE_ORIGIN = '@salesforce/resourceUrl';
+const STATIC_RESOURCE_TARGET = 'staticresources';
 
 function staticResource() {
   return {
@@ -34,7 +35,7 @@ function staticResource() {
 }
 
 module.exports = {
-  input: path.resolve(__dirname, './src/index.js'),
+  input: path.resolve(__dirname, './src/rollup-playground/index.js'),
 
   output: {
     file: path.resolve(__dirname, './dist/index.js')
@@ -45,7 +46,12 @@ module.exports = {
     cleanup(),
     html(),
     copy({
-      assets: [path.resolve(__dirname, '/src/staticresources')]
+      targets: [
+        {
+          src: path.resolve(__dirname, './src/staticresources'),
+          dest: path.resolve(__dirname, './dist/')
+        }
+      ]
     }),
     lwc({
       rootDir: path.resolve(__dirname, 'src/modules')
