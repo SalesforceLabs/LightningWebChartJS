@@ -2,6 +2,8 @@ const path = require('path');
 
 const lwc = require('@lwc/rollup-plugin');
 const replace = require('@rollup/plugin-replace');
+const html = require('@rollup/plugin-html');
+const cleanup = require('rollup-plugin-cleanup');
 
 const STATIC_RESOURCE_ORIGIN = '@salesforce/resourceUrl/';
 const STATIC_RESOURCE_TARGET = `staticresources/`;
@@ -37,6 +39,8 @@ module.exports = {
   },
 
   plugins: [
+    cleanup(),
+    html(),
     lwc({
       rootDir: path.resolve(__dirname, 'src/modules')
     }),
