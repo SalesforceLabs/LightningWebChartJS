@@ -16,7 +16,7 @@
     "test:unit:coverage": "sfdx-lwc-jest --coverage -- --runInBand",
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
-    "build:playground": "rollup --config ./playground/rollup.config.js"
+    "build:playground": "rollup --config ./rollup/rollup.config.js"
   },
   "devDependencies": {
     "@lwc/engine": "^1.5.1",
@@ -25,7 +25,6 @@
     "@lwc/wire-service": "^1.5.1",
     "@prettier/plugin-xml": "^0.7.0",
     "@rollup/plugin-html": "^0.1.1",
-    "@rollup/plugin-multi-entry": "^3.0.0",
     "@rollup/plugin-replace": "^2.3.2",
     "@salesforce/eslint-config-lwc": "^0.4.0",
     "@salesforce/sfdx-lwc-jest": "^0.7.1",
