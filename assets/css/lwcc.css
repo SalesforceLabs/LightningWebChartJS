@@ -1,5 +1,5 @@
-body{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+html{
+  background: #fff;
 }
 
 /* NAVBAR MENU */
@@ -11,7 +11,7 @@ body{
     top: 0;
     left: 0;
     overflow-x: hidden;
-    background-color: #fafafa;
+    background-color: #fafaf9;
     color: #364149;
     font-size: 14px;
     padding-top: 75px;
@@ -22,8 +22,8 @@ body{
   padding-left: 1rem;
 }
 
-.nav-link{
-  padding: 0.3rem 0rem;
+.lwcc-menu li {
+  margin: 1rem 0;
 }
 
 .lwcc-menu a{
@@ -35,14 +35,18 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fafafa;
+  background-color: #fafaf9;
   padding: 1rem;
   width: 300px;
 }
 
+.lwcc-navbar-logo img{
+  max-width: 30px;
+}
+
 .lwc-navbar-github{
   border-top: 1px solid #dee2e6;
-  background-color: #fafafa;
+  background-color: #fafaf9;
   padding: 1rem 1rem 0 1rem;
   max-width: 300px;
   margin-top: 1rem;
@@ -52,7 +56,7 @@ body{
 
 .lwcc-doc-content{
     margin-left: 300px;
-    padding: 5rem 0;
+    padding: 2rem 0;
 }
 
 h2{
@@ -94,4 +98,63 @@ pre .na{
 
 pre .s{
   color: #e8c379;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1200px){
+.container {
+    max-width: 1140px;
+}
+}
+@media (min-width: 992px){
+.container{
+    max-width: 960px;
+}
+}
+@media (min-width: 768px){
+.container{
+    max-width: 720px;
+}
+}
+
+/* Basic items */
+h1, h2, h3, h4{
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.75rem !important;
+}
+h1 {
+  font-size: 1.75rem !important;
+}
+h2 {
+  font-size: 1.5rem !important;
+}
+h3 {
+  font-size: 1.25rem !important;
+}
+h4 {
+  font-size: 1rem !important;
+}
+
+dl, fieldset, h1, h2, h3, h4, h5, h6, ol, p, ul {
+  margin: auto;
+  padding: auto;
+}
+
+ol, ul {
+  list-style: unset;
+  padding-left: inherit;
+}
+
+p {
+  margin: 1rem 0;
 }
