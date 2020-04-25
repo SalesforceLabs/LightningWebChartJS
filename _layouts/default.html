@@ -5,12 +5,16 @@
     <meta charset="utf-8">
     <title>{{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/lwcc.css" | relative_url }}">
+    <script src="{{ "/assets/js/lwcc.js" | relative_url }}"></script>
   </head>
   <body>
     <header class="lwcc-menu">
-    {% include navbar.html %}
+      <nav role="navigation">
+        {% include navbar.html %}
+      </nav>
     </header>
     <div class="lwcc-doc-content">
+        <div class="container">
             {{ content}}
         </div>
     </div>

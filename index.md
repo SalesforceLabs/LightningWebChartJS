@@ -12,32 +12,43 @@ TODO: include presentation video
 LWCC is a suit of Salesforce Lightning Web Components created to bring you all the power and flexibility of Chart.js into the Salesforce platform. Designed for admins and developers, LWCC allows everybody to create highly customizable charts to visualize your data.
 
 
-
-<div class="row">
-  <div class="col-sm-4">
-    <div class="card text-center">
+<div class="slds-grid slds-gutters">
+  <!-- Github card -->
+  <div class="slds-col slds-size_1-of-3">
+    <div class="slds-card text-center">
       <div class="card-body">
-        <h5 class="card-title">Open source</h5>
+        <h4 class="card-title">Open source</h4>
         <p class="card-text">The source code is available in GitHub and contributions are welcome!</p>
-        <a href="{{ site.github.repository_url }}" class="btn btn-primary">GitHub</a>
+        <footer class="slds-card__footer">
+          <a class="slds-card__footer-action" href="{{ site.github.repository_url }}">Github
+          </a>
+        </footer>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="card text-center">
+  <!-- Appexchange card -->
+  <div class="slds-col slds-size_1-of-3">
+    <div class="slds-card text-center">
       <div class="card-body">
-        <h5 class="card-title">Salesforce Platform</h5>
+        <h4 class="card-title">Salesforce Platform</h4>
         <p class="card-text">Designed to run on the Salesforce Platform*, using the Lightning technology</p>
-        <a href="https://appexchange.salesforce.com/" class="btn btn-primary">AppExchange</a>
+        <footer class="slds-card__footer">
+          <a class="slds-card__footer-action" href="https://appexchange.salesforce.com/">Github
+          </a>
+        </footer>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="card text-center">
+  <!-- Chartjs card -->
+  <div class="slds-col slds-size_1-of-3">
+    <div class="slds-card text-center">
       <div class="card-body">
-        <h5 class="card-title">Chart.js</h5>
-        <p class="card-text">Build using Chart.js, a flexible JavaScript charting library</p>
-        <a href="https://www.chartjs.org/" class="btn btn-primary">Chart.js</a>
+        <h4 class="card-title">Chart.js</h4>
+        <p class="card-text">The suit has been built using Chart.js, a flexible JavaScript charting library</p>
+        <footer class="slds-card__footer">
+          <a class="slds-card__footer-action" href="https://www.chartjs.org/">Chart.js
+          </a>
+        </footer>
       </div>
     </div>
   </div>

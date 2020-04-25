@@ -27,15 +27,11 @@ html{
   padding-left: 1rem;
 }
 
-.lwcc-menu li {
-  margin: 1rem 0;
-}
-
 .lwcc-menu a{
   color: #364149 !important;
 }
 
-.lwcc-navbar-logo{
+.lwcc-navbar-header{
   border-bottom: 1px solid #dee2e6;
   position: fixed;
   top: 0;
@@ -45,16 +41,59 @@ html{
   width: 300px;
 }
 
-.lwcc-navbar-logo img{
+.lwcc-navbar-header img{
   max-width: 30px;
 }
 
-.lwc-navbar-github{
+.lwcc-navbar-footer{
   border-top: 1px solid #dee2e6;
   background-color: #fafaf9;
   padding: 1rem 1rem 0 1rem;
   max-width: 300px;
   margin-top: 1rem;
+}
+
+.display-mobile-menu{
+    display: block !important;
+}
+
+.lwcc-navbar-menu-button{
+  display: none;
+}
+
+.lwcc-navbar-menu-button div{
+    width: 25px;
+    height: 2px;
+    background-color: #052e61;
+    margin: 6px auto;
+}
+
+@media (max-width: 769px){
+  .lwcc-navbar-header {
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+  }
+
+  .lwcc-menu{
+    min-width: 0;
+  }
+  .lwcc-navbar-menu, .lwcc-navbar-footer{
+    display: none;
+  }
+
+  .lwcc-doc-content{
+    margin-left: 0 !important;
+    padding: 4rem 0 !important;
+  }
+
+  .lwcc-navbar-menu-button{
+    display: block;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+  }
+
 }
 
 /* DOC CONTENT */
@@ -80,25 +119,25 @@ pre {
   border: 1px solid #dee2e6;
   border-radius: 10px;
   padding: 1.2rem;
-  background-color: #364149;
+  background-color: #364149 !important;
 }
 code {
-  color: #e83e8c;
+  color: #e83e8c !important;
 }
 pre > code {
-  color: #fff;
+  color: #fff !important;
 }
 
-pre .nt{
-  color: #e83e8c;
+pre .nt, .highlight .nt{
+  color: #e83e8c !important;
 }
 
-pre .na{
-  color: #3ec6e8;
+pre .na, .highlight .na{
+  color: #3ec6e8 !important;
 }
 
-pre .s{
-  color: #e8c379;
+pre .s, .highlight .s{
+  color: #e8c379 !important;
 }
 
 /* Container */
@@ -176,4 +215,8 @@ h1{
 
 h2, h3, h4{
   @extend .slds-text-heading_medium;
+}
+
+.align-middle{
+  vertical-align: middle;;
 }
