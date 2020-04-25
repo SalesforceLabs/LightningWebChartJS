@@ -1,0 +1,11 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-card {
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.slds-card__header-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}

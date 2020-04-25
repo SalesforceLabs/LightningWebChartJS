@@ -1,0 +1,55 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-popover_prompt {
+  width: 25rem;
+}
+.slds-popover_prompt .slds-popover__body {
+  padding: 1rem;
+}
+.slds-popover_prompt .slds-popover__footer {
+  border-top: 2px solid #182337;
+}
+.slds-popover_prompt__heading {
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+.slds-popover_prompt__action-link {
+  margin-right: 1rem;
+}
+.slds-popover_prompt_top,
+.slds-popover_prompt_top-right,
+.slds-popover_prompt_top-left,
+.slds-popover_prompt_bottom,
+.slds-popover_prompt_bottom-right,
+.slds-popover_prompt_bottom-left {
+  position: absolute;
+}
+
+.slds-popover_prompt_top,
+.slds-popover_prompt_top-right,
+.slds-popover_prompt_top-left {
+  top: 0.5rem;
+}
+
+.slds-popover_prompt_bottom,
+.slds-popover_prompt_bottom-right,
+.slds-popover_prompt_bottom-left {
+  bottom: 0.5rem;
+}
+
+.slds-popover_prompt_top,
+.slds-popover_prompt_bottom {
+  left: 50%;
+  margin-left: -12.5rem;
+}
+
+.slds-popover_prompt_top-right,
+.slds-popover_prompt_bottom-right {
+  right: 0.5rem;
+}
+
+.slds-popover_prompt_top-left,
+.slds-popover_prompt_bottom-left {
+  left: 0.5rem;
+}

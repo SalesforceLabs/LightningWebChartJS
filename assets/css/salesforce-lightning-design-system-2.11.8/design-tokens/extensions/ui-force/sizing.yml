@@ -1,0 +1,48 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: size
+  category: sizing
+  cssProperties:
+  - font
+  - font-size
+  - '*width'
+  - '*height'
+  - flex
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - transform
+props:
+  HEIGHT_PILL:
+    value: 1.625rem
+    comment: Minimum height of a pill.
+  HEIGHT_HEADER:
+    value: 2.75rem
+    comment: Brand header. Phone 44px; Tablet 50px
+    access: global
+  HEIGHT_FOOTER:
+    value: 3.75rem
+    comment: Action footer menu. Phone 44px; Tablet 50px
+    access: global
+  HEIGHT_INPUT:
+    value: 1.875rem
+    comment: Text input height
+  WIDTH_STAGE_LEFT_COLLAPSED:
+    value: 4rem
+    comment: Stage left for desktop when closed (showing icons only).
+    access: global
+  WIDTH_STAGE_LEFT_EXPANDED:
+    value: 15rem
+    comment: Stage left for desktop when open.
+    access: global
+  MAX_WIDTH_ACTION_OVERFLOW_MENU:
+    value: 512px
+    comment: "Maximum width for action overflow menu so that it's not full-screen for tablet."
+  LINE_CLAMP:
+    value: 3
+    comment: "Default amount of line breaks before text is truncated"

@@ -1,0 +1,53 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-datepicker {
+}
+.slds-datepicker .slds-has-multi-selection .slds-is-selected-multi:last-child > .slds-day:after {
+  left: auto;
+  right: 0;
+  -webkit-transform: translateX(0.25rem);
+  transform: translateX(0.25rem);
+}
+.slds-datepicker .slds-has-multi-row-selection .slds-is-selected-multi:first-child > .slds-day:before,
+.slds-datepicker .slds-has-multi-row-selection .slds-is-selected-multi:last-child > .slds-day:after {
+  content: "";
+  position: absolute;
+  background: #0070d2;
+  top: 0;
+  left: -50%;
+  height: 100%;
+  width: 2.5rem;
+  -webkit-transform: translateX(-0.5rem);
+  transform: translateX(-0.5rem);
+  z-index: -1;
+}
+.slds-datepicker .slds-has-multi-row-selection .slds-is-selected-multi:first-child > .slds-day:before {
+  left: 0;
+  -webkit-transform: translateX(-0.25rem);
+  transform: translateX(-0.25rem);
+}
+.slds-datepicker .slds-has-multi-row-selection .slds-is-selected-multi:last-child > .slds-day:after {
+  left: auto;
+  right: 0;
+  -webkit-transform: translateX(0.25rem);
+  transform: translateX(0.25rem);
+}
+.slds-datepicker td.slds-is-selected-multi > .slds-day {
+  overflow: visible;
+}
+.slds-datepicker td.slds-is-selected-multi.slds-is-today > .slds-day {
+  -webkit-box-shadow: white 0 0 0 1px inset;
+  box-shadow: white 0 0 0 1px inset;
+}
+.slds-datepicker td.slds-is-selected-multi + .slds-is-selected-multi > .slds-day:before {
+  content: "";
+  position: absolute;
+  background: #0070d2;
+  top: 0;
+  left: -50%;
+  height: 100%;
+  width: 2.5rem;
+  -webkit-transform: translateX(-0.5rem);
+  transform: translateX(-0.5rem);
+  z-index: -1;
+}

@@ -1,0 +1,28 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-progress__item {
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 2.75rem;
+}
+.slds-progress__item .slds-button:before {
+  content: "";
+  position: absolute;
+  height: 2.75rem;
+  width: calc(100% + 8px);
+}
+
+.slds-progress__marker {
+  width: 1.25rem;
+  height: 1.25rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.slds-progress__marker_icon .slds-button__icon,
+.slds-progress__marker_icon .slds-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}

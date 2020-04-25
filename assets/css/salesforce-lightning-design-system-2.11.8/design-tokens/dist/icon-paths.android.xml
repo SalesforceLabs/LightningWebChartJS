@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="UTILITY_SPRITE_RTL" category="utility">/assets/icons/utility-sprite/svg/symbols_rtl.svg</string>
+  <string name="STANDARD_SPRITE" category="utility">/assets/icons/standard-sprite/svg/symbols.svg</string>
+  <string name="ACTION_SPRITE" category="utility">/assets/icons/action-sprite/svg/symbols.svg</string>
+  <string name="STANDARD_SPRITE_RTL" category="utility">/assets/icons/standard-sprite/svg/symbols_rtl.svg</string>
+  <string name="DOCTYPE_SPRITE" category="utility">/assets/icons/doctype-sprite/svg/symbols.svg</string>
+  <string name="CUSTOM_SPRITE" category="utility">/assets/icons/custom-sprite/svg/symbols.svg</string>
+  <string name="UTILITY_SPRITE" category="utility">/assets/icons/utility-sprite/svg/symbols.svg</string>
+  <string name="ACTION_SPRITE_RTL" category="utility">/assets/icons/action-sprite/svg/symbols_rtl.svg</string>
+  <string name="DOCTYPE_SPRITE_RTL" category="utility">/assets/icons/doctype-sprite/svg/symbols_rtl.svg</string>
+  <string name="CUSTOM_SPRITE_RTL" category="utility">/assets/icons/custom-sprite/svg/symbols_rtl.svg</string>
+</resources>

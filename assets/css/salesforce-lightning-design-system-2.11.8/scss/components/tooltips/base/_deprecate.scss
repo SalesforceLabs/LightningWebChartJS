@@ -1,0 +1,16 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@include deprecate('4.0.0', 'Please use slds-popover_tooltip instead') {
+
+  .slds-tooltip {
+    @include popover($color: $color-background-inverse);
+
+    &__body {
+      padding: $spacing-x-small $spacing-small;
+      font-size: $font-size-2;
+      color: $color-text-inverse;
+    }
+  }
+}

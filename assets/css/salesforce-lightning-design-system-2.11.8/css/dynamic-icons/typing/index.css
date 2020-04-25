@@ -1,0 +1,110 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-icon-typing {
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+.slds-icon-typing.slds-is-animated .slds-icon-typing__dot {
+  -webkit-animation: slds-icon-typing__dot-first 1.2s infinite ease-in-out;
+  animation: slds-icon-typing__dot-first 1.2s infinite ease-in-out;
+}
+.slds-icon-typing.slds-is-animated .slds-icon-typing__dot:nth-child(1) {
+  -webkit-animation-name: slds-icon-typing__dot-first;
+  animation-name: slds-icon-typing__dot-first;
+}
+.slds-icon-typing.slds-is-animated .slds-icon-typing__dot:nth-child(2) {
+  -webkit-animation-name: slds-icon-typing__dot-second;
+  animation-name: slds-icon-typing__dot-second;
+}
+.slds-icon-typing.slds-is-animated .slds-icon-typing__dot:nth-child(3) {
+  -webkit-animation-name: slds-icon-typing__dot-third;
+  animation-name: slds-icon-typing__dot-third;
+}
+.slds-icon-typing.slds-is-paused .slds-icon-typing__dot {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.slds-icon-typing__dot {
+  background-color: #dddbda;
+  border-radius: 50%;
+  display: inline-block;
+  height: 0.5rem;
+  margin: 0 0.125rem;
+  width: 0.5rem;
+}
+
+@-webkit-keyframes slds-icon-typing__dot-first {
+  0% {
+    background-color: #dddbda;
+  }
+  16% {
+    background-color: #c9c7c5;
+  }
+  33%,
+  100% {
+    background-color: #dddbda;
+  }
+}
+
+@keyframes slds-icon-typing__dot-first {
+  0% {
+    background-color: #dddbda;
+  }
+  16% {
+    background-color: #c9c7c5;
+  }
+  33%,
+  100% {
+    background-color: #dddbda;
+  }
+}
+@-webkit-keyframes slds-icon-typing__dot-second {
+  0%,
+  33% {
+    background-color: #dddbda;
+  }
+  50% {
+    background-color: #c9c7c5;
+  }
+  67%,
+  100% {
+    background-color: #dddbda;
+  }
+}
+@keyframes slds-icon-typing__dot-second {
+  0%,
+  33% {
+    background-color: #dddbda;
+  }
+  50% {
+    background-color: #c9c7c5;
+  }
+  67%,
+  100% {
+    background-color: #dddbda;
+  }
+}
+@-webkit-keyframes slds-icon-typing__dot-third {
+  0%,
+  67% {
+    background-color: #dddbda;
+  }
+  83% {
+    background-color: #c9c7c5;
+  }
+  100% {
+    background-color: #dddbda;
+  }
+}
+@keyframes slds-icon-typing__dot-third {
+  0%,
+  67% {
+    background-color: #dddbda;
+  }
+  83% {
+    background-color: #c9c7c5;
+  }
+  100% {
+    background-color: #dddbda;
+  }
+}

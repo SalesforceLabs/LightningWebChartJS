@@ -1,0 +1,39 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-checkbox .slds-checkbox_faux {
+  width: 1.5rem;
+  height: 1.5rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.slds-checkbox .slds-checkbox__label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  min-height: 2.75rem;
+}
+.slds-checkbox .slds-checkbox__label .slds-form-element__label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1rem;
+}
+.slds-checkbox [type="checkbox"]:checked + .slds-checkbox_faux:after,
+.slds-checkbox [type="checkbox"]:checked ~ .slds-checkbox_faux:after,
+.slds-checkbox [type="checkbox"]:checked + .slds-checkbox__label .slds-checkbox_faux:after {
+  height: 0.375rem;
+  width: 0.75rem;
+  margin-top: -1px;
+}
+.slds-checkbox [type="checkbox"]:indeterminate + .slds-checkbox_faux:after,
+.slds-checkbox [type="checkbox"]:indeterminate ~ .slds-checkbox_faux:after,
+.slds-checkbox [type="checkbox"]:indeterminate + .slds-checkbox__label .slds-checkbox_faux:after {
+  width: 0.75rem;
+}
+.slds-checkbox.slds-checkbox_stacked .slds-form-element__label {
+  font-size: 0.875rem;
+}

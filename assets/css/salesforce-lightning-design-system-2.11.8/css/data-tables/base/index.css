@@ -1,0 +1,403 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-table {
+  background-color: white;
+  font-size: inherit;
+}
+.slds-table th,
+.slds-table td {
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+  position: relative;
+}
+.slds-table th {
+  font-weight: 400;
+}
+.slds-table th:focus {
+  outline: 0;
+}
+.slds-table thead th {
+  background-color: #fafaf9;
+  color: #514f4d;
+  padding: 0.25rem 0.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.slds-table:not(.slds-no-row-hover) tbody tr:hover,
+.slds-table:not(.slds-no-row-hover) tbody tr:focus {
+  outline: 0;
+}
+.slds-table:not(.slds-no-row-hover) tbody tr:hover > td,
+.slds-table:not(.slds-no-row-hover) tbody tr:hover > th,
+.slds-table:not(.slds-no-row-hover) tbody tr:focus > td,
+.slds-table:not(.slds-no-row-hover) tbody tr:focus > th {
+  background-color: #f3f2f2;
+}
+.slds-table tbody tr.slds-is-selected > td,
+.slds-table tbody tr.slds-is-selected > th,
+.slds-table:not(.slds-no-row-hover) tr.slds-is-selected:hover > td,
+.slds-table:not(.slds-no-row-hover) tr.slds-is-selected:hover > th {
+  background-color: #ecebea;
+}
+.slds-table tbody tr.slds-is-selected a,
+.slds-table:not(.slds-no-row-hover) tr.slds-is-selected:hover a {
+  color: #00396b;
+}
+.slds-table .slds-cell-wrap {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.slds-table .slds-cell-shrink {
+  width: 1%;
+}
+.slds-table .slds-cell-buffer_left {
+  padding-left: 1.5rem;
+}
+.slds-table .slds-cell-buffer_right {
+  padding-right: 1.5rem;
+}
+.slds-table tbody tr {
+  counter-increment: row-number;
+}
+.slds-table .slds-row-number:after {
+  content: counter(row-number);
+}
+.slds-table th:focus,
+.slds-table [role="gridcell"]:focus {
+  outline: 0;
+}
+.slds-table th:focus,
+.slds-table th.slds-has-focus,
+.slds-table [role="gridcell"]:focus,
+.slds-table [role="gridcell"].slds-has-focus {
+  -webkit-box-shadow: #0070d2 0 0 0 1px inset;
+  box-shadow: #0070d2 0 0 0 1px inset;
+}
+.slds-table th:active,
+.slds-table [role="gridcell"]:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-table .slds-radio [type="radio"] + .slds-radio__label .slds-radio_faux {
+  margin-right: 0;
+}
+.slds-table_cell-buffer tr > th:first-child,
+.slds-table_cell-buffer tr > td:first-child {
+  padding-left: 1.5rem;
+}
+.slds-table_cell-buffer tr > th:last-child,
+.slds-table_cell-buffer tr > td:last-child {
+  padding-right: 1.5rem;
+}
+.slds-table_bordered {
+  border-collapse: separate;
+  border-top: 1px solid #dddbda;
+  border-bottom: 1px solid #dddbda;
+}
+.slds-table_bordered thead > tr + tr > th {
+  border-top: 1px solid #dddbda;
+}
+.slds-table_bordered tbody td,
+.slds-table_bordered tbody th {
+  border-top: 1px solid #dddbda;
+}
+.slds-table_bordered:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-has-focus),
+.slds-table_bordered:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-has-focus),
+.slds-table_bordered:not(.slds-no-row-hover) tbody tr:focus > td:not(.slds-has-focus),
+.slds-table_bordered:not(.slds-no-row-hover) tbody tr:focus > th:not(.slds-has-focus) > th:not(.slds-has-focus) {
+  -webkit-box-shadow: #dddbda 0 -1px 0 inset, #dddbda 0 1px 0 inset;
+  box-shadow: #dddbda 0 -1px 0 inset, #dddbda 0 1px 0 inset;
+}
+.slds-table_col-bordered td + td,
+.slds-table_col-bordered th + th,
+.slds-table_col-bordered th + td,
+.slds-table_col-bordered td + th {
+  border-left: 1px solid #dddbda;
+}
+.slds-table_striped tbody tr:nth-of-type(even) > td,
+.slds-table_striped tbody tr:nth-of-type(even) > th {
+  background-color: #f3f2f2;
+}
+.slds-table_fixed-layout {
+  table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
+}
+.slds-table_fixed-layout thead {
+  background-color: white;
+}
+.slds-table_fixed-layout tbody {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.slds-table_fixed-layout .slds-cell-shrink {
+  width: 3rem;
+}
+.slds-table_fixed-layout .slds-cell-shrink:nth-child(n).slds-cell-shrink:nth-child(n) {
+  padding-left: 0;
+  padding-right: 0;
+}
+.slds-table_fixed-layout .slds-cell-shrink:first-child {
+  text-align: right;
+  padding-right: 0.5rem;
+}
+.slds-table_fixed-layout .slds-cell-shrink:last-child {
+  text-align: left;
+  padding-left: 0.5rem;
+}
+.slds-is-sortable .slds-th__action:hover,
+.slds-is-sortable .slds-th__action:focus,
+.slds-is-sortable.slds-has-focus .slds-th__action,
+.slds-is-sortable.slds-has-focus .slds-th__action:hover,
+.slds-is-sortable.slds-has-focus .slds-th__action:focus {
+  background-color: white;
+  color: currentColor;
+}
+.slds-is-sortable .slds-th__action:hover .slds-is-sortable__icon,
+.slds-is-sortable .slds-th__action:focus .slds-is-sortable__icon,
+.slds-is-sortable.slds-has-focus .slds-th__action .slds-is-sortable__icon,
+.slds-is-sortable.slds-has-focus .slds-th__action:hover .slds-is-sortable__icon,
+.slds-is-sortable.slds-has-focus .slds-th__action:focus .slds-is-sortable__icon {
+  display: inline-block;
+  fill: #0070d2;
+}
+.slds-th__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.25rem 0.5rem;
+  height: 2rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.slds-th__action:focus,
+.slds-th__action:hover {
+  outline: 0;
+  background-color: white;
+}
+.slds-th__action_form {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.slds-th__action-button {
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+  right: 0.25rem;
+}
+.slds-has-button-menu .slds-th__action {
+  padding-right: 1.5rem;
+}
+.slds-is-sortable__icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 0.25rem;
+  display: none;
+}
+.slds-is-sorted {
+}
+.slds-is-sorted .slds-is-sortable__icon {
+  display: inline-block;
+}
+.slds-is-sorted_asc .slds-is-sortable__icon {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.slds-table_column-1-wrap tbody tr > *:nth-child(1) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-2-wrap tbody tr > *:nth-child(2) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-3-wrap tbody tr > *:nth-child(3) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-4-wrap tbody tr > *:nth-child(4) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-5-wrap tbody tr > *:nth-child(5) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-6-wrap tbody tr > *:nth-child(6) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-7-wrap tbody tr > *:nth-child(7) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-8-wrap tbody tr > *:nth-child(8) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-9-wrap tbody tr > *:nth-child(9) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-10-wrap tbody tr > *:nth-child(10) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-11-wrap tbody tr > *:nth-child(11) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-12-wrap tbody tr > *:nth-child(12) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-13-wrap tbody tr > *:nth-child(13) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-14-wrap tbody tr > *:nth-child(14) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+.slds-table_column-15-wrap tbody tr > *:nth-child(15) .slds-truncate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: normal;
+}
+
+[class*="slds-table_column-"] tr td .slds-truncate {
+  overflow: hidden;
+  position: relative;
+  max-height: 3.25rem;
+}
+[class*="slds-table_column-"] tr td .slds-truncate:after {
+  content: "";
+  position: absolute;
+  top: 2.25rem;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(69%, white));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 69%);
+}
+
+[class*="slds-table_column-"] tr:hover td .slds-truncate:after {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(250, 250, 249, 0)), color-stop(69%, #fafaf9));
+  background: linear-gradient(to right, rgba(250, 250, 249, 0) 0%, #fafaf9 69%);
+}
+.slds-table_resizable-cols thead th {
+  padding: 0;
+}
+.slds-is-resizable .slds-th__action:hover,
+.slds-is-resizable .slds-th__action:focus {
+  -webkit-box-shadow: #dddbda -0.25rem 0 0 inset;
+  box-shadow: #dddbda -0.25rem 0 0 inset;
+}
+.slds-resizable {
+  max-width: 100%;
+}
+.slds-resizable__handle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0.25rem;
+  height: 100%;
+  background: #0070d2;
+  display: block;
+  cursor: col-resize;
+  opacity: 0;
+  z-index: 5000;
+}
+.slds-resizable__handle:hover,
+.slds-resizable__handle:focus,
+.slds-resizable__handle:active {
+  opacity: 1;
+}
+.slds-resizable__divider {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 1px;
+  background: #0070d2;
+}
+.slds-resizable__input:focus ~ .slds-resizable__handle {
+  opacity: 1;
+}

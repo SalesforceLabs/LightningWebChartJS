@@ -1,0 +1,76 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-icon-help {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #b0adab;
+}
+.slds-icon-help:hover .slds-icon-help_hover {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.slds-icon-help:focus {
+  -webkit-animation: slds-click-global-action 80ms cubic-bezier(1, 1.9, 0.94, 0.98);
+  animation: slds-click-global-action 80ms cubic-bezier(1, 1.9, 0.94, 0.98);
+}
+.slds-icon-help:focus .slds-icon-help_focus {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.slds-icon-help mask {
+  mask-type: alpha;
+}
+.slds-icon-help_hover {
+  opacity: 0;
+  -webkit-transform: scale(0.1, 0.1);
+  transform: scale(0.1, 0.1);
+  -webkit-transform-origin: 45px 47px;
+  transform-origin: 45px 47px;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  fill: #005fb2;
+}
+.slds-icon-help_focus {
+  opacity: 0;
+  -webkit-transform: scale(0.1, 0.1);
+  transform: scale(0.1, 0.1);
+  -webkit-transform-origin: 45px 47px;
+  transform-origin: 45px 47px;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  fill: #0070d2;
+}
+
+.slds-icon-help svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.slds-icon-help g {
+  -webkit-mask: url(#questionMark);
+  mask: url(#questionMark);
+}
+
+@-webkit-keyframes slds-click-global-action {
+  25% {
+    -webkit-transform: scale(0.95, 0.95);
+    transform: scale(0.95, 0.95);
+  }
+  100% {
+    -webkit-transform: scale(0.98, 0.98);
+    transform: scale(0.98, 0.98);
+  }
+}
+
+@keyframes slds-click-global-action {
+  25% {
+    -webkit-transform: scale(0.95, 0.95);
+    transform: scale(0.95, 0.95);
+  }
+  100% {
+    -webkit-transform: scale(0.98, 0.98);
+    transform: scale(0.98, 0.98);
+  }
+}

@@ -1,0 +1,80 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-vertical-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+}
+.slds-vertical-tabs__nav {
+  width: 12rem;
+  border-right: 1px solid #dddbda;
+  background: #f3f2f2;
+}
+.slds-vertical-tabs__nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid #dddbda;
+  color: #3e3e3c;
+}
+.slds-vertical-tabs__nav-item:last-child {
+  margin-bottom: -1px;
+}
+.slds-vertical-tabs__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 0;
+  padding: 0.75rem;
+  color: currentColor;
+}
+.slds-vertical-tabs__link:hover {
+  background: #dddbda;
+  color: #080707;
+  text-decoration: none;
+}
+.slds-vertical-tabs__link:focus {
+  outline: 0;
+}
+.slds-vertical-tabs__left-icon {
+  margin-right: 0.5rem;
+}
+.slds-vertical-tabs__left-icon:empty {
+  margin-right: 0;
+}
+.slds-vertical-tabs__right-icon {
+  margin-left: auto;
+}
+.slds-vertical-tabs__content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1rem;
+  background: white;
+}
+.slds-vertical-tabs__nav-item.slds-is-active {
+  margin-right: -1px;
+  border-right: 0;
+  background: white;
+  color: #006dcc;
+}
+.slds-vertical-tabs__nav-item.slds-is-active .slds-vertical-tabs__link:hover {
+  background: white;
+  color: currentColor;
+}
+.slds-vertical-tabs__nav-item.slds-has-focus {
+  text-decoration: underline;
+}

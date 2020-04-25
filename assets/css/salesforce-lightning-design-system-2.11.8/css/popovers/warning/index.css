@@ -1,0 +1,35 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-popover_warning button {
+  color: #514f4d;
+  text-decoration: underline;
+}
+.slds-popover_warning button:hover {
+  color: #706e6b;
+}
+.slds-popover_warning button:focus {
+  color: #514f4d;
+  -webkit-box-shadow: 0 0 3px #514f4d;
+  box-shadow: 0 0 3px #514f4d;
+  border: 1px solid #514f4d;
+}
+.slds-popover_warning button:active {
+  color: #706e6b;
+}
+.slds-popover_warning .slds-popover__header {
+  background-color: #ffb75d;
+  color: #2b2826;
+}
+.slds-popover_warning .slds-popover__header .slds-icon {
+  fill: currentColor;
+}
+.slds-popover_warning .slds-popover__close {
+  color: currentColor;
+}
+.slds-popover_warning.slds-nubbin_top:before,
+.slds-popover_warning.slds-nubbin_top-left:before,
+.slds-popover_warning.slds-nubbin_top-right:before,
+.slds-popover_warning.slds-nubbin_left-top:before,
+.slds-popover_warning.slds-nubbin_right-top:before {
+  background-color: #ffb75d;
+}

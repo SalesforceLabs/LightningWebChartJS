@@ -1,0 +1,105 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-carousel {
+  position: relative;
+}
+.slds-carousel__stage {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+}
+.slds-carousel__panels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+  min-height: 0%;
+}
+.slds-carousel__panel {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.slds-carousel__panel-action {
+  display: block;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+}
+.slds-carousel__panel-action:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 3px #0070d2;
+  box-shadow: 0 0 3px #0070d2;
+  border-color: #005fb2;
+  outline: 0;
+}
+.slds-carousel__image {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  overflow: hidden;
+}
+.slds-carousel__image > img {
+  width: 100%;
+}
+.slds-carousel__content {
+  background: white;
+  padding: 0.75rem;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  text-align: center;
+  height: 6.625rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.slds-carousel__content-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.slds-carousel__indicators {
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: 0.5rem 0;
+}
+.slds-carousel__indicator {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0 0.25rem;
+}
+.slds-carousel__indicator-action {
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 50%;
+}
+.slds-carousel__indicator-action.slds-is-active,
+.slds-carousel__indicator-action.slds-is-active:hover {
+  background: #0070d2;
+  border-color: #0070d2;
+}
+.slds-carousel__indicator-action:hover {
+  background-color: #fafaf9;
+}
+.slds-carousel__indicator-action:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 3px #0070d2;
+  box-shadow: 0 0 3px #0070d2;
+  background-color: #005fb2;
+  border-color: #005fb2;
+  outline: 0;
+}
+.slds-carousel__autoplay {
+  position: absolute;
+  left: 0;
+  bottom: 0.25rem;
+}

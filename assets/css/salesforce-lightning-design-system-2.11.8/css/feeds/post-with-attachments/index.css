@@ -1,0 +1,9 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-post__payload {
+  padding: 0 0 1rem;
+}
+.slds-post__payload:empty {
+  padding: 0;
+  border: 0;
+}

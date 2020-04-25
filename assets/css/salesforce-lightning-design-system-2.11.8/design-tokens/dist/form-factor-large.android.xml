@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <dimen name="FONT_SIZE_SMALL" category="font-size">12</dimen>
+  <dimen name="FONT_SIZE_MEDIUM" category="font-size">13</dimen>
+  <dimen name="FONT_SIZE_MEDIUM_A" category="font-size">14</dimen>
+  <dimen name="FONT_SIZE_LARGE" category="font-size">16</dimen>
+  <dimen name="FONT_SIZE_X_LARGE" category="font-size">20</dimen>
+  <dimen name="FONT_SIZE_XX_LARGE" category="font-size">28</dimen>
+  <dimen name="HEIGHT_HEADER" category="sizing">50</dimen>
+  <dimen name="SQUARE_ICON_MEDIUM" category="sizing">32</dimen>
+</resources>

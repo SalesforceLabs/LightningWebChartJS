@@ -1,0 +1,125 @@
+{
+  "aliases": {},
+  "props": {
+    "NEUTRAFACE_DISPLAY_WOFF2": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/NeutrafaceDisplay.woff2?cache=2.9.0",
+      "originalValue": "/_slds/fonts/NeutrafaceDisplay.woff2?cache=2.9.0",
+      "name": "NEUTRAFACE_DISPLAY_WOFF2"
+    },
+    "SALESFORCE_SANS_LIGHT_WOFF2": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Light.woff2",
+      "originalValue": "/_slds/fonts/v2.3.0/SalesforceSans-Light.woff2",
+      "name": "SALESFORCE_SANS_LIGHT_WOFF2"
+    },
+    "SALESFORCE_SANS_BOLD_WOFF": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff",
+      "originalValue": "/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff",
+      "name": "SALESFORCE_SANS_BOLD_WOFF"
+    },
+    "SALESFORCE_SANS_REGULAR_WOFF": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff",
+      "originalValue": "/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff",
+      "name": "SALESFORCE_SANS_REGULAR_WOFF"
+    },
+    "SALESFORCE_SANS_REGULAR_WOFF2": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff2",
+      "originalValue": "/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff2",
+      "name": "SALESFORCE_SANS_REGULAR_WOFF2"
+    },
+    "SALESFORCE_SANS_BOLD_WOFF2": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff2",
+      "originalValue": "/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff2",
+      "name": "SALESFORCE_SANS_BOLD_WOFF2"
+    },
+    "SALESFORCE_SANS_LIGHT_WOFF": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Light.woff",
+      "originalValue": "/_slds/fonts/v2.3.0/SalesforceSans-Light.woff",
+      "name": "SALESFORCE_SANS_LIGHT_WOFF"
+    },
+    "NEUTRAFACE_DISPLAY_WOFF": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/NeutrafaceDisplay.woff?cache=2.9.0",
+      "originalValue": "/_slds/fonts/NeutrafaceDisplay.woff?cache=2.9.0",
+      "name": "NEUTRAFACE_DISPLAY_WOFF"
+    },
+    "SALESFORCE_SANS_ITALIC_WOFF2": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff2",
+      "originalValue": "/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff2",
+      "name": "SALESFORCE_SANS_ITALIC_WOFF2"
+    },
+    "SALESFORCE_SANS_BOLD_ITALIC_WOFF2": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff2",
+      "originalValue": "/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff2",
+      "name": "SALESFORCE_SANS_BOLD_ITALIC_WOFF2"
+    },
+    "SALESFORCE_SANS_BOLD_ITALIC_WOFF": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff",
+      "originalValue": "/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff",
+      "name": "SALESFORCE_SANS_BOLD_ITALIC_WOFF"
+    },
+    "SALESFORCE_SANS_ITALIC_WOFF": {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "src"
+      ],
+      "value": "/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff",
+      "originalValue": "/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff",
+      "name": "SALESFORCE_SANS_ITALIC_WOFF"
+    }
+  }
+}

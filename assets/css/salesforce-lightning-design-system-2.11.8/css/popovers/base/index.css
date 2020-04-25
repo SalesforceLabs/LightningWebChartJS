@@ -1,0 +1,66 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-popover {
+  position: relative;
+  border-radius: 0.25rem;
+  width: 20rem;
+  min-height: 2rem;
+  z-index: 6000;
+  background-color: white;
+  display: inline-block;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+  border: 1px solid #dddbda;
+}
+.slds-popover__body,
+.slds-popover__header,
+.slds-popover__footer {
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  word-wrap: break-word;
+}
+.slds-popover__header {
+  border-bottom: 1px solid #dddbda;
+}
+.slds-popover__footer {
+  border-top: 1px solid #dddbda;
+}
+.slds-popover__footer_form {
+  text-align: center;
+  background: #f3f2f2;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+.slds-popover__body_small {
+  max-height: 15rem;
+  overflow-y: auto;
+}
+.slds-popover__close {
+  position: relative;
+  margin: 0.25rem;
+  z-index: 6001;
+}
+.slds-popover_small {
+  max-width: 15rem;
+}
+.slds-popover_medium {
+  min-width: 20rem;
+}
+.slds-popover_large {
+  min-width: 25rem;
+  max-width: 512px;
+}
+
+.slds-popover[class*="theme_"],
+.slds-popover[class*="theme--"] {
+  border: 0;
+}
+
+.slds-popover *:last-child {
+  margin-bottom: 0;
+}
+.slds-popover_full-width {
+  width: 100%;
+}
+.slds-popover_hide {
+  display: none;
+}

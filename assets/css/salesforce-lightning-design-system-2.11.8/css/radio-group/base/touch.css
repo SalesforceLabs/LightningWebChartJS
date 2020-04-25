@@ -1,0 +1,21 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-radio .slds-radio__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 2.75rem;
+}
+.slds-radio .slds-radio_faux {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.slds-radio .slds-form-element__label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1rem;
+}

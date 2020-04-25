@@ -1,0 +1,173 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-input {
+  background-color: white;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  width: 100%;
+  -webkit-transition: border 0.1s linear, background-color 0.1s linear;
+  transition: border 0.1s linear, background-color 0.1s linear;
+  display: inline-block;
+  padding: 0 1rem 0 0.75rem;
+  line-height: 1.875rem;
+  min-height: calc(1.875rem + (1px * 2));
+}
+.slds-input:required {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-input:focus,
+.slds-input:active {
+  outline: 0;
+  border-color: #1589ee;
+  background-color: white;
+  -webkit-box-shadow: 0 0 3px #0070d2;
+  box-shadow: 0 0 3px #0070d2;
+}
+.slds-input[disabled],
+.slds-input.slds-is-disabled {
+  background-color: #ecebea;
+  border-color: #c9c7c5;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.slds-input[disabled]:focus,
+.slds-input[disabled]:active,
+.slds-input.slds-is-disabled:focus,
+.slds-input.slds-is-disabled:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-input[readonly] {
+  padding-left: 0;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.slds-input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.slds-input[type="url"],
+.slds-input[type="tel"],
+.slds-input[type="email"] {
+  direction: ltr;
+  text-align: left;
+}
+.slds-input_bare {
+  background-color: transparent;
+  border: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0.75rem;
+  color: #080707;
+  line-height: 1.875rem;
+}
+.slds-input_bare:focus,
+.slds-input_bare:active {
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-input_height {
+  min-height: calc(1.875rem + (1px * 2));
+}
+.slds-input_borders {
+  padding-left: 0.75rem;
+  border-color: #dddbda;
+}
+.slds-input-has-icon {
+  position: relative;
+}
+.slds-input-has-icon .slds-input__icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.4375rem;
+  line-height: 1;
+  border: 0;
+  z-index: 2;
+  fill: #b0adab;
+}
+.slds-input-has-icon .slds-input__icon:not(button) {
+  pointer-events: none;
+}
+.slds-input-has-icon_left .slds-input__icon {
+  left: 0.75rem;
+}
+.slds-input-has-icon_left .slds-input,
+.slds-input-has-icon_left .slds-input_bare {
+  padding-left: 2rem;
+}
+.slds-input-has-icon_right .slds-input__icon {
+  right: 0.75rem;
+}
+.slds-input-has-icon_right .slds-input,
+.slds-input-has-icon_right .slds-input_bare {
+  padding-right: 2rem;
+}
+.slds-input-has-icon_left-right {
+}
+.slds-input-has-icon_left-right .slds-input__icon_left {
+  left: 0.75rem;
+}
+.slds-input-has-icon_left-right .slds-input__icon_right {
+  right: 0.75rem;
+}
+.slds-input-has-icon_left-right .slds-input,
+.slds-input-has-icon_left-right .slds-input_bare {
+  padding: 0 2rem;
+}
+.slds-input-has-icon_group-right .slds-input,
+.slds-input-has-icon_group-right .slds-input_bare {
+  padding-right: 3.5rem;
+}
+.slds-input__icon-group {
+  position: absolute;
+  height: 1rem;
+  margin-top: -0.5rem;
+}
+.slds-input__icon-group_right {
+  right: 0;
+  top: 50%;
+}
+.slds-input__icon-group_right .slds-input__icon_right {
+  right: 0.5rem;
+}
+.slds-input__icon-group_right .slds-input__spinner {
+  right: 1.5rem;
+  left: auto;
+}
+.slds-input-has-fixed-addon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slds-input:required:focus {
+  -webkit-box-shadow: 0 0 3px #0070d2;
+  box-shadow: 0 0 3px #0070d2;
+}
+
+.slds-has-error .slds-input {
+  background-color: white;
+  border-color: #c23934;
+  -webkit-box-shadow: #c23934 0 0 0 1px inset;
+  box-shadow: #c23934 0 0 0 1px inset;
+  background-clip: padding-box;
+}
+.slds-has-error .slds-input:focus,
+.slds-has-error .slds-input:active {
+  -webkit-box-shadow: #c23934 0 0 0 1px inset, 0 0 3px #0070d2;
+  box-shadow: #c23934 0 0 0 1px inset, 0 0 3px #0070d2;
+}
+.slds-has-error .slds-input__icon {
+  fill: #c23934;
+  color: #c23934;
+}

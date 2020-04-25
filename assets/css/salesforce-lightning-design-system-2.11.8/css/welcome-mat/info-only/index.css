@@ -1,0 +1,14 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-welcome-mat_info-only .slds-welcome-mat__content {
+  height: 37.5rem;
+}
+.slds-welcome-mat_info-only .slds-welcome-mat__info-title {
+  font-size: 2rem;
+}
+.slds-welcome-mat__tiles_info-only {
+  background-color: white;
+}
+.slds-welcome-mat__tile_info-only .slds-welcome-mat__tile-body {
+  border-left: 0;
+}

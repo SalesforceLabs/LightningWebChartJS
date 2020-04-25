@@ -1,0 +1,89 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import 'deprecate';
+
+/**
+ * @summary Container to hold mobile tabs and their panels
+ *
+ * @name mobile-stack
+ * @selector .slds-tabs-mobile__container
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ * @lwc
+ */
+.slds-tabs-mobile__container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slds-panel__body {
+
+  .slds-tabs-mobile {
+    margin-left: (-1 * $spacing-small);
+    margin-right: (-1 * $spacing-small);
+  }
+
+  .slds-tabs-mobile:first-child {
+    margin-top: (-1 * $spacing-small);
+
+    .slds-tabs-mobile__item:first-child {
+      border-top: 0;
+    }
+  }
+}
+
+/**
+ * @summary Styles the list of tabs for the mobile tab set
+ *
+ * @selector .slds-tabs-mobile
+ * @restrict .slds-tabs-mobile__container ul
+ */
+.slds-tabs-mobile {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-background-alt;
+}
+
+/**
+ * @summary Styles each list item as a single drill-in tab
+ * @selector .slds-tabs-mobile__item
+ * @restrict .slds-tabs-mobile li
+ */
+.slds-tabs-mobile__item {
+  display: flex;
+  border-top: $border-width-thin solid $color-border;
+  height: $square-tappable;
+  align-items: stretch;
+  color: $color-text-tab-label;
+  font-size: $font-size-5;
+  padding: 0 $spacing-small;
+
+  &:active {
+    background-color: $color-background-row-active;
+  }
+
+  &:last-child {
+    border-bottom: $border-width-thin solid $color-border;
+  }
+}
+
+/**
+ * @summary Wrapper for adjacent mobile tab sets
+ *
+ * @selector .slds-tabs-mobile__group
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.slds-tabs-mobile__group {
+
+  .slds-tabs-mobile__container+.slds-tabs-mobile__container {
+
+    .slds-tabs-mobile__item:first-child {
+      border-top: 0;
+    }
+  }
+}

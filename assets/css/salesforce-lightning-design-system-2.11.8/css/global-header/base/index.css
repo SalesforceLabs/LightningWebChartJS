@@ -1,0 +1,51 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-global-header_container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.slds-global-header_container .slds-assistive-text_focus {
+  top: 0;
+  color: #5e5e5e;
+  background: white;
+}
+.slds-global-header {
+  background: white;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+  padding: 0.5rem 0;
+  height: 3.125rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.slds-global-header__item {
+  padding: 0 1rem;
+}
+.slds-global-header__item_search {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 33.5rem;
+  flex: 0 1 33.5rem;
+  min-width: 27.5rem;
+  padding: 0;
+}
+.slds-global-header .slds-global-search__form-element .slds-input {
+  padding-left: 3rem;
+}
+.slds-global-header .slds-global-search__form-element .slds-input__icon_left {
+  left: 1.25rem;
+}
+.slds-global-header .slds-global-search__form-element .slds-icon {
+  fill: #b0adab;
+}
+.slds-global-header__logo {
+  width: 12.5rem;
+  height: 2.5rem;
+  background-image: url("/assets/images/logo-noname.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}

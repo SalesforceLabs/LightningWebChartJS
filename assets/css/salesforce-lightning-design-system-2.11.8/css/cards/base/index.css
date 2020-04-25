@@ -1,0 +1,92 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-card {
+  position: relative;
+  padding: 0;
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.slds-card + .slds-card {
+  margin-top: 1rem;
+}
+.slds-card__body_inner {
+  padding: 0 1rem;
+}
+.slds-card__header {
+  padding: 0.75rem 1rem 0;
+  margin: 0 0 0.75rem;
+}
+.slds-card__header-title {
+  font-size: 1rem;
+  line-height: 1.25;
+}
+.slds-card__header-link {
+  color: inherit;
+  font-weight: 700;
+}
+.slds-card__body {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.slds-card__body:empty,
+.slds-card__footer:empty {
+  display: none;
+}
+.slds-card__footer {
+  padding: 0.75rem 1rem;
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  border-top: 1px solid #dddbda;
+}
+.slds-card__footer-action {
+  display: block;
+}
+.slds-card__tile {
+  margin-top: 0.75rem;
+}
+
+.slds-region__pinned-left .slds-card,
+.slds-region__pinned-left .slds-card-wrapper,
+.slds-region__pinned-left .slds-card_boundary,
+.slds-region__pinned-left .slds-tabs_card,
+.slds-region__pinned-right .slds-card,
+.slds-region__pinned-right .slds-card-wrapper,
+.slds-region__pinned-right .slds-card_boundary,
+.slds-region__pinned-right .slds-tabs_card {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid #dddbda;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-region__pinned-left .slds-card:last-child,
+.slds-region__pinned-left .slds-card-wrapper:last-child,
+.slds-region__pinned-left .slds-card_boundary:last-child,
+.slds-region__pinned-left .slds-tabs_card:last-child,
+.slds-region__pinned-right .slds-card:last-child,
+.slds-region__pinned-right .slds-card-wrapper:last-child,
+.slds-region__pinned-right .slds-card_boundary:last-child,
+.slds-region__pinned-right .slds-tabs_card:last-child {
+  border-bottom: 0;
+}
+.slds-card-wrapper {
+  padding: 1rem;
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.slds-card-wrapper .slds-card__header,
+.slds-card-wrapper .slds-card__body,
+.slds-card-wrapper .slds-card__footer {
+  padding-left: 0;
+  padding-right: 0;
+}

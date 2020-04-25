@@ -1,0 +1,3115 @@
+{
+  "properties": [
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(160, 148, 237)",
+      "name": "contact"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "multiSelectCheckbox"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(80, 227, 194)",
+      "name": "workOrder"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(101, 202, 228)",
+      "name": "post"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "globalConstant"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(107, 189, 110)",
+      "name": "carousel"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(69, 193, 115)",
+      "name": "resourceSkill"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "systemAndGlobalVariable"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(86, 170, 223)",
+      "name": "goals"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(75, 192, 118)",
+      "name": "investmentAccount"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "name": "store"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(67, 156, 186)",
+      "name": "output"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "storeGroup"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "all"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "picklistChoice"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "choice"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(252, 185, 91)",
+      "name": "app"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(129, 153, 175)",
+      "name": "default"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "caseMilestone"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(239, 126, 173)",
+      "name": "today"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "name": "buyerAccount"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(248, 137, 98)",
+      "name": "leadList"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(235, 112, 146)",
+      "name": "shift"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(248, 137, 98)",
+      "name": "productItemTransaction"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "apex"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "answerPrivate"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "opportunityContactRole"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 175, 160)",
+      "name": "retailBankingConsole"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(14, 181, 138)",
+      "name": "channelProgramMembers"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(152, 149, 238)",
+      "name": "appsAdmin"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "name": "datadotcom"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "name": "settings"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(118, 158, 217)",
+      "name": "productItem"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(86, 170, 223)",
+      "name": "metrics"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(86, 170, 208)",
+      "name": "topic2"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(14, 181, 138)",
+      "name": "partnerFundAllocation"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(80, 204, 122)",
+      "name": "approval"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "workQueue"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(42, 115, 158)",
+      "name": "iotOrchestrations"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(252, 185, 91)",
+      "name": "visualforcePage"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(127, 141, 225)",
+      "name": "personAccount"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(248, 137, 98)",
+      "name": "entity"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "serviceTerritoryLocation"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "name": "entitlementPolicy"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(118, 158, 211)",
+      "name": "orderItem"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(75, 192, 118)",
+      "name": "readReceipts"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(252, 185, 91)",
+      "name": "javascriptButton"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(42, 115, 158)",
+      "name": "maintenanceAsset"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(255, 154, 60)",
+      "name": "loop"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(122, 154, 230)",
+      "name": "portalRolesAndSubordinates"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 121, 188)",
+      "name": "workCapacityLimit"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "constant"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(107, 189, 110)",
+      "name": "marketingActions"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "caseTranscript"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(125, 195, 125)",
+      "name": "timesheetEntry"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "multiPicklist"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "visitTemplates"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(75, 192, 118)",
+      "name": "task"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "answerBest"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(118, 158, 217)",
+      "name": "orders"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(248, 137, 96)",
+      "name": "pastChat"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(109, 161, 234)",
+      "name": "feedback"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(88, 118, 163)",
+      "name": "actionListComponent"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(252, 185, 91)",
+      "name": "opportunitySplits"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(52, 190, 205)",
+      "name": "messagingUser"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(3, 46, 97)",
+      "name": "trailhead"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(183, 129, 211)",
+      "name": "entitlements"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "formula"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "caseLogACall"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(184, 195, 206)",
+      "name": "thanksLoading"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 121, 188)",
+      "name": "serviceAppointmentCapacityUsage"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(14, 181, 138)",
+      "name": "channelProgramLevels"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "letterhead"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "emailChatter"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(98, 183, 237)",
+      "name": "announcement"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 143)",
+      "name": "bot"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(71, 207, 210)",
+      "name": "macros"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "dashboardEa"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(235, 112, 146)",
+      "name": "jobProfile"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "steps"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(250, 151, 92)",
+      "name": "assetRelationship"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(71, 207, 201)",
+      "name": "highVelocitySales"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "brand"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "visits"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(246, 117, 148)",
+      "name": "coaching"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(235, 112, 146)",
+      "name": "recordLookup"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "lightningComponent"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(98, 183, 237)",
+      "name": "search"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(152, 149, 238)",
+      "name": "connectedApps"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 121, 188)",
+      "name": "workTypeGroup"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "education"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "workType"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "environmentHub"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(136, 198, 81)",
+      "name": "cms"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 161, 223)",
+      "name": "salesforceCms"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(233, 105, 110)",
+      "name": "thanks"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "serviceTerritoryMember"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(143, 201, 110)",
+      "name": "userRole"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 121, 188)",
+      "name": "workCapacityUsage"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(235, 112, 146)",
+      "name": "recordCreate"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(244, 151, 86)",
+      "name": "campaignMembers"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 210, 190)",
+      "name": "retailBanking"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(251, 137, 80)",
+      "name": "portalRoles"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(71, 207, 210)",
+      "name": "calibration"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "answerPublic"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "displayText"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(98, 183, 237)",
+      "name": "unmatched"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(14, 181, 138)",
+      "name": "partners"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(160, 148, 237)",
+      "deprecated": true,
+      "name": "emailIq"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(250, 151, 92)",
+      "name": "serviceCrew"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(48, 200, 90)",
+      "name": "voiceCall"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(69, 193, 115)",
+      "name": "resourceCapacity"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(14, 181, 138)",
+      "name": "channelPrograms"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(211, 69, 29)",
+      "name": "quip"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(48, 200, 90)",
+      "name": "quipSheet"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(250, 178, 76)",
+      "name": "timeslot"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(248, 137, 96)",
+      "name": "liveChat"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "sobjectCollection"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(52, 190, 205)",
+      "name": "user"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 210, 190)",
+      "name": "client"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "name": "screen"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(174, 199, 112)",
+      "name": "portal"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(14, 181, 138)",
+      "name": "partnerFundRequest"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(69, 193, 115)",
+      "name": "resourcePreference"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(233, 105, 110)",
+      "name": "firstNonEmpty"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(3, 46, 97)",
+      "name": "customer360"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(69, 193, 115)",
+      "name": "resourceAbsence"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "textTemplate"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "entitlementTemplate"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "lightningUsage"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "entitlement"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(129, 153, 175)",
+      "name": "empty"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "text"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "name": "delegatedAccount"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(185, 172, 145)",
+      "name": "fulfillmentOrder"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "caseEmail"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(127, 141, 225)",
+      "name": "account"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(255, 154, 60)",
+      "name": "assignment"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 175, 160)",
+      "name": "wealthManagementConsole"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(75, 192, 118)",
+      "name": "task2"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "codePlayground"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(234, 116, 162)",
+      "name": "social"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(139, 154, 227)",
+      "name": "endorsement"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(139, 154, 227)",
+      "name": "folder"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "serviceCrewMember"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 121, 188)",
+      "name": "flow"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(138, 118, 240)",
+      "name": "omniSupervisor"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(183, 129, 211)",
+      "name": "product"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(86, 170, 223)",
+      "name": "topic"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(239, 110, 100)",
+      "name": "productRequired"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "dynamicRecordChoice"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 121, 188)",
+      "name": "process"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(52, 190, 205)",
+      "name": "people"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(233, 105, 110)",
+      "name": "reward"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(248, 177, 86)",
+      "name": "performance"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "caseComment"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(42, 115, 158)",
+      "name": "salesChannel"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "apexPlugin"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(244, 151, 86)",
+      "name": "campaign"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(251, 137, 84)",
+      "name": "contactRequest"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(125, 195, 125)",
+      "name": "businessHours"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(134, 200, 111)",
+      "name": "evernote"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "serviceTerritory"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "case"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "currency"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(125, 195, 125)",
+      "name": "record"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "queue"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(110, 192, 110)",
+      "name": "contractLineItem"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(139, 154, 227)",
+      "name": "skillEntity"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(250, 151, 92)",
+      "name": "skill"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(107, 158, 226)",
+      "name": "operatingHours"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(129, 153, 175)",
+      "name": "custom"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(89, 188, 171)",
+      "name": "relatedList"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(88, 118, 163)",
+      "name": "botTraining"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "caseChangeStatus"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 175, 160)",
+      "name": "insuranceConsole"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(110, 192, 110)",
+      "name": "contract"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "sobject"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "salesCadenceTarget"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(215, 209, 209)",
+      "name": "photo"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "apps"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "timesheet"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(108, 161, 233)",
+      "name": "drafts"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(255, 154, 60)",
+      "name": "outcome"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(51, 168, 220)",
+      "name": "workOrderItem"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(183, 129, 211)",
+      "name": "pricebook"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(243, 158, 88)",
+      "name": "scanCard"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(230, 212, 120)",
+      "name": "note"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "name": "buyerGroup"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(252, 185, 91)",
+      "name": "opportunity"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(127, 141, 225)",
+      "name": "news"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "displayRichText"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(75, 192, 113)",
+      "name": "strategy"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "callHistory"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(46, 203, 190)",
+      "name": "report"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(119, 158, 242)",
+      "name": "groups"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(239, 110, 100)",
+      "name": "dashboard"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(184, 195, 206)",
+      "name": "genericLoading"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "numberInput"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(75, 192, 118)",
+      "name": "address"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(244, 151, 86)",
+      "name": "entityMilestone"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 210, 190)",
+      "name": "wealthManagement"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(14, 181, 138)",
+      "name": "customers"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "story"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "serviceAppointment"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(42, 115, 158)",
+      "name": "maintenancePlan"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(42, 115, 158)",
+      "name": "dataIntegrationHub"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(52, 190, 205)",
+      "name": "hierarchy"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(14, 181, 138)",
+      "name": "partnerMarketingBudget"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(250, 151, 92)",
+      "name": "skillRequirement"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(75, 192, 118)",
+      "name": "location"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "radioButton"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(184, 195, 206)",
+      "name": "avatarLoading"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "article"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "invocableAction"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "proposition"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(14, 181, 138)",
+      "name": "snippets"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 219)",
+      "name": "customerPortalUsers"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(252, 185, 91)",
+      "name": "actionsAndButtons"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(235, 112, 146)",
+      "name": "recordUpdate"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(235, 112, 146)",
+      "name": "shiftType"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(72, 195, 204)",
+      "name": "logACall"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(136, 198, 81)",
+      "name": "quotes"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "questionFeed"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "kanban"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "merge"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(176, 112, 230)",
+      "name": "dataset"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(85, 188, 156)",
+      "name": "productConsumed"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(129, 153, 175)",
+      "name": "canvas"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(107, 189, 110)",
+      "name": "forecasts"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "relationship"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "serviceResource"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(21, 57, 238)",
+      "name": "filter"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(42, 115, 158)",
+      "name": "salesPath"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 219)",
+      "name": "events"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(136, 198, 81)",
+      "name": "sms"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(71, 207, 210)",
+      "name": "rtcPresence"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(98, 183, 237)",
+      "name": "avatar"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(235, 112, 146)",
+      "name": "recordDelete"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(143, 201, 114)",
+      "name": "solution"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(14, 181, 138)",
+      "name": "partnerFundClaim"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "individual"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(107, 183, 228)",
+      "name": "customNotification"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "dateInput"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(2, 126, 70)",
+      "name": "catalog"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "template"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "shipment"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(235, 112, 146)",
+      "name": "event"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 210, 190)",
+      "name": "insurance"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(246, 137, 96)",
+      "name": "liveChatVisitor"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "textarea"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "picklistType"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(49, 159, 214)",
+      "name": "survey"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(122, 154, 230)",
+      "name": "link"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(52, 190, 205)",
+      "name": "messagingSession"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(139, 174, 181)",
+      "name": "listEmail"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(21, 137, 228)",
+      "name": "recycleBin"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(186, 172, 147)",
+      "name": "document"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(248, 137, 98)",
+      "name": "productTransfer"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "instoreLocations"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(108, 161, 233)",
+      "name": "recent"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "password"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(233, 105, 110)",
+      "name": "branchMerge"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(236, 148, 237)",
+      "name": "insights"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(82, 174, 249)",
+      "name": "dropbox"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(186, 172, 147)",
+      "name": "file"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "currencyInput"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "variable"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "teamMember"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(248, 137, 96)",
+      "name": "agentSession"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(184, 195, 206)",
+      "name": "groupLoading"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(248, 137, 98)",
+      "name": "lead"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(149, 174, 197)",
+      "name": "email"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(138, 118, 240)",
+      "name": "serviceContract"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(255, 154, 60)",
+      "name": "decision"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(160, 148, 237)",
+      "name": "snippet"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "entitlementProcess"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(160, 148, 237)",
+      "name": "contactList"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "planogram"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(14, 181, 138)",
+      "name": "channelProgramHistory"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "questionBest"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "collectionVariable"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(60, 151, 221)",
+      "name": "salesValue"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(236, 148, 237)",
+      "name": "knowledge"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "dateTime"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(2, 126, 70)",
+      "name": "category"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "name": "textbox"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(34, 176, 230)",
+      "name": "leadInsights"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(255, 154, 60)",
+      "name": "waits"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(76, 195, 199)",
+      "name": "concur"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(98, 183, 237)",
+      "name": "feed"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(21, 57, 238)",
+      "name": "sort"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(52, 190, 205)",
+      "name": "messagingConversation"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "serviceReport"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(42, 115, 158)",
+      "name": "iotContext"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "call"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(255, 154, 60)",
+      "name": "stage"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "salesCadence"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(136, 198, 81)",
+      "name": "productRequestLineItem"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 150, 136)",
+      "name": "returnOrderLineItem"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(31, 202, 160)",
+      "name": "chart"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(98, 183, 229)",
+      "name": "quickText"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(239, 126, 173)",
+      "name": "home"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(84, 105, 141)",
+      "name": "sossession"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(255, 154, 60)",
+      "name": "stageCollection"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(136, 198, 81)",
+      "name": "productRequest"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 161, 223)",
+      "name": "logging"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(69, 193, 115)",
+      "name": "assignedResource"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 150, 136)",
+      "name": "returnOrder"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(105, 155, 225)",
+      "name": "poll"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 175, 160)",
+      "name": "household"
+    }
+  ]
+}

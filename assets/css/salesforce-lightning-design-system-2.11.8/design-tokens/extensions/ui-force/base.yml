@@ -1,0 +1,17 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+imports:
+- ./deprecated/base.yml
+- ./primitive/base.yml
+- ./background-color.yml
+- ./border-color.yml
+- ./border-width.yml
+- ./box-shadow.yml
+- ./duration.yml
+- ./illustrations.yml
+- ./image-paths.yml
+- ./line-height.yml
+- ./radius.yml
+- ./sizing.yml
+- ./text-color.yml

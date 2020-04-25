@@ -1,0 +1,91 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-nav-vertical {
+  position: relative;
+}
+.slds-nav-vertical_compact .slds-nav-vertical__title,
+.slds-nav-vertical_compact .slds-nav-vertical__action {
+  padding: 0.25rem 1.5rem;
+}
+.slds-nav-vertical_shade .slds-is-active.slds-nav-vertical__item:before {
+  background: white;
+}
+.slds-nav-vertical_shade .slds-nav-vertical__item:hover:before {
+  background: white;
+}
+.slds-nav-vertical_shade .slds-is-active .slds-nav-vertical__action {
+  border-color: #dddbda;
+}
+.slds-nav-vertical__title {
+  padding: 0.5rem 1rem;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.slds-nav-vertical__title:not(:first-of-type) {
+  margin-top: 0.5rem;
+}
+
+.slds-nav-vertical__section:not(:first-of-type) {
+  margin-top: 0.5rem;
+}
+.slds-nav-vertical__item {
+  position: relative;
+}
+.slds-nav-vertical__item:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+.slds-nav-vertical__item:hover:before,
+.slds-nav-vertical__item.slds-is-active:before {
+  background: rgba(21, 137, 238, 0.1);
+}
+.slds-nav-vertical__action {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1.5rem 0.5rem 2rem;
+  color: #080707;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 0 0 #1589ee;
+  box-shadow: inset 0 0 0 #1589ee;
+  cursor: pointer;
+}
+.slds-nav-vertical__action:active,
+.slds-nav-vertical__action:hover,
+.slds-nav-vertical__action:focus {
+  color: currentColor;
+}
+.slds-nav-vertical__action:hover {
+  text-decoration: none;
+  -webkit-box-shadow: inset 0.125rem 0 0 #1589ee;
+  box-shadow: inset 0.125rem 0 0 #1589ee;
+}
+[dir="rtl"] .slds-nav-vertical__action:hover {
+  -webkit-box-shadow: inset -0.125rem 0 0 #1589ee;
+  box-shadow: inset -0.125rem 0 0 #1589ee;
+}
+.slds-nav-vertical__action:focus {
+  outline: 0;
+  text-decoration: underline;
+}
+.slds-nav-vertical__item.slds-is-active .slds-nav-vertical__action {
+  font-weight: bold;
+  -webkit-box-shadow: inset 0.25rem 0 0 #1589ee;
+  box-shadow: inset 0.25rem 0 0 #1589ee;
+}
+[dir="rtl"] .slds-nav-vertical__item.slds-is-active .slds-nav-vertical__action {
+  -webkit-box-shadow: inset -0.25rem 0 0 #1589ee;
+  box-shadow: inset -0.25rem 0 0 #1589ee;
+}

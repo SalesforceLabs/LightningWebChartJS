@@ -1,0 +1,72 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-section {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.slds-section__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.875rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.slds-section__title-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #f3f2f2;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  color: currentColor;
+  font-size: inherit;
+  padding: 0 0.5rem;
+}
+.slds-section__title-action:hover,
+.slds-section__title-action:focus,
+.slds-section__title-action:active {
+  background: #eef1f6;
+  color: inherit;
+}
+.slds-section__content {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+.slds-section__title-action-icon {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.slds-section.slds-is-open .slds-section__title-action-icon {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transform-origin: 45%;
+  transform-origin: 45%;
+}
+.slds-section.slds-is-open .slds-section__content {
+  padding-top: 0.5rem;
+  overflow: visible;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+
+.slds-section-title_divider {
+  font-size: 0.75rem;
+  line-height: 1.25;
+  color: #3e3e3c;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  padding: 0.5rem 1rem;
+  background: #f3f2f2;
+}

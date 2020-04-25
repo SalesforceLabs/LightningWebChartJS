@@ -1,0 +1,27 @@
+/*! Lightning Design System 2.11.8 */
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// Lightning Design System - Lightning Out
+
+// Before editing this file, know that this file is that `design-system-aura`
+// uses to generate the scoped version of the SLDS CSS
+
+@import 'init';
+@import 'core/font';
+
+#{$reset-wrapping-class} {
+
+  // Resets
+  @import 'vendor/normalize-reset';
+  @include core($scoped: true, $globals: true);
+  @import 'core/vf-reset';
+
+  // Framework
+  @import 'touch/index';
+  @import 'components/index';
+  @import 'utilities/index';
+
+  // Print
+  @import 'vendor/html5boilerplate-print';
+}

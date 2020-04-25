@@ -1,0 +1,44 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-button_icon,
+.slds-button_icon-inverse,
+.slds-button_icon-container,
+.slds-button_icon-border,
+.slds-button_icon-border-filled,
+.slds-button_icon-border-inverse,
+.slds-button_icon-more,
+.slds-button_icon-error {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.slds-button_icon-container,
+.slds-button_icon-border,
+.slds-button_icon-border-filled,
+.slds-button_icon-border-inverse,
+.slds-button_icon-brand,
+.slds-button_icon-more,
+.slds-button_icon-container-more {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.slds-button_icon-small {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.slds-button_icon-x-small {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.slds-button_icon-xx-small {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.slds-button_icon-more {
+  width: 2.75rem;
+  height: 2.75rem;
+}

@@ -1,0 +1,126 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-form-element_horizontal,
+.slds-form_horizontal .slds-form-element,
+.slds-form_stacked .slds-form-element_horizontal {
+  display: block;
+}
+.slds-form-element_horizontal:not(.slds-form-element_readonly),
+.slds-form_horizontal .slds-form-element:not(.slds-form-element_readonly),
+.slds-form_stacked .slds-form-element_horizontal:not(.slds-form-element_readonly) {
+  margin-bottom: 0.5rem;
+}
+.slds-form-element_horizontal:not([class*="slds-size"]),
+.slds-form_horizontal .slds-form-element:not([class*="slds-size"]),
+.slds-form_stacked .slds-form-element_horizontal:not([class*="slds-size"]) {
+  width: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+.slds-form-element_horizontal:not(.slds-is-editing),
+.slds-form_horizontal .slds-form-element:not(.slds-is-editing),
+.slds-form_stacked .slds-form-element_horizontal:not(.slds-is-editing) {
+  padding: 0.25rem 0.25rem;
+}
+.slds-form-element_horizontal .slds-form-element,
+.slds-form_horizontal .slds-form-element .slds-form-element,
+.slds-form_stacked .slds-form-element_horizontal .slds-form-element {
+  padding: 0;
+  margin-bottom: 0;
+}
+.slds-form-element_horizontal.slds-is-edited,
+.slds-form_horizontal .slds-form-element.slds-is-edited,
+.slds-form_stacked .slds-form-element_horizontal.slds-is-edited {
+  padding-top: 1.25rem;
+}
+@media (min-width: 48em) {
+  .slds-form-element_horizontal.slds-form-element_1-col .slds-form-element__label,
+  .slds-form_horizontal .slds-form-element.slds-form-element_1-col .slds-form-element__label,
+  .slds-form_stacked .slds-form-element_horizontal.slds-form-element_1-col .slds-form-element__label {
+    max-width: calc((50% - 33.333%) - 1.25rem);
+  }
+  .slds-form-element_horizontal.slds-form-element_1-col .slds-form-element__control,
+  .slds-form_horizontal .slds-form-element.slds-form-element_1-col .slds-form-element__control,
+  .slds-form_stacked .slds-form-element_horizontal.slds-form-element_1-col .slds-form-element__control {
+    padding-left: calc((50% - 33.333%) - (0.25rem * 2));
+  }
+}
+@media (min-width: 48em) {
+  .slds-form-element_horizontal .slds-form-element__label,
+  .slds-form_horizontal .slds-form-element .slds-form-element__label,
+  .slds-form_stacked .slds-form-element_horizontal .slds-form-element__label {
+    float: left;
+    max-width: calc(33% - 1.25rem);
+    -ms-flex-preferred-size: calc(33% - 1.25rem);
+    flex-basis: calc(33% - 1.25rem);
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .slds-form-element_horizontal .slds-form-element__control,
+  .slds-form_horizontal .slds-form-element .slds-form-element__control,
+  .slds-form_stacked .slds-form-element_horizontal .slds-form-element__control {
+    padding-left: 33%;
+    clear: none;
+  }
+  .slds-form-element_horizontal .slds-form-element__control .slds-form-element__control,
+  .slds-form_horizontal .slds-form-element .slds-form-element__control .slds-form-element__control,
+  .slds-form_stacked .slds-form-element_horizontal .slds-form-element__control .slds-form-element__control {
+    padding-left: 0;
+  }
+  .slds-form-element_horizontal .slds-form-element__icon,
+  .slds-form_horizontal .slds-form-element .slds-form-element__icon,
+  .slds-form_stacked .slds-form-element_horizontal .slds-form-element__icon {
+    float: left;
+    padding-top: 0.25rem;
+  }
+  .slds-form-element_horizontal .slds-checkbox_standalone,
+  .slds-form_horizontal .slds-form-element .slds-checkbox_standalone,
+  .slds-form_stacked .slds-form-element_horizontal .slds-checkbox_standalone {
+    padding: 0.25rem 0;
+  }
+  .slds-form-element_horizontal .slds-checkbox:not(.slds-checkbox_stacked) .slds-form-element__label,
+  .slds-form-element_horizontal .slds-radio .slds-form-element__label,
+  .slds-form_horizontal .slds-form-element .slds-checkbox:not(.slds-checkbox_stacked) .slds-form-element__label,
+  .slds-form_horizontal .slds-form-element .slds-radio .slds-form-element__label,
+  .slds-form_stacked .slds-form-element_horizontal .slds-checkbox:not(.slds-checkbox_stacked) .slds-form-element__label,
+  .slds-form_stacked .slds-form-element_horizontal .slds-radio .slds-form-element__label {
+    position: relative;
+    float: none;
+    max-width: 100%;
+    width: auto;
+  }
+  .slds-form-element_horizontal .slds-form-element__row .slds-form-element__label,
+  .slds-form-element_horizontal .slds-form-element__row .slds-form-element__control,
+  .slds-form-element_horizontal .slds-dueling-list__column .slds-form-element__label,
+  .slds-form_horizontal .slds-form-element .slds-form-element__row .slds-form-element__label,
+  .slds-form_horizontal .slds-form-element .slds-form-element__row .slds-form-element__control,
+  .slds-form_horizontal .slds-form-element .slds-dueling-list__column .slds-form-element__label,
+  .slds-form_stacked .slds-form-element_horizontal .slds-form-element__row .slds-form-element__label,
+  .slds-form_stacked .slds-form-element_horizontal .slds-form-element__row .slds-form-element__control,
+  .slds-form_stacked .slds-form-element_horizontal .slds-dueling-list__column .slds-form-element__label {
+    width: auto;
+    max-width: 100%;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    float: none;
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .slds-form-element_horizontal .slds-dueling-list,
+  .slds-form_horizontal .slds-form-element .slds-dueling-list,
+  .slds-form_stacked .slds-form-element_horizontal .slds-dueling-list {
+    clear: none;
+  }
+  .slds-form-element_horizontal .slds-input-has-icon_left .slds-input__icon,
+  .slds-form_horizontal .slds-form-element .slds-input-has-icon_left .slds-input__icon,
+  .slds-form_stacked .slds-form-element_horizontal .slds-input-has-icon_left .slds-input__icon {
+    left: calc(33% + 0.75rem);
+  }
+  .slds-form-element_horizontal .slds-input-has-icon_left-right .slds-input__icon_left,
+  .slds-form_horizontal .slds-form-element .slds-input-has-icon_left-right .slds-input__icon_left,
+  .slds-form_stacked .slds-form-element_horizontal .slds-input-has-icon_left-right .slds-input__icon_left {
+    left: calc(33% + 0.75rem);
+  }
+}

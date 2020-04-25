@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <property name="DURATION_SLIDE" category="time">0.25s</property>
+</resources>

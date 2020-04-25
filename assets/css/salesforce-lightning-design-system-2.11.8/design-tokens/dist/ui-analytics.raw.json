@@ -1,0 +1,1322 @@
+{
+  "aliases": {
+    "ALUMINIUM_BLUE": {
+      "value": "hsl(210, 25%, 48%)"
+    },
+    "FOREST_GREEN": {
+      "value": "#027E46"
+    },
+    "KOROMIKO": {
+      "value": "#FFB75D"
+    },
+    "RAIN_PURPLE_900": {
+      "value": "hsl(257, 39.2%, 42%)"
+    },
+    "SUNSHADE": {
+      "value": "#FF9E2C"
+    },
+    "FUN_GREEN": {
+      "value": "#028048"
+    },
+    "ATHENS_BLUE": {
+      "value": "hsl(210, 42.36%, 96.53%)"
+    },
+    "ROME_BLUE": {
+      "value": "hsl(210, 30.56%, 82.72%)"
+    },
+    "EMERALD": {
+      "value": "#4BCA81"
+    },
+    "MALIBU": {
+      "value": "#5EB4FF"
+    },
+    "SEA_GREEN_100": {
+      "value": "hsl(177, 64.7%, 51.9%)"
+    },
+    "GEYSER": {
+      "value": "#D8DDE6"
+    },
+    "RHINO_BLUE": {
+      "value": "hsl(210, 42.86%, 28%)"
+    },
+    "SALEM": {
+      "value": "#04844B"
+    },
+    "SEA_GREEN_300": {
+      "value": "hsl(177, 61.3%, 47.1%)"
+    },
+    "REGENT_GREY": {
+      "value": "#7E8C99"
+    },
+    "MIDNIGHT_BLUE": {
+      "value": "#00396B"
+    },
+    "SEA_GREEN_500": {
+      "value": "hsl(177, 62.6%, 41.2%)"
+    },
+    "GHOST_BLUE": {
+      "value": "hsl(210, 25.93%, 59.5%)"
+    },
+    "SKY_BLUE_100": {
+      "value": "hsl(208, 93.3%, 70.1%)"
+    },
+    "SEA_GREEN_700": {
+      "value": "hsl(177, 65.3%, 35.7%)"
+    },
+    "CERULEAN": {
+      "value": "#00A1DF"
+    },
+    "SNOWY_MINT": {
+      "value": "#D9FFDF"
+    },
+    "KAITOKE_GREEN": {
+      "value": "#004a29"
+    },
+    "SKY_BLUE_300": {
+      "value": "hsl(208, 89.6%, 61.4%)"
+    },
+    "SEA_GREEN_900": {
+      "value": "hsl(177, 65.3%, 30.9%)"
+    },
+    "ENDEAVOUR": {
+      "value": "#005FB2"
+    },
+    "TANGERINE": {
+      "value": "#FF9A3C"
+    },
+    "SANTORINI": {
+      "value": "#006DCC"
+    },
+    "DEEP_BLUSH": {
+      "value": "#EA8288"
+    },
+    "SKY_BLUE_500": {
+      "value": "hsl(208, 84.3%, 55.3%)"
+    },
+    "TOREA_BAY": {
+      "value": "#0B2399"
+    },
+    "DEEP_COVE": {
+      "value": "#061C3F"
+    },
+    "AZURE": {
+      "value": "#1589EE"
+    },
+    "BISCAY": {
+      "value": "#16325C"
+    },
+    "MAROON": {
+      "value": "#870500"
+    },
+    "SKY_BLUE_700": {
+      "value": "hsl(208, 73.9%, 48.3%)"
+    },
+    "STEAM": {
+      "value": "#E0E5EE"
+    },
+    "CINNAMON": {
+      "value": "#844800"
+    },
+    "VALENCIA": {
+      "value": "#D4504C"
+    },
+    "SKY_BLUE_900": {
+      "value": "hsl(208, 77%, 41.8%)"
+    },
+    "LINK_WATER": {
+      "value": "#F4F6F9"
+    },
+    "TRANSPARENT": {
+      "value": "transparent"
+    },
+    "TABASCO": {
+      "value": "#A61A14"
+    },
+    "BIGSTONE_BLUE": {
+      "value": "hsl(210, 66.67%, 12%)"
+    },
+    "SPIDER_BLUE": {
+      "value": "hsl(210, 28.57%, 72%)"
+    },
+    "SCIENCE_BLUE": {
+      "value": "#0070D2"
+    },
+    "LEMON_CHIFFON": {
+      "value": "#FAFFBD"
+    },
+    "SAN_JUAN": {
+      "value": "#2A426C"
+    },
+    "RAIN_PURPLE_100": {
+      "value": "hsl(257, 83.1%, 76.3%)"
+    },
+    "MEXICAN_RED": {
+      "value": "#A12B2B"
+    },
+    "ROLLINGSTONE_BLUE": {
+      "value": "hsl(210, 33.33%, 37.5%)"
+    },
+    "WHITE_LILAC": {
+      "value": "#EEF1F6"
+    },
+    "FLUSH_MAHOGANY": {
+      "value": "#C23934"
+    },
+    "GRADIENT_SHADOW_BOTTOM": {
+      "value": "linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 100%)"
+    },
+    "RAIN_PURPLE_300": {
+      "value": "hsl(257, 72.2%, 67.6%)"
+    },
+    "GORSE": {
+      "value": "#fff03f"
+    },
+    "REGENT_GREY_TRANSPARENT_80": {
+      "value": "rgba(126, 140, 153, 0.80)"
+    },
+    "ZODIAC_BLUE": {
+      "value": "hsl(210, 53.85%, 19.5%)"
+    },
+    "RAIN_PURPLE_500": {
+      "value": "hsl(257, 61.2%, 58.8%)"
+    },
+    "PIPPIN": {
+      "value": "#FFDDE1"
+    },
+    "SPARTA_BLUE": {
+      "value": "hsl(210, 32.2%, 92.62%)"
+    },
+    "PATTEN_BLUE": {
+      "value": "#D8EDFF"
+    },
+    "RAIN_PURPLE_700": {
+      "value": "hsl(257, 50.2%, 50%)"
+    },
+    "PALETTE_DARK_GRAY_TRANSPARENT_40": {
+      "value": "rgba(8, 7, 7, 0.4)"
+    },
+    "WHITE_TRANSPARENT_30": {
+      "value": "rgba(255, 255, 255, 0.30)"
+    },
+    "PALETTE_GRAY_8": {
+      "value": "#969492"
+    },
+    "WHITE_TRANSPARENT_75": {
+      "value": "rgba(255, 255, 255, 0.75)"
+    },
+    "WHITE_TRANSPARENT_97": {
+      "value": "rgba(255, 255, 255, 0.97)"
+    },
+    "PALETTE_DARK_GRAY_TRANSPARENT_30": {
+      "value": "rgba(8, 7, 7, 0.3)"
+    },
+    "WHITE_TRANSPARENT_20": {
+      "value": "rgba(255, 255, 255, 0.20)"
+    },
+    "PALETTE_GRAY_9": {
+      "value": "#706e6b"
+    },
+    "PALETTE_DARK_GRAY_TRANSPARENT_20": {
+      "value": "rgba(8, 7, 7, 0.2)"
+    },
+    "WHITE_TRANSPARENT_10": {
+      "value": "rgba(255, 255, 255, 0.10)"
+    },
+    "PALETTE_DARK_GRAY_TRANSPARENT_10": {
+      "value": "rgba(8, 7, 7, 0.1)"
+    },
+    "BLACK_TRANSPARENT_90": {
+      "value": "rgba(0, 0, 0, 0.90)"
+    },
+    "PALETTE_WARM_GRAY_10": {
+      "value": "#514f4d"
+    },
+    "BLACK_TRANSPARENT_80": {
+      "value": "rgba(0, 0, 0, 0.80)"
+    },
+    "PALETTE_WARM_GRAY_11": {
+      "value": "#3e3e3c"
+    },
+    "BLACK_TRANSPARENT_70": {
+      "value": "rgba(0, 0, 0, 0.70)"
+    },
+    "BRAND_LIGHT_ACTIVE": {
+      "value": "#e3e5ed"
+    },
+    "PALETTE_WARM_GRAY_12": {
+      "value": "#2B2826"
+    },
+    "BLACK_TRANSPARENT_60": {
+      "value": "rgba(0, 0, 0, 0.60)"
+    },
+    "PALETTE_COOL_GRAY_1": {
+      "value": "#FFFFFF"
+    },
+    "WHITE_TRANSPARENT_15": {
+      "value": "rgba(255, 255, 255, 0.15)"
+    },
+    "PALETTE_WARM_GRAY_13": {
+      "value": "#080707"
+    },
+    "BLACK_TRANSPARENT_50": {
+      "value": "rgba(0, 0, 0, 0.50)"
+    },
+    "PALETTE_COOL_GRAY_2": {
+      "value": "#F9F9FA"
+    },
+    "WHITE": {
+      "value": "#FFFFFF"
+    },
+    "BLACK_TRANSPARENT_40": {
+      "value": "rgba(0, 0, 0, 0.40)"
+    },
+    "PALETTE_COOL_GRAY_10": {
+      "value": "#4E5356"
+    },
+    "PALETTE_COOL_GRAY_3": {
+      "value": "#F2F2F3"
+    },
+    "BRAND_BACKGROUND_PRIMARY": {
+      "value": "#b0c4df"
+    },
+    "BLACK_TRANSPARENT_30": {
+      "value": "rgba(0, 0, 0, 0.30)"
+    },
+    "BRAND_PRIMARY": {
+      "value": "#1589ee"
+    },
+    "PALETTE_COOL_GRAY_11": {
+      "value": "#3E4041"
+    },
+    "PALETTE_COOL_GRAY_4": {
+      "value": "#E9EAEC"
+    },
+    "PALETTE_WARM_GRAY_1": {
+      "value": "#FFFFFF"
+    },
+    "BLACK_TRANSPARENT_20": {
+      "value": "rgba(0, 0, 0, 0.20)"
+    },
+    "PALETTE_COOL_GRAY_12": {
+      "value": "#292C2E"
+    },
+    "BRAND_CONTRAST_ACTIVE": {
+      "value": "#0d0e12"
+    },
+    "PALETTE_COOL_GRAY_5": {
+      "value": "#D9DBDD"
+    },
+    "PALETTE_WARM_GRAY_2": {
+      "value": "#fafaf9"
+    },
+    "BLACK_TRANSPARENT_10": {
+      "value": "rgba(0, 0, 0, 0.10)"
+    },
+    "PALETTE_COOL_GRAY_13": {
+      "value": "#070808"
+    },
+    "PALETTE_COOL_GRAY_6": {
+      "value": "#C4C6CA"
+    },
+    "PALETTE_WARM_GRAY_3": {
+      "value": "#f3f2f2"
+    },
+    "PALETTE_COOL_GRAY_7": {
+      "value": "#ABADB0"
+    },
+    "PALETTE_WARM_GRAY_4": {
+      "value": "#ecebea"
+    },
+    "BRAND_DARK": {
+      "value": "#182337"
+    },
+    "PALETTE_COOL_GRAY_8": {
+      "value": "#919297"
+    },
+    "BRAND_ACCESSIBLE": {
+      "value": "#0070d2"
+    },
+    "PALETTE_WARM_GRAY_5": {
+      "value": "#dddbda"
+    },
+    "BLACK_TRANSPARENT_24": {
+      "value": "rgba(0, 0, 0, 0.24)"
+    },
+    "BRAND_BACKGROUND_DARK": {
+      "value": "#195594"
+    },
+    "PALETTE_COOL_GRAY_9": {
+      "value": "#6B6D70"
+    },
+    "PALETTE_WARM_GRAY_6": {
+      "value": "#c9c7c5"
+    },
+    "PALETTE_WARM_GRAY_7": {
+      "value": "#b0adab"
+    },
+    "BRAND_TEXT_LINK_ACTIVE": {
+      "value": "#005fb2"
+    },
+    "PALETTE_WARM_GRAY_8": {
+      "value": "#969492"
+    },
+    "BLACK_TRANSPARENT_05": {
+      "value": "rgba(0, 0, 0, 0.05)"
+    },
+    "BLACK_TRANSPARENT_16": {
+      "value": "rgba(0, 0, 0, 0.16)"
+    },
+    "PALETTE_WARM_GRAY_9": {
+      "value": "#706e6b"
+    },
+    "PALETTE_LIGHT_GRAY_TRANSPARENT_90": {
+      "value": "rgba(255, 255, 255, 0.9)"
+    },
+    "BRAND_DISABLED": {
+      "value": "#c9c7c5"
+    },
+    "BLACK_TRANSPARENT_07": {
+      "value": "rgba(0, 0, 0, 0.07)"
+    },
+    "PALETTE_LIGHT_GRAY_TRANSPARENT_80": {
+      "value": "rgba(255, 255, 255, 0.8)"
+    },
+    "BRAND_TEXT_LINK": {
+      "value": "#006DCC"
+    },
+    "PALETTE_LIGHT_GRAY_TRANSPARENT_70": {
+      "value": "rgba(255, 255, 255, 0.7)"
+    },
+    "PALETTE_LIGHT_GRAY_TRANSPARENT_60": {
+      "value": "rgba(255, 255, 255, 0.6)"
+    },
+    "PALETTE_LIGHT_GRAY_TRANSPARENT_50": {
+      "value": "rgba(255, 255, 255, 0.5)"
+    },
+    "BRAND_ACCESSIBLE_ACTIVE": {
+      "value": "#005fb2"
+    },
+    "BRAND_DARK_ACTIVE": {
+      "value": "#253045"
+    },
+    "PALETTE_GRAY_10": {
+      "value": "#514f4d"
+    },
+    "PALETTE_LIGHT_GRAY_TRANSPARENT_40": {
+      "value": "rgba(255, 255, 255, 0.4)"
+    },
+    "PALETTE_GRAY_11": {
+      "value": "#3e3e3c"
+    },
+    "PALETTE_LIGHT_GRAY_TRANSPARENT_30": {
+      "value": "rgba(255, 255, 255, 0.3)"
+    },
+    "PALETTE_GRAY_12": {
+      "value": "#2B2826"
+    },
+    "PALETTE_GRAY_1": {
+      "value": "#FFFFFF"
+    },
+    "PALETTE_LIGHT_GRAY_TRANSPARENT_20": {
+      "value": "rgba(255, 255, 255, 0.2)"
+    },
+    "WHITE_TRANSPARENT_90": {
+      "value": "rgba(255, 255, 255, 0.90)"
+    },
+    "BRAND_CONTRAST": {
+      "value": "#1a1b1e"
+    },
+    "PALETTE_GRAY_13": {
+      "value": "#080707"
+    },
+    "PALETTE_GRAY_2": {
+      "value": "#fafaf9"
+    },
+    "WHITE_TRANSPARENT_80": {
+      "value": "rgba(255, 255, 255, 0.80)"
+    },
+    "PALETTE_DARK_GRAY_TRANSPARENT_90": {
+      "value": "rgba(8, 7, 7, 0.9)"
+    },
+    "PALETTE_GRAY_3": {
+      "value": "#f3f2f2"
+    },
+    "BRAND_PRIMARY_ACTIVE": {
+      "value": "#007add"
+    },
+    "PALETTE_LIGHT_GRAY_TRANSPARENT_10": {
+      "value": "rgba(255, 255, 255, 0.1)"
+    },
+    "PALETTE_DARK_GRAY_TRANSPARENT_80": {
+      "value": "rgba(8, 7, 7, 0.8)"
+    },
+    "PALETTE_GRAY_4": {
+      "value": "#ecebea"
+    },
+    "PALETTE_DARK_GRAY_TRANSPARENT_70": {
+      "value": "rgba(8, 7, 7, 0.7)"
+    },
+    "PALETTE_GRAY_5": {
+      "value": "#dddbda"
+    },
+    "WHITE_TRANSPARENT_60": {
+      "value": "rgba(255, 255, 255, 0.60)"
+    },
+    "PALETTE_DARK_GRAY_TRANSPARENT_60": {
+      "value": "rgba(8, 7, 7, 0.6)"
+    },
+    "BRAND_LIGHT": {
+      "value": "#f4f6fe"
+    },
+    "PALETTE_GRAY_6": {
+      "value": "#c9c7c5"
+    },
+    "WHITE_TRANSPARENT_50": {
+      "value": "rgba(255, 255, 255, 0.50)"
+    },
+    "PALETTE_DARK_GRAY_TRANSPARENT_50": {
+      "value": "rgba(8, 7, 7, 0.5)"
+    },
+    "WHITE_TRANSPARENT_40": {
+      "value": "rgba(255, 255, 255, 0.40)"
+    },
+    "PALETTE_GRAY_7": {
+      "value": "#b0adab"
+    },
+    "BLACK": {
+      "value": "#000000"
+    },
+    "SPACING_X_SMALL": {
+      "value": "0.5rem"
+    },
+    "SPACING_XXX_SMALL": {
+      "value": "0.125rem"
+    },
+    "SPACING_XX_SMALL": {
+      "value": "0.25rem"
+    },
+    "SPACING_SMALL": {
+      "value": "0.75rem"
+    },
+    "SPACING_MEDIUM": {
+      "value": "1rem"
+    },
+    "SPACING_NONE": {
+      "value": "0"
+    },
+    "SPACING_X_LARGE": {
+      "value": "2rem"
+    },
+    "SPACING_XX_LARGE": {
+      "value": "3rem"
+    },
+    "SPACING_LARGE": {
+      "value": "1.5rem"
+    }
+  },
+  "props": {
+    "MQ_LARGE": {
+      "value": "only screen and (min-width: 64em)",
+      "category": "media-query",
+      "type": "media-query",
+      "comment": "1024px, for tablet devices and larger.",
+      "originalValue": "only screen and (min-width: 64em)",
+      "name": "MQ_LARGE"
+    },
+    "TIMING_5": {
+      "value": ".8s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "originalValue": ".8s",
+      "name": "TIMING_5"
+    },
+    "COLOR_BLUE_MIDNIGHT_BLUE": {
+      "value": "#00396B",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "Active link color",
+      "originalValue": "{!MIDNIGHT_BLUE}",
+      "name": "COLOR_BLUE_MIDNIGHT_BLUE"
+    },
+    "BORDER_RADIUS_LARGE": {
+      "value": ".5rem",
+      "type": "size",
+      "cssProperties": [
+        "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "category": "radius",
+      "comment": "",
+      "originalValue": ".5rem",
+      "name": "BORDER_RADIUS_LARGE"
+    },
+    "LINE_HEIGHT_RESET": {
+      "value": "1",
+      "type": "number",
+      "category": "line-height",
+      "cssProperties": [
+        "font",
+        "line-height"
+      ],
+      "comment": "",
+      "originalValue": "1",
+      "name": "LINE_HEIGHT_RESET"
+    },
+    "FONT_SIZE_MEDIUM": {
+      "value": "1rem",
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "comment": "",
+      "originalValue": "1rem",
+      "name": "FONT_SIZE_MEDIUM"
+    },
+    "COLOR_BLUE_ENDEAVOUR": {
+      "value": "#005FB2",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "Hover and focus link color",
+      "originalValue": "{!ENDEAVOUR}",
+      "name": "COLOR_BLUE_ENDEAVOUR"
+    },
+    "COLOR_BLUE_SPARTA": {
+      "value": "hsl(210, 32.2%, 92.62%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SPARTA_BLUE}",
+      "name": "COLOR_BLUE_SPARTA"
+    },
+    "COLOR_BLUE_ZODIAC": {
+      "value": "hsl(210, 53.85%, 19.5%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!ZODIAC_BLUE}",
+      "name": "COLOR_BLUE_ZODIAC"
+    },
+    "FONT_WEIGHT_REGULAR": {
+      "value": "400",
+      "type": "number",
+      "category": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "comment": "Salesforce Sans Regular",
+      "originalValue": "400",
+      "name": "FONT_WEIGHT_REGULAR"
+    },
+    "FONT_SIZE_X_LARGE": {
+      "value": "1.25rem",
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "comment": "",
+      "originalValue": "1.25rem",
+      "name": "FONT_SIZE_X_LARGE"
+    },
+    "COLOR_BLUE_GHOST": {
+      "value": "hsl(210, 25.93%, 59.5%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!GHOST_BLUE}",
+      "name": "COLOR_BLUE_GHOST"
+    },
+    "COLOR_ORANGE_ALERT": {
+      "value": "#FFB75D",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!KOROMIKO}",
+      "name": "COLOR_ORANGE_ALERT"
+    },
+    "TIMING_TEST": {
+      "value": "5s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "originalValue": "5s",
+      "name": "TIMING_TEST"
+    },
+    "COLOR_GREEN_SEA_100": {
+      "value": "hsl(177, 64.7%, 51.9%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SEA_GREEN_100}",
+      "name": "COLOR_GREEN_SEA_100"
+    },
+    "COLOR_BLUE_ROLLINGSTONE": {
+      "value": "hsl(210, 33.33%, 37.5%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!ROLLINGSTONE_BLUE}",
+      "name": "COLOR_BLUE_ROLLINGSTONE"
+    },
+    "BORDER_RADIUS_CIRCLE": {
+      "value": "50%",
+      "type": "size",
+      "cssProperties": [
+        "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "category": "radius",
+      "comment": "",
+      "originalValue": "50%",
+      "name": "BORDER_RADIUS_CIRCLE"
+    },
+    "COLOR_BLUE_SKY_100": {
+      "value": "hsl(208, 93.3%, 70.1%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SKY_BLUE_100}",
+      "name": "COLOR_BLUE_SKY_100"
+    },
+    "FONT_SIZE_XX_LARGE": {
+      "value": "1.5rem",
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "comment": "",
+      "originalValue": "1.5rem",
+      "name": "FONT_SIZE_XX_LARGE"
+    },
+    "FONT_SIZE_X_MEDIUM": {
+      "value": "0.875rem",
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "comment": "",
+      "originalValue": "0.875rem",
+      "name": "FONT_SIZE_X_MEDIUM"
+    },
+    "COLOR_GREEN_SEA_300": {
+      "value": "hsl(177, 61.3%, 47.1%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SEA_GREEN_300}",
+      "name": "COLOR_GREEN_SEA_300"
+    },
+    "COLOR_BLUE_RHINO": {
+      "value": "hsl(210, 42.86%, 28%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!RHINO_BLUE}",
+      "name": "COLOR_BLUE_RHINO"
+    },
+    "COLOR_BLUE_BIGSTONE_BLUE": {
+      "value": "hsl(210, 66.67%, 12%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!BIGSTONE_BLUE}",
+      "name": "COLOR_BLUE_BIGSTONE_BLUE"
+    },
+    "COLOR_GREEN_SUCCESS": {
+      "value": "#4BCA81",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!EMERALD}",
+      "name": "COLOR_GREEN_SUCCESS"
+    },
+    "COLOR_BLUE_SKY_300": {
+      "value": "hsl(208, 89.6%, 61.4%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SKY_BLUE_300}",
+      "name": "COLOR_BLUE_SKY_300"
+    },
+    "MQ_SMALL": {
+      "value": "only screen and (min-width: 28em)",
+      "category": "media-query",
+      "type": "media-query",
+      "comment": "448px, for phone devices and larger.",
+      "originalValue": "only screen and (min-width: 28em)",
+      "name": "MQ_SMALL"
+    },
+    "COLOR_WHITE": {
+      "value": "#FFFFFF",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!WHITE}",
+      "name": "COLOR_WHITE"
+    },
+    "BORDER_RADIUS_SMALL": {
+      "value": ".125rem",
+      "type": "size",
+      "cssProperties": [
+        "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "category": "radius",
+      "comment": "",
+      "originalValue": ".125rem",
+      "name": "BORDER_RADIUS_SMALL"
+    },
+    "FONT_FAMILY_BODY": {
+      "value": "'Salesforce Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+      "type": "font",
+      "category": "font",
+      "cssProperties": [
+        "font",
+        "font-family"
+      ],
+      "comment": "font-face should be 'Salesforce Sans'.",
+      "originalValue": "'Salesforce Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+      "name": "FONT_FAMILY_BODY"
+    },
+    "COLOR_PURPLE_RAIN_100": {
+      "value": "hsl(257, 83.1%, 76.3%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!RAIN_PURPLE_100}",
+      "name": "COLOR_PURPLE_RAIN_100"
+    },
+    "FONT_SIZE_LARGE": {
+      "value": "1.125rem",
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "comment": "",
+      "originalValue": "1.125rem",
+      "name": "FONT_SIZE_LARGE"
+    },
+    "COLOR_GREEN_SEA_500": {
+      "value": "hsl(177, 62.6%, 41.2%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SEA_GREEN_500}",
+      "name": "COLOR_GREEN_SEA_500"
+    },
+    "COLOR_BLUE_SKY_500": {
+      "value": "hsl(208, 84.3%, 55.3%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SKY_BLUE_500}",
+      "name": "COLOR_BLUE_SKY_500"
+    },
+    "COLOR_BLUE_SPIDER": {
+      "value": "hsl(210, 28.57%, 72%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SPIDER_BLUE}",
+      "name": "COLOR_BLUE_SPIDER"
+    },
+    "BORDER_RADIUS_MEDIUM": {
+      "value": ".25rem",
+      "type": "size",
+      "cssProperties": [
+        "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "category": "radius",
+      "comment": "",
+      "originalValue": ".25rem",
+      "name": "BORDER_RADIUS_MEDIUM"
+    },
+    "COLOR_PURPLE_RAIN_300": {
+      "value": "hsl(257, 72.2%, 67.6%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!RAIN_PURPLE_300}",
+      "name": "COLOR_PURPLE_RAIN_300"
+    },
+    "COLOR_GREEN_SEA_700": {
+      "value": "hsl(177, 65.3%, 35.7%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SEA_GREEN_700}",
+      "name": "COLOR_GREEN_SEA_700"
+    },
+    "COLOR_BLUE_SKY_700": {
+      "value": "hsl(208, 73.9%, 48.3%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SKY_BLUE_700}",
+      "name": "COLOR_BLUE_SKY_700"
+    },
+    "COLOR_BLUE_ALUMINIUM": {
+      "value": "hsl(210, 25%, 48%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!ALUMINIUM_BLUE}",
+      "name": "COLOR_BLUE_ALUMINIUM"
+    },
+    "MQ_MEDIUM": {
+      "value": "only screen and (min-width: 48em)",
+      "category": "media-query",
+      "type": "media-query",
+      "comment": "768px, for phone devices and larger.",
+      "originalValue": "only screen and (min-width: 48em)",
+      "name": "MQ_MEDIUM"
+    },
+    "COLOR_PURPLE_RAIN_500": {
+      "value": "hsl(257, 61.2%, 58.8%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!RAIN_PURPLE_500}",
+      "name": "COLOR_PURPLE_RAIN_500"
+    },
+    "COLOR_GREEN_SEA_900": {
+      "value": "hsl(177, 65.3%, 30.9%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SEA_GREEN_900}",
+      "name": "COLOR_GREEN_SEA_900"
+    },
+    "COLOR_BLUE_SKY_900": {
+      "value": "hsl(208, 77%, 41.8%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!SKY_BLUE_900}",
+      "name": "COLOR_BLUE_SKY_900"
+    },
+    "FONT_SIZE_X_SMALL": {
+      "value": "0.625rem",
+      "type": "size",
+      "category": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "comment": "",
+      "originalValue": "0.625rem",
+      "name": "FONT_SIZE_X_SMALL"
+    },
+    "BORDER_RADIUS_PILL": {
+      "value": "5rem",
+      "type": "size",
+      "cssProperties": [
+        "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "category": "radius",
+      "comment": "",
+      "originalValue": "5rem",
+      "name": "BORDER_RADIUS_PILL"
+    },
+    "COLOR_PURPLE_RAIN_700": {
+      "value": "hsl(257, 50.2%, 50%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!RAIN_PURPLE_700}",
+      "name": "COLOR_PURPLE_RAIN_700"
+    },
+    "COLOR_PURPLE_RAIN_900": {
+      "value": "hsl(257, 39.2%, 42%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!RAIN_PURPLE_900}",
+      "name": "COLOR_PURPLE_RAIN_900"
+    },
+    "LINE_HEIGHT_HEADING": {
+      "value": "1.25",
+      "type": "number",
+      "category": "line-height",
+      "cssProperties": [
+        "font",
+        "line-height"
+      ],
+      "comment": "",
+      "originalValue": "1.25",
+      "name": "LINE_HEIGHT_HEADING"
+    },
+    "SPACING_X_LARGE": {
+      "value": "4rem",
+      "category": "spacing",
+      "type": "size",
+      "cssProperties": [
+        "margin",
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left",
+        "padding",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left"
+      ],
+      "comment": "",
+      "originalValue": "4rem",
+      "name": "SPACING_X_LARGE"
+    },
+    "SPACING_XX_LARGE": {
+      "value": "8rem",
+      "category": "spacing",
+      "type": "size",
+      "cssProperties": [
+        "margin",
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left",
+        "padding",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left"
+      ],
+      "comment": "",
+      "originalValue": "8rem",
+      "name": "SPACING_XX_LARGE"
+    },
+    "COLOR_BLUE_BISCAY": {
+      "value": "#16325C",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "Disabled link color",
+      "originalValue": "{!BISCAY}",
+      "name": "COLOR_BLUE_BISCAY"
+    },
+    "MQ_X_LARGE": {
+      "value": "only screen and (min-width: 80em)",
+      "category": "media-query",
+      "type": "media-query",
+      "comment": "1280px, for desktop screens and larger.",
+      "originalValue": "only screen and (min-width: 80em)",
+      "name": "MQ_X_LARGE"
+    },
+    "FONT_SIZE_SMALL": {
+      "value": "0.75rem",
+      "type": "size",
+      "category": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "comment": "",
+      "originalValue": "0.75rem",
+      "name": "FONT_SIZE_SMALL"
+    },
+    "LINE_HEIGHT_TEXT": {
+      "value": "1.5",
+      "type": "number",
+      "category": "line-height",
+      "cssProperties": [
+        "font",
+        "line-height"
+      ],
+      "comment": "",
+      "originalValue": "1.5",
+      "name": "LINE_HEIGHT_TEXT"
+    },
+    "COLOR_BLUE_SCIENCE": {
+      "value": "#0070D2",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "Link color (508)",
+      "originalValue": "{!SCIENCE_BLUE}",
+      "name": "COLOR_BLUE_SCIENCE"
+    },
+    "TIMING_1": {
+      "value": ".1s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "originalValue": ".1s",
+      "name": "TIMING_1"
+    },
+    "FONT_WEIGHT_BOLD": {
+      "value": "700",
+      "type": "number",
+      "category": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "comment": "Salesforce Sans Bold",
+      "originalValue": "700",
+      "name": "FONT_WEIGHT_BOLD"
+    },
+    "TIMING_2": {
+      "value": ".2s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "originalValue": ".2s",
+      "name": "TIMING_2"
+    },
+    "TIMING_3": {
+      "value": ".4s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "originalValue": ".4s",
+      "name": "TIMING_3"
+    },
+    "COLOR_RED_ERROR": {
+      "value": "#D4504C",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!VALENCIA}",
+      "name": "COLOR_RED_ERROR"
+    },
+    "COLOR_BLUE_ATHENS": {
+      "value": "hsl(210, 42.36%, 96.53%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!ATHENS_BLUE}",
+      "name": "COLOR_BLUE_ATHENS"
+    },
+    "COLOR_BLUE_ROME": {
+      "value": "hsl(210, 30.56%, 82.72%)",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "comment": "",
+      "originalValue": "{!ROME_BLUE}",
+      "name": "COLOR_BLUE_ROME"
+    },
+    "TIMING_4": {
+      "value": ".6s",
+      "category": "motion",
+      "type": "time",
+      "cssProperties": [
+        "animation",
+        "animation-duration"
+      ],
+      "comment": "",
+      "originalValue": ".6s",
+      "name": "TIMING_4"
+    },
+    "FONT_WEIGHT_LIGHT": {
+      "value": "300",
+      "type": "number",
+      "category": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "comment": "Salesforce Sans Light",
+      "originalValue": "300",
+      "name": "FONT_WEIGHT_LIGHT"
+    },
+    "SPACING_LARGE": {
+      "value": "2rem",
+      "category": "spacing",
+      "type": "size",
+      "cssProperties": [
+        "margin",
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left",
+        "padding",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left"
+      ],
+      "comment": "",
+      "originalValue": "2rem",
+      "name": "SPACING_LARGE"
+    }
+  }
+}

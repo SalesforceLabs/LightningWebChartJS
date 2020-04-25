@@ -1,0 +1,50 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-table_tree
+ * @restrict table
+ * @support dev-ready
+ * @variant
+ * @s1 false
+ */
+.slds-table_tree,
+.slds-table--tree {
+  /**
+   * @summary Initializes a slds tree item
+   * @selector .slds-tree__item
+   * @restrict .slds-table_tree th
+   */
+  .slds-tree__item {
+    line-height: ($line-height-text * 1rem);
+
+    a {
+      color: $color-text-link;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .slds-button {
+    align-self: center;
+
+    &:not(.slds-th__action-button) {
+      margin-top: 0;
+    }
+  }
+
+
+  // This is only going 20 levels deep for now -- it may have to be expanded later if people are building deep deep trees.
+  $max-nesting-depth: 20 !default;
+
+  @for $current-level from 1 through $max-nesting-depth {
+
+    [aria-level="#{$current-level}"] > .slds-tree__item {
+      padding-left: (($spacing-medium * $current-level) + $spacing-x-small);
+    }
+  }
+}

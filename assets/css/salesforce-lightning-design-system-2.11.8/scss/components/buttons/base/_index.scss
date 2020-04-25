@@ -1,0 +1,407 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import 'deprecate';
+@import '../mixins/index';
+
+/**
+ * @summary This neutralizes all the base styles making it look like a text link
+ * @name base
+ * @selector .slds-button
+ * @restrict button, a, span
+ * @support dev-ready
+ * @variant
+ */
+.slds-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  background: transparent;
+  background-clip: border-box;
+  border: $border-width-thin solid transparent;
+  border-radius: $button-border-radius;
+  line-height: $line-height-button;
+  text-decoration: none;
+  color: $brand-accessible;
+  // stylelint-disable property-no-vendor-prefix
+  -webkit-appearance: none;
+  // stylelint-enable property-no-vendor-prefix
+  white-space: normal;
+  user-select: none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $brand-accessible-active;
+  }
+
+  &:focus {
+    @include focus-button;
+  }
+
+  &:active {
+    color: $brand-accessible-active;
+  }
+
+  &[disabled],
+  &:disabled {
+    color: $color-text-button-default-disabled;
+
+    * {
+      pointer-events: none;
+    }
+  }
+
+  a {
+    color: currentColor;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &[disabled],
+  &:disabled {
+
+    .slds-button__icon {
+      fill: currentColor;
+      pointer-events: none;
+    }
+  }
+  // Add spacing when button-group is adjacent to a button
+  + .slds-button-group,
+  + .slds-button-group-list {
+    margin-left: $spacing-xx-small;
+  }
+  // Add spacing when another button is adjacent to it
+  + .slds-button {
+    margin-left: $spacing-xx-small;
+  }
+}
+
+// Polyfill for slds-button on links
+a.slds-button {
+  text-align: center;
+
+  &:focus {
+    @include focus-button;
+  }
+}
+
+a.slds-button_inverse:focus,
+a.slds-button--inverse:focus {
+  @include focus-inverse;
+}
+
+/**
+ * @name reset
+ * @summary Resets attributes of .slds-button back to the browser default
+ * @selector .slds-button_reset
+ * @restrict button, a, span
+ * @modifier
+ * @group theme
+ */
+.slds-button_reset,
+.slds-button--reset {
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  text-align: inherit;
+}
+
+/**
+ * @name neutral
+ * @summary Creates the gray border with white background default style
+ * @selector .slds-button_neutral
+ * @restrict .slds-button
+ * @modifier
+ * @group theme
+ */
+.slds-button_neutral,
+.slds-button--neutral {
+  @include button;
+  @include button-base;
+
+  &[disabled],
+  &:disabled {
+    background-color: $color-background-button-default-disabled;
+    cursor: default;
+  }
+}
+
+/**
+ * @name brand
+ * @summary Creates the brand blue Salesforce style
+ * @selector .slds-button_brand
+ * @restrict .slds-button
+ * @modifier
+ * @group theme
+ */
+.slds-button_brand,
+.slds-button--brand {
+  @include button;
+  @include button-brand;
+
+  &[disabled],
+  &:disabled {
+    background: $brand-disabled;
+    border-color: $brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
+}
+
+/**
+ * @name outline-brand
+ * @summary Creates the outlined button with the brand color
+ * @selector .slds-button_outline-brand
+ * @restrict .slds-button
+ * @modifier
+ * @group theme
+ */
+.slds-button_outline-brand {
+  @include button;
+  @include button-base;
+  border-color: $brand-accessible;
+
+  &[disabled],
+  &:disabled {
+    border-color: $color-border;
+    color: $color-text-button-default-disabled;
+    background-color: $color-background-button-default-disabled;
+  }
+}
+
+/**
+ * @name inverse
+ * @summary Creates the inverse style for dark backgrounds
+ * @selector .slds-button_inverse
+ * @restrict .slds-button
+ * @modifier
+ * @group theme
+ */
+.slds-button_inverse,
+.slds-button--inverse {
+  @include button;
+  background-color: $color-background-button-inverse;
+  border-color: $button-color-border-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-button-default-hover;
+  }
+
+  &[disabled],
+  &:disabled {
+    background-color: $color-background-button-inverse-disabled;
+    border-color: $color-border-button-inverse-disabled;
+  }
+}
+
+.slds-button_inverse,
+.slds-button--inverse,
+.slds-button_icon-border-inverse,
+.slds-button--icon-border-inverse {
+
+  &,
+  &:link,
+  &:visited {
+    color: $color-text-button-inverse;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-text-button-default;
+  }
+
+  &:focus {
+    @include focus-inverse;
+  }
+
+  &[disabled],
+  &:disabled {
+    // Make sure disabled buttons don't inherit hover states
+    color: $color-text-button-inverse-disabled;
+  }
+}
+
+/**
+ * @name destructive
+ * @summary Creates a red button style
+ * @selector .slds-button_destructive
+ * @restrict .slds-button
+ * @group theme
+ * @modifier
+ */
+.slds-button_destructive,
+.slds-button--destructive {
+  @include button;
+  @include button-destructive;
+
+  &[disabled],
+  &:disabled {
+    background: $brand-disabled;
+    border-color: $brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
+}
+
+/**
+ * @name text-destructive
+ * @summary Creates a neutral button with red text
+ * @selector .slds-button_text-destructive
+ * @restrict .slds-button
+ * @modifier
+ * @group theme
+ */
+.slds-button_text-destructive {
+  @include button;
+  @include button-base;
+  color: $color-text-destructive;
+
+  &:focus,
+  &:hover {
+    color: $color-text-destructive-hover;
+  }
+
+  &[disabled],
+  &:disabled {
+    color: $color-text-button-default-disabled;
+    background-color: $color-background-button-default-disabled;
+  }
+}
+
+/**
+ * @name success
+ * @summary Creates a green button style
+ * @selector .slds-button_success
+ * @restrict .slds-button
+ * @group theme
+ * @modifier
+ */
+.slds-button_success,
+.slds-button--success {
+  @include button;
+  @include button-success;
+
+  &[disabled],
+  &:disabled {
+    background: $brand-disabled;
+    border-color: $brand-disabled;
+    color: $color-text-button-brand-disabled;
+  }
+}
+
+/**
+ * @name with-icon
+ * @summary Sizing for icon that sits inside button__icon
+ * @selector .slds-button__icon
+ * @restrict .slds-button svg
+ * @support dev-ready
+ * @variant
+ */
+.slds-button__icon {
+  @include square($square-icon-medium-content-alt);
+  fill: currentColor;
+}
+
+/**
+ * @name large
+ * @summary Large size button icon svg
+ * @selector .slds-button__icon_large
+ * @restrict .slds-button__icon
+ * @modifier
+ * @group size
+ */
+.slds-button__icon_large,
+.slds-button__icon--large {
+  @include square($square-icon-utility-large);
+}
+
+/**
+ * @name small
+ * @summary Small size button icon svg
+ * @selector .slds-button__icon_small
+ * @restrict .slds-button__icon
+ * @modifier
+ * @group size
+ */
+.slds-button__icon_small,
+.slds-button__icon--small {
+  @include square($square-icon-small-content);
+}
+
+/**
+ * @name x-small
+ * @summary X-Small size button icon svg
+ * @selector .slds-button__icon_x-small
+ * @restrict .slds-button__icon
+ * @modifier
+ * @group size
+ */
+.slds-button__icon_x-small,
+.slds-button__icon--x-small {
+  @include square($square-icon-x-small-content);
+}
+
+/**
+ * @summary Position of icon when sitting to the left side of the text when inside a button
+ * @selector .slds-button__icon_left
+ * @restrict .slds-button__icon, .slds-button__icon_stateful
+ */
+.slds-button__icon_left,
+.slds-button__icon--left {
+  margin-right: $spacing-x-small;
+}
+
+/**
+ * @summary Position of icon when sitting to the right side of the text when inside a button
+ * @selector .slds-button__icon_right
+ * @restrict .slds-button__icon, .slds-button__icon_stateful
+ */
+.slds-button__icon_right,
+.slds-button__icon--right {
+  margin-left: $spacing-x-small;
+}
+
+/**
+ * @summary Creates a button style for full width that resets styling
+ * @selector .slds-button_full-width
+ * @restrict .slds-button
+ * @modifier
+ * @group size
+ */
+.slds-button_full-width {
+  @include button-reset;
+  width: 100%;
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+/**
+ * @summary Creates a button style for 100% width with centered text that maintains current styling
+ * @selector .slds-button_stretch
+ * @restrict .slds-button
+ * @modifier
+ * @group size
+ */
+.slds-button_stretch {
+  justify-content: center;
+  width: 100%;
+}

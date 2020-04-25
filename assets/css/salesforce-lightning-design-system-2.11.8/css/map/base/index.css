@@ -1,0 +1,80 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-map_container {
+  -webkit-box-flex: 3;
+  -ms-flex: 3 1 auto;
+  flex: 3 1 auto;
+}
+.slds-map {
+  position: relative;
+  min-width: 23.75rem;
+  width: 100%;
+  max-height: 100%;
+}
+.slds-map:before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.slds-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+.slds-has-coordinates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  overflow: auto;
+  max-height: 41.25rem;
+  background: white;
+}
+.slds-has-coordinates .slds-map:before {
+  padding-top: 75%;
+}
+.slds-coordinates {
+  overflow: auto;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.slds-coordinates__header {
+  padding: 1rem;
+}
+.slds-coordinates__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.slds-coordinates__item-action {
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+.slds-coordinates__item-action .slds-text-link {
+  display: block;
+}
+.slds-coordinates__item-action:hover,
+.slds-coordinates__item-action:focus {
+  background-color: #f3f2f2;
+  outline: 0;
+}
+.slds-coordinates__item-action:hover .slds-text-link,
+.slds-coordinates__item-action:focus .slds-text-link {
+  text-decoration: underline;
+}
+.slds-coordinates__item-action:active {
+  background-color: #ecebea;
+}
+.slds-coordinates__item-action[aria-pressed="true"] {
+  background-color: #ecebea;
+}
+.slds-coordinates__item-action[aria-pressed="true"] .slds-text-link {
+  color: #00396b;
+}

@@ -1,0 +1,11 @@
+global:
+  scope: component
+  type: box-shadow
+  category: shadow
+  cssProperties:
+  - box-shadow
+imports:
+- "../../../../design-tokens/aliases/color-palettes.yml"
+props:
+  SLIDER_HANDLE_SHADOW:
+    value: '{!BLACK_TRANSPARENT_16} 0 2px 3px'

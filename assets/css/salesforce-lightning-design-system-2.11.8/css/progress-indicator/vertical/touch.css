@@ -1,0 +1,9 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-progress_vertical .slds-progress__item:before,
+.slds-progress_vertical .slds-progress__item:after {
+  left: calc((1.25rem / 2) - 1px);
+}
+.slds-progress_vertical .slds-progress__item_content {
+  font-size: 0.875rem;
+}

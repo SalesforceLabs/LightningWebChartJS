@@ -1,0 +1,73 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-datepicker {
+  padding: 0;
+  font-size: 0.75rem;
+}
+.slds-datepicker th,
+.slds-datepicker td {
+  text-align: center;
+}
+.slds-datepicker th {
+  padding: 0.5rem;
+  font-weight: 400;
+  color: #3e3e3c;
+}
+.slds-datepicker td {
+  padding: 0.25rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+.slds-datepicker td > .slds-day {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  position: relative;
+  min-width: 2rem;
+  line-height: 2rem;
+  border-radius: 50%;
+  margin: auto;
+}
+.slds-datepicker td:hover:not(.slds-disabled-text) > .slds-day,
+.slds-datepicker td:focus:not(.slds-disabled-text) > .slds-day,
+.slds-datepicker td.slds-is-today > .slds-day {
+  cursor: pointer;
+}
+.slds-datepicker td.slds-is-today > .slds-day {
+  background-color: #ecebea;
+}
+.slds-datepicker td:focus {
+  outline: 0;
+}
+.slds-datepicker td:focus > .slds-day {
+  -webkit-box-shadow: #0070d2 0 0 0 1px inset;
+  box-shadow: #0070d2 0 0 0 1px inset;
+}
+.slds-datepicker td.slds-is-selected > .slds-day {
+  background: #0070d2;
+  color: white;
+}
+.slds-datepicker td.slds-is-selected:focus > .slds-day {
+  background: #005fb2;
+  -webkit-box-shadow: #005fb2 0 0 3px;
+  box-shadow: #005fb2 0 0 3px;
+  color: white;
+}
+.slds-datepicker__filter {
+  padding: 0.25rem;
+}
+.slds-datepicker__filter_month {
+  padding: 0 0.25rem 0 0;
+}
+.slds-datepicker__month {
+  font-size: 0.75rem;
+}
+
+.slds-has-error .slds-datepicker__filter .slds-select {
+  border: 1px solid #dddbda;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-day_adjacent-month {
+  color: #706e6b;
+}

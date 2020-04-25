@@ -1,0 +1,651 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+.slds-spinner_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-spinner;
+  background-color: $color-background-temp-modal-tint-alt;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s ease, visibility 0s;
+  transition-delay: 0s, 0.3s;
+}
+
+/* Follow production class names (not starting with slds-) */
+/* stylelint-disable selector-class-pattern */
+.slds-spinner_container.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease, visibility 0s;
+  transition-delay: 0s, 0s;
+}
+
+.slds-spinner_container.hide {
+  display: none;
+}
+/* stylelint-enable selector-class-pattern */
+
+/**
+ * @name base
+ * @selector .slds-spinner
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+
+.slds-spinner {
+  position: absolute;
+  top: 50%;
+
+  /*! @noflip */
+  left: 50%;
+  z-index: ($z-index-spinner + 1);
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/**
+ * @summary Returns the spinner back into the document flow
+ * @selector .slds-spinner_inline
+ * @restrict .slds-spinner
+ * @modifier
+ */
+.slds-spinner_inline {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  transform: none;
+}
+
+.slds-spinner,
+.slds-spinner__dot-a,
+.slds-spinner__dot-b {
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+/**
+ * This creates two of the circles
+ *
+ * @selector .slds-spinner__dot-a
+ * @restrict .slds-spinner div
+ * @required
+ */
+
+/**
+ * This creates two of the circles
+ *
+ * @selector .slds-spinner__dot-b
+ * @restrict .slds-spinner div
+ * @required
+ */
+
+.slds-spinner__dot-a,
+.slds-spinner__dot-b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.slds-spinner:before,
+.slds-spinner:after,
+.slds-spinner__dot-a:before,
+.slds-spinner__dot-b:before,
+.slds-spinner__dot-a:after,
+.slds-spinner__dot-b:after {
+  content: '';
+  position: absolute;
+  background: $color-background-spinner-dot;
+  border-radius: $border-radius-circle;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.slds-spinner__dot-a {
+  transform: rotate(60deg);
+}
+
+.slds-spinner__dot-b {
+  transform: rotate(120deg);
+}
+
+.slds-spinner:before {
+  animation-delay: -83.33333ms;
+}
+
+.slds-spinner__dot-a:before {
+  animation-delay: 83.33333ms;
+}
+
+.slds-spinner__dot-b:before {
+  animation-delay: 250ms;
+}
+
+.slds-spinner:after {
+  animation-delay: 416.66667ms;
+}
+
+.slds-spinner__dot-a:after {
+  animation-delay: 583.33333ms;
+}
+
+.slds-spinner__dot-b:after {
+  animation-delay: 750ms;
+}
+
+/**
+ * @summary Set a delay of 300ms on spinner
+ * @selector .slds-spinner_delayed
+ * @restrict .slds-spinner
+ * @modifier
+ * @group timing
+ */
+.slds-spinner_delayed {
+
+  &:before {
+    animation-delay: 216.66667ms;
+  }
+
+  .slds-spinner__dot-a:before {
+    animation-delay: 383.33333ms;
+  }
+
+  .slds-spinner__dot-b:before {
+    animation-delay: 550ms;
+  }
+
+  &:after {
+    animation-delay: 716.66667ms;
+  }
+
+  .slds-spinner__dot-a:after {
+    animation-delay: 883.33333ms;
+  }
+
+  .slds-spinner__dot-b:after {
+    animation-delay: 1050ms;
+  }
+}
+
+
+/**
+ * This creates the blue brand spinner
+ *
+ * @selector .slds-spinner_brand
+ * @restrict .slds-spinner
+ * @modifier
+ * @group color
+ */
+
+.slds-spinner_brand,
+.slds-spinner--brand {
+
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    background-color: $brand-primary;
+  }
+}
+
+/**
+ * This creates the inverse spinner
+ *
+ * @selector .slds-spinner_inverse
+ * @restrict .slds-spinner
+ * @modifier
+ */
+
+.slds-spinner_inverse,
+.slds-spinner--inverse {
+
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    background-color: $color-background-alt;
+  }
+}
+
+
+/**
+ * This is the extra extra small spinner
+ *
+ * @selector .slds-spinner_xx-small
+ * @restrict .slds-spinner
+ * @modifier
+ * @group size
+ */
+
+.slds-spinner_xx-small,
+.slds-spinner--xx-small {
+  width: $spinner-size-xx-small;
+
+  &.slds-spinner_inline {
+    height: $spinner-size-xx-small;
+  }
+
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    width: 0.125rem;
+    height: 0.125rem;
+  }
+
+  &.slds-spinner:before,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before {
+    top: -0.0625rem;
+    left: -0.0625rem;
+    animation-name: dotsBounceBefore-extraExtraSmall;
+  }
+
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    top: -0.0625rem;
+    right: -0.0625rem;
+    animation-name: dotsBounceAfter-extraExtraSmall;
+  }
+}
+
+@keyframes dotsBounceBefore-extraExtraSmall {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.275, 0.0425, 0.34, 0.265);
+  }
+
+  80% {
+    transform: translate3d(-0.125rem, 0, 0);
+    animation-timing-function: cubic-bezier(0, 0.555, 0.35, 0.715);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes dotsBounceAfter-extraExtraSmall {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    animation-timing-function: cubic-bezier(0.275, 0.0425, 0.34, 0.265);
+    transform: translate3d(0, 0, 0);
+  }
+
+  80% {
+    animation-timing-function: cubic-bezier(0, 0.555, 0.35, 0.715);
+    transform: translate3d(0.125rem, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/**
+ * This is the extra small spinner
+ *
+ * @selector .slds-spinner_x-small
+ * @restrict .slds-spinner
+ * @modifier
+ * @group size
+ */
+
+.slds-spinner_x-small,
+.slds-spinner--x-small {
+  width: $spinner-size-x-small;
+
+  &.slds-spinner_inline {
+    height: $spinner-size-x-small;
+  }
+
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    width: 0.25rem;
+    height: 0.25rem;
+  }
+
+  &.slds-spinner:before,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before {
+    top: -0.125rem;
+    left: -0.125rem;
+    animation-name: dotsBounceBefore-extraSmall;
+  }
+
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    top: -0.125rem;
+    right: -0.125rem;
+    animation-name: dotsBounceAfter-extraSmall;
+  }
+}
+
+@keyframes dotsBounceBefore-extraSmall {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  80% {
+    transform: translate3d(-0.25rem, 0, 0);
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes dotsBounceAfter-extraSmall {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  80% {
+    transform: translate3d(0.25rem, 0, 0);
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/**
+ * This is the small spinner
+ *
+ * @selector .slds-spinner_small
+ * @restrict .slds-spinner
+ * @modifier
+ * @group size
+ */
+
+.slds-spinner_small,
+.slds-spinner--small {
+  width: $spinner-size-small;
+
+  &.slds-spinner_inline {
+    height: $spinner-size-small;
+  }
+
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    width: 0.25rem;
+    height: 0.25rem;
+  }
+
+  &.slds-spinner:before,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before {
+    top: -0.125rem;
+    left: -0.125rem;
+    animation-name: dotsBounceBefore-small;
+  }
+
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    top: -0.125rem;
+    right: -0.125rem;
+    animation-name: dotsBounceAfter-small;
+  }
+}
+
+@keyframes dotsBounceBefore-small {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  80% {
+    transform: translate3d(-0.375rem, 0, 0);
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes dotsBounceAfter-small {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  80% {
+    transform: translate3d(0.375rem, 0, 0);
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/**
+ * This is the medium spinner
+ *
+ * @selector .slds-spinner_medium
+ * @restrict .slds-spinner
+ * @modifier
+ * @group size
+ */
+
+.slds-spinner_medium,
+.slds-spinner--medium {
+  width: $spinner-size-medium;
+
+  &.slds-spinner_inline {
+    height: $spinner-size-medium;
+  }
+
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  &.slds-spinner:before,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before {
+    animation-name: dotsBounceBefore-medium;
+    top: -0.25rem;
+    left: -0.25rem;
+  }
+
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    animation-name: dotsBounceAfter-medium;
+    top: -0.25rem;
+    right: -0.25rem;
+  }
+}
+
+@keyframes dotsBounceBefore-medium {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  80% {
+    transform: translate3d(-0.5rem, 0, 0);
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes dotsBounceAfter-medium {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  80% {
+    transform: translate3d(0.5rem, 0, 0);
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/**
+ * This is the large spinner
+ *
+ * @selector .slds-spinner_large
+ * @restrict .slds-spinner
+ * @modifier
+ * @group size
+ */
+
+.slds-spinner_large,
+.slds-spinner--large {
+  width: $spinner-size-large;
+
+  &.slds-spinner_inline {
+    height: $spinner-size-large;
+  }
+
+  &.slds-spinner:before,
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+
+  &.slds-spinner:before,
+  .slds-spinner__dot-a:before,
+  .slds-spinner__dot-b:before {
+    animation-name: dotsBounceBefore-medium;
+    top: -0.3125rem;
+    left: -0.3125rem;
+  }
+
+  &.slds-spinner:after,
+  .slds-spinner__dot-a:after,
+  .slds-spinner__dot-b:after {
+    animation-name: dotsBounceAfter-medium;
+    top: -0.3125rem;
+    right: -0.3125rem;
+  }
+}
+
+@keyframes dotsBounceBefore-large {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  80% {
+    transform: translate3d(-0.75rem, 0, 0);
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes dotsBounceAfter-large {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  80% {
+    transform: translate3d(0.75rem, 0, 0);
+    animation-timing-function: cubic-bezier(0, 1.11, 0.7, 1.43);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

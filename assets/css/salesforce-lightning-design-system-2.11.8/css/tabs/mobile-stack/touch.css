@@ -1,0 +1,6 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-tabs-mobile__item .slds-button:active,
+.slds-tabs-mobile__item .slds-button:hover {
+  color: currentColor;
+}

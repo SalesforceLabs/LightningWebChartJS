@@ -1,0 +1,39 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-utility-panel {
+  position: fixed;
+  bottom: 1.875rem;
+  width: 21.25rem;
+  height: 30rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+  border: 1px solid #dddbda;
+  border-bottom: none;
+  background: white;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.slds-utility-panel.slds-is-open {
+  -webkit-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.16);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.slds-utility-panel__header {
+  background: white;
+  border-bottom: 2px solid #1589ee;
+  border-radius: 0.25rem 0.25rem 0 0;
+  padding: 0.5rem 0.75rem;
+}
+.slds-utility-panel__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+}

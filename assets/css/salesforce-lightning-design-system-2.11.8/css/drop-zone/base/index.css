@@ -1,0 +1,100 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-drop-zone {
+  position: relative;
+}
+.slds-drop-zone:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px dotted #3e3e3c;
+  outline: 1px dotted white;
+}
+.slds-drop-zone.slds-drop-zone_drag:after {
+  border: 1px solid #04844b;
+  outline: 0;
+}
+.slds-drop-zone__label {
+  color: white;
+  background: #04844b;
+  border-radius: 0.25rem 0.25rem 0 0;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+}
+.slds-drop-zone__label.slds-drop-zone__label_container {
+  opacity: 0;
+  background: #0070d2;
+}
+.slds-drop-zone__label_button {
+  border-radius: 0;
+}
+.slds-drop-zone__label_button:hover,
+.slds-drop-zone__label_button:focus {
+  text-decoration: underline;
+  outline: none;
+}
+.slds-drop-zone_drag__slot {
+  border: 1px solid white;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  background: #04844b;
+  width: 100%;
+  height: 0.25rem;
+}
+.slds-drop-zone__container {
+  position: relative;
+  z-index: 8000;
+}
+.slds-drop-zone__container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.slds-drop-zone__container.slds-is-hovered .slds-drop-zone__label_container,
+.slds-drop-zone__container.slds-is-hovered .slds-drop-zone__actions,
+.slds-drop-zone__container:hover .slds-drop-zone__label_container,
+.slds-drop-zone__container:hover .slds-drop-zone__actions {
+  opacity: 1;
+  z-index: 8000;
+}
+.slds-drop-zone__container.slds-is-hovered:after,
+.slds-drop-zone__container:hover:after {
+  border: 1px solid #1589ee;
+}
+.slds-drop-zone__container:active:after {
+  border: 2px solid #00396b;
+}
+.slds-drop-zone__container:active .slds-drop-zone__label {
+  background-color: #00396b;
+}
+.slds-drop-zone__container:focus-within {
+  outline: none;
+}
+.slds-drop-zone__container:focus-within .slds-drop-zone__label_container,
+.slds-drop-zone__container:focus-within .slds-drop-zone__actions {
+  opacity: 1;
+  z-index: 8000;
+}
+.slds-drop-zone__container:focus-within:after {
+  border: 2px solid #0070d2;
+}
+.slds-drop-zone__container:focus-within .slds-drop-zone__label {
+  background-color: #005fb2;
+}
+.slds-drop-zone__actions {
+  opacity: 0;
+  background: #0070d2;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

@@ -1,0 +1,80 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-table_tree {
+}
+.slds-table_tree .slds-tree__item {
+  line-height: 1.5rem;
+}
+.slds-table_tree .slds-tree__item a {
+  color: #006dcc;
+}
+.slds-table_tree .slds-tree__item a:hover {
+  text-decoration: underline;
+}
+.slds-table_tree .slds-button {
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.slds-table_tree .slds-button:not(.slds-th__action-button).slds-button:not(.slds-th__action-button) {
+  margin-top: 0;
+}
+.slds-table_tree [aria-level="1"] > .slds-tree__item {
+  padding-left: 1.5rem;
+}
+.slds-table_tree [aria-level="2"] > .slds-tree__item {
+  padding-left: 2.5rem;
+}
+.slds-table_tree [aria-level="3"] > .slds-tree__item {
+  padding-left: 3.5rem;
+}
+.slds-table_tree [aria-level="4"] > .slds-tree__item {
+  padding-left: 4.5rem;
+}
+.slds-table_tree [aria-level="5"] > .slds-tree__item {
+  padding-left: 5.5rem;
+}
+.slds-table_tree [aria-level="6"] > .slds-tree__item {
+  padding-left: 6.5rem;
+}
+.slds-table_tree [aria-level="7"] > .slds-tree__item {
+  padding-left: 7.5rem;
+}
+.slds-table_tree [aria-level="8"] > .slds-tree__item {
+  padding-left: 8.5rem;
+}
+.slds-table_tree [aria-level="9"] > .slds-tree__item {
+  padding-left: 9.5rem;
+}
+.slds-table_tree [aria-level="10"] > .slds-tree__item {
+  padding-left: 10.5rem;
+}
+.slds-table_tree [aria-level="11"] > .slds-tree__item {
+  padding-left: 11.5rem;
+}
+.slds-table_tree [aria-level="12"] > .slds-tree__item {
+  padding-left: 12.5rem;
+}
+.slds-table_tree [aria-level="13"] > .slds-tree__item {
+  padding-left: 13.5rem;
+}
+.slds-table_tree [aria-level="14"] > .slds-tree__item {
+  padding-left: 14.5rem;
+}
+.slds-table_tree [aria-level="15"] > .slds-tree__item {
+  padding-left: 15.5rem;
+}
+.slds-table_tree [aria-level="16"] > .slds-tree__item {
+  padding-left: 16.5rem;
+}
+.slds-table_tree [aria-level="17"] > .slds-tree__item {
+  padding-left: 17.5rem;
+}
+.slds-table_tree [aria-level="18"] > .slds-tree__item {
+  padding-left: 18.5rem;
+}
+.slds-table_tree [aria-level="19"] > .slds-tree__item {
+  padding-left: 19.5rem;
+}
+.slds-table_tree [aria-level="20"] > .slds-tree__item {
+  padding-left: 20.5rem;
+}

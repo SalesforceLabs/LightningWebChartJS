@@ -1,0 +1,26 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-page-header_vertical {
+  padding: 0.75rem;
+  background: white;
+  border-bottom: 0;
+}
+.slds-page-header_vertical .slds-page-header__controls {
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid #dddbda;
+}
+.slds-page-header_vertical .slds-page-header__name-title {
+  margin-top: 0.25rem;
+}
+.slds-page-header__detail-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.slds-page-header__detail-item {
+  margin-top: 0.75rem;
+  width: 50%;
+}

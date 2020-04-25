@@ -1,0 +1,3209 @@
+{
+  "properties": [
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "White avatar group background color.",
+      "name": "avatarGroupColorBackgroundLightest"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(112, 110, 107)",
+      "comment": "Dark gray avatar group background color.",
+      "name": "avatarGroupColorBackgroundInverse"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "White badge background color.",
+      "name": "badgeColorBackgroundLightest"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(112, 110, 107)",
+      "comment": "Dark gray badge background color.",
+      "name": "badgeColorBackgroundInverse"
+    },
+    {
+      "scope": "component",
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "",
+      "name": "brandBandDefaultImage"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "name": "brandBandColorBackgroundPrimary"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "name": "brandBandColorBackgroundPrimaryTransparent"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "name": "brandBandColorBackgroundSecondary"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "name": "brandBandColorBackgroundSecondaryTransparent"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height"
+      ],
+      "value": "96",
+      "name": "brandBandImageHeightSmall"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height"
+      ],
+      "value": "200",
+      "name": "brandBandImageHeightMedium"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height"
+      ],
+      "value": "300",
+      "name": "brandBandImageHeightLarge"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height"
+      ],
+      "value": "50",
+      "name": "brandBandScrimHeight"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "cssProperties": [
+        "margin*",
+        "padding*"
+      ],
+      "value": "0",
+      "name": "templateGutters"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "cssProperties": [
+        "margin*",
+        "padding*"
+      ],
+      "value": "0",
+      "name": "templateProfileGutters"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "name": "buttonIconColorBorderPrimary"
+    },
+    {
+      "scope": "component",
+      "type": "sizing",
+      "category": "height",
+      "cssProperties": [
+        "width",
+        "height"
+      ],
+      "value": "44",
+      "name": "buttonIconBoundaryTouch"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(216, 221, 230)",
+      "name": "buttonColorBorderPrimary"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "deprecated": true,
+      "name": "buttonColorBorderBrandPrimary"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.8)",
+      "deprecated": true,
+      "name": "buttonColorBorderSecondary"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "4",
+      "name": "buttonBorderRadius"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonDefaultFocus",
+      "value": "rgb(244, 246, 249)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Default secondary button - focus state"
+    },
+    {
+      "name": "buttonColorBackgroundBrandPrimary",
+      "value": "rgb(0, 112, 210)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Use BRAND_ACCESSIBLE to pick up theming capabilities"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonInverseDisabled",
+      "value": "rgba(0, 0, 0, 0)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Disabled button backgrounds on inverse/dark backgrounds"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonDefaultHover",
+      "value": "rgb(244, 246, 249)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Default secondary button - hover state"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonDefault",
+      "value": "rgb(255, 255, 255)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Default secondary button"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonIconDisabled",
+      "value": "rgb(255, 255, 255)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Background color for icon-only button - disabled state"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonIconFocus",
+      "value": "rgb(244, 246, 249)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Background color for icon-only button - focus state"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(255, 255, 255, 0.8)",
+      "deprecated": true,
+      "name": "buttonColorBackgroundSecondary"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonBrandDisabled",
+      "value": "rgb(224, 229, 238)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Brandable primary button - disabled state"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonBrandHover",
+      "value": "rgb(0, 95, 178)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Brandable primary button - hover state"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonInverseActive",
+      "value": "rgba(0, 0, 0, 0.24)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Active button backgrounds on inverse backgrounds on mobile"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonIconHover",
+      "value": "rgb(244, 246, 249)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Background color for icon-only button - hover state"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonBrand",
+      "value": "rgb(0, 112, 210)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Brandable primary button"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonIcon",
+      "value": "rgba(0, 0, 0, 0)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Background color for icon-only button"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonDefaultDisabled",
+      "value": "rgb(255, 255, 255)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Default secondary button - disabled state"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonIconActive",
+      "value": "rgb(238, 241, 246)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Background color for icon-only button - active state"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonBrandActive",
+      "value": "rgb(0, 57, 107)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Brandable primary button - active state"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonInverse",
+      "value": "rgba(0, 0, 0, 0)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Button backgrounds on inverse/dark backgrounds"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "name": "buttonColorBackgroundPrimary"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundButtonDefaultActive",
+      "value": "rgb(238, 241, 246)",
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Default secondary button - active state"
+    },
+    {
+      "access": "global",
+      "name": "lineHeightButton",
+      "value": "30",
+      "scope": "component",
+      "cssProperties": [
+        "font",
+        "*height",
+        "bottom"
+      ],
+      "type": "number",
+      "category": "line-height",
+      "comment": "Line heights for regular buttons"
+    },
+    {
+      "access": "global",
+      "name": "lineHeightButtonSmall",
+      "value": "28",
+      "scope": "component",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "type": "number",
+      "category": "line-height",
+      "comment": "Line heights for small buttons"
+    },
+    {
+      "name": "buttonLineHeightTouch",
+      "value": "42.4",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "type": "number",
+      "category": "line-height",
+      "comment": "Line height for touch screens"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "name": "buttonColorTextPrimary"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default Card component background color.",
+      "name": "cardColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "name": "cardColorBorder"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "name": "cardFooterColorBorder"
+    },
+    {
+      "scope": "component",
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "none",
+      "name": "cardShadow"
+    },
+    {
+      "scope": "component",
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "comment": "Use for active tab.",
+      "name": "cardFontWeight"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "12",
+      "name": "cardFooterMargin"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "0",
+      "name": "cardBodyPadding"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "16",
+      "name": "cardWrapperSpacing"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "0.75rem 1rem 0",
+      "name": "cardHeaderPadding"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "24",
+      "name": "cardSpacingLarge"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "0",
+      "name": "cardHeaderMargin"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "comment": "Use for vertical spacing between cards",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "16",
+      "name": "cardSpacingMargin"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "0",
+      "name": "cardFooterPadding"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "12",
+      "name": "cardSpacingSmall"
+    },
+    {
+      "scope": "component",
+      "category": "text",
+      "type": "text-align",
+      "cssProperties": [
+        "text-align"
+      ],
+      "value": "right",
+      "name": "cardFooterTextAlign"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default background for carousel card",
+      "name": "carouselColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default background for carousel navigation indicators",
+      "name": "carouselIndicatorColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(250, 250, 249)",
+      "comment": "Default hover background for carousel navigation indicators",
+      "name": "carouselIndicatorColorBackgroundHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Default focus background for carousel navigation indicators",
+      "name": "carouselIndicatorColorBackgroundFocus"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Default background for active state on carousel navigation indicators",
+      "name": "carouselIndicatorColorBackgroundActive"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "16",
+      "comment": "Default width for carousel indicator width",
+      "name": "carouselIndicatorWidth"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(242, 242, 243)",
+      "comment": "Inbound chat message background color.",
+      "name": "chatMessageColorBackgroundInbound"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Outbound chat message background color.",
+      "name": "chatMessageColorBackgroundOutbound"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(107, 109, 112)",
+      "comment": "Outbound agent chat message background color.",
+      "name": "chatMessageColorBackgroundOutboundAgent"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Status chat message background color.",
+      "name": "chatMessageColorBackgroundStatus"
+    },
+    {
+      "scope": "component",
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "20.8",
+      "comment": "Line heights for toggle buttons",
+      "name": "lineHeightToggle"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "20",
+      "comment": "Slider size for toggle.",
+      "name": "squareToggleSlider"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "48",
+      "comment": "Slider width.",
+      "name": "widthToggle"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "24",
+      "comment": "Slider height.",
+      "name": "heightToggle"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "rgb(250, 250, 249)",
+      "name": "colorPickerSliderThumbColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*"
+      ],
+      "value": "rgb(81, 79, 77)",
+      "name": "colorPickerSliderThumbBorderColor"
+    },
+    {
+      "scope": "component",
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "inset 0 0 1px rgba(0,0,0,0.4)",
+      "name": "colorPickerSwatchShadow"
+    },
+    {
+      "scope": "component",
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "12",
+      "name": "colorPickerInputCustomHexFontSize"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "224",
+      "name": "colorPickerSelectorWidth"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "212.8",
+      "name": "colorPickerSwatchesWidth"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "80",
+      "name": "colorPickerRangeHeight"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "24",
+      "name": "colorPickerSliderHeight"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "6",
+      "name": "colorPickerThumbWidth"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "12",
+      "name": "colorPickerRangeIndicatorSize"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "67.2",
+      "name": "colorPickerInputCustomHexWidth"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "20",
+      "name": "colorPickerSwatchSize"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(250, 250, 249)",
+      "comment": "Alternating row background color for tables",
+      "name": "tableColorBackgroundStripes"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default background color for table headers",
+      "name": "tableColorBackgroundHeader"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(250, 250, 249)",
+      "comment": "Hover state for table header cells",
+      "name": "tableColorBackgroundHeaderHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Focused state for table header cells",
+      "name": "tableColorBackgroundHeaderFocus"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "0",
+      "name": "tableBorderRadius"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "8",
+      "name": "tableCellSpacing"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(81, 79, 77)",
+      "name": "tableColorTextHeader"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color"
+      ],
+      "value": "rgb(112, 110, 107)",
+      "name": "datepickerColorTextDayAdjacentMonth"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Docked panel header’s background color.",
+      "name": "colorBackgroundDockedPanelHeader"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Docked panel’s background color when open.",
+      "name": "colorBackgroundDockedPanel"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "40",
+      "comment": "Height of the docked bar.",
+      "name": "heightDockedBar"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(212, 80, 76)",
+      "comment": "Utility bar notifications badge background color.",
+      "name": "utilityBarColorBackgroundNotificationBadge"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(201, 199, 197)",
+      "comment": "Utility bar notifications focus background color.",
+      "name": "utilityBarColorBackgroundNotificationFocus"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "4",
+      "name": "dropZoneSlotHeight"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(112, 110, 107)",
+      "comment": "Default color for animated icon waffle for app switcher.",
+      "name": "colorBackgroundIconWaffle"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "comment": "Default background color for a typing icon dot.",
+      "name": "typingIconDotColorBackgroundGray"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(201, 199, 197)",
+      "comment": "Active background color for a typing icon dot when animcating.",
+      "name": "typingIconDotColorBackgroundGrayDark"
+    },
+    {
+      "scope": "component",
+      "category": "fill",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "color",
+        "fill"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Brand fill color",
+      "name": "globalActionFillHover"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*width",
+        "*height"
+      ],
+      "value": "24",
+      "comment": "Global action icon size",
+      "name": "globalActionIconSize"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*width",
+        "*height"
+      ],
+      "value": "8",
+      "comment": "Typing icon size",
+      "name": "typingIconDotSize"
+    },
+    {
+      "scope": "component",
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "/assets/images/einstein-headers/einstein-header-background.svg",
+      "name": "einsteinHeaderBackground"
+    },
+    {
+      "scope": "component",
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "/assets/images/einstein-headers/einstein-figure.svg",
+      "name": "einsteinHeaderFigure"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "rgb(149, 203, 252)",
+      "comment": "Background color for Einstein header",
+      "name": "einsteinHeaderBackgroundColor"
+    },
+    {
+      "scope": "component",
+      "type": "shadow",
+      "category": "text-shadow",
+      "cssProperties": [
+        "text-shadow"
+      ],
+      "value": "#9EDAFF",
+      "comment": "Text shadow color for Einstein header background to make text more readable",
+      "name": "einsteinHeaderTextShadow"
+    },
+    {
+      "scope": "component",
+      "type": "number",
+      "category": "z-index",
+      "cssProperties": [
+        "z-index"
+      ],
+      "value": 5,
+      "name": "filesZIndexHover"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "value": "12",
+      "name": "formLabelFontSize"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Global Header background color",
+      "name": "globalHeaderColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "/assets/images/logo-noname.svg",
+      "name": "brandLogoImage"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "20",
+      "comment": "Global identity icon size.",
+      "name": "squareIconGlobalIdentityIcon"
+    },
+    {
+      "name": "colorBackgroundContextBarItemHover",
+      "value": "rgb(255, 255, 255)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Hovered context bar item background color."
+    },
+    {
+      "name": "colorBackgroundContextBarItemActive",
+      "value": "rgb(255, 255, 255)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Active context bar item background color."
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Default context bar background color.",
+      "name": "colorBackgroundContextBar"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Context TAB bar item background color.",
+      "name": "colorBackgroundContextTabBarItem"
+    },
+    {
+      "name": "colorBackgroundContextBarInverseItemHover",
+      "value": "rgba(255, 255, 255, 0.2)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Hovered context bar item background color."
+    },
+    {
+      "name": "colorBackgroundContextBarShadow",
+      "value": "linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 1)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "gradient",
+      "category": "background-color",
+      "comment": "A Gradient used for putting shadows on the bottom when box-shadow is not possible."
+    },
+    {
+      "name": "colorBackgroundContextBarInverseItemActive",
+      "value": "rgba(255, 255, 255, 0.4)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Active context bar item background color."
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 161, 223)",
+      "comment": "Brand color in context bar for default theme",
+      "name": "colorBackgroundContextBarBrandAccent"
+    },
+    {
+      "name": "colorBackgroundContextBarActionHighlight",
+      "value": "rgba(255, 255, 255, 0.2)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Highlight for context bar action (hover and focus states)."
+    },
+    {
+      "name": "colorBorderContextBarDivider",
+      "value": "rgba(255, 255, 255, 0.2)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Divider in context bar"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.2)",
+      "comment": "Border color in context bar",
+      "name": "colorBorderContextBarItem"
+    },
+    {
+      "name": "colorBorderContextBarInverseItem",
+      "value": "rgba(255, 255, 255, 0.2)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Border color in context bar on dark background"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 161, 223)",
+      "comment": "Border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefault"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(243, 242, 242)",
+      "comment": "Alternate border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefaultAlt"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(11, 35, 153)",
+      "comment": "Hovered border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefaultHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(243, 242, 242)",
+      "comment": "Active border color in context bar for default theme",
+      "name": "colorBorderContextBarThemeDefaultActive"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "40",
+      "comment": "Context bar height.",
+      "name": "heightContextBar"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "3px",
+      "comment": "Context bar tab accent height when tab is active.",
+      "name": "globalnavigationItemHeightAccentActive"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "4px",
+      "comment": "Context bar tab accent height when tab is focused.",
+      "name": "globalnavigationItemHeightAccentFocus"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(62, 62, 60)",
+      "comment": "Context bar text color",
+      "name": "colorTextContextBar"
+    },
+    {
+      "name": "colorTextContextBarInverse",
+      "value": "rgb(255, 255, 255)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Context bar text color on a dark background"
+    },
+    {
+      "name": "colorTextContextBarActionTrigger",
+      "value": "rgba(255, 255, 255, 0.4)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Context bar action trigger text color"
+    },
+    {
+      "type": "color",
+      "category": "stroke-color",
+      "cssProperties": [
+        "stroke",
+        "fill"
+      ],
+      "value": "rgb(140, 211, 248)",
+      "comment": "Primary color for illustrations",
+      "name": "illustrationColorPrimary"
+    },
+    {
+      "type": "color",
+      "category": "stroke-color",
+      "cssProperties": [
+        "stroke",
+        "fill"
+      ],
+      "value": "rgb(194, 232, 255)",
+      "comment": "Secondary color for illustrations",
+      "name": "illustrationColorSecondary"
+    },
+    {
+      "scope": "component",
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "13",
+      "name": "inputStaticFontSize"
+    },
+    {
+      "scope": "component",
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "name": "inputStaticFontWeight"
+    },
+    {
+      "scope": "component",
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "name": "inputReadonlyFontWeight"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(8, 7, 7)",
+      "name": "inputStaticColor"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(250, 250, 249)",
+      "comment": "Default Page Header background color",
+      "name": "pageHeaderColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Secondary Page Header background color",
+      "name": "pageHeaderColorBackgroundAlt"
+    },
+    {
+      "access": "global",
+      "name": "colorBackgroundAnchor",
+      "value": "rgb(250, 250, 249)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Use COLOR_BACKGROUND_PAGE_HEADER instead."
+    },
+    {
+      "name": "colorBackgroundPageHeader",
+      "value": "rgb(255, 255, 255)",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Page Header background color"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0)",
+      "name": "pageHeaderColorBorder"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "name": "pageHeaderJoinedColorBorder"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "0",
+      "name": "pageHeaderBorderRadius"
+    },
+    {
+      "scope": "component",
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "none",
+      "name": "pageHeaderShadow"
+    },
+    {
+      "scope": "component",
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "18",
+      "name": "pageHeaderTitleFontSize"
+    },
+    {
+      "scope": "component",
+      "category": "font-weight",
+      "type": "font-weight",
+      "cssProperties": [
+        "font-weight"
+      ],
+      "value": "400",
+      "name": "pageHeaderTitleFontWeight"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height"
+      ],
+      "value": "36",
+      "comment": "Page header Entity Icon size",
+      "name": "pageHeaderIconSize"
+    },
+    {
+      "name": "pageHeaderSpacingMargin",
+      "value": "0",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": ""
+    },
+    {
+      "name": "pageHeaderSpacingPadding",
+      "value": "16",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": ""
+    },
+    {
+      "name": "pageHeaderSpacingRow",
+      "value": "12",
+      "deprecated": true,
+      "scope": "component",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": ""
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "1px 0 3px rgba(0,0,0,0.25)",
+      "comment": "Dropshadow found on docked UI panels when positioned to the left of a viewport",
+      "name": "panelDockedLeftShadow"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "-1px 0 3px 0 rgba(0,0,0,0.25)",
+      "comment": "Dropshadow found on docked UI panels when positioned to the left of a viewport",
+      "name": "panelDockedRightShadow"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "comment": "The hover background color for Salespath stages that have not been completed.",
+      "name": "colorBackgroundPathIncompleteHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(6, 28, 63)",
+      "comment": "The background color for the step action arrow that are the active stage",
+      "name": "colorBackgroundPathStepActionActive"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "comment": "The background color for Salespath stages that have not been completed.",
+      "name": "colorBackgroundPathIncomplete"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 57, 107)",
+      "comment": "The hover background color for Salespath stages that are the active stage.",
+      "name": "colorBackgroundPathActiveHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(194, 57, 52)",
+      "comment": "The background color for the final stage of a Salespath when it has been lost.",
+      "name": "colorBackgroundPathLost"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "The background color for Salespath stages that are the active stage.",
+      "name": "colorBackgroundPathActive"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "The background color for Salespath guidance coaching section.",
+      "name": "colorBackgroundGuidance"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "comment": "The background color for the final stage of a Salespath when it has been lost.",
+      "name": "colorBackgroundPathWon"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "The hover background color for Salespath stages that are the current stage.",
+      "name": "colorBackgroundPathCurrentHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "The background color for Salespath stages that are the current stage.",
+      "name": "colorBackgroundPathCurrent"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(4, 132, 75)",
+      "comment": "The hover background color for Salespath stages that are complete.",
+      "name": "colorBackgroundPathCompleteHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(75, 202, 129)",
+      "comment": "The background color for Salespath stages that are complete.",
+      "name": "colorBackgroundPathComplete"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "The background color for the step action arrow that are the current stage",
+      "name": "colorBackgroundPathStepActionCurrent"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "The background color for the overall Salespath coaching section.",
+      "name": "colorBackgroundPathExpanded"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Used as a separator between dark colors like the stages of salespath.",
+      "name": "colorBorderPathDivider"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Used as a border color for the active Path step.",
+      "name": "colorBorderPathCurrent"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 57, 107)",
+      "comment": "Used as a border color for the current path step on hover.",
+      "name": "colorBorderPathCurrentHover"
+    },
+    {
+      "scope": "component",
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "24",
+      "comment": "Line heights for salespath",
+      "name": "lineHeightSalespath"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "32",
+      "comment": "Height of Path",
+      "name": "heightSalesPath"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "208",
+      "comment": "Width of action button to right",
+      "name": "pathButtonWidthFixed"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "2",
+      "comment": "Border width of current stage for path item",
+      "name": "widthPathBorderCurrent"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color"
+      ],
+      "value": "rgb(0, 95, 178)",
+      "comment": "Used as a text color for the active Path step.",
+      "name": "colorTextPathCurrent"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color"
+      ],
+      "value": "rgb(0, 57, 107)",
+      "comment": "Used as a text hover color for the active Path step.",
+      "name": "colorTextPathCurrentHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(6, 28, 63)",
+      "comment": "The default background color for Popover Walkthrough",
+      "name": "popoverWalkthroughColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(22, 50, 92)",
+      "comment": "The default background color for Popover Walkthrough Header",
+      "name": "popoverWalkthroughHeaderColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "The default background color for alternative Popover Walkthrough",
+      "name": "popoverWalkthroughColorBackgroundAlt"
+    },
+    {
+      "scope": "component",
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "",
+      "name": "popoverWalkthroughHeaderImage"
+    },
+    {
+      "scope": "component",
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "",
+      "name": "popoverWalkthroughAltImage"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "The background color for nubbins on the bottom of alternate walkthrough popovers",
+      "name": "popoverWalkthroughAltNubbinColorBackground"
+    },
+    {
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*"
+      ],
+      "value": "16",
+      "comment": "Tooltip nubbin square size",
+      "name": "nubbinSizeDefault"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color"
+      ],
+      "value": "rgb(217, 219, 221)",
+      "comment": "Text color for step counter in walkthrough variant of popovers",
+      "name": "popoverColorText"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "The default background color for Progress Indicator",
+      "name": "progressColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(250, 250, 249)",
+      "comment": "The shaded background color for Progress Indicator",
+      "name": "progressColorBackgroundShade"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "comment": "The background color for the Progress Bar",
+      "name": "progressBarColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(94, 180, 255)",
+      "comment": "The background color of the fill for the Progress Bar",
+      "name": "progressBarColorBackgroundFill"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(75, 202, 129)",
+      "comment": "The success background color of the fill for the Progress Bar",
+      "name": "progressBarColorBackgroundFillSuccess"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Borders of each indicator item within the Progress Indicator",
+      "name": "progressColorBorder"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(250, 250, 249)",
+      "comment": "Shaded borders of each indicator item within the Progress Indicator",
+      "name": "progressColorBorderShade"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "comment": "Hovered border color of each indicator item within the Progress Indicator",
+      "name": "progressColorBorderHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "comment": "Active border color of each indicator item within the Progress Indicator",
+      "name": "progressColorBorderActive"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "2",
+      "comment": "Height of the Progress Bar",
+      "name": "progressBarHeight"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Inner color for progress ring component",
+      "name": "colorBackgroundProgressRingContent"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width",
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ],
+      "value": "3",
+      "comment": "Thickness of the Progress Ring's ring",
+      "name": "progressRingWidth"
+    },
+    {
+      "scope": "component",
+      "category": "line-height",
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "value": "43.04",
+      "comment": "Line height for touch screens",
+      "name": "radioButtonGroupLineHeightTouch"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(112, 110, 107)",
+      "comment": "Dark notification component background color.",
+      "name": "notificationColorBackgroundInverse"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "name": "sliderHandleColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "name": "sliderHandleColorBackgroundHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "name": "sliderHandleColorBackgroundFocus"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 112, 210)",
+      "name": "sliderHandleColorBackgroundActive"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "name": "sliderTrackColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(21, 137, 238)",
+      "name": "sliderTrackColorBackgroundFill"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "name": "sliderColorBackgroundDisabled"
+    },
+    {
+      "scope": "component",
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.16) 0 2px 3px",
+      "name": "sliderHandleShadow"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "*width",
+        "*height"
+      ],
+      "value": "16",
+      "name": "sliderHandleSize"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "*width",
+        "*height"
+      ],
+      "value": "4px",
+      "name": "sliderTrackHeight"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "*width",
+        "*height"
+      ],
+      "value": "1",
+      "name": "sliderTrackWidth"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "comment": "Spinner size for xx-small modifier",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "transform"
+      ],
+      "value": "8",
+      "name": "spinnerSizeXxSmall"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "comment": "Spinner size for x-small modifier",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "transform"
+      ],
+      "value": "16",
+      "name": "spinnerSizeXSmall"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "comment": "Spinner size for small modifier",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "transform"
+      ],
+      "value": "20",
+      "name": "spinnerSizeSmall"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "comment": "Spinner size for medium modifier",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "transform"
+      ],
+      "value": "32",
+      "name": "spinnerSizeMedium"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "comment": "Spinner size for large modifier",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "transform"
+      ],
+      "value": "44",
+      "name": "spinnerSizeLarge"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(250, 250, 249)",
+      "comment": "Split View background color.",
+      "name": "splitViewColorBackground"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Split View background color on row hover.",
+      "name": "splitViewColorBackgroundRowHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "comment": "Row dividers in Split View list",
+      "name": "splitViewColorBorder"
+    },
+    {
+      "scope": "component",
+      "type": "size",
+      "category": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "value": "400",
+      "comment": "Default width for split view container",
+      "name": "splitViewWidth"
+    },
+    {
+      "scope": "component",
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "comment": "Use for active tab.",
+      "name": "tabsFontWeight"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(243, 242, 242)",
+      "comment": "Vertical navigation shaded background color on row hover.",
+      "name": "verticalNavigationColorBackgroundShadeRowHover"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "comment": "Vertical navigation shaded background color on row active.",
+      "name": "verticalNavigationColorBackgroundShadeRowActive"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "color",
+      "cssProperties": [
+        "color",
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(0, 57, 107)",
+      "comment": "Text color for the Info section",
+      "name": "welcomeMatTextColorInfo"
+    },
+    {
+      "scope": "component",
+      "type": "string",
+      "category": "color",
+      "cssProperties": [
+        "color",
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "/assets/images/welcome-mat/bg-info@2x.png",
+      "comment": "Background Image Path for the Welcome Mat Info section",
+      "name": "welcomeMatBackgroundImageInfo"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "color",
+      "cssProperties": [
+        "color",
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(202, 230, 241)",
+      "comment": "Background overflow color for the Welcome Mat Info section",
+      "name": "welcomeMatBackgroundColorInfo"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "color",
+      "cssProperties": [
+        "color",
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Progress Bar background is white",
+      "name": "welcomeMatColorBackgroundProgressBar"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "color",
+      "cssProperties": [
+        "color",
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.05)",
+      "comment": "Box Shadow declaration",
+      "name": "welcomeMatColorActionShadow"
+    },
+    {
+      "scope": "component",
+      "type": "color",
+      "category": "color",
+      "cssProperties": [
+        "color",
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(201, 199, 197)",
+      "comment": "Completed icon color for the Welcome Mat Boxes",
+      "name": "welcomeMatColorIconComplete"
+    },
+    {
+      "scope": "component",
+      "category": "font-size",
+      "type": "font-size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "value": "42",
+      "comment": "Font size for the info title",
+      "name": "welcomeMatFontSizeInfoTitle"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "833",
+      "comment": "Welcome Mat Width",
+      "name": "welcomeMatWidth"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "400",
+      "comment": "Min height for Overlay",
+      "name": "welcomeMatMinHeight"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "600",
+      "comment": "Max height for Overlay",
+      "name": "welcomeMatMaxHeight"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "200",
+      "comment": "Welcome Mat Progress Bar width",
+      "name": "welcomeMatWidthProgressBar"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "20",
+      "comment": "Size of the green completed check mark",
+      "name": "welcomeMatCompleteIconSize"
+    },
+    {
+      "scope": "component",
+      "category": "sizing",
+      "type": "size",
+      "cssProperties": [
+        "*height",
+        "*width"
+      ],
+      "value": "10",
+      "comment": "Size of the check mark in the green icon",
+      "name": "welcomeMatCheckSize"
+    },
+    {
+      "scope": "component",
+      "category": "spacing",
+      "type": "size",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow"
+      ],
+      "value": "124",
+      "comment": "Bottom spacing (safe area) for background image",
+      "name": "welcomeMatSpacingInfo"
+    }
+  ]
+}

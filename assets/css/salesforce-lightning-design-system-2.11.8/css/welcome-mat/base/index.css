@@ -1,0 +1,128 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-welcome-mat {
+  position: relative;
+}
+.slds-welcome-mat__content {
+  min-height: 25rem;
+  max-height: 37.5rem;
+}
+.slds-welcome-mat__content .slds-progress-bar {
+  display: inline-block;
+  width: 12.5rem;
+  background: white;
+}
+.slds-welcome-mat__content .slds-progress-bar__value {
+  background: #4bca81;
+}
+.slds-welcome-mat__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  padding: 1rem 3rem 7.75rem;
+  color: #00396b;
+  background-image: url("/assets/images/welcome-mat/bg-info@2x.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #cae6f1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.slds-welcome-mat__info-content {
+  margin: auto;
+  text-align: center;
+}
+.slds-welcome-mat__info-title {
+  margin-bottom: 1.5rem;
+  font-size: 2.625rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.slds-welcome-mat__info-description {
+  margin-bottom: 1.5rem;
+}
+.slds-welcome-mat__info-progress {
+  margin-bottom: 1rem;
+}
+.slds-welcome-mat__tiles {
+  background: #f3f2f2;
+  overflow: auto;
+  padding: 1rem;
+}
+.slds-welcome-mat__tile {
+  margin: 1rem 0;
+}
+.slds-welcome-mat__tile .slds-media {
+  padding: 0.5rem;
+}
+.slds-welcome-mat__tile:not(.slds-welcome-mat__tile_complete):not(.slds-welcome-mat__tile_info-only) {
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 0.25rem;
+  background: white;
+}
+.slds-welcome-mat__tile:not(.slds-welcome-mat__tile_complete):not(.slds-welcome-mat__tile_info-only):hover {
+  -webkit-box-shadow: 0 0 0 1px #1589ee inset, 0 2px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 1px #1589ee inset, 0 2px 2px rgba(0, 0, 0, 0.05);
+}
+.slds-welcome-mat__tile:not(.slds-welcome-mat__tile_complete) .slds-icon-action-check {
+  display: none;
+}
+.slds-welcome-mat__tile:first-child {
+  margin-top: 0;
+}
+.slds-welcome-mat__tile:last-child {
+  margin-bottom: 0;
+}
+.slds-welcome-mat__tile-figure {
+  margin-left: 0.25rem;
+}
+.slds-welcome-mat__tile-title {
+  font-weight: 700;
+}
+.slds-welcome-mat__tile-body {
+  padding: 0.75rem;
+  border-left: 1px solid #dddbda;
+}
+.slds-welcome-mat__tile-description {
+  color: #3e3e3c;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.slds-welcome-mat__tile-icon-container {
+  position: relative;
+}
+.slds-welcome-mat__tile_complete {
+  background: transparent;
+}
+.slds-welcome-mat__tile_complete .slds-icon {
+  fill: #c9c7c5;
+}
+
+.slds-welcome-mat .slds-icon-action-check {
+  position: absolute;
+  bottom: -0.625rem;
+  right: -0.625rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border: 2px solid #f3f2f2;
+  border-radius: 1.25rem;
+  line-height: 0;
+  background: #4bca81;
+}
+.slds-welcome-mat .slds-icon-action-check .slds-icon {
+  fill: white;
+}

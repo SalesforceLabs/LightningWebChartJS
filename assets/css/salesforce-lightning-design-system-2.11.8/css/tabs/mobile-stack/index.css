@@ -1,0 +1,52 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-tabs-mobile__container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slds-panel__body .slds-tabs-mobile {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+.slds-panel__body .slds-tabs-mobile:first-child {
+  margin-top: -0.75rem;
+}
+.slds-panel__body .slds-tabs-mobile:first-child .slds-tabs-mobile__item:first-child {
+  border-top: 0;
+}
+.slds-tabs-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: white;
+}
+.slds-tabs-mobile__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #dddbda;
+  height: 2.75rem;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  color: #2b2826;
+  font-size: 1rem;
+  padding: 0 0.75rem;
+}
+.slds-tabs-mobile__item:active {
+  background-color: #ecebea;
+}
+.slds-tabs-mobile__item:last-child {
+  border-bottom: 1px solid #dddbda;
+}
+.slds-tabs-mobile__group
+  .slds-tabs-mobile__container
+  + .slds-tabs-mobile__container
+  .slds-tabs-mobile__item:first-child {
+  border-top: 0;
+}

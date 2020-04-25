@@ -1,0 +1,22 @@
+global:
+  scope: component
+  type: color
+  category: border-color
+  cssProperties:
+  - 'border*'
+  - box-shadow
+
+imports:
+- "../../../../design-tokens/aliases/colors.yml"
+- "../../../../design-tokens/aliases/color-palettes.yml"
+
+props:
+  COLOR_BORDER_PATH_DIVIDER:
+    value: '{!PALETTE_GRAY_1}'
+    comment: Used as a separator between dark colors like the stages of salespath.
+  COLOR_BORDER_PATH_CURRENT:
+    value: '{!ENDEAVOUR}'
+    comment: Used as a border color for the active Path step.
+  COLOR_BORDER_PATH_CURRENT_HOVER:
+    value: '{!MIDNIGHT_BLUE}'
+    comment: Used as a border color for the current path step on hover.

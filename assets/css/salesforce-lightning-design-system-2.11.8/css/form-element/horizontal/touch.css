@@ -1,0 +1,34 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+@media (min-width: 48em) {
+  .slds-form-element_horizontal .slds-form-element__label,
+  .slds-form_horizontal .slds-form-element .slds-form-element__label,
+  .slds-form_stacked .slds-form-element_horizontal .slds-form-element__label {
+    display: block;
+    max-width: calc(33% - 2.75rem);
+    -ms-flex-preferred-size: calc(33% - 2.75rem);
+    flex-basis: calc(33% - 2.75rem);
+    padding-top: 0.25rem;
+  }
+  .slds-form-element_horizontal .slds-form-element__control,
+  .slds-form_horizontal .slds-form-element .slds-form-element__control,
+  .slds-form_stacked .slds-form-element_horizontal .slds-form-element__control {
+    display: block;
+    min-height: 0;
+  }
+  .slds-form-element_horizontal .slds-form-element__icon,
+  .slds-form_horizontal .slds-form-element .slds-form-element__icon,
+  .slds-form_stacked .slds-form-element_horizontal .slds-form-element__icon {
+    padding-top: 0;
+  }
+  .slds-form-element_horizontal .slds-checkbox__label,
+  .slds-form_horizontal .slds-form-element .slds-checkbox__label,
+  .slds-form_stacked .slds-form-element_horizontal .slds-checkbox__label {
+    display: block;
+  }
+}
+.slds-form-element_horizontal .slds-button_icon,
+.slds-form_horizontal .slds-form-element .slds-button_icon,
+.slds-form_stacked .slds-form-element_horizontal .slds-button_icon {
+  vertical-align: top;
+}

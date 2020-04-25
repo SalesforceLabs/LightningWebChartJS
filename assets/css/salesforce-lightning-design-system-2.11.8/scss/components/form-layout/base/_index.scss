@@ -1,0 +1,71 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Horizontal form elements with label left-aligned to the control
+ * @selector .slds-form_horizontal
+ * @restrict .slds-form
+ * @deprecated
+ */
+
+// See /form-element/horizontal for source code
+
+/**
+ * @summary Vertical form elements with label stacked on top of control
+ * @selector .slds-form_stacked
+ * @restrict .slds-form
+ * @deprecated
+ */
+
+// See /form-element/stacked for source code
+
+/**
+ * @summary Horizontally align multiple form elements on the same axis
+ * @selector .slds-form_inline
+ * @restrict div
+ * @modifier
+ */
+.slds-form_inline,
+.slds-form--inline {
+
+  .slds-form-element,
+  .slds-form-element__label,
+  .slds-form-element__control {
+    display: block;
+  }
+
+  .slds-form-element + .slds-form-element {
+    margin-top: $spacing-small;
+  }
+
+  @include mq-small-min {
+
+    .slds-form-element {
+      margin-right: $spacing-x-small;
+
+      + .slds-form-element {
+        margin-top: 0;
+      }
+    }
+
+    .slds-form-element,
+    .slds-form-element__label,
+    .slds-form-element__control {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/**
+ * @summary Aligns the legend properly when there is an info tooltip
+ *
+ * @selector .slds-form-element__legend_has-tooltip
+ * @restrict .slds-form-element__legend
+ * @deprecated
+ */
+.slds-form-element__legend_has-tooltip {
+  float: left;
+}

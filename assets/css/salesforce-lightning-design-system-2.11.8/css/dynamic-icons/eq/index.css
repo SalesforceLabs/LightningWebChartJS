@@ -1,0 +1,55 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-icon-eq {
+  position: relative;
+  width: calc(14rem / 16);
+  height: calc(14rem / 16);
+}
+.slds-icon-eq.slds-is-animated .slds-icon-eq__bar {
+  -webkit-animation: slds-icon-eq 0.25s ease-in-out infinite alternate;
+  animation: slds-icon-eq 0.25s ease-in-out infinite alternate;
+  will-change: transform;
+  height: 0.1875rem;
+}
+.slds-icon-eq.slds-is-animated .slds-icon-eq__bar:nth-of-type(2) {
+  -webkit-animation-duration: 0.65s;
+  animation-duration: 0.65s;
+}
+.slds-icon-eq.slds-is-animated .slds-icon-eq__bar:nth-of-type(3) {
+  -webkit-animation-duration: 0.35s;
+  animation-duration: 0.35s;
+}
+.slds-icon-eq__bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(4rem / 16);
+  height: 0.5625rem;
+  background: #0070d2;
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+}
+.slds-icon-eq__bar:nth-of-type(2) {
+  left: calc(5rem / 16);
+  height: 0.875rem;
+}
+.slds-icon-eq__bar:nth-of-type(3) {
+  left: calc(10rem / 16);
+  height: 0.75rem;
+}
+
+@-webkit-keyframes slds-icon-eq {
+  to {
+    -webkit-transform: scaleY(4.6666666667);
+    transform: scaleY(4.6666666667);
+  }
+}
+
+@keyframes slds-icon-eq {
+  to {
+    -webkit-transform: scaleY(4.6666666667);
+    transform: scaleY(4.6666666667);
+  }
+}

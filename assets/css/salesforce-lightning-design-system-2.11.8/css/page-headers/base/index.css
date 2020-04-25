@@ -1,0 +1,114 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-page-header {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  background: #f3f2f2;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #dddbda;
+}
+.slds-page-header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slds-page-header__row_gutters {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.slds-page-header__col-title {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.slds-page-header__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.slds-page-header__col-actions {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  padding-bottom: 0.25rem;
+  vertical-align: top;
+}
+.slds-page-header__col-meta {
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  vertical-align: middle;
+}
+.slds-page-header__col-controls {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  vertical-align: bottom;
+}
+.slds-page-header__col-details {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 100%;
+}
+.slds-page-header__name {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-right: 0.5rem;
+  max-width: 100%;
+}
+.slds-page-header__name h1 {
+  line-height: 1;
+}
+.slds-page-header__name-title {
+  min-width: 0;
+}
+.slds-page-header__name-switcher {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 0 0 0.125rem 0.125rem;
+}
+.slds-page-header__name-switcher .slds-button__icon {
+  fill: #080707;
+}
+.slds-page-header__name-meta {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  padding-right: 0.5rem;
+}
+.slds-page-header__meta-text {
+  font-size: 0.875rem;
+}
+.slds-page-header__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.25;
+  display: block;
+}
+.slds-page-header__title .slds-icon {
+  fill: currentColor;
+}
+.slds-page-header__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slds-page-header__control {
+  margin-left: 0.25rem;
+}

@@ -1,0 +1,13 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  scope: component
+  type: size
+  cssProperties:
+  - font
+  - font-size
+  category: font-size
+props:
+  FORM_LABEL_FONT_SIZE:
+    value: '0.75rem'

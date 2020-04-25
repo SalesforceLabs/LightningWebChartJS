@@ -1,0 +1,67 @@
+<aura:tokens>
+  <aura:token name="mqLarge" value="only screen and (min-width: 64em)"/>
+  <aura:token name="timing5" property="animation,animation-duration" value=".8s"/>
+  <aura:token name="colorBlueMidnightBlue" property="background,background-color" value="rgb(0, 57, 107)"/>
+  <aura:token name="borderRadiusLarge" property="border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius" value=".5rem"/>
+  <aura:token name="lineHeightReset" property="font,line-height" value="1"/>
+  <aura:token name="fontSizeMedium" property="font,font-size" value="1rem"/>
+  <aura:token name="colorBlueEndeavour" property="background,background-color" value="rgb(0, 95, 178)"/>
+  <aura:token name="colorBlueSparta" property="background,background-color" value="rgb(230, 236, 242)"/>
+  <aura:token name="colorBlueZodiac" property="background,background-color" value="rgb(23, 50, 77)"/>
+  <aura:token name="fontWeightRegular" property="font,font-weight" value="400"/>
+  <aura:token name="fontSizeXLarge" property="font,font-size" value="1.25rem"/>
+  <aura:token name="colorBlueGhost" property="background,background-color" value="rgb(125, 152, 179)"/>
+  <aura:token name="colorOrangeAlert" property="background,background-color" value="rgb(255, 183, 93)"/>
+  <aura:token name="timingTest" property="animation,animation-duration" value="5s"/>
+  <aura:token name="colorGreenSea100" property="background,background-color" value="rgb(53, 212, 204)"/>
+  <aura:token name="colorBlueRollingstone" property="background,background-color" value="rgb(64, 96, 127)"/>
+  <aura:token name="borderRadiusCircle" property="border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius" value="50%"/>
+  <aura:token name="colorBlueSky100" property="background,background-color" value="rgb(108, 183, 250)"/>
+  <aura:token name="fontSizeXxLarge" property="font,font-size" value="1.5rem"/>
+  <aura:token name="fontSizeXMedium" property="font,font-size" value="0.875rem"/>
+  <aura:token name="colorGreenSea300" property="background,background-color" value="rgb(46, 194, 186)"/>
+  <aura:token name="colorBlueRhino" property="background,background-color" value="rgb(41, 71, 102)"/>
+  <aura:token name="colorBlueBigstoneBlue" property="background,background-color" value="rgb(10, 31, 51)"/>
+  <aura:token name="colorGreenSuccess" property="background,background-color" value="rgb(75, 202, 129)"/>
+  <aura:token name="colorBlueSky300" property="background,background-color" value="rgb(68, 162, 245)"/>
+  <aura:token name="mqSmall" value="only screen and (min-width: 28em)"/>
+  <aura:token name="colorWhite" property="background,background-color" value="rgb(255, 255, 255)"/>
+  <aura:token name="borderRadiusSmall" property="border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius" value=".125rem"/>
+  <aura:token name="fontFamilyBody" property="font,font-family" value="&apos;Salesforce Sans&apos;, &apos;Helvetica Neue&apos;, Helvetica, Arial, sans-serif"/>
+  <aura:token name="colorPurpleRain100" property="background,background-color" value="rgb(173, 144, 245)"/>
+  <aura:token name="fontSizeLarge" property="font,font-size" value="1.125rem"/>
+  <aura:token name="colorGreenSea500" property="background,background-color" value="rgb(39, 171, 164)"/>
+  <aura:token name="colorBlueSky500" property="background,background-color" value="rgb(45, 147, 237)"/>
+  <aura:token name="colorBlueSpider" property="background,background-color" value="rgb(163, 184, 204)"/>
+  <aura:token name="borderRadiusMedium" property="border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius" value=".25rem"/>
+  <aura:token name="colorPurpleRain300" property="background,background-color" value="rgb(146, 113, 232)"/>
+  <aura:token name="colorGreenSea700" property="background,background-color" value="rgb(32, 150, 145)"/>
+  <aura:token name="colorBlueSky700" property="background,background-color" value="rgb(32, 129, 214)"/>
+  <aura:token name="colorBlueAluminium" property="background,background-color" value="rgb(92, 122, 153)"/>
+  <aura:token name="mqMedium" value="only screen and (min-width: 48em)"/>
+  <aura:token name="colorPurpleRain500" property="background,background-color" value="rgb(122, 86, 214)"/>
+  <aura:token name="colorGreenSea900" property="background,background-color" value="rgb(27, 130, 125)"/>
+  <aura:token name="colorBlueSky900" property="background,background-color" value="rgb(25, 112, 189)"/>
+  <aura:token name="fontSizeXSmall" property="font,font-size" value="0.625rem"/>
+  <aura:token name="borderRadiusPill" property="border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius" value="5rem"/>
+  <aura:token name="colorPurpleRain700" property="background,background-color" value="rgb(100, 63, 192)"/>
+  <aura:token name="colorPurpleRain900" property="background,background-color" value="rgb(89, 65, 149)"/>
+  <aura:token name="lineHeightHeading" property="font,line-height" value="1.25"/>
+  <aura:token name="spacingXLarge" property="margin,margin-top,margin-right,margin-bottom,margin-left,padding,padding-top,padding-right,padding-bottom,padding-left" value="4rem"/>
+  <aura:token name="spacingXxLarge" property="margin,margin-top,margin-right,margin-bottom,margin-left,padding,padding-top,padding-right,padding-bottom,padding-left" value="8rem"/>
+  <aura:token name="colorBlueBiscay" property="background,background-color" value="rgb(22, 50, 92)"/>
+  <aura:token name="mqXLarge" value="only screen and (min-width: 80em)"/>
+  <aura:token name="fontSizeSmall" property="font,font-size" value="0.75rem"/>
+  <aura:token name="lineHeightText" property="font,line-height" value="1.5"/>
+  <aura:token name="colorBlueScience" property="background,background-color" value="rgb(0, 112, 210)"/>
+  <aura:token name="timing1" property="animation,animation-duration" value=".1s"/>
+  <aura:token name="fontWeightBold" property="font,font-weight" value="700"/>
+  <aura:token name="timing2" property="animation,animation-duration" value=".2s"/>
+  <aura:token name="timing3" property="animation,animation-duration" value=".4s"/>
+  <aura:token name="colorRedError" property="background,background-color" value="rgb(212, 80, 76)"/>
+  <aura:token name="colorBlueAthens" property="background,background-color" value="rgb(242, 246, 250)"/>
+  <aura:token name="colorBlueRome" property="background,background-color" value="rgb(197, 211, 224)"/>
+  <aura:token name="timing4" property="animation,animation-duration" value=".6s"/>
+  <aura:token name="fontWeightLight" property="font,font-weight" value="300"/>
+  <aura:token name="spacingLarge" property="margin,margin-top,margin-right,margin-bottom,margin-left,padding,padding-top,padding-right,padding-bottom,padding-left" value="2rem"/>
+</aura:tokens>

@@ -1,0 +1,17 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-region {
+  background-color: white;
+}
+.slds-region__pinned-top {
+  background-color: white;
+  border-bottom: 1px solid #dddbda;
+}
+.slds-region__pinned-left {
+  background-color: white;
+  border-right: 1px solid #dddbda;
+}
+.slds-region__pinned-right {
+  background-color: white;
+  border-left: 1px solid #dddbda;
+}

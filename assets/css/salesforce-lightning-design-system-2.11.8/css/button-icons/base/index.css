@@ -1,0 +1,204 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-button_icon,
+.slds-button_icon-inverse,
+.slds-button_icon-container,
+.slds-button_icon-border,
+.slds-button_icon-border-filled,
+.slds-button_icon-border-inverse,
+.slds-button_icon-more,
+.slds-button_icon-error {
+  line-height: 1;
+  vertical-align: middle;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #706e6b;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.slds-button_icon-container,
+.slds-button_icon-border,
+.slds-button_icon-border-filled,
+.slds-button_icon-border-inverse,
+.slds-button_icon-brand,
+.slds-button_icon-more,
+.slds-button_icon-container-more {
+  width: 2rem;
+  height: 2rem;
+}
+.slds-button_icon-border-filled,
+.slds-button_icon-border {
+  line-height: 1;
+  vertical-align: middle;
+  color: #706e6b;
+  border: 1px solid #dddbda;
+  -webkit-transition: border 0.15s linear;
+  transition: border 0.15s linear;
+  border-color: #dddbda;
+}
+.slds-button_icon-border-filled[disabled],
+.slds-button_icon-border-filled:disabled,
+.slds-button_icon-border[disabled],
+.slds-button_icon-border:disabled {
+  color: #dddbda;
+}
+.slds-button_icon-border-inverse {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #dddbda;
+}
+.slds-button_icon-border-inverse[disabled],
+.slds-button_icon-border-inverse:disabled {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.slds-button_icon-brand {
+  background-color: #0070d2;
+  border-color: #0070d2;
+  color: white;
+}
+.slds-button_icon-brand:link,
+.slds-button_icon-brand:visited,
+.slds-button_icon-brand:active {
+  color: white;
+}
+.slds-button_icon-brand:hover,
+.slds-button_icon-brand:focus {
+  background-color: #005fb2;
+  border-color: #005fb2;
+  color: white;
+}
+.slds-button_icon-brand:active {
+  background-color: #005fb2;
+  border-color: #005fb2;
+}
+.slds-button_icon-brand[disabled],
+.slds-button_icon-brand:disabled {
+  background: #c9c7c5;
+  border-color: #c9c7c5;
+  color: white;
+}
+.slds-button_icon-border-filled {
+  background-color: white;
+}
+.slds-button_icon-border-filled[disabled],
+.slds-button_icon-border-filled:disabled {
+  border-color: #dddbda;
+  background-color: white;
+}
+.slds-button_icon-inverse,
+.slds-button_icon-border-inverse {
+  color: white;
+}
+.slds-button_icon-inverse:hover,
+.slds-button_icon-inverse:focus,
+.slds-button_icon-border-inverse:hover,
+.slds-button_icon-border-inverse:focus {
+  color: rgba(255, 255, 255, 0.75);
+}
+.slds-button_icon-inverse:focus,
+.slds-button_icon-border-inverse:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 3px #ecebea;
+  box-shadow: 0 0 3px #ecebea;
+  border: 1px solid #ecebea;
+}
+.slds-button_icon-inverse:active,
+.slds-button_icon-border-inverse:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+.slds-button_icon-inverse[disabled],
+.slds-button_icon-inverse:disabled,
+.slds-button_icon-border-inverse[disabled],
+.slds-button_icon-border-inverse:disabled {
+  color: rgba(255, 255, 255, 0.15);
+}
+.slds-button_icon-error,
+.slds-button_icon-error:hover,
+.slds-button_icon-error:active,
+.slds-button_icon-error:focus {
+  color: #c23934;
+}
+.slds-button_icon-current-color {
+  color: currentColor;
+}
+.slds-button_icon-small {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.slds-button_icon-x-small {
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1;
+}
+.slds-button_icon-x-small .slds-button__icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+.slds-button_icon-xx-small {
+  width: 1rem;
+  height: 1rem;
+  line-height: 1;
+}
+.slds-button_icon-xx-small .slds-button__icon {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.slds-button_icon-more {
+  width: auto;
+  line-height: 1.875rem;
+  padding: 0 0.5rem;
+  background-color: white;
+  border-color: #dddbda;
+  color: #706e6b;
+}
+.slds-button_icon-more:hover .slds-button__icon,
+.slds-button_icon-more:focus .slds-button__icon {
+  fill: #0070d2;
+}
+.slds-button_icon-more:active .slds-button__icon {
+  fill: #005fb2;
+}
+.slds-button_icon-more[disabled],
+.slds-button_icon-more:disabled {
+  cursor: default;
+}
+.slds-button_icon-more[disabled] .slds-button__icon,
+.slds-button_icon-more:disabled .slds-button__icon {
+  fill: #dddbda;
+}
+.slds-button_icon-container-more {
+  width: auto;
+  line-height: 1.875rem;
+  padding: 0 0.5rem;
+  vertical-align: middle;
+}
+.slds-button__icon_hint {
+  fill: #b0adab;
+}
+.slds-button__icon_inverse-hint {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.slds-hint-parent .slds-button_icon-border-inverse {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.slds-hint-parent .slds-button_icon-border-inverse:focus {
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.slds-hint-parent:hover .slds-button_icon-border-inverse,
+.slds-hint-parent:focus .slds-button_icon-border-inverse {
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.slds-hint-parent:hover .slds-button__icon_hint,
+.slds-hint-parent:focus .slds-button__icon_hint {
+  fill: #706e6b;
+}
+.slds-hint-parent:hover .slds-button__icon_inverse-hint,
+.slds-hint-parent:focus .slds-button__icon_inverse-hint {
+  fill: rgba(255, 255, 255, 0.75);
+}
+.slds-hint-parent:hover .slds-button:disabled .slds-button__icon_hint,
+.slds-hint-parent:focus .slds-button:disabled .slds-button__icon_hint {
+  fill: currentColor;
+}

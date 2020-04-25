@@ -1,0 +1,41 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-publisher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slds-publisher.slds-is-active {
+  display: block;
+}
+.slds-publisher.slds-is-active .slds-publisher__toggle-visibility {
+  display: inherit;
+  height: auto;
+  overflow: visible;
+  width: auto;
+}
+.slds-publisher.slds-is-active .slds-publisher__input {
+  line-height: 1.5;
+  height: auto;
+  max-height: 10rem;
+  resize: vertical;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.slds-publisher__input {
+  line-height: 1.875rem;
+  padding: 0 1rem;
+  resize: none;
+  min-height: calc(1.875rem + 2px);
+  max-height: calc(1.875rem + 2px);
+  width: 100%;
+}
+.slds-publisher__actions > .slds-button {
+  margin-left: 0.75rem;
+}
+.slds-publisher .slds-publisher__toggle-visibility {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}

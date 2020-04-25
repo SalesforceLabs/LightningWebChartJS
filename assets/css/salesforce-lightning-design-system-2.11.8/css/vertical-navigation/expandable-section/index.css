@@ -1,0 +1,16 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-nav-vertical__action_overflow {
+  color: #706e6b;
+}
+.slds-nav-vertical__action_overflow[aria-expanded="true"] .slds-button__icon {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+[dir="rtl"] .slds-nav-vertical__action_overflow[aria-expanded="true"] .slds-button__icon {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.slds-nav-vertical__action-text {
+  color: #006dcc;
+}

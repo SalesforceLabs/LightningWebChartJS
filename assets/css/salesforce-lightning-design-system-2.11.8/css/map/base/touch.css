@@ -1,0 +1,17 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-map_container {
+  padding: 1rem 1rem 0;
+}
+
+.slds-map {
+  min-width: 21.75rem;
+}
+
+.slds-has-coordinates {
+  max-height: none;
+}
+
+.slds-coordinates__title {
+  font-size: 1.125rem;
+}

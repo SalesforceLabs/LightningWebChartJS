@@ -1,0 +1,83 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-notification-container {
+  position: fixed;
+  display: block;
+  width: 20.5rem;
+  right: 0.25rem;
+  top: 0.25rem;
+  padding: 0.25rem 0.25rem 0.5rem;
+  z-index: 8500;
+}
+.slds-notification {
+  position: relative;
+  width: 20rem;
+  border: 1px solid #ecebea;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-property: margin, max-height, opacity, top;
+  transition-property: margin, max-height, opacity, top;
+}
+.slds-notification .slds-media__body {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.slds-notification + .slds-notification {
+  margin-top: 0.5rem;
+}
+.slds-notification:nth-of-type(1) {
+  z-index: 4;
+}
+.slds-notification:nth-of-type(2) {
+  z-index: 3;
+}
+.slds-notification:nth-of-type(3) {
+  z-index: 2;
+}
+.slds-notification:nth-of-type(4) {
+  z-index: 1;
+}
+.slds-notification:nth-of-type(n + 3) {
+  overflow: hidden;
+}
+.slds-notification:nth-of-type(n + 4) {
+  margin-top: 0;
+  -webkit-transform: scaleX(0.95) translateY(-90%);
+  transform: scaleX(0.95) translateY(-90%);
+}
+.slds-notification:nth-of-type(n + 4) .slds-media__body,
+.slds-notification:nth-of-type(n + 5) {
+  opacity: 0;
+}
+.slds-notification:nth-of-type(n + 6) {
+  display: none;
+}
+.slds-notification__target {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #f4f6f9;
+  color: #080707;
+}
+.slds-notification__target:hover,
+.slds-notification__target:focus {
+  background-color: white;
+  text-decoration: none;
+}
+.slds-notification__footer {
+  padding: 0.75rem 0.75rem 1rem 0.75rem;
+}
+.slds-notification__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

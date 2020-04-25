@@ -1,0 +1,24 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-page-header__detail-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.75rem -1rem -1rem;
+  padding: 1rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+.slds-page-header__detail-block {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  max-width: 25%;
+}
+.slds-page-header__detail-block:first-child {
+  padding-left: 0;
+}
+.slds-page-header__detail-block:last-child {
+  padding-right: 0;
+}

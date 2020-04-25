@@ -1,0 +1,93 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-progress_vertical {
+  max-width: none;
+}
+.slds-progress_vertical .slds-progress__list {
+  display: block;
+}
+.slds-progress_vertical .slds-progress__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: left;
+  align-self: left;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+}
+.slds-progress_vertical .slds-progress__item:before,
+.slds-progress_vertical .slds-progress__item:after {
+  content: "";
+  position: absolute;
+  left: calc((1rem / 2) - 1px);
+  width: 2px;
+  background-color: #dddbda;
+}
+.slds-progress_vertical .slds-progress__item:before {
+  top: 0;
+  bottom: 50%;
+}
+.slds-progress_vertical .slds-progress__item:after {
+  top: 50%;
+  bottom: 0;
+}
+.slds-progress_vertical .slds-progress__item:first-child:before,
+.slds-progress_vertical .slds-progress__item:last-child:after {
+  display: none;
+}
+.slds-progress_vertical .slds-progress__item.slds-is-completed:before,
+.slds-progress_vertical .slds-progress__item.slds-is-completed:after,
+.slds-progress_vertical .slds-progress__item.slds-is-active:before,
+.slds-progress_vertical .slds-progress__item.slds-has-error:before {
+  background-color: #5eb4ff;
+}
+.slds-progress_vertical .slds-progress__item_content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.slds-progress_vertical
+  .slds-progress__list-bordered
+  .slds-progress__item:not(:last-child)
+  .slds-progress__item_content {
+  border-bottom: 1px #dddbda solid;
+}
+.slds-progress_vertical .slds-progress__marker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 1rem;
+  min-width: 1rem;
+  z-index: 5;
+}
+.slds-progress_vertical .slds-progress__marker_icon {
+  border-right: 0;
+  border-left: 0;
+}
+.slds-progress_vertical .slds-progress__item.slds-is-completed .slds-progress__marker_icon svg {
+  fill: #5eb4ff;
+}
+.slds-progress_vertical .slds-progress__item.slds-is-completed .slds-progress__marker_icon-success svg {
+  fill: #4bca81;
+}
+.slds-progress_vertical .slds-progress__item.slds-has-error .slds-progress__marker_icon svg {
+  fill: #c23934;
+}
+.slds-progress_success .slds-progress__item.slds-is-completed:before,
+.slds-progress_success .slds-progress__item.slds-is-completed:after,
+.slds-progress_success .slds-progress__item.slds-is-active:before,
+.slds-progress_success .slds-progress__item.slds-has-error:before {
+  opacity: 0.3;
+  background-color: #4bca81;
+}

@@ -1,0 +1,18 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name filtering
+ * @selector .slds-panel_filters
+ * @restrict .slds-panel
+ * @variant
+ * @support dev-ready
+ * @s1 false
+ */
+.slds-panel_filters,
+.slds-panel--filters {
+  margin-left: $spacing-medium;
+  box-shadow: $shadow-drop-down;
+  border-radius: 0;
+}

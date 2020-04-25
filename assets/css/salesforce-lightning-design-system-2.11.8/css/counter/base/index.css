@@ -1,0 +1,29 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-input_counter {
+  text-align: center;
+  padding: 0 3rem;
+}
+.slds-input_counter[type="number"] {
+  -moz-appearance: textfield;
+}
+.slds-input_counter::-webkit-inner-spin-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.slds-input__button_decrement {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0.75rem;
+}
+.slds-input__button_increment {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0.75rem;
+}

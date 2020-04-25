@@ -1,0 +1,30 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-icon-score {
+  display: inline-block;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  position: relative;
+}
+
+[class*="slds-icon-score__"] {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  will-change: opacity;
+  stroke-width: 1.125px;
+}
+.slds-icon-score__positive {
+  fill: #30a664;
+  stroke: #30a664;
+}
+.slds-icon-score__negative {
+  fill: transparent;
+  stroke: #d2504c;
+}
+
+[data-slds-state="positive"] .slds-icon-score__positive,
+[data-slds-state="negative"] .slds-icon-score__negative {
+  opacity: 1;
+}

@@ -1,0 +1,24 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-checkbox-button {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.slds-checkbox_add-button {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.slds-checkbox_add-button .slds-checkbox_faux {
+  width: 2rem;
+  height: 2rem;
+}

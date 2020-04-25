@@ -1,0 +1,1248 @@
+{
+  "aliases": {},
+  "props": {
+    "CUSTOM_110": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_110"
+    },
+    "CUSTOM_100": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e15d76",
+      "originalValue": "#e15d76",
+      "name": "CUSTOM_100"
+    },
+    "CUSTOM_111": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_111"
+    },
+    "CUSTOM_1": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ff7b84",
+      "originalValue": "#ff7b84",
+      "name": "CUSTOM_1"
+    },
+    "CUSTOM_101": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_101"
+    },
+    "CUSTOM_112": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_112"
+    },
+    "CUSTOM_2": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#cfd05c",
+      "originalValue": "#cfd05c",
+      "name": "CUSTOM_2"
+    },
+    "CUSTOM_102": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_102"
+    },
+    "CUSTOM_113": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_113"
+    },
+    "CUSTOM_90": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#22a48a",
+      "originalValue": "#22a48a",
+      "name": "CUSTOM_90"
+    },
+    "CUSTOM_3": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ecb46c",
+      "originalValue": "#ecb46c",
+      "name": "CUSTOM_3"
+    },
+    "CUSTOM_103": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_103"
+    },
+    "CUSTOM_80": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#659ad5",
+      "originalValue": "#659ad5",
+      "name": "CUSTOM_80"
+    },
+    "CUSTOM_91": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#bf7b66",
+      "originalValue": "#bf7b66",
+      "name": "CUSTOM_91"
+    },
+    "CUSTOM_4": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e1d951",
+      "originalValue": "#e1d951",
+      "name": "CUSTOM_4"
+    },
+    "CUSTOM_104": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_104"
+    },
+    "CUSTOM_70": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e769b4",
+      "originalValue": "#e769b4",
+      "name": "CUSTOM_70"
+    },
+    "CUSTOM_81": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#da627f",
+      "originalValue": "#da627f",
+      "name": "CUSTOM_81"
+    },
+    "CUSTOM_92": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#517e82",
+      "originalValue": "#517e82",
+      "name": "CUSTOM_92"
+    },
+    "CUSTOM_5": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#9fdb66",
+      "originalValue": "#9fdb66",
+      "name": "CUSTOM_5"
+    },
+    "CUSTOM_105": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_105"
+    },
+    "CUSTOM_60": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#bf5a88",
+      "originalValue": "#bf5a88",
+      "name": "CUSTOM_60"
+    },
+    "CUSTOM_71": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e36ee3",
+      "originalValue": "#e36ee3",
+      "name": "CUSTOM_71"
+    },
+    "CUSTOM_82": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d15b97",
+      "originalValue": "#d15b97",
+      "name": "CUSTOM_82"
+    },
+    "CUSTOM_93": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#904d4c",
+      "originalValue": "#904d4c",
+      "name": "CUSTOM_93"
+    },
+    "CUSTOM_6": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54c473",
+      "originalValue": "#54c473",
+      "name": "CUSTOM_6"
+    },
+    "CUSTOM_106": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_106"
+    },
+    "CUSTOM_50": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#49bcd3",
+      "originalValue": "#49bcd3",
+      "name": "CUSTOM_50"
+    },
+    "CUSTOM_61": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f57376",
+      "originalValue": "#f57376",
+      "name": "CUSTOM_61"
+    },
+    "CUSTOM_72": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8d9bfb",
+      "originalValue": "#8d9bfb",
+      "name": "CUSTOM_72"
+    },
+    "CUSTOM_83": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e7806f",
+      "originalValue": "#e7806f",
+      "name": "CUSTOM_83"
+    },
+    "CUSTOM_94": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#439cba",
+      "originalValue": "#439cba",
+      "name": "CUSTOM_94"
+    },
+    "CUSTOM_7": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6a89e5",
+      "originalValue": "#6a89e5",
+      "name": "CUSTOM_7"
+    },
+    "CUSTOM_107": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_107"
+    },
+    "CUSTOM_40": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#83c75e",
+      "originalValue": "#83c75e",
+      "name": "CUSTOM_40"
+    },
+    "CUSTOM_51": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d8c760",
+      "originalValue": "#d8c760",
+      "name": "CUSTOM_51"
+    },
+    "CUSTOM_62": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6b92dc",
+      "originalValue": "#6b92dc",
+      "name": "CUSTOM_62"
+    },
+    "CUSTOM_73": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#679ef0",
+      "originalValue": "#679ef0",
+      "name": "CUSTOM_73"
+    },
+    "CUSTOM_84": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f6707b",
+      "originalValue": "#f6707b",
+      "name": "CUSTOM_84"
+    },
+    "CUSTOM_95": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8bcf6a",
+      "originalValue": "#8bcf6a",
+      "name": "CUSTOM_95"
+    },
+    "CUSTOM_8": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#50ceb9",
+      "originalValue": "#50ceb9",
+      "name": "CUSTOM_8"
+    },
+    "CUSTOM_108": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_108"
+    },
+    "CUSTOM_30": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f59f71",
+      "originalValue": "#f59f71",
+      "name": "CUSTOM_30"
+    },
+    "CUSTOM_41": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#43b5b5",
+      "originalValue": "#43b5b5",
+      "name": "CUSTOM_41"
+    },
+    "CUSTOM_52": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ee8e6f",
+      "originalValue": "#ee8e6f",
+      "name": "CUSTOM_52"
+    },
+    "CUSTOM_63": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7ccf60",
+      "originalValue": "#7ccf60",
+      "name": "CUSTOM_63"
+    },
+    "CUSTOM_74": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#41c8a0",
+      "originalValue": "#41c8a0",
+      "name": "CUSTOM_74"
+    },
+    "CUSTOM_85": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f26891",
+      "originalValue": "#f26891",
+      "name": "CUSTOM_85"
+    },
+    "CUSTOM_96": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6d9de3",
+      "originalValue": "#6d9de3",
+      "name": "CUSTOM_96"
+    },
+    "CUSTOM_9": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6b9ee2",
+      "originalValue": "#6b9ee2",
+      "name": "CUSTOM_9"
+    },
+    "CUSTOM_109": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f28b00",
+      "originalValue": "#f28b00",
+      "name": "CUSTOM_109"
+    },
+    "CUSTOM_20": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#48c7c8",
+      "originalValue": "#48c7c8",
+      "name": "CUSTOM_20"
+    },
+    "CUSTOM_31": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#eb687f",
+      "originalValue": "#eb687f",
+      "name": "CUSTOM_31"
+    },
+    "CUSTOM_42": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#cfd05b",
+      "originalValue": "#cfd05b",
+      "name": "CUSTOM_42"
+    },
+    "CUSTOM_53": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f36e83",
+      "originalValue": "#f36e83",
+      "name": "CUSTOM_53"
+    },
+    "CUSTOM_64": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#618fd8",
+      "originalValue": "#618fd8",
+      "name": "CUSTOM_64"
+    },
+    "CUSTOM_75": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#cd9f65",
+      "originalValue": "#cd9f65",
+      "name": "CUSTOM_75"
+    },
+    "CUSTOM_86": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e260ab",
+      "originalValue": "#e260ab",
+      "name": "CUSTOM_86"
+    },
+    "CUSTOM_97": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#dd6085",
+      "originalValue": "#dd6085",
+      "name": "CUSTOM_97"
+    },
+    "CUSTOM_10": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6488e3",
+      "originalValue": "#6488e3",
+      "name": "CUSTOM_10"
+    },
+    "CUSTOM_21": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8a7aed",
+      "originalValue": "#8a7aed",
+      "name": "CUSTOM_21"
+    },
+    "CUSTOM_32": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#38c393",
+      "originalValue": "#38c393",
+      "name": "CUSTOM_32"
+    },
+    "CUSTOM_43": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7f93f9",
+      "originalValue": "#7f93f9",
+      "name": "CUSTOM_43"
+    },
+    "CUSTOM_54": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ea70b1",
+      "originalValue": "#ea70b1",
+      "name": "CUSTOM_54"
+    },
+    "CUSTOM_65": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f279ab",
+      "originalValue": "#f279ab",
+      "name": "CUSTOM_65"
+    },
+    "CUSTOM_76": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#db6d7a",
+      "originalValue": "#db6d7a",
+      "name": "CUSTOM_76"
+    },
+    "CUSTOM_87": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d876e5",
+      "originalValue": "#d876e5",
+      "name": "CUSTOM_87"
+    },
+    "CUSTOM_98": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e1be5c",
+      "originalValue": "#e1be5c",
+      "name": "CUSTOM_98"
+    },
+    "CUSTOM_11": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8784ea",
+      "originalValue": "#8784ea",
+      "name": "CUSTOM_11"
+    },
+    "CUSTOM_22": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8b85f9",
+      "originalValue": "#8b85f9",
+      "name": "CUSTOM_22"
+    },
+    "CUSTOM_33": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#97cf5d",
+      "originalValue": "#97cf5d",
+      "name": "CUSTOM_33"
+    },
+    "CUSTOM_44": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#c8ca58",
+      "originalValue": "#c8ca58",
+      "name": "CUSTOM_44"
+    },
+    "CUSTOM_55": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d66ee0",
+      "originalValue": "#d66ee0",
+      "name": "CUSTOM_55"
+    },
+    "CUSTOM_66": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d8be5f",
+      "originalValue": "#d8be5f",
+      "name": "CUSTOM_66"
+    },
+    "CUSTOM_77": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#b55d5b",
+      "originalValue": "#b55d5b",
+      "name": "CUSTOM_77"
+    },
+    "CUSTOM_88": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#996fe6",
+      "originalValue": "#996fe6",
+      "name": "CUSTOM_88"
+    },
+    "CUSTOM_99": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f0856e",
+      "originalValue": "#f0856e",
+      "name": "CUSTOM_99"
+    },
+    "CUSTOM_12": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#dc71d1",
+      "originalValue": "#dc71d1",
+      "name": "CUSTOM_12"
+    },
+    "CUSTOM_23": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#b070e6",
+      "originalValue": "#b070e6",
+      "name": "CUSTOM_23"
+    },
+    "CUSTOM_34": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d58a6a",
+      "originalValue": "#d58a6a",
+      "name": "CUSTOM_34"
+    },
+    "CUSTOM_45": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d95879",
+      "originalValue": "#d95879",
+      "name": "CUSTOM_45"
+    },
+    "CUSTOM_56": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#718deb",
+      "originalValue": "#718deb",
+      "name": "CUSTOM_56"
+    },
+    "CUSTOM_67": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f87d76",
+      "originalValue": "#f87d76",
+      "name": "CUSTOM_67"
+    },
+    "CUSTOM_78": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#5a95dd",
+      "originalValue": "#5a95dd",
+      "name": "CUSTOM_78"
+    },
+    "CUSTOM_89": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#3e99be",
+      "originalValue": "#3e99be",
+      "name": "CUSTOM_89"
+    },
+    "CUSTOM_13": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#df6184",
+      "originalValue": "#df6184",
+      "name": "CUSTOM_13"
+    },
+    "CUSTOM_24": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e56798",
+      "originalValue": "#e56798",
+      "name": "CUSTOM_24"
+    },
+    "CUSTOM_35": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e9637e",
+      "originalValue": "#e9637e",
+      "name": "CUSTOM_35"
+    },
+    "CUSTOM_46": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#67a5e7",
+      "originalValue": "#67a5e7",
+      "name": "CUSTOM_46"
+    },
+    "CUSTOM_57": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#5a9cdd",
+      "originalValue": "#5a9cdd",
+      "name": "CUSTOM_57"
+    },
+    "CUSTOM_68": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f26979",
+      "originalValue": "#f26979",
+      "name": "CUSTOM_68"
+    },
+    "CUSTOM_79": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8ed363",
+      "originalValue": "#8ed363",
+      "name": "CUSTOM_79"
+    },
+    "CUSTOM_14": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#3cc2b3",
+      "originalValue": "#3cc2b3",
+      "name": "CUSTOM_14"
+    },
+    "CUSTOM_25": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e46fbe",
+      "originalValue": "#e46fbe",
+      "name": "CUSTOM_25"
+    },
+    "CUSTOM_36": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d472d4",
+      "originalValue": "#d472d4",
+      "name": "CUSTOM_36"
+    },
+    "CUSTOM_47": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#5fcc64",
+      "originalValue": "#5fcc64",
+      "name": "CUSTOM_47"
+    },
+    "CUSTOM_58": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#34b59d",
+      "originalValue": "#34b59d",
+      "name": "CUSTOM_58"
+    },
+    "CUSTOM_69": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ed6387",
+      "originalValue": "#ed6387",
+      "name": "CUSTOM_69"
+    },
+    "CUSTOM_15": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f77e75",
+      "originalValue": "#f77e75",
+      "name": "CUSTOM_15"
+    },
+    "CUSTOM_26": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7698f0",
+      "originalValue": "#7698f0",
+      "name": "CUSTOM_26"
+    },
+    "CUSTOM_37": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8c89f2",
+      "originalValue": "#8c89f2",
+      "name": "CUSTOM_37"
+    },
+    "CUSTOM_48": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ef697f",
+      "originalValue": "#ef697f",
+      "name": "CUSTOM_48"
+    },
+    "CUSTOM_59": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e3d067",
+      "originalValue": "#e3d067",
+      "name": "CUSTOM_59"
+    },
+    "CUSTOM_16": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e9af67",
+      "originalValue": "#e9af67",
+      "name": "CUSTOM_16"
+    },
+    "CUSTOM_27": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#5ab0d2",
+      "originalValue": "#5ab0d2",
+      "name": "CUSTOM_27"
+    },
+    "CUSTOM_38": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#53b6d7",
+      "originalValue": "#53b6d7",
+      "name": "CUSTOM_38"
+    },
+    "CUSTOM_49": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e25c80",
+      "originalValue": "#e25c80",
+      "name": "CUSTOM_49"
+    },
+    "CUSTOM_17": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#acd360",
+      "originalValue": "#acd360",
+      "name": "CUSTOM_17"
+    },
+    "CUSTOM_28": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#89c059",
+      "originalValue": "#89c059",
+      "name": "CUSTOM_28"
+    },
+    "CUSTOM_39": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#4fbe75",
+      "originalValue": "#4fbe75",
+      "name": "CUSTOM_39"
+    },
+    "CUSTOM_18": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#4dca76",
+      "originalValue": "#4dca76",
+      "name": "CUSTOM_18"
+    },
+    "CUSTOM_29": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#bdd25f",
+      "originalValue": "#bdd25f",
+      "name": "CUSTOM_29"
+    },
+    "CUSTOM_19": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#3abeb1",
+      "originalValue": "#3abeb1",
+      "name": "CUSTOM_19"
+    }
+  }
+}

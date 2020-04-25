@@ -1,0 +1,38 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-expression__options {
+  width: 15rem;
+}
+.slds-expression__options .slds-form-element__control {
+  clear: none;
+}
+.slds-expression__legend {
+  float: left;
+  width: 3rem;
+  padding-top: calc((1.5 * 0.75rem) + (1.875rem / 4));
+  font-weight: 700;
+}
+.slds-expression__legend.slds-expression__legend_group {
+  margin-top: 0;
+}
+.slds-expression__row {
+  margin-top: 0.75rem;
+}
+.slds-expression__row.slds-expression__row_group {
+  padding-left: 3rem;
+}
+.slds-expression__buttons {
+  margin-top: 0.75rem;
+}
+.slds-expression__group {
+  background: #f3f2f2;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+}
+.slds-expression__title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,55 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-tabs__nav-scroller.slds-has-overflow {
+  position: relative;
+  padding-right: 4.7rem;
+}
+
+.slds-tab__scroll-controls {
+  display: none;
+}
+
+.slds-has-overflow .slds-tabs__nav-scroller_inner {
+  overflow: hidden;
+}
+.slds-has-overflow .slds-tabs_scoped__nav,
+.slds-has-overflow .slds-tabs_default__nav {
+  border: 0;
+}
+.slds-has-overflow .slds-tab__scroll-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+}
+
+.slds-tabs_default .slds-has-overflow .slds-tabs__nav-scroller_inner {
+  border-bottom: 1px solid #dddbda;
+}
+.slds-tabs_default .slds-tab__scroll-controls {
+  padding: calc(0.25rem - 1px) 1px calc(0.25rem - 1px) 0.5rem;
+  border-bottom: 1px solid #dddbda;
+}
+
+.slds-tabs_scoped .slds-has-overflow .slds-tabs__nav-scroller_inner {
+  border: 1px solid #dddbda;
+  border-bottom: 0;
+  border-radius: 0.25rem 0.25rem 0 0;
+  background-color: #f3f2f2;
+}
+.slds-tabs_scoped .slds-has-overflow .slds-tabs_scoped__item {
+  margin-bottom: 0;
+  border-bottom: 1px solid #dddbda;
+}
+.slds-tabs_scoped .slds-has-overflow .slds-tabs_scoped__item.slds-active {
+  border-bottom-color: white;
+}
+.slds-tabs_scoped .slds-tab__scroll-controls {
+  padding: calc(0.25rem - 1px) 0.25rem;
+  border: 1px solid #dddbda;
+  border-radius: 0 0.25rem 0 0;
+}

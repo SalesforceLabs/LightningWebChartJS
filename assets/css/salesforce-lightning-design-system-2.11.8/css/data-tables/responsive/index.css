@@ -1,0 +1,152 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+@media (max-width: 48em) {
+  .slds-max-medium-table_stacked {
+    border: 0;
+  }
+  .slds-max-medium-table_stacked thead {
+    position: absolute !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+  }
+  .slds-max-medium-table_stacked th {
+    border-top: 0;
+  }
+  .slds-max-medium-table_stacked tr {
+    display: block;
+    border-top: 2px solid #dddbda;
+  }
+  .slds-max-medium-table_stacked th,
+  .slds-max-medium-table_stacked td {
+    display: block;
+    padding: 0.75rem;
+    max-width: 100%;
+    width: 100%;
+    clear: both;
+    white-space: normal;
+    overflow: hidden;
+    text-align: left;
+  }
+  .slds-max-medium-table_stacked th.slds-truncate,
+  .slds-max-medium-table_stacked td.slds-truncate {
+    max-width: 100%;
+  }
+  .slds-max-medium-table_stacked th:before,
+  .slds-max-medium-table_stacked td:before {
+    font-size: 0.75rem;
+    line-height: 1.25;
+    color: #3e3e3c;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    display: block;
+    padding-bottom: 0.25rem;
+    content: attr(data-label);
+  }
+  .slds-max-medium-table_stacked tr > td:first-child,
+  .slds-max-medium-table_stacked tr > td:last-child {
+    padding: 0.75rem;
+  }
+  .slds-max-medium-table_stacked:not(.slds-no-row-hover) tbody tr:hover {
+  }
+  .slds-max-medium-table_stacked:not(.slds-no-row-hover) tbody tr:hover td,
+  .slds-max-medium-table_stacked:not(.slds-no-row-hover) tbody tr:hover th {
+    background-color: inherit !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  .slds-max-medium-table_stacked .slds-is-interactive .slds-button {
+    visibility: visible;
+  }
+  .slds-max-medium-table_stacked .slds-cell-shrink {
+    width: auto;
+  }
+}
+@media (max-width: 48em) {
+  .slds-max-medium-table_stacked td:before,
+  .slds-max-medium-table_stacked th:before {
+    padding-bottom: 0.25rem;
+  }
+}
+@media (max-width: 48em) {
+  .slds-max-medium-table_stacked-horizontal {
+    border: 0;
+  }
+  .slds-max-medium-table_stacked-horizontal thead {
+    position: absolute !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+  }
+  .slds-max-medium-table_stacked-horizontal th {
+    border-top: 0;
+  }
+  .slds-max-medium-table_stacked-horizontal tr {
+    display: block;
+    border-top: 2px solid #dddbda;
+  }
+  .slds-max-medium-table_stacked-horizontal th,
+  .slds-max-medium-table_stacked-horizontal td {
+    display: block;
+    padding: 0.75rem;
+    max-width: 100%;
+    width: 100%;
+    clear: both;
+    white-space: normal;
+    overflow: hidden;
+    text-align: left;
+  }
+  .slds-max-medium-table_stacked-horizontal th.slds-truncate,
+  .slds-max-medium-table_stacked-horizontal td.slds-truncate {
+    max-width: 100%;
+  }
+  .slds-max-medium-table_stacked-horizontal th:before,
+  .slds-max-medium-table_stacked-horizontal td:before {
+    font-size: 0.75rem;
+    line-height: 1.25;
+    color: #3e3e3c;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    display: block;
+    padding-bottom: 0.25rem;
+    content: attr(data-label);
+  }
+  .slds-max-medium-table_stacked-horizontal tr > td:first-child,
+  .slds-max-medium-table_stacked-horizontal tr > td:last-child {
+    padding: 0.75rem;
+  }
+  .slds-max-medium-table_stacked-horizontal:not(.slds-no-row-hover) tbody tr:hover {
+  }
+  .slds-max-medium-table_stacked-horizontal:not(.slds-no-row-hover) tbody tr:hover td,
+  .slds-max-medium-table_stacked-horizontal:not(.slds-no-row-hover) tbody tr:hover th {
+    background-color: inherit !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  .slds-max-medium-table_stacked-horizontal .slds-is-interactive .slds-button {
+    visibility: visible;
+  }
+  .slds-max-medium-table_stacked-horizontal .slds-cell-shrink {
+    width: auto;
+  }
+}
+@media (max-width: 48em) {
+  .slds-max-medium-table_stacked-horizontal td {
+    text-align: right;
+  }
+  .slds-max-medium-table_stacked-horizontal td:before {
+    float: left;
+    margin-top: 0.125rem;
+  }
+  .slds-max-medium-table_stacked-horizontal .slds-truncate {
+    max-width: 100%;
+  }
+}

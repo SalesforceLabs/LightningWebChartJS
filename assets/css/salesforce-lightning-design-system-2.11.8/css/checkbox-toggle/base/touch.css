@@ -1,0 +1,14 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-checkbox_toggle {
+  padding: 0.125rem 0;
+}
+.slds-checkbox_toggle .slds-form-element__label {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  font-size: 1rem;
+}
+.slds-checkbox_toggle [type="checkbox"] + .slds-checkbox_faux_container {
+  font-size: 0.75rem;
+}

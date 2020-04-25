@@ -1,0 +1,4 @@
+<aura:tokens extends="force:base">
+  <aura:import name="one:actionBackgrounds"/>
+  <aura:token name="durationSlide" property="animation*,transition*" value="0.25s"/>
+</aura:tokens>

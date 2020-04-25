@@ -1,0 +1,100 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-form-element {
+  position: relative;
+  min-width: 0;
+}
+.slds-form-element__label {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  display: inline-block;
+  color: #3e3e3c;
+  font-size: 0.75rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  margin-bottom: 0.125rem;
+}
+.slds-form-element__label:empty {
+  margin: 0;
+}
+.slds-form-element__control {
+  clear: left;
+  position: relative;
+}
+.slds-form-element__control .slds-radio,
+.slds-form-element__control .slds-checkbox {
+  display: block;
+}
+.slds-form-element__icon {
+  display: inline-block;
+  position: relative;
+  padding-top: 0.25rem;
+  vertical-align: top;
+  line-height: 1;
+  z-index: 1;
+}
+.slds-form-element__icon .slds-button_icon {
+  position: relative;
+}
+.slds-form-element__help,
+.slds-form-element__helper {
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
+  display: block;
+}
+.slds-form-element_edit .slds-form-element__static {
+  width: calc(100% - 1.5rem);
+}
+.slds-form-element_readonly {
+  -ms-flex-preferred-size: 0%;
+  flex-basis: 0%;
+  border-bottom: 1px solid #dddbda;
+  margin-bottom: 0;
+}
+.slds-form-element_readonly .slds-form-element__control {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+.slds-form-element_readonly .slds-form-element__label {
+  margin-bottom: 0;
+}
+.slds-form-element__legend {
+  font-weight: 700;
+  float: left;
+}
+.slds-form-element__addon {
+  display: inline-block;
+  margin: 0 0.5rem;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.slds-form-element__static {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #080707;
+  width: 100%;
+}
+.slds-form-element__static.slds-text-longform *:last-child {
+  margin-bottom: 0;
+}
+.slds-form-element__static:empty {
+  min-height: calc(1.25rem + 1px);
+  vertical-align: bottom;
+}
+.slds-form-element__static--edit {
+  width: calc(100% - 1.5rem);
+}
+.slds-required {
+  color: #c23934;
+  margin: 0 0.125rem;
+}
+.slds-has-error .slds-form-element__help {
+  color: #c23934;
+}

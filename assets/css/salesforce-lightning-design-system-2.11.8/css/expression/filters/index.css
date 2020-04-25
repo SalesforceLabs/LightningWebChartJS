@@ -1,0 +1,42 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-filters {
+  position: relative;
+}
+.slds-filters__header {
+  padding: 0.5rem 0.75rem;
+}
+.slds-filters__body {
+  padding: 0.5rem 0.75rem;
+}
+.slds-filters__footer {
+  padding: 0.5rem 1rem;
+}
+.slds-filters__item {
+  padding: 0.75rem;
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+}
+.slds-filters__item.slds-is-new {
+  background: #faffbd;
+  color: #080707;
+}
+.slds-filters__item.slds-has-error {
+  border-color: #c23934;
+}
+.slds-filters__item.slds-is-locked {
+  background: #f3f2f2;
+}
+.slds-filters__item + .slds-filters__item {
+  margin-top: 0.5rem;
+}
+.slds-filters__item:hover {
+  background: #f4f6f9;
+}
+.slds-filters__group {
+  background: #f3f2f2;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+}

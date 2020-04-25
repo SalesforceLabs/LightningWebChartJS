@@ -1,0 +1,35 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-table_header-fixed_container {
+  position: relative;
+  padding-top: 2rem;
+  background-color: #fafaf9;
+  overflow: hidden;
+}
+.slds-table_header-fixed_container:before {
+  border-bottom: 1px solid #dddbda;
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.slds-cell-fixed {
+  background-color: #fafaf9;
+  position: absolute;
+  top: 0;
+  min-height: 2rem;
+}
+
+.slds-table_header-fixed {
+  border-top: 0;
+}
+.slds-table_header-fixed thead th {
+  position: static;
+  padding: 0;
+  border-top: 0;
+}
+.slds-table_header-fixed tbody tr:first-child td,
+.slds-table_header-fixed tbody tr:first-child th {
+  border-top: 0;
+}

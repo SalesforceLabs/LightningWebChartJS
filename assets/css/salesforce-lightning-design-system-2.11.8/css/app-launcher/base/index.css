@@ -1,0 +1,50 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-app-launcher__tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  margin: 0.5rem 0;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  cursor: move;
+}
+.slds-app-launcher__tile:hover,
+.slds-app-launcher__tile:focus,
+.slds-app-launcher__tile:active {
+  outline: 0;
+  border-color: #005fb2;
+}
+.slds-app-launcher__tile.slds-is-draggable .slds-app-launcher__tile-figure {
+  padding-bottom: 0.25rem;
+}
+.slds-app-launcher__tile.slds-is-grabbed {
+  -webkit-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+.slds-app-launcher__tile-figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding: 0.75rem;
+  color: white;
+  border-radius: 0.25rem 0 0 0.25rem;
+  text-align: center;
+}
+.slds-app-launcher__tile-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  background: #f3f2f2;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+}

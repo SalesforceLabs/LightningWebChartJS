@@ -1,0 +1,158 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import 'deprecate';
+
+/**
+ * @name list
+ * @selector .slds-nav-vertical
+ * @restrict nav, fieldset
+ * @support dev-ready
+ * @variant
+ * @lwc
+ */
+.slds-nav-vertical {
+  position: relative;
+}
+
+/**
+ * @name compact
+ * @summary Modifer to reduce spacing between navigation items
+ * @selector .slds-nav-vertical_compact
+ * @restrict .slds-nav-vertical
+ * @modifier
+ * @group spacing
+ */
+.slds-nav-vertical_compact {
+
+  .slds-nav-vertical__title,
+  .slds-nav-vertical__action {
+    padding: $spacing-xx-small $spacing-large;
+  }
+}
+
+/**
+ * @name shade
+ * @summary Modifier to adjust list item when vertical navigation is sitting on top of a shaded background
+ * @selector .slds-nav-vertical_shade
+ * @restrict .slds-nav-vertical
+ * @modifier
+ * @group color
+ */
+.slds-nav-vertical_shade {
+
+  .slds-is-active.slds-nav-vertical__item:before {
+    background: $color-background-alt;
+  }
+
+  .slds-nav-vertical__item:hover:before {
+    background: $color-background-alt;
+  }
+
+  .slds-is-active .slds-nav-vertical__action {
+    border-color: $color-border;
+  }
+}
+
+/**
+ * @summary Section title of the vertical navigation
+ * @selector .slds-nav-vertical__title
+ * @restrict .slds-nav-vertical h2, .slds-nav-vertical legend
+ */
+.slds-nav-vertical__title {
+  padding: $spacing-x-small $spacing-medium;
+  padding-left: $spacing-large;
+  font-size: $font-size-5;
+  font-weight: $font-weight-bold;
+
+  &:not(:first-of-type) {
+    margin-top: $spacing-x-small;
+  }
+}
+
+.slds-nav-vertical__section:not(:first-of-type) {
+  margin-top: $spacing-x-small;
+}
+
+/**
+ * @summary List of the vertical navigation
+ * @selector .slds-nav-vertical__item
+ * @restrict .slds-nav-vertical li, .slds-nav-vertical span
+ */
+.slds-nav-vertical__item {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+  }
+
+  &:hover:before,
+  &.slds-is-active:before {
+    background: $brand-primary-transparent-10;
+  }
+}
+
+/**
+ * @summary Actionable element inside of vertical navigation list item
+ * @selector .slds-nav-vertical__action
+ * @restrict .slds-nav-vertical a, .slds-nav-vertical button, .slds-nav-vertical label
+ */
+.slds-nav-vertical__action {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: $spacing-x-small $spacing-large $spacing-x-small $spacing-x-large;
+  color: $color-text-default;
+  border-top: $border-width-thin solid transparent;
+  border-bottom: $border-width-thin solid transparent;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 $brand-primary;
+  cursor: pointer;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: currentColor;
+  }
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: inset rem(2px) 0 0 $brand-primary;
+
+    @include rtl() {
+      box-shadow: inset rem(-2px) 0 0 $brand-primary;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+    text-decoration: underline;
+  }
+}
+
+/**
+ * @name item-active
+ * @summary Active state of a list item within a vertical navigation
+ * @selector .slds-is-active
+ * @restrict .slds-nav-vertical__item
+ * @modifier
+ * @group interactions
+ */
+.slds-nav-vertical__item.slds-is-active {
+
+  .slds-nav-vertical__action {
+    font-weight: bold;
+    box-shadow: inset rem(4px) 0 0 $brand-primary;
+
+    @include rtl() {
+      box-shadow: inset rem(-4px) 0 0 $brand-primary;
+    }
+  }
+}

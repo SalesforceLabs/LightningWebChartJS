@@ -1,0 +1,48 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-einstein-header {
+  position: relative;
+  background-color: #95cbfc;
+  background-image: url("/assets/images/einstein-headers/einstein-header-background.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  border-bottom: 1px solid #dddbda;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-shadow: 0 0 4px #9edaff;
+}
+.slds-einstein-header .slds-popover__close {
+  color: currentColor;
+}
+.slds-einstein-header__figure,
+.slds-einstein-header__figure:last-child {
+  margin-bottom: calc((0.75rem + 5px) * -1);
+  height: 4.75rem;
+  background-image: url("/assets/images/einstein-headers/einstein-figure.svg");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+.slds-einstein-header__actions {
+  padding-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.slds-einstein-header .slds-popover__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.slds-popover_einstein.slds-nubbin_top:before,
+.slds-popover_einstein.slds-nubbin_top-left:before,
+.slds-popover_einstein.slds-nubbin_top-right:before,
+.slds-popover_einstein.slds-nubbin_left-top:before,
+.slds-popover_einstein.slds-nubbin_right-top:before {
+  background-color: #95cbfc;
+}

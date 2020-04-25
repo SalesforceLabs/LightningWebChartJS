@@ -1,0 +1,18 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-progress-bar_vertical {
+  height: 100%;
+  width: 0.5rem;
+}
+.slds-progress-bar_vertical.slds-progress-bar_x-small {
+  width: 0.125rem;
+}
+.slds-progress-bar_vertical.slds-progress-bar_small {
+  width: 0.25rem;
+}
+.slds-progress-bar_vertical.slds-progress-bar_medium {
+  width: 0.5rem;
+}
+.slds-progress-bar_vertical.slds-progress-bar_large {
+  width: 0.75rem;
+}

@@ -1,0 +1,25 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+global:
+  type: box-shadow
+  category: shadow
+  cssProperties:
+  - box-shadow
+  scope: global
+  primitive: true
+imports:
+- ../aliases/offset.yml
+- ../aliases/color-palettes.yml
+props:
+  SHADOW_ACTIVE:
+    value: '{!OFFSET_NONE} {!OFFSET_NONE} {!OFFSET_X_SMALL}px {!BRAND_ACCESSIBLE}'
+    comment: Shadow for active states on interactive elements.
+  SHADOW_DRAG:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_MEDIUM}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_40}'
+    comment: Shadow for drag-n-drop.
+    access: global
+  SHADOW_DROP_DOWN:
+    value: '{!OFFSET_NONE} {!OFFSET_X_SMALL}px {!OFFSET_SMALL}px {!OFFSET_NONE} {!BLACK_TRANSPARENT_16}'
+    comment: Shadow for drop down.
+    access: global

@@ -1,0 +1,106 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-timeline__item_expandable {
+  position: relative;
+  padding-bottom: 1rem;
+}
+.slds-timeline__item_expandable:before {
+  content: "";
+  background: #dddbda;
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  left: 2.25rem;
+  top: 0;
+  bottom: 0;
+  margin-left: 1px;
+}
+.slds-timeline__item_expandable .slds-media__figure {
+  margin-right: 0.25rem;
+  z-index: 1;
+}
+.slds-timeline__item_expandable .slds-media__figure .slds-button_icon {
+  margin-right: 0.5rem;
+}
+.slds-timeline__item_expandable .slds-media__body {
+  padding: 0 0.25rem;
+}
+.slds-timeline__item_expandable .slds-checkbox {
+  margin-right: 0.25rem;
+}
+.slds-timeline__item_expandable .slds-timeline__actions_inline {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+.slds-timeline__item_expandable .slds-timeline__actions_inline .slds-timeline__date {
+  padding-right: 0.5rem;
+  margin-bottom: 0;
+}
+.slds-timeline__item_expandable .slds-timeline__item_details {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  padding: 0;
+}
+.slds-timeline__item_expandable.slds-is-open .slds-timeline__item_details {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  padding: 1rem;
+}
+.slds-timeline__item_expandable.slds-is-open .slds-timeline__details-action-icon {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transform-origin: 45%;
+  transform-origin: 45%;
+}
+.slds-timeline__item_call:before {
+  background: #48c3cc;
+}
+.slds-timeline__item_email:before {
+  background: #95aec5;
+}
+.slds-timeline__item_event:before {
+  background: #eb7092;
+}
+.slds-timeline__item_task:before {
+  background: #4bc076;
+}
+.slds-timeline__trigger {
+  padding: 0.25rem;
+}
+.slds-timeline__trigger:hover {
+  background-color: #f4f6f9;
+}
+.slds-timeline__icon {
+  border: 2px solid #fff;
+}
+.slds-timeline__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.slds-timeline__date {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  color: #3e3e3c;
+}
+.slds-timeline__details-action-icon {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}

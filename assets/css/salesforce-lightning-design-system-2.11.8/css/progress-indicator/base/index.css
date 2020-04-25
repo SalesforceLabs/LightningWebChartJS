@@ -1,0 +1,108 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-progress {
+  position: relative;
+  max-width: 70%;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin: auto;
+}
+.slds-progress_shade .slds-progress__item.slds-is-completed .slds-progress__marker,
+.slds-progress_shade .slds-progress__item.slds-is-active .slds-progress__marker {
+  background: #f3f2f2;
+}
+.slds-progress_shade .slds-progress__item.slds-is-completed .slds-progress__marker_icon {
+  border-color: #f3f2f2;
+}
+.slds-progress_shade .slds-progress__item.slds-is-active .slds-progress__marker {
+  -webkit-box-shadow: #f3f2f2 0 0 0 4px;
+  box-shadow: #f3f2f2 0 0 0 4px;
+}
+.slds-progress_shade .slds-progress__item.slds-is-active .slds-progress__marker:focus {
+  -webkit-box-shadow: #f3f2f2 0 0 0 4px, 0 0 3px 4px #0070d2;
+  box-shadow: #f3f2f2 0 0 0 4px, 0 0 3px 4px #0070d2;
+}
+.slds-progress_shade .slds-progress__item.slds-has-error .slds-progress__marker,
+.slds-progress_shade .slds-progress__item.slds-has-error .slds-progress__marker:hover,
+.slds-progress_shade .slds-progress__item.slds-has-error .slds-progress__marker:focus {
+  background: #f3f2f2;
+}
+.slds-progress_shade .slds-progress__item .slds-progress__marker {
+  border-color: #f3f2f2;
+}
+.slds-progress .slds-progress-bar {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.0625rem;
+}
+.slds-progress__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+.slds-progress__item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.slds-progress__item.slds-is-completed .slds-progress__marker,
+.slds-progress__item.slds-is-active .slds-progress__marker {
+  background: white;
+  border-color: #1589ee;
+}
+.slds-progress__item.slds-is-completed .slds-progress__marker_icon {
+  border-color: white;
+  color: #5eb4ff;
+}
+.slds-progress__item.slds-is-active .slds-progress__marker {
+  -webkit-box-shadow: white 0 0 0 4px;
+  box-shadow: white 0 0 0 4px;
+}
+.slds-progress__item.slds-is-active .slds-progress__marker:hover,
+.slds-progress__item.slds-is-active .slds-progress__marker:focus {
+  border-color: #0070d2;
+}
+.slds-progress__item.slds-is-active .slds-progress__marker:focus {
+  -webkit-box-shadow: white 0 0 0 4px, 0 0 3px 4px #0070d2;
+  box-shadow: white 0 0 0 4px, 0 0 3px 4px #0070d2;
+}
+.slds-progress__item.slds-has-error .slds-progress__marker,
+.slds-progress__item.slds-has-error .slds-progress__marker:hover,
+.slds-progress__item.slds-has-error .slds-progress__marker:focus {
+  color: #c23934;
+  background: white;
+  border-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-progress__item.slds-has-error .slds-progress__marker:focus {
+  -webkit-box-shadow: 0 0 3px 0 #c23934;
+  box-shadow: 0 0 3px 0 #c23934;
+}
+.slds-progress__marker {
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  border-radius: 50%;
+  background: #dddbda;
+  border: 4px solid white;
+  vertical-align: middle;
+}
+.slds-progress__marker_icon {
+  width: auto;
+  height: auto;
+}

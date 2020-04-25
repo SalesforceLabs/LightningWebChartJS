@@ -1,0 +1,50 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes vertical page header
+ *
+ * @variant
+ * @name record-home-vertical
+ * @selector .slds-page-header_vertical
+ * @restrict .slds-page-header
+ * @support dev-ready
+ */
+
+.slds-page-header_vertical,
+.slds-page-header--vertical {
+  padding: $spacing-small;
+  background: $page-header-color-background-alt;
+  border-bottom: 0;
+
+  .slds-page-header__controls {
+    padding-top: $spacing-x-small;
+    margin-top: $spacing-x-small;
+    border-top: $border-width-thin solid $color-border;
+  }
+
+  .slds-page-header__name-title {
+    margin-top: $spacing-xx-small;
+  }
+}
+
+/**
+ * @summary Vertical list of detail items
+ * @selector .slds-page-header__detail-list
+ * @restrict .slds-page-header_vertical ul
+ */
+.slds-page-header__detail-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/**
+ * @summary List items of vertical detail list
+ * @selector .slds-page-header__detail-item
+ * @restrict .slds-page-header__detail-list li
+ */
+.slds-page-header__detail-item {
+  margin-top: $var-spacing-small;
+  width: 50%;
+}

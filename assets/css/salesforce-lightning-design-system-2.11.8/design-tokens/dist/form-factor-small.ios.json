@@ -1,0 +1,83 @@
+{
+  "properties": [
+    {
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "0",
+      "name": "pageHeaderBorderRadius"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "none",
+      "name": "cardShadow"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "none",
+      "name": "pageHeaderShadow"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "value": "14",
+      "name": "formLabelFontSize"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "name": "inputStaticFontWeight"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "name": "cardFontWeight"
+    },
+    {
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "category": "line-height",
+      "value": "1.375",
+      "comment": "Unitless line-heights for reusability",
+      "name": "lineHeightText"
+    },
+    {
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "category": "line-height",
+      "value": "1.375",
+      "comment": "Variable unitless line-heights for reusability",
+      "name": "varLineHeightText"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-form-element_address .slds-form-element__row {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}

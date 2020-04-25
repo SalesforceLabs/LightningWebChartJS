@@ -1,0 +1,11 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-chat_past .slds-chat-listitem_event {
+  margin: 1rem 0;
+}
+.slds-chat_past .slds-chat-message__meta {
+  margin: 0.25rem 0 0;
+}
+.slds-chat_past .slds-chat-message__meta b {
+  color: #080707;
+}

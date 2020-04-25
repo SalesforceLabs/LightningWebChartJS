@@ -1,0 +1,19 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-checkbox_standalone {
+  min-height: 2.75rem;
+}
+.slds-checkbox_standalone [type="checkbox"] {
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.slds-checkbox_standalone .slds-checkbox_faux {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

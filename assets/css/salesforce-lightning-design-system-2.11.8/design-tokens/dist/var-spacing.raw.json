@@ -1,0 +1,346 @@
+{
+  "aliases": {
+    "SPACING_X_SMALL": {
+      "value": "0.5rem"
+    },
+    "SPACING_XXX_SMALL": {
+      "value": "0.125rem"
+    },
+    "SPACING_XX_SMALL": {
+      "value": "0.25rem"
+    },
+    "SPACING_SMALL": {
+      "value": "0.75rem"
+    },
+    "SPACING_MEDIUM": {
+      "value": "1rem"
+    },
+    "SPACING_NONE": {
+      "value": "0"
+    },
+    "SPACING_X_LARGE": {
+      "value": "2rem"
+    },
+    "SPACING_XX_LARGE": {
+      "value": "3rem"
+    },
+    "SPACING_LARGE": {
+      "value": "1.5rem"
+    },
+    "FONT_SIZE_1": {
+      "value": "0.625rem"
+    },
+    "FONT_SIZE_2": {
+      "value": "0.75rem"
+    },
+    "FONT_SIZE_3": {
+      "value": "0.8125rem"
+    },
+    "FONT_SIZE_4": {
+      "value": "0.875rem"
+    },
+    "FONT_SIZE_5": {
+      "value": "1rem"
+    },
+    "FONT_SIZE_6": {
+      "value": "1.125rem"
+    },
+    "FONT_SIZE_7": {
+      "value": "1.25rem"
+    },
+    "FONT_SIZE_8": {
+      "value": "1.5rem"
+    },
+    "FONT_SIZE_9": {
+      "value": "1.75rem"
+    },
+    "FONT_SIZE_10": {
+      "value": "2rem"
+    },
+    "FONT_SIZE_11": {
+      "value": "2.625rem"
+    }
+  },
+  "props": {
+    "VAR_SPACING_X_LARGE": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size X Large",
+      "value": "1rem",
+      "originalValue": "{!SPACING_MEDIUM}",
+      "name": "VAR_SPACING_X_LARGE"
+    },
+    "VAR_SPACING_HORIZONTAL_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size Small",
+      "value": "0.5rem",
+      "originalValue": "{!SPACING_X_SMALL}",
+      "name": "VAR_SPACING_HORIZONTAL_SMALL"
+    },
+    "VAR_SPACING_HORIZONTAL_XX_LARGE": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size XX Large",
+      "value": "1.5rem",
+      "originalValue": "{!SPACING_LARGE}",
+      "name": "VAR_SPACING_HORIZONTAL_XX_LARGE"
+    },
+    "VAR_FONT_SIZE_10": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 10",
+      "value": "2rem",
+      "originalValue": "{!FONT_SIZE_10}",
+      "name": "VAR_FONT_SIZE_10"
+    },
+    "VAR_SPACING_VERTICAL_LARGE": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size Large",
+      "value": "0.75rem",
+      "originalValue": "{!SPACING_SMALL}",
+      "name": "VAR_SPACING_VERTICAL_LARGE"
+    },
+    "VAR_FONT_SIZE_11": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 11",
+      "value": "2.625rem",
+      "originalValue": "{!FONT_SIZE_11}",
+      "name": "VAR_FONT_SIZE_11"
+    },
+    "VAR_SPACING_LARGE": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size Large",
+      "value": "0.75rem",
+      "originalValue": "{!SPACING_SMALL}",
+      "name": "VAR_SPACING_LARGE"
+    },
+    "VAR_SPACING_MEDIUM": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size Medium",
+      "value": "0.5rem",
+      "originalValue": "{!SPACING_X_SMALL}",
+      "name": "VAR_SPACING_MEDIUM"
+    },
+    "VAR_SPACING_VERTICAL_MEDIUM": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size Medium",
+      "value": "0.5rem",
+      "originalValue": "{!SPACING_X_SMALL}",
+      "name": "VAR_SPACING_VERTICAL_MEDIUM"
+    },
+    "VAR_FONT_SIZE_1": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 1",
+      "value": "0.625rem",
+      "originalValue": "{!FONT_SIZE_1}",
+      "name": "VAR_FONT_SIZE_1"
+    },
+    "VAR_SPACING_VERTICAL_X_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size X Small",
+      "value": "0.25rem",
+      "originalValue": "{!SPACING_XX_SMALL}",
+      "name": "VAR_SPACING_VERTICAL_X_SMALL"
+    },
+    "VAR_SPACING_VERTICAL_XXX_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size XXX Small",
+      "value": "0.125rem",
+      "originalValue": "{!SPACING_XXX_SMALL}",
+      "name": "VAR_SPACING_VERTICAL_XXX_SMALL"
+    },
+    "VAR_FONT_SIZE_2": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 2",
+      "value": "0.75rem",
+      "originalValue": "{!FONT_SIZE_2}",
+      "name": "VAR_FONT_SIZE_2"
+    },
+    "VAR_SPACING_X_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size X Small",
+      "value": "0.125rem",
+      "originalValue": "{!SPACING_XXX_SMALL}",
+      "name": "VAR_SPACING_X_SMALL"
+    },
+    "VAR_SPACING_XXX_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size XXX Small",
+      "value": "0.125rem",
+      "originalValue": "{!SPACING_XXX_SMALL}",
+      "name": "VAR_SPACING_XXX_SMALL"
+    },
+    "VAR_FONT_SIZE_3": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 3",
+      "value": "0.8125rem",
+      "originalValue": "{!FONT_SIZE_3}",
+      "name": "VAR_FONT_SIZE_3"
+    },
+    "VAR_SPACING_HORIZONTAL_X_LARGE": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size X Large",
+      "value": "1rem",
+      "originalValue": "{!SPACING_MEDIUM}",
+      "name": "VAR_SPACING_HORIZONTAL_X_LARGE"
+    },
+    "VAR_FONT_SIZE_4": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 4",
+      "value": "0.875rem",
+      "originalValue": "{!FONT_SIZE_4}",
+      "name": "VAR_FONT_SIZE_4"
+    },
+    "VAR_FONT_SIZE_5": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 5",
+      "value": "0.875rem",
+      "originalValue": "{!FONT_SIZE_4}",
+      "name": "VAR_FONT_SIZE_5"
+    },
+    "VAR_SPACING_HORIZONTAL_XX_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size XX Small",
+      "value": "0.125rem",
+      "originalValue": "{!SPACING_XXX_SMALL}",
+      "name": "VAR_SPACING_HORIZONTAL_XX_SMALL"
+    },
+    "VAR_FONT_SIZE_6": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 6",
+      "value": "1rem",
+      "originalValue": "{!FONT_SIZE_5}",
+      "name": "VAR_FONT_SIZE_6"
+    },
+    "VAR_SPACING_XX_LARGE": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size XX Large",
+      "value": "1.5rem",
+      "originalValue": "{!SPACING_LARGE}",
+      "name": "VAR_SPACING_XX_LARGE"
+    },
+    "VAR_FONT_SIZE_7": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 7",
+      "value": "1.25rem",
+      "originalValue": "{!FONT_SIZE_7}",
+      "name": "VAR_FONT_SIZE_7"
+    },
+    "VAR_SPACING_VERTICAL_XX_LARGE": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size XX Large",
+      "value": "1.5rem",
+      "originalValue": "{!SPACING_LARGE}",
+      "name": "VAR_SPACING_VERTICAL_XX_LARGE"
+    },
+    "VAR_FONT_SIZE_8": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 8",
+      "value": "1.25rem",
+      "originalValue": "{!FONT_SIZE_7}",
+      "name": "VAR_FONT_SIZE_8"
+    },
+    "VAR_SPACING_VERTICAL_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size Small",
+      "value": "0.5rem",
+      "originalValue": "{!SPACING_X_SMALL}",
+      "name": "VAR_SPACING_VERTICAL_SMALL"
+    },
+    "VAR_FONT_SIZE_9": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 9",
+      "value": "1.75rem",
+      "originalValue": "{!FONT_SIZE_9}",
+      "name": "VAR_FONT_SIZE_9"
+    },
+    "VAR_SPACING_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size Small",
+      "value": "0.25rem",
+      "originalValue": "{!SPACING_XX_SMALL}",
+      "name": "VAR_SPACING_SMALL"
+    },
+    "VAR_SPACING_HORIZONTAL_LARGE": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size Large",
+      "value": "0.75rem",
+      "originalValue": "{!SPACING_SMALL}",
+      "name": "VAR_SPACING_HORIZONTAL_LARGE"
+    },
+    "VAR_SPACING_HORIZONTAL_XXX_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size XXX Small",
+      "value": "0.125rem",
+      "originalValue": "{!SPACING_XXX_SMALL}",
+      "name": "VAR_SPACING_HORIZONTAL_XXX_SMALL"
+    },
+    "VAR_SPACING_HORIZONTAL_X_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size X Small",
+      "value": "0.25rem",
+      "originalValue": "{!SPACING_XX_SMALL}",
+      "name": "VAR_SPACING_HORIZONTAL_X_SMALL"
+    },
+    "VAR_SPACING_XX_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size XX Small",
+      "value": "0.125rem",
+      "originalValue": "{!SPACING_XXX_SMALL}",
+      "name": "VAR_SPACING_XX_SMALL"
+    },
+    "VAR_SPACING_HORIZONTAL_MEDIUM": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size Medium",
+      "value": "0.75rem",
+      "originalValue": "{!SPACING_SMALL}",
+      "name": "VAR_SPACING_HORIZONTAL_MEDIUM"
+    },
+    "VAR_SPACING_VERTICAL_XX_SMALL": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size XX Small",
+      "value": "0.125rem",
+      "originalValue": "{!SPACING_XXX_SMALL}",
+      "name": "VAR_SPACING_VERTICAL_XX_SMALL"
+    },
+    "VAR_SPACING_VERTICAL_X_LARGE": {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size X Large",
+      "value": "1rem",
+      "originalValue": "{!SPACING_MEDIUM}",
+      "name": "VAR_SPACING_VERTICAL_X_LARGE"
+    }
+  }
+}

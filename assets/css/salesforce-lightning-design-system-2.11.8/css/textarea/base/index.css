@@ -1,0 +1,55 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-textarea {
+  background-color: white;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  width: 100%;
+  -webkit-transition: border 0.1s linear, background-color 0.1s linear;
+  transition: border 0.1s linear, background-color 0.1s linear;
+  -webkit-appearance: none;
+  resize: vertical;
+  padding: 0.5rem 0.75rem;
+}
+.slds-textarea:required {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-textarea:focus,
+.slds-textarea:active {
+  outline: 0;
+  border-color: #1589ee;
+  background-color: white;
+  -webkit-box-shadow: 0 0 3px #0070d2;
+  box-shadow: 0 0 3px #0070d2;
+}
+.slds-textarea[disabled],
+.slds-textarea.slds-is-disabled {
+  background-color: #ecebea;
+  border-color: #c9c7c5;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.slds-textarea[disabled]:focus,
+.slds-textarea[disabled]:active,
+.slds-textarea.slds-is-disabled:focus,
+.slds-textarea.slds-is-disabled:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.slds-has-error .slds-textarea {
+  background-color: white;
+  border-color: #c23934;
+  -webkit-box-shadow: #c23934 0 0 0 1px inset;
+  box-shadow: #c23934 0 0 0 1px inset;
+  background-clip: padding-box;
+}
+.slds-has-error .slds-textarea:focus,
+.slds-has-error .slds-textarea:active {
+  -webkit-box-shadow: #c23934 0 0 0 1px inset, 0 0 3px #0070d2;
+  box-shadow: #c23934 0 0 0 1px inset, 0 0 3px #0070d2;
+}

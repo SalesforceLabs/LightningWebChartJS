@@ -1,0 +1,112 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-avatar {
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+  line-height: 1;
+  font-size: 0.875rem;
+  color: white;
+}
+.slds-avatar:hover,
+.slds-avatar:focus:hover {
+  color: currentColor;
+}
+.slds-avatar.slds-avatar_group-image-small {
+  background: url("/assets/images/group_avatar_96.png") top left/cover no-repeat;
+}
+.slds-avatar.slds-avatar_group-image-medium {
+  background: url("/assets/images/group_avatar_160.png") top left/cover no-repeat;
+}
+.slds-avatar.slds-avatar_group-image-large {
+  background: url("/assets/images/group_avatar_200.png") top left/cover no-repeat;
+}
+.slds-avatar.slds-avatar_profile-image-small {
+  background: url("/assets/images/profile_avatar_96.png") top left/cover no-repeat;
+}
+.slds-avatar.slds-avatar_profile-image-medium {
+  background: url("/assets/images/profile_avatar_160.png") top left/cover no-repeat;
+}
+.slds-avatar.slds-avatar_profile-image-large {
+  background: url("/assets/images/profile_avatar_200.png") top left/cover no-repeat;
+}
+.slds-avatar_x-small {
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.625rem;
+}
+.slds-avatar_x-small .slds-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.slds-avatar_small {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.625rem;
+}
+.slds-avatar_small .slds-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.slds-avatar_medium {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.875rem;
+}
+.slds-avatar_medium .slds-icon {
+  width: 2rem;
+  height: 2rem;
+}
+.slds-avatar_large {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.25;
+}
+.slds-avatar_large .slds-icon {
+  width: 3rem;
+  height: 3rem;
+}
+.slds-avatar_circle {
+  border-radius: 50%;
+}
+
+.slds-avatar_empty {
+  border: 1px dashed #dddbda;
+}
+.slds-avatar__initials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+}
+.slds-avatar__initials[title] {
+  cursor: default;
+  text-decoration: none;
+}
+.slds-avatar__initials:hover {
+  color: white;
+  cursor: default;
+}
+.slds-avatar__initials_inverse {
+  background-color: #f3f2f2;
+  color: #3e3e3c;
+  text-shadow: none;
+}
+.slds-avatar__initials_inverse:hover {
+  color: #3e3e3c;
+}

@@ -1,0 +1,13 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-dropdown {
+  padding: 0;
+  font-size: 1rem;
+}
+.slds-dropdown__item > a {
+  line-height: 2.75rem;
+  padding: 0 0.75rem;
+}
+.slds-dropdown__header {
+  font-size: 1rem;
+}

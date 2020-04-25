@@ -1,0 +1,201 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-table_edit_container:focus {
+  outline: none;
+}
+.slds-table_edit_container:focus:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fafaf9;
+  -webkit-box-shadow: 0 0 0 4px #1589ee inset;
+  box-shadow: 0 0 0 4px #1589ee inset;
+}
+.slds-table_edit_container:focus .slds-table_edit_container-message {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20rem;
+  margin-top: -2.25rem;
+  margin-left: -10rem;
+  background-color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.slds-table_edit_container-message {
+  display: none;
+}
+.slds-table_edit {
+}
+.slds-table_edit thead th {
+  padding: 0;
+}
+.slds-table_edit .slds-cell-error {
+  padding-left: 0;
+}
+.slds-table_edit:not(.slds-no-cell-focus) tbody tr:hover > .slds-cell-edit.slds-has-focus {
+  background-color: white;
+  -webkit-box-shadow: #0070d2 0 0 0 1px inset;
+  box-shadow: #0070d2 0 0 0 1px inset;
+}
+.slds-table_edit.slds-table tbody tr:hover > .slds-cell-edit:hover {
+  background-color: white;
+}
+.slds-table_edit.slds-table tbody tr:hover > .slds-cell-edit.slds-is-edited {
+  background-color: #faffbd;
+}
+.slds-table_edit.slds-table tbody tr:hover > .slds-cell-edit.slds-has-error {
+  background-color: #faffbd;
+  -webkit-box-shadow: #c23934 0 0 0 2px inset;
+  box-shadow: #c23934 0 0 0 2px inset;
+}
+.slds-table_edit .slds-button__icon_edit:focus {
+  fill: #1589ee;
+}
+
+.slds-has-focus .slds-th__action {
+  background-color: white;
+  -webkit-box-shadow: #005fb2 0 0 0 1px inset;
+  box-shadow: #005fb2 0 0 0 1px inset;
+}
+
+.slds-has-focus.slds-is-resizable .slds-th__action,
+.slds-has-focus.slds-is-resizable .slds-th__action:focus,
+.slds-has-focus.slds-is-resizable .slds-th__action:hover,
+.slds-has-focus.slds-is-resizable .slds-th__action:focus:hover,
+.slds-is-resizable .slds-th__action:focus,
+.slds-is-resizable .slds-th__action:focus:hover {
+  background-color: white;
+  -webkit-box-shadow: #005fb2 0 0 0 1px inset, #005fb2 -0.25rem 0 0 inset;
+  box-shadow: #005fb2 0 0 0 1px inset, #005fb2 -0.25rem 0 0 inset;
+}
+.slds-table .slds-cell-edit {
+  outline: 0;
+}
+.slds-table .slds-cell-edit.slds-has-focus {
+  background-color: white;
+  -webkit-box-shadow: #005fb2 0 0 0 1px inset;
+  box-shadow: #005fb2 0 0 0 1px inset;
+}
+.slds-table .slds-cell-edit.slds-has-focus .slds-button__icon_edit,
+.slds-table .slds-cell-edit.slds-has-focus .slds-button__icon_lock {
+  opacity: 1;
+}
+.slds-table .slds-cell-edit.slds-has-focus:hover {
+  -webkit-box-shadow: #005fb2 0 0 0 1px inset;
+  box-shadow: #005fb2 0 0 0 1px inset;
+}
+.slds-table .slds-cell-edit.slds-has-focus a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+.slds-table .slds-cell-edit.slds-is-edited,
+.slds-table .slds-cell-edit.slds-is-edited:hover {
+  background-color: #faffbd;
+}
+.slds-table .slds-cell-edit.slds-has-error,
+.slds-table .slds-cell-edit.slds-has-error:hover {
+  background-color: #faffbd;
+  -webkit-box-shadow: #c23934 0 0 0 2px inset;
+  box-shadow: #c23934 0 0 0 2px inset;
+}
+.slds-cell-edit__button {
+  width: 1.25rem;
+  height: 1.25rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.slds-cell-edit__button:focus .slds-button__icon_edit {
+  opacity: 1;
+}
+.slds-no-cell-focus .slds-has-focus {
+  background: #f3f2f2;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-no-cell-focus .slds-has-focus .slds-th__action,
+.slds-no-cell-focus .slds-has-focus .slds-th__action:hover,
+.slds-no-cell-focus .slds-has-focus .slds-th__action:focus,
+.slds-no-cell-focus .slds-has-focus .slds-th__action:focus:hover {
+  color: inherit;
+  background-color: white;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-no-cell-focus .slds-has-focus .slds-button__icon_edit {
+  opacity: 1;
+}
+.slds-no-cell-focus .slds-has-focus.slds-is-resizable:hover .slds-th__action {
+  background-color: white;
+  -webkit-box-shadow: #dddbda -0.25rem 0 0 inset;
+  box-shadow: #dddbda -0.25rem 0 0 inset;
+}
+.slds-no-cell-focus .slds-is-sortable.slds-has-focus .slds-is-sortable__icon {
+  display: none;
+}
+.slds-no-cell-focus .slds-is-sorted.slds-has-focus .slds-is-sortable__icon {
+  display: inline-block;
+  fill: #706e6b;
+}
+.slds-no-cell-focus .slds-is-edited,
+.slds-no-cell-focus .slds-is-edited:hover {
+  background-color: #faffbd;
+}
+.slds-no-cell-focus .slds-has-error,
+.slds-no-cell-focus .slds-has-error:hover {
+  background-color: #faffbd;
+  -webkit-box-shadow: #c23934 0 0 0 2px inset;
+  box-shadow: #c23934 0 0 0 2px inset;
+}
+.slds-no-cell-focus thead .slds-has-focus:hover {
+  color: #006dcc;
+}
+.slds-no-cell-focus thead .slds-has-focus:hover .slds-is-sortable__icon {
+  display: inline-block;
+  fill: #006dcc;
+}
+
+.slds-hint-parent .slds-cell-edit .slds-button__icon_edit,
+.slds-hint-parent .slds-cell-edit .slds-button__icon_lock {
+  opacity: 0;
+}
+.slds-hint-parent .slds-cell-edit:hover .slds-button__icon_edit,
+.slds-hint-parent .slds-cell-edit:focus .slds-button__icon_edit {
+  opacity: 0.5;
+}
+.slds-hint-parent .slds-cell-edit:hover .slds-button__icon_edit:hover,
+.slds-hint-parent .slds-cell-edit:hover .slds-button__icon_edit:focus,
+.slds-hint-parent .slds-cell-edit:focus .slds-button__icon_edit:hover,
+.slds-hint-parent .slds-cell-edit:focus .slds-button__icon_edit:focus {
+  fill: #1589ee;
+  opacity: 1;
+}
+.slds-hint-parent .slds-cell-edit:hover .slds-button__icon_lock,
+.slds-hint-parent .slds-cell-edit:focus .slds-button__icon_lock {
+  opacity: 0.5;
+}
+.slds-hint-parent .slds-cell-edit.slds-has-focus .slds-button__icon_edit {
+  fill: #706e6b;
+  opacity: 1;
+}
+.slds-form-element__label_edit {
+  margin: 0 0.125rem 0;
+}
+.slds-popover_edit {
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.slds-popover_edit .slds-popover__body {
+  padding: 0.25rem 0.25rem 0.25rem 0;
+}
+.slds-popover_edit .slds-form-element__help {
+  width: 100%;
+  padding-left: 0.75rem;
+}

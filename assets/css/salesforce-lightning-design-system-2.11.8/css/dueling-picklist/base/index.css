@@ -1,0 +1,82 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-dueling-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  clear: left;
+}
+.slds-dueling-list__column {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.slds-dueling-list__column .slds-button {
+  margin: 0.25rem;
+}
+.slds-dueling-list__column .slds-button:first-of-type {
+  margin-top: 1.5rem;
+}
+.slds-dueling-list__column_responsive {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 15rem;
+  flex: 0 1 15rem;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  overflow: hidden;
+  min-width: 6rem;
+}
+.slds-dueling-list__column_responsive .slds-dueling-list__options {
+  width: auto;
+  max-width: 100%;
+}
+.slds-dueling-list__options,
+.slds-picklist__options {
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0;
+  width: 15rem;
+  height: 15rem;
+  background-color: white;
+  overflow: auto;
+}
+.slds-dueling-list__options [aria-selected="true"],
+.slds-picklist__options [aria-selected="true"] {
+  background-color: #0070d2;
+  color: white;
+}
+.slds-dueling-list__options [aria-selected="true"]:hover,
+.slds-dueling-list__options [aria-selected="true"]:focus,
+.slds-picklist__options [aria-selected="true"]:hover,
+.slds-picklist__options [aria-selected="true"]:focus {
+  background: #005fb2;
+  color: white;
+}
+.slds-dueling-list__options .slds-is-grabbed,
+.slds-picklist__options .slds-is-grabbed {
+  -webkit-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+.slds-dueling-list__options.slds-is-disabled,
+.slds-picklist__options.slds-is-disabled {
+  background-color: #ecebea;
+  border-color: #c9c7c5;
+  color: #3e3e3c;
+}
+.slds-dueling-list__options.slds-is-disabled:hover,
+.slds-picklist__options.slds-is-disabled:hover {
+  cursor: not-allowed;
+}
+.slds-dueling-list__options.slds-is-disabled .slds-listbox__option:hover,
+.slds-picklist__options.slds-is-disabled .slds-listbox__option:hover {
+  cursor: not-allowed;
+  background-color: transparent;
+}
+.slds-dueling-list__options.slds-is-disabled .slds-listbox__option:focus,
+.slds-picklist__options.slds-is-disabled .slds-listbox__option:focus {
+  background-color: transparent;
+}

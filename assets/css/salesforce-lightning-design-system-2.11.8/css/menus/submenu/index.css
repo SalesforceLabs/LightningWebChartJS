@@ -1,0 +1,30 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-has-submenu {
+  position: relative;
+}
+.slds-has-submenu .slds-dropdown_submenu {
+  top: 0;
+  -webkit-transform: none;
+  transform: none;
+}
+.slds-has-submenu .slds-dropdown_submenu-left {
+  left: auto;
+  right: 100%;
+  margin-right: 0.25rem;
+}
+.slds-has-submenu .slds-dropdown_submenu-right {
+  left: 100%;
+  margin-left: 0.25rem;
+}
+.slds-has-submenu .slds-dropdown_submenu-bottom {
+  top: auto;
+  bottom: 0;
+  margin-bottom: -0.25rem;
+}
+.slds-has-submenu.slds-dropdown__item .slds-dropdown_submenu {
+  display: none;
+}
+.slds-has-submenu [role="menuitem"][aria-expanded="true"] + .slds-dropdown_submenu {
+  display: block;
+}

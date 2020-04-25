@@ -1,0 +1,14 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin focus-button {
+  outline: 0;
+  box-shadow: $shadow-button-focus;
+}
+
+@mixin focus-inverse {
+  outline: none;
+  box-shadow: $shadow-button-focus-inverse;
+  border: $border-width-thin solid $color-border-button-focus-inverse;
+}

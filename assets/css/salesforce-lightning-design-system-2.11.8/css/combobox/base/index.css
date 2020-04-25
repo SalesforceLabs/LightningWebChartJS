@@ -1,0 +1,399 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-combobox_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+}
+.slds-combobox_container.slds-is-open .slds-dropdown {
+  display: block;
+}
+.slds-combobox_container.slds-has-selection .slds-combobox__input-value,
+.slds-combobox_container.slds-has-selection .slds-combobox__input-value:focus {
+  -webkit-box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px #dddbda inset;
+  box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px #dddbda inset;
+}
+.slds-combobox_container.slds-has-icon-only .slds-combobox__input,
+.slds-combobox_container.slds-has-icon-only .slds-combobox__input:focus,
+.slds-combobox_container.slds-has-icon-only .slds-combobox__input.slds-has-focus {
+  width: 0;
+  pointer-events: auto;
+}
+.slds-combobox_container.slds-has-icon-only .slds-input__icon {
+  z-index: 2;
+  pointer-events: none;
+}
+.slds-combobox {
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.slds-combobox__form-element {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+[role="combobox"] input[readonly] {
+  padding-left: 0.75rem;
+  border-color: #dddbda;
+  background-color: white;
+  font-size: inherit;
+  font-weight: 400;
+}
+[role="combobox"] input[readonly]:focus,
+[role="combobox"] input[readonly].slds-has-focus {
+  border-color: #1589ee;
+  -webkit-box-shadow: 0 0 3px #0070d2;
+  box-shadow: 0 0 3px #0070d2;
+}
+[role="combobox"] input[readonly][disabled] {
+  background-color: #ecebea;
+  border-color: #c9c7c5;
+}
+.slds-listbox_inline {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.125rem;
+  margin-right: 0.125rem;
+}
+.slds-listbox_inline li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slds-listbox_inline li + li {
+  padding-left: 0.125rem;
+}
+.slds-listbox_horizontal {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.slds-listbox_horizontal li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slds-listbox_horizontal li + li {
+  padding-left: 0.125rem;
+}
+.slds-listbox__option:hover {
+  cursor: pointer;
+}
+.slds-listbox__option:focus {
+  outline: 0;
+}
+.slds-listbox__option .slds-truncate {
+  display: inline-block;
+  vertical-align: middle;
+}
+.slds-listbox__option[aria-disabled="true"] {
+  color: #dddbda;
+}
+.slds-listbox__option-header {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.slds-listbox__option-icon {
+  width: 1.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #706e6b;
+}
+
+.slds-listbox__option[aria-disabled="true"] .slds-listbox__option-icon {
+  color: currentColor;
+}
+.slds-listbox_vertical {
+}
+.slds-listbox_vertical .slds-listbox__option:focus,
+.slds-listbox_vertical .slds-listbox__option:hover,
+.slds-listbox_vertical .slds-listbox__option.slds-has-focus {
+  background-color: #f3f2f2;
+  text-decoration: none;
+}
+.slds-listbox_vertical .slds-listbox__option[aria-disabled="true"],
+.slds-listbox_vertical .slds-listbox__option[role="presentation"]:hover {
+  background-color: transparent;
+  cursor: default;
+}
+.slds-listbox_vertical .slds-listbox__option_entity {
+  padding: 0.25rem 0.75rem;
+}
+.slds-listbox_vertical .slds-listbox__option_entity .slds-media__figure {
+  margin-right: 0.5rem;
+}
+.slds-listbox_vertical .slds-listbox__option_plain {
+  padding: 0.5rem 0.75rem;
+}
+.slds-listbox_vertical .slds-listbox__option_term {
+  padding: 0.5rem 0.75rem;
+}
+.slds-listbox_vertical .slds-listbox__option_has-meta .slds-media__figure {
+  margin-top: 0.25rem;
+}
+[class*="slds-input-has-icon_left"] .slds-combobox__input[value],
+[class*="slds-input-has-icon--left"] .slds-combobox__input[value],
+[class*="slds-input-has-icon_left"] .slds-combobox__input.slds-combobox__input-value,
+[class*="slds-input-has-icon--left"] .slds-combobox__input.slds-combobox__input-value {
+  padding-left: 2.25rem;
+}
+.slds-combobox__input-entity-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  top: 50%;
+  left: calc(0.25rem + 1px);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.slds-combobox__input-entity-icon .slds-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.slds-combobox_container__icon {
+  color: #b0adab;
+}
+.slds-listbox__icon-selected {
+  opacity: 0;
+  fill: #0070d2;
+}
+.slds-listbox__option.slds-is-selected .slds-listbox__icon-selected {
+  opacity: 1;
+}
+.slds-listbox__option.slds-is-selected .slds-listbox__option-icon {
+  color: #0070d2;
+}
+.slds-listbox__option-text_entity {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  margin-bottom: 0.125rem;
+}
+.slds-listbox__option-meta {
+  display: block;
+  margin-top: -0.25rem;
+  color: #3e3e3c;
+}
+
+.slds-listbox__option[aria-disabled="true"] .slds-listbox__option-meta {
+  color: currentColor;
+}
+
+.slds-listbox_object-switcher {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding: 0.125rem;
+}
+.slds-combobox_object-switcher {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.slds-combobox_object-switcher .slds-combobox__input {
+  width: 7.5rem;
+  -webkit-transition: width 80ms linear;
+  transition: width 80ms linear;
+  font-size: 0.75rem;
+  color: #706e6b;
+}
+.slds-combobox_object-switcher .slds-combobox__input:focus,
+.slds-combobox_object-switcher .slds-combobox__input.slds-has-focus {
+  width: 10rem;
+}
+.slds-combobox__input {
+}
+.slds-combobox__input:focus,
+.slds-combobox__input.slds-has-focus {
+  border-color: #1589ee;
+  -webkit-box-shadow: 0 0 3px #0070d2;
+  box-shadow: 0 0 3px #0070d2;
+}
+.slds-combobox-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.slds-combobox-group .slds-combobox_container {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.slds-combobox-group .slds-combobox__input,
+.slds-combobox-group .slds-combobox_object-switcher__button {
+  border-radius: 0;
+  margin-left: -1px;
+  margin-right: -1px;
+  position: relative;
+}
+.slds-combobox-group .slds-combobox__input:focus,
+.slds-combobox-group .slds-combobox__input.slds-has-focus,
+.slds-combobox-group .slds-combobox_object-switcher__button:focus,
+.slds-combobox-group .slds-combobox_object-switcher__button.slds-has-focus {
+  z-index: 1;
+}
+.slds-combobox-group.slds-has-selection .slds-combobox-addon_start .slds-combobox__input {
+  border-bottom-left-radius: 0;
+}
+.slds-combobox-group.slds-has-selection .slds-combobox-addon_end .slds-combobox__input {
+  border-bottom-right-radius: 0;
+}
+.slds-combobox-group.slds-has-selection ~ .slds-listbox_selection-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background: white;
+  border: 1px solid #dddbda;
+  border-top: 0;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  left: -1px;
+}
+.slds-combobox-group .slds-listbox_horizontal li + li {
+  padding: 0.125rem;
+}
+.slds-listbox_selection-group {
+  position: relative;
+  padding: 0;
+  padding-right: 3.75rem;
+  height: 1.875rem;
+  overflow: hidden;
+}
+.slds-listbox_selection-group.slds-is-expanded {
+  height: auto;
+  padding: 0;
+}
+.slds-listbox_selection-group .slds-listbox {
+  padding: 0 0 0.125rem;
+}
+.slds-listbox_selection-group .slds-listbox-item {
+  padding: 0.125rem 0.125rem 0;
+}
+.slds-listbox_selection-group .slds-listbox-toggle {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0.5rem;
+}
+.slds-listbox_selection-group .slds-listbox-toggle .slds-button {
+  line-height: 1;
+}
+.slds-combobox-addon_start .slds-combobox__input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.slds-combobox-addon_end .slds-combobox__input {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.slds-has-inline-listbox,
+.slds-has-object-switcher {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background: white;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+}
+.slds-has-inline-listbox .slds-combobox,
+.slds-has-object-switcher .slds-combobox {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.slds-has-inline-listbox .slds-combobox__input,
+.slds-has-object-switcher .slds-combobox__input {
+  min-height: 100%;
+  line-height: calc(1.875rem - 2px);
+  border: 0;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+.slds-has-inline-listbox .slds-combobox__input:focus,
+.slds-has-inline-listbox .slds-combobox__input:active,
+.slds-has-object-switcher .slds-combobox__input:focus,
+.slds-has-object-switcher .slds-combobox__input:active {
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-has-inline-listbox .slds-listbox_object-switcher ~ .slds-listbox_inline,
+.slds-has-inline-listbox .slds-combobox_container__icon ~ .slds-listbox_inline,
+.slds-has-object-switcher .slds-listbox_object-switcher ~ .slds-listbox_inline,
+.slds-has-object-switcher .slds-combobox_container__icon ~ .slds-listbox_inline {
+  margin-left: 0.5rem;
+}
+.slds-has-inline-listbox.slds-has-icon_left,
+.slds-has-object-switcher.slds-has-icon_left {
+  padding-left: 2.25rem;
+}
+.slds-has-inline-listbox.slds-has-icon_left .slds-combobox_container__icon,
+.slds-has-object-switcher.slds-has-icon_left .slds-combobox_container__icon {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: 1.125rem;
+  top: 50%;
+  margin-top: -0.5rem;
+}
+
+.slds-has-inline-listbox [role="listbox"] {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 0.125rem;
+}
+.slds-has-inline-listbox .slds-combobox__input-value {
+  -webkit-box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px #dddbda inset;
+  box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px #dddbda inset;
+}

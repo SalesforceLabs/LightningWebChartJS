@@ -1,0 +1,71 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-button_icon-container.slds-is-selected,
+.slds-button_icon-border.slds-is-selected,
+.slds-button_icon-border-filled.slds-is-selected,
+.slds-button_icon-border-inverse.slds-is-selected {
+  background-color: #0070d2;
+  border-color: #0070d2;
+  color: white;
+}
+.slds-button_icon-container.slds-is-selected:link,
+.slds-button_icon-container.slds-is-selected:visited,
+.slds-button_icon-container.slds-is-selected:active,
+.slds-button_icon-border.slds-is-selected:link,
+.slds-button_icon-border.slds-is-selected:visited,
+.slds-button_icon-border.slds-is-selected:active,
+.slds-button_icon-border-filled.slds-is-selected:link,
+.slds-button_icon-border-filled.slds-is-selected:visited,
+.slds-button_icon-border-filled.slds-is-selected:active,
+.slds-button_icon-border-inverse.slds-is-selected:link,
+.slds-button_icon-border-inverse.slds-is-selected:visited,
+.slds-button_icon-border-inverse.slds-is-selected:active {
+  color: white;
+}
+.slds-button_icon-container.slds-is-selected:hover,
+.slds-button_icon-container.slds-is-selected:focus,
+.slds-button_icon-border.slds-is-selected:hover,
+.slds-button_icon-border.slds-is-selected:focus,
+.slds-button_icon-border-filled.slds-is-selected:hover,
+.slds-button_icon-border-filled.slds-is-selected:focus,
+.slds-button_icon-border-inverse.slds-is-selected:hover,
+.slds-button_icon-border-inverse.slds-is-selected:focus {
+  background-color: #005fb2;
+  border-color: #005fb2;
+  color: white;
+}
+.slds-button_icon-container.slds-is-selected:active,
+.slds-button_icon-border.slds-is-selected:active,
+.slds-button_icon-border-filled.slds-is-selected:active,
+.slds-button_icon-border-inverse.slds-is-selected:active {
+  background-color: #005fb2;
+  border-color: #005fb2;
+}
+.slds-button_icon-container.slds-is-selected .slds-button__icon,
+.slds-button_icon-border.slds-is-selected .slds-button__icon,
+.slds-button_icon-border-filled.slds-is-selected .slds-button__icon,
+.slds-button_icon-border-inverse.slds-is-selected .slds-button__icon {
+  fill: white;
+}
+.slds-button_icon-container.slds-is-selected:hover .slds-button__icon,
+.slds-button_icon-container.slds-is-selected:focus .slds-button__icon,
+.slds-button_icon-border.slds-is-selected:hover .slds-button__icon,
+.slds-button_icon-border.slds-is-selected:focus .slds-button__icon,
+.slds-button_icon-border-filled.slds-is-selected:hover .slds-button__icon,
+.slds-button_icon-border-filled.slds-is-selected:focus .slds-button__icon,
+.slds-button_icon-border-inverse.slds-is-selected:hover .slds-button__icon,
+.slds-button_icon-border-inverse.slds-is-selected:focus .slds-button__icon {
+  fill: white;
+}
+.slds-button_icon-container.slds-is-selected[disabled],
+.slds-button_icon-container.slds-is-selected:disabled,
+.slds-button_icon-border.slds-is-selected[disabled],
+.slds-button_icon-border.slds-is-selected:disabled,
+.slds-button_icon-border-filled.slds-is-selected[disabled],
+.slds-button_icon-border-filled.slds-is-selected:disabled,
+.slds-button_icon-border-inverse.slds-is-selected[disabled],
+.slds-button_icon-border-inverse.slds-is-selected:disabled {
+  background: #c9c7c5;
+  border-color: #c9c7c5;
+  color: white;
+}

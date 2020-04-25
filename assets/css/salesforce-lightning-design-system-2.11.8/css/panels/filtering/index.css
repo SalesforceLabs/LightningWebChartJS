@@ -1,0 +1,8 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-panel_filters {
+  margin-left: 1rem;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+}

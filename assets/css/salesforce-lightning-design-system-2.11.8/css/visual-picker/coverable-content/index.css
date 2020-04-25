@@ -1,0 +1,154 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-visual-picker {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+  cursor: pointer;
+}
+.slds-visual-picker + .slds-visual-picker {
+  margin-left: 1rem;
+}
+.slds-visual-picker:active .slds-visual-picker__figure {
+  border: 1px solid #1589ee;
+  -webkit-box-shadow: 0 0 0 1px #1589ee inset;
+  box-shadow: 0 0 0 1px #1589ee inset;
+}
+.slds-visual-picker:hover .slds-visual-picker__figure {
+  cursor: pointer;
+}
+.slds-visual-picker input:not(:disabled) ~ label:hover .slds-visual-picker__figure {
+  cursor: pointer;
+  outline: 0;
+  border: 1px solid #1589ee;
+  -webkit-box-shadow: 0 0 0 1px #1589ee inset;
+  box-shadow: 0 0 0 1px #1589ee inset;
+}
+.slds-visual-picker input {
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+.slds-visual-picker input:focus ~ label .slds-visual-picker__figure {
+  border: 1px solid #1589ee;
+  -webkit-box-shadow: 0 0 0 1px #1589ee inset;
+  box-shadow: 0 0 0 1px #1589ee inset;
+}
+.slds-visual-picker input:checked ~ label .slds-visual-picker__figure {
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16);
+}
+.slds-visual-picker input:focus ~ label .slds-visual-picker__body > *:first-child {
+  text-decoration: underline;
+}
+.slds-visual-picker input:checked ~ label .slds-is-not-selected {
+  display: none;
+}
+.slds-visual-picker input:checked ~ label .slds-is-selected {
+  display: block;
+}
+.slds-visual-picker input:checked ~ label .slds-visual-picker__icon {
+  background-color: #1589ee;
+  border: 1px solid #1589ee;
+}
+.slds-visual-picker input:checked ~ label .slds-visual-picker__text {
+  border: 1px solid #1589ee;
+  -webkit-box-shadow: 0 0 0 1px #1589ee inset;
+  box-shadow: 0 0 0 1px #1589ee inset;
+}
+.slds-visual-picker input:checked ~ label .slds-visual-picker__text:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 0.5rem;
+  border-width: 1rem;
+  border-right-color: #1589ee;
+  border-top-color: #1589ee;
+}
+.slds-visual-picker input[disabled] {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.slds-visual-picker input[disabled] ~ label .slds-visual-picker__body,
+.slds-visual-picker input[disabled] ~ label .slds-visual-picker__text {
+  color: #3e3e3c;
+}
+.slds-visual-picker input[disabled] ~ label .slds-visual-picker__figure {
+  border-color: #c9c7c5;
+  background-color: #ecebea;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-visual-picker input[disabled] ~ label .slds-visual-picker__figure:hover {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-visual-picker__figure {
+  display: block;
+  background: white;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+.slds-visual-picker__figure .slds-icon-action-check {
+  background-color: #1589ee;
+}
+.slds-visual-picker__figure span {
+  display: block;
+}
+.slds-visual-picker__figure .slds-is-selected {
+  display: none;
+}
+.slds-visual-picker_medium .slds-visual-picker__figure,
+.slds-visual-picker_medium .slds-visual-picker__body {
+  width: 12rem;
+}
+.slds-visual-picker_medium .slds-visual-picker__figure {
+  height: 12rem;
+}
+.slds-visual-picker_large .slds-visual-picker__figure,
+.slds-visual-picker_large .slds-visual-picker__body {
+  width: 15rem;
+}
+.slds-visual-picker_large .slds-visual-picker__figure {
+  height: 15rem;
+}
+.slds-visual-picker__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: transparent;
+  padding: 1rem 0.5rem;
+  border: 0;
+  border-radius: 0;
+}

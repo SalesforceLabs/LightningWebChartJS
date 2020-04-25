@@ -1,0 +1,188 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-icon-ellie {
+  width: calc(14rem / 16);
+  height: calc(14rem / 16);
+  display: inline-block;
+  overflow: hidden;
+}
+.slds-icon-ellie.slds-is-animated {
+  will-change: transform;
+  -webkit-animation: slds-icon-ellie-pop 0.3s ease-in 2s 1 both;
+  animation: slds-icon-ellie-pop 0.3s ease-in 2s 1 both;
+}
+.slds-icon-ellie.slds-is-animated svg {
+  will-change: transform;
+  -webkit-animation: slds-icon-ellie 1.2s steps(20) 2.3s 2 alternate;
+  animation: slds-icon-ellie 1.2s steps(20) 2.3s 2 alternate;
+}
+.slds-icon-ellie.slds-is-paused,
+.slds-icon-ellie.slds-is-paused svg {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.slds-icon-ellie svg {
+  width: 17.5rem;
+  vertical-align: top;
+  color: #00a0e3;
+}
+.slds-icon-ellie circle:nth-child(2n + 1) {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 4px;
+}
+.slds-icon-ellie circle:nth-child(2n) {
+  fill: #fff;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+.slds-icon-ellie circle:nth-child(1),
+.slds-icon-ellie circle:nth-last-child(2) {
+  stroke-width: 4px;
+}
+
+.slds-icon-ellie circle:nth-child(2),
+.slds-icon-ellie circle:nth-last-child(1) {
+  stroke-width: 1px;
+}
+
+.slds-icon-ellie circle:nth-child(3),
+.slds-icon-ellie circle:nth-last-child(4) {
+  stroke-width: 3.95px;
+}
+
+.slds-icon-ellie circle:nth-child(4),
+.slds-icon-ellie circle:nth-last-child(3) {
+  stroke-width: 1.2px;
+}
+
+.slds-icon-ellie circle:nth-child(5),
+.slds-icon-ellie circle:nth-last-child(6) {
+  stroke-width: 3.85px;
+}
+
+.slds-icon-ellie circle:nth-child(6),
+.slds-icon-ellie circle:nth-last-child(5) {
+  stroke-width: 1.4px;
+}
+
+.slds-icon-ellie circle:nth-child(7),
+.slds-icon-ellie circle:nth-last-child(8) {
+  stroke-width: 3.6px;
+}
+
+.slds-icon-ellie circle:nth-child(8),
+.slds-icon-ellie circle:nth-last-child(7) {
+  stroke-width: 1.7px;
+}
+
+.slds-icon-ellie circle:nth-child(9),
+.slds-icon-ellie circle:nth-last-child(10) {
+  stroke-width: 3.3px;
+}
+
+.slds-icon-ellie circle:nth-child(10),
+.slds-icon-ellie circle:nth-last-child(9) {
+  stroke-width: 2px;
+}
+
+.slds-icon-ellie circle:nth-child(11),
+.slds-icon-ellie circle:nth-last-child(12) {
+  stroke-width: 3.2px;
+}
+
+.slds-icon-ellie circle:nth-child(12),
+.slds-icon-ellie circle:nth-last-child(11) {
+  stroke-width: 2.4px;
+}
+
+.slds-icon-ellie circle:nth-child(13),
+.slds-icon-ellie circle:nth-last-child(14) {
+  stroke-width: 3.15px;
+}
+
+.slds-icon-ellie circle:nth-child(14),
+.slds-icon-ellie circle:nth-last-child(13) {
+  stroke-width: 2.8px;
+}
+
+.slds-icon-ellie circle:nth-child(15),
+.slds-icon-ellie circle:nth-last-child(16) {
+  stroke-width: 3.1px;
+}
+
+.slds-icon-ellie circle:nth-child(16),
+.slds-icon-ellie circle:nth-last-child(15) {
+  stroke-width: 3.25px;
+}
+
+.slds-icon-ellie circle:nth-child(17),
+.slds-icon-ellie circle:nth-last-child(18) {
+  stroke-width: 3.05px;
+}
+
+.slds-icon-ellie circle:nth-child(18),
+.slds-icon-ellie circle:nth-last-child(17) {
+  stroke-width: 3.7px;
+}
+
+.slds-icon-ellie circle:nth-child(19),
+.slds-icon-ellie circle:nth-last-child(20) {
+  stroke-width: 3px;
+}
+
+.slds-icon-ellie circle:nth-child(20),
+.slds-icon-ellie circle:nth-last-child(19) {
+  stroke-width: 4px;
+}
+
+@-webkit-keyframes slds-icon-ellie-pop {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  70% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  90% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes slds-icon-ellie-pop {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  70% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  90% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes slds-icon-ellie {
+  to {
+    -webkit-transform: translateX(-17.5rem);
+    transform: translateX(-17.5rem);
+  }
+}
+@keyframes slds-icon-ellie {
+  to {
+    -webkit-transform: translateX(-17.5rem);
+    transform: translateX(-17.5rem);
+  }
+}

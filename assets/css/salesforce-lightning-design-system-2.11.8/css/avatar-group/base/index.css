@@ -1,0 +1,128 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-avatar-group {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  display: inline-block;
+}
+.slds-avatar-grouped {
+  border: 1px solid white;
+  line-height: 0;
+  border-radius: 50%;
+  background: #34becd;
+}
+.slds-avatar-grouped_inverse {
+  background-color: #f3f2f2;
+}
+.slds-avatar-grouped__primary {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.slds-avatar-grouped__primary .slds-avatar-grouped__initials {
+  -webkit-transform: scale(0.6428571429);
+  transform: scale(0.6428571429);
+}
+.slds-avatar-grouped__secondary {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.slds-avatar-grouped__secondary .slds-avatar-grouped__initials {
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+.slds-avatar-grouped__icon {
+  height: 100%;
+  line-height: 0;
+}
+.slds-avatar-grouped__icon .slds-icon {
+  width: 100%;
+  height: 100%;
+}
+.slds-avatar-group_x-small {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.slds-avatar-group_x-small .slds-avatar-grouped__primary {
+  width: 1rem;
+  height: 1rem;
+}
+.slds-avatar-group_x-small .slds-avatar-grouped__primary .slds-avatar-grouped__initials {
+  -webkit-transform: scale(0.3571428571);
+  transform: scale(0.3571428571);
+}
+.slds-avatar-group_x-small .slds-avatar-grouped__secondary {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+.slds-avatar-group_x-small .slds-avatar-grouped__secondary .slds-avatar-grouped__initials {
+  -webkit-transform: scale(0.2142857143);
+  transform: scale(0.2142857143);
+}
+.slds-avatar-group_small {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.slds-avatar-group_small .slds-avatar-grouped__primary {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.slds-avatar-group_small .slds-avatar-grouped__primary .slds-avatar-grouped__initials {
+  -webkit-transform: scale(0.4714285714);
+  transform: scale(0.4714285714);
+}
+.slds-avatar-group_small .slds-avatar-grouped__secondary {
+  width: 1rem;
+  height: 1rem;
+}
+.slds-avatar-group_small .slds-avatar-grouped__secondary .slds-avatar-grouped__initials {
+  -webkit-transform: scale(0.3571428571);
+  transform: scale(0.3571428571);
+}
+.slds-avatar-group_medium {
+  width: 2rem;
+  height: 2rem;
+}
+.slds-avatar-group_medium .slds-avatar-grouped__primary {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.slds-avatar-group_medium .slds-avatar-grouped__primary .slds-avatar-grouped__initials {
+  -webkit-transform: scale(0.6428571429);
+  transform: scale(0.6428571429);
+}
+.slds-avatar-group_medium .slds-avatar-grouped__secondary {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.slds-avatar-group_medium .slds-avatar-grouped__secondary .slds-avatar-grouped__initials {
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+.slds-avatar-group_large {
+  width: 3rem;
+  height: 3rem;
+}
+.slds-avatar-group_large .slds-avatar-grouped__primary {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.slds-avatar-group_large .slds-avatar-grouped__primary .slds-avatar-grouped__initials {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.slds-avatar-group_large .slds-avatar-grouped__secondary {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.slds-avatar-group_large .slds-avatar-grouped__secondary .slds-avatar-grouped__initials {
+  -webkit-transform: scale(0.5714285714);
+  transform: scale(0.5714285714);
+}

@@ -1,0 +1,19 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-feed {
+  position: relative;
+  max-width: 49rem;
+  margin: auto;
+}
+.slds-feed__list {
+  margin: 0;
+  padding: 0;
+}
+.slds-feed__item {
+  padding: 0.5rem 0;
+}
+@media (min-width: 48em) {
+  .slds-feed__item {
+    padding: 0.75rem 0;
+  }
+}

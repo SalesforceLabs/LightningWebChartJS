@@ -1,0 +1,55 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-badge {
+  background-color: #ecebea;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: normal;
+  color: #080707;
+  white-space: nowrap;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.slds-badge + .slds-badge {
+  margin-left: 0.5rem;
+}
+.slds-badge:empty {
+  padding: 0;
+}
+.slds-badge_inverse {
+  background-color: #706e6b;
+  color: white;
+}
+.slds-badge_lightest {
+  border: 1px solid #dddbda;
+  background-color: white;
+  font-size: 0.75rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.slds-badge__icon {
+  color: #706e6b;
+  vertical-align: middle;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+}
+.slds-badge__icon.slds-badge__icon_inverse {
+  color: currentColor;
+}
+.slds-badge__icon_left {
+  margin-right: 0.25rem;
+}
+.slds-badge__icon_right {
+  margin-left: 0.25rem;
+}

@@ -1,0 +1,138 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-brand-band {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.slds-brand-band:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("/assets/images/themes/oneSalesforce/banner-brand-default.png"),
+    -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(25, 85, 148, 0)), to(#195594));
+  background-image: url("/assets/images/themes/oneSalesforce/banner-brand-default.png"),
+    linear-gradient(to top, rgba(25, 85, 148, 0) 0, #195594);
+  background-repeat: repeat-x;
+  background-position: top left;
+}
+.slds-brand-band:after {
+  content: none;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 3.125rem;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(60%, rgba(176, 196, 223, 0)),
+    to(#b0c4df)
+  );
+  background-image: linear-gradient(to bottom, rgba(176, 196, 223, 0) 60%, #b0c4df);
+}
+.slds-brand-band.slds-brand-band_cover:before {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slds-brand-band.slds-brand-band_small:before {
+  height: 6rem;
+}
+.slds-brand-band.slds-brand-band_small:after {
+  content: "";
+  top: 2.875rem;
+}
+.slds-brand-band.slds-brand-band_medium:before {
+  height: 12.5rem;
+}
+.slds-brand-band.slds-brand-band_medium:after {
+  content: "";
+  top: 9.375rem;
+}
+.slds-brand-band.slds-brand-band_large:before {
+  height: 18.75rem;
+}
+.slds-brand-band.slds-brand-band_large:after {
+  content: "";
+  top: 15.625rem;
+}
+.slds-brand-band.slds-brand-band_full:before {
+  height: 100%;
+}
+.slds-brand-band.slds-brand-band_bottom:before {
+  background-position: bottom;
+  top: initial;
+}
+.slds-brand-band.slds-brand-band_none:before {
+  height: 0;
+}
+.slds-brand-band.slds-brand-band_group:before {
+  background-image: url("/assets/images/themes/oneSalesforce/banner-group-public-default.png");
+}
+.slds-brand-band.slds-brand-band_user:before {
+  background-image: url("/assets/images/themes/oneSalesforce/banner-user-default.png");
+}
+.slds-brand-band .slds-brand-band_blank {
+  background: white;
+}
+.slds-brand-band .slds-brand-band_blank:before,
+.slds-brand-band .slds-brand-band_blank:after {
+  background: none;
+}
+
+.slds-template__container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slds-template_default {
+  padding: 0.75rem;
+}
+.slds-template_default.slds-brand-band:before {
+  position: fixed;
+  top: 5.625rem;
+}
+.slds-template_default.slds-brand-band.slds-brand-band_medium:after {
+  position: fixed;
+  top: 15rem;
+}
+
+.slds-template_bottom-magnet {
+  padding: 0.75rem 0.75rem 0 0.75rem;
+}
+
+.slds-template_profile {
+  padding: 8rem 0.75rem 0.75rem;
+}
+
+.slds-template__content {
+  padding: 0.75rem 0.75rem 0 0.75rem;
+}
+
+.slds-template_app {
+  padding: 0.75rem 0 0 0.75rem;
+}
+
+.slds-template_iframe {
+  width: calc(100% + (0.75rem * 2));
+  height: calc(100% + (0.75rem * 2));
+  margin: -0.75rem;
+  background-color: white;
+}

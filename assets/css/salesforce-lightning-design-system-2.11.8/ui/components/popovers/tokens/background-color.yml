@@ -1,0 +1,30 @@
+global:
+  scope: component
+  type: color
+  category: background-color
+  cssProperties:
+  - 'background*'
+  - 'border*'
+  - box-shadow
+  - text-shadow
+imports:
+- "../../../../design-tokens/aliases/colors.yml"
+props:
+  POPOVER_WALKTHROUGH_COLOR_BACKGROUND:
+    value: '{!DEEP_COVE}'
+    comment: The default background color for Popover Walkthrough
+  POPOVER_WALKTHROUGH_HEADER_COLOR_BACKGROUND:
+    value: '{!BISCAY}'
+    comment: The default background color for Popover Walkthrough Header
+  POPOVER_WALKTHROUGH_COLOR_BACKGROUND_ALT:
+    value: '{!SCIENCE_BLUE}'
+    comment: The default background color for alternative Popover Walkthrough
+  POPOVER_WALKTHROUGH_HEADER_IMAGE:
+    value: ''
+    type: string
+  POPOVER_WALKTHROUGH_ALT_IMAGE:
+    value: ''
+    type: string
+  POPOVER_WALKTHROUGH_ALT_NUBBIN_COLOR_BACKGROUND:
+    value: "{!SCIENCE_BLUE}"
+    comment: The background color for nubbins on the bottom of alternate walkthrough popovers

@@ -1,0 +1,693 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * Adds .125rem padding to the side specified
+ *
+ * @selector .slds-p-*_xxx-small, .slds-var-p-*_xxx-small
+ * @modifier
+ */
+
+/**
+ * Adds .25rem padding to the side specified
+ *
+ * @selector .slds-p-*_xx-small, .slds-var-p-*_xx-small
+ * @modifier
+ */
+
+/**
+ * Adds .5rem padding to the side specified
+ *
+ * @selector .slds-p-*_x-small, .slds-var-p-*_x-small
+ * @modifier
+ */
+
+/**
+ * Adds .75rem padding to the side specified
+ *
+ * @selector .slds-p-*_small, .slds-var-p-*_small
+ * @modifier
+ */
+
+/**
+ * Adds 1rem padding to the side specified
+ *
+ * @selector .slds-p-*_medium, .slds-var-p-*_medium
+ * @modifier
+ */
+
+/**
+ * Adds 1.5rem padding to the side specified
+ *
+ * @selector .slds-p-*_large, .slds-var-p-*_large
+ * @modifier
+ */
+
+/**
+ * Adds 2rem padding to the side specified
+ *
+ * @selector .slds-p-*_x-large, .slds-var-p-*_x-large
+ * @modifier
+ */
+
+/**
+ * Adds 3rem padding to the side specified
+ *
+ * @selector .slds-p-*_xx-large, .slds-var-p-*_xx-large
+ * @modifier
+ */
+
+/**
+ * Adds the specified padding to both top and bottom
+ *
+ * @selector .slds-p-*-vertical_*, .slds-var-p-*-vertical_*
+ * @modifier
+ */
+
+/**
+ * Adds the specified padding to both sides
+ *
+ * @selector .slds-p-*-horizontal_*, .slds-var-p-*-horizontal_*
+ * @modifier
+ */
+
+/**
+ * Adds the specified padding all the way around the element
+ *
+ * @selector .slds-p-*-around_*, .slds-var-p-*-around_*
+ * @modifier
+ */
+
+/**
+ * @summary Global padding that can be applied to any element
+ *
+ * @selector .slds-has-cushion
+ * @modifier
+ */
+.slds-has-cushion {
+  padding: $component-spacing-padding;
+}
+
+// stylelint-disable declaration-no-important
+// Since we can create and store variable references when iterating through a map,
+// we'll need to manually create every variable spacing token =(
+
+// Top
+.slds-p-top_none,
+.slds-p-top--none {
+  padding-top: 0 !important;
+}
+
+.slds-p-top_xxx-small,
+.slds-p-top--xxx-small {
+  padding-top: $spacing-xxx-small;
+}
+
+.slds-p-top_xx-small,
+.slds-p-top--xx-small {
+  padding-top: $spacing-xx-small;
+}
+
+.slds-p-top_x-small,
+.slds-p-top--x-small {
+  padding-top: $spacing-x-small;
+}
+
+.slds-p-top_small,
+.slds-p-top--small {
+  padding-top: $spacing-small;
+}
+
+.slds-p-top_medium,
+.slds-p-top--medium {
+  padding-top: $spacing-medium;
+}
+
+.slds-p-top_large,
+.slds-p-top--large {
+  padding-top: $spacing-large;
+}
+
+.slds-p-top_x-large,
+.slds-p-top--x-large {
+  padding-top: $spacing-x-large;
+}
+
+.slds-p-top_xx-large,
+.slds-p-top--xx-large {
+  padding-top: $spacing-xx-large;
+}
+
+// Variables
+.slds-var-p-top_xxx-small {
+  padding-top: $var-spacing-vertical-xxx-small;
+}
+
+.slds-var-p-top_xx-small {
+  padding-top: $var-spacing-vertical-xx-small;
+}
+
+.slds-var-p-top_x-small {
+  padding-top: $var-spacing-vertical-x-small;
+}
+
+.slds-var-p-top_small {
+  padding-top: $var-spacing-vertical-small;
+}
+
+.slds-var-p-top_medium {
+  padding-top: $var-spacing-vertical-medium;
+}
+
+.slds-var-p-top_large {
+  padding-top: $var-spacing-vertical-large;
+}
+
+.slds-var-p-top_x-large {
+  padding-top: $var-spacing-vertical-x-large;
+}
+
+.slds-var-p-top_xx-large {
+  padding-top: $var-spacing-vertical-xx-large;
+}
+
+// Right
+
+// Constant
+.slds-p-right_none,
+.slds-p-right--none {
+  padding-right: 0 !important;
+}
+
+.slds-p-right_xxx-small,
+.slds-p-right--xxx-small {
+  padding-right: $spacing-xxx-small;
+}
+
+.slds-p-right_xx-small,
+.slds-p-right--xx-small {
+  padding-right: $spacing-xx-small;
+}
+
+.slds-p-right_x-small,
+.slds-p-right--x-small {
+  padding-right: $spacing-x-small;
+}
+
+.slds-p-right_small,
+.slds-p-right--small {
+  padding-right: $spacing-small;
+}
+
+.slds-p-right_medium,
+.slds-p-right--medium {
+  padding-right: $spacing-medium;
+}
+
+.slds-p-right_large,
+.slds-p-right--large {
+  padding-right: $spacing-large;
+}
+
+.slds-p-right_x-large,
+.slds-p-right--x-large {
+  padding-right: $spacing-x-large;
+}
+
+.slds-p-right_xx-large,
+.slds-p-right--xx-large {
+  padding-right: $spacing-xx-large;
+}
+
+// Variable
+.slds-var-p-right_xxx-small {
+  padding-right: $var-spacing-horizontal-xxx-small;
+}
+
+.slds-var-p-right_xx-small {
+  padding-right: $var-spacing-horizontal-xx-small;
+}
+
+.slds-var-p-right_x-small {
+  padding-right: $var-spacing-horizontal-x-small;
+}
+
+.slds-var-p-right_small {
+  padding-right: $var-spacing-horizontal-small;
+}
+
+.slds-var-p-right_medium {
+  padding-right: $var-spacing-horizontal-medium;
+}
+
+.slds-var-p-right_large {
+  padding-right: $var-spacing-horizontal-large;
+}
+
+.slds-var-p-right_x-large {
+  padding-right: $var-spacing-horizontal-x-large;
+}
+
+.slds-var-p-right_xx-large {
+  padding-right: $var-spacing-horizontal-xx-large;
+}
+
+// Bottom
+
+// Constant
+.slds-p-bottom_none,
+.slds-p-bottom--none {
+  padding-bottom: 0 !important;
+}
+
+.slds-p-bottom_xxx-small,
+.slds-p-bottom--xxx-small {
+  padding-bottom: $spacing-xxx-small;
+}
+
+.slds-p-bottom_xx-small,
+.slds-p-bottom--xx-small {
+  padding-bottom: $spacing-xx-small;
+}
+
+.slds-p-bottom_x-small,
+.slds-p-bottom--x-small {
+  padding-bottom: $spacing-x-small;
+}
+
+.slds-p-bottom_small,
+.slds-p-bottom--small {
+  padding-bottom: $spacing-small;
+}
+
+.slds-p-bottom_medium,
+.slds-p-bottom--medium {
+  padding-bottom: $spacing-medium;
+}
+
+.slds-p-bottom_large,
+.slds-p-bottom--large {
+  padding-bottom: $spacing-large;
+}
+
+.slds-p-bottom_x-large,
+.slds-p-bottom--x-large {
+  padding-bottom: $spacing-x-large;
+}
+
+.slds-p-bottom_xx-large,
+.slds-p-bottom--xx-large {
+  padding-bottom: $spacing-xx-large;
+}
+
+// Variable
+.slds-var-p-bottom_xxx-small {
+  padding-bottom: $var-spacing-vertical-xxx-small;
+}
+
+.slds-var-p-bottom_xx-small {
+  padding-bottom: $var-spacing-vertical-xx-small;
+}
+
+.slds-var-p-bottom_x-small {
+  padding-bottom: $var-spacing-vertical-x-small;
+}
+
+.slds-var-p-bottom_small {
+  padding-bottom: $var-spacing-vertical-small;
+}
+
+.slds-var-p-bottom_medium {
+  padding-bottom: $var-spacing-vertical-medium;
+}
+
+.slds-var-p-bottom_large {
+  padding-bottom: $var-spacing-vertical-large;
+}
+
+.slds-var-p-bottom_x-large {
+  padding-bottom: $var-spacing-vertical-x-large;
+}
+
+.slds-var-p-bottom_xx-large {
+  padding-bottom: $var-spacing-vertical-xx-large;
+}
+
+// Left
+
+// Constant
+.slds-p-left_none,
+.slds-p-left--none {
+  padding-left: 0 !important;
+}
+
+.slds-p-left_xxx-small,
+.slds-p-left--xxx-small {
+  padding-left: $spacing-xxx-small;
+}
+
+.slds-p-left_xx-small,
+.slds-p-left--xx-small {
+  padding-left: $spacing-xx-small;
+}
+
+.slds-p-left_x-small,
+.slds-p-left--x-small {
+  padding-left: $spacing-x-small;
+}
+
+.slds-p-left_small,
+.slds-p-left--small {
+  padding-left: $spacing-small;
+}
+
+.slds-p-left_medium,
+.slds-p-left--medium {
+  padding-left: $spacing-medium;
+}
+
+.slds-p-left_large,
+.slds-p-left--large {
+  padding-left: $spacing-large;
+}
+
+.slds-p-left_x-large,
+.slds-p-left--x-large {
+  padding-left: $spacing-x-large;
+}
+
+.slds-p-left_xx-large,
+.slds-p-left--xx-large {
+  padding-left: $spacing-xx-large;
+}
+
+// Variable
+.slds-var-p-left_xxx-small {
+  padding-left: $var-spacing-horizontal-xxx-small;
+}
+
+.slds-var-p-left_xx-small {
+  padding-left: $var-spacing-horizontal-xx-small;
+}
+
+.slds-var-p-left_x-small {
+  padding-left: $var-spacing-horizontal-x-small;
+}
+
+.slds-var-p-left_small {
+  padding-left: $var-spacing-horizontal-small;
+}
+
+.slds-var-p-left_medium {
+  padding-left: $var-spacing-horizontal-medium;
+}
+
+.slds-var-p-left_large {
+  padding-left: $var-spacing-horizontal-large;
+}
+
+.slds-var-p-left_x-large {
+  padding-left: $var-spacing-horizontal-x-large;
+}
+
+.slds-var-p-left_xx-large {
+  padding-left: $var-spacing-horizontal-xx-large;
+}
+
+// Horizontal
+
+// Constant
+.slds-p-horizontal_none,
+.slds-p-horizontal--none {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.slds-p-horizontal_xxx-small,
+.slds-p-horizontal--xxx-small {
+  padding-left: $spacing-xxx-small;
+  padding-right: $spacing-xxx-small;
+}
+
+.slds-p-horizontal_xx-small,
+.slds-p-horizontal--xx-small {
+  padding-left: $spacing-xx-small;
+  padding-right: $spacing-xx-small;
+}
+
+.slds-p-horizontal_x-small,
+.slds-p-horizontal--x-small {
+  padding-left: $spacing-x-small;
+  padding-right: $spacing-x-small;
+}
+
+.slds-p-horizontal_small,
+.slds-p-horizontal--small {
+  padding-left: $spacing-small;
+  padding-right: $spacing-small;
+}
+
+.slds-p-horizontal_medium,
+.slds-p-horizontal--medium {
+  padding-left: $spacing-medium;
+  padding-right: $spacing-medium;
+}
+
+.slds-p-horizontal_large,
+.slds-p-horizontal--large {
+  padding-left: $spacing-large;
+  padding-right: $spacing-large;
+}
+
+.slds-p-horizontal_x-large,
+.slds-p-horizontal--x-large {
+  padding-left: $spacing-x-large;
+  padding-right: $spacing-x-large;
+}
+
+.slds-p-horizontal_xx-large,
+.slds-p-horizontal--xx-large {
+  padding-left: $spacing-xx-large;
+  padding-right: $spacing-xx-large;
+}
+
+// Variable
+.slds-var-p-horizontal_xxx-small {
+  padding-left: $var-spacing-horizontal-xxx-small;
+  padding-right: $var-spacing-horizontal-xxx-small;
+}
+
+.slds-var-p-horizontal_xx-small {
+  padding-left: $var-spacing-horizontal-xx-small;
+  padding-right: $var-spacing-horizontal-xx-small;
+}
+
+.slds-var-p-horizontal_x-small {
+  padding-left: $var-spacing-horizontal-x-small;
+  padding-right: $var-spacing-horizontal-x-small;
+}
+
+.slds-var-p-horizontal_small {
+  padding-left: $var-spacing-horizontal-small;
+  padding-right: $var-spacing-horizontal-small;
+}
+
+.slds-var-p-horizontal_medium {
+  padding-left: $var-spacing-horizontal-medium;
+  padding-right: $var-spacing-horizontal-medium;
+}
+
+.slds-var-p-horizontal_large {
+  padding-left: $var-spacing-horizontal-large;
+  padding-right: $var-spacing-horizontal-large;
+}
+
+.slds-var-p-horizontal_x-large {
+  padding-left: $var-spacing-horizontal-x-large;
+  padding-right: $var-spacing-horizontal-x-large;
+}
+
+.slds-var-p-horizontal_xx-large {
+  padding-left: $var-spacing-horizontal-xx-large;
+  padding-right: $var-spacing-horizontal-xx-large;
+}
+
+// Vertical
+
+// Constant
+.slds-p-vertical_none,
+.slds-p-vertical--none {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.slds-p-vertical_xxx-small,
+.slds-p-vertical--xxx-small {
+  padding-top: $spacing-xxx-small;
+  padding-bottom: $spacing-xxx-small;
+}
+
+.slds-p-vertical_xx-small,
+.slds-p-vertical--xx-small {
+  padding-top: $spacing-xx-small;
+  padding-bottom: $spacing-xx-small;
+}
+
+.slds-p-vertical_x-small,
+.slds-p-vertical--x-small {
+  padding-top: $spacing-x-small;
+  padding-bottom: $spacing-x-small;
+}
+
+.slds-p-vertical_small,
+.slds-p-vertical--small {
+  padding-top: $spacing-small;
+  padding-bottom: $spacing-small;
+}
+
+.slds-p-vertical_medium,
+.slds-p-vertical--medium {
+  padding-top: $spacing-medium;
+  padding-bottom: $spacing-medium;
+}
+
+.slds-p-vertical_large,
+.slds-p-vertical--large {
+  padding-top: $spacing-large;
+  padding-bottom: $spacing-large;
+}
+
+.slds-p-vertical_x-large,
+.slds-p-vertical--x-large {
+  padding-top: $spacing-x-large;
+  padding-bottom: $spacing-x-large;
+}
+
+.slds-p-vertical_xx-large,
+.slds-p-vertical--xx-large {
+  padding-top: $spacing-xx-large;
+  padding-bottom: $spacing-xx-large;
+}
+
+// Variable
+.slds-var-p-vertical_xxx-small {
+  padding-top: $var-spacing-vertical-xxx-small;
+  padding-bottom: $var-spacing-vertical-xxx-small;
+}
+
+.slds-var-p-vertical_xx-small {
+  padding-top: $var-spacing-vertical-xx-small;
+  padding-bottom: $var-spacing-vertical-xx-small;
+}
+
+.slds-var-p-vertical_x-small {
+  padding-top: $var-spacing-vertical-x-small;
+  padding-bottom: $var-spacing-vertical-x-small;
+}
+
+.slds-var-p-vertical_small {
+  padding-top: $var-spacing-vertical-small;
+  padding-bottom: $var-spacing-vertical-small;
+}
+
+.slds-var-p-vertical_medium {
+  padding-top: $var-spacing-vertical-medium;
+  padding-bottom: $var-spacing-vertical-medium;
+}
+
+.slds-var-p-vertical_large {
+  padding-top: $var-spacing-vertical-large;
+  padding-bottom: $var-spacing-vertical-large;
+}
+
+.slds-var-p-vertical_x-large {
+  padding-top: $var-spacing-vertical-x-large;
+  padding-bottom: $var-spacing-vertical-x-large;
+}
+
+.slds-var-p-vertical_xx-large {
+  padding-top: $var-spacing-vertical-xx-large;
+  padding-bottom: $var-spacing-vertical-xx-large;
+}
+
+// Around
+
+// Constant
+.slds-p-around_none,
+.slds-p-around--none {
+  padding: 0 !important;
+}
+
+.slds-p-around_xxx-small,
+.slds-p-around--xxx-small {
+  padding: $spacing-xxx-small;
+}
+
+.slds-p-around_xx-small,
+.slds-p-around--xx-small {
+  padding: $spacing-xx-small;
+}
+
+.slds-p-around_x-small,
+.slds-p-around--x-small {
+  padding: $spacing-x-small;
+}
+
+.slds-p-around_small,
+.slds-p-around--small {
+  padding: $spacing-small;
+}
+
+.slds-p-around_medium,
+.slds-p-around--medium {
+  padding: $spacing-medium;
+}
+
+.slds-p-around_large,
+.slds-p-around--large {
+  padding: $spacing-large;
+}
+
+.slds-p-around_x-large,
+.slds-p-around--x-large {
+  padding: $spacing-x-large;
+}
+
+.slds-p-around_xx-large,
+.slds-p-around--xx-large {
+  padding: $spacing-xx-large;
+}
+
+// Variable
+.slds-var-p-around_xxx-small {
+  padding: $var-spacing-xxx-small;
+}
+
+.slds-var-p-around_xx-small {
+  padding: $var-spacing-xx-small;
+}
+
+.slds-var-p-around_x-small {
+  padding: $var-spacing-x-small;
+}
+
+.slds-var-p-around_small {
+  padding: $var-spacing-small;
+}
+
+.slds-var-p-around_medium {
+  padding: $var-spacing-medium;
+}
+
+.slds-var-p-around_large {
+  padding: $var-spacing-large;
+}
+
+.slds-var-p-around_x-large {
+  padding: $var-spacing-x-large;
+}
+
+.slds-var-p-around_xx-large {
+  padding: $var-spacing-xx-large;
+}

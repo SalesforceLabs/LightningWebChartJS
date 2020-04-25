@@ -1,0 +1,20 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-scoped-notification {
+  padding: 0.75rem;
+}
+.slds-scoped-notification_light {
+  background-color: #f3f2f2;
+}
+.slds-scoped-notification_dark {
+  background-color: #706e6b;
+  color: white;
+}
+.slds-scoped-notification_dark a {
+  color: white;
+  text-decoration: underline;
+}
+.slds-scoped-notification_dark a:hover,
+.slds-scoped-notification_dark a:active {
+  text-decoration: none;
+}

@@ -1,0 +1,24 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-visual-picker_vertical {
+  width: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slds-visual-picker_vertical .slds-visual-picker__figure {
+  text-align: left;
+  padding: 1rem;
+  height: 6rem;
+}
+.slds-visual-picker_vertical + .slds-visual-picker_vertical {
+  margin-left: 0;
+  margin-top: 1rem;
+}
+.slds-visual-picker_vertical .slds-visual-picker__figure,
+.slds-visual-picker_vertical .slds-visual-picker__body {
+  width: 25rem;
+}
+.slds-visual-picker_vertical input:focus ~ label .slds-visual-picker__text .slds-text-heading_medium {
+  text-decoration: underline;
+}

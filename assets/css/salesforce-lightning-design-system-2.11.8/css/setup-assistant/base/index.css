@@ -1,0 +1,29 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-setup-assistant {
+  padding: 1rem;
+}
+.slds-setup-assistant__item {
+  border-bottom: 1px #dddbda solid;
+  padding: 2rem 0;
+}
+.slds-setup-assistant__item:first-child {
+  padding-top: 0;
+}
+.slds-setup-assistant__item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.slds-setup-assistant__step-summary .slds-progress-ring_large {
+  top: 1px;
+}
+.slds-setup-assistant__step-summary-content {
+  margin-right: 3rem;
+}
+.slds-setup-assistant__step-summary-title {
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+}
+.slds-setup-assistant__step-detail {
+  padding-left: 2.75rem;
+}

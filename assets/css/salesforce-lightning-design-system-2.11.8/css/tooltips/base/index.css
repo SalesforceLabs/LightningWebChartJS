@@ -1,0 +1,54 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-popover_tooltip {
+  width: auto;
+  max-width: 20rem;
+  background: #16325c;
+  border: 0;
+}
+.slds-popover_tooltip .slds-popover__body {
+  font-size: 0.75rem;
+  color: white;
+}
+.slds-rise-from-ground {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  -webkit-transition: opacity 0.1s linear, visibility 0.1s linear, -webkit-transform 0.1s linear;
+  transition: opacity 0.1s linear, visibility 0.1s linear, -webkit-transform 0.1s linear;
+  transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s linear;
+  transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s linear, -webkit-transform 0.1s linear;
+  will-change: transform;
+}
+.slds-fall-into-ground {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  -webkit-transition: opacity 0.1s linear, visibility 0.1s linear, -webkit-transform 0.1s linear;
+  transition: opacity 0.1s linear, visibility 0.1s linear, -webkit-transform 0.1s linear;
+  transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s linear;
+  transition: opacity 0.1s linear, visibility 0.1s linear, transform 0.1s linear, -webkit-transform 0.1s linear;
+  will-change: transform;
+}
+.slds-slide-from-bottom-to-top {
+  -webkit-transform: translateY(10%);
+  transform: translateY(10%);
+  will-change: transform;
+}
+.slds-slide-from-top-to-bottom {
+  -webkit-transform: translateY(-10%);
+  transform: translateY(-10%);
+  will-change: transform;
+}
+.slds-slide-from-right-to-left {
+  -webkit-transform: translateX(5%);
+  transform: translateX(5%);
+  will-change: transform;
+}
+.slds-slide-from-left-to-right {
+  -webkit-transform: translateX(-5%);
+  transform: translateX(-5%);
+  will-change: transform;
+}

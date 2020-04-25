@@ -1,0 +1,15 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-checkbox_standalone {
+  pointer-events: none;
+}
+.slds-checkbox_standalone [type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  clip: auto;
+  opacity: 0;
+}
+.slds-checkbox_standalone .slds-checkbox_faux {
+  display: block;
+}

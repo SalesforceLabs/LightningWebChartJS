@@ -1,0 +1,89 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-popover_walkthrough {
+  border-color: #061c3f;
+  color: white;
+  background: #032e61;
+  border-color: #032e61;
+}
+.slds-popover_walkthrough .slds-text-title,
+.slds-popover_walkthrough .slds-text-title_caps {
+  color: #b0adab;
+}
+.slds-popover_walkthrough .slds-icon {
+  fill: currentColor;
+}
+.slds-popover_walkthrough a {
+  color: currentColor;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.slds-popover_walkthrough a:hover,
+.slds-popover_walkthrough a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+.slds-popover_walkthrough a:focus {
+  -webkit-box-shadow: 0 0 3px #ecebea;
+  box-shadow: 0 0 3px #ecebea;
+  border: 1px solid #ecebea;
+}
+.slds-popover_walkthrough a:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+.slds-popover_walkthrough a[disabled]a[disabled] {
+  color: rgba(255, 255, 255, 0.15);
+}
+.slds-popover_walkthrough a {
+  text-decoration: underline;
+}
+.slds-popover_walkthrough .slds-popover__header {
+  background-color: #164a85;
+  background-image: url("/assets/images/popovers/popover-header.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  border-color: inherit;
+  padding: 0.75rem 1rem;
+  text-shadow: 0 0 4px #032e61;
+}
+.slds-popover_walkthrough .slds-popover__body,
+.slds-popover_walkthrough .slds-popover__footer {
+  padding: 1rem;
+}
+.slds-popover_walkthrough .slds-popover__footer {
+  border: 0;
+}
+.slds-popover_walkthrough .slds-text-title {
+  color: #d9dbdd;
+}
+.slds-popover_walkthrough.slds-nubbin_top:before,
+.slds-popover_walkthrough.slds-nubbin_top-left:before,
+.slds-popover_walkthrough.slds-nubbin_top-right:before,
+.slds-popover_walkthrough.slds-nubbin_left-top:before,
+.slds-popover_walkthrough.slds-nubbin_right-top:before {
+  background-color: #164a85;
+}
+.slds-popover_walkthrough-alt,
+.slds-popover_feature {
+  border-color: #164a85;
+  background-color: #164a85;
+  background-image: url("/assets/images/popovers/popover-action.png");
+  background-repeat: no-repeat;
+  background-size: 100% 2.25rem;
+  background-position: bottom;
+  padding-bottom: 1.5rem;
+  color: white;
+}
+.slds-popover_walkthrough-alt .slds-text-heading_small,
+.slds-popover_feature .slds-text-heading_small {
+  margin-bottom: 0.5rem;
+}
+.slds-popover_walkthrough-alt.slds-nubbin_bottom:before,
+.slds-popover_walkthrough-alt.slds-nubbin_bottom-left:before,
+.slds-popover_walkthrough-alt.slds-nubbin_bottom-right:before,
+.slds-popover_feature.slds-nubbin_bottom:before,
+.slds-popover_feature.slds-nubbin_bottom-left:before,
+.slds-popover_feature.slds-nubbin_bottom-right:before {
+  background-color: #215ca0;
+}

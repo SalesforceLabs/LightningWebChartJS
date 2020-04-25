@@ -1,0 +1,77 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-progress-ring {
+  position: relative;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 1.5rem;
+  background: #dddbda;
+}
+.slds-progress-ring .slds-icon_container {
+  line-height: 0;
+}
+.slds-progress-ring__progress {
+  -webkit-transform: scale(-1, 1) rotate(-90deg);
+  transform: scale(-1, 1) rotate(-90deg);
+}
+.slds-progress-ring__progress svg {
+  width: 100%;
+}
+.slds-progress-ring__path {
+  fill: #4bca81;
+}
+.slds-progress-ring__content {
+  position: absolute;
+  top: 0.1875rem;
+  right: 0.1875rem;
+  bottom: 0.1875rem;
+  left: 0.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  background: white;
+}
+.slds-progress-ring__content .slds-icon {
+  width: 0.75rem;
+}
+.slds-progress-ring_warning .slds-progress-ring__content {
+  background: white;
+}
+.slds-progress-ring_warning .slds-icon,
+.slds-progress-ring_warning .slds-progress-ring__path {
+  fill: #ffb75d;
+}
+.slds-progress-ring_expired .slds-progress-ring__content {
+  background: white;
+}
+.slds-progress-ring_expired .slds-icon,
+.slds-progress-ring_expired .slds-progress-ring__path {
+  fill: #d4504c;
+}
+.slds-progress-ring_complete .slds-icon {
+  fill: white;
+}
+.slds-progress-ring_complete .slds-progress-ring__path {
+  fill: #4bca81;
+}
+.slds-progress-ring_complete .slds-progress-ring__content {
+  background: #4bca81;
+}
+.slds-progress-ring_large {
+  height: 2rem;
+  width: 2rem;
+}
+.slds-progress-ring_large .slds-icon {
+  width: 1rem;
+}
+.slds-progress-ring_active-step .slds-progress-ring__path {
+  fill: #1589ee;
+}

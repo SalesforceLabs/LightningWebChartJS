@@ -1,0 +1,22 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-welcome-mat__info-badge-container {
+  display: inline-block;
+  position: relative;
+}
+.slds-welcome-mat__info-badge-container .slds-icon-action-check {
+  border-width: 0;
+  top: 50%;
+  right: 0%;
+  -webkit-transform: translate3d(50%, -50%, 0);
+  transform: translate3d(50%, -50%, 0);
+  display: none;
+}
+.slds-welcome-mat__info-badge {
+  margin-bottom: 0.5rem;
+}
+.slds-welcome-mat__info-progress_complete .slds-icon-action-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

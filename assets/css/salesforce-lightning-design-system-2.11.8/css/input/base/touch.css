@@ -1,0 +1,42 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-input {
+  line-height: 2.625rem;
+}
+.slds-input[readonly] {
+  font-size: 1rem;
+}
+.slds-input[type="text"],
+.slds-input[type="email"],
+.slds-input[type="url"],
+.slds-input[type="tel"] {
+  -webkit-appearance: none;
+}
+.slds-input[type="date"],
+.slds-input[type="datetime-local"],
+.slds-input[type="month"],
+.slds-input[type="time"] {
+  height: 2.75rem;
+}
+
+.slds-input-has-icon .slds-input__icon {
+  width: 1rem;
+  height: 1rem;
+  margin-top: -0.5rem;
+}
+.slds-input-has-icon_left .slds-input__icon {
+  left: 0.5rem;
+}
+.slds-input-has-icon_right .slds-input__icon {
+  right: 0.5rem;
+}
+.slds-input-has-icon_left-right .slds-input__icon_left {
+  left: 0.5rem;
+}
+.slds-input-has-icon_left-right .slds-input__icon_right {
+  right: 0.5rem;
+}
+
+.slds-input__icon-group_right .slds-input__spinner {
+  right: calc(1.5rem + 0.25rem);
+}

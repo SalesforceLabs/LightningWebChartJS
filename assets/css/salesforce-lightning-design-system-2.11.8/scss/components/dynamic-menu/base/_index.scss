@@ -1,0 +1,20 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name base
+ * @selector .slds-dynamic-menu
+ * @restrict section[role="dialog"]
+ * @variant
+ * @support dev-ready
+ */
+
+/**
+ * @summary Headers styles for dynamic menu
+ * @selector .slds-dynamic-menu__header
+ * @restrict .slds-dynamic-menu h3
+ */
+.slds-dynamic-menu__header {
+  @include text-title;
+}

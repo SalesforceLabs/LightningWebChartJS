@@ -1,0 +1,21 @@
+global:
+  scope: component
+  category: spacing
+  type: size
+  comment: ''
+  cssProperties:
+  - top
+  - right
+  - bottom
+  - left
+  - 'margin*'
+  - 'padding*'
+  - 'border*'
+  - '*width'
+  - '*height'
+  - box-shadow
+imports:
+- "../../../../design-tokens/aliases/spacing.yml"
+props:
+  TABLE_CELL_SPACING:
+    value: '{!SPACING_X_SMALL}'

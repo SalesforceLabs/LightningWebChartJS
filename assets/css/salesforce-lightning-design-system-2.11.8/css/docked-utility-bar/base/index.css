@@ -1,0 +1,140 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-utility-bar_container {
+  position: relative;
+}
+.slds-utility-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5rem;
+  background: white;
+  -webkit-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.16);
+  z-index: 4;
+}
+.slds-utility-bar .slds-indicator_unread {
+  background: #d4504c;
+  top: 0.5rem;
+}
+.slds-utility-bar__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1px;
+}
+.slds-utility-bar__item_pop-out {
+  position: relative;
+}
+.slds-utility-bar__item_pop-out:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  height: 4px;
+  width: 4px;
+  border-top: 1px solid #080707;
+  border-right: 1px solid #080707;
+}
+[dir="rtl"] .slds-utility-bar__item_pop-out:before {
+  /*! @noflip */
+  right: auto;
+  /*! @noflip */
+  left: 4px;
+  /*! @noflip */
+  border-right-width: 0;
+  /*! @noflip */
+  border-left: 1px solid #080707;
+}
+.slds-utility-bar__item_pop-out:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  height: 7px;
+  width: 7px;
+  border-right: 1px solid #080707;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+[dir="rtl"] .slds-utility-bar__item_pop-out:after {
+  /*! @noflip */
+  right: auto;
+  /*! @noflip */
+  left: 6px;
+  /*! @noflip */
+  border-right-width: 0;
+  /*! @noflip */
+  border-left: 1px solid #080707;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.slds-utility-bar__action {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 0.75rem;
+  border-radius: 0;
+  border: 0;
+  color: #080707;
+}
+.slds-utility-bar__action:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+}
+.slds-utility-bar__action:focus,
+.slds-utility-bar__action:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-utility-bar__action:focus:after {
+  height: 3px;
+  background: #1589ee;
+}
+.slds-utility-bar__action:hover,
+.slds-utility-bar__action:focus {
+  background: rgba(21, 137, 238, 0.1);
+  color: inherit;
+}
+.slds-utility-bar__action.slds-is-active {
+  background: rgba(21, 137, 238, 0.1);
+  color: inherit;
+}
+.slds-utility-bar__action.slds-is-active:after {
+  background: #1589ee;
+}
+.slds-utility-bar__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  line-height: 1;
+  text-align: left;
+}
+.slds-has-notification .slds-utility-bar__action {
+  background: #706e6b;
+  color: white;
+}
+.slds-has-notification .slds-utility-bar__action:hover,
+.slds-has-notification .slds-utility-bar__action:focus {
+  background: #16325c;
+}
+.slds-has-notification .slds-utility-bar__action:focus:after {
+  background: #c9c7c5;
+}

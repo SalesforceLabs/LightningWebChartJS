@@ -1,0 +1,49 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-listbox_horizontal li + li {
+  padding-left: 0.25rem;
+}
+
+.slds-listbox__option-header {
+  font-size: 1rem;
+}
+
+.slds-listbox_vertical .slds-listbox__option_plain {
+  line-height: 2.75rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.slds-listbox_vertical .slds-listbox__option_plain .slds-media__figure {
+  margin-right: 0.5rem;
+}
+
+.slds-listbox_object-switcher {
+  padding: 0;
+}
+
+.slds-combobox_object-switcher .slds-combobox__input {
+  font-size: 1rem;
+}
+
+.slds-listbox_selection-group {
+  height: 2.75rem;
+}
+.slds-listbox_selection-group .slds-listbox {
+  padding: 0 0.25rem 0.375rem;
+}
+.slds-listbox_selection-group .slds-listbox-item {
+  padding: 0.375rem 0.125rem 0;
+}
+
+.slds-has-inline-listbox .slds-combobox__input,
+.slds-has-object-switcher .slds-combobox__input {
+  line-height: 2.5rem;
+  min-height: 2.75rem;
+}
+
+.slds-has-inline-listbox [role="listbox"] {
+  padding: 0 0.375rem;
+}

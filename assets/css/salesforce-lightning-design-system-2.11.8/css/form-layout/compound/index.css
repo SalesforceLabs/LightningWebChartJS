@@ -1,0 +1,29 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-form_compound {
+  width: 100%;
+}
+.slds-form_compound .slds-form-element__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.25rem;
+}
+.slds-form_compound .slds-form-element__row + .slds-form-element__row {
+  clear: both;
+}
+.slds-form_compound .slds-form-element__row .slds-form-element {
+  margin-bottom: 0;
+}
+.slds-form_compound .slds-form-element__row .slds-form-element + .slds-form-element {
+  padding-left: 0.5rem;
+  margin-top: 0;
+}
+.slds-form_compound .slds-form-element__row .slds-form-element__label {
+  padding-top: 0;
+}
+.slds-form-element_address .slds-form-element__row {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}

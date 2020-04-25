@@ -1,0 +1,11 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-th__action {
+  padding-right: 1.25rem;
+}
+
+.slds-th__action-button,
+.slds-th__action-button .slds-button {
+  width: 1.25rem;
+  height: 1.25rem;
+}

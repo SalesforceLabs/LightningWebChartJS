@@ -1,0 +1,285 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import 'deprecate';
+
+/**
+ * @summary Initializes a default tablist
+ *
+ * @name base
+ * @selector .slds-tabs_default
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.slds-tabs_default,
+.slds-tabs--default {
+  @include tabs;
+  background-color: $color-background-alt;
+
+  /**
+   * @summary A tab item that has an overflow menu
+   * @selector .slds-tabs__item_overflow
+   * @restrict .slds-tabs_default__item
+   */
+  .slds-tabs__item_overflow,
+  .slds-tabs__item--overflow {
+    overflow: visible;
+  }
+}
+
+/**
+ * @summary Creates the container for the default tabs
+ * @selector .slds-tabs_default__nav
+ * @restrict .slds-tabs_default ul
+ */
+.slds-tabs_default__nav,
+.slds-tabs--default__nav {
+  @include tabs-nav;
+  border-bottom: $border-width-thin solid $color-border;
+}
+
+
+/**
+ * @summary Styles each list item as a single tab
+ * @selector .slds-tabs_default__item
+ * @restrict .slds-tabs_default ul li
+ */
+.slds-tabs_default__item,
+.slds-tabs--default__item {
+  color: $color-text-action-label;
+  position: relative;
+  padding: 0 $spacing-small;
+  margin-bottom: ($border-width-thin * -1);
+
+  &:after {
+    display: block;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  /**
+   * @summary Active state for a tab item
+   * @selector .slds-is-active
+   * @restrict .slds-tabs_default__item
+   * @notes Required on the `<li>` element that is associated with the active tab panel
+   * @modifier
+   */
+  &.slds-active,
+  &.slds-is-active {
+    color: $color-text-action-label-active;
+
+    &:after {
+      background-color: $brand-primary;
+      height: rem(3px);
+    }
+
+    .slds-tabs_default__link,
+    .slds-tabs--default__link {
+      font-weight: $tabs-font-weight;
+
+      &:hover {
+        color: currentColor;
+      }
+    }
+  }
+
+  &:hover:after {
+    height: rem(2px);
+    background-color: $brand-primary-active;
+    transition: height 300ms;
+  }
+
+  /**
+   * @summary Focus state for a tab item
+   * @selector .slds-has-focus
+   * @restrict .slds-tabs_default__item
+   * @modifier
+   */
+  &:focus,
+  &.slds-has-focus {
+    outline: 0;
+
+    &:after {
+      height: ($border-width-thick + 1);
+      background-color: $brand-primary;
+    }
+  }
+
+  // Remove box-shadow when slds-button is used in conjunction with class
+  .slds-tabs_default__link:focus,
+  .slds-tabs--default__link:focus {
+    box-shadow: none;
+  }
+
+  /**
+  * @summary Creates styles for a Tab Item when its tab has new activity in
+  * @selector .slds-has-notification
+  * @restrict .slds-tabs_default__item, .slds-dropdown__item
+  */
+  &.slds-has-notification {
+    background: $color-background-notification-new;
+
+    &:after {
+      background-color: $color-border;
+    }
+
+    &:hover {
+
+      &:after {
+        background-color: $color-brand-dark;
+      }
+    }
+
+    .slds-indicator_unread {
+      display: inline-block;
+      height: rem(6px);
+      width: rem(6px);
+      position: relative;
+      top: auto;
+      left: auto;
+    }
+  }
+
+  /**
+   * @summary Creates styles for a Tab Item when its in an unsaved or dirty state
+   * @selector .slds-is-unsaved
+   * @restrict .slds-tabs_default__item
+   */
+  &.slds-is-unsaved {
+
+    .slds-indicator_unread {
+      margin-left: -0.35rem; // random but matches spec
+    }
+  }
+
+  &.slds-has-notification {
+
+    .slds-indicator_unsaved {
+      top: rem(-4px);
+    }
+  }
+}
+
+/**
+ * @summary Styles each actionable element inside each tab item
+ * @selector .slds-tabs_default__link
+ * @restrict .slds-tabs_default__item a, .slds-tabs_default__item button
+ */
+.slds-tabs_default__link,
+.slds-tabs--default__link {
+  @include tabs-link;
+  height: $line-height-tab;
+  line-height: $line-height-tab;
+  color: currentColor;
+  border: 0;
+  text-transform: inherit; // For button menu to inherit the parents text-transform
+  z-index: 1; // For sub tab notification background coloring
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    box-shadow: none;
+    color: currentColor;
+  }
+
+  &[tabindex="0"]:focus {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * @summary List item containing the overflow button menu
+ * @selector .slds-tabs_default__overflow-button
+ * @restrict .slds-tabs_default__item
+ */
+.slds-tabs_default__overflow-button {
+  display: inline-flex;
+  height: $line-height-tab;
+  line-height: $line-height-tab;
+
+  .slds-button {
+    line-height: inherit;
+    color: $color-text-action-label;
+    box-shadow: none;
+
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &.slds-has-error,
+  &.slds-has-success {
+
+    .slds-button {
+      color: $color-gray-1;
+    }
+  }
+}
+
+/**
+ * @summary Styles each tab content wrapper
+ * @selector .slds-tabs_default__content
+ * @restrict .slds-tabs_default div
+ */
+.slds-tabs_default__content,
+.slds-tabs--default__content {
+  @include tabs-content;
+}
+
+/**
+ * @name medium
+ * @summary Medium sized tabs
+ * @selector .slds-tabs_medium
+ * @restrict .slds-tabs_default
+ * @modifier
+ * @group size
+ */
+.slds-tabs_medium {
+
+  .slds-tabs_default__item {
+    font-size: $var-font-size-5;
+  }
+}
+
+/**
+ * @name large
+ * @summary Large sized tabs
+ * @selector .slds-tabs_large
+ * @restrict .slds-tabs_default
+ * @modifier
+ * @group size
+ */
+.slds-tabs_large {
+
+  .slds-tabs_default__item {
+    font-size: $var-font-size-7;
+  }
+}
+
+/**
+ * @summary
+ * @selector .slds-tabs__left-icon
+ * @restrict .slds-tabs_default__item span
+ */
+.slds-tabs__left-icon {
+  margin-right: $spacing-x-small;
+
+  &:empty {
+    margin-right: 0;
+  }
+}
+
+/**
+ * @summary
+ * @selector .slds-tabs__right-icon
+ * @restrict .slds-tabs_default__item span
+ */
+.slds-tabs__right-icon {
+  margin-left: $spacing-x-small;
+}

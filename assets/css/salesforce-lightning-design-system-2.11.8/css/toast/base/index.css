@@ -1,0 +1,67 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-notify-container,
+.slds-notify_container {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  text-align: center;
+}
+.slds-notify_toast {
+  color: white;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  background: #706e6b;
+  font-weight: 300;
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+  padding: 0.75rem 3rem 0.75rem 1.5rem;
+  min-width: 30rem;
+  text-align: left;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.slds-notify_toast a {
+  color: currentColor;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.slds-notify_toast a:hover,
+.slds-notify_toast a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+.slds-notify_toast a:focus {
+  -webkit-box-shadow: 0 0 3px #ecebea;
+  box-shadow: 0 0 3px #ecebea;
+  border: 1px solid #ecebea;
+}
+.slds-notify_toast a:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+.slds-notify_toast a[disabled]a[disabled] {
+  color: rgba(255, 255, 255, 0.15);
+}
+.slds-notify_toast .slds-notify__close {
+  float: right;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  margin-left: 0.25rem;
+  -webkit-transform: translateY(-0.125rem);
+  transform: translateY(-0.125rem);
+}
+
+.slds-region_narrow .slds-notify_toast {
+  min-width: auto;
+  width: 100%;
+  margin-left: 0;
+}

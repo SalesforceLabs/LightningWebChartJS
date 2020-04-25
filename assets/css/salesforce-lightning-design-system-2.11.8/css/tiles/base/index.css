@@ -1,0 +1,27 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-tile {
+}
+.slds-tile + .slds-tile {
+  margin-top: 0.5rem;
+}
+.slds-tile__detail {
+  position: relative;
+}
+.slds-tile__meta {
+  color: #080707;
+}
+
+.slds-tile_board {
+  position: relative;
+}
+.slds-tile_board__icon {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.25rem;
+}
+.slds-tile_board .slds-has-alert {
+  padding-right: 1.5rem;
+}

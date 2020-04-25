@@ -1,0 +1,9 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-color-picker.slds-color-picker_swatches-only {
+  width: 13.3rem;
+  padding: 0.5rem;
+}
+.slds-color-picker.slds-color-picker_swatches-only .slds-color-picker__selector {
+  margin: 0;
+}

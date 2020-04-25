@@ -1,0 +1,26 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-checkbox_button-group {
+  display: block;
+}
+.slds-checkbox_button-group .slds-checkbox_button {
+  display: block;
+}
+.slds-checkbox_button-group .slds-checkbox_button + .slds-checkbox_button {
+  border-left: 0;
+  border-top: 1px solid #dddbda;
+}
+.slds-checkbox_button-group .slds-checkbox_button:first-child > .slds-checkbox_button__label {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+.slds-checkbox_button-group .slds-checkbox_button:last-child > .slds-checkbox_button__label {
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+.slds-checkbox_button-group .slds-checkbox_button__label {
+  display: block;
+  text-align: center;
+}
+
+.slds-checkbox_button {
+  line-height: 2.625rem;
+}

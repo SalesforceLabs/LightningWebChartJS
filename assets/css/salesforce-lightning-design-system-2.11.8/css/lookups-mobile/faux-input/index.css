@@ -1,0 +1,46 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-faux-input {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 1rem;
+  border-radius: 0.25rem;
+  color: #0070d2;
+  background: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #dddbda;
+  -webkit-transition: border 0.15s linear;
+  transition: border 0.15s linear;
+}
+.slds-faux-input:focus {
+  outline: 0;
+  border-color: #1589ee;
+  background-color: white;
+  -webkit-box-shadow: 0 0 3px #0070d2;
+  box-shadow: 0 0 3px #0070d2;
+}
+
+.slds-faux-input_label {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  margin-bottom: 0.125rem;
+  font-size: 0.75rem;
+  color: #3e3e3c;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}

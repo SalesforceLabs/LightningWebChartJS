@@ -1,0 +1,9 @@
+// Lightning Design System 2.11.8
+.slds-form-element_stacked,
+.slds-form_stacked .slds-form-element,
+.slds-form_horizontal .slds-form-element_stacked {
+
+  .slds-form-element__icon {
+    padding-top: 0;
+  }
+}

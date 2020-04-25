@@ -1,0 +1,94 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-select {
+  background-color: white;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  width: 100%;
+  -webkit-transition: border 0.1s linear, background-color 0.1s linear;
+  transition: border 0.1s linear, background-color 0.1s linear;
+  height: calc(1.875rem + (1px * 2));
+}
+.slds-select:required {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-select:focus,
+.slds-select:active {
+  outline: 0;
+  border-color: #1589ee;
+  background-color: white;
+  -webkit-box-shadow: 0 0 3px #0070d2;
+  box-shadow: 0 0 3px #0070d2;
+}
+.slds-select[disabled],
+.slds-select.slds-is-disabled {
+  background-color: #ecebea;
+  border-color: #c9c7c5;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.slds-select[disabled]:focus,
+.slds-select[disabled]:active,
+.slds-select.slds-is-disabled:focus,
+.slds-select.slds-is-disabled:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slds-select[size],
+.slds-select[multiple] {
+  min-height: calc(1.875rem + (1px * 2));
+  height: inherit;
+}
+.slds-select[size] option,
+.slds-select[multiple] option {
+  padding: 0.5rem;
+}
+.slds-select_container {
+  position: relative;
+}
+.slds-select_container .slds-select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding-left: 0.5rem;
+  padding-right: 1.5rem;
+}
+.slds-select_container .slds-select::-ms-expand {
+  display: none;
+}
+.slds-select_container:before,
+.slds-select_container:after {
+  position: absolute;
+  content: "";
+  display: block;
+  right: 0.5rem;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  pointer-events: none;
+}
+.slds-select_container:before {
+  border-bottom: 5px solid #061c3f;
+  top: calc((1.75rem / 2) - 6px);
+}
+.slds-select_container:after {
+  border-top: 5px solid #061c3f;
+  bottom: calc((1.75rem / 2) - 6px);
+}
+
+.slds-has-error .slds-select {
+  background-color: white;
+  border-color: #c23934;
+  -webkit-box-shadow: #c23934 0 0 0 1px inset;
+  box-shadow: #c23934 0 0 0 1px inset;
+  background-clip: padding-box;
+}
+.slds-has-error .slds-select:focus,
+.slds-has-error .slds-select:active {
+  -webkit-box-shadow: #c23934 0 0 0 1px inset, 0 0 3px #0070d2;
+  box-shadow: #c23934 0 0 0 1px inset, 0 0 3px #0070d2;
+}

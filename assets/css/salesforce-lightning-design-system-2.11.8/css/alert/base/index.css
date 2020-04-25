@@ -1,0 +1,50 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-notify_alert {
+  color: white;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  background: rgba(112, 110, 107, 0.95);
+  font-weight: 300;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+.slds-notify_alert a {
+  color: currentColor;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.slds-notify_alert a:hover,
+.slds-notify_alert a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+.slds-notify_alert a:focus {
+  -webkit-box-shadow: 0 0 3px #ecebea;
+  box-shadow: 0 0 3px #ecebea;
+  border: 1px solid #ecebea;
+}
+.slds-notify_alert a:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+.slds-notify_alert a[disabled]a[disabled] {
+  color: rgba(255, 255, 255, 0.15);
+}
+.slds-notify_alert .slds-notify__close {
+  float: right;
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  margin-left: 0.25rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

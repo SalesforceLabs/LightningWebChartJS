@@ -1,0 +1,76 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ *
+ * @summary Initiates an illustration component
+ *
+ * @name base
+ * @selector .slds-illustration
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.slds-illustration {
+
+  text-align: center;
+
+  /**
+   * @summary Applies width and height values for small illustrations
+   * @selector .slds-illustration_small
+   * @restrict .slds-illustration
+   * @modifier
+   * @group width
+   */
+  &.slds-illustration_small {
+
+    .slds-illustration__svg {
+      width: 100%;
+      max-width: 300px;
+      max-height: 200px;
+      margin-bottom: $spacing-medium;
+    }
+  }
+
+  /**
+   * @summary Applies width and height values for large illustrations
+   * @selector .slds-illustration_large
+   * @restrict .slds-illustration
+   * @modifier
+   * @group width
+   */
+  &.slds-illustration_large {
+
+    .slds-illustration__svg {
+      width: 100%;
+      max-width: 600px;
+      max-height: 400px;
+      margin-bottom: $spacing-xx-large;
+    }
+
+    .slds-illustration__header {
+      margin-bottom: $spacing-large;
+    }
+
+    p {
+      margin-bottom: $spacing-xx-large;
+    }
+  }
+
+  .slds-illustration__stroke-primary {
+    stroke: $illustration-color-primary;
+  }
+
+  .slds-illustration__stroke-secondary {
+    stroke: $illustration-color-secondary;
+  }
+
+  .slds-illustration__fill-primary {
+    fill: $illustration-color-primary;
+  }
+
+  .slds-illustration__fill-secondary {
+    fill: $illustration-color-secondary;
+  }
+}

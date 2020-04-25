@@ -1,0 +1,233 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * An image is the preferred format for an avatar
+ *
+ * @summary Creates an avatar component
+ * @name base
+ * @selector .slds-avatar
+ * @restrict div, span, a
+ * @support dev-ready
+ * @variant
+ */
+.slds-avatar {
+  @include square($square-icon-medium-boundary);
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: $border-radius-medium;
+  line-height: $line-height-reset;
+  font-size: $font-size-heading-small;
+  color: $color-text-inverse;
+
+  &:hover,
+  &:focus:hover {
+    color: currentColor;
+  }
+
+  /**
+   * @name Small Group Image
+   * @summary Uses the small group image as the avatar icon
+   * @selector .slds-avatar_group-image-small
+   * @restrict .slds-avatar
+   */
+  &.slds-avatar_group-image-small {
+    background: url($group-default-avatar-small) top left / cover no-repeat;
+  }
+
+  /**
+   * @name Medium Group Image
+   * @summary Uses the medium group image as the avatar icon
+   * @selector .slds-avatar_group-image-medium
+   * @restrict .slds-avatar
+   */
+  &.slds-avatar_group-image-medium {
+    background: url($group-default-avatar-medium) top left / cover no-repeat;
+  }
+
+  /**
+   * @name Large Group Image
+   * @summary Uses the large group image as the avatar icon
+   * @selector .slds-avatar_group-image-large
+   * @restrict .slds-avatar
+   */
+  &.slds-avatar_group-image-large {
+    background: url($group-default-avatar) top left / cover no-repeat;
+  }
+
+  /**
+   * @name Small User Profile Image
+   * @summary Uses the small user avatar image as the avatar icon
+   * @selector .slds-avatar_profile-image-small
+   * @restrict .slds-avatar
+   */
+  &.slds-avatar_profile-image-small {
+    background: url($user-default-avatar-small) top left / cover no-repeat;
+  }
+
+  /**
+   * @name Medium User Profile Image
+   * @summary Uses the medium user avatar image as the avatar icon
+   * @selector .slds-avatar_profile-image-medium
+   * @restrict .slds-avatar
+   */
+  &.slds-avatar_profile-image-medium {
+    background: url($user-default-avatar-medium) top left / cover no-repeat;
+  }
+
+  /**
+   * @name Large User Profile Image
+   * @summary Uses the large user avatar image as the avatar icon
+   * @selector .slds-avatar_profile-image-large
+   * @restrict .slds-avatar
+   */
+  &.slds-avatar_profile-image-large {
+    background: url($user-default-avatar) top left / cover no-repeat;
+  }
+}
+
+/**
+ * @name x-small
+ * @summary Size modifier for avatars - X-Small
+ * @selector .slds-avatar_x-small
+ * @restrict .slds-avatar
+ * @modifier
+ * @group size
+ */
+.slds-avatar_x-small,
+.slds-avatar--x-small {
+  @include square($square-icon-x-small-boundary);
+  font-size: $font-size-1;
+
+  .slds-icon {
+    @include square($square-icon-x-small-boundary);
+  }
+}
+
+/**
+ * @name small
+ * @summary Size modifier for avatars - Small
+ * @selector .slds-avatar_small
+ * @restrict .slds-avatar
+ * @modifier
+ * @group size
+ */
+.slds-avatar_small,
+.slds-avatar--small {
+  @include square($square-icon-small-boundary);
+  font-size: $font-size-1;
+
+  .slds-icon {
+    @include square($square-icon-small-boundary);
+  }
+}
+
+/**
+ * @name medium
+ * @summary Size modifier for avatars - Medium
+ * @selector .slds-avatar_medium
+ * @restrict .slds-avatar
+ * @modifier
+ * @group size
+ */
+.slds-avatar_medium,
+.slds-avatar--medium {
+  @include square($square-icon-medium-boundary);
+  font-size: $font-size-heading-small;
+
+  .slds-icon {
+    @include square($square-icon-medium-boundary);
+  }
+}
+
+/**
+ * @name large
+ * @summary Size modifier for avatars - Large
+ * @selector .slds-avatar_large
+ * @restrict .slds-avatar
+ * @modifier
+ * @group size
+ */
+.slds-avatar_large,
+.slds-avatar--large {
+  @include square($square-icon-large-boundary);
+  font-size: $font-size-6;
+  font-weight: $font-weight-light;
+  line-height: $line-height-heading;
+
+  .slds-icon {
+    @include square($square-icon-large-boundary);
+  }
+}
+
+/**
+ * @name circle
+ * @summary Make avatar a circle
+ * @selector .slds-avatar_circle
+ * @restrict .slds-avatar
+ * @modifier
+ * @group radius
+ */
+.slds-avatar_circle,
+.slds-avatar--circle {
+  border-radius: $border-radius-circle;
+}
+
+// This isn't a thing so lets not document it
+.slds-avatar_empty,
+.slds-avatar--empty {
+  border: $border-width-thin dashed $color-border;
+}
+
+/**
+ * If an image is unavailable, up to two letters can be used instead.
+ * If the record name contains two words, like first and last name, use
+ * the first capitalized letter of each. For records that only have a
+ * single word name, use the first two letters of that word using one
+ * capital and one lower case letter. The background color should match
+ * the entity or object icon. If no image or initials are available,
+ * the fallback should be the icon for the entity or object.
+ *
+ * @name initials
+ * @summary Used for initials inside an avatar
+ * @selector .slds-avatar__initials
+ * @restrict .slds-avatar abbr
+ * @support dev-ready
+ * @variant
+ */
+.slds-avatar__initials {
+  @include absolute-center;
+  height: 100%;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+
+  &[title] { // This selector with title attribute (specificity) gets rid of a bug where the question cursor flashes for a split second as the mouse hits the .slds-avatar. Since we can't rely on someone always including it, the main selector leaves it off.
+    cursor: default;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $color-text-inverse;
+    cursor: default;
+  }
+}
+
+/**
+ * @name inversed
+ * @summary Used for initials that are dark text on light background
+ * @selector .slds-avatar__initials_inverse
+ * @restrict .slds-avatar__initials
+ * @modifier
+ * @group color
+ */
+.slds-avatar__initials_inverse {
+  background-color: $color-background;
+  color: $color-text-weak;
+  text-shadow: none;
+
+  // combat abbr override styling in avatar
+  &:hover {
+    color: $color-text-weak;
+  }
+}

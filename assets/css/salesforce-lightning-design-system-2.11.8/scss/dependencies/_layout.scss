@@ -1,0 +1,119 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+// TINY - 320px - 20rem
+@mixin mq-x-small-min {
+  @media (min-width: pem($mq-x-small)) {
+    @content;
+  }
+}
+
+@mixin mq-x-small-max {
+  @media (max-width: pem($mq-x-small)) {
+    @content;
+  }
+}
+
+// SMALL - 480px - 30rem
+@mixin mq-small-min {
+  @media (min-width: pem($mq-small)) {
+    @content;
+  }
+}
+
+@mixin mq-small-max {
+  @media (max-width: pem($mq-small)) {
+    @content;
+  }
+}
+
+// MEDIUM - 768px - 48rem
+@mixin mq-medium-min {
+  @media (min-width: pem($mq-medium)) {
+    @content;
+  }
+}
+
+@mixin mq-medium-max {
+  @media (max-width: pem($mq-medium)) {
+    @content;
+  }
+}
+
+// LARGE - 1024px - 64rem
+@mixin mq-large-min {
+  @media (min-width: pem($mq-large)) {
+    @content;
+  }
+}
+
+@mixin mq-large-max {
+  @media (max-width: pem($mq-large)) {
+    @content;
+  }
+}
+
+// Wrapping Helper
+@mixin flex-wrap($wrap: true) {
+  @if $wrap {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  @else {
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+}
+
+@mixin flex-vertical-center($display: flex) {
+  display: $display;
+  align-items: center;
+}
+
+// Clearfix
+@mixin clearfix {
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absolute-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+// Useful in situations where flexbox isn't appropiate or possible
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Treats line-height as if it has box-sizing: border-box behavior
+// Useful for blueprints that rely on line-height for their overall height
+@mixin border-box-line-height($value, $border: $border-width-thin * 2, $padding: 0) {
+  @if unitless($border) {
+    $border: 0px; // stylelint-disable length-zero-no-unit
+  }
+  $box-model: 0;
+
+  @if comparable($border, $padding) {
+    $box-model: rem($border + $padding);
+  } @else {
+    $box-model: (rem($border) + $padding);
+  }
+
+  @if comparable($value, $box-model) {
+    line-height: ($value - $box-model);
+  } @else {
+    line-height: (rem($value) - $box-model);
+  }
+}

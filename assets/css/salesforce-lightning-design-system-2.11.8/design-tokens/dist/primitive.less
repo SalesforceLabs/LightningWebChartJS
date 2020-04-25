@@ -1,0 +1,515 @@
+
+/* Used as the background color for the active state on rows or items on list-like components. */
+@color-background-row-active: rgb(236, 235, 234);
+/* Light variant of COLOR_BACKGROUND. */
+@color-background-light: rgb(255, 255, 255);
+/* Used as the background color for the hover state on rows or items on list-like components. */
+@color-background-row-hover: rgb(243, 242, 242);
+/* Dark color for UI elements related to errors. Accessible with white text. */
+@color-background-error-dark: rgb(194, 57, 52);
+/* Background color for UI elements related to providing neutral information (not error, success, or warning). */
+@color-background-info: rgb(112, 110, 107);
+/* Alternative background color for dark portions of the app. */
+@color-background-alt-inverse: rgb(22, 50, 92);
+/* Used as the background color for the new state on rows or items on list-like components. */
+@color-background-row-new: rgb(217, 255, 223);
+/* Dark color for UI elements that have to do with success. Accessible with white text. */
+@color-background-success-dark: rgb(4, 132, 75);
+/* Used as background for loading stencils on white background. */
+@color-background-stencil: rgb(243, 242, 242);
+/* Color for UI elements that have to do with warning. */
+@color-background-warning: rgb(255, 183, 93);
+/* Background color for highlighting text in search results. */
+@color-background-highlight-search: rgb(255, 240, 63);
+/* Hover color for UI elements related to destructive actions. */
+@color-background-destructive-hover: rgb(166, 26, 20);
+/* Default background color for the whole app. */
+@color-background: rgb(243, 242, 242);
+/* Our product brand blue, darkened to meet accessibility color contrast ratios with white text. */
+@color-brand-dark: rgb(0, 112, 210);
+/* The color of the mask overlay that appears when you enter a modal state. */
+@color-background-backdrop: rgba(255, 255, 255, 0.75);
+/* Dark variant of COLOR_BACKGROUND. */
+@color-background-dark: rgb(236, 235, 234);
+/* Our product brand blue. */
+@color-brand: rgb(21, 137, 238);
+/* Color for UI elements related to destructive actions. */
+@color-background-destructive: rgb(194, 57, 52);
+/* Color for UI elements that have to do with success. */
+@color-background-success: rgb(75, 202, 129);
+/* Dark Color for UI elements that have to do with warning. */
+@color-background-warning-dark: rgb(255, 158, 44);
+/* Color for UI elements related to the offline state. */
+@color-background-offline: rgb(62, 62, 60);
+/* Used as an alternate background for loading stencils on gray backgrounds. */
+@color-background-stencil-alt: rgb(236, 235, 234);
+/* Light variant of COLOR_BACKGROUND_INVERSE. */
+@color-background-inverse-light: rgb(22, 50, 92);
+/* Background color for UI elements related to the concept of an external user or customer. */
+@color-background-customer: rgb(255, 154, 60);
+/* Color for UI elements related to errors. */
+@color-background-error: rgb(212, 80, 76);
+/* Second default background color for the app. */
+@color-background-alt: rgb(255, 255, 255);
+/* Darker color for UI elements that have to do with success. Accessible with white text. */
+@color-background-success-darker: rgb(0, 74, 41);
+/* Used as the background color for selected rows or items on list-like components. */
+@color-background-row-selected: rgb(236, 235, 234);
+/* Our product brand blue, darkened even further. */
+@color-brand-darker: rgb(0, 95, 178);
+/* Background color for text selected with a mouse. */
+@color-background-selection: rgb(216, 237, 255);
+/* Active color for UI elements related to destructive actions. */
+@color-background-destructive-active: rgb(135, 5, 0);
+/* Default background color for dark portions of the app (like Stage Left or tooltips). */
+@color-background-inverse: rgb(6, 28, 63);
+/* Background color for highlighting UI elements. */
+@color-background-highlight: rgb(250, 255, 189);
+/* Dark alternative border color for UI elements related to errors. */
+@color-border-error-dark: rgb(234, 130, 136);
+/* Our product brand blue, darkened to meet accessibility color contrast ratios with white text. */
+@color-border-brand-dark: rgb(0, 112, 210);
+/* Border color for UI elements related to providing neutral information (not error, success, or warning). */
+@color-border-info: rgb(112, 110, 107);
+/* Border color for UI elements that have to do with warnings. */
+@color-border-warning: rgb(255, 183, 93);
+/* Hover border color for UI elements that have to do with destructive actions. */
+@color-border-destructive-hover: rgb(166, 26, 20);
+/* Default border color for UI elements. */
+@color-border: rgb(221, 219, 218);
+/* Dark alternative border color for UI elements that have to do with success. */
+@color-border-success-dark: rgb(4, 132, 75);
+/* Border color for UI elements that have to do with destructive actions. */
+@color-border-destructive: rgb(194, 57, 52);
+/* Darkest separator color - used as an alternate separator color when more differentiation is desired. */
+@color-border-separator-alt-2: rgb(201, 199, 197);
+/* Border color for UI elements related to the offline state. */
+@color-border-offline: rgb(62, 62, 60);
+/* Border color for UI elements that have to do with success. */
+@color-border-success: rgb(75, 202, 129);
+/* Lightest separator color - used as default separator on white backgrounds. */
+@color-border-separator: rgb(250, 250, 249);
+/* Our product brand blue. */
+@color-border-brand: rgb(21, 137, 238);
+/* Used to delineate the boundary of a component that is being clicked. Specific to builders. */
+@color-border-selection-active: rgb(250, 250, 249);
+/* Border color for UI elements that have to do with errors. */
+@color-border-error: rgb(194, 57, 52);
+/* Used to delineate the boundary of a component that is being hovered over. Specific to builders. */
+@color-border-selection-hover: rgb(21, 137, 238);
+/* Used as the border color for the hover state on selected rows or items on list-like components. */
+@color-border-row-selected-hover: rgb(21, 137, 238);
+/* Border color for UI elements related to the concept of an external user or customer. */
+@color-border-customer: rgb(255, 154, 60);
+/* Used to delineate the boundary of a selected component. Specific to builders. */
+@color-border-selection: rgb(0, 112, 210);
+/* Used as the border color for selected rows or items on list-like components. */
+@color-border-row-selected: rgb(0, 112, 210);
+/* Medium separator color - used as default separator on light gray backgrounds. */
+@color-border-separator-alt: rgb(221, 219, 218);
+/* Border color to match UI elements using color-background-inverse. */
+@color-border-inverse: rgb(6, 28, 63);
+/* Active border color for UI elements that have to do with destructive actions. */
+@color-border-destructive-active: rgb(135, 5, 0);
+/* Alternative border color for UI elements related to errors. */
+@color-border-error-alt: rgb(234, 130, 136);
+/* Used as a separator on dark backgrounds, such as stage left navigation. */
+@color-border-separator-inverse: rgb(42, 66, 108);
+@border-radius-small: 0.125rem;
+/* Icons in lists, record home icon, unbound input elements */
+@border-radius-medium: 0.25rem;
+@border-radius-large: 0.5rem;
+/* Circle for global use, action icon bgd shape */
+@border-radius-circle: 50%;
+@border-width-thin: 1px;
+@border-width-thick: 2px;
+/* Shadow for active states on interactive elements. */
+@shadow-active: 0 0 2px #0070d2;
+/* Shadow for drag-n-drop. */
+@shadow-drag: 0 2px 4px 0 rgba(0, 0, 0, 0.40);
+/* Shadow for drop down. */
+@shadow-drop-down: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+/* 0 seconds, 0 frames */
+@duration-instantly: 0s;
+/* 0.05 seconds, 3 frames */
+@duration-immediately: 0.05s;
+/* 0.1 seconds, 6 frames */
+@duration-quickly: 0.1s;
+/* 0.2 seconds, 12 frames */
+@duration-promptly: 0.2s;
+/* 0.4 seconds, 24 frames */
+@duration-slowly: 0.4s;
+/* 3.2 seconds, 192 frames */
+@duration-paused: 3.2s;
+/* Default font-family for Salesforce applications */
+@font-family: 'Salesforce Sans', Arial, sans-serif;
+@font-family-heading: 'Salesforce Sans', Arial, sans-serif;
+@font-family-monospace: Consolas, Menlo, Monaco, Courier, monospace;
+/* Constant typography token for font size 1 */
+@font-size-1: 0.625rem;
+/* Constant typography token for font size 2 */
+@font-size-2: 0.75rem;
+/* Constant typography token for font size 3 */
+@font-size-3: 0.8125rem;
+/* Variable typography token for font size 10 */
+@var-font-size-10: 2rem;
+/* Constant typography token for font size 4 */
+@font-size-4: 0.875rem;
+/* Variable typography token for font size 11 */
+@var-font-size-11: 2.625rem;
+/* Constant typography token for font size 5 */
+@font-size-5: 1rem;
+/* Constant typography token for font size 6 */
+@font-size-6: 1.125rem;
+/* Constant typography token for font size 7 */
+@font-size-7: 1.25rem;
+/* Constant typography token for font size 8 */
+@font-size-8: 1.5rem;
+/* Variable typography token for font size 1 */
+@var-font-size-1: 0.625rem;
+/* Constant typography token for font size 9 */
+@font-size-9: 1.75rem;
+/* Variable typography token for font size 2 */
+@var-font-size-2: 0.75rem;
+/* Variable typography token for font size 3 */
+@var-font-size-3: 0.8125rem;
+/* Constant typography token for font size 10 */
+@font-size-10: 2rem;
+/* Variable typography token for font size 4 */
+@var-font-size-4: 0.875rem;
+/* Constant typography token for font size 11 */
+@font-size-11: 2.625rem;
+/* Variable typography token for font size 5 */
+@var-font-size-5: 1rem;
+/* Variable typography token for font size 6 */
+@var-font-size-6: 1.125rem;
+/* Variable typography token for font size 7 */
+@var-font-size-7: 1.25rem;
+/* Variable typography token for font size 8 */
+@var-font-size-8: 1.5rem;
+/* Variable typography token for font size 9 */
+@var-font-size-9: 1.75rem;
+/* Use for large headings only. */
+@font-weight-light: 300;
+/* Most all body copy. */
+@font-weight-regular: 400;
+/* Used sparingly for emphasized text within regular body copy. */
+@font-weight-bold: 700;
+/* Unitless line-heights for reusability */
+@line-height-heading: 1.25;
+/* Unitless line-heights for reusability */
+@line-height-text: 1.5;
+/* Remove extra leading. Unitless line-heights for reusability */
+@line-height-reset: 1;
+/* Variable unitless line-heights for reusability */
+@var-line-height-text: 1.5;
+/* 50% transparency of an element */
+@opacity-5: 0.5;
+/* 80% transparency of an element */
+@opacity-8: 0.8;
+/* Disabled state of BRAND_HEADER_CONTRAST_WEAK */
+@brand-header-contrast-weak-disabled: rgba(166, 166, 166, 0.25);
+/* Gray Color 11 */
+@color-gray-11: rgb(62, 62, 60);
+/* Transparent value of BRAND_PRIMARY at 10% */
+@brand-primary-transparent-10: rgba(21, 137, 238, 0.1);
+/* Gray Color 12 */
+@color-gray-12: rgb(43, 40, 38);
+/* These RGBA values need to be updated if BRAND_BACKGROUND_DARK changes, solves webkit bug */
+@brand-background-dark-transparent: rgba(25, 85, 148, 0);
+/* Gray Color 13 */
+@color-gray-13: rgb(8, 7, 7);
+/* Background color a branded app header */
+@brand-header: rgb(255, 255, 255);
+/* Active / Hover state of BRAND_LIGHT */
+@brand-light-active: rgb(227, 229, 237);
+/* Variant of BRAND_HEADER_CONTRAST that provides a warm color */
+@brand-header-contrast-warm: rgb(191, 2, 1);
+/* Disabled state of BRAND_HEADER_ICON */
+@brand-header-icon-disabled: rgba(145, 145, 145, 0.25);
+/* Active / Hover state of BRAND_HEADER_CONTRAST */
+@brand-header-contrast-active: rgb(80, 80, 80);
+/* Primary page background color */
+@brand-background-primary: rgb(176, 196, 223);
+/* Primary brand color */
+@brand-primary: rgb(21, 137, 238);
+/* Active / Hover state of BRAND_HEADER_CONTRAST_WEAK */
+@brand-header-contrast-weak-active: rgb(129, 129, 129);
+/* Active / Hover state of BRAND_CONTRAST */
+@brand-contrast-active: rgb(13, 14, 18);
+/* Variant of BRAND_HEADER_CONTRAST that provides a cool color */
+@brand-header-contrast-cool: rgb(0, 85, 131);
+/* Variant of BRAND_HEADER that is accessible with BRAND_HEADER */
+@brand-header-contrast-inverse: rgb(255, 255, 255);
+/* Dark variant of BRAND that is accessible with light colors */
+@brand-dark: rgb(24, 35, 55);
+/* Dark variant of BRAND that is accessible with white */
+@brand-accessible: rgb(0, 112, 210);
+/* Dark variant of BRAND_BACKGROUND_PRIMARY, used within gradient of background color */
+@brand-background-dark: rgb(25, 85, 148);
+/* Active / Hover state of BRAND_TEXT_LINK */
+@brand-text-link-active: rgb(0, 95, 178);
+/* Gray Color 1 */
+@color-gray-1: rgb(255, 255, 255);
+/* Gray Color 2 */
+@color-gray-2: rgb(250, 250, 249);
+/* Active / Hover state of BRAND_HEADER_ICON */
+@brand-header-icon-active: rgb(129, 129, 129);
+/* Gray Color 3 */
+@color-gray-3: rgb(243, 242, 242);
+/* Icons of BRAND_HEADER that is accessible with BRAND_HEADER */
+@brand-header-icon: rgb(145, 145, 145);
+/* Disabled state of BRAND_A11Y */
+@brand-disabled: rgb(201, 199, 197);
+/* Primary text link brand color */
+@brand-text-link: rgb(0, 109, 204);
+/* Gray Color 4 */
+@color-gray-4: rgb(236, 235, 234);
+/* Gray Color 5 */
+@color-gray-5: rgb(221, 219, 218);
+/* Gray Color 6 */
+@color-gray-6: rgb(201, 199, 197);
+/* Active / Hover state of BRAND_A11Y */
+@brand-accessible-active: rgb(0, 95, 178);
+/* Gray Color 7 */
+@color-gray-7: rgb(176, 173, 171);
+/* Active / Hover state of BRAND_DARK */
+@brand-dark-active: rgb(37, 48, 69);
+/* Gray Color 8 */
+@color-gray-8: rgb(150, 148, 146);
+/* Active / Hover state of BRAND_HEADER_CONTRAST */
+@brand-header-contrast-inverse-active: rgb(238, 238, 238);
+/* Active / Hover state of BRAND_HEADER_CONTRAST_COOL */
+@brand-header-contrast-cool-active: rgb(0, 85, 131);
+/* Gray Color 9 */
+@color-gray-9: rgb(112, 110, 107);
+/* Variant of BRAND that is accessible with BRAND */
+@brand-contrast: rgb(26, 27, 30);
+/* Weak contrast ratio, useful for iconography */
+@brand-header-contrast-weak: rgb(145, 145, 145);
+/* Active / Hover state of BRAND_PRIMARY */
+@brand-primary-active: rgb(0, 122, 221);
+/* These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug */
+@brand-background-primary-transparent: rgba(176, 196, 223, 0);
+/* Variant of BRAND_HEADER that is accessible with BRAND_HEADER */
+@brand-header-contrast: rgb(94, 94, 94);
+/* Transparent value of BRAND_PRIMARY */
+@brand-primary-transparent: rgba(21, 137, 238, 0.1);
+/* Active / Hover state of BRAND_HEADER_CONTRAST_WARM */
+@brand-header-contrast-warm-active: rgb(172, 0, 0);
+/* Transparent value of BRAND_PRIMARY at 40% */
+@brand-primary-transparent-40: rgba(21, 137, 238, 0.4);
+/* Light variant of BRAND that is accessible with dark colors */
+@brand-light: rgb(244, 246, 254);
+/* Gray Color 10 */
+@color-gray-10: rgb(81, 79, 77);
+/* Generic sizing token scale for UI components. */
+@size-x-small: 12rem;
+/* Generic sizing token scale for UI components. */
+@size-xxx-small: 3rem;
+/* Large utility icon without border. */
+@square-icon-utility-large: 1.5rem;
+/* Generic sizing token scale for UI components. */
+@size-xx-small: 6rem;
+/* Search Results: Outer colored tile */
+@square-icon-small-boundary: 1.5rem;
+/* Generic sizing token scale for UI components. */
+@size-small: 15rem;
+/* Medium utility icon without border. */
+@square-icon-utility-medium: 1.25rem;
+/* Very small icon button boundary. */
+@square-icon-x-small-boundary: 1.25rem;
+/* Small utility icon without border. */
+@square-icon-utility-small: 1rem;
+/* Stage left & actions: Outer colored tile */
+@square-icon-medium-boundary: 2rem;
+/* Anchor: Icon content (white shape) */
+@square-icon-large-content: 2rem;
+/* Anchor: Outer colored tile */
+@square-icon-large-boundary: 3rem;
+/* Generic sizing token scale for UI components. */
+@size-medium: 20rem;
+/* Stage left & actions: Icon content (white shape) */
+@square-icon-medium-content: 1rem;
+/* Generic sizing token scale for UI components. */
+@size-x-large: 40rem;
+/* Very small icons in icon buttons. */
+@square-icon-x-small-content: 0.5rem;
+/* Variable medium boundary for square icons */
+@var-square-icon-medium-boundary: 2rem;
+/* Icon button boundary. */
+@square-icon-medium-boundary-alt: 2.25rem;
+/* Generic sizing token scale for UI components. */
+@size-xx-large: 60rem;
+/* Anchor: avatar */
+@square-icon-large-boundary-alt: 5rem;
+/* Generic sizing token scale for UI components. */
+@size-large: 25rem;
+/* Search Results: Icon content (white shape) */
+@square-icon-small-content: 0.75rem;
+/* Very very small icon button boundary. */
+@square-icon-xx-small-boundary: 1rem;
+/* Alternate medium tap target size */
+@square-icon-medium-content-alt: 0.875rem;
+/* Variable spacing token for size X Large */
+@var-spacing-x-large: 2rem;
+/* Variable horizontal spacing token for size Small */
+@var-spacing-horizontal-small: 0.75rem;
+/* Variable horizontal spacing token for size XX Large */
+@var-spacing-horizontal-xx-large: 3rem;
+/* Constant spacing token for size X small */
+@spacing-x-small: 0.5rem;
+/* Constant spacing token for size XXX small */
+@spacing-xxx-small: 0.125rem;
+/* Constant spacing token for size XX small */
+@spacing-xx-small: 0.25rem;
+/* Variable vertical spacing token for size Large */
+@var-spacing-vertical-large: 1.5rem;
+/* Variable spacing token for size Large */
+@var-spacing-large: 1.5rem;
+/* Variable spacing token for size Medium */
+@var-spacing-medium: 1rem;
+/* Variable vertical spacing token for size Medium */
+@var-spacing-vertical-medium: 1rem;
+/* Variable vertical spacing token for size X Small */
+@var-spacing-vertical-x-small: 0.5rem;
+/* Constant spacing token for size Small */
+@spacing-small: 0.75rem;
+/* Variable vertical spacing token for size XXX Small */
+@var-spacing-vertical-xxx-small: 0.125rem;
+/* Variable spacing token for size X Small */
+@var-spacing-x-small: 0.5rem;
+/* Variable spacing token for size XXX Small */
+@var-spacing-xxx-small: 0.125rem;
+/* Variable horizontal spacing token for size X Large */
+@var-spacing-horizontal-x-large: 2rem;
+/* Variable horizontal spacing token for size XX Small */
+@var-spacing-horizontal-xx-small: 0.25rem;
+/* Variable spacing token for size XX Large */
+@var-spacing-xx-large: 3rem;
+/* Constant spacing token for size Medium */
+@spacing-medium: 1rem;
+/* Variable vertical spacing token for size XX Large */
+@var-spacing-vertical-xx-large: 3rem;
+/* Variable vertical spacing token for size Small */
+@var-spacing-vertical-small: 0.75rem;
+/* Variable spacing token for size Small */
+@var-spacing-small: 0.75rem;
+/* Constant spacing token for 0 */
+@spacing-none: 0;
+/* Variable horizontal spacing token for size Large */
+@var-spacing-horizontal-large: 1.5rem;
+/* Constant spacing token for size X Large */
+@spacing-x-large: 2rem;
+/* Constant spacing token for size XX Large */
+@spacing-xx-large: 3rem;
+/* Variable horizontal spacing token for size XXX Small */
+@var-spacing-horizontal-xxx-small: 0.125rem;
+/* Variable horizontal spacing token for size X Small */
+@var-spacing-horizontal-x-small: 0.5rem;
+/* Variable spacing token for size XX Small */
+@var-spacing-xx-small: 0.25rem;
+/* Variable horizontal spacing token for size Medium */
+@var-spacing-horizontal-medium: 1rem;
+/* Variable vertical spacing token for size XX Small */
+@var-spacing-vertical-xx-small: 0.25rem;
+/* Variable vertical spacing token for size X Large */
+@var-spacing-vertical-x-large: 2rem;
+/* Constant spacing token for size Large */
+@spacing-large: 1.5rem;
+/* Action label text color */
+@color-text-action-label: rgb(62, 62, 60);
+/* Link color on dark background */
+@color-text-link-inverse: rgb(255, 255, 255);
+/* Link color on dark background - active state */
+@color-text-link-inverse-active: rgba(255, 255, 255, 0.5);
+/* Action label active text color */
+@color-text-action-label-active: rgb(8, 7, 7);
+/* Color for texts or icons that are related to warnings on a dark background. */
+@color-text-warning: rgb(255, 183, 93);
+/* Focus link text */
+@color-text-link-focus: rgb(0, 95, 178);
+/* Text color for destructive actions - hover state */
+@color-text-destructive-hover: rgb(161, 43, 43);
+/* Disabled link text */
+@color-text-link-disabled: rgb(22, 50, 92);
+/* Body text color */
+@color-text-default: rgb(8, 7, 7);
+/* Text color for destructive actions */
+@color-text-destructive: rgb(194, 57, 52);
+/* Hover link text */
+@color-text-link-hover: rgb(0, 95, 178);
+/* Text color for success text. */
+@color-text-success: rgb(2, 126, 70);
+/* Color for text that is purposefully de-emphasized to create visual hierarchy. */
+@color-text-weak: rgb(62, 62, 60);
+/* Input placeholder text on dark backgrounds. */
+@color-text-placeholder-inverse: rgb(236, 235, 234);
+/* Link text (508) */
+@color-text-link: rgb(0, 109, 204);
+/* Color for texts that are related to warnings on a light background. */
+@color-text-warning-alt: rgb(132, 72, 0);
+/* Default icon color. */
+@color-text-icon-default: rgb(112, 110, 107);
+/* Our product brand blue. */
+@color-text-brand: rgb(21, 137, 238);
+/* Error text for inputs and error misc */
+@color-text-error: rgb(194, 57, 52);
+/* Customer text used in anchor subtitle */
+@color-text-customer: rgb(255, 154, 60);
+/* Text color found on any primary brand color */
+@color-text-brand-primary: rgb(255, 255, 255);
+/* Active link text */
+@color-text-link-active: rgb(0, 57, 107);
+/* Color of required field marker. */
+@color-text-required: rgb(194, 57, 52);
+/* Link color on dark background - disabled state */
+@color-text-link-inverse-disabled: rgba(255, 255, 255, 0.15);
+/* Inverse text color for dark backgrounds */
+@color-text-inverse: rgb(255, 255, 255);
+/* Input placeholder text. */
+@color-text-placeholder: rgb(112, 110, 107);
+/* Weak inverse text color for dark backgrounds */
+@color-text-inverse-weak: rgb(176, 173, 171);
+/* Link color on dark background - hover state */
+@color-text-link-inverse-hover: rgba(255, 255, 255, 0.75);
+/* Text color for success text on dark backgrounds. */
+@color-text-success-inverse: rgb(75, 202, 129);
+/* Text color for field labels. */
+@color-text-label: rgb(62, 62, 60);
+/* Tap target size for elements that rely on width and height dimensions */
+@square-tappable: 2.75rem;
+/* Small tap target size for elements that rely on width and height dimensions */
+@square-tappable-small: 2rem;
+/* X-small tap target size for elements that rely on width and height dimensions */
+@square-tappable-x-small: 1.5rem;
+/* Xx-small tap target size for elements that rely on width and height dimensions */
+@square-tappable-xx-small: 1.25rem;
+/* Tap target size for elements that rely on height or line-height */
+@height-tappable: 2.75rem;
+/* Small tap target size for elements that rely on height or line-height */
+@height-tappable-small: 2rem;
+/* Dropdown */
+@z-index-dropdown: 7000;
+/* Docked element */
+@z-index-docked: 4;
+/* Notifications under modals */
+@z-index-reminder: 8500;
+/* Spinner */
+@z-index-spinner: 9050;
+/* Default */
+@z-index-default: 1;
+/* Deep dive */
+@z-index-deepdive: -99999;
+/* Toasts */
+@z-index-toast: 10000;
+/* Dialog */
+@z-index-dialog: 6000;
+/* Popup */
+@z-index-popup: 5000;
+/* Modal */
+@z-index-modal: 9000;
+/* Stickied element */
+@z-index-sticky: 100;
+/* Overlay */
+@z-index-overlay: 8000;

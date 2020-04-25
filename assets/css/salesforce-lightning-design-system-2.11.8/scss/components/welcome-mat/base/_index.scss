@@ -1,0 +1,233 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import 'deprecate';
+
+/**
+ * @summary Welcome Mat component
+ * @name base
+ * @selector .slds-welcome-mat
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.slds-welcome-mat {
+  position: relative;
+}
+
+
+/**
+ * @summary Content container for the whole Welcome Mat
+ * @selector .slds-welcome-mat__content
+ * @restrict .slds-welcome-mat div
+ */
+.slds-welcome-mat__content {
+  min-height: $welcome-mat-min-height;
+  max-height: $welcome-mat-max-height;
+
+  /**
+   * @summary Progress bar inside Welcome Mat
+   */
+  .slds-progress-bar {
+    display: inline-block;
+    width: $welcome-mat-width-progress-bar;
+    background: $welcome-mat-color-background-progress-bar;
+  }
+
+  /**
+   * @summary Progress bar value inside Welcome Mat
+   */
+  .slds-progress-bar__value {
+    background: $progress-bar-color-background-fill-success;
+  }
+}
+
+/**
+ * @summary Container element for the informational side of the Welcome Mat
+ * @selector .slds-welcome-mat__info
+ * @restrict .slds-welcome-mat__content div
+ */
+.slds-welcome-mat__info {
+  display: flex;
+  overflow: auto;
+  padding: $spacing-medium $spacing-xx-large $welcome-mat-spacing-info;
+  color: $welcome-mat-text-color-info;
+  background-image: url($welcome-mat-background-image-info);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $welcome-mat-background-color-info;
+  align-items: center;
+}
+
+/**
+ * @summary Content container for the informational side of the Welcome Mat. Centers in container space.
+ * @selector .slds-welcome-mat__info-content
+ * @restrict .slds-welcome-mat__info div
+ */
+.slds-welcome-mat__info-content {
+  margin: auto;
+  text-align: center;
+}
+
+/**
+ * @summary Title element for the informational side of the Welcome Mat
+ * @selector .slds-welcome-mat__info-title
+ * @restrict .slds-welcome-mat__info-content h2
+ */
+.slds-welcome-mat__info-title {
+  margin-bottom: $spacing-large;
+  font-size: $welcome-mat-font-size-info-title;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+}
+
+/**
+ * @summary Description container for the informational side of the Welcome Mat
+ * @selector .slds-welcome-mat__info-description
+ * @restrict .slds-welcome-mat__info-content p, .slds-welcome-mat__info-content div
+ */
+.slds-welcome-mat__info-description {
+  margin-bottom: $spacing-large;
+}
+
+/**
+ * @summary Text description of walkthrough progress
+ * @selector .slds-welcome-mat__info-progress
+ * @restrict .slds-welcome-mat__info-content div
+ */
+.slds-welcome-mat__info-progress {
+  margin-bottom: $spacing-medium;
+}
+
+/**
+ * @summary Container element for the Actions side of the Welcome Mat.
+ * @selector .slds-welcome-mat__tiles
+ * @restrict .slds-welcome-mat__content ul
+ */
+.slds-welcome-mat__tiles {
+  background: $color-background;
+  overflow: auto;
+  padding: $spacing-medium;
+}
+
+/**
+ * @summary Welcome Mat Tile item. Shows an actionable step a user can take to complete a greater objective. Based on a SLDS Visual Picker.
+ * @selector .slds-welcome-mat__tile
+ * @restrict .slds-welcome-mat__tiles li
+ */
+.slds-welcome-mat__tile {
+  margin: $spacing-medium 0;
+
+  .slds-media {
+    padding: $spacing_x-small;
+  }
+
+  &:not(.slds-welcome-mat__tile_complete):not(.slds-welcome-mat__tile_info-only) {
+    box-shadow: 0 2px 2px $welcome-mat-color-action-shadow;
+    border-radius: $border-radius-medium;
+    background: $color-background-alt;
+
+    &:hover {
+      box-shadow: 0 0 0 1px $color-border-selection-hover inset,
+        0 2px 2px $welcome-mat-color-action-shadow;
+    }
+  }
+
+  &:not(.slds-welcome-mat__tile_complete) .slds-icon-action-check {
+    display: none;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+* @summary Figure element for Welcome Mat Tile item, based on SLDS Media Object figure.
+* @selector .slds-welcome-mat__tile-figure
+* @restrict .slds-welcome-mat__tile .slds-media__figure div
+*/
+.slds-welcome-mat__tile-figure {
+  margin-left: $spacing-xx-small;
+}
+
+/**
+ * @summary Title element for Welcome Mat Tile item.
+ * @selector .slds-welcome-mat__tile-title
+ * @restrict .slds-welcome-mat__tile h3
+ */
+.slds-welcome-mat__tile-title {
+  font-weight: $font-weight-bold;
+}
+
+/**
+ * @summary Body element for Welcome Mat Tile item, based on SLDS Media Object body.
+ * @selector .slds-welcome-mat__tile-body
+ * @restrict .slds-welcome-mat__tile .slds-media__body div
+ */
+.slds-welcome-mat__tile-body {
+  padding: $spacing-small;
+  border-left: $border-width-thin solid $color-border;
+}
+
+/**
+ * @summary Description element for Welcome Mat Tile item.
+ * @selector .slds-welcome-mat__tile-description
+ * @restrict .slds-welcome-mat__tile p
+ */
+.slds-welcome-mat__tile-description {
+  color: $color-text-weak;
+  font-size: $font-size-2;
+  line-height: $line-height-text;
+}
+
+/**
+ * @summary Icon Container for Welcome Mat Tile item.
+ * @selector .slds-welcome-mat__tile-icon-container
+ * @restrict .slds-welcome-mat__tile div
+ */
+.slds-welcome-mat__tile-icon-container {
+  position: relative;
+}
+
+/**
+ * @name tile-complete
+ * @summary Complete modifier class for Welcome Mat Tile item.
+ * @selector .slds-welcome-mat__tile_complete
+ * @restrict .slds-welcome-mat__tile
+ * @modifier
+ * @group state
+ */
+.slds-welcome-mat__tile_complete {
+  background: transparent;
+
+  .slds-icon {
+    fill: $welcome-mat-color-icon-complete;
+  }
+}
+
+.slds-welcome-mat .slds-icon-action-check {
+  position: absolute;
+  bottom: -($welcome-mat-complete-icon-size / 2);
+  right: -($welcome-mat-complete-icon-size / 2);
+  height: $welcome-mat-complete-icon-size;
+  width: $welcome-mat-complete-icon-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border: $border-width-thick solid $color-background;
+  border-radius: $welcome-mat-complete-icon-size;
+  line-height: 0;
+  background: $progress-bar-color-background-fill-success;
+
+  .slds-icon {
+    fill: $color-text-inverse;
+  }
+}

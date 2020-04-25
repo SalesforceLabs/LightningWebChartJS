@@ -1,0 +1,212 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-modal {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.1s linear, -webkit-transform 0.1s linear;
+  transition: opacity 0.1s linear, -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear, opacity 0.1s linear;
+  transition: transform 0.1s linear, opacity 0.1s linear, -webkit-transform 0.1s linear;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9001;
+}
+.slds-modal__container {
+  position: relative;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: opacity 0.1s linear, -webkit-transform 0.1s linear;
+  transition: opacity 0.1s linear, -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear, opacity 0.1s linear;
+  transition: transform 0.1s linear, opacity 0.1s linear, -webkit-transform 0.1s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 2rem;
+  height: 100%;
+  padding: 3rem 0;
+  border-radius: 0.25rem;
+}
+@media (min-width: 48em) {
+  .slds-modal__container {
+    margin: 0 auto;
+    width: 50%;
+    max-width: 40rem;
+    min-width: 20rem;
+  }
+}
+.slds-modal__header,
+.slds-modal__content {
+  background: white;
+}
+.slds-modal__header,
+.slds-modal__footer {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.slds-modal__header {
+  position: relative;
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom: 2px solid #dddbda;
+  padding: 1rem;
+  text-align: center;
+}
+.slds-modal__header + .slds-modal__menu {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.slds-modal__header_empty {
+  padding: 0;
+  border-bottom: 0;
+}
+.slds-modal__header_empty + .slds-modal__content {
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+.slds-modal .slds-modal__title {
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+.slds-modal__content {
+  overflow: hidden;
+  overflow-y: auto;
+}
+.slds-modal__content:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+}
+.slds-modal__menu {
+  position: relative;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  background-color: #f3f2f2;
+}
+@media (max-width: 48em) {
+  .slds-modal__menu .slds-button {
+    width: 100%;
+    margin: 0.125rem 0;
+  }
+}
+.slds-modal__footer {
+  border-top: 2px solid #dddbda;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  background-color: #f3f2f2;
+  text-align: right;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+}
+.slds-modal__footer_directional .slds-button:first-child {
+  float: left;
+}
+.slds-modal__footer .slds-button + .slds-button {
+  margin-left: 0.5rem;
+}
+.slds-modal__close {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: -2.5rem;
+  right: -0.5rem;
+}
+@media (min-width: 48em) {
+  .slds-modal_small .slds-modal__container {
+    width: 60%;
+    max-width: 52.0625rem;
+    min-width: 40rem;
+  }
+}
+@media (min-width: 48em) {
+  .slds-modal_medium .slds-modal__container {
+    width: 70%;
+    max-width: 75rem;
+    min-width: 40rem;
+  }
+}
+@media (min-width: 48em) {
+  .slds-modal_large .slds-modal__container {
+    width: 90%;
+    max-width: none;
+    min-width: 40rem;
+  }
+}
+.slds-backdrop {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(8, 7, 7, 0.6);
+  z-index: 9000;
+}
+.slds-backdrop_open {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s linear;
+  transition: opacity 0.4s linear;
+}
+.slds-fade-in-open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+}
+.slds-fade-in-open .slds-modal__container-reset {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.slds-slide-up-open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: opacity 0.1s linear, -webkit-transform 0.2s linear;
+  transition: opacity 0.1s linear, -webkit-transform 0.2s linear;
+  transition: opacity 0.1s linear, transform 0.2s linear;
+  transition: opacity 0.1s linear, transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+.slds-slide-up-open .slds-modal__container-reset {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(0, 1rem);
+  transform: translate(0, 1rem);
+  -webkit-transition: opacity 0.2s linear, -webkit-transform 0.2s linear;
+  transition: opacity 0.2s linear, -webkit-transform 0.2s linear;
+  transition: opacity 0.2s linear, transform 0.2s linear;
+  transition: opacity 0.2s linear, transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+.slds-slide-up-saving {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0, -1rem);
+  transform: translate(0, -1rem);
+}
+.slds-slide-down-cancel {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0, 1rem);
+  transform: translate(0, 1rem);
+}

@@ -1,0 +1,115 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-builder-header_container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.slds-builder-header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.125rem;
+  background: #16325c;
+  color: white;
+}
+.slds-builder-header__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+}
+.slds-builder-header__item + .slds-builder-header__item {
+  border-left: 1px solid currentColor;
+}
+.slds-builder-header__item-action,
+.slds-builder-header__item-label {
+  color: currentColor;
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0%;
+  height: 100%;
+}
+.slds-builder-header__item-action .slds-media__body,
+.slds-builder-header__item-label .slds-media__body {
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+.slds-builder-header__item-action {
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+}
+.slds-builder-header__item-action:hover,
+.slds-builder-header__item-action:focus {
+  color: #b0adab;
+  text-decoration: none;
+}
+.slds-builder-header__item-action:focus {
+  text-decoration: underline;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+.slds-builder-header__nav,
+.slds-builder-header__utilities {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.slds-builder-header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slds-builder-header__utilities {
+  margin-left: auto;
+}
+.slds-builder-header__nav-item,
+.slds-builder-header__utilities-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.slds-builder-header__nav-item + .slds-builder-header__nav-item,
+.slds-builder-header__nav-item + .slds-builder-header__utilities-item,
+.slds-builder-header__utilities-item + .slds-builder-header__nav-item,
+.slds-builder-header__utilities-item + .slds-builder-header__utilities-item {
+  border-left: 1px solid currentColor;
+}
+.slds-builder-toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-bottom: 1px solid #dddbda;
+}
+.slds-builder-toolbar__actions {
+  margin-left: auto;
+}
+.slds-builder-toolbar__item-group + .slds-builder-toolbar__item-group {
+  margin-left: 0.25rem;
+}

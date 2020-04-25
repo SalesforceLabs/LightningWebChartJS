@@ -1,0 +1,7 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-form-element_stacked .slds-form-element__icon,
+.slds-form_stacked .slds-form-element .slds-form-element__icon,
+.slds-form_horizontal .slds-form-element_stacked .slds-form-element__icon {
+  padding-top: 0;
+}

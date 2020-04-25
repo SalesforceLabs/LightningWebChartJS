@@ -1,0 +1,110 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-icon-strength {
+  width: 1.6875rem;
+  height: 0.4375rem;
+  display: inline-block;
+}
+.slds-icon-strength circle {
+  stroke-width: 0.95px;
+  fill: transparent;
+  stroke: #ccc;
+  -webkit-transition: fill 0.4s ease-in-out, stroke 0.4s ease-in-out;
+  transition: fill 0.4s ease-in-out, stroke 0.4s ease-in-out;
+  will-change: fill, stroke;
+}
+.slds-icon-strength[data-slds-strength="1"] circle:nth-child(1),
+.slds-icon-strength[data-slds-strength="2"] circle:nth-child(1),
+.slds-icon-strength[data-slds-strength="2"] circle:nth-child(2),
+.slds-icon-strength[data-slds-strength="3"] circle:nth-child(1),
+.slds-icon-strength[data-slds-strength="3"] circle:nth-child(2),
+.slds-icon-strength[data-slds-strength="3"] circle:nth-child(3) {
+  fill: #04844b;
+  stroke: #04844b;
+}
+.slds-icon-strength[data-slds-strength="-1"] circle:nth-child(1),
+.slds-icon-strength[data-slds-strength="-2"] circle:nth-child(1),
+.slds-icon-strength[data-slds-strength="-2"] circle:nth-child(2),
+.slds-icon-strength[data-slds-strength="-3"] circle:nth-child(1),
+.slds-icon-strength[data-slds-strength="-3"] circle:nth-child(2),
+.slds-icon-strength[data-slds-strength="-3"] circle:nth-child(3) {
+  fill: #ffdde1;
+  stroke: #c23934;
+}
+.slds-icon-strength.slds-is-animated circle {
+  -webkit-animation: slds-icon-strength-positive-load 0.4s 1s ease-in-out alternate both paused;
+  animation: slds-icon-strength-positive-load 0.4s 1s ease-in-out alternate both paused;
+}
+.slds-icon-strength.slds-is-animated circle:nth-child(2) {
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+.slds-icon-strength.slds-is-animated circle:nth-child(3) {
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+.slds-icon-strength.slds-is-animated[data-slds-strength^="-"] circle {
+  -webkit-animation-name: slds-icon-strength-negative-load;
+  animation-name: slds-icon-strength-negative-load;
+}
+.slds-icon-strength.slds-is-animated[data-slds-strength="-1"] circle:nth-child(1),
+.slds-icon-strength.slds-is-animated[data-slds-strength="-2"] circle:nth-child(1),
+.slds-icon-strength.slds-is-animated[data-slds-strength="-2"] circle:nth-child(2),
+.slds-icon-strength.slds-is-animated[data-slds-strength="-3"] circle:nth-child(1),
+.slds-icon-strength.slds-is-animated[data-slds-strength="-3"] circle:nth-child(2),
+.slds-icon-strength.slds-is-animated[data-slds-strength="-3"] circle:nth-child(3),
+.slds-icon-strength.slds-is-animated[data-slds-strength="1"] circle:nth-child(1),
+.slds-icon-strength.slds-is-animated[data-slds-strength="2"] circle:nth-child(1),
+.slds-icon-strength.slds-is-animated[data-slds-strength="2"] circle:nth-child(2),
+.slds-icon-strength.slds-is-animated[data-slds-strength="3"] circle:nth-child(1),
+.slds-icon-strength.slds-is-animated[data-slds-strength="3"] circle:nth-child(2),
+.slds-icon-strength.slds-is-animated[data-slds-strength="3"] circle:nth-child(3) {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+.slds-icon-strength.slds-is-paused circle {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+@-webkit-keyframes slds-icon-strength-positive-load {
+  0% {
+    fill: transparent;
+    stroke: #ccc;
+  }
+  100% {
+    fill: #04844b;
+    stroke: #04844b;
+  }
+}
+
+@keyframes slds-icon-strength-positive-load {
+  0% {
+    fill: transparent;
+    stroke: #ccc;
+  }
+  100% {
+    fill: #04844b;
+    stroke: #04844b;
+  }
+}
+@-webkit-keyframes slds-icon-strength-negative-load {
+  0% {
+    fill: transparent;
+    stroke: #ccc;
+  }
+  100% {
+    fill: #ffdde1;
+    stroke: #c23934;
+  }
+}
+@keyframes slds-icon-strength-negative-load {
+  0% {
+    fill: transparent;
+    stroke: #ccc;
+  }
+  100% {
+    fill: #ffdde1;
+    stroke: #c23934;
+  }
+}

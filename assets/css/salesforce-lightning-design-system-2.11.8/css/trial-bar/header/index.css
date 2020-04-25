@@ -1,0 +1,39 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-trial-header {
+  color: white;
+  height: 3.125rem;
+  background: #061c3f;
+  padding: 0 1rem;
+}
+.slds-trial-header .slds-icon {
+  fill: currentColor;
+}
+
+.slds-trial-header button:not([class*="slds-button_"]):not([class*="slds-button--"]) {
+  color: currentColor;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.slds-trial-header button:not([class*="slds-button_"]):not([class*="slds-button--"]):focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+.slds-trial-header button:not([class*="slds-button_"]):not([class*="slds-button--"]):focus {
+  -webkit-box-shadow: 0 0 3px #ecebea;
+  box-shadow: 0 0 3px #ecebea;
+  border: 1px solid #ecebea;
+}
+
+.slds-trial-header button:not([class*="slds-button_"]):not([class*="slds-button--"]):active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.slds-trial-header button:not([class*="slds-button_"]):not([class*="slds-button--"])[disabled] {
+  color: rgba(255, 255, 255, 0.15);
+}
+.slds-trial-header .slds-icon_selected {
+  fill: #4bca81;
+}

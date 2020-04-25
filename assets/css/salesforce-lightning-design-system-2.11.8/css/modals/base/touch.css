@@ -1,0 +1,11 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-modal .slds-modal__title {
+  font-weight: 700;
+}
+.slds-modal__close {
+  width: 2.75rem;
+  height: 2.75rem;
+  top: -2.75rem;
+  right: 0;
+}

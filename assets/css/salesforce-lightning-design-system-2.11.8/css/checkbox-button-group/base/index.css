@@ -1,0 +1,96 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-checkbox_button-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: white;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+}
+.slds-checkbox_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 0;
+  border-radius: 0;
+  background-clip: padding-box;
+}
+.slds-checkbox_button .slds-checkbox_faux {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  background-color: white;
+  -webkit-transition: border 0.1s linear, background-color 0.1s linear;
+  transition: border 0.1s linear, background-color 0.1s linear;
+}
+.slds-checkbox_button .slds-checkbox_faux:hover,
+.slds-checkbox_button .slds-checkbox_faux:focus {
+  cursor: pointer;
+  background-color: #f4f6f9;
+}
+.slds-checkbox_button .slds-checkbox_button__label .slds-checkbox_faux {
+  background-color: transparent;
+}
+.slds-checkbox_button + .slds-checkbox_button {
+  border-left: 1px solid #dddbda;
+  border-radius: 0;
+  margin: 0;
+}
+.slds-checkbox_button:first-child > .slds-checkbox_faux,
+.slds-checkbox_button:first-child > .slds-checkbox_button__label {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+.slds-checkbox_button:last-child > .slds-checkbox_faux,
+.slds-checkbox_button .slds-button_last > .slds-checkbox_faux,
+.slds-checkbox_button:last-child > .slds-checkbox_button__label {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+.slds-checkbox_button [type="checkbox"][type="checkbox"] {
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+.slds-checkbox_button [type="checkbox"]:checked + .slds-checkbox_faux,
+.slds-checkbox_button [type="checkbox"]:checked ~ .slds-checkbox_faux,
+.slds-checkbox_button [type="checkbox"]:checked + .slds-checkbox_button__label {
+  background-color: #0070d2;
+  color: white;
+}
+.slds-checkbox_button [type="checkbox"]:checked + .slds-checkbox_faux:hover,
+.slds-checkbox_button [type="checkbox"]:checked + .slds-checkbox_faux:focus,
+.slds-checkbox_button [type="checkbox"]:checked ~ .slds-checkbox_faux:hover,
+.slds-checkbox_button [type="checkbox"]:checked ~ .slds-checkbox_faux:focus,
+.slds-checkbox_button [type="checkbox"]:checked + .slds-checkbox_button__label:hover,
+.slds-checkbox_button [type="checkbox"]:checked + .slds-checkbox_button__label:focus {
+  background-color: #005fb2;
+}
+.slds-checkbox_button [type="checkbox"]:focus + .slds-checkbox_faux,
+.slds-checkbox_button [type="checkbox"]:focus ~ .slds-checkbox_faux,
+.slds-checkbox_button [type="checkbox"]:focus + .slds-checkbox_button__label {
+  outline: 0;
+  -webkit-box-shadow: 0 0 3px #0070d2;
+  box-shadow: 0 0 3px #0070d2;
+  z-index: 1;
+}
+.slds-checkbox_button [type="checkbox"][disabled] + .slds-checkbox_faux,
+.slds-checkbox_button [type="checkbox"][disabled] ~ .slds-checkbox_faux,
+.slds-checkbox_button [type="checkbox"][disabled] + .slds-checkbox_button__label {
+  background-color: white;
+  color: #dddbda;
+  cursor: default;
+}
+.slds-checkbox_button [type="checkbox"][disabled]:checked + .slds-checkbox_faux,
+.slds-checkbox_button [type="checkbox"][disabled]:checked ~ .slds-checkbox_faux,
+.slds-checkbox_button [type="checkbox"][disabled]:checked + .slds-checkbox_button__label {
+  background-color: #c9c7c5;
+  color: white;
+  cursor: default;
+}

@@ -1,0 +1,31 @@
+/*! Lightning Design System 2.11.8 */
+@charset "UTF-8";
+.slds-popover_error .slds-popover__header {
+  background-color: #c23934;
+  color: white;
+}
+.slds-popover_error.slds-nubbin_top:before,
+.slds-popover_error.slds-nubbin_top-left:before,
+.slds-popover_error.slds-nubbin_top-right:before,
+.slds-popover_error.slds-nubbin_left-top:before,
+.slds-popover_error.slds-nubbin_right-top:before {
+  background-color: #c23934;
+}
+
+.slds-popover_error,
+.slds-popover_warning {
+}
+.slds-popover_error .slds-popover__header,
+.slds-popover_warning .slds-popover__header {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.slds-popover_error .slds-popover__body_scrollable,
+.slds-popover_warning .slds-popover__body_scrollable {
+  max-height: 150px;
+  overflow-y: auto;
+  border-bottom: 1px solid #dddbda;
+}
+.slds-popover_error .slds-popover__body_scrollable + .slds-popover__footer,
+.slds-popover_warning .slds-popover__body_scrollable + .slds-popover__footer {
+  border-top: 0;
+}

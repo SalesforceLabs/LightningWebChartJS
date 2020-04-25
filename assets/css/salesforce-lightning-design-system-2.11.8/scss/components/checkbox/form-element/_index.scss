@@ -1,0 +1,27 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Checkbox with top-level label and value != label
+ * @name form-element
+ * @selector .slds-checkbox_standalone
+ * @restrict .slds-checkbox
+ * @support dev-ready
+ * @variant
+ * @lwc
+ */
+.slds-checkbox_standalone {
+  pointer-events: none; // Allows pointer-event to pass through to input
+
+  [type="checkbox"] {
+    @include square(1rem); // Increase dimensions since the pointer-event is being passed to this element
+    margin: 0;
+    clip: auto; // This allows element to be available but since visibily hidden
+    opacity: 0; // Visually hide but keep size and pointer events, doesn't impact screen readers
+  }
+
+  .slds-checkbox_faux {
+    display: block; // Helps with some alignment
+  }
+}
