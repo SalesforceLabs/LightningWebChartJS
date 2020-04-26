@@ -1,7 +1,13 @@
 import { LightningElement } from 'lwc';
 
 export default class SampleAppItem extends LightningElement {
-  toggleSourceCode() {
-    this.template.querySelector('.code').classList.toggle('slds-hide');
+  isModalOpen = false;
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
+
+  openModal() {
+    this.isModalOpen = true;
   }
 }

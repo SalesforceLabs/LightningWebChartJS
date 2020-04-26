@@ -29,7 +29,7 @@ export default class SampleApp extends LightningElement {
     this.template.querySelectorAll('c-chart').forEach(item => {
       const parent = item.closest('c-sample-app-item');
       if (!parent) return;
-      if (item.type === event.target.innerText) {
+      if (item.type.toUpperCase() === event.target.innerText) {
         parent.classList.remove('slds-hide');
       } else {
         parent.classList.add('slds-hide');
