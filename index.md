@@ -130,4 +130,4 @@ Get the most of LWCC by integrating it directly into your code! LWCC has been bu
 </c-chart>
 ```
 
-See all the available options in the [API Documentation](./docs/api.html)
+See all the available options in the [API Documentation](./docs/api.html) and explore the [Sample gallery](./docs/general/samples.html)
