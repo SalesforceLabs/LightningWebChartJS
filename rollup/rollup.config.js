@@ -1,7 +1,6 @@
 const cleaner = require('rollup-plugin-cleaner');
 const cleanup = require('rollup-plugin-cleanup');
 const copy = require('rollup-plugin-copy');
-const html = require('@rollup/plugin-html');
 const lwc = require('@lwc/rollup-plugin');
 const path = require('path');
 const replace = require('@rollup/plugin-replace');
@@ -19,7 +18,6 @@ module.exports = {
   plugins: [
     cleaner({ targets: [path.resolve(__dirname, './dist/')] }),
     cleanup(),
-    html(),
     copy({
       targets: [
         {
