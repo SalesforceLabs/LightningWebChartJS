@@ -1,0 +1,25 @@
+<template>
+  <article class="slds-card col">
+    <div
+      class="slds-card__body slds-card__body_inner slds-p-horizontal_x-large"
+    >
+      <div class="chart">
+        <slot name="chartExample">Chart example</slot>
+      </div>
+      <div class="code slds-hide">
+        <pre>
+                    <slot name="chartCode">Code example</slot>
+                </pre>
+      </div>
+    </div>
+    <footer class="slds-card__footer">
+      <p
+        class="slds-card__footer-action slds-text-link"
+        onclick={toggleSourceCode}
+      >
+        Source code
+        <span class="slds-assistive-text">Source code</span>
+      </p>
+    </footer>
+  </article>
+</template>

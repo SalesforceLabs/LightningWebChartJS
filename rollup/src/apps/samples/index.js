@@ -1,6 +1,7 @@
 import '@lwc/synthetic-shadow';
 import { createElement } from 'lwc';
-import App from 'c/app';
+import SampleApp from 'c/sampleApp';
 
 const sampleApp = createElement('lwcc-samples', { is: App });
-document.body.appendChild(sampleApp);
+const container = document.body.querySelector('.container') || document.body;
+container.appendChild(sampleApp);
