@@ -52,5 +52,8 @@
     "**/lwc/**": [
       "eslint"
     ]
+  },
+  "dependencies": {
+    "move-cli": "^1.2.1"
   }
 }
