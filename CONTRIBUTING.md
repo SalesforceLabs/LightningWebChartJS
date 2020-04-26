@@ -51,10 +51,6 @@ To execute a particular test, use the following command:
 npm run test:unit <path_to_test>
 ```
 
-### Integration Testing lwcc
-
-TODO using jsdom
-
 ### Apex Testing lwcc
 
 The apex tests are run the following command from the root directory:
@@ -73,9 +69,13 @@ npm run test:apex:coverage
 
 Configuring your editor to use our lint and code style rules will make the code review process delightful!
 
-### ESLint
+### Code formatting
 
-[Configure your editor][eslint-integrations] to use our eslint configurations.
+[Prettier](https://prettier.io/) is a code formatter used to ensure consistent formatting across your code base. To use Prettier with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) from the Visual Studio Code Marketplace. The [.prettierignore](/.prettierignore) and [.prettierrc](/.prettierrc) files are provided as part of this repository to control the behavior of the Prettier formatter.
+
+### Code linting
+
+[ESLint](https://eslint.org/) is a popular JavaScript linting tool used to identify stylistic errors and erroneous constructs. To use ESLint with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-lwc) from the Visual Studio Code Marketplace. The [.eslintignore](/.eslintignore) file is provided as part of this repository to exclude specific files from the linting process in the context of Lightning Web Components development.
 
 ## Git Workflow
 

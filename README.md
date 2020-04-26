@@ -45,20 +45,10 @@ Contributions are what make the trailblazer community such an amazing place. I r
 
 See [contributing.md](/CONTRIBUTING.md) for lwcc principles.
 
-## Utilities and Dependencies
+## Dependencies
 
-#### Dependencies
-
-- Chart.js v2.7.3
-- nanoid.js v3.1.3
-
-#### Code formatting
-
-[Prettier](https://prettier.io/) is a code formatter used to ensure consistent formatting across your code base. To use Prettier with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) from the Visual Studio Code Marketplace. The [.prettierignore](/.prettierignore) and [.prettierrc](/.prettierrc) files are provided as part of this repository to control the behavior of the Prettier formatter.
-
-#### Code linting
-
-[ESLint](https://eslint.org/) is a popular JavaScript linting tool used to identify stylistic errors and erroneous constructs. To use ESLint with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-lwc) from the Visual Studio Code Marketplace. The [.eslintignore](/.eslintignore) file is provided as part of this repository to exclude specific files from the linting process in the context of Lightning Web Components development.
+- [Chart.js v2.7.3](https://www.chartjs.org/)
+- [nanoid.js v3.1.3](https://github.com/ai/nanoid)
 
 ## License
 LWCC is available under the [MIT license](LICENSE.md)
