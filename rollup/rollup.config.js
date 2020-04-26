@@ -16,7 +16,12 @@ module.exports = {
   },
 
   plugins: [
-    cleaner({ targets: [path.resolve(__dirname, './dist/')] }),
+    cleaner({
+      targets: [
+        path.resolve(__dirname, './dist/'),
+        path.resolve(__dirname, './src/modules/c/**')
+      ]
+    }),
     cleanup(),
     copy({
       targets: [
@@ -26,8 +31,20 @@ module.exports = {
         }
       ]
     }),
+    copy({
+      targets: [
+        {
+          src: 'force-app/main/default/lwc/*',
+          dest: path.resolve(__dirname, './src/modules/c')
+        },
+        {
+          src: 'force-app/sample/default/lwc/*',
+          dest: path.resolve(__dirname, './src/modules/c')
+        }
+      ]
+    }),
     lwc({
-      rootDir: path.resolve(__dirname, 'src/modules')
+      rootDir: path.resolve(__dirname, './src/modules/')
     }),
     staticResource(STATIC_RESOURCE_TARGET),
     replace({

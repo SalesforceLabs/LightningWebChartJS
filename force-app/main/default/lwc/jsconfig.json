@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "c/animation": ["animation/animation.js"],
+      "c/arcConfiguration": ["arcConfiguration/arcConfiguration.js"],
+      "c/baseAttribute": ["baseAttribute/baseAttribute.js"],
+      "c/baseAxis": ["baseAxis/baseAxis.js"],
+      "c/cartesianAxis": ["cartesianAxis/cartesianAxis.js"],
+      "c/cartesianCategoryAxis": [
+        "cartesianCategoryAxis/cartesianCategoryAxis.js"
+      ],
+      "c/cartesianLinearAxis": ["cartesianLinearAxis/cartesianLinearAxis.js"],
+      "c/cartesianLogarithmicAxis": [
+        "cartesianLogarithmicAxis/cartesianLogarithmicAxis.js"
+      ],
+      "c/cartesianTimeAxis": ["cartesianTimeAxis/cartesianTimeAxis.js"],
+      "c/chart": ["chart/chart.js"],
+      "c/chartBuilder": ["chartBuilder/chartBuilder.js"],
+      "c/chartConfigService": ["chartConfigService/chartConfigService.js"],
+      "c/constants": ["constants/constants.js"],
+      "c/data": ["data/data.js"],
+      "c/dataset": ["dataset/dataset.js"],
+      "c/layout": ["layout/layout.js"],
+      "c/lineConfiguration": ["lineConfiguration/lineConfiguration.js"],
+      "c/nanoid": ["nanoid/nanoid.js"],
+      "c/pointConfiguration": ["pointConfiguration/pointConfiguration.js"],
+      "c/radialAxis": ["radialAxis/radialAxis.js"],
+      "c/radialLinearAxis": ["radialLinearAxis/radialLinearAxis.js"],
+      "c/reactivityManager": ["reactivityManager/reactivityManager.js"],
+      "c/rectangleConfiguration": [
+        "rectangleConfiguration/rectangleConfiguration.js"
+      ],
+      "c/sampleApp": ["sampleApp/sampleApp.js"],
+      "c/title": ["title/title.js"],
+      "c/utils": ["utils/utils.js"],
+      "c/legend": ["legend/legend.js"],
+      "c/tooltip": ["tooltip/tooltip.js"]
+    }
+  }
+}

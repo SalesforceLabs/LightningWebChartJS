@@ -18,14 +18,12 @@ node_modules/
 # Eslint cache
 .eslintcache
 
-# LWC VSCode autocomplete
-**/lwc/jsconfig.json
-
 # LWC Jest coverage reports
 coverage/
 
 # LWC Playground
 dist/
+c/
 
 # Windows system files
 Thumbs.db
