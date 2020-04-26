@@ -28,7 +28,9 @@
     		<img alt="issues"
 		src="https://img.shields.io/github/issues-raw/scolladon/lwcc?style=flat-square">
   	</a>
-    TODO code climate
+	<a href="https://codecov.io/gh/scolladon/lwcc">
+		<img alt="coverage" src="https://codecov.io/gh/scolladon/lwcc/branch/master/graph/badge.svg" />
+	</a>
 </h3>
 
 <p align="center">
