@@ -7,13 +7,13 @@ const path = require('path');
 const replace = require('@rollup/plugin-replace');
 const staticResource = require('./plugins/plugin-sfdc-static-resource');
 
-const STATIC_RESOURCE_TARGET = '../staticresources';
+const STATIC_RESOURCE_TARGET = './staticresources';
 
 module.exports = {
-  input: path.resolve(__dirname, './src/apps/samples/index.js'),
+  input: path.resolve(__dirname, './src/apps/samples.js'),
 
   output: {
-    file: path.resolve(__dirname, './dist/samples/index.js')
+    file: path.resolve(__dirname, './dist/samples.js')
   },
 
   plugins: [
