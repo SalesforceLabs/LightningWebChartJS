@@ -1,4 +1,4 @@
-import ChartConfigService from 'c/ChartConfigService';
+import ChartConfigService from 'c/chartConfigService';
 import { ATTRIBUTE_CARTESIAN_AXES } from 'c/constants';
 
 describe('c-chart-config-service', () => {
