@@ -1,0 +1,25 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initialize textarea
+ *
+ * @name base
+ * @selector .slds-textarea
+ * @restrict textarea
+ * @support dev-ready
+ * @variant
+ */
+.slds-textarea {
+  @include form-states;
+  // stylelint-disable property-no-vendor-prefix
+  -webkit-appearance: none; // // Scope to WebKit UA styling to remove unwanted inner-shadow
+  // stylelint-enable property-no-vendor-prefix
+  resize: vertical;
+  padding: $spacing-x-small $spacing-small;
+}
+
+.slds-has-error {
+  @include form-input-error('.slds-textarea');
+}

@@ -1,0 +1,14 @@
+<aura:tokens>
+  <aura:token name="neutrafaceDisplayWoff2" property="src" value="/_slds/fonts/NeutrafaceDisplay.woff2?cache=2.9.0"/>
+  <aura:token name="salesforceSansLightWoff2" property="src" value="/_slds/fonts/v2.3.0/SalesforceSans-Light.woff2"/>
+  <aura:token name="salesforceSansBoldWoff" property="src" value="/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff"/>
+  <aura:token name="salesforceSansRegularWoff" property="src" value="/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff"/>
+  <aura:token name="salesforceSansRegularWoff2" property="src" value="/_slds/fonts/v2.3.0/SalesforceSans-Regular.woff2"/>
+  <aura:token name="salesforceSansBoldWoff2" property="src" value="/_slds/fonts/v2.3.0/SalesforceSans-Bold.woff2"/>
+  <aura:token name="salesforceSansLightWoff" property="src" value="/_slds/fonts/v2.3.0/SalesforceSans-Light.woff"/>
+  <aura:token name="neutrafaceDisplayWoff" property="src" value="/_slds/fonts/NeutrafaceDisplay.woff?cache=2.9.0"/>
+  <aura:token name="salesforceSansItalicWoff2" property="src" value="/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff2"/>
+  <aura:token name="salesforceSansBoldItalicWoff2" property="src" value="/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff2"/>
+  <aura:token name="salesforceSansBoldItalicWoff" property="src" value="/_slds/fonts/v2.3.0/SalesforceSans-BoldItalic.woff"/>
+  <aura:token name="salesforceSansItalicWoff" property="src" value="/_slds/fonts/v2.3.0/SalesforceSans-Italic.woff"/>
+</aura:tokens>

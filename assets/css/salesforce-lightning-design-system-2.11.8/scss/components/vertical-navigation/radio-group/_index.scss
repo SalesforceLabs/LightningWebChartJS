@@ -1,0 +1,52 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name radio-group
+ * @summary Version of vertical nav that uses radio buttons
+ * @selector .slds-nav-vertical__item [type="radio"]
+ * @restrict .slds-nav-vertical
+ * @support dev-ready
+ * @variant
+ * @release 2.5.0
+ */
+.slds-nav-vertical__item {
+  display: block;
+
+  [type="radio"] {
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    &:focus + .slds-nav-vertical__action {
+      /**
+       * @summary Used for styling the radio button
+       * @selector .slds-nav-vertical_radio-faux
+       * @restrict .slds-nav-vertical__action span
+       */
+      .slds-nav-vertical_radio-faux {
+        text-decoration: underline;
+      }
+    }
+
+    &:checked + .slds-nav-vertical__action {
+      font-weight: bold;
+      background-color: $color-background-selection;
+      box-shadow: inset rem(4px) 0 0 $brand-primary;
+    }
+  }
+}
+
+.slds-nav-vertical_shade {
+
+  .slds-nav-vertical__item [type="radio"]:checked + .slds-nav-vertical__action {
+    border-color: $color-border;
+    background-color: $color-background-alt;
+  }
+}

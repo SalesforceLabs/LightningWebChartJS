@@ -1,0 +1,5659 @@
+{
+  "properties": [
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "comment": "Used as the background color for the active state on rows or items on list-like components.",
+      "name": "colorBackgroundRowActive"
+    },
+    {
+      "release": "2.8.0",
+      "primitive": true,
+      "name": "colorBackgroundLight",
+      "value": "rgb(255, 255, 255)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Light variant of COLOR_BACKGROUND."
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(243, 242, 242)",
+      "comment": "Used as the background color for the hover state on rows or items on list-like components.",
+      "name": "colorBackgroundRowHover"
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundErrorDark",
+      "value": "rgb(194, 57, 52)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Dark color for UI elements related to errors. Accessible with white text."
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(112, 110, 107)",
+      "comment": "Background color for UI elements related to providing neutral information (not error, success, or warning).",
+      "name": "colorBackgroundInfo"
+    },
+    {
+      "access": "global",
+      "release": "1.0.0",
+      "primitive": true,
+      "name": "colorBackgroundAltInverse",
+      "value": "rgb(22, 50, 92)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Alternative background color for dark portions of the app."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBackgroundRowNew",
+      "value": "rgb(217, 255, 223)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Used as the background color for the new state on rows or items on list-like components."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundSuccessDark",
+      "value": "rgb(4, 132, 75)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Dark color for UI elements that have to do with success. Accessible with white text."
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(243, 242, 242)",
+      "comment": "Used as background for loading stencils on white background.",
+      "name": "colorBackgroundStencil"
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundWarning",
+      "value": "rgb(255, 183, 93)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Color for UI elements that have to do with warning."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundHighlightSearch",
+      "value": "rgb(255, 240, 63)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Background color for highlighting text in search results."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundDestructiveHover",
+      "value": "rgb(166, 26, 20)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Hover color for UI elements related to destructive actions."
+    },
+    {
+      "access": "global",
+      "release": "1.0.0",
+      "primitive": true,
+      "name": "colorBackground",
+      "value": "rgb(243, 242, 242)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Default background color for the whole app."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBrandDark",
+      "value": "rgb(0, 112, 210)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Our product brand blue, darkened to meet accessibility color contrast ratios with white text."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundBackdrop",
+      "value": "rgba(255, 255, 255, 0.75)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "The color of the mask overlay that appears when you enter a modal state."
+    },
+    {
+      "release": "2.8.0",
+      "primitive": true,
+      "name": "colorBackgroundDark",
+      "value": "rgb(236, 235, 234)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Dark variant of COLOR_BACKGROUND."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBrand",
+      "value": "rgb(21, 137, 238)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Our product brand blue."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundDestructive",
+      "value": "rgb(194, 57, 52)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Color for UI elements related to destructive actions."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundSuccess",
+      "value": "rgb(75, 202, 129)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Color for UI elements that have to do with success."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundWarningDark",
+      "value": "rgb(255, 158, 44)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Dark Color for UI elements that have to do with warning."
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(62, 62, 60)",
+      "comment": "Color for UI elements related to the offline state.",
+      "name": "colorBackgroundOffline"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "comment": "Used as an alternate background for loading stencils on gray backgrounds.",
+      "name": "colorBackgroundStencilAlt"
+    },
+    {
+      "release": "2.8.0",
+      "primitive": true,
+      "name": "colorBackgroundInverseLight",
+      "value": "rgb(22, 50, 92)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Light variant of COLOR_BACKGROUND_INVERSE."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundCustomer",
+      "value": "rgb(255, 154, 60)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Background color for UI elements related to the concept of an external user or customer."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundError",
+      "value": "rgb(212, 80, 76)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Color for UI elements related to errors."
+    },
+    {
+      "access": "global",
+      "release": "1.0.0",
+      "primitive": true,
+      "name": "colorBackgroundAlt",
+      "value": "rgb(255, 255, 255)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Second default background color for the app."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundSuccessDarker",
+      "value": "rgb(0, 74, 41)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Darker color for UI elements that have to do with success. Accessible with white text."
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "comment": "Used as the background color for selected rows or items on list-like components.",
+      "name": "colorBackgroundRowSelected"
+    },
+    {
+      "primitive": true,
+      "name": "colorBrandDarker",
+      "value": "rgb(0, 95, 178)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Our product brand blue, darkened even further."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundSelection",
+      "value": "rgb(216, 237, 255)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Background color for text selected with a mouse."
+    },
+    {
+      "primitive": true,
+      "name": "colorBackgroundDestructiveActive",
+      "value": "rgb(135, 5, 0)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Active color for UI elements related to destructive actions."
+    },
+    {
+      "access": "global",
+      "release": "1.0.0",
+      "primitive": true,
+      "name": "colorBackgroundInverse",
+      "value": "rgb(6, 28, 63)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Default background color for dark portions of the app (like Stage Left or tooltips)."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBackgroundHighlight",
+      "value": "rgb(250, 255, 189)",
+      "scope": "global",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow"
+      ],
+      "type": "color",
+      "category": "background-color",
+      "comment": "Background color for highlighting UI elements."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderErrorDark",
+      "value": "rgb(234, 130, 136)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Dark alternative border color for UI elements related to errors."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderBrandDark",
+      "value": "rgb(0, 112, 210)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Our product brand blue, darkened to meet accessibility color contrast ratios with white text."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderInfo",
+      "value": "rgb(112, 110, 107)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Border color for UI elements related to providing neutral information (not error, success, or warning)."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBorderWarning",
+      "value": "rgb(255, 183, 93)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Border color for UI elements that have to do with warnings."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderDestructiveHover",
+      "value": "rgb(166, 26, 20)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Hover border color for UI elements that have to do with destructive actions."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBorder",
+      "value": "rgb(221, 219, 218)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "background*"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Default border color for UI elements."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderSuccessDark",
+      "value": "rgb(4, 132, 75)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Dark alternative border color for UI elements that have to do with success."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderDestructive",
+      "value": "rgb(194, 57, 52)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Border color for UI elements that have to do with destructive actions."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderSeparatorAlt2",
+      "value": "rgb(201, 199, 197)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Darkest separator color - used as an alternate separator color when more differentiation is desired."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderOffline",
+      "value": "rgb(62, 62, 60)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Border color for UI elements related to the offline state."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBorderSuccess",
+      "value": "rgb(75, 202, 129)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Border color for UI elements that have to do with success."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBorderSeparator",
+      "value": "rgb(250, 250, 249)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Lightest separator color - used as default separator on white backgrounds."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBorderBrand",
+      "value": "rgb(21, 137, 238)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Our product brand blue."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderSelectionActive",
+      "value": "rgb(250, 250, 249)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "specificity": "builders",
+      "category": "border-color",
+      "comment": "Used to delineate the boundary of a component that is being clicked. Specific to builders."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBorderError",
+      "value": "rgb(194, 57, 52)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Border color for UI elements that have to do with errors."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderSelectionHover",
+      "value": "rgb(21, 137, 238)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "specificity": "builders",
+      "category": "border-color",
+      "comment": "Used to delineate the boundary of a component that is being hovered over. Specific to builders."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBorderRowSelectedHover",
+      "value": "rgb(21, 137, 238)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Used as the border color for the hover state on selected rows or items on list-like components."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderCustomer",
+      "value": "rgb(255, 154, 60)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Border color for UI elements related to the concept of an external user or customer."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderSelection",
+      "value": "rgb(0, 112, 210)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "specificity": "builders",
+      "category": "border-color",
+      "comment": "Used to delineate the boundary of a selected component. Specific to builders."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBorderRowSelected",
+      "value": "rgb(0, 112, 210)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Used as the border color for selected rows or items on list-like components."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBorderSeparatorAlt",
+      "value": "rgb(221, 219, 218)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Medium separator color - used as default separator on light gray backgrounds."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderInverse",
+      "value": "rgb(6, 28, 63)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Border color to match UI elements using color-background-inverse."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderDestructiveActive",
+      "value": "rgb(135, 5, 0)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Active border color for UI elements that have to do with destructive actions."
+    },
+    {
+      "primitive": true,
+      "name": "colorBorderErrorAlt",
+      "value": "rgb(234, 130, 136)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Alternative border color for UI elements related to errors."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorBorderSeparatorInverse",
+      "value": "rgb(42, 66, 108)",
+      "scope": "global",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "outline",
+        "outline-color"
+      ],
+      "type": "color",
+      "category": "border-color",
+      "comment": "Used as a separator on dark backgrounds, such as stage left navigation."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "borderRadiusSmall",
+      "value": "2",
+      "scope": "global",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "type": "size",
+      "category": "radius"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "borderRadiusMedium",
+      "value": "4",
+      "scope": "global",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "type": "size",
+      "category": "radius",
+      "comment": "Icons in lists, record home icon, unbound input elements"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "borderRadiusLarge",
+      "value": "8",
+      "scope": "global",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "type": "size",
+      "category": "radius"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "borderRadiusCircle",
+      "value": "0.5",
+      "scope": "global",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "type": "size",
+      "category": "radius",
+      "comment": "Circle for global use, action icon bgd shape"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "borderWidthThin",
+      "value": "1px",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "border-style"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "borderWidthThick",
+      "value": "2px",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "border-style"
+    },
+    {
+      "primitive": true,
+      "name": "shadowActive",
+      "value": "0 0 2px #0070d2",
+      "scope": "global",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "type": "box-shadow",
+      "category": "shadow",
+      "comment": "Shadow for active states on interactive elements."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "shadowDrag",
+      "value": "0 2px 4px 0 rgba(0, 0, 0, 0.40)",
+      "scope": "global",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "type": "box-shadow",
+      "category": "shadow",
+      "comment": "Shadow for drag-n-drop."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "shadowDropDown",
+      "value": "0 2px 3px 0 rgba(0, 0, 0, 0.16)",
+      "scope": "global",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "type": "box-shadow",
+      "category": "shadow",
+      "comment": "Shadow for drop down."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "durationInstantly",
+      "value": "0s",
+      "scope": "global",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "type": "time",
+      "category": "time",
+      "comment": "0 seconds, 0 frames"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "durationImmediately",
+      "value": "0.05s",
+      "scope": "global",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "type": "time",
+      "category": "time",
+      "comment": "0.05 seconds, 3 frames"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "durationQuickly",
+      "value": "0.1s",
+      "scope": "global",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "type": "time",
+      "category": "time",
+      "comment": "0.1 seconds, 6 frames"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "durationPromptly",
+      "value": "0.2s",
+      "scope": "global",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "type": "time",
+      "category": "time",
+      "comment": "0.2 seconds, 12 frames"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "durationSlowly",
+      "value": "0.4s",
+      "scope": "global",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "type": "time",
+      "category": "time",
+      "comment": "0.4 seconds, 24 frames"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "durationPaused",
+      "value": "3.2s",
+      "scope": "global",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "type": "time",
+      "category": "time",
+      "comment": "3.2 seconds, 192 frames"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "fontFamily",
+      "value": "'Salesforce Sans', Arial, sans-serif",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-family"
+      ],
+      "type": "font",
+      "category": "font",
+      "comment": "Default font-family for Salesforce applications"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "font",
+        "font-family"
+      ],
+      "scope": "global",
+      "primitive": true,
+      "value": "'Salesforce Sans', Arial, sans-serif",
+      "name": "fontFamilyHeading"
+    },
+    {
+      "category": "font",
+      "type": "font",
+      "cssProperties": [
+        "font",
+        "font-family"
+      ],
+      "scope": "global",
+      "primitive": true,
+      "value": "Consolas, Menlo, Monaco, Courier, monospace",
+      "name": "fontFamilyMonospace"
+    },
+    {
+      "primitive": true,
+      "name": "fontSize1",
+      "value": "10",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Constant typography token for font size 1"
+    },
+    {
+      "primitive": true,
+      "name": "fontSize2",
+      "value": "12",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Constant typography token for font size 2"
+    },
+    {
+      "primitive": true,
+      "name": "fontSize3",
+      "value": "13",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Constant typography token for font size 3"
+    },
+    {
+      "primitive": true,
+      "name": "varFontSize10",
+      "value": "32",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Variable typography token for font size 10"
+    },
+    {
+      "primitive": true,
+      "name": "fontSize4",
+      "value": "14",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Constant typography token for font size 4"
+    },
+    {
+      "primitive": true,
+      "name": "varFontSize11",
+      "value": "42",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Variable typography token for font size 11"
+    },
+    {
+      "primitive": true,
+      "name": "fontSize5",
+      "value": "16",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Constant typography token for font size 5"
+    },
+    {
+      "primitive": true,
+      "name": "fontSize6",
+      "value": "18",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Constant typography token for font size 6"
+    },
+    {
+      "primitive": true,
+      "name": "fontSize7",
+      "value": "20",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Constant typography token for font size 7"
+    },
+    {
+      "primitive": true,
+      "name": "fontSize8",
+      "value": "24",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Constant typography token for font size 8"
+    },
+    {
+      "primitive": true,
+      "name": "varFontSize1",
+      "value": "10",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Variable typography token for font size 1"
+    },
+    {
+      "primitive": true,
+      "name": "fontSize9",
+      "value": "28",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Constant typography token for font size 9"
+    },
+    {
+      "primitive": true,
+      "name": "varFontSize2",
+      "value": "12",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Variable typography token for font size 2"
+    },
+    {
+      "primitive": true,
+      "name": "varFontSize3",
+      "value": "13",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Variable typography token for font size 3"
+    },
+    {
+      "primitive": true,
+      "name": "fontSize10",
+      "value": "32",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Constant typography token for font size 10"
+    },
+    {
+      "primitive": true,
+      "name": "varFontSize4",
+      "value": "14",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Variable typography token for font size 4"
+    },
+    {
+      "primitive": true,
+      "name": "fontSize11",
+      "value": "42",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Constant typography token for font size 11"
+    },
+    {
+      "primitive": true,
+      "name": "varFontSize5",
+      "value": "16",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Variable typography token for font size 5"
+    },
+    {
+      "primitive": true,
+      "name": "varFontSize6",
+      "value": "18",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Variable typography token for font size 6"
+    },
+    {
+      "primitive": true,
+      "name": "varFontSize7",
+      "value": "20",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Variable typography token for font size 7"
+    },
+    {
+      "primitive": true,
+      "name": "varFontSize8",
+      "value": "24",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Variable typography token for font size 8"
+    },
+    {
+      "primitive": true,
+      "name": "varFontSize9",
+      "value": "28",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "type": "font-size",
+      "category": "font-size",
+      "comment": "Variable typography token for font size 9"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "fontWeightLight",
+      "value": "300",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "type": "font-weight",
+      "category": "font",
+      "comment": "Use for large headings only."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "fontWeightRegular",
+      "value": "400",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "type": "font-weight",
+      "category": "font",
+      "comment": "Most all body copy."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "fontWeightBold",
+      "value": "700",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "type": "font-weight",
+      "category": "font",
+      "comment": "Used sparingly for emphasized text within regular body copy."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "lineHeightHeading",
+      "value": "1.25",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "type": "number",
+      "category": "line-height",
+      "comment": "Unitless line-heights for reusability"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "lineHeightText",
+      "value": "1.5",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "type": "number",
+      "category": "line-height",
+      "comment": "Unitless line-heights for reusability"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "lineHeightReset",
+      "value": "1",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "type": "number",
+      "category": "line-height",
+      "comment": "Remove extra leading. Unitless line-heights for reusability"
+    },
+    {
+      "primitive": true,
+      "name": "varLineHeightText",
+      "value": "1.5",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "type": "number",
+      "category": "line-height",
+      "comment": "Variable unitless line-heights for reusability"
+    },
+    {
+      "primitive": true,
+      "name": "opacity5",
+      "value": "0.5",
+      "scope": "global",
+      "cssProperties": [
+        "opacity"
+      ],
+      "type": "opacity",
+      "category": "opacity",
+      "comment": "50% transparency of an element"
+    },
+    {
+      "primitive": true,
+      "name": "opacity8",
+      "value": "0.8",
+      "scope": "global",
+      "cssProperties": [
+        "opacity"
+      ],
+      "type": "opacity",
+      "category": "opacity",
+      "comment": "80% transparency of an element"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderContrastWeakDisabled",
+      "value": "rgba(166, 166, 166, 0.25)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Disabled state of BRAND_HEADER_CONTRAST_WEAK"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray11",
+      "value": "rgb(62, 62, 60)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 11"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandPrimaryTransparent10",
+      "value": "rgba(21, 137, 238, 0.1)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Transparent value of BRAND_PRIMARY at 10%"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray12",
+      "value": "rgb(43, 40, 38)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 12"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandBackgroundDarkTransparent",
+      "value": "rgba(25, 85, 148, 0)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "These RGBA values need to be updated if BRAND_BACKGROUND_DARK changes, solves webkit bug"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray13",
+      "value": "rgb(8, 7, 7)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 13"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeader",
+      "value": "rgb(255, 255, 255)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Background color a branded app header"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandLightActive",
+      "value": "rgb(227, 229, 237)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_LIGHT"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderContrastWarm",
+      "value": "rgb(191, 2, 1)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Variant of BRAND_HEADER_CONTRAST that provides a warm color"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderIconDisabled",
+      "value": "rgba(145, 145, 145, 0.25)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Disabled state of BRAND_HEADER_ICON"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderContrastActive",
+      "value": "rgb(80, 80, 80)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_HEADER_CONTRAST"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandBackgroundPrimary",
+      "value": "rgb(176, 196, 223)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Primary page background color"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandPrimary",
+      "value": "rgb(21, 137, 238)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Primary brand color"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderContrastWeakActive",
+      "value": "rgb(129, 129, 129)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_HEADER_CONTRAST_WEAK"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandContrastActive",
+      "value": "rgb(13, 14, 18)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_CONTRAST"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderContrastCool",
+      "value": "rgb(0, 85, 131)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Variant of BRAND_HEADER_CONTRAST that provides a cool color"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderContrastInverse",
+      "value": "rgb(255, 255, 255)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Variant of BRAND_HEADER that is accessible with BRAND_HEADER"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandDark",
+      "value": "rgb(24, 35, 55)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Dark variant of BRAND that is accessible with light colors"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandAccessible",
+      "value": "rgb(0, 112, 210)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Dark variant of BRAND that is accessible with white"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandBackgroundDark",
+      "value": "rgb(25, 85, 148)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Dark variant of BRAND_BACKGROUND_PRIMARY, used within gradient of background color"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandTextLinkActive",
+      "value": "rgb(0, 95, 178)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_TEXT_LINK"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray1",
+      "value": "rgb(255, 255, 255)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 1"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray2",
+      "value": "rgb(250, 250, 249)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 2"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderIconActive",
+      "value": "rgb(129, 129, 129)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_HEADER_ICON"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray3",
+      "value": "rgb(243, 242, 242)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 3"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderIcon",
+      "value": "rgb(145, 145, 145)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Icons of BRAND_HEADER that is accessible with BRAND_HEADER"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandDisabled",
+      "value": "rgb(201, 199, 197)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Disabled state of BRAND_A11Y"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandTextLink",
+      "value": "rgb(0, 109, 204)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Primary text link brand color"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray4",
+      "value": "rgb(236, 235, 234)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 4"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray5",
+      "value": "rgb(221, 219, 218)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 5"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray6",
+      "value": "rgb(201, 199, 197)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 6"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandAccessibleActive",
+      "value": "rgb(0, 95, 178)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_A11Y"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray7",
+      "value": "rgb(176, 173, 171)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 7"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandDarkActive",
+      "value": "rgb(37, 48, 69)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_DARK"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray8",
+      "value": "rgb(150, 148, 146)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 8"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderContrastInverseActive",
+      "value": "rgb(238, 238, 238)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_HEADER_CONTRAST"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderContrastCoolActive",
+      "value": "rgb(0, 85, 131)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_HEADER_CONTRAST_COOL"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray9",
+      "value": "rgb(112, 110, 107)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 9"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandContrast",
+      "value": "rgb(26, 27, 30)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Variant of BRAND that is accessible with BRAND"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderContrastWeak",
+      "value": "rgb(145, 145, 145)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Weak contrast ratio, useful for iconography"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandPrimaryActive",
+      "value": "rgb(0, 122, 221)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_PRIMARY"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandBackgroundPrimaryTransparent",
+      "value": "rgba(176, 196, 223, 0)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "These RGBA values need to be updated if BRAND_BACKGROUND_PRIMARY changes, solves webkit bug"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderContrast",
+      "value": "rgb(94, 94, 94)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Variant of BRAND_HEADER that is accessible with BRAND_HEADER"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandPrimaryTransparent",
+      "value": "rgba(21, 137, 238, 0.1)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Transparent value of BRAND_PRIMARY"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandHeaderContrastWarmActive",
+      "value": "rgb(172, 0, 0)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Active / Hover state of BRAND_HEADER_CONTRAST_WARM"
+    },
+    {
+      "themeable": true,
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandPrimaryTransparent40",
+      "value": "rgba(21, 137, 238, 0.4)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Transparent value of BRAND_PRIMARY at 40%"
+    },
+    {
+      "themeable": true,
+      "access": "global",
+      "release": "2.6.0",
+      "primitive": true,
+      "name": "brandLight",
+      "value": "rgb(244, 246, 254)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Light variant of BRAND that is accessible with dark colors"
+    },
+    {
+      "release": "2.5.0",
+      "primitive": true,
+      "name": "colorGray10",
+      "value": "rgb(81, 79, 77)",
+      "scope": "global",
+      "cssProperties": [
+        "background-color",
+        "border*color",
+        "box-shadow",
+        "fill",
+        "color"
+      ],
+      "type": "color",
+      "category": "color",
+      "comment": "Gray Color 10"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "sizeXSmall",
+      "value": "192",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Generic sizing token scale for UI components."
+    },
+    {
+      "primitive": true,
+      "name": "sizeXxxSmall",
+      "value": "48",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Generic sizing token scale for UI components."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconUtilityLarge",
+      "value": "24",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Large utility icon without border."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "sizeXxSmall",
+      "value": "96",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Generic sizing token scale for UI components."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconSmallBoundary",
+      "value": "24",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Search Results: Outer colored tile"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "sizeSmall",
+      "value": "240",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Generic sizing token scale for UI components."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconUtilityMedium",
+      "value": "20",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Medium utility icon without border."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconXSmallBoundary",
+      "value": "20",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Very small icon button boundary."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconUtilitySmall",
+      "value": "16",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Small utility icon without border."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconMediumBoundary",
+      "value": "32",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Stage left & actions: Outer colored tile"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconLargeContent",
+      "value": "32",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Anchor: Icon content (white shape)"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconLargeBoundary",
+      "value": "48",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Anchor: Outer colored tile"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "sizeMedium",
+      "value": "320",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Generic sizing token scale for UI components."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconMediumContent",
+      "value": "16",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Stage left & actions: Icon content (white shape)"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "sizeXLarge",
+      "value": "640",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Generic sizing token scale for UI components."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconXSmallContent",
+      "value": "8",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Very small icons in icon buttons."
+    },
+    {
+      "primitive": true,
+      "name": "varSquareIconMediumBoundary",
+      "value": "32",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Variable medium boundary for square icons"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconMediumBoundaryAlt",
+      "value": "36",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Icon button boundary."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "sizeXxLarge",
+      "value": "960",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Generic sizing token scale for UI components."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconLargeBoundaryAlt",
+      "value": "80",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Anchor: avatar"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "sizeLarge",
+      "value": "400",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Generic sizing token scale for UI components."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "squareIconSmallContent",
+      "value": "12",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Search Results: Icon content (white shape)"
+    },
+    {
+      "primitive": true,
+      "name": "squareIconXxSmallBoundary",
+      "value": "16",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Very very small icon button boundary."
+    },
+    {
+      "primitive": true,
+      "name": "squareIconMediumContentAlt",
+      "value": "14",
+      "scope": "global",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "sizing",
+      "comment": "Alternate medium tap target size"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingXLarge",
+      "value": "32",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable spacing token for size X Large"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingHorizontalSmall",
+      "value": "12",
+      "scope": "global",
+      "cssProperties": [
+        "left",
+        "right",
+        "margin-left",
+        "margin-right",
+        "padding-left",
+        "padding-right"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable horizontal spacing token for size Small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingHorizontalXxLarge",
+      "value": "48",
+      "scope": "global",
+      "cssProperties": [
+        "left",
+        "right",
+        "margin-left",
+        "margin-right",
+        "padding-left",
+        "padding-right"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable horizontal spacing token for size XX Large"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "spacingXSmall",
+      "value": "8",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Constant spacing token for size X small"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "spacingXxxSmall",
+      "value": "2",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Constant spacing token for size XXX small"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "spacingXxSmall",
+      "value": "4",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Constant spacing token for size XX small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingVerticalLarge",
+      "value": "24",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "bottom",
+        "margin-top",
+        "margin-bottom",
+        "padding-top",
+        "padding-bottom"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable vertical spacing token for size Large"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingLarge",
+      "value": "24",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable spacing token for size Large"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingMedium",
+      "value": "16",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable spacing token for size Medium"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingVerticalMedium",
+      "value": "16",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "bottom",
+        "margin-top",
+        "margin-bottom",
+        "padding-top",
+        "padding-bottom"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable vertical spacing token for size Medium"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingVerticalXSmall",
+      "value": "8",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "bottom",
+        "margin-top",
+        "margin-bottom",
+        "padding-top",
+        "padding-bottom"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable vertical spacing token for size X Small"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "spacingSmall",
+      "value": "12",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Constant spacing token for size Small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingVerticalXxxSmall",
+      "value": "2",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "bottom",
+        "margin-top",
+        "margin-bottom",
+        "padding-top",
+        "padding-bottom"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable vertical spacing token for size XXX Small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingXSmall",
+      "value": "8",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable spacing token for size X Small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingXxxSmall",
+      "value": "2",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable spacing token for size XXX Small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingHorizontalXLarge",
+      "value": "32",
+      "scope": "global",
+      "cssProperties": [
+        "left",
+        "right",
+        "margin-left",
+        "margin-right",
+        "padding-left",
+        "padding-right"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable horizontal spacing token for size X Large"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingHorizontalXxSmall",
+      "value": "4",
+      "scope": "global",
+      "cssProperties": [
+        "left",
+        "right",
+        "margin-left",
+        "margin-right",
+        "padding-left",
+        "padding-right"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable horizontal spacing token for size XX Small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingXxLarge",
+      "value": "48",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable spacing token for size XX Large"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "spacingMedium",
+      "value": "16",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Constant spacing token for size Medium"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingVerticalXxLarge",
+      "value": "48",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "bottom",
+        "margin-top",
+        "margin-bottom",
+        "padding-top",
+        "padding-bottom"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable vertical spacing token for size XX Large"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingVerticalSmall",
+      "value": "12",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "bottom",
+        "margin-top",
+        "margin-bottom",
+        "padding-top",
+        "padding-bottom"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable vertical spacing token for size Small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingSmall",
+      "value": "12",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable spacing token for size Small"
+    },
+    {
+      "primitive": true,
+      "name": "spacingNone",
+      "value": "0",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Constant spacing token for 0"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingHorizontalLarge",
+      "value": "24",
+      "scope": "global",
+      "cssProperties": [
+        "left",
+        "right",
+        "margin-left",
+        "margin-right",
+        "padding-left",
+        "padding-right"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable horizontal spacing token for size Large"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "spacingXLarge",
+      "value": "32",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Constant spacing token for size X Large"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "spacingXxLarge",
+      "value": "48",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Constant spacing token for size XX Large"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingHorizontalXxxSmall",
+      "value": "2",
+      "scope": "global",
+      "cssProperties": [
+        "left",
+        "right",
+        "margin-left",
+        "margin-right",
+        "padding-left",
+        "padding-right"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable horizontal spacing token for size XXX Small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingHorizontalXSmall",
+      "value": "8",
+      "scope": "global",
+      "cssProperties": [
+        "left",
+        "right",
+        "margin-left",
+        "margin-right",
+        "padding-left",
+        "padding-right"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable horizontal spacing token for size X Small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingXxSmall",
+      "value": "4",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable spacing token for size XX Small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingHorizontalMedium",
+      "value": "16",
+      "scope": "global",
+      "cssProperties": [
+        "left",
+        "right",
+        "margin-left",
+        "margin-right",
+        "padding-left",
+        "padding-right"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable horizontal spacing token for size Medium"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingVerticalXxSmall",
+      "value": "4",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "bottom",
+        "margin-top",
+        "margin-bottom",
+        "padding-top",
+        "padding-bottom"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable vertical spacing token for size XX Small"
+    },
+    {
+      "access": "global",
+      "release": "2.7.0",
+      "primitive": true,
+      "name": "varSpacingVerticalXLarge",
+      "value": "32",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "bottom",
+        "margin-top",
+        "margin-bottom",
+        "padding-top",
+        "padding-bottom"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Variable vertical spacing token for size X Large"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "spacingLarge",
+      "value": "24",
+      "scope": "global",
+      "cssProperties": [
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "border*",
+        "*width",
+        "*height",
+        "box-shadow",
+        "stroke",
+        "stroke-width"
+      ],
+      "type": "size",
+      "category": "spacing",
+      "comment": "Constant spacing token for size Large"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextActionLabel",
+      "value": "rgb(62, 62, 60)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Action label text color"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextLinkInverse",
+      "value": "rgb(255, 255, 255)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Link color on dark background"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextLinkInverseActive",
+      "value": "rgba(255, 255, 255, 0.5)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Link color on dark background - active state"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextActionLabelActive",
+      "value": "rgb(8, 7, 7)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Action label active text color"
+    },
+    {
+      "primitive": true,
+      "name": "colorTextWarning",
+      "value": "rgb(255, 183, 93)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Color for texts or icons that are related to warnings on a dark background."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextLinkFocus",
+      "value": "rgb(0, 95, 178)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Focus link text"
+    },
+    {
+      "primitive": true,
+      "name": "colorTextDestructiveHover",
+      "value": "rgb(161, 43, 43)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Text color for destructive actions - hover state"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextLinkDisabled",
+      "value": "rgb(22, 50, 92)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Disabled link text"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextDefault",
+      "value": "rgb(8, 7, 7)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Body text color"
+    },
+    {
+      "primitive": true,
+      "name": "colorTextDestructive",
+      "value": "rgb(194, 57, 52)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Text color for destructive actions"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextLinkHover",
+      "value": "rgb(0, 95, 178)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "border*"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Hover link text"
+    },
+    {
+      "primitive": true,
+      "name": "colorTextSuccess",
+      "value": "rgb(2, 126, 70)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Text color for success text."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextWeak",
+      "value": "rgb(62, 62, 60)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Color for text that is purposefully de-emphasized to create visual hierarchy."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextPlaceholderInverse",
+      "value": "rgb(236, 235, 234)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Input placeholder text on dark backgrounds."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextLink",
+      "value": "rgb(0, 109, 204)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Link text (508)"
+    },
+    {
+      "primitive": true,
+      "name": "colorTextWarningAlt",
+      "value": "rgb(132, 72, 0)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Color for texts that are related to warnings on a light background."
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(112, 110, 107)",
+      "comment": "Default icon color.",
+      "name": "colorTextIconDefault"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextBrand",
+      "value": "rgb(21, 137, 238)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Our product brand blue."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextError",
+      "value": "rgb(194, 57, 52)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Error text for inputs and error misc"
+    },
+    {
+      "primitive": true,
+      "name": "colorTextCustomer",
+      "value": "rgb(255, 154, 60)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Customer text used in anchor subtitle"
+    },
+    {
+      "primitive": true,
+      "name": "colorTextBrandPrimary",
+      "value": "rgb(255, 255, 255)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Text color found on any primary brand color"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextLinkActive",
+      "value": "rgb(0, 57, 107)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Active link text"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextRequired",
+      "value": "rgb(194, 57, 52)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Color of required field marker."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextLinkInverseDisabled",
+      "value": "rgba(255, 255, 255, 0.15)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Link color on dark background - disabled state"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextInverse",
+      "value": "rgb(255, 255, 255)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Inverse text color for dark backgrounds"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextPlaceholder",
+      "value": "rgb(112, 110, 107)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Input placeholder text."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextInverseWeak",
+      "value": "rgb(176, 173, 171)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Weak inverse text color for dark backgrounds"
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextLinkInverseHover",
+      "value": "rgba(255, 255, 255, 0.75)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Link color on dark background - hover state"
+    },
+    {
+      "primitive": true,
+      "name": "colorTextSuccessInverse",
+      "value": "rgb(75, 202, 129)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Text color for success text on dark backgrounds."
+    },
+    {
+      "access": "global",
+      "primitive": true,
+      "name": "colorTextLabel",
+      "value": "rgb(62, 62, 60)",
+      "scope": "global",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "type": "color",
+      "category": "text-color",
+      "comment": "Text color for field labels."
+    },
+    {
+      "access": "global",
+      "release": "1.0.0",
+      "primitive": true,
+      "name": "squareTappable",
+      "value": "44",
+      "scope": "global",
+      "property": "sizing",
+      "cssProperties": [
+        "font",
+        "font-size",
+        "*width",
+        "*height",
+        "flex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "touch",
+      "comment": "Tap target size for elements that rely on width and height dimensions"
+    },
+    {
+      "release": "2.10.0",
+      "primitive": true,
+      "name": "squareTappableSmall",
+      "value": "32",
+      "scope": "global",
+      "property": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "touch",
+      "comment": "Small tap target size for elements that rely on width and height dimensions"
+    },
+    {
+      "release": "2.10.0",
+      "primitive": true,
+      "name": "squareTappableXSmall",
+      "value": "24",
+      "scope": "global",
+      "property": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "touch",
+      "comment": "X-small tap target size for elements that rely on width and height dimensions"
+    },
+    {
+      "release": "2.10.0",
+      "primitive": true,
+      "name": "squareTappableXxSmall",
+      "value": "20",
+      "scope": "global",
+      "property": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "touch",
+      "comment": "Xx-small tap target size for elements that rely on width and height dimensions"
+    },
+    {
+      "release": "2.10.0",
+      "primitive": true,
+      "name": "heightTappable",
+      "value": "44",
+      "scope": "global",
+      "property": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "touch",
+      "comment": "Tap target size for elements that rely on height or line-height"
+    },
+    {
+      "release": "2.10.0",
+      "primitive": true,
+      "name": "heightTappableSmall",
+      "value": "32",
+      "scope": "global",
+      "property": "sizing",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "type": "size",
+      "category": "touch",
+      "comment": "Small tap target size for elements that rely on height or line-height"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexDropdown",
+      "value": "7000",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Dropdown"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexDocked",
+      "value": "4",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Docked element"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexReminder",
+      "value": "8500",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Notifications under modals"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexSpinner",
+      "value": "9050",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Spinner"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexDefault",
+      "value": "1",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Default"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexDeepdive",
+      "value": "-99999",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Deep dive"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexToast",
+      "value": "10000",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Toasts"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexDialog",
+      "value": "6000",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Dialog"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexPopup",
+      "value": "5000",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Popup"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexModal",
+      "value": "9000",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Modal"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexSticky",
+      "value": "100",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Stickied element"
+    },
+    {
+      "primitive": true,
+      "name": "zIndexOverlay",
+      "value": "8000",
+      "scope": "global",
+      "cssProperties": [
+        "z-index"
+      ],
+      "type": "z-index",
+      "category": "z-index",
+      "comment": "Overlay"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(243, 242, 242)",
+      "name": "colorContrastPrimary"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgba(8, 7, 7, 0.6)",
+      "comment": "The color of the mask overlay that appears when you enter a modal state.",
+      "name": "colorBackgroundTempModalTint"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgba(253, 253, 253, 0)",
+      "comment": "Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_DARK_TRANSPARENT instead. These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug",
+      "name": "brandBandColorBackgroundSecondaryTransparent"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(243, 242, 242)",
+      "comment": "Used when further differentiation is needed because colorBackground and colorBackgroundAlt are both being used in close proximity.",
+      "name": "colorBackgroundAlt2"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(236, 235, 234)",
+      "comment": "Hover color for utility bar item.",
+      "name": "colorBackgroundUtilityBarHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(243, 242, 242)",
+      "comment": "Use COLOR_BACKGROUND_PAGE_HEADER instead.",
+      "name": "colorBackgroundAnchor"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(243, 242, 242)",
+      "name": "colorBackgroundPrimary"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(253, 253, 253)",
+      "comment": "Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY_DARK instead.",
+      "name": "brandBandColorBackgroundSecondary"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgba(253, 253, 253, 0)",
+      "comment": "Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY_TRANSPARENT instead. These RGBA values need to be updated if BRAND_BAND_COLOR_BACKGROUND_PRIMARY changes, solves webkit bug",
+      "name": "brandBandColorBackgroundPrimaryTransparent"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(243, 242, 242)",
+      "name": "colorContrastSecondary"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(112, 110, 107)",
+      "comment": "Secondary top bar background color (child browser, file preview, etc.)",
+      "name": "colorBackgroundBrowser"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(150, 148, 146)",
+      "comment": "Used as the default background color for temporary dialog elements, such as the progress spinner background.",
+      "name": "colorBackgroundTempModal"
+    },
+    {
+      "name": "colorBackgroundShade",
+      "value": "rgb(236, 235, 234)",
+      "deprecated": true,
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "type": "color",
+      "specificity": "builders",
+      "category": "background-color",
+      "comment": "Used as gray background when more contrast is desired."
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(250, 250, 249)",
+      "comment": "Background color for payloads in the feed.",
+      "name": "colorBackgroundPayload"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(253, 253, 253)",
+      "comment": "Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY instead.",
+      "name": "pageColorBackgroundPrimary"
+    },
+    {
+      "name": "colorBackgroundShadeDark",
+      "value": "rgb(221, 219, 218)",
+      "deprecated": true,
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "type": "color",
+      "specificity": "builders",
+      "category": "background-color",
+      "comment": "Used as gray background in conjunction with Shade when more contrast is desired."
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(112, 110, 107)",
+      "comment": "Background for utility icons that live in the action bar on mobile.",
+      "name": "colorBackgroundActionbarIconUtility"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(253, 253, 253)",
+      "comment": "Winter 18 token, this has been deprecated. Please use BRAND_BACKGROUND_PRIMARY instead.",
+      "name": "brandBandColorBackgroundPrimary"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgb(255, 255, 255)",
+      "name": "colorBackgroundSecondary"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "stroke"
+      ],
+      "deprecated": true,
+      "value": "rgb(221, 219, 218)",
+      "name": "colorBorderPrimary"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "stroke"
+      ],
+      "deprecated": true,
+      "value": "rgb(0, 112, 210)",
+      "comment": "Our product brand blue.",
+      "name": "colorStrokeBrand"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "stroke"
+      ],
+      "deprecated": true,
+      "value": "rgb(0, 112, 210)",
+      "comment": "Hover stroke color for our product brand blue.",
+      "name": "colorStrokeBrandHover"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "stroke"
+      ],
+      "deprecated": true,
+      "value": "rgb(22, 50, 92)",
+      "comment": "Active stroke color for our product brand blue.",
+      "name": "colorStrokeBrandActive"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "stroke"
+      ],
+      "deprecated": true,
+      "value": "rgb(236, 235, 234)",
+      "comment": "Disabled stroke color.",
+      "name": "colorStrokeDisabled"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow",
+        "stroke"
+      ],
+      "deprecated": true,
+      "value": "rgb(176, 173, 171)",
+      "comment": "Stroke color for our global header buttons.",
+      "name": "colorStrokeHeaderButton"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgba(0, 0, 0, 0.10) 0 2px 0",
+      "comment": "Hard dropshadow found on general UI elements such as containers",
+      "name": "shadowHardPrimary"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgba(0, 0, 0, 0.10) 0 2px 2px",
+      "comment": "Soft dropshadow found on general UI elements such as containers",
+      "name": "shadowSoftPrimary"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgba(0, 0, 0, 0.20) 0 3px 6px",
+      "name": "shadowSoftPrimaryHover"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "deprecated": true,
+      "value": "rgba(0, 0, 0, 0.20) 0 1px 1px",
+      "name": "shadowSoftPrimaryActive"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "deprecated": true,
+      "value": "0 0 3px #ecebea",
+      "comment": "Custom glow for focus states on UI elements with explicit containers on dark or vibrantly colored backgrounds.",
+      "name": "shadowButtonFocusInverse"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "deprecated": true,
+      "value": "0 0 3px #ecebea",
+      "comment": "Custom glow for focus states on UI link elements with explicit containers on dark or vibrantly colored backgrounds.",
+      "name": "shadowLinkFocusInverse"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "margin*",
+        "padding*"
+      ],
+      "deprecated": true,
+      "value": "12",
+      "name": "componentSpacingMargin"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "margin*",
+        "padding*"
+      ],
+      "deprecated": true,
+      "value": "16",
+      "name": "componentSpacingPadding"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "margin*",
+        "padding*"
+      ],
+      "deprecated": true,
+      "value": "12",
+      "name": "cardSpacingMargin"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "",
+      "cssProperties": [
+        "margin*",
+        "padding*"
+      ],
+      "deprecated": true,
+      "value": "12",
+      "name": "cardFooterPadding"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "deprecated": true,
+      "value": "rgb(150, 148, 146)",
+      "comment": "Tertiary body text color",
+      "name": "colorTextTertiary"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "deprecated": true,
+      "value": "rgb(94, 180, 255)",
+      "comment": "Active state on a standalone link on a dark background.",
+      "name": "colorTextInverseActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "deprecated": true,
+      "value": "rgb(236, 235, 234)",
+      "comment": "Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.",
+      "name": "colorTextIconDefaultHintBorderless"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "deprecated": true,
+      "value": "rgb(236, 235, 234)",
+      "comment": "Color for text on toast messages.",
+      "name": "colorTextToast"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "deprecated": true,
+      "value": "rgb(176, 173, 171)",
+      "comment": "Hover state on a standalone link on a dark background.",
+      "name": "colorTextInverseHover"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "deprecated": true,
+      "value": "rgb(62, 62, 60)",
+      "comment": "Modal header button text color",
+      "name": "colorTextModalButton"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "deprecated": true,
+      "value": "rgb(176, 173, 171)",
+      "comment": "Color for interactive utility icons",
+      "name": "colorTextIconUtility"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "deprecated": true,
+      "value": "rgb(62, 62, 60)",
+      "comment": "Secondary body text color",
+      "name": "colorTextSecondary"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "deprecated": true,
+      "value": "rgb(236, 235, 234)",
+      "comment": "Text in stage left navigation.",
+      "name": "colorTextStageLeft"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(243, 242, 242)",
+      "comment": "Background color for a new notification list item.",
+      "name": "colorBackgroundNotificationNew"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "/assets/images/popovers/popover-header.png",
+      "name": "popoverWalkthroughHeaderImage"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "comment": "Disabled input",
+      "name": "colorBackgroundInputDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(150, 148, 146)",
+      "comment": "Hovered toggle background color.",
+      "name": "colorBackgroundToggleHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(3, 46, 97)",
+      "name": "popoverWalkthroughColorBackground"
+    },
+    {
+      "type": "string",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "/assets/images/popovers/popover-action.png",
+      "name": "popoverWalkthroughAltImage"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(243, 242, 242)",
+      "name": "progressColorBorderShade"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(176, 173, 171)",
+      "comment": "Toggle background color.",
+      "name": "colorBackgroundToggle"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(33, 92, 160)",
+      "name": "popoverWalkthroughAltNubbinColorBackground"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(243, 242, 242)",
+      "name": "progressColorBackgroundShade"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(243, 242, 242)",
+      "comment": "Default Page Header background color",
+      "name": "pageHeaderColorBackground"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "comment": "Disabled checkboxes",
+      "name": "colorBackgroundInputCheckboxDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(176, 173, 171)",
+      "comment": "Color of the spinner dot.",
+      "name": "colorBackgroundSpinnerDot"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "name": "tableColorBackgroundHeaderHover"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(250, 250, 249)",
+      "comment": "The color of the mask overlay that provides user feedback on interaction.",
+      "name": "colorBackgroundBackdropTint"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(22, 74, 133)",
+      "name": "popoverWalkthroughColorBackgroundAlt"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(250, 250, 249)",
+      "name": "tableColorBackgroundHeader"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "comment": "The background color of an internal scrollbar.",
+      "name": "colorBackgroundScrollbar"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(176, 173, 171)",
+      "comment": "Disabled toggle background color.",
+      "name": "colorBackgroundToggleDisabled"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(112, 110, 107)",
+      "comment": "Background color for toast messaging.",
+      "name": "colorBackgroundToast"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(243, 242, 242)",
+      "comment": "Background color of comment posts in the feed.",
+      "name": "colorBackgroundPost"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgba(0, 0, 0, 0.6)",
+      "comment": "Color of mask overlay that sits on top of an image when text is present.",
+      "name": "colorBackgroundImageOverlay"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(243, 242, 242)",
+      "name": "colorPickerSliderThumbColorBackground"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(201, 199, 197)",
+      "comment": "The background color of an internal scrollbar track.",
+      "name": "colorBackgroundScrollbarTrack"
+    },
+    {
+      "type": "color",
+      "category": "background-color",
+      "cssProperties": [
+        "background*",
+        "border*",
+        "box-shadow",
+        "text-shadow"
+      ],
+      "value": "rgb(22, 74, 133)",
+      "name": "popoverWalkthroughHeaderColorBackground"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(201, 199, 197)",
+      "comment": "Border color on disabled form elements.",
+      "name": "colorBorderInputDisabled"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "comment": "Border color on notification reminders.",
+      "name": "colorBorderReminder"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "name": "pageHeaderColorBorder"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "comment": "Border color for default secondary button",
+      "name": "colorBorderButtonDefault"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "comment": "Border color on form elements.",
+      "name": "colorBorderInput"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "name": "colorBorderButtonFocusInverse"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "name": "cardColorBorder"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "name": "buttonColorBorderPrimary"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "name": "colorBorderLinkFocusInverse"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "name": "pageHeaderJoinedColorBorder"
+    },
+    {
+      "type": "color",
+      "category": "border-color",
+      "cssProperties": [
+        "border*",
+        "box-shadow"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "name": "cardFooterColorBorder"
+    },
+    {
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "4",
+      "name": "pageHeaderBorderRadius"
+    },
+    {
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "0",
+      "name": "tableBorderRadius"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 2px 2px 0 rgba(0, 0, 0, 0.10)",
+      "comment": "Hard dropshadow on page header",
+      "name": "pageHeaderShadow"
+    },
+    {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "0 2px 2px 0 rgba(0, 0, 0, 0.10)",
+      "comment": "Hard dropshadow found on outer cards",
+      "name": "cardShadow"
+    },
+    {
+      "category": "font",
+      "type": "font-size",
+      "cssProperties": [
+        "font-size"
+      ],
+      "value": "12",
+      "name": "formLabelFontSize"
+    },
+    {
+      "category": "font",
+      "type": "font-size",
+      "cssProperties": [
+        "font-size"
+      ],
+      "value": "14",
+      "name": "inputStaticFontSize"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "name": "inputStaticFontWeight"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "700",
+      "comment": "Use for active tab.",
+      "name": "tabsFontWeight"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "700",
+      "comment": "Use for active tab.",
+      "name": "cardFontWeight"
+    },
+    {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "700",
+      "name": "pageHeaderTitleFontWeight"
+    },
+    {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/images/themes/oneSalesforce/banner-brand-default.png",
+      "name": "brandBandDefaultImage"
+    },
+    {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/images/themes/oneSalesforce/banner-user-default.png",
+      "name": "bannerUserDefaultImage"
+    },
+    {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/images/themes/oneSalesforce/banner-group-public-default.png",
+      "name": "bannerGroupDefaultImage"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "cssProperties": [
+        "margin*",
+        "padding*"
+      ],
+      "value": "12",
+      "name": "templateGutters"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "cssProperties": [
+        "margin*",
+        "padding*"
+      ],
+      "value": "128",
+      "name": "templateProfileGutters"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "cssProperties": [
+        "margin*",
+        "padding*"
+      ],
+      "value": "4",
+      "name": "tableCellSpacing"
+    },
+    {
+      "category": "text",
+      "type": "text-align",
+      "cssProperties": [
+        "text-align"
+      ],
+      "value": "center",
+      "name": "cardFooterTextAlign"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Icon color on dark background",
+      "name": "colorTextIconInverse"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(176, 173, 171)",
+      "comment": "Input icon",
+      "name": "colorTextInputIcon"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Icon color on dark background - active state",
+      "name": "colorTextIconInverseActive"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "comment": "Color for disabled text in a tab group.",
+      "name": "colorTextTabLabelDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(62, 62, 60)",
+      "comment": "Input disabled text",
+      "name": "colorTextInputDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "comment": "Default icon color - disabled state",
+      "name": "colorTextIconDefaultDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "comment": "Text color for default secondary button - disabled state",
+      "name": "colorTextButtonDefaultDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(221, 219, 218)",
+      "comment": "Color for disabled toggles",
+      "name": "colorTextToggleDisabled"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(43, 40, 38)",
+      "comment": "Color for default text in a tab group.",
+      "name": "colorTextTabLabel"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(176, 173, 171)",
+      "comment": "Icon color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.",
+      "name": "colorTextIconDefaultHint"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(236, 235, 234)",
+      "comment": "Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.",
+      "name": "colorTextButtonInverse"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(176, 173, 171)",
+      "comment": "Text color for a button that has a parent element that has a hover state. This is the default text/icon color for that button before its parent has been hovered over.",
+      "name": "colorTextButtonDefaultHint"
+    },
+    {
+      "type": "color",
+      "category": "text-color",
+      "cssProperties": [
+        "color",
+        "fill"
+      ],
+      "value": "rgb(255, 255, 255)",
+      "comment": "Icon color on dark background - hover state",
+      "name": "colorTextIconInverseHover"
+    }
+  ]
+}

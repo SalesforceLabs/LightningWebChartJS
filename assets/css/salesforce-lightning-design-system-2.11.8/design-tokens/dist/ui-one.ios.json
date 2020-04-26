@@ -1,0 +1,15 @@
+{
+  "properties": [
+    {
+      "type": "time",
+      "category": "time",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "deprecated": true,
+      "value": "0.25s",
+      "name": "durationSlide"
+    }
+  ]
+}

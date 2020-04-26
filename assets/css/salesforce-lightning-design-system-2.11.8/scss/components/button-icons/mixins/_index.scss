@@ -1,0 +1,40 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@mixin button-icon {
+  line-height: $line-height-reset;
+  vertical-align: middle;
+  color: $color-text-icon-default;
+  border: $border-width-thin solid $color-border-primary;
+  transition: border 0.15s linear;
+
+  &[disabled],
+  &:disabled {
+    color: $color-text-button-default-disabled;
+  }
+}
+
+@mixin button-icon-brand {
+  background-color: $brand-accessible;
+  border-color: $brand-accessible;
+  color: $color-text-brand-primary;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text-brand-primary;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $brand-accessible-active;
+    border-color: $brand-accessible-active;
+    color: $color-text-brand-primary;
+  }
+
+  &:active {
+    background-color: $brand-accessible-active;
+    border-color: $brand-accessible-active;
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "properties": [
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "deprecated": true,
+      "value": "12",
+      "name": "fontSizeSmall"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "deprecated": true,
+      "value": "13",
+      "name": "fontSizeMedium"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "deprecated": true,
+      "value": "14",
+      "name": "fontSizeMediumA"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "deprecated": true,
+      "value": "16",
+      "name": "fontSizeLarge"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "deprecated": true,
+      "value": "20",
+      "name": "fontSizeXLarge"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "deprecated": true,
+      "value": "28",
+      "name": "fontSizeXxLarge"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "category": "sizing",
+      "value": "50",
+      "comment": "Header for desktop.",
+      "access": "global",
+      "name": "heightHeader"
+    },
+    {
+      "type": "size",
+      "cssProperties": [
+        "*width",
+        "*height",
+        "*flex*",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin*",
+        "padding*",
+        "transform"
+      ],
+      "category": "sizing",
+      "value": "32",
+      "comment": "Medium tap target size",
+      "name": "squareIconMedium"
+    }
+  ]
+}

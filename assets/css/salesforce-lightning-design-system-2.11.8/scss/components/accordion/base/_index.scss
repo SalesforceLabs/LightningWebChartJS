@@ -1,0 +1,140 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Initializes an accordion list with more than one section that will have its display toggled by invoking an interaction on the summary title
+ *
+ * @name base
+ * @selector .slds-accordion
+ * @restrict ul
+ * @variant
+ * @support dev-ready
+ */
+.slds-accordion {
+  position: relative;
+}
+
+/**
+ * @summary List item for each accordion section
+ * @selector .slds-accordion__list-item
+ * @restrict .slds-accordion li
+ */
+.slds-accordion__list-item {
+  border-top: $border-width-thin solid $color-border;
+
+  &:first-child {
+    border-top: 0;
+  }
+}
+
+/**
+ * @summary Summary title for each expandable panel inside of an accordion
+ * @selector .slds-accordion__summary
+ * @restrict .slds-accordion__section div
+ */
+.slds-accordion__summary {
+  display: flex;
+}
+
+/**
+ * @summary Summary title for each expandable panel inside of an accordion
+ * @selector .slds-accordion__summary-heading
+ * @restrict .slds-accordion__section h3
+ */
+.slds-accordion__summary-heading {
+  display: flex;
+  flex-grow: 1;
+  min-width: 0;
+  font-size: $var-font-size-5;
+  line-height: $line-height-heading;
+
+  .slds-button:focus {
+    text-decoration: underline;
+    box-shadow: none;
+  }
+}
+
+/**
+ * @summary Actionable button inside of accordion summary that would toggle the visibility of each section
+ * @selector .slds-accordion__summary-action
+ * @restrict .slds-accordion__summary button
+ */
+.slds-accordion__summary-action {
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  min-width: 0;
+}
+
+/**
+ * @summary Icon inside of actionable button within an accordion section
+ * @selector .slds-accordion__summary-action-icon
+ * @restrict .slds-accordion__summary-action svg
+ */
+.slds-accordion__summary-action-icon {
+  flex-shrink: 0;
+  transform: rotate(-90deg);
+
+  @include rtl() {
+    transform: rotate(90deg);
+  }
+}
+
+/**
+ * @summary Text of summary title for each expandable panel inside of an accordion
+ * @selector .slds-accordion__summary-content
+ * @restrict .slds-accordion__summary-action span
+ */
+.slds-accordion__summary-content {
+  @include mq-large-min {
+    @include truncate;
+  }
+}
+
+/**
+ * @summary Each expandable panel inside of an accordion
+ * @selector .slds-accordion__section
+ * @restrict .slds-accordion section
+ */
+.slds-accordion__section {
+  padding: $spacing-small;
+}
+
+/**
+ * @summary Each expandable panel inside of an accordion
+ * @selector .slds-accordion__content
+ * @restrict .slds-accordion__section div
+ */
+.slds-accordion__content {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+
+/**
+ * @name toggle section
+ * @summary Toggle visibility of accordion section + rotate icon
+ * @selector .slds-is-open
+ * @restrict .slds-accordion__section
+ * @modifier
+ * @group visibility
+ */
+.slds-is-open {
+
+  > .slds-accordion__summary {
+    margin-bottom: $spacing-small;
+
+    .slds-accordion__summary-action-icon {
+      transform: rotate(0deg);
+    }
+  }
+
+  > .slds-accordion__content {
+    overflow: visible;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+  }
+}

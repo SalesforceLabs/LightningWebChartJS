@@ -1,0 +1,282 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import
+
+  // Activity Timeline
+  'activity-timeline/base/index',
+
+  // Badges
+  'badges/base/index',
+
+  // Breadcrumbs
+  'breadcrumbs/base/index',
+
+  // Button Groups
+  'button-groups/row/index',
+  'button-groups/base/index',
+
+  // Button
+  'buttons/base/index',
+  'buttons/stateful/index',
+  'buttons/dual-stateful/index',
+
+  // Button Icon
+  'button-icons/base/index',
+  'button-icons/brand/index',
+  'button-icons/stateful/index',
+
+  // Color Picker
+  'color-picker/base/index',
+  'color-picker/custom-only/index',
+  'color-picker/predefined-only/index',
+  'color-picker/swatches-only/index',
+
+  // Icons
+  'icons/base/index',
+
+  // Accordion
+  'accordion/base/index',
+
+  // Dynamic icons
+  'dynamic-icons/ellie/index',
+  'dynamic-icons/eq/index',
+  'dynamic-icons/score/index',
+  'dynamic-icons/strength/index',
+  'dynamic-icons/trend/index',
+  'dynamic-icons/waffle/index',
+  'dynamic-icons/global-action-help/index',
+  'dynamic-icons/typing/index',
+
+  // Dynamic Menu
+  'dynamic-menu/base/index',
+
+  // Carousel
+  'carousel/base/index',
+
+  // Card
+  'cards/base/index',
+
+  // Chat
+  'chat/base/index',
+  'chat/past/index',
+
+  // Forms
+  'form-element/base/index',
+  'input/base/index',
+  'counter/base/index',
+  'textarea/base/index',
+  'radio-group/base/index',
+  'radio-button-group/base/index',
+  'checkbox/base/index',
+  'checkbox/form-element/index',
+  'checkbox-toggle/base/index',
+  'checkbox-button/base/index',
+  'checkbox-button-group/base/index',
+  'select/base/index',
+  'form-layout/base/index',
+  'form-layout/compound/index',
+  'form-element/stacked/index',
+  'form-element/horizontal/index',
+  'form-element/compound/index',
+  'form-element/address/index',
+  'form-element/record-detail/index',
+  'docked-form-footer/base/index',
+  'slider/base/index',
+
+  // File selector
+  'file-selector/base/index',
+
+  // Page Headers
+  'page-headers/base/index',
+  'page-headers/record-home/index',
+  'page-headers/record-home-vertical/index',
+  'page-headers/object-home/deprecate',
+  'brand-band/base/index',
+
+  // Panels
+  'panels/base/index',
+  'panels/filtering/index',
+
+  // Popovers
+  'popovers/base/index',
+  'popovers/panels/index',
+  'popovers/nubbins/index',
+  'popovers/walkthrough/index',
+  'popovers/einstein/index',
+  'popovers/error/index',
+  'popovers/warning/index',
+  'popovers/prompt/index',
+
+
+  // Tooltips
+  'tooltips/base/index',
+
+  // Menus
+  'menus/dropdown/index',
+  'menus/action-overflow/index',
+  'menus/submenu/index',
+
+  // Picklist
+  'picklist/base/deprecate',
+
+  // Combobox
+  'combobox/doc',
+  'combobox/base/index',
+
+  // Dueling Picklist
+  'dueling-picklist/base/index',
+
+  // Datepicker
+  'datepickers/base/index',
+  'datepickers/range/index',
+  'timepicker/base/index',
+
+  // Docked Composer
+  'docked-composer/base/index',
+  'docked-composer/email/index',
+
+  // Docked Utility Bar
+  'docked-utility-bar/base/index',
+  'docked-utility-bar/utility-panel/index',
+
+  // Drop Zone
+  'drop-zone/base/index',
+
+  // Global Header
+  'global-header/base/index',
+  'global-header/global-actions/index',
+  'global-header/notifications/index',
+
+  // Global Navigation
+  'global-navigation/navigation-bar/index',
+
+  // Expression
+  'expression/base/index',
+  'expression/custom-logic/index',
+  'expression/formula/index',
+  'expression/filters/index',
+
+  // Buider Header
+  'builder-header/base/index',
+
+  // Publishers
+  'publishers/base/index',
+  'publishers/comment/index',
+
+  // Discussion Feed
+  'feeds/base/index',
+  'feeds/comment/index',
+  'feeds/post/index',
+  'feeds/post-with-attachments/index',
+
+  // Modal
+  'modals/base/index',
+
+  // Map
+  'map/base/index',
+
+  // App Launcher
+  'app-launcher/base/index',
+
+  // Hero Buttons
+  'visual-picker/coverable-content/index',
+  'visual-picker/non-coverable-content/index',
+  'visual-picker/vertical/index',
+
+  // Pills
+  'pills/base/index',
+
+  // Process
+  'process/wizard/deprecate',
+  'path-simple/base/deprecate', // keep till deprecation
+  'path/base/index',
+
+  // Progress Indicator
+  'progress-bar/base/index',
+  'progress-bar/vertical/index',
+  'progress-indicator/base/index',
+  'progress-indicator/vertical/index',
+  'progress-ring/base/index',
+
+  // Rich Text Editor
+  'rich-text-editor/base/index',
+
+  // Spinners
+  'spinners/base/index',
+
+  // Split view list
+  'split-view/base/index',
+
+  // Title
+  'tiles/base/index',
+
+  // Tabs
+  'tabs/base/index',
+  'tabs/mobile-stack/index',
+  'scoped-tabs/base/index',
+  'tabs/scrolling/index',
+  'tabs/sub-tabs/index',
+
+  // Navigation
+  'vertical-navigation/list/index',
+  'vertical-navigation/radio-group/index',
+  'vertical-navigation/expandable-section/index',
+
+  // Notifications -- Toasts, Notifications, Alerts, Prompts, & Scoped
+  'alert/base/index',
+  'prompt/base/index',
+  'toast/base/index',
+  'scoped-notifications/base/index',
+  'notifications/base/index',
+  'toast/modal-toast/deprecate', // keep until deprecation
+  'trial-bar/header/index',
+
+  // Lookup
+  'lookups/base/index',
+  'lookups-mobile/faux-input/index',
+
+  // Images
+  'avatar/base/index',
+  'avatar-group/base/index',
+  'files/base/index',
+
+  // Tables
+  'data-tables/base/index',
+  'data-tables/responsive/index',
+  'data-tables/inline-edit/index',
+  'data-tables/fixed-header/index',
+  'data-tables/hidden-header/index',
+
+  // Tree (Order matters)
+  'trees/base/index',
+  // Tree grid depends on tree
+  'tree-grid/base/index',
+
+  // Einstein Headers
+  'einstein-header/base/index',
+
+  // Expandable
+  'expandable-section/base/index',
+
+  // Illustration
+  'illustration/base/index',
+
+  // Regions
+  'regions/base/index',
+
+  // Vertical Tabs
+  'vertical-tabs/base/index',
+
+  // Welcome Mat
+  'welcome-mat/base/index',
+  'welcome-mat/splash/index',
+  'welcome-mat/info-only/index',
+  'welcome-mat/trailhead-connected/index',
+
+  // Summary Detail
+  'summary-detail/base/index',
+
+  // Setup Assistant
+  'setup-assistant/base/index';

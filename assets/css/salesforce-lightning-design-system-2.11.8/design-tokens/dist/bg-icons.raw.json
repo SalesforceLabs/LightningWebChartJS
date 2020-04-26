@@ -1,0 +1,16 @@
+{
+  "aliases": {},
+  "props": {
+    "FOLDER": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#63A3EE",
+      "originalValue": "#63A3EE",
+      "name": "FOLDER"
+    }
+  }
+}

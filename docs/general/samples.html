@@ -1,0 +1,25 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/lwcc.css" | relative_url }}">
+    <script src="{{ "/assets/js/lwcc.js" | relative_url }}"></script>
+  </head>
+  <body>
+    <header class="lwcc-menu">
+      <nav role="navigation">
+        {% include navbar.html %}
+      </nav>
+    </header>
+    <div class="lwcc-doc-content">
+        <div class="container samples-container">
+          <h1 style="text-align: center;">Samples</h1>
+          <script src="samples.js" type="module"></script>
+        </div>
+    </div>
+  </body>
+</html>

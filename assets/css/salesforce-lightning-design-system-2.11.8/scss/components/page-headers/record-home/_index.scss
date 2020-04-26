@@ -1,0 +1,50 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Bottom section containing record details
+ *
+ * @variant
+ * @name record-home
+ * @selector .slds-page-header_record-home
+ * @restrict .slds-page-header
+ * @support dev-ready
+ */
+
+/**
+ * @summary Creates margins around the detail section of record home
+ * @selector .slds-page-header__detail-row
+ * @restrict .slds-page-header ul
+ * @notes Only the record home page header contains this detail area
+ */
+.slds-page-header__detail-row {
+  display: flex;
+  margin: $var-spacing-vertical-small ($var-spacing-horizontal-medium * -1) ($var-spacing-vertical-medium * -1);
+  padding: $var-spacing-horizontal-medium;
+  border-radius: 0 0 $page-header-border-radius $page-header-border-radius;
+  background-color: $page-header-color-background-alt;
+  position: relative;
+  z-index: 2;
+}
+
+/**
+* @summary Creates margins around the detail section of record home
+* @selector .slds-page-header__detail-block
+* @restrict .slds-page-header__detail-row li
+* @notes Only the record home page header contains this detail area
+*/
+
+.slds-page-header__detail-block {
+  padding-right: $spacing-x-large;
+  padding-left: $spacing-x-large;
+  max-width: 25%;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,13 @@
+// Lightning Design System 2.11.8
+.slds-modal {
+
+  .slds-modal__title {
+    font-weight: $font-weight-bold;
+  }
+
+  &__close {
+    @include square($height-tappable);
+    top: -$height-tappable;
+    right: 0;
+  }
+}

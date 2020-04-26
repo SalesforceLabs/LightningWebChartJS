@@ -1,0 +1,140 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @name vertical
+ * @selector .slds-progress_vertical
+ * @restrict .slds-progress
+ * @support dev-ready
+ * @variant
+ */
+.slds-progress_vertical {
+  max-width: none;
+
+  .slds-progress__list {
+    display: block;
+  }
+
+  .slds-progress__item {
+    position: relative;
+    display: flex;
+    align-self: left;
+    align-items: center;
+    padding: 0;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: calc((#{$square-icon-utility-small} / 2) - 1px); // "-1px" accounts for half of line width to get true center
+      width: 2px;
+      background-color: $progress-bar-color-background;
+    }
+
+    &:before {
+      top: 0;
+      bottom: 50%;
+    }
+
+    &:after {
+      top: 50%;
+      bottom: 0;
+    }
+
+    &:first-child:before,
+    &:last-child:after {
+      display: none;
+    }
+
+    &.slds-is-completed:before,
+    &.slds-is-completed:after,
+    &.slds-is-active:before,
+    &.slds-has-error:before {
+      background-color: $progress-bar-color-background-fill;
+    }
+  }
+
+  /**
+   * @summary Support content in line with progress marker
+   *
+   * @selector .slds-progress__item_content
+   * @restrict .slds-progress__item div
+   */
+  .slds-progress__item_content {
+    flex: 1;
+    align-items: center;
+    margin-top: $spacing-small;
+    padding-bottom: $spacing-small;
+  }
+
+  /**
+   * @summary Add borders between progress items
+   *
+   * @selector .slds-progress__list-bordered
+   * @restrict .slds-progress__list
+   */
+  .slds-progress__list-bordered .slds-progress__item:not(:last-child) .slds-progress__item_content {
+    border-bottom: 1px $color-border-separator-alt solid;
+  }
+
+  .slds-progress__marker {
+    display: flex;
+    justify-content: center;
+    margin-right: $spacing-medium;
+    min-width: $square-icon-utility-small;
+    z-index: 5;
+  }
+
+  .slds-progress__marker_icon {
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .slds-progress__item.slds-is-completed .slds-progress__marker_icon {
+
+    svg {
+      fill: $progress-bar-color-background-fill;
+    }
+  }
+
+  /**
+   * Turn completed stage checkmark green
+   *
+   * @selector .slds-progress__marker_icon-success
+   * @restrict .slds-progress__marker_icon
+   */
+  .slds-progress__item.slds-is-completed .slds-progress__marker_icon-success {
+
+    svg {
+      fill: $progress-bar-color-background-fill-success;
+    }
+  }
+
+  .slds-progress__item.slds-has-error .slds-progress__marker_icon {
+
+    svg {
+      fill: $color-text-error;
+    }
+  }
+}
+
+/**
+ * @summary Creates a green bar for the vertical variant
+ *
+ * @selector .slds-progress_success
+ * @restrict .slds-progress_vertical
+ */
+.slds-progress_success {
+
+  .slds-progress__item {
+
+    &.slds-is-completed:before,
+    &.slds-is-completed:after,
+    &.slds-is-active:before,
+    &.slds-has-error:before {
+      opacity: 0.3;
+      background-color: $progress-bar-color-background-fill-success;
+    }
+  }
+}

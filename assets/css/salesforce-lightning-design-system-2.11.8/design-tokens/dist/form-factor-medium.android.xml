@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <integer name="LINE_HEIGHT_TEXT" category="line-height">1.375</integer>
+  <integer name="VAR_LINE_HEIGHT_TEXT" category="line-height">1.375</integer>
+  <dimen name="WIDTH_STAGE_LEFT" category="sizing">250dp</dimen>
+</resources>

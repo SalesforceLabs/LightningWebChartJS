@@ -1,0 +1,92 @@
+{
+  "aliases": {},
+  "props": {
+    "PAGE_HEADER_BORDER_RADIUS": {
+      "type": "size",
+      "category": "radius",
+      "cssProperties": [
+        "border*radius"
+      ],
+      "value": "0",
+      "originalValue": "0",
+      "name": "PAGE_HEADER_BORDER_RADIUS"
+    },
+    "CARD_SHADOW": {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "none",
+      "originalValue": "none",
+      "name": "CARD_SHADOW"
+    },
+    "PAGE_HEADER_SHADOW": {
+      "type": "box-shadow",
+      "category": "shadow",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "value": "none",
+      "originalValue": "none",
+      "name": "PAGE_HEADER_SHADOW"
+    },
+    "FORM_LABEL_FONT_SIZE": {
+      "type": "size",
+      "cssProperties": [
+        "font",
+        "font-size"
+      ],
+      "category": "font-size",
+      "value": "0.875rem",
+      "originalValue": "0.875rem",
+      "name": "FORM_LABEL_FONT_SIZE"
+    },
+    "INPUT_STATIC_FONT_WEIGHT": {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "originalValue": "400",
+      "name": "INPUT_STATIC_FONT_WEIGHT"
+    },
+    "CARD_FONT_WEIGHT": {
+      "category": "font",
+      "type": "font-weight",
+      "cssProperties": [
+        "font",
+        "font-weight"
+      ],
+      "value": "400",
+      "originalValue": "400",
+      "name": "CARD_FONT_WEIGHT"
+    },
+    "LINE_HEIGHT_TEXT": {
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "category": "line-height",
+      "value": "1.375",
+      "comment": "Unitless line-heights for reusability",
+      "originalValue": "1.375",
+      "name": "LINE_HEIGHT_TEXT"
+    },
+    "VAR_LINE_HEIGHT_TEXT": {
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "category": "line-height",
+      "value": "1.375",
+      "comment": "Variable unitless line-heights for reusability",
+      "originalValue": "1.375",
+      "name": "VAR_LINE_HEIGHT_TEXT"
+    }
+  }
+}

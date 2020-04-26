@@ -1,0 +1,2185 @@
+{
+  "aliases": {},
+  "props": {
+    "ACTION_NEW_CUSTOM18": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#4dca76",
+      "originalValue": "#4dca76",
+      "name": "ACTION_NEW_CUSTOM18"
+    },
+    "ACTION_NEW_CUSTOM29": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#bdd25f",
+      "originalValue": "#bdd25f",
+      "name": "ACTION_NEW_CUSTOM29"
+    },
+    "ACTION_EDIT_GROUPS": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#34BECD",
+      "originalValue": "#34BECD",
+      "name": "ACTION_EDIT_GROUPS"
+    },
+    "ACTION_NEW_CUSTOM9": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6b9ee2",
+      "originalValue": "#6b9ee2",
+      "name": "ACTION_NEW_CUSTOM9"
+    },
+    "ACTION_LOG_A_CALL": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#48C3CC",
+      "originalValue": "#48C3CC",
+      "name": "ACTION_LOG_A_CALL"
+    },
+    "ACTION_NEW_CUSTOM19": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#3abeb1",
+      "originalValue": "#3abeb1",
+      "name": "ACTION_NEW_CUSTOM19"
+    },
+    "ACTION_FILTER": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#FD90B5",
+      "originalValue": "#FD90B5",
+      "name": "ACTION_FILTER"
+    },
+    "ACTION_USER_ACTIVATION": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_USER_ACTIVATION"
+    },
+    "ACTION_OPPORTUNITY_COMPETITOR": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#FCB95B",
+      "originalValue": "#FCB95B",
+      "name": "ACTION_OPPORTUNITY_COMPETITOR"
+    },
+    "ACTION_CANVAS": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8199AF",
+      "originalValue": "#8199AF",
+      "name": "ACTION_CANVAS"
+    },
+    "ACTION_CHANGE_RECORD_TYPE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_CHANGE_RECORD_TYPE"
+    },
+    "ACTION_NEW_NOTEBOOK": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#E6D478",
+      "originalValue": "#E6D478",
+      "name": "ACTION_NEW_NOTEBOOK"
+    },
+    "ACTION_DOCUSIGN": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#5080DB",
+      "originalValue": "#5080DB",
+      "name": "ACTION_DOCUSIGN"
+    },
+    "ACTION_SHARE_LINK": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7A9AE6",
+      "originalValue": "#7A9AE6",
+      "name": "ACTION_SHARE_LINK"
+    },
+    "ACTION_ADD_FILE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7e8be4",
+      "originalValue": "#7e8be4",
+      "name": "ACTION_ADD_FILE"
+    },
+    "ACTION_EDIT_RELATIONSHIP": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#1dccbf",
+      "originalValue": "#1dccbf",
+      "name": "ACTION_EDIT_RELATIONSHIP"
+    },
+    "ACTION_NOTEBOOK": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#E6D478",
+      "deprecated": true,
+      "comment": "Use ACTION_NEW_NOTEBOOK instead.",
+      "originalValue": "#E6D478",
+      "name": "ACTION_NOTEBOOK"
+    },
+    "ACTION_NEW_LEAD": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#F88962",
+      "originalValue": "#F88962",
+      "name": "ACTION_NEW_LEAD"
+    },
+    "ACTION_NEW_CUSTOM_OBJECT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#a7d44d",
+      "originalValue": "#a7d44d",
+      "name": "ACTION_NEW_CUSTOM_OBJECT"
+    },
+    "ACTION_NEW_ACCOUNT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7f8de1",
+      "originalValue": "#7f8de1",
+      "name": "ACTION_NEW_ACCOUNT"
+    },
+    "ACTION_QUESTION_POST_ACTION": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#32AF5C",
+      "originalValue": "#32AF5C",
+      "name": "ACTION_QUESTION_POST_ACTION"
+    },
+    "ACTION_SHARE_FILE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#BAAC93",
+      "originalValue": "#BAAC93",
+      "name": "ACTION_SHARE_FILE"
+    },
+    "ACTION_DEFAULT_CUSTOM_OBJECT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8199af",
+      "originalValue": "#8199af",
+      "name": "ACTION_DEFAULT_CUSTOM_OBJECT"
+    },
+    "ACTION_OPPORTUNITY_TEAM_MEMBER": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#FCB95B",
+      "originalValue": "#FCB95B",
+      "name": "ACTION_OPPORTUNITY_TEAM_MEMBER"
+    },
+    "ACTION_ADD_PHOTO_VIDEO": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#00cdc0",
+      "originalValue": "#00cdc0",
+      "name": "ACTION_ADD_PHOTO_VIDEO"
+    },
+    "ACTION_SORT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#FAB9A5",
+      "originalValue": "#FAB9A5",
+      "name": "ACTION_SORT"
+    },
+    "ACTION_CALL": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#1FCAA0",
+      "originalValue": "#1FCAA0",
+      "name": "ACTION_CALL"
+    },
+    "ACTION_CONCUR": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#4CC3C7",
+      "originalValue": "#4CC3C7",
+      "name": "ACTION_CONCUR"
+    },
+    "ACTION_REJECT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#00C6B7",
+      "originalValue": "#00C6B7",
+      "name": "ACTION_REJECT"
+    },
+    "ACTION_SHARE_POLL": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#699BE1",
+      "originalValue": "#699BE1",
+      "name": "ACTION_SHARE_POLL"
+    },
+    "ACTION_FOLLOWING": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7DCF64",
+      "originalValue": "#7DCF64",
+      "name": "ACTION_FOLLOWING"
+    },
+    "ACTION_DEFER": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#EF7EAD",
+      "originalValue": "#EF7EAD",
+      "name": "ACTION_DEFER"
+    },
+    "ACTION_OPPORTUNITY_LINE_ITEM": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#FCB95B",
+      "originalValue": "#FCB95B",
+      "name": "ACTION_OPPORTUNITY_LINE_ITEM"
+    },
+    "ACTION_SOCIAL_POST": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#EA74A2",
+      "originalValue": "#EA74A2",
+      "name": "ACTION_SOCIAL_POST"
+    },
+    "ACTION_SHARE_POST": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#65CAE4",
+      "originalValue": "#65CAE4",
+      "name": "ACTION_SHARE_POST"
+    },
+    "ACTION_VIEW_RELATIONSHIP": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#3c97dd",
+      "originalValue": "#3c97dd",
+      "name": "ACTION_VIEW_RELATIONSHIP"
+    },
+    "ACTION_UPLOAD": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_UPLOAD"
+    },
+    "ACTION_REMOVE_RELATIONSHIP": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ef6e64",
+      "originalValue": "#ef6e64",
+      "name": "ACTION_REMOVE_RELATIONSHIP"
+    },
+    "ACTION_FREEZE_USER": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_FREEZE_USER"
+    },
+    "ACTION_NEW_PERSON_ACCOUNT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7f8de1",
+      "originalValue": "#7f8de1",
+      "name": "ACTION_NEW_PERSON_ACCOUNT"
+    },
+    "ACTION_BUG": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#EF6E5D",
+      "originalValue": "#EF6E5D",
+      "name": "ACTION_BUG"
+    },
+    "ACTION_APEX": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#696E71",
+      "originalValue": "#696E71",
+      "name": "ACTION_APEX"
+    },
+    "ACTION_NEW_OPPORTUNITY": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#FCB95B",
+      "originalValue": "#FCB95B",
+      "name": "ACTION_NEW_OPPORTUNITY"
+    },
+    "ACTION_FALLBACK": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#9895EE",
+      "originalValue": "#9895EE",
+      "name": "ACTION_FALLBACK"
+    },
+    "ACTION_DIAL_IN": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8B9AE3",
+      "originalValue": "#8B9AE3",
+      "name": "ACTION_DIAL_IN"
+    },
+    "ACTION_APPROVAL": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#00C6B7",
+      "originalValue": "#00C6B7",
+      "name": "ACTION_APPROVAL"
+    },
+    "ACTION_CHANGE_OWNER": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_CHANGE_OWNER"
+    },
+    "ACTION_NEW_TASK": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#4BC076",
+      "originalValue": "#4BC076",
+      "name": "ACTION_NEW_TASK"
+    },
+    "ACTION_PRIORITY": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#FBB439",
+      "originalValue": "#FBB439",
+      "name": "ACTION_PRIORITY"
+    },
+    "ACTION_REMOVE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_REMOVE"
+    },
+    "ACTION_WEB_LINK": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#56AADF",
+      "originalValue": "#56AADF",
+      "name": "ACTION_WEB_LINK"
+    },
+    "ACTION_LEAVE_GROUP": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#F39E58",
+      "originalValue": "#F39E58",
+      "name": "ACTION_LEAVE_GROUP"
+    },
+    "ACTION_MANAGE_PERM_SETS": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_MANAGE_PERM_SETS"
+    },
+    "ACTION_CLOSE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#EF6E64",
+      "originalValue": "#EF6E64",
+      "name": "ACTION_CLOSE"
+    },
+    "ACTION_GOOGLE_NEWS": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#F5675B",
+      "originalValue": "#F5675B",
+      "name": "ACTION_GOOGLE_NEWS"
+    },
+    "ACTION_ANNOUNCEMENT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#fe8f60",
+      "originalValue": "#fe8f60",
+      "name": "ACTION_ANNOUNCEMENT"
+    },
+    "ACTION_BACK": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#0DC2D9",
+      "originalValue": "#0DC2D9",
+      "name": "ACTION_BACK"
+    },
+    "ACTION_NEW_CUSTOM90": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#22a48a",
+      "originalValue": "#22a48a",
+      "name": "ACTION_NEW_CUSTOM90"
+    },
+    "ACTION_DOWNLOAD": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_DOWNLOAD"
+    },
+    "ACTION_NEW_CUSTOM80": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#659ad5",
+      "originalValue": "#659ad5",
+      "name": "ACTION_NEW_CUSTOM80"
+    },
+    "ACTION_NEW_CUSTOM91": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#bf7b66",
+      "originalValue": "#bf7b66",
+      "name": "ACTION_NEW_CUSTOM91"
+    },
+    "ACTION_SEARCH": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#48ADEB",
+      "originalValue": "#48ADEB",
+      "name": "ACTION_SEARCH"
+    },
+    "ACTION_NEW_EVENT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#EB7092",
+      "originalValue": "#EB7092",
+      "name": "ACTION_NEW_EVENT"
+    },
+    "ACTION_NEW_CUSTOM70": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e769b4",
+      "originalValue": "#e769b4",
+      "name": "ACTION_NEW_CUSTOM70"
+    },
+    "ACTION_NEW_CUSTOM81": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#da627f",
+      "originalValue": "#da627f",
+      "name": "ACTION_NEW_CUSTOM81"
+    },
+    "ACTION_NEW_CUSTOM92": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#517e82",
+      "originalValue": "#517e82",
+      "name": "ACTION_NEW_CUSTOM92"
+    },
+    "ACTION_REFRESH": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_REFRESH"
+    },
+    "ACTION_SHARE_THANKS": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#E9696E",
+      "originalValue": "#E9696E",
+      "name": "ACTION_SHARE_THANKS"
+    },
+    "ACTION_UPDATE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#81B4D6",
+      "originalValue": "#81B4D6",
+      "name": "ACTION_UPDATE"
+    },
+    "ACTION_EMAIL": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#95AEC5",
+      "originalValue": "#95AEC5",
+      "name": "ACTION_EMAIL"
+    },
+    "ACTION_JOIN_GROUP": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#779EF2",
+      "originalValue": "#779EF2",
+      "name": "ACTION_JOIN_GROUP"
+    },
+    "ACTION_NEW_CUSTOM60": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#bf5a88",
+      "originalValue": "#bf5a88",
+      "name": "ACTION_NEW_CUSTOM60"
+    },
+    "ACTION_NEW_CUSTOM71": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e36ee3",
+      "originalValue": "#e36ee3",
+      "name": "ACTION_NEW_CUSTOM71"
+    },
+    "ACTION_NEW_CUSTOM82": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d15b97",
+      "originalValue": "#d15b97",
+      "name": "ACTION_NEW_CUSTOM82"
+    },
+    "ACTION_NEW_CUSTOM93": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#904d4c",
+      "originalValue": "#904d4c",
+      "name": "ACTION_NEW_CUSTOM93"
+    },
+    "ACTION_EDIT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#1DCCBF",
+      "originalValue": "#1DCCBF",
+      "name": "ACTION_EDIT"
+    },
+    "ACTION_QUOTE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#88C651",
+      "originalValue": "#88C651",
+      "name": "ACTION_QUOTE"
+    },
+    "ACTION_DROPBOX": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#52AEF9",
+      "originalValue": "#52AEF9",
+      "name": "ACTION_DROPBOX"
+    },
+    "ACTION_DESCRIPTION": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7DC37D",
+      "originalValue": "#7DC37D",
+      "name": "ACTION_DESCRIPTION"
+    },
+    "ACTION_MAP": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#76C6EE",
+      "originalValue": "#76C6EE",
+      "name": "ACTION_MAP"
+    },
+    "ACTION_USER": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#65CAE4",
+      "originalValue": "#65CAE4",
+      "name": "ACTION_USER"
+    },
+    "ACTION_RESET_PASSWORD": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_RESET_PASSWORD"
+    },
+    "ACTION_NEW_CUSTOM50": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#49bcd3",
+      "originalValue": "#49bcd3",
+      "name": "ACTION_NEW_CUSTOM50"
+    },
+    "ACTION_NEW_CUSTOM61": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f57376",
+      "originalValue": "#f57376",
+      "name": "ACTION_NEW_CUSTOM61"
+    },
+    "ACTION_NEW_CUSTOM72": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8d9bfb",
+      "originalValue": "#8d9bfb",
+      "name": "ACTION_NEW_CUSTOM72"
+    },
+    "ACTION_NEW_CUSTOM83": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e7806f",
+      "originalValue": "#e7806f",
+      "name": "ACTION_NEW_CUSTOM83"
+    },
+    "ACTION_NEW_CUSTOM94": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#439cba",
+      "originalValue": "#439cba",
+      "name": "ACTION_NEW_CUSTOM94"
+    },
+    "ACTION_CLONE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6CA1E9",
+      "originalValue": "#6CA1E9",
+      "name": "ACTION_CLONE"
+    },
+    "ACTION_SCRIPT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#0070d2",
+      "originalValue": "#0070d2",
+      "name": "ACTION_SCRIPT"
+    },
+    "ACTION_DELETE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#E6717C",
+      "originalValue": "#E6717C",
+      "name": "ACTION_DELETE"
+    },
+    "ACTION_NEW_CUSTOM40": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#83c75e",
+      "originalValue": "#83c75e",
+      "name": "ACTION_NEW_CUSTOM40"
+    },
+    "ACTION_NEW_CUSTOM51": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d8c760",
+      "originalValue": "#d8c760",
+      "name": "ACTION_NEW_CUSTOM51"
+    },
+    "ACTION_NEW_CUSTOM62": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6b92dc",
+      "originalValue": "#6b92dc",
+      "name": "ACTION_NEW_CUSTOM62"
+    },
+    "ACTION_NEW_CUSTOM73": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#679ef0",
+      "originalValue": "#679ef0",
+      "name": "ACTION_NEW_CUSTOM73"
+    },
+    "ACTION_NEW_CUSTOM84": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f6707b",
+      "originalValue": "#f6707b",
+      "name": "ACTION_NEW_CUSTOM84"
+    },
+    "ACTION_NEW_CUSTOM95": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8bcf6a",
+      "originalValue": "#8bcf6a",
+      "name": "ACTION_NEW_CUSTOM95"
+    },
+    "ACTION_SHARE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_SHARE"
+    },
+    "ACTION_NEW_CUSTOM30": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f59f71",
+      "originalValue": "#f59f71",
+      "name": "ACTION_NEW_CUSTOM30"
+    },
+    "ACTION_NEW_CUSTOM41": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#43b5b5",
+      "originalValue": "#43b5b5",
+      "name": "ACTION_NEW_CUSTOM41"
+    },
+    "ACTION_NEW_CUSTOM52": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ee8e6f",
+      "originalValue": "#ee8e6f",
+      "name": "ACTION_NEW_CUSTOM52"
+    },
+    "ACTION_NEW_CUSTOM63": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7ccf60",
+      "originalValue": "#7ccf60",
+      "name": "ACTION_NEW_CUSTOM63"
+    },
+    "ACTION_NEW_CUSTOM74": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#41c8a0",
+      "originalValue": "#41c8a0",
+      "name": "ACTION_NEW_CUSTOM74"
+    },
+    "ACTION_NEW_CUSTOM85": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f26891",
+      "originalValue": "#f26891",
+      "name": "ACTION_NEW_CUSTOM85"
+    },
+    "ACTION_NEW_CUSTOM96": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6d9de3",
+      "originalValue": "#6d9de3",
+      "name": "ACTION_NEW_CUSTOM96"
+    },
+    "ACTION_LOG_EVENT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6ca1e9",
+      "originalValue": "#6ca1e9",
+      "name": "ACTION_LOG_EVENT"
+    },
+    "ACTION_NEW_GROUP": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#83b6ff",
+      "originalValue": "#83b6ff",
+      "name": "ACTION_NEW_GROUP"
+    },
+    "ACTION_NEW_CUSTOM20": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#48c7c8",
+      "originalValue": "#48c7c8",
+      "name": "ACTION_NEW_CUSTOM20"
+    },
+    "ACTION_NEW_CUSTOM31": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#eb687f",
+      "originalValue": "#eb687f",
+      "name": "ACTION_NEW_CUSTOM31"
+    },
+    "ACTION_NEW_CUSTOM42": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#cfd05b",
+      "originalValue": "#cfd05b",
+      "name": "ACTION_NEW_CUSTOM42"
+    },
+    "ACTION_INFO": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_INFO"
+    },
+    "ACTION_NEW_CUSTOM53": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f36e83",
+      "originalValue": "#f36e83",
+      "name": "ACTION_NEW_CUSTOM53"
+    },
+    "ACTION_NEW_CUSTOM64": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#618fd8",
+      "originalValue": "#618fd8",
+      "name": "ACTION_NEW_CUSTOM64"
+    },
+    "ACTION_NEW_CUSTOM75": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#cd9f65",
+      "originalValue": "#cd9f65",
+      "name": "ACTION_NEW_CUSTOM75"
+    },
+    "ACTION_NEW_CUSTOM86": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e260ab",
+      "originalValue": "#e260ab",
+      "name": "ACTION_NEW_CUSTOM86"
+    },
+    "ACTION_FLOW": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#0079BC",
+      "originalValue": "#0079BC",
+      "name": "ACTION_FLOW"
+    },
+    "ACTION_NEW_CUSTOM97": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#dd6085",
+      "originalValue": "#dd6085",
+      "name": "ACTION_NEW_CUSTOM97"
+    },
+    "ACTION_SUBMIT_FOR_APPROVAL": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#50CC7A",
+      "originalValue": "#50CC7A",
+      "name": "ACTION_SUBMIT_FOR_APPROVAL"
+    },
+    "ACTION_NEW": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#33BCE7",
+      "originalValue": "#33BCE7",
+      "name": "ACTION_NEW"
+    },
+    "ACTION_NEW_CAMPAIGN": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f49756",
+      "originalValue": "#f49756",
+      "name": "ACTION_NEW_CAMPAIGN"
+    },
+    "ACTION_NEW_CUSTOM10": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6488e3",
+      "originalValue": "#6488e3",
+      "name": "ACTION_NEW_CUSTOM10"
+    },
+    "ACTION_NEW_CUSTOM21": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8a7aed",
+      "originalValue": "#8a7aed",
+      "name": "ACTION_NEW_CUSTOM21"
+    },
+    "ACTION_NEW_CUSTOM32": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#38c393",
+      "originalValue": "#38c393",
+      "name": "ACTION_NEW_CUSTOM32"
+    },
+    "ACTION_NEW_CUSTOM43": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7f93f9",
+      "originalValue": "#7f93f9",
+      "name": "ACTION_NEW_CUSTOM43"
+    },
+    "ACTION_NEW_CUSTOM54": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ea70b1",
+      "originalValue": "#ea70b1",
+      "name": "ACTION_NEW_CUSTOM54"
+    },
+    "ACTION_NEW_CUSTOM65": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f279ab",
+      "originalValue": "#f279ab",
+      "name": "ACTION_NEW_CUSTOM65"
+    },
+    "ACTION_NEW_CUSTOM76": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#db6d7a",
+      "originalValue": "#db6d7a",
+      "name": "ACTION_NEW_CUSTOM76"
+    },
+    "ACTION_NEW_CUSTOM87": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d876e5",
+      "originalValue": "#d876e5",
+      "name": "ACTION_NEW_CUSTOM87"
+    },
+    "ACTION_NEW_CUSTOM98": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e1be5c",
+      "originalValue": "#e1be5c",
+      "name": "ACTION_NEW_CUSTOM98"
+    },
+    "ACTION_NEW_CASE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#F2CF5B",
+      "originalValue": "#F2CF5B",
+      "name": "ACTION_NEW_CASE"
+    },
+    "ACTION_NEW_CUSTOM100": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e15d76",
+      "originalValue": "#e15d76",
+      "name": "ACTION_NEW_CUSTOM100"
+    },
+    "ACTION_NEW_CUSTOM1": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ff7b84",
+      "originalValue": "#ff7b84",
+      "name": "ACTION_NEW_CUSTOM1"
+    },
+    "ACTION_NEW_CONTACT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#A094ED",
+      "originalValue": "#A094ED",
+      "name": "ACTION_NEW_CONTACT"
+    },
+    "ACTION_OFFICE_365": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#FF8041",
+      "originalValue": "#FF8041",
+      "name": "ACTION_OFFICE_365"
+    },
+    "ACTION_NEW_CUSTOM11": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8784ea",
+      "originalValue": "#8784ea",
+      "name": "ACTION_NEW_CUSTOM11"
+    },
+    "ACTION_NEW_CUSTOM22": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8b85f9",
+      "originalValue": "#8b85f9",
+      "name": "ACTION_NEW_CUSTOM22"
+    },
+    "ACTION_NEW_CUSTOM33": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#97cf5d",
+      "originalValue": "#97cf5d",
+      "name": "ACTION_NEW_CUSTOM33"
+    },
+    "ACTION_NEW_CUSTOM44": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#c8ca58",
+      "originalValue": "#c8ca58",
+      "name": "ACTION_NEW_CUSTOM44"
+    },
+    "ACTION_NEW_CUSTOM55": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d66ee0",
+      "originalValue": "#d66ee0",
+      "name": "ACTION_NEW_CUSTOM55"
+    },
+    "ACTION_NEW_CUSTOM66": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d8be5f",
+      "originalValue": "#d8be5f",
+      "name": "ACTION_NEW_CUSTOM66"
+    },
+    "ACTION_NEW_CUSTOM77": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#b55d5b",
+      "originalValue": "#b55d5b",
+      "name": "ACTION_NEW_CUSTOM77"
+    },
+    "ACTION_NEW_CUSTOM88": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#996fe6",
+      "originalValue": "#996fe6",
+      "name": "ACTION_NEW_CUSTOM88"
+    },
+    "ACTION_NEW_CUSTOM99": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f0856e",
+      "originalValue": "#f0856e",
+      "name": "ACTION_NEW_CUSTOM99"
+    },
+    "ACTION_ADD_CONTACT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#A094ED",
+      "originalValue": "#A094ED",
+      "name": "ACTION_ADD_CONTACT"
+    },
+    "ACTION_EVERNOTE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#86C86F",
+      "originalValue": "#86C86F",
+      "name": "ACTION_EVERNOTE"
+    },
+    "ACTION_NEW_CUSTOM2": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#cfd05c",
+      "originalValue": "#cfd05c",
+      "name": "ACTION_NEW_CUSTOM2"
+    },
+    "ACTION_LEAD_CONVERT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f88962",
+      "originalValue": "#f88962",
+      "name": "ACTION_LEAD_CONVERT"
+    },
+    "ACTION_NEW_CUSTOM12": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#dc71d1",
+      "originalValue": "#dc71d1",
+      "name": "ACTION_NEW_CUSTOM12"
+    },
+    "ACTION_NEW_CUSTOM23": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#b070e6",
+      "originalValue": "#b070e6",
+      "name": "ACTION_NEW_CUSTOM23"
+    },
+    "ACTION_NEW_CUSTOM34": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d58a6a",
+      "originalValue": "#d58a6a",
+      "name": "ACTION_NEW_CUSTOM34"
+    },
+    "ACTION_NEW_CUSTOM45": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d95879",
+      "originalValue": "#d95879",
+      "name": "ACTION_NEW_CUSTOM45"
+    },
+    "ACTION_NEW_CUSTOM56": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#718deb",
+      "originalValue": "#718deb",
+      "name": "ACTION_NEW_CUSTOM56"
+    },
+    "ACTION_NEW_CUSTOM67": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f87d76",
+      "originalValue": "#f87d76",
+      "name": "ACTION_NEW_CUSTOM67"
+    },
+    "ACTION_RECALL": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#4A698D",
+      "originalValue": "#4A698D",
+      "name": "ACTION_RECALL"
+    },
+    "ACTION_NEW_CUSTOM78": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#5a95dd",
+      "originalValue": "#5a95dd",
+      "name": "ACTION_NEW_CUSTOM78"
+    },
+    "ACTION_NEW_CUSTOM89": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#3e99be",
+      "originalValue": "#3e99be",
+      "name": "ACTION_NEW_CUSTOM89"
+    },
+    "ACTION_FOLLOW": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#31B9F8",
+      "originalValue": "#31B9F8",
+      "name": "ACTION_FOLLOW"
+    },
+    "ACTION_RECORD": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7dc37d",
+      "originalValue": "#7dc37d",
+      "name": "ACTION_RECORD"
+    },
+    "ACTION_NEW_CUSTOM3": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ecb46c",
+      "originalValue": "#ecb46c",
+      "name": "ACTION_NEW_CUSTOM3"
+    },
+    "ACTION_NEW_NOTE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#E6D478",
+      "originalValue": "#E6D478",
+      "name": "ACTION_NEW_NOTE"
+    },
+    "ACTION_NEW_CUSTOM13": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#df6184",
+      "originalValue": "#df6184",
+      "name": "ACTION_NEW_CUSTOM13"
+    },
+    "ACTION_NEW_CUSTOM24": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e56798",
+      "originalValue": "#e56798",
+      "name": "ACTION_NEW_CUSTOM24"
+    },
+    "ACTION_NEW_CUSTOM35": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e9637e",
+      "originalValue": "#e9637e",
+      "name": "ACTION_NEW_CUSTOM35"
+    },
+    "ACTION_NEW_CUSTOM46": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#67a5e7",
+      "originalValue": "#67a5e7",
+      "name": "ACTION_NEW_CUSTOM46"
+    },
+    "ACTION_NEW_CUSTOM57": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#5a9cdd",
+      "originalValue": "#5a9cdd",
+      "name": "ACTION_NEW_CUSTOM57"
+    },
+    "ACTION_NEW_CUSTOM68": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f26979",
+      "originalValue": "#f26979",
+      "name": "ACTION_NEW_CUSTOM68"
+    },
+    "ACTION_NEW_CUSTOM79": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8ed363",
+      "originalValue": "#8ed363",
+      "name": "ACTION_NEW_CUSTOM79"
+    },
+    "ACTION_NEW_CHILD_CASE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#FA975C",
+      "originalValue": "#FA975C",
+      "name": "ACTION_NEW_CHILD_CASE"
+    },
+    "ACTION_NEW_CUSTOM4": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e1d951",
+      "originalValue": "#e1d951",
+      "name": "ACTION_NEW_CUSTOM4"
+    },
+    "ACTION_NEW_CUSTOM14": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#3cc2b3",
+      "originalValue": "#3cc2b3",
+      "name": "ACTION_NEW_CUSTOM14"
+    },
+    "ACTION_NEW_CUSTOM25": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e46fbe",
+      "originalValue": "#e46fbe",
+      "name": "ACTION_NEW_CUSTOM25"
+    },
+    "ACTION_NEW_CUSTOM36": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#d472d4",
+      "originalValue": "#d472d4",
+      "name": "ACTION_NEW_CUSTOM36"
+    },
+    "ACTION_NEW_CUSTOM47": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#5fcc64",
+      "originalValue": "#5fcc64",
+      "name": "ACTION_NEW_CUSTOM47"
+    },
+    "ACTION_NEW_CUSTOM58": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#34b59d",
+      "originalValue": "#34b59d",
+      "name": "ACTION_NEW_CUSTOM58"
+    },
+    "ACTION_NEW_CUSTOM69": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ed6387",
+      "originalValue": "#ed6387",
+      "name": "ACTION_NEW_CUSTOM69"
+    },
+    "ACTION_NEW_CUSTOM5": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#9fdb66",
+      "originalValue": "#9fdb66",
+      "name": "ACTION_NEW_CUSTOM5"
+    },
+    "ACTION_GOAL": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#56AADF",
+      "originalValue": "#56AADF",
+      "name": "ACTION_GOAL"
+    },
+    "ACTION_NEW_CUSTOM15": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#f77e75",
+      "originalValue": "#f77e75",
+      "name": "ACTION_NEW_CUSTOM15"
+    },
+    "ACTION_NEW_CUSTOM26": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7698f0",
+      "originalValue": "#7698f0",
+      "name": "ACTION_NEW_CUSTOM26"
+    },
+    "ACTION_NEW_CUSTOM37": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#8c89f2",
+      "originalValue": "#8c89f2",
+      "name": "ACTION_NEW_CUSTOM37"
+    },
+    "ACTION_NEW_CUSTOM48": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#ef697f",
+      "originalValue": "#ef697f",
+      "name": "ACTION_NEW_CUSTOM48"
+    },
+    "ACTION_NEW_CUSTOM59": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e3d067",
+      "originalValue": "#e3d067",
+      "name": "ACTION_NEW_CUSTOM59"
+    },
+    "ACTION_NEW_CUSTOM6": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54c473",
+      "originalValue": "#54c473",
+      "name": "ACTION_NEW_CUSTOM6"
+    },
+    "ACTION_LOG_THIS_EVENT": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#EB7092",
+      "originalValue": "#EB7092",
+      "name": "ACTION_LOG_THIS_EVENT"
+    },
+    "ACTION_NEW_CUSTOM16": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e9af67",
+      "originalValue": "#e9af67",
+      "name": "ACTION_NEW_CUSTOM16"
+    },
+    "ACTION_NEW_CUSTOM27": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#5ab0d2",
+      "originalValue": "#5ab0d2",
+      "name": "ACTION_NEW_CUSTOM27"
+    },
+    "ACTION_NEW_CUSTOM38": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#53b6d7",
+      "originalValue": "#53b6d7",
+      "name": "ACTION_NEW_CUSTOM38"
+    },
+    "ACTION_NEW_CUSTOM49": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#e25c80",
+      "originalValue": "#e25c80",
+      "name": "ACTION_NEW_CUSTOM49"
+    },
+    "ACTION_NEW_CUSTOM7": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#6a89e5",
+      "originalValue": "#6a89e5",
+      "name": "ACTION_NEW_CUSTOM7"
+    },
+    "ACTION_MORE": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#62B7ED",
+      "originalValue": "#62B7ED",
+      "name": "ACTION_MORE"
+    },
+    "ACTION_ADD_RELATIONSHIP": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#62b7ed",
+      "originalValue": "#62b7ed",
+      "name": "ACTION_ADD_RELATIONSHIP"
+    },
+    "ACTION_NEW_CUSTOM17": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#acd360",
+      "originalValue": "#acd360",
+      "name": "ACTION_NEW_CUSTOM17"
+    },
+    "ACTION_NEW_CUSTOM28": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#89c059",
+      "originalValue": "#89c059",
+      "name": "ACTION_NEW_CUSTOM28"
+    },
+    "ACTION_NEW_CUSTOM39": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#4fbe75",
+      "originalValue": "#4fbe75",
+      "name": "ACTION_NEW_CUSTOM39"
+    },
+    "ACTION_PASSWORD_UNLOCK": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_PASSWORD_UNLOCK"
+    },
+    "ACTION_CHECK": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#54698d",
+      "originalValue": "#54698d",
+      "name": "ACTION_CHECK"
+    },
+    "ACTION_UPDATE_STATUS": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#1ec7be",
+      "originalValue": "#1ec7be",
+      "name": "ACTION_UPDATE_STATUS"
+    },
+    "ACTION_PREVIEW": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#7F8DE1",
+      "originalValue": "#7F8DE1",
+      "name": "ACTION_PREVIEW"
+    },
+    "ACTION_NEW_CUSTOM8": {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "#50ceb9",
+      "originalValue": "#50ceb9",
+      "name": "ACTION_NEW_CUSTOM8"
+    }
+  }
+}

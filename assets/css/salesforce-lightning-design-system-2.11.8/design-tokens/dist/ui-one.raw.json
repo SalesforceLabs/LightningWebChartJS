@@ -1,0 +1,21 @@
+{
+  "auraImports": [
+    "one:actionBackgrounds"
+  ],
+  "props": {
+    "DURATION_SLIDE": {
+      "type": "time",
+      "category": "time",
+      "cssProperties": [
+        "animation*",
+        "transition*"
+      ],
+      "deprecated": true,
+      "value": "0.25s",
+      "originalValue": "0.25s",
+      "name": "DURATION_SLIDE"
+    }
+  },
+  "aliases": {},
+  "auraExtends": "force:base"
+}

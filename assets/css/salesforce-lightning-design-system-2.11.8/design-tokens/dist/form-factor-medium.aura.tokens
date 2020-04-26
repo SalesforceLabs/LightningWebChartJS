@@ -1,0 +1,5 @@
+<aura:tokens>
+  <aura:token name="lineHeightText" property="font,*height" value="1.375"/>
+  <aura:token name="varLineHeightText" property="font,*height" value="1.375"/>
+  <aura:token name="widthStageLeft" property="width" value="250px"/>
+</aura:tokens>

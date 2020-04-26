@@ -1,0 +1,39 @@
+{
+  "aliases": {},
+  "props": {
+    "LINE_HEIGHT_TEXT": {
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "category": "line-height",
+      "value": "1.375",
+      "comment": "Unitless line-heights for reusability",
+      "originalValue": "1.375",
+      "name": "LINE_HEIGHT_TEXT"
+    },
+    "VAR_LINE_HEIGHT_TEXT": {
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "category": "line-height",
+      "value": "1.375",
+      "comment": "Variable unitless line-heights for reusability",
+      "originalValue": "1.375",
+      "name": "VAR_LINE_HEIGHT_TEXT"
+    },
+    "WIDTH_STAGE_LEFT": {
+      "category": "sizing",
+      "type": "size",
+      "value": "250px",
+      "cssProperties": [
+        "width"
+      ],
+      "originalValue": "250px",
+      "name": "WIDTH_STAGE_LEFT"
+    }
+  }
+}

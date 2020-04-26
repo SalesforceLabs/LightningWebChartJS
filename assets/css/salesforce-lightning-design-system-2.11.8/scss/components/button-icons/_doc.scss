@@ -1,0 +1,21 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * #### Accessibility
+ *
+ * If an icon button doesn’t include a label, use a `title` attribute to show on hover for sighted users, and a span with `.slds-assistive-text` to describe the icon for screen readers.
+ *
+ * @summary Buttons icons provide the user with visual iconography that is typically used to invoke an event or action.
+ *
+ * @base
+ * @name button-icons
+ * @selector .slds-button_icon, .slds-button_icon-brand, .slds-button_icon-container, .slds-button_icon-border, .slds-button_icon-border-filled, .slds-button_icon-inverse, .slds-button_icon-border-inverse
+ * @category base
+ * @type action
+ * @role button
+ * @support dev-ready
+ * @layout responsive
+ * @lwc
+ */

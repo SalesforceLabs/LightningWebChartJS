@@ -1,0 +1,516 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import 'deprecate';
+@import '../mixins/index';
+
+/**
+ *
+ * @summary Initializes a trigger element around the dropdown
+ * @name dropdown
+ * @selector .slds-dropdown-trigger
+ * @restrict div, span, li
+ * @support dev-ready
+ * @variant
+ * @lwc
+ */
+.slds-dropdown-trigger {
+  position: relative;
+  display: inline-block;
+
+  .slds-dropdown {
+    top: 100%;
+  }
+
+  .slds-dropdown_bottom,
+  .slds-dropdown--bottom {
+    top: auto;
+  }
+
+  /**
+   * @summary If someone is using javascript for click to toggle - this modifier will help
+   * @selector .slds-dropdown-trigger_hover
+   * @restrict .slds-dropdown-trigger
+   */
+  &_hover,
+  &--hover {
+
+    .slds-dropdown {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      .slds-dropdown {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity $duration-quickly linear, visibility $duration-quickly linear;
+      }
+    }
+  }
+
+  /**
+   * @summary If someone is using javascript for click to toggle - this modifier will help
+   * @selector .slds-dropdown-trigger_click
+   * @restrict .slds-dropdown-trigger
+   */
+  &_click,
+  &--click {
+
+    .slds-dropdown,
+    &:hover .slds-dropdown {
+      display: none;
+    }
+
+    /**
+     * @summary Opens dropdown menu when invoked on click
+     * @selector .slds-is-open
+     * @restrict .slds-dropdown-trigger_click
+     * @modifier
+     * @group visibility
+     */
+    &.slds-is-open .slds-dropdown {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  // Deal with positioning when target is just an icon
+  > [class*="slds-button_icon"],
+  > [class*="slds-button--icon"] {
+
+    ~ .slds-dropdown_left[class*="slds-nubbin"],
+    ~ .slds-dropdown--left[class*="slds-nubbin"] {
+      left: ($spacing-x-small * -1);
+    }
+
+    ~ .slds-dropdown_right[class*="slds-nubbin"],
+    ~ .slds-dropdown--right[class*="slds-nubbin"] {
+      right: ($spacing-x-small * -1);
+    }
+  }
+}
+
+/**
+ * @summary Initializes dropdown
+ * @selector .slds-dropdown
+ * @restrict .slds-dropdown-trigger div, .slds-dropdown-trigger ul, .slds-docked-composer_overflow div
+ * @notes Applies positioning and container styles, by default, dropdown appears below and center of target
+ */
+.slds-dropdown {
+  position: absolute;
+  z-index: $z-index-dropdown;
+  left: 50%;
+  float: left;
+  min-width: $size-xx-small;
+  max-width: $size-medium;
+  margin-top: $spacing-xxx-small;
+  margin-bottom: $spacing-xxx-small;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  padding: $spacing-xx-small 0;
+  font-size: $font-size-2;
+  background: $color-background-alt;
+  box-shadow: $shadow-drop-down;
+  transform: translateX(-50%);
+
+  /**
+   * @summary Positions dropdown to left side of target
+   * @selector .slds-dropdown_left
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group menu position
+   */
+  &_left,
+  &--left {
+    left: 0;
+    right: auto;
+    transform: translateX(0);
+  }
+
+  /**
+   * @summary Positions dropdown to right side of target
+   * @selector .slds-dropdown_right
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group menu position
+   */
+  &_right,
+  &--right {
+    left: auto;
+    right: 0;
+    transform: translateX(0);
+  }
+
+  /**
+   * @summary Positions dropdown to above target
+   * @selector .slds-dropdown_bottom
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group menu position
+   */
+  &_bottom,
+  &--bottom {
+    bottom: 100%;
+  }
+
+  /**
+   * @summary Sets min-width of 6rem/96px
+   * @selector .slds-dropdown_xx-small
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
+  &_xx-small,
+  &--xx-small {
+    min-width: $size-xx-small;
+  }
+
+  /**
+   * @summary Sets min-width of 12rem/192px
+   * @selector .slds-dropdown_x-small
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
+  &_x-small,
+  &--x-small {
+    min-width: $size-x-small;
+  }
+
+  /**
+   * @summary Sets min-width of 15rem/240px
+   * @selector .slds-dropdown_small
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
+  &_small,
+  &--small {
+    min-width: $size-small;
+  }
+
+  /**
+   * @summary Sets min-width of 20rem/320px
+   * @selector .slds-dropdown_medium
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
+  &_medium,
+  &--medium {
+    min-width: $size-medium;
+  }
+
+  /**
+   * @summary Sets min-width of 25rem/400px
+   * @selector .slds-dropdown_large
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
+  &_large,
+  &--large {
+    min-width: $size-large;
+    max-width: $max-width-action-overflow-menu;
+  }
+
+  /**
+   * @summary Sets width equal to input
+   * @selector .slds-dropdown_large
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group width
+   */
+  &_fluid,
+  &--fluid {
+    min-width: $size-x-small; // Prevents menu from being illegible when input's width is small
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /**
+   * @summary Forces overflow scrolling after 5 list items
+   * @selector .slds-dropdown_length-5
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
+   * @modifier
+   * @group height
+   */
+  &_length-5,
+  &--length-5 {
+    @include dropdown-overflow-length(5);
+  }
+
+  /**
+   * @summary Forces overflow scrolling after 7 list items
+   * @selector .slds-dropdown_length-7
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
+   * @modifier
+   * @group height
+   */
+  &_length-7,
+  &--length-7 {
+    @include dropdown-overflow-length(7);
+  }
+
+  /**
+   * @summary Forces overflow scrolling after 10 list items
+   * @selector .slds-dropdown_length-10
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
+   * @modifier
+   * @group height
+   */
+  &_length-10,
+  &--length-10 {
+    @include dropdown-overflow-length(10);
+  }
+
+  /**
+   * @summary Forces overflow scrolling after 5 list items with an icon
+   * @selector .slds-dropdown_length-with-icon-5
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
+   * @modifier
+   * @group height
+   */
+  &_length-with-icon-5,
+  &--length-with-icon-5 {
+    @include dropdown-overflow-length(5, $icon-size: $square-icon-small-boundary);
+  }
+
+  /**
+   * @summary Forces overflow scrolling after 7 list items with an icon
+   * @selector .slds-dropdown_length-with-icon-7
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
+   * @modifier
+   * @group height
+   */
+  &_length-with-icon-7,
+  &--length-with-icon-7 {
+    @include dropdown-overflow-length(7, $icon-size: $square-icon-small-boundary);
+  }
+
+  /**
+   * @summary Forces overflow scrolling after 10 list items with an icon
+   * @selector .slds-dropdown_length-with-icon-10
+   * @restrict .slds-dropdown, .slds-dropdown__list, .slds-listbox
+   * @modifier
+   * @group height
+   */
+  &_length-with-icon-10,
+  &--length-with-icon-10 {
+    @include dropdown-overflow-length(10, $icon-size: $square-icon-small-boundary);
+  }
+
+  /**
+   * @summary Theme
+   * @selector .slds-dropdown_inverse
+   * @restrict .slds-dropdown
+   * @modifier
+   * @group theme
+   */
+  &_inverse,
+  &--inverse {
+    background: $color-background-inverse;
+    border-color: $color-border-inverse;
+
+    .slds-dropdown__item > a {
+      color: $color-text-inverse;
+
+      &:hover,
+      &:focus {
+        color: $color-text-link-inverse-hover;
+        background-color: transparent;
+      }
+
+      &:active {
+        color: $color-text-link-inverse-active;
+        background-color: transparent;
+      }
+
+      &[aria-disabled="true"] {
+        color: $color-text-link-inverse-disabled;
+        cursor: default;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  // Typeahead stuff
+  mark {
+    font-weight: $font-weight-bold;
+    background-color: transparent;
+    color: inherit;
+  }
+
+  // Adjust position of dropdown with top nubbin
+  &[class*="slds-nubbin_top"],
+  &[class*="slds-nubbin--top"] {
+    margin-top: ($nubbin-size-default / 2);
+  }
+
+  // Adjust position of dropdown with bottom nubbin
+  &[class*="slds-nubbin_bottom"],
+  &[class*="slds-nubbin--bottom"] {
+    margin-bottom: ($nubbin-size-default / 2);
+  }
+
+  /**
+   * @summary Adds padding to area above dropdown menu list
+   * @selector .slds-dropdown__header
+   * @restrict .slds-dropdown li
+   */
+  &__header {
+    @include text-title;
+    padding: $spacing-x-small $spacing-small;
+  }
+
+  /**
+   * @summary Initializes dropdown item
+   * @selector .slds-dropdown__item
+   * @restrict .slds-dropdown li
+   * @required
+   */
+  &__item {
+    line-height: $line-height-text;
+    font-weight: $font-weight-regular;
+
+    > a {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: $spacing-x-small $spacing-small;
+      color: $color-text-default;
+      white-space: nowrap;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        text-decoration: none;
+        background-color: $color-background-row-hover;
+      }
+
+      &:active {
+        text-decoration: none;
+        background-color: $color-background-row-active;
+      }
+
+      &[aria-disabled="true"] {
+        color: $color-text-button-default-disabled;
+        cursor: default;
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        .slds-icon {
+          fill: $color-text-button-default-disabled;
+        }
+      }
+
+      /**
+       * @summary Places a menu item into an errored state
+       *
+       * @selector .slds-has-error
+       * @restrict .slds-dropdown__item > a
+       * @modifier
+       * @group notification
+       */
+      &.slds-has-error {
+        background: $color-background-destructive;
+      }
+
+      /**
+       * @summary Places a menu item into a success state
+       *
+       * @selector .slds-has-success
+       * @restrict .slds-dropdown__item > a
+       * @modifier
+       * @group notification
+       */
+      &.slds-has-success {
+        background: $color-background-success-dark;
+      }
+
+      &.slds-has-error,
+      &.slds-has-success {
+        color: $color-gray-1;
+      }
+
+      /**
+       * @summary Places a menu item into a warning state
+       *
+       * @selector .slds-has-warning
+       * @restrict .slds-dropdown__item > a
+       * @modifier
+       * @group notification
+       */
+      &.slds-has-warning {
+        background: $color-background-warning;
+
+        .slds-indicator_unread {
+          background-color: currentColor;
+        }
+
+        .slds-indicator_unsaved {
+          color: currentColor;
+        }
+      }
+
+      &.slds-has-error,
+      &.slds-has-success,
+      &.slds-has-warning {
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    /**
+     * @summary If menu contains menuitemcheckbox then this toggles the selected icon when it is selected
+     * @selector .slds-icon_selected
+     * @restrict .slds-dropdown__item svg
+     */
+    .slds-icon_selected,
+    .slds-icon--selected {
+      opacity: 0;
+      transition: opacity $duration-immediately ease;
+    }
+
+    /**
+     * @summary If menu contains menuitemcheckbox then this handles the selected states
+     * @selector .slds-is-selected
+     * @restrict .slds-dropdown__item
+     * @modifier
+     */
+    &.slds-is-selected .slds-icon_selected,
+    &.slds-is-selected .slds-icon--selected {
+      opacity: 1;
+    }
+
+    &.slds-has-notification .slds-indicator_unsaved {
+      top: rem(-6px);
+    }
+  }
+}
+
+.slds-dropdown_center,
+.slds-dropdown--center {
+  @include rtl() {
+    left: auto;
+    right: auto;
+    transform: translateX(calc(50% - (0.875rem / 2)));
+  }
+}

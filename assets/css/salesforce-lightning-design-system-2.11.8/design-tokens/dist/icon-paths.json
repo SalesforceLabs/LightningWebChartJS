@@ -1,0 +1,12 @@
+{
+  "UTILITY_SPRITE_RTL": "/assets/icons/utility-sprite/svg/symbols_rtl.svg",
+  "STANDARD_SPRITE": "/assets/icons/standard-sprite/svg/symbols.svg",
+  "ACTION_SPRITE": "/assets/icons/action-sprite/svg/symbols.svg",
+  "STANDARD_SPRITE_RTL": "/assets/icons/standard-sprite/svg/symbols_rtl.svg",
+  "DOCTYPE_SPRITE": "/assets/icons/doctype-sprite/svg/symbols.svg",
+  "CUSTOM_SPRITE": "/assets/icons/custom-sprite/svg/symbols.svg",
+  "UTILITY_SPRITE": "/assets/icons/utility-sprite/svg/symbols.svg",
+  "ACTION_SPRITE_RTL": "/assets/icons/action-sprite/svg/symbols_rtl.svg",
+  "DOCTYPE_SPRITE_RTL": "/assets/icons/doctype-sprite/svg/symbols_rtl.svg",
+  "CUSTOM_SPRITE_RTL": "/assets/icons/custom-sprite/svg/symbols_rtl.svg"
+}

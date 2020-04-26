@@ -1,0 +1,81 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import 'deprecate';
+
+/**
+ * @name base
+ * @summary Tile cards that contains the app information, the icon and description
+ * @selector .slds-app-launcher__tile
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.slds-app-launcher__tile {
+  display: flex;
+  align-items: stretch;
+  margin: $spacing-x-small 0;
+  border: $border-width-thin solid $color-border;
+  border-radius: $border-radius-medium;
+  cursor: move;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    border-color: $brand-accessible-active;
+  }
+
+  /**
+   * @summary Add styles associated with drag and drop of a tile
+   * @selector .slds-is-draggable
+   * @restrict .slds-app-launcher__tile
+   */
+  &.slds-is-draggable {
+
+    // Remove bottom padding because the draggable icon is there
+    .slds-app-launcher__tile-figure {
+      padding-bottom: $spacing-xx-small;
+    }
+  }
+
+  /**
+   * @name grabbed
+   * @summary Add styles associated with a tile being grabbed in drag and drop interaction
+   * @selector .slds-is-grabbed
+   * @restrict .slds-app-launcher__tile
+   * @modifier
+   * @group interactions
+   */
+  &.slds-is-grabbed {
+    transform: rotate(3deg);
+  }
+}
+
+/**
+ * @summary App image or icon
+ * @selector .slds-app-launcher__tile-figure
+ * @restrict .slds-app-launcher__tile div
+ */
+.slds-app-launcher__tile-figure {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: $spacing-small;
+  color: $color-text-inverse;
+  border-radius: $border-radius-medium 0 0 $border-radius-medium;
+  text-align: center;
+}
+
+/**
+ * @summary App title and description
+ * @selector .slds-app-launcher__tile-body
+ * @restrict .slds-app-launcher__tile div
+ */
+.slds-app-launcher__tile-body {
+  flex: 1 1 auto;
+  background: $color-background;
+  padding: $spacing-x-small $spacing-small;
+  border-radius: 0 $border-radius-medium $border-radius-medium 0;
+}

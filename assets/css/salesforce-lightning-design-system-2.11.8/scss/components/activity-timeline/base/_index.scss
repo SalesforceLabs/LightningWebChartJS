@@ -1,0 +1,190 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+@import 'deprecate';
+
+/**
+ * @summary Create each expandable activity timeline item in a list
+ *
+ * @name base
+ * @selector .slds-timeline__item_expandable
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.slds-timeline__item_expandable {
+  position: relative;
+  padding-bottom: $spacing-medium;
+
+  &:before {
+    content: '';
+    background: $color-border;
+    height: 100%;
+    width: $border-width-thick;
+    position: absolute;
+    left: $square-icon-medium-boundary-alt;
+    top: 0;
+    bottom: 0;
+    margin-left: $border-width-thin;
+  }
+
+  // Could be a problem - Use media_small?
+  .slds-media__figure {
+    margin-right: $spacing-xx-small;
+    z-index: 1;
+
+    .slds-button_icon {
+      margin-right: $spacing-x-small;
+    }
+  }
+
+  .slds-media__body {
+    padding: 0 $spacing-xx-small;
+  }
+
+  .slds-checkbox {
+    margin-right: $spacing-xx-small;
+  }
+
+  /**
+   * @summary Changes the layout of actions to become inlined with the title of a timeline item.
+   * @selector .slds-timeline__actions_inline
+   * @restrict .slds-timeline__actions
+   */
+  .slds-timeline__actions_inline {
+    flex-flow: row nowrap;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: $spacing-x-small;
+
+    .slds-timeline__date {
+      padding-right: $spacing-x-small;
+      margin-bottom: 0;
+    }
+  }
+
+  /**
+   * @summary Class to show and hide details
+   * @selector .slds-timeline__item_details
+   * @restrict .slds-timeline__item_expandable article
+   */
+  .slds-timeline__item_details {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  /**
+   * @name expand
+   * @summary Toggles the visibility of the timeline item
+   * @selector .slds-is-open
+   * @restrict .slds-timeline__item_expandable
+   * @modifier
+   * @group visibility
+   */
+  &.slds-is-open {
+
+    .slds-timeline__item_details {
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+      padding: $spacing-medium;
+    }
+
+    .slds-timeline__details-action-icon {
+      transform: rotate(0);
+      transform-origin: 45%;
+    }
+  }
+}
+
+/**
+ * @summary Applies line connector for a call timeline item
+ * @selector .slds-timeline__item_call
+ * @restrict .slds-timeline__item_expandable
+ */
+.slds-timeline__item_call:before {
+  background: $log-a-call;
+}
+
+/**
+ * @summary Applies line connector for an email timeline item
+ * @selector .slds-timeline__item_email
+ * @restrict .slds-timeline__item_expandable
+ */
+.slds-timeline__item_email:before {
+  background: $email;
+}
+
+/**
+ * @summary Applies line connector for an event timeline item
+ * @selector .slds-timeline__item_event
+ * @restrict .slds-timeline__item_expandable
+ */
+.slds-timeline__item_event:before {
+  background: $event;
+}
+
+/**
+ * @summary Applies line connector for a task timeline item
+ * @selector .slds-timeline__item_task
+ * @restrict .slds-timeline__item_expandable
+ */
+.slds-timeline__item_task:before {
+  background: $task;
+}
+
+/*
+ * @summary Provides hover feedback on each timeline item
+ * @selector .slds-timeline__trigger
+ * @restrict .slds-timeline__media_expandable div
+ */
+.slds-timeline__trigger {
+  padding: $spacing-xx-small;
+
+  &:hover {
+    background-color: $color-background-reminder;
+  }
+}
+
+/**
+ * @summary Icon associated with timeline item
+ * @selector .slds-timeline__icon
+ * @restrict .slds-timeline__item_expandable .slds-icon_container
+ */
+.slds-timeline__icon {
+  border: $border-width-thick solid #fff;
+}
+
+/**
+ * @summary Container for date and action overflow on the right of a timeline item
+ * @selector .slds-timeline__actions
+ * @restrict .slds-timeline__trigger div
+ */
+.slds-timeline__actions {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+}
+
+/**
+ * @summary Styles the date inside `.slds-timeline__actions`
+ * @selector .slds-timeline__date
+ * @restrict .slds-timeline__actions p
+ */
+.slds-timeline__date {
+  margin-bottom: $spacing-xx-small;
+  font-size: $font-size-2;
+  color: $color-text-weak;
+}
+
+/**
+ * @summary Icon inside of actionable button within an expandable timeline item
+ * @selector .slds-timeline__details-action-icon
+ * @restrict .slds-timeline__item_expandable svg
+ */
+.slds-timeline__details-action-icon {
+  transform: rotate(-90deg);
+}

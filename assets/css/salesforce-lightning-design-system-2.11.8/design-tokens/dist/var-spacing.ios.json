@@ -1,0 +1,249 @@
+{
+  "properties": [
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size X Large",
+      "value": "16",
+      "name": "varSpacingXLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size Small",
+      "value": "8",
+      "name": "varSpacingHorizontalSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size XX Large",
+      "value": "24",
+      "name": "varSpacingHorizontalXxLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 10",
+      "value": "32",
+      "name": "varFontSize10"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size Large",
+      "value": "12",
+      "name": "varSpacingVerticalLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 11",
+      "value": "42",
+      "name": "varFontSize11"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size Large",
+      "value": "12",
+      "name": "varSpacingLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size Medium",
+      "value": "8",
+      "name": "varSpacingMedium"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size Medium",
+      "value": "8",
+      "name": "varSpacingVerticalMedium"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 1",
+      "value": "10",
+      "name": "varFontSize1"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size X Small",
+      "value": "4",
+      "name": "varSpacingVerticalXSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size XXX Small",
+      "value": "2",
+      "name": "varSpacingVerticalXxxSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 2",
+      "value": "12",
+      "name": "varFontSize2"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size X Small",
+      "value": "2",
+      "name": "varSpacingXSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size XXX Small",
+      "value": "2",
+      "name": "varSpacingXxxSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 3",
+      "value": "13",
+      "name": "varFontSize3"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size X Large",
+      "value": "16",
+      "name": "varSpacingHorizontalXLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 4",
+      "value": "14",
+      "name": "varFontSize4"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 5",
+      "value": "14",
+      "name": "varFontSize5"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size XX Small",
+      "value": "2",
+      "name": "varSpacingHorizontalXxSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 6",
+      "value": "16",
+      "name": "varFontSize6"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size XX Large",
+      "value": "24",
+      "name": "varSpacingXxLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 7",
+      "value": "20",
+      "name": "varFontSize7"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size XX Large",
+      "value": "24",
+      "name": "varSpacingVerticalXxLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 8",
+      "value": "20",
+      "name": "varFontSize8"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size Small",
+      "value": "8",
+      "name": "varSpacingVerticalSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable typography token for font size 9",
+      "value": "28",
+      "name": "varFontSize9"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size Small",
+      "value": "4",
+      "name": "varSpacingSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size Large",
+      "value": "12",
+      "name": "varSpacingHorizontalLarge"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size XXX Small",
+      "value": "2",
+      "name": "varSpacingHorizontalXxxSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size X Small",
+      "value": "4",
+      "name": "varSpacingHorizontalXSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable spacing token for size XX Small",
+      "value": "2",
+      "name": "varSpacingXxSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable horizontal spacing token for size Medium",
+      "value": "12",
+      "name": "varSpacingHorizontalMedium"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size XX Small",
+      "value": "2",
+      "name": "varSpacingVerticalXxSmall"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "comment": "Variable vertical spacing token for size X Large",
+      "value": "16",
+      "name": "varSpacingVerticalXLarge"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "aliases": {},
+  "props": {
+    "MQ_SMALL": {
+      "category": "media-query",
+      "type": "media-query",
+      "access": "global",
+      "value": "only screen and (max-width: 47.9375em)",
+      "comment": "Small form factor: devices smaller than tablet",
+      "originalValue": "only screen and (max-width: 47.9375em)",
+      "name": "MQ_SMALL"
+    },
+    "MQ_MEDIUM": {
+      "category": "media-query",
+      "type": "media-query",
+      "access": "global",
+      "value": "only screen and (min-width: 48em)",
+      "comment": "Medium form factor:  devices larger than phone",
+      "originalValue": "only screen and (min-width: 48em)",
+      "name": "MQ_MEDIUM"
+    },
+    "MQ_MEDIUM_LANDSCAPE": {
+      "category": "media-query",
+      "type": "media-query",
+      "access": "global",
+      "value": "only screen and (min-width: 48em) and (min-aspect-ratio: 4/3)",
+      "comment": "Medium form factor, landscape:  devices larger than phone, in landscape orientation",
+      "originalValue": "only screen and (min-width: 48em) and (min-aspect-ratio: 4/3)",
+      "name": "MQ_MEDIUM_LANDSCAPE"
+    },
+    "MQ_LARGE": {
+      "category": "media-query",
+      "type": "media-query",
+      "access": "global",
+      "value": "only screen and (min-width: 64.0625em)",
+      "comment": "Large form factor:  devices larger than tablet",
+      "originalValue": "only screen and (min-width: 64.0625em)",
+      "name": "MQ_LARGE"
+    },
+    "MQ_HIGH_RES": {
+      "category": "media-query",
+      "type": "media-query",
+      "access": "global",
+      "value": "only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2),screen and (min-resolution: 192dpi),screen and (min-resolution: 2dppx)",
+      "deprecated": true,
+      "comment": "Retina displays",
+      "originalValue": "only screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2),screen and (min-resolution: 192dpi),screen and (min-resolution: 2dppx)",
+      "name": "MQ_HIGH_RES"
+    },
+    "MQ_SINGLE_COLUMN_RECORD_LAYOUT": {
+      "category": "media-query",
+      "type": "media-query",
+      "access": "global",
+      "value": "(max-width: 599px)",
+      "deprecated": true,
+      "comment": "Make record layout 1 col when its view port is < 600px",
+      "originalValue": "(max-width: 599px)",
+      "name": "MQ_SINGLE_COLUMN_RECORD_LAYOUT"
+    }
+  }
+}

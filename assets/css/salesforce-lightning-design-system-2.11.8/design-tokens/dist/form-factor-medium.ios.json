@@ -1,0 +1,35 @@
+{
+  "properties": [
+    {
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "category": "line-height",
+      "value": "1.375",
+      "comment": "Unitless line-heights for reusability",
+      "name": "lineHeightText"
+    },
+    {
+      "type": "number",
+      "cssProperties": [
+        "font",
+        "*height"
+      ],
+      "category": "line-height",
+      "value": "1.375",
+      "comment": "Variable unitless line-heights for reusability",
+      "name": "varLineHeightText"
+    },
+    {
+      "category": "sizing",
+      "type": "size",
+      "value": "250px",
+      "cssProperties": [
+        "width"
+      ],
+      "name": "widthStageLeft"
+    }
+  ]
+}

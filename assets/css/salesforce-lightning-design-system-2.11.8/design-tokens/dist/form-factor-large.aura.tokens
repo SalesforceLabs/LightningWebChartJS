@@ -1,0 +1,10 @@
+<aura:tokens>
+  <aura:token name="fontSizeSmall" property="font,font-size" value="0.75rem"/>
+  <aura:token name="fontSizeMedium" property="font,font-size" value="0.8125rem"/>
+  <aura:token name="fontSizeMediumA" property="font,font-size" value="0.875rem"/>
+  <aura:token name="fontSizeLarge" property="font,font-size" value="1rem"/>
+  <aura:token name="fontSizeXLarge" property="font,font-size" value="1.25rem"/>
+  <aura:token name="fontSizeXxLarge" property="font,font-size" value="1.75rem"/>
+  <aura:token name="heightHeader" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" value="3.125rem"/>
+  <aura:token name="squareIconMedium" property="*width,*height,*flex*,top,right,bottom,left,margin*,padding*,transform" value="2rem"/>
+</aura:tokens>

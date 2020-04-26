@@ -1,0 +1,153 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * A dialog popover, `.slds-popover`, can be applied to all variants of a dialog
+ * popover. It initiates the styles of the popover and enables `.slds-nubbin` to be applied.
+ *
+ * A dialog popover requires at least one focusable element.
+ *
+ * @name base
+ * @selector .slds-popover
+ * @restrict [role="dialog"], [role="tooltip"]
+ * @support dev-ready
+ * @variant
+ */
+.slds-popover {
+  @include popover($shadow: $shadow-drop-down);
+  border: $border-width-thin solid $color-border;
+}
+
+/**
+ * @summary Applies syles for primary content area of popover
+ * @selector .slds-popover__body
+ * @restrict .slds-popover div
+ */
+.slds-popover__body,
+.slds-popover__header,
+.slds-popover__footer {
+  position: relative;
+  padding: $spacing-x-small $spacing-small;
+  word-wrap: break-word;
+}
+
+/**
+ * @summary Applies styles for top area of popover
+ * @selector .slds-popover__header
+ * @restrict .slds-popover header, .slds-popover div
+ */
+.slds-popover__header {
+  border-bottom: $border-width-thin solid $color-border;
+}
+
+/**
+ * @summary Applies styles for footer area of popover
+ * @selector .slds-popover__footer
+ * @restrict .slds-popover footer
+ */
+.slds-popover__footer {
+  border-top: $border-width-thin solid $color-border;
+}
+
+/**
+ * @summary Applies styles to center align content for footer area of a form popover
+ * @selector .slds-popover__footer_form
+ * @restrict .slds-popover footer
+ */
+.slds-popover__footer_form {
+  text-align: center;
+  background: $color-background;
+  border-radius: 0 0 $border-radius-medium $border-radius-medium;
+}
+
+/**
+ * @summary Applies a max-height and vertical scrolling to a popover body
+ *
+ * @selector .slds-popover__body_small
+ * @restrict .slds-popover__body
+ * @modifier
+ * @group body
+ */
+.slds-popover__body_small {
+  max-height: $size-small;
+  overflow-y: auto;
+}
+
+/**
+ * @summary Close button within a popover
+ * @selector .slds-popover__close
+ * @restrict .slds-popover button
+ */
+.slds-popover__close {
+  position: relative;
+  margin: $spacing-xx-small;
+  z-index: ($z-index-dialog + 1);
+}
+
+/**
+ * @summary Width modifier for popover - small
+ * @selector .slds-popover_small
+ * @restrict .slds-popover
+ * @modifier
+ * @group width
+ */
+.slds-popover_small,
+.slds-popover--small {
+  max-width: $size-small;
+}
+
+/**
+ * @summary Width modifier for popover - medium
+ * @selector .slds-popover_medium
+ * @restrict .slds-popover
+ * @modifier
+ * @group width
+ */
+.slds-popover_medium,
+.slds-popover--medium {
+  min-width: $size-medium;
+}
+
+/**
+ * @summary Width modifier for popover - large
+ * @selector .slds-popover_large
+ * @restrict .slds-popover
+ * @modifier
+ * @group width
+ */
+.slds-popover_large,
+.slds-popover--large {
+  min-width: $size-large;
+  max-width: $max-width-action-overflow-menu;
+}
+
+// Remove border if theme modifier is applied
+.slds-popover[class*="theme_"],
+.slds-popover[class*="theme--"] {
+  border: 0;
+}
+
+.slds-popover *:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * @summary Modifier for popover to take 100% width
+ * @selector .slds-popover_full-width
+ * @restrict .slds-popover
+ * @modifier
+ * @group width
+ */
+.slds-popover_full-width {
+  width: 100%;
+}
+
+/**
+ * @summary Modifier to hide a popover
+ * @selector .slds-popover_hide
+ * @restrict .slds-popover
+ */
+.slds-popover_hide {
+  display: none;
+}

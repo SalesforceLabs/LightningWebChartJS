@@ -1,0 +1,12 @@
+<aura:tokens>
+  <aura:token name="utilitySpriteRtl" value="/assets/icons/utility-sprite/svg/symbols_rtl.svg"/>
+  <aura:token name="standardSprite" value="/assets/icons/standard-sprite/svg/symbols.svg"/>
+  <aura:token name="actionSprite" value="/assets/icons/action-sprite/svg/symbols.svg"/>
+  <aura:token name="standardSpriteRtl" value="/assets/icons/standard-sprite/svg/symbols_rtl.svg"/>
+  <aura:token name="doctypeSprite" value="/assets/icons/doctype-sprite/svg/symbols.svg"/>
+  <aura:token name="customSprite" value="/assets/icons/custom-sprite/svg/symbols.svg"/>
+  <aura:token name="utilitySprite" value="/assets/icons/utility-sprite/svg/symbols.svg"/>
+  <aura:token name="actionSpriteRtl" value="/assets/icons/action-sprite/svg/symbols_rtl.svg"/>
+  <aura:token name="doctypeSpriteRtl" value="/assets/icons/doctype-sprite/svg/symbols_rtl.svg"/>
+  <aura:token name="customSpriteRtl" value="/assets/icons/custom-sprite/svg/symbols_rtl.svg"/>
+</aura:tokens>

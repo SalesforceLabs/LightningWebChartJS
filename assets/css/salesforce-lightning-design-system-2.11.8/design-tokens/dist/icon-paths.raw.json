@@ -1,0 +1,75 @@
+{
+  "aliases": {},
+  "props": {
+    "UTILITY_SPRITE_RTL": {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/utility-sprite/svg/symbols_rtl.svg",
+      "originalValue": "/assets/icons/utility-sprite/svg/symbols_rtl.svg",
+      "name": "UTILITY_SPRITE_RTL"
+    },
+    "STANDARD_SPRITE": {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/standard-sprite/svg/symbols.svg",
+      "originalValue": "/assets/icons/standard-sprite/svg/symbols.svg",
+      "name": "STANDARD_SPRITE"
+    },
+    "ACTION_SPRITE": {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/action-sprite/svg/symbols.svg",
+      "originalValue": "/assets/icons/action-sprite/svg/symbols.svg",
+      "name": "ACTION_SPRITE"
+    },
+    "STANDARD_SPRITE_RTL": {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/standard-sprite/svg/symbols_rtl.svg",
+      "originalValue": "/assets/icons/standard-sprite/svg/symbols_rtl.svg",
+      "name": "STANDARD_SPRITE_RTL"
+    },
+    "DOCTYPE_SPRITE": {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/doctype-sprite/svg/symbols.svg",
+      "originalValue": "/assets/icons/doctype-sprite/svg/symbols.svg",
+      "name": "DOCTYPE_SPRITE"
+    },
+    "CUSTOM_SPRITE": {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/custom-sprite/svg/symbols.svg",
+      "originalValue": "/assets/icons/custom-sprite/svg/symbols.svg",
+      "name": "CUSTOM_SPRITE"
+    },
+    "UTILITY_SPRITE": {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/utility-sprite/svg/symbols.svg",
+      "originalValue": "/assets/icons/utility-sprite/svg/symbols.svg",
+      "name": "UTILITY_SPRITE"
+    },
+    "ACTION_SPRITE_RTL": {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/action-sprite/svg/symbols_rtl.svg",
+      "originalValue": "/assets/icons/action-sprite/svg/symbols_rtl.svg",
+      "name": "ACTION_SPRITE_RTL"
+    },
+    "DOCTYPE_SPRITE_RTL": {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/doctype-sprite/svg/symbols_rtl.svg",
+      "originalValue": "/assets/icons/doctype-sprite/svg/symbols_rtl.svg",
+      "name": "DOCTYPE_SPRITE_RTL"
+    },
+    "CUSTOM_SPRITE_RTL": {
+      "category": "utility",
+      "type": "string",
+      "value": "/assets/icons/custom-sprite/svg/symbols_rtl.svg",
+      "originalValue": "/assets/icons/custom-sprite/svg/symbols_rtl.svg",
+      "name": "CUSTOM_SPRITE_RTL"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary A region that can be inside of a layout
+ *
+ * @name base
+ * @selector .slds-region
+ * @restrict div
+ * @support dev-ready
+ * @variant
+ */
+.slds-region {
+  background-color: $color-background-alt;
+}
+
+/**
+ * @summary A region that can be pinned on the top of a layout
+ *
+ * @selector .slds-region__pinned-top
+ * @restrict .slds-region
+ */
+.slds-region__pinned-top {
+  background-color: $color-background-alt;
+  border-bottom: $border-width-thin solid $card-color-border;
+}
+
+/**
+ * @summary A region that can be pinned on the left side of a layout
+ *
+ * @selector .slds-region__pinned-left
+ * @restrict .slds-region
+ */
+.slds-region__pinned-left {
+  background-color: $color-background-alt;
+  border-right: $border-width-thin solid $card-color-border;
+}
+
+/**
+ * @summary A region that can be pinned on the right side of a layout
+ *
+ * @selector .slds-region__pinned-right
+ * @restrict .slds-region
+ */
+.slds-region__pinned-right {
+  background-color: $color-background-alt;
+  border-left: $border-width-thin solid $card-color-border;
+}

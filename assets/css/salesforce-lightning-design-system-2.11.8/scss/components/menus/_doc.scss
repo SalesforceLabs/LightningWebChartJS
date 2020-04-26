@@ -1,0 +1,56 @@
+// Lightning Design System 2.11.8
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+/**
+ * The unordered menu list with `[role="menu"]` should be contained in a `<div>`
+ * with the class `.slds-dropdown`. The exception to this is the **Action
+ * Overflow for Touch**, which is not a dropdown menu.
+ *
+ * The target HTML element and dropdown need to be wrapped in the class `.slds-dropdown-trigger dropdown-trigger_click`.
+ *
+ * By default, dropdown menus do not display a nubbin (the little cute triangle
+ * pointing at your target). If you want to apply one, you can add the class
+ * that defines the nubbin position and `.slds-nubbin_top` to the `.slds-dropdown`
+ * HTML element.
+ *
+ * **Submenu Variant**
+ *
+ * To create a menu with a submenu, add the `slds-has-submenu` class to the list item, `<li>`, that will open the submenu. In order to open the submenu, set `aria-expanded` to `true` on the `<a>` within the `<li>` when the user clicks or hovers over the list item, or presses enter while focused on the list item.
+ *
+ * To open the submenu to the right of the main menu, add `slds-dropdown_submenu-right` to the `<div>` with the `slds-dropdown_submenu` class. To add it to the left, add `slds-dropdown_submenu-left`.
+ *
+ * **Accessibility**
+ *
+ * The main thing that distinguishes menus from other popover blocks is keyboard
+ * navigation: elsewhere, users press the Tab key to navigate through actionable
+ * items, but in a menu, users press the arrow keys to navigate.
+ *
+ * **Expected markup:**
+ *
+ * - Menu trigger is a focusable element (`<a>` or `<button>`) with `aria-haspopup="true"`
+ * - Menu has `role="menu"` and an `aria-labelledby` attribute whose value is the id of the menu trigger
+ * - Menu items have `role="menuitem"`, `role="menuitemcheckbox"`, or `role="menuitemradio"`
+ * - Menu items that open a submenu have both `aria-haspop="true"` and `aria-expanded` set to true or false on the `<a>` within the `<li>`, depending if the submenu is open or closed
+ * - Submenu has `role="menu"` and an `aria-labelledby` attribute whose value matches the name of the `<li>` that opened the submenu
+ *
+ * **Expected keyboard interactions:**
+ *
+ * - Arrow keys cycle focus through menu items (you should use JS to disable focus for any disabled items)
+ * - If a menu item opens a submenu, pressing enter or the right arrow key opens the submenu and focus goes to the first item in the submenu
+ * - If a submenu is open, pressing the left arrow key or Esc key closes the submenu and puts focus back on the menu item that opened the submenu
+ * - Tab key closes menu and moves focus to the next focusable element on the page
+ * - Esc key closes menu and moves focus back to the menu trigger
+ * - Any character key moves focus to the next menu item that starts with that character, if applicable
+ *
+ * @summary A Menu offers a list of actions or functions that a user can access.
+ *
+ * @base
+ * @name menus
+ * @selector .slds-dropdown-trigger
+ * @support dev-ready
+ * @category experience
+ * @type navigation
+ * @role menu
+ * @s1 false
+ * @scroller
+ */
