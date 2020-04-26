@@ -99,7 +99,7 @@
         description="Define a SOQL to be used to fetch the data (only aggregate query). Use label alias for the label and value alias for the value"
         required="false"
         default=""
-        placeholder="SELECT StageName label, SUM(Amount) value FROM Opportunity WHERE IsClosed = false GROUP BY StageName LIMIT 10"
+        placeholder="SELECT StageName label, SUM(Amount) value FROM Opportunity WHERE IsClosed = false AND AccountId = :recordId WITH SECURITY_ENFORCED GROUP BY StageName LIMIT 10"
         type="String"
       />
       <property
