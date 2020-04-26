@@ -107,7 +107,8 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('gridOffsetgridlines', 1, {
     yAxes: [{ gridLines: { offsetGridLines: 1 } }]
   }),
-  ChartOptionMock('gridZ', 1, { yAxes: [{ gridLines: { z: 1 } }] })
+  ChartOptionMock('gridZ', 1, { yAxes: [{ gridLines: { z: 1 } }] }),
+  ChartOptionMock('axis', 'x', { xAxes: [{}] })
 ];
 
 describe('c-cartesian-axis', () => {

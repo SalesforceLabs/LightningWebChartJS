@@ -1,0 +1,68 @@
+<template>
+  <div class={containerClass}>
+    <template if:false={error}>
+      <template if:true={isLoaded}>
+        <c-chart
+          height="100%"
+          width="100%"
+          type={type}
+          responsive="true"
+          stylecss={styleCss}
+          onlwccerror={handleError}
+        >
+          <c-dataset labels={detailsLabels}>
+            <template for:each={details} for:item="data">
+              <c-data
+                key={data.uuid}
+                label={data.label}
+                detail={data.detail}
+                fill={data.fill}
+                bordercolor={data.bgColor}
+                backgroundcolor={data.bgColor}
+              ></c-data>
+            </template>
+          </c-dataset>
+          <c-title
+            text={title}
+            fontfamily="'Salesforce Sans', Arial, sans-serif"
+            fontcolor="rgb(8, 7, 7)"
+          ></c-title>
+          <c-legend
+            position={legendPosition}
+            label-fontfamily="'Salesforce Sans', Arial, sans-serif"
+            label-fontcolor="rgb(8, 7, 7)"
+          ></c-legend>
+          <template if:false={isRadial}>
+            <c-cartesian-linear-axis
+              axis="y"
+              ticks-beginatzero="true"
+            ></c-cartesian-linear-axis>
+          </template>
+          <template if:true={isRadial}>
+            <c-radial-linear-axis
+              tick-beginatzero="true"
+            ></c-radial-linear-axis>
+          </template>
+        </c-chart>
+      </template>
+      <template if:false={isLoaded}>
+        <lightning-spinner
+          alternative-text="Loading"
+          size="small"
+        ></lightning-spinner>
+      </template>
+    </template>
+    <template if:true={error}>
+      <div class="slds-illustration slds-m-vertical_small">
+        <div class="slds-text-longform">
+          <h3 class="slds-text-heading_medium slds-text-color_error">
+            {error}
+          </h3>
+          <p class="slds-text-body_regular">
+            {stack}
+          </p>
+        </div>
+      </div>
+    </template>
+  </div>
+</template>

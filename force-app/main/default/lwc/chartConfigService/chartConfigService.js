@@ -1,12 +1,14 @@
+import { ATTRIBUTE_CARTESIAN_AXES } from 'c/constants';
+
 export default class ChartConfigService {
-  static DefaultConfiguration = {
+  static DEFAULT_CONFIGURATION = {
     legend: {
       display: false
     }
   };
 
   constructor() {
-    this._config = { ...ChartConfigService.DefaultConfiguration };
+    this._config = { ...ChartConfigService.DEFAULT_CONFIGURATION };
     this._scales = {
       xAxes: {},
       yAxes: {}
@@ -55,13 +57,14 @@ export default class ChartConfigService {
 
   removeConfig(payload, option) {
     this._dirty = true;
-    if (option === 'scales') {
+    if (option === ATTRIBUTE_CARTESIAN_AXES) {
       Object.keys(this._config[option])
-        .filter(axis => this._config[option][axis])
-        .forEach(axis => {
-          this._config[option][axis] = this._config[option][axis].filter(
-            axe => axe.uuid !== payload.uuid
+        .filter(scale => this._config[option][scale])
+        .forEach(scale => {
+          this._config[option][scale] = this._config[option][scale].filter(
+            axis => axis.uuid !== payload[scale][0].uuid
           );
+          this._scales[scale] = this._config[option][scale];
         });
     } else {
       this._config[option] = undefined;
@@ -77,7 +80,8 @@ export default class ChartConfigService {
   }
 
   static cleanObject(obj) {
-    const validObj = o => Object.keys(o).length && o;
+    const validObj = o =>
+      (Object.keys(o).length || (Array.isArray(o) && o.length)) && o;
     const itemToBool = item => {
       return typeof item !== 'object' || item === null
         ? item
@@ -91,7 +95,12 @@ export default class ChartConfigService {
           ? o.map(itemToBool).filter(Boolean)
           : Object.entries(o).reduce((a, [key, val]) => {
               const newVal = itemToBool(val);
-              if (newVal) a[key] = newVal;
+              if (
+                newVal !== undefined &&
+                newVal !== null &&
+                typeof val === typeof newVal
+              )
+                a[key] = newVal;
               return a;
             }, {})
       );

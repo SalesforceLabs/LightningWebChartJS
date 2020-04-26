@@ -33,12 +33,14 @@ global.TestAttribute = class TestAttribute extends BaseAttribute {
 /**
  * Check that the DOM element can be created
  */
-function testDOMElementCreation(className) {
+function testDOMElementInteraction(className) {
   test(`Create DOM Element for: ${className.prototype.constructor.name}`, () => {
     const element = createElement('x-test', { is: className });
     document.body.appendChild(element);
 
     expect(element).toBeDefined();
+
+    document.body.removeChild(element);
   });
 }
 
@@ -73,6 +75,6 @@ function testChartOptions(
 }
 
 global.testAttribute = (constructor, listChartOptionMock, eventName) => {
-  testDOMElementCreation(constructor);
+  testDOMElementInteraction(constructor);
   testChartOptions(constructor, listChartOptionMock, eventName);
 };
