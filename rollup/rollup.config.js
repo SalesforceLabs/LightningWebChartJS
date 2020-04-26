@@ -23,7 +23,7 @@ module.exports = {
     copy({
       targets: [
         {
-          src: path.resolve(__dirname, './src/staticresources'),
+          src: 'force-app/main/default/staticresources/',
           dest: path.resolve(__dirname, './dist/')
         }
       ]
