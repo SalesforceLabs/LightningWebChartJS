@@ -1,0 +1,81 @@
+/**
+ * @author lwcc
+ * @date 2020
+ *
+ * @description SOQL Data Provider class. It allow to get ChartData using an SOQL query
+ */
+public inherited sharing virtual class SOQLDataProvider extends ChartDataProvider {
+  private static final String SOQL_SECURITY_ENFORCED = 'WITH SECURITY_ENFORCED';
+  private static final String SOQL_LIMIT_STATEMENT = 'LIMIT';
+  private static final String LABEL_ALIAS = 'label';
+  private static final String VALUE_ALIAS = 'value';
+
+  public static final String QUERY_NULL_EXCEPTION = 'Query is null';
+  public static final String QUERY_WITHOUT_LABEL_EXCEPTION = 'Query must contains "label" alias';
+  public static final String QUERY_WITHOUT_VALUE_EXCEPTION = 'Query must contains "value" alias';
+  public static final String QUERY_WITHOUT_LIMIT_EXCEPTION =
+    'Query must contains "' +
+    SOQL_LIMIT_STATEMENT +
+    '" statement';
+  public static final String QUERY_WITHOUT_SECURITY_ENFORCED_EXCEPTION =
+    'Query must contains "' +
+    SOQL_SECURITY_ENFORCED +
+    '"';
+
+  /*******************************************************************************************************
+   * @description the SOQL query to execute
+   */
+  protected String query;
+
+  /*******************************************************************************************************
+   * @description Allow us to get the SOQL query
+   * @param initParameter it is an SQOL query as a string. The SOQL need to have two alias : value and label
+   * ex : SELECT StageName label, Amount value FROM Opportunity WITH SECURITY_ENFORCED WHERE Amount > 100000 LIMIT 10
+   */
+  public virtual override void init(final Object initParameter) {
+    this.query = (String) initParameter;
+  }
+
+  /*******************************************************************************************************
+   * @description return the data structured by the SOQL query
+   * @return List<ChartData> the list of chart data needed to display the graph
+   */
+  public virtual override List<ChartDataProvider.ChartData> getData() {
+    if (String.isBlank(this.query)) {
+      throw new SOQLDataProviderException(QUERY_NULL_EXCEPTION);
+    }
+
+    if (!this.query.containsIgnoreCase(' ' + LABEL_ALIAS)) {
+      throw new SOQLDataProviderException(QUERY_WITHOUT_LABEL_EXCEPTION);
+    }
+
+    if (!this.query.containsIgnoreCase(' ' + VALUE_ALIAS)) {
+      throw new SOQLDataProviderException(QUERY_WITHOUT_VALUE_EXCEPTION);
+    }
+
+    if (!this.query.containsIgnoreCase(' ' + SOQL_LIMIT_STATEMENT + ' ')) {
+      throw new SOQLDataProviderException(QUERY_WITHOUT_LIMIT_EXCEPTION);
+    }
+
+    if (!this.query.containsIgnoreCase(' ' + SOQL_SECURITY_ENFORCED)) {
+      throw new SOQLDataProviderException(
+        QUERY_WITHOUT_SECURITY_ENFORCED_EXCEPTION
+      );
+    }
+
+    final List<ChartDataProvider.ChartData> chartDatas = new List<ChartDataProvider.ChartData>();
+    for (
+      AggregateResult aResult : Database.query(String.escapeSingleQuotes(query))
+    ) {
+      ChartDataProvider.ChartData aChartData = new ChartDataProvider.ChartData();
+      aChartData.label = (String) aResult.get(LABEL_ALIAS);
+      aChartData.detail = new List<Object>{ aResult.get(VALUE_ALIAS) };
+      chartDatas.Add(aChartData);
+    }
+
+    return chartDatas;
+  }
+
+  public class SOQLDataProviderException extends Exception {
+  }
+}

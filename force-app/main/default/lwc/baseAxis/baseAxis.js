@@ -160,4 +160,9 @@ export default class BaseAxis extends BaseAttribute {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.afterUpdate = v;
   }
+
+  constructor() {
+    super();
+    this._content = this._payload;
+  }
 }

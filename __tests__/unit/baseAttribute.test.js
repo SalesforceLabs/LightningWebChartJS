@@ -1,5 +1,14 @@
-test('', () => {});
+import { createElement } from 'lwc';
+import Title from 'c/title';
 
-// TODO: Test reactivity of dispatchOption & disconnectedCallback with the TestAttribute
+describe('c-base-attribute', () => {
+  const element = createElement('x-chart', {
+    is: Title
+  });
+  document.body.appendChild(element);
 
-// TODO: Attributes (Title, Legend...) can be created
+  test('disconnectedCallback', async () => {
+    document.body.removeChild(element);
+    await expect(element).not.toBe(null);
+  });
+});

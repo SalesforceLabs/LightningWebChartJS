@@ -10,7 +10,6 @@ import { ATTRIBUTE_RADIAL_AXES } from 'c/constants';
 export default class RadialAxis extends BaseAxis {
   constructor() {
     super();
-    this._content = this._payload;
     this._option = ATTRIBUTE_RADIAL_AXES;
   }
 }

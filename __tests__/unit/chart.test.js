@@ -25,6 +25,8 @@ describe('Chart: ChartJs library', () => {
     expect(loadScript.mock.calls.length).toBe(1);
     // Validation that the chartjs static resource is passed as parameter.
     expect(loadScript.mock.calls[0][1]).toEqual(STATIC_RESOURCE_NAME);
+
+    document.body.removeChild(element);
   });
 });
 
@@ -73,6 +75,38 @@ describe.each(CHARTS)('DOM Tests for individual charts', chart => {
   });
 });
 
+const TEST_DATA_PROPERTIES = [
+  //ChartOptionMock('uuid', 10, { uuid: 10 }),
+  ChartOptionMock('responsive', true, { responsive: true }),
+  ChartOptionMock('responsiveanimationduration', 'foo', {
+    responsiveAnimationDuration: 'foo'
+  }),
+  ChartOptionMock('maintainaspectratio', true, { maintainAspectRatio: true }),
+  ChartOptionMock('aspectratio', 'foo', { aspectRatio: 'foo' }),
+  ChartOptionMock('callbackResize', 'foo', { onResize: 'foo' }),
+  ChartOptionMock('devicepixelratio', 'foo', { pointHoverBorderColor: 'foo' }),
+  ChartOptionMock('events', 'foo', { events: 'foo' }),
+  ChartOptionMock('callbackClick', 'foo', { onClick: 'foo' }),
+  ChartOptionMock('callbackHover', 'foo', { onHover: 'foo' })
+  //ChartOptionMock('type', BAR_CHART_TYPE, { type: BAR_CHART_TYPE }),
+];
+
+describe('Chart: property', () => {
+  const element = createElement('x-chart', { is: Chart });
+  document.body.appendChild(element);
+  describe.each(TEST_DATA_PROPERTIES)('matches options', item => {
+    test(`${item.propertyName}`, async () => {
+      element[item.propertyName] = item.propertyValue;
+
+      await expect(element[item.propertyName]).toBe(item.propertyValue);
+    });
+  });
+  test('Accept uuid', async () => {
+    element.uuid = 'xyz';
+
+    await expect(element.uuid).toBe('xyz');
+  });
+});
 // TODO: checkOptions()
 
 // TODO: Option event Listener & Disconnect Event Listener

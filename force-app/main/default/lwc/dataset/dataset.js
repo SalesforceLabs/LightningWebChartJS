@@ -25,16 +25,37 @@ export default class Dataset extends BaseAttribute {
   }
 
   connectedCallback() {
-    this.addEventListener(DATA_EVENT_NAME, evt => {
+    this.addEventListener(
+      DATA_EVENT_NAME,
+      this._listenerHandlers.handleDataChange
+    );
+    this.addEventListener(
+      DISCONNECT_EVENT_NAME,
+      this._listenerHandlers.handleDataDeletion
+    );
+  }
+
+  disconnectedCallback() {
+    this.removeEventListener(
+      DATA_EVENT_NAME,
+      this._listenerHandlers.handleDataChange
+    );
+    this.removeEventListener(
+      DISCONNECT_EVENT_NAME,
+      this._listenerHandlers.handleDataDeletion
+    );
+  }
+
+  _listenerHandlers = {
+    handleDataChange: evt => {
       evt.stopPropagation();
       this._details[evt.detail.payload.uuid] = evt.detail.payload;
       this._payload.datasets = Object.values(this._details);
-    });
-
-    this.addEventListener(DISCONNECT_EVENT_NAME, evt => {
+    },
+    handleDataDeletion: evt => {
       evt.stopPropagation();
       delete this._details[evt.detail.payload.uuid];
       this._payload.datasets = Object.values(this._details);
-    });
-  }
+    }
+  };
 }

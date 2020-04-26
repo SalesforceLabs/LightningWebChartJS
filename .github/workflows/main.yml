@@ -21,11 +21,10 @@ jobs:
         id: cache-npm
         uses: actions/cache@v1
         with:
-          path: node_modules
-          key: npm-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            npm-${{ env.cache-name }}-
-            npm-
+            ${{ runner.os }}-node-
 
       # Install npm dependencies for Prettier and Jest
       - name: 'Install npm dependencies'
@@ -64,11 +63,10 @@ jobs:
         id: cache-npm
         uses: actions/cache@v1
         with:
-          path: node_modules
-          key: npm-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            npm-${{ env.cache-name }}-
-            npm-
+            ${{ runner.os }}-node-
 
       # Install npm dependencies for Prettier and Jest
       - name: 'Install npm dependencies'
@@ -97,12 +95,12 @@ jobs:
         run: 'sfdx force:source:push'
 
       # Run Apex tests in scratch org
-      #- name: 'Run Apex tests'
-      #  run: 'sfdx force:apex:test:run -c -r human -d ./tests/apex -t lwcc -w 20'
+      - name: 'Run Apex tests'
+        run: npm run test:apex:coverage
 
       # Unit tests
-      #- name: 'Unit test Lightning Web Components'
-      #  run: npm run test:unit:coverage
+      - name: 'Unit test Lightning Web Components'
+        run: npm run test:unit:coverage
 
       # Housekeeping
       - name: 'Delete scratch org'

@@ -2,12 +2,14 @@ import { LightningElement, api } from 'lwc';
 import ChartJS from '@salesforce/resourceUrl/chartjs_v280';
 import { loadScript } from 'lightning/platformResourceLoader';
 import { sanitize } from 'c/utils';
+import { nanoid } from 'c/nanoid';
 
 import {
   ATTRIBUTE_DATA,
   ATTRIBUTE_TITLE,
   OPTION_EVENT_NAME,
-  DISCONNECT_EVENT_NAME
+  DISCONNECT_EVENT_NAME,
+  ERROR_EVENT_NAME
 } from 'c/constants';
 import ChartConfigService from 'c/chartConfigService';
 import ReactivityManager from 'c/reactivityManager';
@@ -16,6 +18,15 @@ export default class Chart extends LightningElement {
   @api width;
   @api height;
   @api stylecss;
+
+  _uuid = nanoid(11);
+  @api
+  get uuid() {
+    return this._uuid;
+  }
+  set uuid(v) {
+    this._uuid = v;
+  }
 
   @api
   get responsive() {
@@ -116,6 +127,7 @@ export default class Chart extends LightningElement {
   destroyChart() {
     if (this._chart) {
       this._chart.destroy();
+      this._chart = null;
     }
   }
 
@@ -225,15 +237,26 @@ export default class Chart extends LightningElement {
   }
 
   connectedCallback() {
-    this.addEventListener(OPTION_EVENT_NAME, evt => {
-      evt.stopPropagation();
-      this._handleOption(evt.detail);
-    });
+    this.addEventListener(
+      OPTION_EVENT_NAME,
+      this._listenerHandlers.handleOption
+    );
+    this.addEventListener(
+      DISCONNECT_EVENT_NAME,
+      this._listenerHandlers.handleDisconnect
+    );
+  }
 
-    this.addEventListener(DISCONNECT_EVENT_NAME, evt => {
-      evt.stopPropagation();
-      this._handleDisconnect(evt.detail);
-    });
+  disconnectedCallback() {
+    this.removeEventListener(
+      OPTION_EVENT_NAME,
+      this._listenerHandlers.handleOption
+    );
+    this.removeEventListener(
+      DISCONNECT_EVENT_NAME,
+      this._listenerHandlers.handleDisconnect
+    );
+    this.destroyChart();
   }
 
   renderedCallback() {
@@ -248,58 +271,86 @@ export default class Chart extends LightningElement {
     });
   }
 
+  errorCallback(error, stack) {
+    this.destroyChart();
+    this.dispatchEvent(
+      new CustomEvent(ERROR_EVENT_NAME, {
+        bubbles: true,
+        detail: {
+          uuid: this.uuid,
+          error: error,
+          stack: stack
+        }
+      })
+    );
+  }
+
   getCanvas() {
-    if (!this._canvas) {
-      this._canvas = document.createElement('canvas');
-      this.template.querySelector('div').appendChild(this._canvas);
+    let canvas = this.template.querySelector('canvas');
+    if (!canvas) {
+      canvas = document.createElement('canvas');
+      this.template.querySelector('div').appendChild(canvas);
     }
-    return this._canvas.getContext('2d');
+    return canvas.getContext('2d');
   }
 
   drawChart() {
-    if (!this._chartjsLoaded || !this._details) return;
-
-    this._configService.updateConfig(this._payload, null);
-    if (!this._chart) {
-      // eslint-disable-next-line no-undef
-      this._chart = new window.Chart(this.getCanvas(), {
-        type: this._type,
-        data: this._details,
-        options: this._configService.getConfig()
-      });
-    } else {
-      this._chart.data = this._details;
-      this._chart.options = this._configService.getConfig();
-      this._chart.update();
+    if (!this._isReadyToDraw()) return;
+    try {
+      this._configService.updateConfig(this._payload, null);
+      if (!this._chart || !this._chart.ctx) {
+        // eslint-disable-next-line no-undef
+        this._chart = new window.Chart(this.getCanvas(), {
+          type: this._type,
+          data: this._details,
+          options: this._configService.getConfig()
+        });
+      } else {
+        this._chart.data = this._details;
+        this._chart.options = this._configService.getConfig();
+        this._chart.update();
+      }
+    } catch (error) {
+      this.errorCallback(error, error.stack);
     }
   }
 
-  _handleOption(detail) {
-    const { payload, option } = detail;
-    if (option === ATTRIBUTE_DATA) {
-      this._details = payload;
-    } else {
-      // get title to set the accessibility
-      if (option === ATTRIBUTE_TITLE) {
-        this.ariaLabel = payload.text;
-      }
-      this._configService.updateConfig(payload, option);
-    }
-    this._reactivityManager.throttleRegisteredJob();
+  _isReadyToDraw() {
+    return (
+      this._chartjsLoaded &&
+      this._details &&
+      this._type /* && this.isConnected*/
+    );
   }
 
-  _handleDisconnect(detail) {
-    const { payload, option } = detail;
-    if (option === ATTRIBUTE_DATA) {
-      this._details = null;
-      this.destroyChart();
-    } else {
-      // reset title to set the accessibility
-      if (option === ATTRIBUTE_TITLE) {
-        this.ariaLabel = `${this._type} chart`;
+  _listenerHandlers = {
+    handleOption: evt => {
+      evt.stopPropagation();
+      const { payload, option } = evt.detail;
+      if (option === ATTRIBUTE_DATA) {
+        this._details = payload;
+      } else {
+        // get title to set the accessibility
+        if (option === ATTRIBUTE_TITLE) {
+          this.ariaLabel = payload.text;
+        }
+        this._configService.updateConfig(payload, option);
       }
-      this._configService.removeConfig(payload, option);
+      this._reactivityManager.throttleRegisteredJob();
+    },
+    handleDisconnect: evt => {
+      evt.stopPropagation();
+      const { payload, option } = evt.detail;
+      if (option === ATTRIBUTE_DATA) {
+        this._details = payload;
+      } else {
+        // get title to set the accessibility
+        if (option === ATTRIBUTE_TITLE) {
+          this.ariaLabel = payload.text;
+        }
+        this._configService.updateConfig(payload, option);
+      }
       this._reactivityManager.throttleRegisteredJob();
     }
-  }
+  };
 }
