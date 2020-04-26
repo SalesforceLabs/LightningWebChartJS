@@ -31,7 +31,6 @@ module.exports = {
         }
       ]
     }),
-
     copy({
       targets: [
         {
@@ -44,7 +43,6 @@ module.exports = {
         }
       ]
     }),
-
     lwc({
       rootDir: path.resolve(__dirname, './src/modules/')
     }),

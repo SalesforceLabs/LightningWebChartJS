@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "c/sampleApp": ["sampleApp/sampleApp.js"],
+      "c/sampleAppItem": ["sampleAppItem/sampleAppItem.js"]
+    }
+  }
+}
