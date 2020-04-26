@@ -1,0 +1,18 @@
+.col {
+  display: inline-block;
+  width: 30%;
+  margin: 1rem;
+}
+
+.slds-text-link:hover {
+  cursor: pointer;
+}
+
+pre {
+  text-align: left;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 1.2rem;
+  background-color: #364149 !important;
+  color: #fff !important;
+}

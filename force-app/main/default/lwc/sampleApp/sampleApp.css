@@ -36,3 +36,7 @@ img {
 .greeting {
   height: 75px;
 }
+
+.slds-button-group button {
+  text-transform: uppercase;
+}
