@@ -17,7 +17,8 @@
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "build:playground": "rollup --config ./rollup/rollup.config.js",
-    "build:samples": "git checkout gh-pages"
+    "git:checkout:ghpages": "git checkout gh-pages",
+    "build:samples": "npm run build:playground && npm run git:checkout:ghpages"
   },
   "devDependencies": {
     "@lwc/engine": "^1.5.1",
