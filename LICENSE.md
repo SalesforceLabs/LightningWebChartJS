@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2020 Sebastien
+Copyright (c) 2020 Lighting Web Chart.js Component (LWCC) Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
