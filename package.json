@@ -16,9 +16,7 @@
     "test:unit:coverage": "sfdx-lwc-jest --coverage -- --runInBand",
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
-    "build:playground": "rollup --config ./rollup/rollup.config.js",
-    "git:checkout:ghpages": "git checkout gh-pages",
-    "build:samples": "npm run build:playground && npm run git:checkout:ghpages"
+    "build:playground": "rollup --config ./rollup/rollup.config.js"
   },
   "devDependencies": {
     "@lwc/engine": "^1.5.1",
@@ -52,8 +50,5 @@
     "**/lwc/**": [
       "eslint"
     ]
-  },
-  "dependencies": {
-    "move-cli": "^1.2.1"
   }
 }
