@@ -153,16 +153,29 @@ pre .s, .highlight .s{
 .container {
     max-width: 1140px;
 }
+.samples-container{
+  max-width: unset !important;
+}
 }
 @media (min-width: 992px){
 .container{
     max-width: 960px;
+}
+.samples-container{
+  max-width: unset !important;
 }
 }
 @media (min-width: 768px){
 .container{
     max-width: 720px;
 }
+.samples-container{
+  max-width: unset !important;
+}
+}
+
+.col{
+  width: 80% !important;
 }
 
 /* Basic items */

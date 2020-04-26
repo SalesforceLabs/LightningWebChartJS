@@ -6370,6 +6370,10 @@ function registerTemplate(tpl) {
   return tpl;
 }
 
+function sanitizeAttribute(tagName, namespaceUri, attrName, attrValue) {
+  return attrValue;
+}
+
 const CachedStyleFragments = create$2(null);
 
 function createStyleElement(styleContent) {
@@ -9603,16 +9607,220 @@ function createElement$1(sel, options) {
 }
 
 function stylesheet(hostSelector, shadowSelector, nativeShadow) {
-  return ".center" + shadowSelector + " {text-align: center;}\n.link" + shadowSelector + " {border: none;padding: 10px;border-radius: 5px;text-decoration: none;background-color: #ff6000;color: white;margin-left: 33%;margin-right: 33%;display: inline-block;margin-top: 1em;}\n.info" + shadowSelector + " {color: black;background-color: #e4f2f8;margin: auto;padding: 15px 10px;text-align: left;width: 300px;border-radius: 5px;}\n.code" + shadowSelector + " {font-family: monospace;}\n.container" + shadowSelector + " {margin-top: 30px;}\nimg" + shadowSelector + " {max-width: 150px;}\n.greeting" + shadowSelector + " {height: 75px;}\n";
+  return ".center" + shadowSelector + " {text-align: center;}\n.link" + shadowSelector + " {border: none;padding: 10px;border-radius: 5px;text-decoration: none;background-color: #ff6000;color: white;margin-left: 33%;margin-right: 33%;display: inline-block;margin-top: 1em;}\n.info" + shadowSelector + " {color: black;background-color: #e4f2f8;margin: auto;padding: 15px 10px;text-align: left;width: 300px;border-radius: 5px;}\n.code" + shadowSelector + " {font-family: monospace;}\n.container" + shadowSelector + " {margin-top: 30px;}\nimg" + shadowSelector + " {max-width: 150px;}\n.greeting" + shadowSelector + " {height: 75px;}\n.slds-button-group" + shadowSelector + " button" + shadowSelector + " {text-transform: uppercase;}\n";
 }
 var _implicitStylesheets = [stylesheet];
 
 function stylesheet$1(hostSelector, shadowSelector, nativeShadow) {
-  return "\n" + (nativeShadow ? (":host {display: block;}") : (hostSelector + " {display: block;}")) + "\n";
+  return ".col" + shadowSelector + " {display: inline-block;width: 30%;margin: 1rem;}\n.slds-text-link:hover" + shadowSelector + " {cursor: pointer;}\npre" + shadowSelector + " {text-align: left;border: 1px solid #dee2e6;border-radius: 10px;padding: 1.2rem;background-color: #364149 !important;color: #fff !important;}\n";
 }
 var _implicitStylesheets$1 = [stylesheet$1];
 
 function tmpl($api, $cmp, $slotset, $ctx) {
+  const {
+    t: api_text,
+    s: api_slot,
+    h: api_element,
+    b: api_bind,
+    gid: api_scoped_id
+  } = $api;
+  const {
+    _m0,
+    _m1,
+    _m2
+  } = $ctx;
+  return [api_element("article", {
+    classMap: {
+      "slds-card": true,
+      "col": true
+    },
+    key: 6
+  }, [api_element("div", {
+    classMap: {
+      "slds-card__body": true,
+      "slds-card__body_inner": true,
+      "slds-p-horizontal_x-large": true
+    },
+    key: 2
+  }, [api_element("div", {
+    classMap: {
+      "chart": true
+    },
+    key: 1
+  }, [api_slot("chartExample", {
+    attrs: {
+      "name": "chartExample"
+    },
+    key: 0
+  }, [api_text("Chart example")], $slotset)])]), api_element("footer", {
+    classMap: {
+      "slds-card__footer": true
+    },
+    key: 5
+  }, [api_element("p", {
+    classMap: {
+      "slds-card__footer-action": true,
+      "slds-text-link": true
+    },
+    key: 4,
+    on: {
+      "click": _m0 || ($ctx._m0 = api_bind($cmp.openModal))
+    }
+  }, [api_text("Source code"), api_element("span", {
+    classMap: {
+      "slds-assistive-text": true
+    },
+    key: 3
+  }, [api_text("Source code")])])])]), $cmp.isModalOpen ? api_element("section", {
+    classMap: {
+      "slds-modal": true,
+      "slds-fade-in-open": true
+    },
+    attrs: {
+      "role": "dialog",
+      "tabindex": "-1",
+      "aria-label": "Meaningful description of the modal content",
+      "aria-modal": "true",
+      "aria-describedby": `${api_scoped_id("modal-content-id-1")}`
+    },
+    key: 19
+  }, [api_element("div", {
+    classMap: {
+      "slds-modal__container": true
+    },
+    styleMap: {
+      "width": "90%",
+      "maxWidth": "unset"
+    },
+    key: 18
+  }, [api_element("header", {
+    classMap: {
+      "slds-modal__header": true,
+      "slds-modal__header_empty": true
+    },
+    key: 11
+  }, [api_element("button", {
+    classMap: {
+      "slds-button": true,
+      "slds-button_icon": true,
+      "slds-modal__close": true,
+      "slds-button_icon-inverse": true
+    },
+    attrs: {
+      "title": "Close"
+    },
+    key: 10,
+    on: {
+      "click": _m1 || ($ctx._m1 = api_bind($cmp.closeModal))
+    }
+  }, [api_element("svg", {
+    classMap: {
+      "slds-button__icon": true,
+      "slds-button__icon_large": true
+    },
+    attrs: {
+      "aria-hidden": "true"
+    },
+    key: 8
+  }, [api_element("use", {
+    attrs: {
+      "xlink:href": sanitizeAttribute("use", "http://www.w3.org/2000/svg", "xlink:href", "/assets/icons/utility-sprite/svg/symbols.svg#close")
+    },
+    key: 7
+  }, [])]), api_element("span", {
+    classMap: {
+      "slds-assistive-text": true
+    },
+    key: 9
+  }, [api_text("Close")])])]), api_element("div", {
+    classMap: {
+      "slds-modal__content": true,
+      "slds-p-around_medium": true
+    },
+    attrs: {
+      "id": api_scoped_id("modal-content-id-1")
+    },
+    key: 15
+  }, [api_element("div", {
+    classMap: {
+      "code": true
+    },
+    key: 14
+  }, [api_element("pre", {
+    key: 13
+  }, [api_slot("chartCode", {
+    attrs: {
+      "name": "chartCode"
+    },
+    key: 12
+  }, [api_text("Code example")], $slotset)])])]), api_element("footer", {
+    classMap: {
+      "slds-modal__footer": true
+    },
+    key: 17
+  }, [api_element("button", {
+    classMap: {
+      "slds-button": true,
+      "slds-button_neutral": true
+    },
+    key: 16,
+    on: {
+      "click": _m2 || ($ctx._m2 = api_bind($cmp.closeModal))
+    }
+  }, [api_text("Close")])])])]) : null, $cmp.isModalOpen ? api_element("div", {
+    classMap: {
+      "slds-backdrop": true,
+      "slds-backdrop_open": true
+    },
+    styleMap: {
+      "opacity": "1.0"
+    },
+    key: 20
+  }, []) : null];
+}
+
+var _tmpl = registerTemplate(tmpl);
+tmpl.slots = ["chartExample", "chartCode"];
+tmpl.stylesheets = [];
+
+if (_implicitStylesheets$1) {
+  tmpl.stylesheets.push.apply(tmpl.stylesheets, _implicitStylesheets$1);
+}
+tmpl.stylesheetTokens = {
+  hostAttribute: "c-sampleAppItem_sampleAppItem-host",
+  shadowAttribute: "c-sampleAppItem_sampleAppItem"
+};
+
+class SampleAppItem extends BaseLightningElement {
+  constructor(...args) {
+    super(...args);
+    this.isModalOpen = false;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+}
+
+registerDecorators(SampleAppItem, {
+  fields: ["isModalOpen"]
+});
+
+var _cSampleAppItem = registerComponent(SampleAppItem, {
+  tmpl: _tmpl
+});
+
+function stylesheet$2(hostSelector, shadowSelector, nativeShadow) {
+  return "\n" + (nativeShadow ? (":host {display: block;}") : (hostSelector + " {display: block;}")) + "\n";
+}
+var _implicitStylesheets$2 = [stylesheet$2];
+
+function tmpl$1($api, $cmp, $slotset, $ctx) {
   const {
     h: api_element,
     s: api_slot
@@ -9634,14 +9842,14 @@ function tmpl($api, $cmp, $slotset, $ctx) {
   }, [], $slotset)];
 }
 
-var _tmpl = registerTemplate(tmpl);
-tmpl.slots = [""];
-tmpl.stylesheets = [];
+var _tmpl$1 = registerTemplate(tmpl$1);
+tmpl$1.slots = [""];
+tmpl$1.stylesheets = [];
 
-if (_implicitStylesheets$1) {
-  tmpl.stylesheets.push.apply(tmpl.stylesheets, _implicitStylesheets$1);
+if (_implicitStylesheets$2) {
+  tmpl$1.stylesheets.push.apply(tmpl$1.stylesheets, _implicitStylesheets$2);
 }
-tmpl.stylesheetTokens = {
+tmpl$1.stylesheetTokens = {
   hostAttribute: "c-chart_chart-host",
   shadowAttribute: "c-chart_chart"
 };
@@ -9683,10 +9891,8 @@ const ATTRIBUTE_TITLE = 'title';
 const ATTRIBUTE_TOOLTIPS = 'tooltips';
 const CARTESIAN_AXIS_TYPE_CATEGORY = 'category';
 const CARTESIAN_AXIS_TYPE_LINEAR = 'linear';
-const CARTESIAN_AXIS_TYPE_LOG = 'logarithmic';
-const CARTESIAN_AXIS_TYPE_TIME = 'time';
 
-var _tmpl$1 = void 0;
+var _tmpl$2 = void 0;
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? Object(arguments[i]) : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
@@ -9775,7 +9981,7 @@ ChartConfigService.DefaultConfiguration = {
   }
 };
 var ChartConfigService$1 = registerComponent(ChartConfigService, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class ReactivityManager {
@@ -9819,7 +10025,7 @@ class ReactivityManager {
 }
 
 var ReactivityManager$1 = registerComponent(ReactivityManager, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class Chart extends BaseLightningElement {
@@ -10171,10 +10377,10 @@ registerDecorators(Chart, {
 });
 
 var _cChart = registerComponent(Chart, {
-  tmpl: _tmpl
+  tmpl: _tmpl$1
 });
 
-function tmpl$1($api, $cmp, $slotset, $ctx) {
+function tmpl$2($api, $cmp, $slotset, $ctx) {
   const {
     s: api_slot
   } = $api;
@@ -10183,10 +10389,10 @@ function tmpl$1($api, $cmp, $slotset, $ctx) {
   }, [], $slotset)];
 }
 
-var _tmpl$2 = registerTemplate(tmpl$1);
-tmpl$1.slots = [""];
-tmpl$1.stylesheets = [];
-tmpl$1.stylesheetTokens = {
+var _tmpl$3 = registerTemplate(tmpl$2);
+tmpl$2.slots = [""];
+tmpl$2.stylesheets = [];
+tmpl$2.stylesheetTokens = {
   hostAttribute: "c-dataset_dataset-host",
   shadowAttribute: "c-dataset_dataset"
 };
@@ -10231,7 +10437,7 @@ class BaseAttribute extends BaseLightningElement {
 }
 
 var BaseAttribute$1 = registerComponent(BaseAttribute, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class Dataset extends BaseAttribute$1 {
@@ -10274,7 +10480,7 @@ registerDecorators(Dataset, {
 });
 
 var _cDataset = registerComponent(Dataset, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$3
 });
 
 let nanoid = (t = 21) => {
@@ -10459,7 +10665,7 @@ registerDecorators(Data, {
 });
 
 var _cData = registerComponent(Data, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class Title extends BaseAttribute$1 {
@@ -10576,7 +10782,7 @@ registerDecorators(Title, {
 });
 
 var _cTitle = registerComponent(Title, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class Legend extends BaseAttribute$1 {
@@ -10805,7 +11011,7 @@ registerDecorators(Legend, {
 });
 
 var _cLegend = registerComponent(Legend, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class Layout extends BaseAttribute$1 {
@@ -10867,7 +11073,7 @@ registerDecorators(Layout, {
 });
 
 var _cLayout = registerComponent(Layout, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class Animation extends BaseAttribute$1 {
@@ -10928,7 +11134,7 @@ registerDecorators(Animation, {
 });
 
 var _cAnimation = registerComponent(Animation, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class BaseAxis extends BaseAttribute$1 {
@@ -11144,7 +11350,7 @@ registerDecorators(BaseAxis, {
 });
 
 var BaseAxis$1 = registerComponent(BaseAxis, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class CartesianAxis extends BaseAxis$1 {
@@ -11608,7 +11814,7 @@ registerDecorators(CartesianAxis, {
 });
 
 var _cCartesianAxis = registerComponent(CartesianAxis, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class CartesianCategoryAxis extends _cCartesianAxis {
@@ -11636,7 +11842,7 @@ registerDecorators(CartesianCategoryAxis, {
 });
 
 var _cCartesianCategoryAxis = registerComponent(CartesianCategoryAxis, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class Tooltip extends BaseAttribute$1 {
@@ -12226,7 +12432,7 @@ registerDecorators(Tooltip, {
 });
 
 var _cTooltip = registerComponent(Tooltip, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class LineConfiguration extends BaseAttribute$1 {
@@ -12387,7 +12593,7 @@ registerDecorators(LineConfiguration, {
 });
 
 var _cLineConfiguration = registerComponent(LineConfiguration, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class CartesianLinearAxis extends _cCartesianAxis {
@@ -12470,7 +12676,7 @@ registerDecorators(CartesianLinearAxis, {
 });
 
 var _cCartesianLinearAxis = registerComponent(CartesianLinearAxis, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
 class ArcConfiguration extends BaseAttribute$1 {
@@ -12543,245 +12749,113 @@ registerDecorators(ArcConfiguration, {
 });
 
 var _cArcConfiguration = registerComponent(ArcConfiguration, {
-  tmpl: _tmpl$1
+  tmpl: _tmpl$2
 });
 
-class CartesianLogarithmicAxis extends _cCartesianAxis {
-  constructor() {
-    super();
-    this._content.type = CARTESIAN_AXIS_TYPE_LOG;
-  }
-
-}
-
-var _cCartesianLogarithmicAxis = registerComponent(CartesianLogarithmicAxis, {
-  tmpl: _tmpl$1
-});
-
-class CartesianTimeAxis extends _cCartesianAxis {
-  get adapterDate() {
-    return this._content.adapters.date;
-  }
-
-  set adapterDate(v) {
-    this._content.adapters.date = v;
-  }
-
-  get distribution() {
-    return this._content.distribution;
-  }
-
-  set distribution(v) {
-    this._content.distribution = v;
-  }
-
-  get bounds() {
-    return this._content.bounds;
-  }
-
-  set bounds(v) {
-    this._content.bounds = v;
-  }
-
-  get tickSource() {
-    return this._content.ticks.source;
-  }
-
-  set tickSource(v) {
-    this._content.ticks.source = v;
-  }
-
-  get timeDisplayformats() {
-    return this._content.time.displayFormats;
-  }
-
-  set timeDisplayformats(v) {
-    this._content.time.displayFormats = v;
-  }
-
-  get timeIsoweekday() {
-    return this._content.time.isoWeekday;
-  }
-
-  set timeIsoweekday(v) {
-    this._content.time.isoWeekday = Boolean(v);
-  }
-
-  get timeParser() {
-    return this._content.time.parser;
-  }
-
-  set timeParser(v) {
-    this._content.time.parser = v;
-  }
-
-  get timeRound() {
-    return this._content.time.round;
-  }
-
-  set timeRound(v) {
-    this._content.time.round = v;
-  }
-
-  get timeTooltipformat() {
-    return this._content.time.tooltipFormat;
-  }
-
-  set timeTooltipformat(v) {
-    this._content.time.tooltipFormat = v;
-  }
-
-  get timeUnit() {
-    return this._content.time.unit;
-  }
-
-  set timeUnit(v) {
-    this._content.time.unit = v;
-  }
-
-  get timeStepsize() {
-    return this._content.time.stepSize;
-  }
-
-  set timeStepsize(v) {
-    this._content.time.stepSize = Number(v);
-  }
-
-  get timeMinunit() {
-    return this._content.time.minUnit;
-  }
-
-  set timeMinunit(v) {
-    this._content.time.minUnit = v;
-  }
-
-  constructor() {
-    super();
-    this._timeMinunit = void 0;
-    this._content.type = CARTESIAN_AXIS_TYPE_TIME;
-    this._content.adapters = {};
-    this._content.time = {};
-  }
-
-}
-
-registerDecorators(CartesianTimeAxis, {
-  publicProps: {
-    adapterDate: {
-      config: 3
-    },
-    distribution: {
-      config: 3
-    },
-    bounds: {
-      config: 3
-    },
-    tickSource: {
-      config: 3
-    },
-    timeDisplayformats: {
-      config: 3
-    },
-    timeIsoweekday: {
-      config: 3
-    },
-    timeParser: {
-      config: 3
-    },
-    timeRound: {
-      config: 3
-    },
-    timeTooltipformat: {
-      config: 3
-    },
-    timeUnit: {
-      config: 3
-    },
-    timeStepsize: {
-      config: 3
-    },
-    timeMinunit: {
-      config: 3
-    }
-  },
-  fields: ["_timeMinunit"]
-});
-
-var _cCartesianTimeAxis = registerComponent(CartesianTimeAxis, {
-  tmpl: _tmpl$1
-});
-
-function tmpl$2($api, $cmp, $slotset, $ctx) {
+function tmpl$3($api, $cmp, $slotset, $ctx) {
   const {
-    c: api_custom_element,
-    h: api_element
+    t: api_text,
+    b: api_bind,
+    h: api_element,
+    d: api_dynamic,
+    k: api_key,
+    i: api_iterator,
+    f: api_flatten,
+    c: api_custom_element
   } = $api;
+  const {
+    _m0,
+    _m1
+  } = $ctx;
   return [api_element("div", {
     classMap: {
-      "slds-card": true
+      "slds-grid": true
     },
-    key: 77
-  }, [api_custom_element("c-chart", _cChart, {
-    props: {
-      "height": "400px",
-      "width": "400px",
-      "type": "line"
+    key: 4
+  }, [api_element("div", {
+    classMap: {
+      "slds-col": true,
+      "slds-size_1-of-1": true,
+      "slds-p-bottom_medium": true
     },
     key: 3
-  }, [api_custom_element("c-dataset", _cDataset, {
-    props: {
-      "labels": "[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]"
+  }, [api_element("div", {
+    classMap: {
+      "slds-button-group": true,
+      "slds-align_absolute-center": true
     },
-    key: 1
-  }, [api_custom_element("c-data", _cData, {
-    props: {
-      "label": "My First dataset",
-      "detail": "[10, 30, 46, 2, 8, 50, 0]",
-      "backgroundcolor": "rgba(44, 130, 201, 1)",
-      "bordercolor": "rgba(44, 130, 201, 1)",
-      "fill": "false"
-    },
-    key: 0
-  }, [])]), api_custom_element("c-title", _cTitle, {
-    props: {
-      "text": "Line Chart"
+    attrs: {
+      "role": "group"
     },
     key: 2
-  }, [])]), api_custom_element("c-chart", _cChart, {
+  }, api_flatten([api_element("button", {
+    classMap: {
+      "slds-button": true,
+      "slds-button_neutral": true
+    },
+    key: 0,
+    on: {
+      "click": _m0 || ($ctx._m0 = api_bind($cmp.displayAllCharts))
+    }
+  }, [api_text("All")]), api_iterator($cmp.filterTypes, function (item) {
+    return api_element("button", {
+      classMap: {
+        "slds-button": true,
+        "slds-button_neutral": true
+      },
+      attrs: {
+        "data-value": item
+      },
+      key: api_key(1, item),
+      on: {
+        "click": _m1 || ($ctx._m1 = api_bind($cmp.displayFilteredCharts))
+      }
+    }, [api_dynamic(item)]);
+  })]))])]), api_element("div", {
+    classMap: {
+      "container": true
+    },
+    styleMap: {
+      "textAlign": "center"
+    },
+    key: 109
+  }, [api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 37
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
+    },
     props: {
       "type": "bar",
-      "width": "80vw",
       "responsive": "true",
-      "maintainaspectratio": "true",
       "stylecss": "position: relative; margin: auto;",
-      "events": "[\"click\"]",
-      "callbackClick": $cmp.handleCallbackClick
+      "events": "[\"click\"]"
     },
-    key: 11
+    key: 12
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"Red\", \"Blue\", \"Yellow\", \"Green\", \"Purple\", \"Orange\"]"
     },
-    key: 5
+    key: 6
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "# of Votes",
       "detail": "[12, 19, 3, 5, 2, 3]",
-      "backgroundcolor": "[\n                \"rgba(255, 99, 132, 0.2)\",\n                \"rgba(54, 162, 235, 0.2)\",\n                \"rgba(255, 206, 86, 0.2)\",\n                \"rgba(75, 192, 192, 0.2)\",\n                \"rgba(153, 102, 255, 0.2)\",\n                \"rgba(255, 159, 64, 0.2)\"\n            ]",
-      "bordercolor": "[\n                \"rgba(255, 99, 132, 1)\",\n                \"rgba(54, 162, 235, 1)\",\n                \"rgba(255, 206, 86, 1)\",\n                \"rgba(75, 192, 192, 1)\",\n                \"rgba(153, 102, 255, 1)\",\n                \"rgba(255, 159, 64, 1)\"\n            ]",
+      "backgroundcolor": "[\n                  \"rgba(255, 99, 132, 0.2)\",\n                  \"rgba(54, 162, 235, 0.2)\",\n                  \"rgba(255, 206, 86, 0.2)\",\n                  \"rgba(75, 192, 192, 0.2)\",\n                  \"rgba(153, 102, 255, 0.2)\",\n                  \"rgba(255, 159, 64, 0.2)\"\n              ]",
+      "bordercolor": "[\n                  \"rgba(255, 99, 132, 1)\",\n                  \"rgba(54, 162, 235, 1)\",\n                  \"rgba(255, 206, 86, 1)\",\n                  \"rgba(75, 192, 192, 1)\",\n                  \"rgba(153, 102, 255, 1)\",\n                  \"rgba(255, 159, 64, 1)\"\n              ]",
       "borderwidth": "1"
     },
-    key: 4
+    key: 5
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Bar Chart"
     },
-    key: 6
+    key: 7
   }, []), api_custom_element("c-legend", _cLegend, {
     props: {
       "position": "right"
     },
-    key: 7
+    key: 8
   }, []), api_custom_element("c-layout", _cLayout, {
     props: {
       "paddingTop": "10",
@@ -12789,40 +12863,88 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "paddingLeft": "10",
       "paddingBottom": "10"
     },
-    key: 8
+    key: 9
   }, []), api_custom_element("c-animation", _cAnimation, {
     props: {
       "duration": "2000",
-      "easing": "easeInBounce",
-      "callbackOncomplete": $cmp.animationOnComplete,
-      "callbackOnprogress": $cmp.animationOnProgress
+      "easing": "easeInBounce"
     },
-    key: 9
+    key: 10
   }, []), api_custom_element("c-cartesian-category-axis", _cCartesianCategoryAxis, {
     props: {
       "axis": "x",
       "position": "top",
       "ticksMin": "Yellow"
     },
-    key: 10
-  }, [])]), api_element("progress", {
+    key: 11
+  }, [])]), api_element("code", {
     attrs: {
-      "value": $cmp.barChartCurrentPercentage,
-      "max": "100"
+      "slot": "chartCode",
+      "lang": "html"
     },
-    key: 12
-  }, []), api_custom_element("c-chart", _cChart, {
-    props: {
-      "height": "400px",
-      "width": "400px",
-      "type": "line"
-    },
+    key: 36
+  }, [api_text("<c-chart slot=\"chartExample\" type=\"bar\" responsive=\"true\" stylecss=\"position: relative; margin: auto;\" events='[\"click\"]' >"), api_element("br", {
+    key: 13
+  }, []), api_text("<c-dataset labels='[\"Red\", \"Blue\", \"Yellow\", \"Green\", \"Purple\", \"Orange\"]'> "), api_element("br", {
+    key: 14
+  }, []), api_text("\u2003<c-data label=\"# of Votes\" detail=\"[12, 19, 3, 5, 2, 3]\" backgroundcolor='[ "), api_element("br", {
+    key: 15
+  }, []), api_text("\u2003\u2003\"rgba(255, 99, 132, 0.2)\", "), api_element("br", {
+    key: 16
+  }, []), api_text("\u2003\u2003\"rgba(54, 162, 235, 0.2)\","), api_element("br", {
+    key: 17
+  }, []), api_text("\u2003\u2003\"rgba(255, 206, 86, 0.2)\","), api_element("br", {
+    key: 18
+  }, []), api_text("\u2003\u2003\"rgba(75, 192, 192, 0.2)\","), api_element("br", {
+    key: 19
+  }, []), api_text("\u2003\u2003\"rgba(153, 102, 255, 0.2)\","), api_element("br", {
+    key: 20
+  }, []), api_text("\u2003\u2003\"rgba(255, 159, 64, 0.2)\" "), api_element("br", {
+    key: 21
+  }, []), api_text("\u2003]' bordercolor='[ "), api_element("br", {
     key: 22
+  }, []), api_text("\u2003\u2003\"rgba(255, 99, 132, 1)\","), api_element("br", {
+    key: 23
+  }, []), api_text("\u2003\u2003\"rgba(54, 162, 235, 1)\","), api_element("br", {
+    key: 24
+  }, []), api_text("\u2003\u2003\"rgba(255, 206, 86, 1)\","), api_element("br", {
+    key: 25
+  }, []), api_text("\u2003\u2003\"rgba(75, 192, 192, 1)\","), api_element("br", {
+    key: 26
+  }, []), api_text("\u2003\u2003\"rgba(153, 102, 255, 1)\","), api_element("br", {
+    key: 27
+  }, []), api_text("\u2003\u2003\"rgba(255, 159, 64, 1)\" "), api_element("br", {
+    key: 28
+  }, []), api_text("\u2003]' borderwidth=\"1\"></c-data> "), api_element("br", {
+    key: 29
+  }, []), api_text("</c-dataset>"), api_element("br", {
+    key: 30
+  }, []), api_text("<c-title text=\"Bar Chart\"></c-title>"), api_element("br", {
+    key: 31
+  }, []), api_text("<c-legend position=\"right\"></c-legend>"), api_element("br", {
+    key: 32
+  }, []), api_text("<c-layout padding-top=\"10\" padding-right=\"10\" padding-left=\"10\" padding-bottom=\"10\"></c-layout> "), api_element("br", {
+    key: 33
+  }, []), api_text("<c-animation duration=\"2000\" easing=\"easeInBounce\"></c-animation>"), api_element("br", {
+    key: 34
+  }, []), api_text("<c-cartesian-category-axis axis=\"x\" position=\"top\" ticks-min=\"Yellow\"></c-cartesian-category-axis>"), api_element("br", {
+    key: 35
+  }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 42
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
+    },
+    props: {
+      "type": "line",
+      "responsive": "true"
+    },
+    key: 41
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]"
     },
-    key: 15
+    key: 39
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "My First dataset",
@@ -12831,7 +12953,37 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "bordercolor": "rgba(44, 130, 201, 1)",
       "fill": "false"
     },
-    key: 13
+    key: 38
+  }, [])]), api_custom_element("c-title", _cTitle, {
+    props: {
+      "text": "Line Chart"
+    },
+    key: 40
+  }, [])])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 53
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
+    },
+    props: {
+      "type": "line",
+      "responsive": "true"
+    },
+    key: 52
+  }, [api_custom_element("c-dataset", _cDataset, {
+    props: {
+      "labels": "[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]"
+    },
+    key: 45
+  }, [api_custom_element("c-data", _cData, {
+    props: {
+      "label": "My First dataset",
+      "detail": "[10, 30, 46, 2, 8, 50, 0]",
+      "backgroundcolor": "rgba(44, 130, 201, 1)",
+      "bordercolor": "rgba(44, 130, 201, 1)",
+      "fill": "false"
+    },
+    key: 43
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "My Second dataset",
@@ -12840,37 +12992,37 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "bordercolor": "rgba(240, 52, 52, 1)",
       "fill": "false"
     },
-    key: 14
+    key: 44
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Line Chart"
     },
-    key: 16
+    key: 46
   }, []), api_custom_element("c-tooltip", _cTooltip, {
     props: {
       "position": "nearest",
       "mode": "index",
       "enabled": "true"
     },
-    key: 17
+    key: 47
   }, []), api_custom_element("c-animation", _cAnimation, {
     props: {
       "duration": "2000",
       "easing": "easeInExpo"
     },
-    key: 18
+    key: 48
   }, []), api_custom_element("c-line-configuration", _cLineConfiguration, {
     props: {
       "tension": "0.4"
     },
-    key: 19
+    key: 49
   }, []), api_custom_element("c-cartesian-axis", _cCartesianAxis, {
     props: {
       "axis": "x",
       "position": "top",
       "type": "category"
     },
-    key: 20
+    key: 50
   }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
     props: {
       "axis": "y",
@@ -12881,36 +13033,40 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "gridZerolinecolor": "#FFA500",
       "gridZerolinewidth": "4"
     },
-    key: 21
-  }, [])]), api_custom_element("c-chart", _cChart, {
-    props: {
-      "height": "400px",
-      "width": "400px",
-      "type": "pie"
+    key: 51
+  }, [])])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 60
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
     },
-    key: 28
+    props: {
+      "type": "pie",
+      "responsive": "true"
+    },
+    key: 59
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]"
     },
-    key: 24
+    key: 55
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "# of Tomatoes",
       "detail": "[12, 19, 3, 5]",
-      "backgroundcolor": "[\n            \"rgba(255, 99, 132, 0.5)\",\n            \"rgba(54, 162, 235, 0.2)\",\n            \"rgba(255, 206, 86, 0.2)\",\n            \"rgba(75, 192, 192, 0.2)\"\n        ]"
+      "backgroundcolor": "[\n              \"rgba(255, 99, 132, 0.5)\",\n              \"rgba(54, 162, 235, 0.2)\",\n              \"rgba(255, 206, 86, 0.2)\",\n              \"rgba(75, 192, 192, 0.2)\"\n          ]"
     },
-    key: 23
+    key: 54
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Pie Chart"
     },
-    key: 25
+    key: 56
   }, []), api_custom_element("c-legend", _cLegend, {
     props: {
       "position": "right"
     },
-    key: 26
+    key: 57
   }, []), api_custom_element("c-layout", _cLayout, {
     props: {
       "paddingTop": "10",
@@ -12918,36 +13074,40 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "paddingLeft": "10",
       "paddingBottom": "10"
     },
-    key: 27
-  }, [])]), api_custom_element("c-chart", _cChart, {
-    props: {
-      "height": "400px",
-      "width": "400px",
-      "type": "doughnut"
+    key: 58
+  }, [])])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 68
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
     },
-    key: 35
+    props: {
+      "type": "doughnut",
+      "responsive": "true"
+    },
+    key: 67
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]"
     },
-    key: 30
+    key: 62
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "# of Tomatoes",
       "detail": "[12, 19, 3, 5]",
-      "backgroundcolor": "[\n            \"rgba(255, 99, 132, 0.5)\",\n            \"rgba(54, 162, 235, 0.2)\",\n            \"rgba(255, 206, 86, 0.2)\",\n            \"rgba(75, 192, 192, 0.2)\"\n        ]"
+      "backgroundcolor": "[\n              \"rgba(255, 99, 132, 0.5)\",\n              \"rgba(54, 162, 235, 0.2)\",\n              \"rgba(255, 206, 86, 0.2)\",\n              \"rgba(75, 192, 192, 0.2)\"\n          ]"
     },
-    key: 29
+    key: 61
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Doughnut Chart"
     },
-    key: 31
+    key: 63
   }, []), api_custom_element("c-legend", _cLegend, {
     props: {
       "position": "left"
     },
-    key: 32
+    key: 64
   }, []), api_custom_element("c-layout", _cLayout, {
     props: {
       "paddingTop": "10",
@@ -12955,53 +13115,57 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "paddingLeft": "10",
       "paddingBottom": "10"
     },
-    key: 33
+    key: 65
   }, []), api_custom_element("c-arc-configuration", _cArcConfiguration, {
     props: {
       "bordercolor": "#000",
       "backgroundcolor": "#000"
     },
-    key: 34
-  }, [])]), api_custom_element("c-chart", _cChart, {
-    props: {
-      "height": "400px",
-      "width": "400px",
-      "type": "bubble"
+    key: 66
+  }, [])])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 77
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
     },
-    key: 43
+    props: {
+      "type": "bubble",
+      "responsive": "true"
+    },
+    key: 76
   }, [api_custom_element("c-dataset", _cDataset, {
-    key: 39
+    key: 72
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "John",
       "detail": "[\\{\"x\": 3,\"y\": 7,\"r\": 10\\}]",
       "backgroundcolor": "#ff6384"
     },
-    key: 36
+    key: 69
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "Paul",
       "detail": "[\\{\"x\": 2,\"y\": 6,\"r\": 10\\}]",
       "backgroundcolor": "#ff6384"
     },
-    key: 37
+    key: 70
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "Ringo",
       "detail": "[\\{\"x\": 5,\"y\": 3,\"r\": 10\\}]",
       "backgroundcolor": "#ff6384"
     },
-    key: 38
+    key: 71
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Bubble Chart"
     },
-    key: 40
+    key: 73
   }, []), api_custom_element("c-legend", _cLegend, {
     props: {
       "position": "bottom"
     },
-    key: 41
+    key: 74
   }, []), api_custom_element("c-layout", _cLayout, {
     props: {
       "paddingTop": "10",
@@ -13009,19 +13173,23 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "paddingLeft": "10",
       "paddingBottom": "10"
     },
-    key: 42
-  }, [])]), api_custom_element("c-chart", _cChart, {
-    props: {
-      "height": "400px",
-      "width": "400px",
-      "type": "scatter"
+    key: 75
+  }, [])])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 83
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
     },
-    key: 48
+    props: {
+      "type": "scatter",
+      "responsive": "true"
+    },
+    key: 82
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]"
     },
-    key: 45
+    key: 79
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "My First dataset",
@@ -13030,31 +13198,35 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "bordercolor": "rgba(44, 130, 201, 1)",
       "fill": "false"
     },
-    key: 44
+    key: 78
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Scatter Chart"
     },
-    key: 46
+    key: 80
   }, []), api_custom_element("c-tooltip", _cTooltip, {
     props: {
       "position": "nearest",
       "mode": "index",
       "enabled": "true"
     },
-    key: 47
-  }, [])]), api_custom_element("c-chart", _cChart, {
-    props: {
-      "height": "400px",
-      "width": "400px",
-      "type": "bar"
+    key: 81
+  }, [])])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 90
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
     },
-    key: 54
+    props: {
+      "type": "bar",
+      "responsive": "true"
+    },
+    key: 89
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]"
     },
-    key: 51
+    key: 86
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "My First dataset",
@@ -13064,7 +13236,7 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "fill": "false",
       "order": "2"
     },
-    key: 49
+    key: 84
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "My Second dataset",
@@ -13075,31 +13247,34 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "order": "1",
       "type": "line"
     },
-    key: 50
+    key: 85
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Mix Chart"
     },
-    key: 52
+    key: 87
   }, []), api_custom_element("c-tooltip", _cTooltip, {
     props: {
       "position": "nearest",
       "mode": "index",
       "enabled": "true"
     },
-    key: 53
-  }, [])]), api_custom_element("c-chart", _cChart, {
+    key: 88
+  }, [])])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 96
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
+    },
     props: {
-      "height": "400px",
-      "width": "400px",
       "type": "radar"
     },
-    key: 59
+    key: 95
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"Eating\", \"Drinking\", \"Sleeping\", \"Designing\", \"Coding\", \"Cycling\", \"Running\"]"
     },
-    key: 57
+    key: 93
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "My First dataset",
@@ -13109,7 +13284,7 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "pointhoverbackgroundcolor": "#000",
       "pointhoverbordercolor": "#000"
     },
-    key: 55
+    key: 91
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "My Second dataset",
@@ -13117,24 +13292,27 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "backgroundcolor": "rgba(255,99,132,0.2)",
       "bordercolor": "rgba(255,99,132,1)"
     },
-    key: 56
+    key: 92
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Radar Chart"
     },
-    key: 58
-  }, [])]), api_custom_element("c-chart", _cChart, {
+    key: 94
+  }, [])])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 101
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
+    },
     props: {
-      "height": "400px",
-      "width": "400px",
       "type": "polarArea"
     },
-    key: 63
+    key: 100
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"Eating\", \"Drinking\", \"Sleeping\"]"
     },
-    key: 61
+    key: 98
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "My First dataset",
@@ -13142,72 +13320,40 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "backgroundcolor": "[\"rgba(103, 182, 93,.75)\", \"rgba(182, 87, 56,.75)\",\"rgba(83, 134, 155,.75)\"]",
       "bordercolor": "[\"rgba(103, 182, 93,1)\", \"rgba(182, 87, 56,1)\",\"rgba(83, 134, 155,1)\"]"
     },
-    key: 60
+    key: 97
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Polar Area Chart"
     },
-    key: 62
-  }, [])]), api_custom_element("c-chart", _cChart, {
-    props: {
-      "height": "400px",
-      "width": "400px",
-      "type": "line"
+    key: 99
+  }, [])])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 108
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
     },
-    key: 66
-  }, [api_custom_element("c-title", _cTitle, {
     props: {
-      "text": "Logarithmic"
+      "type": "bar",
+      "responsive": "true"
     },
-    key: 64
-  }, []), api_custom_element("c-cartesian-logarithmic-axis", _cCartesianLogarithmicAxis, {
-    key: 65
-  }, [])]), api_custom_element("c-chart", _cChart, {
-    props: {
-      "height": "400px",
-      "width": "400px",
-      "type": "line"
-    },
-    key: 70
-  }, [api_custom_element("c-title", _cTitle, {
-    props: {
-      "text": "Time"
-    },
-    key: 67
-  }, []), api_custom_element("c-cartesian-time-axis", _cCartesianTimeAxis, {
-    props: {
-      "axis": "y"
-    },
-    key: 68
-  }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
-    props: {
-      "axis": "x"
-    },
-    key: 69
-  }, [])]), api_custom_element("c-chart", _cChart, {
-    props: {
-      "height": "400px",
-      "width": "400px",
-      "type": "bar"
-    },
-    key: 76
+    key: 107
   }, [api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Category"
     },
-    key: 71
+    key: 102
   }, []), api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]"
     },
-    key: 73
+    key: 104
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "# of Tomatoes",
       "detail": "[12, 19, 3, 5]",
-      "backgroundcolor": "[\n            \"rgba(255, 99, 132, 0.5)\",\n            \"rgba(54, 162, 235, 0.2)\",\n            \"rgba(255, 206, 86, 0.2)\",\n            \"rgba(75, 192, 192, 0.2)\"\n        ]"
+      "backgroundcolor": "[\n              \"rgba(255, 99, 132, 0.5)\",\n              \"rgba(54, 162, 235, 0.2)\",\n              \"rgba(255, 206, 86, 0.2)\",\n              \"rgba(75, 192, 192, 0.2)\"\n          ]"
     },
-    key: 72
+    key: 103
   }, [])]), api_custom_element("c-cartesian-category-axis", _cCartesianCategoryAxis, {
     props: {
       "axis": "x",
@@ -13215,7 +13361,7 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "titleDisplay": "true",
       "titleLabelstring": "Category axis here"
     },
-    key: 74
+    key: 105
   }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
     props: {
       "axis": "y",
@@ -13224,48 +13370,74 @@ function tmpl$2($api, $cmp, $slotset, $ctx) {
       "titleDisplay": "true",
       "titleLabelstring": "Linear axis here"
     },
-    key: 75
-  }, [])])])];
+    key: 106
+  }, [])])])])];
 }
 
-var _tmpl$3 = registerTemplate(tmpl$2);
-tmpl$2.stylesheets = [];
+var _tmpl$4 = registerTemplate(tmpl$3);
+tmpl$3.stylesheets = [];
 
 if (_implicitStylesheets) {
-  tmpl$2.stylesheets.push.apply(tmpl$2.stylesheets, _implicitStylesheets);
+  tmpl$3.stylesheets.push.apply(tmpl$3.stylesheets, _implicitStylesheets);
 }
-tmpl$2.stylesheetTokens = {
-  hostAttribute: "c-app_app-host",
-  shadowAttribute: "c-app_app"
+tmpl$3.stylesheetTokens = {
+  hostAttribute: "c-sampleApp_sampleApp-host",
+  shadowAttribute: "c-sampleApp_sampleApp"
 };
 
-class App extends BaseLightningElement {
+class SampleApp extends BaseLightningElement {
   constructor(...args) {
     super(...args);
-    this.barChartCurrentPercentage = 75;
+    this.filterTypes = void 0;
+  }
 
-    this.animationOnComplete = () => {};
+  renderedCallback() {
+    if (!this.filterTypes) {
+      this.initializeChartTypesFilter();
+    }
+  }
 
-    this.animationOnProgress = animation => {
-      this.barChartCurrentPercentage = animation.currentStep / animation.numSteps * 100;
-    };
+  initializeChartTypesFilter() {
+    const items = [];
+    this.template.querySelectorAll('c-chart').forEach(chart => {
+      if (!items.includes(chart.type)) {
+        items.push(chart.type);
+      }
+    });
+    this.filterTypes = items;
+  }
 
-    this.getCustomTooltip = () => {};
+  displayAllCharts() {
+    this.template.querySelectorAll('c-chart').forEach(item => {
+      item.closest('c-sample-app-item').classList.remove('slds-hide');
+    });
+  }
 
-    this.handleCallbackClick = () => {};
+  displayFilteredCharts(event) {
+    this.template.querySelectorAll('c-chart').forEach(item => {
+      const parent = item.closest('c-sample-app-item');
+      if (!parent) return;
+
+      if (item.type.toUpperCase() === event.target.innerText) {
+        parent.classList.remove('slds-hide');
+      } else {
+        parent.classList.add('slds-hide');
+      }
+    });
   }
 
 }
 
-registerDecorators(App, {
-  fields: ["barChartCurrentPercentage", "animationOnComplete", "animationOnProgress", "getCustomTooltip", "handleCallbackClick"]
+registerDecorators(SampleApp, {
+  fields: ["filterTypes"]
 });
 
-var App$1 = registerComponent(App, {
-  tmpl: _tmpl$3
+var SampleApp$1 = registerComponent(SampleApp, {
+  tmpl: _tmpl$4
 });
 
 const sampleApp = createElement$1('lwcc-samples', {
-  is: App$1
+  is: SampleApp$1
 });
-document.body.appendChild(sampleApp);
+const container = document.body.querySelector('.container') || document.body;
+container.appendChild(sampleApp);
