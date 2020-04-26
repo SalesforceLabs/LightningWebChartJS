@@ -101,7 +101,7 @@ export default class ChartBuilder extends LightningElement {
   set handler(v) {
     this._handler = v;
     if (this._handler) {
-      this._getChartDataHandler(this._handler, null);
+      this._getChartDataHandler(this._handler, this.recordId);
     }
   }
 
