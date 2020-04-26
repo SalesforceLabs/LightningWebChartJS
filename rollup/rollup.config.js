@@ -16,13 +16,21 @@ module.exports = {
   },
 
   plugins: [
-    cleaner({ targets: [path.resolve(__dirname, './dist/')] }),
+    cleaner({ targets: [path.resolve(__dirname, './dist/'),path.resolve(__dirname, 'src/modules/c')] }),
     cleanup(),
     copy({
       targets: [
         {
           src: 'force-app/main/default/staticresources/',
           dest: path.resolve(__dirname, './dist/')
+        },
+        {
+          src: 'force-app/main/default/lwc/*',
+          dest: path.resolve(__dirname, 'src/modules/c')
+        },
+        {
+          src: 'force-app/sample/default/lwc/*',
+          dest: path.resolve(__dirname, 'src/modules/c')
         }
       ]
     }),

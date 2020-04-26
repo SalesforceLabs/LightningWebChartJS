@@ -26,6 +26,7 @@ coverage/
 
 # LWC Playground
 dist/
+c/
 
 # Windows system files
 Thumbs.db
