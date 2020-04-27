@@ -249,7 +249,6 @@ describe('Chart: methods', () => {
     let el = null;
     chart.canvasOnclick = evt => {
       el = chart.getElementAtEventChart(evt);
-      console.log(el);
     };
     const canvas = chart.shadowRoot.querySelector('canvas');
     canvas.click();
@@ -261,7 +260,6 @@ describe('Chart: methods', () => {
     let el = null;
     chart.canvasOnclick = evt => {
       el = chart.getElementsAtEventChart(evt);
-      console.log(el);
     };
     const canvas = chart.shadowRoot.querySelector('canvas');
     canvas.click();
@@ -273,7 +271,6 @@ describe('Chart: methods', () => {
     let el = null;
     chart.canvasOnclick = evt => {
       el = chart.getDatasetAtEventChart(evt);
-      console.log(el);
     };
     const canvas = chart.shadowRoot.querySelector('canvas');
     canvas.click();
