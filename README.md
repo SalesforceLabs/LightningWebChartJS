@@ -38,7 +38,6 @@
 - [About the project](https://scolladon.github.io/lwcc/docs/general/about.html)
 - [Playground](https://scolladon.github.io/lwcc/docs/general/playground.html)
 
-
 ## Contributing
 
 Contributions are what make the trailblazer community such an amazing place. I regard this component as a way to inspire and learn from others. Any contributions you make are **greatly appreciated**.
@@ -51,4 +50,5 @@ See [contributing.md](/CONTRIBUTING.md) for lwcc principles.
 - [nanoid.js v3.1.3](https://github.com/ai/nanoid)
 
 ## License
+
 LWCC is available under the [MIT license](LICENSE.md)
