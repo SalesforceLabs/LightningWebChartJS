@@ -56,6 +56,18 @@ describe('Chart: ChartJs library', () => {
       document.body.removeChild(element);
     });
   });
+  test('Fail Loading the ChartJS static resource', () => {
+    mockScriptSuccess = false;
+    const element = createElement('x-chart', {
+      is: Chart
+    });
+    element.type = LINE_CHART_TYPE;
+    document.body.appendChild(element);
+    Promise.resolve().then(() => {
+      expect(element.uuid).toBeDefined();
+      mockScriptSuccess = true;
+    });
+  });
 });
 
 // TODO: For each type of Chart: test that can be created, that contains canvas and that elements can be inserted
@@ -129,10 +141,30 @@ describe('Chart: property', () => {
       await expect(element[item.propertyName]).toBe(item.propertyValue);
     });
   });
-  test('Accept uuid', async () => {
+  test('Accept uuid', () => {
     element.uuid = 'xyz';
 
-    await expect(element.uuid).toBe('xyz');
+    expect(element.uuid).toBe('xyz');
+  });
+  test('Accept canvasOnchange', () => {
+    element.canvasOnchange = {};
+
+    expect(element.canvasOnchange).toEqual({});
+  });
+  test('Accept canvasOnclick', () => {
+    element.canvasOnclick = {};
+
+    expect(element.canvasOnclick).toEqual({});
+  });
+  test('Accept canvasOnmouseover', () => {
+    element.canvasOnmouseover = {};
+
+    expect(element.canvasOnmouseover).toEqual({});
+  });
+  test('Accept canvasOnmouseout', () => {
+    element.canvasOnmouseout = {};
+
+    expect(element.canvasOnmouseout).toEqual({});
   });
 });
 
@@ -163,77 +195,90 @@ describe('Chart: methods', () => {
     chart.removeChild(legend);
     document.body.removeChild(chart);
   });
-  test('updateChart', async () => {
-    return flushPromises()
-      .then(flushPromises)
-      .then(flushPromises)
-      .then(() => {
-        chart.updateChart();
-        expect(chart.uuid).toBeDefined();
-      });
+
+  test('updateChart with chart defined', async () => {
+    return flushPromises().then(() => {
+      chart.updateChart();
+      expect(chart.uuid).toBeDefined();
+    });
   });
-  test('resetChart', async () => {
+  test('resetChart with chart defined', async () => {
     return flushPromises().then(() => {
       chart.resetChart();
       expect(chart.uuid).toBeDefined();
     });
   });
-  test('renderChart', async () => {
+  test('renderChart with chart defined', async () => {
     return flushPromises().then(() => {
       chart.renderChart();
       expect(chart.uuid).toBeDefined();
     });
   });
-  test('stopChart', async () => {
+  test('stopChart with chart defined', async () => {
     return flushPromises().then(() => {
       const r = chart.stopChart();
       expect(r).toBeInstanceOf(Chart);
     });
   });
-  test('resizeChart', async () => {
+  test('resizeChart with chart defined', async () => {
     return flushPromises().then(() => {
       const r = chart.resizeChart();
       expect(r).toBeInstanceOf(Chart);
     });
   });
-  test('clearChart', async () => {
+  test('clearChart with chart defined', async () => {
     return flushPromises().then(() => {
       const r = chart.clearChart();
       expect(r).toBeInstanceOf(Chart);
     });
   });
-  test('toBase64ImageChart', async () => {
+  test('toBase64ImageChart with chart defined', async () => {
     return flushPromises().then(() => {
       const b64 = chart.toBase64ImageChart();
       expect(b64).toBeDefined();
     });
   });
-  test('generateLegendChart', async () => {
+
+  test('generateLegendChart with chart defined', async () => {
     return flushPromises().then(() => {
       const legendChart = chart.generateLegendChart();
       expect(legendChart).toBeDefined();
     });
   });
   test('getElementAtEventChart', async () => {
+    let el = null;
+    chart.canvasOnclick = evt => {
+      el = chart.getElementAtEventChart(evt);
+      console.log(el);
+    };
+    const canvas = chart.shadowRoot.querySelector('canvas');
+    canvas.click();
     return flushPromises().then(() => {
-      // todo expose events on the canvas
-      // expose catcher to implement.
-      // define one catcher and trigger an event
-      // Fetch the event and call getElementAtEventChart
-      //const el = chart.getElementAtEventChart();
-      //expect(el).toBeDefined();
+      expect(el).not.toBeNull();
     });
   });
   test('getElementsAtEventChart', async () => {
+    let el = null;
+    chart.canvasOnclick = evt => {
+      el = chart.getElementsAtEventChart(evt);
+      console.log(el);
+    };
+    const canvas = chart.shadowRoot.querySelector('canvas');
+    canvas.click();
     return flushPromises().then(() => {
-      //const el = chart.getElementsAtEventChart();
-      //expect(el).toBeDefined();
+      expect(el).not.toBeNull();
     });
   });
   test('getDatasetAtEventChart', async () => {
+    let el = null;
+    chart.canvasOnclick = evt => {
+      el = chart.getDatasetAtEventChart(evt);
+      console.log(el);
+    };
+    const canvas = chart.shadowRoot.querySelector('canvas');
+    canvas.click();
     return flushPromises().then(() => {
-      //const el = chart.getDatasetAtEventChart();
-      //expect(el).toBeDefined();
+      expect(el).not.toBeNull();
     });
   });
   test('getDatasetMetaChart', async () => {
@@ -242,8 +287,7 @@ describe('Chart: methods', () => {
       expect(el).toBeDefined();
     });
   });
-
-  test('destroyChart', async () => {
+  test('destroyChart with chart defined', async () => {
     return flushPromises()
       .then(flushPromises)
       .then(() => {
@@ -252,8 +296,3 @@ describe('Chart: methods', () => {
       });
   });
 });
-// TODO: checkOptions()
-
-// TODO: Option event Listener & Disconnect Event Listener
-
-// TODO: Create VS Update chart
