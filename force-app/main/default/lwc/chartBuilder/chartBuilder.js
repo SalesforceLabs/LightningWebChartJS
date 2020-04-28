@@ -75,6 +75,7 @@ export default class ChartBuilder extends LightningElement {
   }
   set details(v) {
     this._details = v ? (Array.isArray(v) ? v : JSON.parse(v)) : [];
+    this.isLoaded = true;
   }
 
   _soql;
@@ -113,10 +114,6 @@ export default class ChartBuilder extends LightningElement {
   error = false;
   stack;
 
-  renderedCallback() {
-    this.isLoaded = true;
-  }
-
   errorCallback(error, stack) {
     this.error = error;
     this.stack = stack;
@@ -127,6 +124,7 @@ export default class ChartBuilder extends LightningElement {
   }
 
   _getChartDataHandler(handlerName, input) {
+    this.isLoaded = false;
     getChartData({ chartDataProviderType: handlerName, ctx: input })
       .then(result => {
         this.details = result;

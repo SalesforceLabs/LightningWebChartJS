@@ -5,7 +5,7 @@
   "description": "Lightning Web Chart.js Component",
   "scripts": {
     "lint": "npm run lint:lwc && npm run lint:apex",
-    "lint:lwc": "eslint force-app/main/default/lwc",
+    "lint:lwc": "eslint force-app/main/default/lwc && eslint force-app/sample/default/lwc",
     "lint:apex": "pmd pmd -minimumpriority 2 -d force-app -R apex-ruleset.xml -f text -l apex",
     "test": "npm run test:unit && npm run test:apex",
     "test:coverage": "npm run test:unit:coverage && npm run test:apex:coverage",
@@ -30,6 +30,7 @@
     "@salesforce/sfdx-lwc-jest": "^0.7.1",
     "eslint": "^5.16.0",
     "husky": "^4.2.3",
+    "jest-canvas-mock": "^2.2.0",
     "lint-staged": "^10.1.2",
     "prettier": "^1.19.1",
     "prettier-plugin-apex": "^1.0.0",

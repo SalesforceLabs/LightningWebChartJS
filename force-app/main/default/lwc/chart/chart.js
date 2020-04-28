@@ -28,6 +28,43 @@ export default class Chart extends LightningElement {
     this._uuid = v;
   }
 
+  _canvasOnchange;
+  @api
+  get canvasOnchange() {
+    return this._canvasOnchange;
+  }
+  set canvasOnchange(v) {
+    this._canvasOnchange = v;
+    this.getCanvas().addEventListener('change', this._canvasOnchange);
+  }
+  _canvasOnclick;
+  @api
+  get canvasOnclick() {
+    return this._canvasOnclick;
+  }
+  set canvasOnclick(v) {
+    this._canvasOnclick = v;
+    this.getCanvas().addEventListener('click', this._canvasOnclick);
+  }
+  _canvasOnmouseover;
+  @api
+  get canvasOnmouseover() {
+    return this._canvasOnmouseover;
+  }
+  set canvasOnmouseover(v) {
+    this._canvasOnmouseover = v;
+    this.getCanvas().addEventListener('mouseover', this._canvasOnmouseover);
+  }
+  _canvasOnmouseout;
+  @api
+  get canvasOnmouseout() {
+    return this._canvasOnmouseout;
+  }
+  set canvasOnmouseout(v) {
+    this._canvasOnmouseout = v;
+    this.getCanvas().addEventListener('mouseout', this._canvasOnmouseout);
+  }
+
   @api
   get responsive() {
     return this._payload.responsive;
@@ -178,50 +215,56 @@ export default class Chart extends LightningElement {
 
   @api
   toBase64ImageChart() {
+    let res = null;
     if (this._chart) {
-      return this._chart.toBase64Image();
+      res = this._chart.toBase64Image();
     }
-    return null;
+    return res;
   }
 
   @api
   generateLegendChart() {
+    let res = null;
     if (this._chart) {
-      return this._chart.generateLegend();
+      res = this._chart.generateLegend();
     }
-    return null;
+    return res;
   }
 
   @api
   getElementAtEventChart(e) {
+    let res = null;
     if (this._chart) {
-      return this._chart.getElementAtEvent(e);
+      res = this._chart.getElementAtEvent(e);
     }
-    return null;
+    return res;
   }
 
   @api
   getElementsAtEventChart(e) {
+    let res = null;
     if (this._chart) {
-      return this._chart.getElementsAtEvent(e);
+      res = this._chart.getElementsAtEvent(e);
     }
-    return null;
+    return res;
   }
 
   @api
   getDatasetAtEventChart(e) {
+    let res = null;
     if (this._chart) {
-      return this._chart.getDatasetAtEvent(e);
+      res = this._chart.getDatasetAtEvent(e);
     }
-    return null;
+    return res;
   }
 
   @api
   getDatasetMetaChart(index) {
+    let res = null;
     if (this._chart) {
-      return this._chart.getDatasetMeta(index);
+      res = this._chart.getDatasetMeta(index);
     }
-    return null;
+    return res;
   }
 
   constructor() {
@@ -271,8 +314,7 @@ export default class Chart extends LightningElement {
         this._reactivityManager.throttleRegisteredJob();
       },
       reason => {
-        // eslint-disable-next-line no-console
-        console.error('[LWCC] Error loading Chart.js', reason);
+        this.errorCallback(reason);
       }
     );
   }
@@ -292,12 +334,11 @@ export default class Chart extends LightningElement {
   }
 
   getCanvas() {
-    let canvas = this.template.querySelector('canvas');
-    if (!canvas) {
-      canvas = document.createElement('canvas');
-      this.template.querySelector('div').appendChild(canvas);
+    if (!this._canvas) {
+      this._canvas = document.createElement('canvas');
+      this.template.querySelector('div').appendChild(this._canvas);
     }
-    return canvas.getContext('2d');
+    return this._canvas;
   }
 
   drawChart() {
@@ -306,7 +347,7 @@ export default class Chart extends LightningElement {
       this._configService.updateConfig(this._payload, null);
       if (!this._chart || !this._chart.ctx) {
         // eslint-disable-next-line no-undef
-        this._chart = new window.Chart(this.getCanvas(), {
+        this._chart = new window.Chart(this.getCanvas().getContext('2d'), {
           type: this._type,
           data: this._details,
           options: this._configService.getConfig()

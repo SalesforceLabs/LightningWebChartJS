@@ -1,22 +1,18 @@
 import { LightningElement } from 'lwc';
 
 export default class SampleApp extends LightningElement {
-  filterTypes;
+  filterTypes = [];
 
   renderedCallback() {
-    if (!this.filterTypes) {
-      this.initializeChartTypesFilter();
+    if (this.filterTypes.length === 0) {
+      this.filterTypes = [
+        ...new Set(
+          [...this.template.querySelectorAll('c-chart')].map(
+            chart => chart.type
+          )
+        )
+      ];
     }
-  }
-
-  initializeChartTypesFilter() {
-    const items = [];
-    this.template.querySelectorAll('c-chart').forEach(chart => {
-      if (!items.includes(chart.type)) {
-        items.push(chart.type);
-      }
-    });
-    this.filterTypes = items;
   }
 
   displayAllCharts() {
