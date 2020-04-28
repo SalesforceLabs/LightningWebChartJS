@@ -5,5 +5,5 @@
         <enabled>true</enabled>
     </classAccesses>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>Lightning Web Chart Component</label>
+    <label>Lightning Web Chart Component Demo</label>
 </PermissionSet>
