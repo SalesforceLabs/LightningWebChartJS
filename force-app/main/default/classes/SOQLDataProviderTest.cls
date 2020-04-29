@@ -1,5 +1,6 @@
 @isTest
 private class SOQLDataProviderTest {
+  static final String ASSERT_FALSE_MESSAGE = 'Exception thrown should prevent code to reach this point';
   @isTest
   static void testInit() {
     Test.startTest();
@@ -20,7 +21,7 @@ private class SOQLDataProviderTest {
     aSOQLDataProvider.init(null);
     try {
       aSOQLDataProvider.getData();
-      System.assert(false);
+      System.Assert(false, ASSERT_FALSE_MESSAGE);
     } catch (SOQLDataProvider.SOQLDataProviderException sdpex) {
       Test.stopTest();
       System.assertEquals(
@@ -40,7 +41,7 @@ private class SOQLDataProviderTest {
     );
     try {
       aSOQLDataProvider.getData();
-      System.assert(false);
+      System.Assert(false, ASSERT_FALSE_MESSAGE);
     } catch (SOQLDataProvider.SOQLDataProviderException sdpex) {
       Test.stopTest();
       System.assertEquals(
@@ -61,7 +62,7 @@ private class SOQLDataProviderTest {
     );
     try {
       aSOQLDataProvider.getData();
-      System.assert(false);
+      System.Assert(false, ASSERT_FALSE_MESSAGE);
     } catch (SOQLDataProvider.SOQLDataProviderException sdpex) {
       Test.stopTest();
       System.assertEquals(
@@ -82,7 +83,7 @@ private class SOQLDataProviderTest {
     );
     try {
       aSOQLDataProvider.getData();
-      System.assert(false);
+      System.Assert(false, ASSERT_FALSE_MESSAGE);
     } catch (SOQLDataProvider.SOQLDataProviderException sdpex) {
       Test.stopTest();
       System.assertEquals(
@@ -103,7 +104,7 @@ private class SOQLDataProviderTest {
     );
     try {
       aSOQLDataProvider.getData();
-      System.assert(false);
+      System.Assert(false, ASSERT_FALSE_MESSAGE);
     } catch (SOQLDataProvider.SOQLDataProviderException sdpex) {
       Test.stopTest();
       System.assertEquals(

@@ -5,7 +5,7 @@
 >
   <apiVersion>48.0</apiVersion>
   <isExposed>true</isExposed>
-  <masterLabel>LWCCBuilder</masterLabel>
+  <masterLabel>LWCC App Builder</masterLabel>
   <description
   >Expose beautiful Chart.js chart using Lightning Web Component in the App Builder</description>
   <targets>
@@ -108,8 +108,8 @@
         description="Define the Custom Data Provider class hander name to fetch the data. It must extends &quot;ChartDataProvider&quot;"
         required="false"
         default=""
-        placeholder="MyCustomChartDataProvider"
         type="String"
+        datasource="apex://CustomDataProviderDataSourceProvider"
       />
     </targetConfig>
   </targetConfigs>
