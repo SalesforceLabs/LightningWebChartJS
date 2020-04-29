@@ -7,7 +7,7 @@
 public inherited sharing class CustomDataProviderDataSourceProvider extends VisualEditor.DynamicPickList {
   private static final Set<String> FRAMEWORK_CLASSES = new Set<String>{
     SOQLDataProvider.class.getName(),
-    ChartDataProvider.class.getName() + 'Test'
+    ChartDataProviderTest.class.getName()
   };
 
   public static final VisualEditor.DataRow DEFAULT_ROW = new VisualEditor.DataRow(

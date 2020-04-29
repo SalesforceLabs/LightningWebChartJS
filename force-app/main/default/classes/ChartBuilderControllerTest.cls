@@ -1,7 +1,8 @@
 @isTest
 private class ChartBuilderControllerTest {
-  public static final String OPPORTUNITY_STAGE_NAME = 'Prospecting';
-  public static final Decimal OPPORTUNITY_AMOUNT = 20;
+  static final String OPPORTUNITY_STAGE_NAME = 'Prospecting';
+  static final Decimal OPPORTUNITY_AMOUNT = 20;
+  static final String ASSERT_FALSE_MESSAGE = 'Exception thrown should prevent code to reach this point';
 
   @TestSetup
   static void makeData() {
@@ -47,7 +48,7 @@ private class ChartBuilderControllerTest {
         null
       );
 
-      System.Assert(false);
+      System.Assert(false, ASSERT_FALSE_MESSAGE);
     } catch (AuraHandledException ahex) {
       Test.stopTest();
       System.assertEquals(
@@ -91,7 +92,7 @@ private class ChartBuilderControllerTest {
         'ThisClassDoesNotExistBecauseItsNameIsMoreThanFortyCharacters',
         null
       );
-      System.Assert(false);
+      System.Assert(false, ASSERT_FALSE_MESSAGE);
     } catch (AuraHandledException ahex) {
       Test.stopTest();
       System.assertNotEquals(null, ahex, 'Exception should not be null');

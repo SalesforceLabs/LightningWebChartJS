@@ -1,5 +1,5 @@
 @isTest
-private class ChartDataProviderTest {
+public class ChartDataProviderTest {
   @isTest
   static void testInit() {
     Test.startTest();
