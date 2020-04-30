@@ -9,6 +9,7 @@ public inherited sharing virtual class SOQLDataProvider extends ChartDataProvide
   private static final String SOQL_LIMIT_STATEMENT = 'LIMIT';
   private static final String LABEL_ALIAS = 'label';
   private static final String VALUE_ALIAS = 'value';
+  private static final String UNDEFINED_RECORDID = '\'xxxxxxxxxxxxxxx\'';
 
   public static final String QUERY_NULL_EXCEPTION = 'Query is null';
   public static final String QUERY_WITHOUT_LABEL_EXCEPTION = 'Query must contains "label" alias';
@@ -64,9 +65,14 @@ public inherited sharing virtual class SOQLDataProvider extends ChartDataProvide
     }
 
     final List<ChartDataProvider.ChartData> chartDatas = new List<ChartDataProvider.ChartData>();
-    for (
-      AggregateResult aResult : Database.query(String.escapeSingleQuotes(query))
-    ) {
+    System.debug(this.query);
+    // When building the chart in the app builder and using :recordId in the query
+    // The context is not set and :recordId is undefined
+    // In this case we can't get not data but it is still possible to build the chart in the App Builder
+    if (this.query.contains(UNDEFINED_RECORDID)) {
+      return chartDatas;
+    }
+    for (AggregateResult aResult : Database.query(this.query)) {
       ChartDataProvider.ChartData aChartData = new ChartDataProvider.ChartData();
       aChartData.label = (String) aResult.get(LABEL_ALIAS);
       aChartData.detail = new List<Object>{ aResult.get(VALUE_ALIAS) };
