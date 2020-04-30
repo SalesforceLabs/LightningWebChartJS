@@ -9,7 +9,7 @@ public inherited sharing virtual class SOQLDataProvider extends ChartDataProvide
   private static final String SOQL_LIMIT_STATEMENT = 'LIMIT';
   private static final String LABEL_ALIAS = 'label';
   private static final String VALUE_ALIAS = 'value';
-  private static final String UNDEFINED_RECORDID = '\'xxxxxxxxxxxxxxx\'';
+  public static final String UNDEFINED_RECORDID = '\'xxxxxxxxxxxxxxx\'';
 
   public static final String QUERY_NULL_EXCEPTION = 'Query is null';
   public static final String QUERY_WITHOUT_LABEL_EXCEPTION = 'Query must contains "label" alias';
