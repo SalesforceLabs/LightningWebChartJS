@@ -34,6 +34,7 @@ export default class Chart extends LightningElement {
     return this._canvasOnchange;
   }
   set canvasOnchange(v) {
+    this.getCanvas().removeEventListener('mouseover', this._canvasOnchange);
     this._canvasOnchange = v;
     this.getCanvas().addEventListener('change', this._canvasOnchange);
   }
@@ -43,6 +44,10 @@ export default class Chart extends LightningElement {
     return this._canvasOnclick;
   }
   set canvasOnclick(v) {
+    this.getCanvas().removeEventListener(
+      'mouseover',
+      this._canvas_canvasOnclickOnmouseover
+    );
     this._canvasOnclick = v;
     this.getCanvas().addEventListener('click', this._canvasOnclick);
   }
@@ -52,6 +57,7 @@ export default class Chart extends LightningElement {
     return this._canvasOnmouseover;
   }
   set canvasOnmouseover(v) {
+    this.getCanvas().removeEventListener('mouseover', this._canvasOnmouseover);
     this._canvasOnmouseover = v;
     this.getCanvas().addEventListener('mouseover', this._canvasOnmouseover);
   }
@@ -61,6 +67,7 @@ export default class Chart extends LightningElement {
     return this._canvasOnmouseout;
   }
   set canvasOnmouseout(v) {
+    this.getCanvas().removeEventListener('mouseover', this._canvasOnmouseout);
     this._canvasOnmouseout = v;
     this.getCanvas().addEventListener('mouseout', this._canvasOnmouseout);
   }

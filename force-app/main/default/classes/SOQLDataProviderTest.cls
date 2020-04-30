@@ -117,6 +117,20 @@ private class SOQLDataProviderTest {
   }
 
   @isTest
+  static void testAppBuilderContext() {
+    Test.startTest();
+    final SOQLDataProvider aSOQLDataProvider = new SOQLDataProvider();
+    aSOQLDataProvider.init(
+      'SELECT StageName label, SUM(Amount) value FROM Opportunity WHERE IsClosed = false AND AccountId = ' +
+      SOQLDataProvider.UNDEFINED_RECORDID +
+      ' WITH SECURITY_ENFORCED GROUP BY StageName LIMIT 10'
+    );
+    final List<ChartDataProvider.ChartData> chartDatas = aSOQLDataProvider.getData();
+    Test.stopTest();
+    System.assertEquals(0, chartDatas.size(), 'chartDatas must be empty');
+  }
+
+  @isTest
   static void testGetData() {
     insert new Opportunity(
       CloseDate = date.today().addMonths(2),

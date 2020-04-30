@@ -50,6 +50,10 @@ export default class ChartBuilder extends LightningElement {
     }
   }
 
+  // This is where the data are build and given to the chart.
+  // It is set either directly via the app builder
+  // or by the soql setter which call the imperative apex method
+  // or by the handler setter which call the imperative apex method
   _details = [];
   @api
   get details() {
@@ -69,6 +73,7 @@ export default class ChartBuilder extends LightningElement {
       this.error = false;
     } catch (error) {
       this.errorCallback(error);
+      this._details = null;
       data = null;
     }
     return data;
@@ -86,7 +91,14 @@ export default class ChartBuilder extends LightningElement {
   set soql(v) {
     this._soql = v;
     if (this._soql) {
-      this._soql = this._soql.replace(/:recordId/g, `'${this.recordId}'`);
+      this._soql = this._soql.replace(
+        /:recordId/g,
+        `'${
+          this.recordId
+            ? this.recordId.replace("'", "\\'")
+            : ChartBuilder.FAKE_ID
+        }'`
+      );
       this._getChartDataHandler(
         ChartBuilder.SOQL_DATA_PROVIDER_APEX_TYPE,
         this._soql
@@ -130,7 +142,7 @@ export default class ChartBuilder extends LightningElement {
         this.details = result;
       })
       .catch(error => {
-        this.errorCallback(error);
+        this.errorCallback(error.body.message);
       });
   }
 
@@ -204,6 +216,7 @@ export default class ChartBuilder extends LightningElement {
     ]
   };
 
+  static FAKE_ID = 'xxxxxxxxxxxxxxx';
   static SOQL_DATA_PROVIDER_APEX_TYPE = 'SOQLDataProvider';
   static DEFAULT_CSS_CLASS = 'slds-card slds-p-around_small';
 }

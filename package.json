@@ -8,6 +8,7 @@
     "lint:lwc": "eslint force-app/main/default/lwc && eslint force-app/sample/default/lwc",
     "lint:apex": "pmd pmd -minimumpriority 2 -d force-app -R apex-ruleset.xml -f text -l apex",
     "test": "npm run test:unit && npm run test:apex",
+    "test:clear:cache": "sfdx-lwc-jest -- --clearCache",
     "test:coverage": "npm run test:unit:coverage && npm run test:apex:coverage",
     "test:apex": "sfdx force:apex:test:run -r tap -d ./tests/apex -s lwcc -w 20",
     "test:apex:coverage": "sfdx force:apex:test:run -r tap -d ./tests/apex -s lwcc -w 20 -c",

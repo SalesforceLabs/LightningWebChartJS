@@ -51,7 +51,7 @@ describe('call server and get chart data when', () => {
   });
 
   test('error occurs in the server side', () => {
-    getChartData.mockResolvedValue(APEX_ERROR);
+    getChartData.mockRejectedValue(APEX_ERROR);
     const element = createElement('c-chartBuilder', { is: ChartBuilder });
     document.body.appendChild(element);
 
@@ -96,6 +96,16 @@ describe('test property', () => {
 
     // Validate parameters of mocked Apex call
     expect(element.soql).toEqual(`'${element.recordId}'`);
+  });
+
+  test('detailsLabels error', () => {
+    const element = createElement('c-chartBuilder', { is: ChartBuilder });
+    document.body.appendChild(element);
+    element.recordId;
+    element.soql = ':recordId';
+
+    // Validate parameters of mocked Apex call
+    expect(element.soql).toEqual(`'${ChartBuilder.FAKE_ID}'`);
   });
 });
 
