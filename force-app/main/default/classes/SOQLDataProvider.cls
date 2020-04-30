@@ -65,7 +65,6 @@ public inherited sharing virtual class SOQLDataProvider extends ChartDataProvide
     }
 
     final List<ChartDataProvider.ChartData> chartDatas = new List<ChartDataProvider.ChartData>();
-    System.debug(this.query);
     // When building the chart in the app builder and using :recordId in the query
     // The context is not set and :recordId is undefined
     // In this case we can't get not data but it is still possible to build the chart in the App Builder
