@@ -51,7 +51,7 @@ describe('call server and get chart data when', () => {
   });
 
   test('error occurs in the server side', () => {
-    getChartData.mockResolvedValue(APEX_ERROR);
+    getChartData.mockRejectedValue(APEX_ERROR);
     const element = createElement('c-chartBuilder', { is: ChartBuilder });
     document.body.appendChild(element);
 
