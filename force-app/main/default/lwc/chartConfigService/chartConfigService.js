@@ -8,16 +8,20 @@ export default class ChartConfigService {
   };
 
   constructor() {
-    this._config = { ...ChartConfigService.DEFAULT_CONFIGURATION };
+    this._config = { ...ChartConfigService.DEFAULT_CONFIGURATION }; // clone default configuration
     this._scales = {
       xAxes: {},
       yAxes: {}
     };
-    this._dirty = true;
+    this._dirty = true; // build dirty
   }
 
+  // make the component dirty
+  // merge option sent to update the config Chart.js object
   updateConfig(payload, option) {
     this._dirty = true;
+    // When no option it is a base object
+    // so merge object
     if (!option) {
       this._config = {
         ...this._config,
@@ -26,8 +30,10 @@ export default class ChartConfigService {
     } else {
       this._config[option] = this._config[option] || {};
       Object.keys(payload).forEach(attribut => {
+        // If the attribut is an array
         if (Array.isArray(this._config[option][attribut])) {
           if (Array.isArray(payload[attribut])) {
+            // If this is a scale object merge using the uuid
             if (Object.prototype.hasOwnProperty.call(this._scales, attribut)) {
               this._scales[attribut][payload[attribut][0].uuid] =
                 payload[attribut][0];
@@ -35,28 +41,35 @@ export default class ChartConfigService {
                 this._scales[attribut]
               );
             } else {
+              // add the array to the current array
               this._config[option][attribut].push(...payload[attribut]);
             }
           } else {
+            // add the option
             this._config[option][attribut].push(payload[attribut]);
           }
         } else if (
+          // the attribut is an object we know
           typeof this._config[option][attribut] === 'object' &&
           this._config[option][attribut] !== null
         ) {
+          // merge it
           this._config[option][attribut] = {
             ...this._config[option][attribut],
             ...payload[attribut]
           };
         } else {
-          this._config[option][attribut] = payload[attribut];
+          // the attribut is an object we don't know
+          this._config[option][attribut] = payload[attribut]; // store it
         }
       });
     }
   }
 
+  // make the object dirty and remove the option sent
   removeConfig(payload, option) {
     this._dirty = true;
+    // In the scales case we need to remove the uuid related to the scale object
     if (option === ATTRIBUTE_CARTESIAN_AXES) {
       Object.keys(this._config[option])
         .filter(scale => this._config[option][scale])
@@ -67,10 +80,12 @@ export default class ChartConfigService {
           this._scales[scale] = this._config[option][scale];
         });
     } else {
+      // remove the option
       this._config[option] = undefined;
     }
   }
 
+  // if dirty clean the object and store the cleaned version
   getConfig() {
     if (this._dirty) {
       this._cleanConfig = ChartConfigService.cleanObject(this._config);
@@ -79,6 +94,11 @@ export default class ChartConfigService {
     return this._cleanConfig;
   }
 
+  // Return a lightweight object without
+  // - empty object
+  // - empty array
+  // - undefined attribute
+  // do it recursively and store the result to avoid multiple times the same computation
   static cleanObject(obj) {
     const validObj = o =>
       (Object.keys(o).length || (Array.isArray(o) && o.length)) && o;
@@ -96,6 +116,7 @@ export default class ChartConfigService {
           : Object.entries(o).reduce((a, [key, val]) => {
               const newVal = itemToBool(val);
               if (
+                // Here is the magic check null, undefined and type change (=> undefined recursively)
                 newVal !== undefined &&
                 newVal !== null &&
                 typeof val === typeof newVal

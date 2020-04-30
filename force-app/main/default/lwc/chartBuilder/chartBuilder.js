@@ -62,6 +62,8 @@ export default class ChartBuilder extends LightningElement {
     }
     let data;
     try {
+      // Build the data structure to use to iterate
+      // and create data component in the template
       const palette = ChartBuilder.DEFAULT_PALETTE[this.colorPalette];
       data = this._details.map((x, i) => {
         const val = { ...x };
@@ -79,6 +81,7 @@ export default class ChartBuilder extends LightningElement {
     return data;
   }
   set details(v) {
+    // Ensure value is clean from the AppBuilder
     this._details = v ? (Array.isArray(v) ? v : JSON.parse(v)) : [];
     this.isLoaded = true;
   }
@@ -91,6 +94,8 @@ export default class ChartBuilder extends LightningElement {
   set soql(v) {
     this._soql = v;
     if (this._soql) {
+      // sanitize query
+      // replace recordId with the sanitize recordId
       this._soql = this._soql.replace(
         /:recordId/g,
         `'${
@@ -99,6 +104,7 @@ export default class ChartBuilder extends LightningElement {
             : ChartBuilder.FAKE_ID
         }'`
       );
+      // pass the SOQL to the getData service from the server
       this._getChartDataHandler(
         ChartBuilder.SOQL_DATA_PROVIDER_APEX_TYPE,
         this._soql
@@ -114,6 +120,7 @@ export default class ChartBuilder extends LightningElement {
   set handler(v) {
     this._handler = v;
     if (this._handler) {
+      // pass the custom handler to the getData service from the server
       this._getChartDataHandler(this._handler, this.recordId);
     }
   }
@@ -135,6 +142,7 @@ export default class ChartBuilder extends LightningElement {
     this.errorCallback(evt.detail.error, evt.detail.stack);
   }
 
+  // call the apex method to get data from the server
   _getChartDataHandler(handlerName, input) {
     this.isLoaded = false;
     getChartData({ chartDataProviderType: handlerName, ctx: input })

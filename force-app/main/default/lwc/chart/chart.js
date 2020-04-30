@@ -34,6 +34,7 @@ export default class Chart extends LightningElement {
     return this._canvasOnchange;
   }
   set canvasOnchange(v) {
+    // avoid leak
     this.getCanvas().removeEventListener('mouseover', this._canvasOnchange);
     this._canvasOnchange = v;
     this.getCanvas().addEventListener('change', this._canvasOnchange);
@@ -44,6 +45,7 @@ export default class Chart extends LightningElement {
     return this._canvasOnclick;
   }
   set canvasOnclick(v) {
+    // avoid leak
     this.getCanvas().removeEventListener(
       'mouseover',
       this._canvas_canvasOnclickOnmouseover
@@ -57,6 +59,7 @@ export default class Chart extends LightningElement {
     return this._canvasOnmouseover;
   }
   set canvasOnmouseover(v) {
+    // avoid leak
     this.getCanvas().removeEventListener('mouseover', this._canvasOnmouseover);
     this._canvasOnmouseover = v;
     this.getCanvas().addEventListener('mouseover', this._canvasOnmouseover);
@@ -67,6 +70,7 @@ export default class Chart extends LightningElement {
     return this._canvasOnmouseout;
   }
   set canvasOnmouseout(v) {
+    // avoid leak
     this.getCanvas().removeEventListener('mouseover', this._canvasOnmouseout);
     this._canvasOnmouseout = v;
     this.getCanvas().addEventListener('mouseout', this._canvasOnmouseout);
@@ -151,10 +155,12 @@ export default class Chart extends LightningElement {
   set type(v) {
     if (v !== this._type) {
       this._type = v;
+      // Change aria Label if title is not set
       this.ariaLabel =
         this._payload[ATTRIBUTE_TITLE] && this._payload[ATTRIBUTE_TITLE].text
           ? this._payload[ATTRIBUTE_TITLE].text
           : `${this._type} chart`;
+      // rebuild the chart
       this.destroyChart();
       this._reactivityManager.throttleRegisteredJob();
     }
@@ -278,14 +284,15 @@ export default class Chart extends LightningElement {
     super();
     this._baseChartInitialized = false;
     this._chartjsLoaded = false;
-    this._configService = new ChartConfigService();
+    this._configService = new ChartConfigService(); // create the chartConfigService delegate
     this._details = null;
     this._chart = null;
-    this._reactivityManager = new ReactivityManager();
-    this._reactivityManager.registerJob(() => this.drawChart());
-    this._payload = this._reactivityManager.getReactivityProxy();
+    this._reactivityManager = new ReactivityManager(); // store reactivity manager in case need to throttle manually
+    this._reactivityManager.registerJob(() => this.drawChart()); // register drawChqart
+    this._payload = this._reactivityManager.getReactivityProxy(); // use reactivity manager proxy
   }
 
+  // Add event listener on children option and disconnect event
   connectedCallback() {
     this.addEventListener(
       OPTION_EVENT_NAME,
@@ -297,6 +304,7 @@ export default class Chart extends LightningElement {
     );
   }
 
+  // Remove event listener on children option and disconnect event
   disconnectedCallback() {
     this.removeEventListener(
       OPTION_EVENT_NAME,
@@ -309,6 +317,7 @@ export default class Chart extends LightningElement {
     this.destroyChart();
   }
 
+  // load Chart.js library stored in static resource
   renderedCallback() {
     if (this._baseChartInitialized) {
       return;
@@ -326,6 +335,7 @@ export default class Chart extends LightningElement {
     );
   }
 
+  // dispatch error event in case of error
   errorCallback(error, stack) {
     this.destroyChart();
     this.dispatchEvent(
@@ -340,6 +350,7 @@ export default class Chart extends LightningElement {
     );
   }
 
+  // Create the canvas and store it
   getCanvas() {
     if (!this._canvas) {
       this._canvas = document.createElement('canvas');
@@ -348,6 +359,7 @@ export default class Chart extends LightningElement {
     return this._canvas;
   }
 
+  // update chart if chart exist or create a new one
   drawChart() {
     if (!this._isReadyToDraw()) return;
     try {
@@ -369,6 +381,7 @@ export default class Chart extends LightningElement {
     }
   }
 
+  // check if we have enough to draw a chart
   _isReadyToDraw() {
     return (
       this._chartjsLoaded &&
@@ -378,6 +391,7 @@ export default class Chart extends LightningElement {
   }
 
   _listenerHandlers = {
+    // store option and throttle a drawChart
     handleOption: evt => {
       evt.stopPropagation();
       const { payload, option } = evt.detail;
@@ -392,19 +406,21 @@ export default class Chart extends LightningElement {
       }
       this._reactivityManager.throttleRegisteredJob();
     },
+    // remove option and throttle a drawChart
     handleDisconnect: evt => {
       evt.stopPropagation();
       const { payload, option } = evt.detail;
       if (option === ATTRIBUTE_DATA) {
-        this._details = payload;
+        this._details = null;
+        this.destroyChart();
       } else {
-        // get title to set the accessibility
+        // reset title to set the accessibility
         if (option === ATTRIBUTE_TITLE) {
-          this.ariaLabel = payload.text;
+          this.ariaLabel = `${this._type} chart`;
         }
-        this._configService.updateConfig(payload, option);
+        this._configService.removeConfig(payload, option);
+        this._reactivityManager.throttleRegisteredJob();
       }
-      this._reactivityManager.throttleRegisteredJob();
     }
   };
 }

@@ -21,9 +21,10 @@ export default class Dataset extends BaseAttribute {
     super();
     this._details = {};
     this._payload.datasets = [];
-    this._option = ATTRIBUTE_DATA;
+    this._option = ATTRIBUTE_DATA; // data option type
   }
 
+  // Add event listener on children data and disconnect event
   connectedCallback() {
     this.addEventListener(
       DATA_EVENT_NAME,
@@ -35,6 +36,7 @@ export default class Dataset extends BaseAttribute {
     );
   }
 
+  // Remove event listener on children data and disconnect event
   disconnectedCallback() {
     this.removeEventListener(
       DATA_EVENT_NAME,
@@ -47,11 +49,14 @@ export default class Dataset extends BaseAttribute {
   }
 
   _listenerHandlers = {
+    // Capture child data event and store it using the uuid of the child
     handleDataChange: evt => {
       evt.stopPropagation();
       this._details[evt.detail.payload.uuid] = evt.detail.payload;
       this._payload.datasets = Object.values(this._details);
     },
+
+    // Capture child diqconnect event and remove child uuid from map
     handleDataDeletion: evt => {
       evt.stopPropagation();
       delete this._details[evt.detail.payload.uuid];
