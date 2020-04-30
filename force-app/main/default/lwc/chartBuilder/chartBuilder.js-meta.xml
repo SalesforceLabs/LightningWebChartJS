@@ -12,6 +12,7 @@
     <target>lightning__AppPage</target>
     <target>lightning__HomePage</target>
     <target>lightning__RecordPage</target>
+    <target>lightningCommunity__Page</target>
     <target>lightningCommunity__Default</target>
   </targets>
   <targetConfigs>
