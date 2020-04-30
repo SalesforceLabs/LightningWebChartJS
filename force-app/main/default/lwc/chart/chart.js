@@ -392,19 +392,21 @@ export default class Chart extends LightningElement {
       }
       this._reactivityManager.throttleRegisteredJob();
     },
+    // remove option and throttle a drawChart
     handleDisconnect: evt => {
       evt.stopPropagation();
       const { payload, option } = evt.detail;
       if (option === ATTRIBUTE_DATA) {
-        this._details = payload;
+        this._details = null;
+        this.destroyChart();
       } else {
-        // get title to set the accessibility
+        // reset title to set the accessibility
         if (option === ATTRIBUTE_TITLE) {
-          this.ariaLabel = payload.text;
+          this.ariaLabel = `${this._type} chart`;
         }
-        this._configService.updateConfig(payload, option);
+        this._configService.removeConfig(payload, option);
+        this._reactivityManager.throttleRegisteredJob();
       }
-      this._reactivityManager.throttleRegisteredJob();
     }
   };
 }
