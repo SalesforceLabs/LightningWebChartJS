@@ -14,3 +14,6 @@ Yes, LWCC has been built using Lightning Web Components, so you can include them
 
 ## Does it support mobile?
 Yes, LWCC is totally responsive so you can create charts to display in different screen sizes. To benefit from a better responsive experience, please consider using the `responsive` attribute in the Chart component.
+
+## SOQL using :recordId do not render in the App Builder?
+Yes, using `:recordId` in the SOQL the LWCC Chart Builder component do not display data in the App builder because SOQL cannot be executed in the App Builder using  because the context is not set to an actual record and then recordId is not populated. 
