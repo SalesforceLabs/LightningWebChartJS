@@ -35,7 +35,7 @@ LWCC is a suit of Salesforce Lightning Web Components created to bring you all t
         <h4 class="card-title">Salesforce Platform</h4>
         <p class="card-text">Designed to run on the Salesforce Platform*, using the Lightning technology</p>
         <footer class="slds-card__footer">
-          <a class="slds-card__footer-action" href="https://appexchange.salesforce.com/">Github
+          <a class="slds-card__footer-action" href="https://appexchange.salesforce.com/">AppExchange
           </a>
         </footer>
       </div>

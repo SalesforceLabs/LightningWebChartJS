@@ -53,6 +53,14 @@ html{
   margin-top: 1rem;
 }
 
+.lwcc-menu li{
+  padding: 0;
+}
+
+.lwcc-menu .nav-item{
+  padding: 0.5rem !important;
+}
+
 .display-mobile-menu{
     display: block !important;
 }
@@ -114,6 +122,10 @@ table td, table th {
   border-top: 1px solid #dee2e6;
 }
 
+table thead tr {
+  text-transform: uppercase;
+}
+
 /* Code blocks */
 pre {
   border: 1px solid #dee2e6;
@@ -145,7 +157,7 @@ pre .s, .highlight .s{
 }
 
 /* Container */
-.container {
+.lwcc-container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -154,7 +166,7 @@ pre .s, .highlight .s{
 }
 
 @media (min-width: 1200px){
-.container {
+.lwcc-container {
     max-width: 1140px;
 }
 .samples-container{
@@ -162,7 +174,7 @@ pre .s, .highlight .s{
 }
 }
 @media (min-width: 992px){
-.container{
+.lwcc-container{
     max-width: 960px;
 }
 .samples-container{
@@ -170,12 +182,13 @@ pre .s, .highlight .s{
 }
 }
 @media (min-width: 768px){
-.container{
+.lwcc-container{
     max-width: 720px;
 }
-.samples-container{
-  max-width: unset !important;
 }
+
+.samples-container .lwcc-container{
+  max-width: 80% !important;
 }
 
 .col{
@@ -186,7 +199,7 @@ pre .s, .highlight .s{
 h1, h2, h3, h4{
   font-weight: 700 !important;
   line-height: 1.25 !important;
-  margin-top: 1.25rem !important;
+  margin-top: 2rem !important;
   margin-bottom: 0.75rem !important;
 }
 h1 {
@@ -205,6 +218,12 @@ h4 {
 dl, fieldset, h1, h2, h3, h4, h5, h6, ol, p, ul {
   margin: auto;
   padding: auto;
+
+}
+
+p {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 /* Lists */
@@ -236,4 +255,8 @@ h2, h3, h4{
 
 .align-middle{
   vertical-align: middle;;
+}
+
+hr{
+  margin: 0.5rem;
 }
