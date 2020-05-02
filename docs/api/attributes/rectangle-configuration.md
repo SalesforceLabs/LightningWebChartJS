@@ -4,16 +4,17 @@
 https://www.chartjs.org/docs/latest/configuration/elements.html#rectangle-configuration
 
 
-RectangleConfiguration inherits all the properties from [BaseAttribute]({{ "/docs/api/attributes.html" | relative_url }}) and exposes Rectangle Configuration configuration fields
+RectangleConfiguration inherits all the properties from [BaseAttribute]({{ "/docs/api/attributes.html" | relative_url }})
+Rectangle elements are used to represent the bars in a bar chart.
 
 ## API
 
-| Attribute name | Type | Default value
-| --- | --- | ---
-| backgroundcolor | color | 'rgba(0, 0, 0, 0.1)'
-| borderwidth | number | 0
-| bordercolor | color | 'rgba(0, 0, 0, 0.1)'
-| borderskipped | string | 'bottom'
+| Attribute name | Type | Default | Description
+| --- | --- | --- | ---
+| backgroundcolor | Color | `rgba(0, 0, 0, 0.1)` | Bar fill color
+| borderwidth | number | 0 | Bar stroke width
+| bordercolor | Color | `rgba(0, 0, 0, 0.1)` | Bar stroke color
+| borderskipped | string | `bottom` | Skipped (excluded) border: `bottom`, `left`, `top` or `right`
 
 ## Usage
 

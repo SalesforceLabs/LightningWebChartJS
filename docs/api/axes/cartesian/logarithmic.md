@@ -7,7 +7,7 @@ CartesianLogarithmicAxis inherits all the properties from [CartesianAxis]({{ "/d
 
 ## API
 
-Extends attributes from CartesianAxis and BaseAxis and BaseAttribute
+This component doesn't expose own attributes (all of them are inherited from CartesianAxis).
 
 ## Usage
 

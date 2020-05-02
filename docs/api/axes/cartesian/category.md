@@ -3,16 +3,14 @@
 
 https://www.chartjs.org/docs/latest/axes/cartesian/category.html
 
-CartesianCategoryAxis inherits all the properties from [CartesianAxis]({{ "/docs/api/axes/cartesian.html" | relative_url }}) and exposes Cartesian category axis configuration fields
+CartesianCategoryAxis inherits all the properties from [CartesianAxis]({{ "/docs/api/axes/cartesian.html" | relative_url }})
 
 
 ## API
 
-Extends attribute from CartesianAxis and BaseAxis and BaseAttribute
-
-| Attribute name | Type | Default value
-| --- | --- | ---
-| ticksLabels | string[] |
+| Attribute name | Type | Default | Description
+| --- | --- | --- | ---
+| ticksLabels | string[] | | An array of labels to display
 
 ## Usage
 

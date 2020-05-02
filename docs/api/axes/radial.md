@@ -3,9 +3,12 @@
 
 https://www.chartjs.org/docs/latest/axes/radial/
 
-RadialAxis inherits all the properties from [BaseAxis]({{ "/docs/api/axes.html" | relative_url }}) and exposes Radial axis configuration fields
+RadialAxis inherits all the properties from [BaseAxis]({{ "/docs/api/axes.html" | relative_url }})
+
+Radial axes are used specifically for the radar and polar area chart types. These axes overlay the chart area, rather than being positioned on one of the edges
+
 
 
 ## API
 
-Extends attribute from BaseAxis and BaseAttribute
+RadialAxis does not expose own properties, and inherits the ones of BaseAxis
