@@ -46,7 +46,6 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('pointrotation', 'foo', { pointRotation: 'foo' }),
   ChartOptionMock('pointstyle', 'foo', { pointStyle: 'foo' }),
   ChartOptionMock('spangaps', 'foo', { spanGaps: 'foo' }),
-  ChartOptionMock('name', 'foo', { Name: 'foo' }),
   ChartOptionMock('cubicinterpolationmode', 'foo', {
     cubicInterpolationMode: 'foo'
   }),

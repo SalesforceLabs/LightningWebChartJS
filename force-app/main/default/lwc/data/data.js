@@ -210,13 +210,6 @@ export default class Data extends BaseAttribute {
     this._payload.spanGaps = v;
   }
   @api
-  get name() {
-    return this._payload.Name;
-  }
-  set name(v) {
-    this._payload.Name = v;
-  }
-  @api
   get cubicinterpolationmode() {
     return this._payload.cubicInterpolationMode;
   }
