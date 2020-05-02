@@ -6,8 +6,6 @@ The power of Chart.js brought to Salesforce !
   <img src="{{ "/assets/images/lwcc_logo.png" | relative_url }}" alt="LWCC Logo" width="250" />
 </div>
 
-TODO: include presentation video
-
 ## What is LWCC?
 
 ---
