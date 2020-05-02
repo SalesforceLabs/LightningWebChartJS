@@ -65,9 +65,7 @@ LWCC is a suit of Salesforce Lightning Web Components created to bring you all t
 
 ### App Exchange
 
-LWCC is available in AppExchange to be installed directly into your Salesforce org.
-
-TODO: Link to the AppExchange
+LWCC is available in [AppExchange](https://appexchange.salesforce.com/) to be installed directly into your Salesforce org.
 
 ### SFDX
 
