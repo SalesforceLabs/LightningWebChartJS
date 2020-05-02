@@ -105,6 +105,8 @@ sfdx force:source:push
 
 ```
 sfdx force:user:permset:assign -n Lightning_Web_Chart_Component
+# Optionally add the Lightning_Web_Chart_Component_Demo permission set to access the demo
+sfdx force:user:permset:assign -n Lightning_Web_Chart_Component_Demo
 ```
 
 7. Open the scratch org:
