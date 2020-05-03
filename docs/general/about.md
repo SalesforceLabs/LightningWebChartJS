@@ -56,3 +56,7 @@ Handle issue with the :recordId
 #### Testing reactivity
 
 #### Testing errors
+
+### Deploying sample app with lwc in gh-pages
+
+Big challenge here was to build an open source lwc app (opposed to a Salesforce lwc app) using the library built we Salesforce in order to expose the sample application in the documentation gh-page website.
