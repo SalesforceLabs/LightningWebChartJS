@@ -1,6 +1,19 @@
 # About the project
 
+## The team
+
+### Victor
+
+### Seb
+
+### PM
+
 ## Motivations
+
+### Why chart.js
+
+using namespace is not possible so we needed to use library using html directly
+Chart.js is already widely integrated into other frameworks
 
 ### Learning
 
@@ -9,8 +22,6 @@
 ### Promoting awesome tech
 
 ## Challenges encountered
-
-using namespace is not possible
 
 ### Migrate from local project to Salesforce project
 
