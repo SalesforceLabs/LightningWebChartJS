@@ -1,6 +1,6 @@
 # Lightning Web Chart.js Component
 
-The power of Chart.js brought to Salesforce !
+Simple yet flexible charting Lightning Web Component using Chart.js for admins & developers.
 
 <div align="center">
   <img src="{{ "/assets/images/lwcc_logo.png" | relative_url }}" alt="LWCC Logo" width="250" />
