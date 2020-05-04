@@ -31,7 +31,7 @@ When we started the project to bring charts in LWC we needed to choose a path to
 
 Starting from scratch would have been very challenging, as we don't have any knowledge in that field and as it is a huge task we don't really considered this. It was tacitly acknowledged we would not go this road :D
 
-Then we needed to identify which kind of library we could use, knowing we cannot use a library manipaluating another namespace than HTML (Lightning Web Component constraints).
+Then we needed to identify which kind of library we could use, knowing we cannot use a library manipulating another namespace than HTML (Lightning Web Component constraints).
 
 After having reviewed js charting libraries our choice has converge on Chart.js because of the ecosystem and other existing porting we [trust](https://github.com/chartjs/awesome#javascript).
 We were able to create a concluding POC in 7 minutes using Chart.js and LWC !
