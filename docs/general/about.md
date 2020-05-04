@@ -3,14 +3,14 @@
 ## The team
 
 ### [Vic](https://github.com/victorgz)
-Spanish IT Engineer & Business
-Salesforce Technical Consultant
-Innovation and technology enthusiast
+Spanish IT Engineer & Business  
+Salesforce Technical Consultant  
+Innovation and technology enthusiast  
 
 ### [Seb](https://github.com/scolladon)
-French IT Engineer
-Full Stack Salesforce Architect (CTA)
-Technology passionated
+French IT Engineer  
+Full Stack Salesforce Architect (CTA)  
+Technology passionated  
 
 ### [PM](https://github.com/pmdartus)
 
