@@ -13,6 +13,8 @@ Full Stack Salesforce Architect (CTA)
 Technology passionated  
 
 ### [PM](https://github.com/pmdartus)
+Principal Software Engineer - Salesforce UI platform  
+LWC & JSDOM maintainer  
 
 ## Motivations
 
@@ -36,7 +38,7 @@ Then we needed to identify which kind of library we could use, knowing we cannot
 After having reviewed js charting libraries our choice has converge on Chart.js because of the ecosystem and other existing porting we [trust](https://github.com/chartjs/awesome#javascript).
 We were able to create a concluding POC in 7 minutes using Chart.js and LWC !
 
-### Contribute to the eco system
+### Contribute to the ecosystem
 
 We are all Salesforce employees and we want to improve our ecosystem as much as possible.
 We are all fervant believers of the LWC technology and we wanted to demonstrate how powerful and convenient it is to use it.
@@ -58,13 +60,13 @@ We put in place Github Pull Request template to allow answering the right questi
 
 We started to build the project using LWC open source in local.
 It was very convenient because we had automatic reload and easy debugging. We won lot of time.
-When the project has been mature enough and we had solved most of our big problems we decided to move to LWC Salesforce.
+When the project was mature enough and we had solved most of our big problems we decided moving the local project to a Salesforce plaform project.
 
-First problem we encountered was the necessity to structure all the component in the same sub directory.
-It is not possible to have a logical structure to group all your component logically as you would do in any project.
-In Salesforce every component folder are stored in the lwc sub folder of the sources.
+The first problem we encountered was the necessity to restructure all the components in the same subdirectory.
+The platform format makes it impossible to have a logical folder structure to group all your components as you would do in any project.
+On Salesforce every component folder is stored in the `lwc` subfolder of the sources.
 
-While migrating in LWC Salesforce we discovered template requires to have an explicit slot to be able to have children component communicating with each other (Locker Service) while composing them, which is not the case in LWC OS. We added slot on every component.
+While migrating in LWC Salesforce we discovered that templates require to have an explicit slot to be able to have children component communicating with each other (Locker Service) while composing them, which is not the case in LWC OS. We added the `<slot>` in every component.
 
 Another challenge we had to face was the inclusion of the dependencies. We have Chart.js and nanoid as dependency.
 We decided to import Chart.js using static resources because we wanted the library to be lightweight, fast to load (async static resource loading) and upgradable. By using static resources we can have multiple versions of the Chart.js at the same time.
@@ -83,7 +85,7 @@ We use the connected callback in order to attach listeners to the parent element
 In order to detect property changes and to dispatch an event to the parent we used getter and setter properties. In the setter of the property we dispatch an event to the parent to let it know a property has been updated and decide what to do.
 To simplify the work and avoid to duplicate the code we created a reactivity manager component which serves a Proxy object catching the setter to call a callback method in this case. The Proxy object was used in each property to store value exposed via getter setter. This way we had one javascript object in our component to handle the reactivity and expose/store properties.
 
-#### Reactiviy throttling
+#### Reactivity throttling
 
 We use micro task in order to throttle every dispatch options. We store every components information in one object so at the end of the cycle we just have to send the storing object no matter the number of property that has been changed in it. This way we avoid calling the callback on the reactivity manager each time a property change.
 
