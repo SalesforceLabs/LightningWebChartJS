@@ -292,4 +292,14 @@ describe('Chart: methods', () => {
         expect(chart.uuid).toBeDefined();
       });
   });
+
+  test('chartjsLoadedCallback with chart defined', async () => {
+    expect(true).toBe(false);
+    /*return flushPromises()
+      .then(flushPromises)
+      .then(() => {
+        chart.destroyChart();
+        expect(chart.uuid).toBeDefined();
+      });*/
+  });
 });

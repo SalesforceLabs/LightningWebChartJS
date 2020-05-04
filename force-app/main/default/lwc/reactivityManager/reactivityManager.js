@@ -3,8 +3,8 @@ export default class ReactivityManager {
     this._ready = false; // start as not ready
   }
 
-  registerJob(cb) {
-    this.job = cb; // store one callback per reactivity manager
+  registerJob(job) {
+    this.registeredJob = job; // store one callback per reactivity manager
     // Could be a good idea to store an array
     // and to give the ability to Promise.all or to Promise.reduce
   }
@@ -23,9 +23,7 @@ export default class ReactivityManager {
           // check if ready (synchronism check)
           this._ready = false; // come back to initial state
           // Call the method to throttle
-          if (typeof this.job === 'function') {
-            this.job();
-          }
+          this.registeredJob();
         }
       });
     }
