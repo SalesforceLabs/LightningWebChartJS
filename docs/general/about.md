@@ -100,9 +100,9 @@ Error in micro task throw javascript error and are not intercepted by the lifecy
 
 We decided to expose the possibility to use the recordId specified in the record page in the SOQL capability of the 'LWCC App Builder' component. The issue we faced was recordId is not defined when the component is not on a record page (in the App Builder per exemple).
 
-We tried different ways to detect when the component is in the App builder but we have not find a robust way to do it (parse url or classes is not upgrade safe as it is subject to change without notice in the Salesforce Platform)
+We tried different ways to detect when the component is in the App builder but we have not find a robust way to do it. Parse the url to detect editor mode and detect css classes in the editor mode is not upgrade safe as it is subject to change without notice in the Salesforce Platform. And we found adding a boolean property `isDesigned` defaulted to true in the App Builder is not elegant enough because this is bypassable.
 
-So, when recordId is used in the SOQL query and is undefined, we decided to not set data instead of displaying an error.
+So, when recordId is used in the SOQL query and is undefined, we decided to not set data instead of displaying an error or random data.
 
 ### Javascript Events
 
