@@ -28,6 +28,8 @@ export default class Chart extends LightningElement {
     this._uuid = v;
   }
 
+  // callback used for knowing when chart js is loaded in the dom
+  // convenient to define new charts, new axes type and new plugins
   _chartjsLoadedCallback;
   @api
   get chartjsloadedCallback() {

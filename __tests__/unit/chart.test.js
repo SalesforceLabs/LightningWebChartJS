@@ -166,6 +166,14 @@ describe('Chart: property', () => {
 
     expect(element.canvasOnmouseout).toEqual({});
   });
+  test('chartjsLoadedCallback was called', async () => {
+    let chartjsCb = jest.fn();
+    element.chartjsloadedCallback = chartjsCb;
+    return flushPromises().then(() => {
+      expect(chartjsCb).toBeCalled();
+      expect(element.chartjsloadedCallback).toEqual(chartjsCb);
+    });
+  });
 });
 
 describe('Chart: methods', () => {
@@ -291,15 +299,5 @@ describe('Chart: methods', () => {
         chart.destroyChart();
         expect(chart.uuid).toBeDefined();
       });
-  });
-
-  test('chartjsLoadedCallback with chart defined', async () => {
-    expect(true).toBe(false);
-    /*return flushPromises()
-      .then(flushPromises)
-      .then(() => {
-        chart.destroyChart();
-        expect(chart.uuid).toBeDefined();
-      });*/
   });
 });

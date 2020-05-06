@@ -38,6 +38,7 @@ export default class Dataset extends BaseAttribute {
 
   // Remove event listener on children data and disconnect event
   disconnectedCallback() {
+    super.disconnectedCallback();
     this.removeEventListener(
       DATA_EVENT_NAME,
       this._listenerHandlers.handleDataChange
