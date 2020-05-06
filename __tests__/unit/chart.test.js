@@ -8,13 +8,8 @@ import DataSet from 'c/dataset';
 import Data from 'c/data';
 import Title from 'c/title';
 import Legend from 'c/legend';
-const STATIC_RESOURCE_NAME = 'chartjs_v280';
 
 let mockScriptSuccess = true;
-const flushPromises = () => {
-  // eslint-disable-next-line no-undef
-  return new Promise(resolve => setImmediate(resolve));
-};
 
 jest.mock(
   'lightning/platformResourceLoader',

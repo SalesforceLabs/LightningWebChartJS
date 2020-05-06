@@ -78,3 +78,8 @@ global.testAttribute = (constructor, listChartOptionMock, eventName) => {
   testDOMElementInteraction(constructor);
   testChartOptions(constructor, listChartOptionMock, eventName);
 };
+
+global.flushPromises = () => {
+  // eslint-disable-next-line no-undef
+  return new Promise(resolve => setImmediate(resolve));
+};

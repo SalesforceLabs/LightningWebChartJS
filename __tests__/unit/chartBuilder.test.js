@@ -109,11 +109,6 @@ describe('test property', () => {
   });
 });
 
-const flushPromises = () => {
-  // eslint-disable-next-line no-undef
-  return new Promise(resolve => setImmediate(resolve));
-};
-
 const MOCK_GETCHARTDATA = [{ label: 'test', detail: [10] }];
 // Sample error for imperative Apex call
 const APEX_ERROR = {
