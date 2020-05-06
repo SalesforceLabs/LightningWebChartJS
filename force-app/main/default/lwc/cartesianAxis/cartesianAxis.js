@@ -1,6 +1,10 @@
 import BaseAxis from 'c/baseAxis';
 import { api } from 'lwc';
-import { ATTRIBUTE_CARTESIAN_AXES } from 'c/constants';
+import {
+  ATTRIBUTE_CARTESIAN_AXES,
+  SCALES_X_AXES,
+  SCALES_Y_AXES
+} from 'c/constants';
 import { nanoid } from 'c/nanoid';
 
 /**
@@ -13,14 +17,19 @@ import { nanoid } from 'c/nanoid';
 export default class CartesianAxis extends BaseAxis {
   @api
   get axis() {
-    return this._axis === 'yAxes' ? 'y' : this._axis === 'xAxes' ? 'x' : null;
+    return this._axis === SCALES_Y_AXES
+      ? 'y'
+      : this._axis === SCALES_X_AXES
+      ? 'x'
+      : null;
   }
   set axis(v) {
     if (this._axis[0] === v) {
       return;
     }
-    this._axis = v === 'y' ? 'yAxes' : v === 'x' ? 'xAxes' : null;
-    const otherAxe = v === 'y' ? 'xAxes' : v === 'x' ? 'yAxes' : null;
+    this._axis = v === 'y' ? SCALES_Y_AXES : v === 'x' ? SCALES_X_AXES : null;
+    const otherAxe =
+      v === 'y' ? SCALES_X_AXES : v === 'x' ? SCALES_Y_AXES : null;
     if (otherAxe) {
       this._payload[this._axis] = this._payload[otherAxe] || [{}];
       this._content = this._payload[this._axis][0];
@@ -339,7 +348,7 @@ export default class CartesianAxis extends BaseAxis {
 
   constructor() {
     super();
-    this._axis = 'yAxes';
+    this._axis = SCALES_Y_AXES;
     this._payload[this._axis] = [{}];
     this._content = this._payload[this._axis][0];
     this._content.uuid = nanoid(10);

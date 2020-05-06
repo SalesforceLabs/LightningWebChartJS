@@ -22,6 +22,9 @@ export const CARTESIAN_AXIS_TYPE_LINEAR = 'linear';
 export const CARTESIAN_AXIS_TYPE_LOG = 'logarithmic';
 export const CARTESIAN_AXIS_TYPE_TIME = 'time';
 
+export const SCALES_X_AXES = 'xAxes';
+export const SCALES_Y_AXES = 'yAxes';
+
 /** CHART TYPE */
 export const BAR_CHART_TYPE = 'bar';
 export const BUBBLE_CHART_TYPE = 'bubble';
