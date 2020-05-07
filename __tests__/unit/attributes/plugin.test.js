@@ -1,17 +1,41 @@
 import Plugin from 'c/Plugin';
+import { OPTION_EVENT_NAME } from 'c/constants';
+import { createElement } from 'lwc';
 
+const content = { value: 'test' };
 const TEST_DATA_PROPERTIES = [
-  /*ChartOptionMock('display', true, { display: true }),
-    ChartOptionMock('position', 'foo', { position: 'foo' }),
-    ChartOptionMock('fontsize', 'foo', { fontSize: 'foo' }),
-    ChartOptionMock('fontfamily', 'foo', { fontFamily: 'foo' }),
-    ChartOptionMock('fontcolor', 'foo', { fontColor: 'foo' }),
-    ChartOptionMock('fontstyle', 'foo', { fontStyle: 'foo' }),
-    ChartOptionMock('padding', 'foo', { padding: 'foo' }),
-    ChartOptionMock('lineheight', 'foo', { lineHeight: 'foo' }),
-    ChartOptionMock('text', 'foo', { text: 'foo' })*/
+  ChartOptionMock('name', 'test', { test: {} }),
+  ChartOptionMock('content', {}, { test: {} })
 ];
 
 describe('c-plugin', () => {
-  testAttribute(Plugin, TEST_DATA_PROPERTIES);
+  test(`content set and name property no set`, () => {
+    const element = createElement('x-test', { is: Plugin });
+    document.body.appendChild(element);
+    element.content;
+
+    expect(element.content).toEqual(element.content);
+  });
+
+  test(`name set`, async () => {
+    const element = createElement('x-test', { is: Plugin });
+    document.body.appendChild(element);
+    let detail;
+    document.body.addEventListener(OPTION_EVENT_NAME, evt => {
+      detail = evt.detail;
+      expect(detail.payload).toEqual({ test: {} });
+    });
+    element.name = 'test';
+  });
+
+  test(`content set and name property set`, async () => {
+    const element = createElement('x-test', { is: Plugin });
+    document.body.appendChild(element);
+    let detail;
+    document.body.addEventListener(OPTION_EVENT_NAME, evt => {
+      detail = evt.detail;
+      expect(detail.payload).toEqual({ test: content });
+    });
+    element.content = content;
+  });
 });

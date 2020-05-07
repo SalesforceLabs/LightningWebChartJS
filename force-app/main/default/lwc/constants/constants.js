@@ -15,6 +15,7 @@ export const ATTRIBUTE_LEGEND = 'legend';
 export const ATTRIBUTE_TITLE = 'title';
 export const ATTRIBUTE_TOOLTIPS = 'tooltips';
 export const ATTRIBUTE_RADIAL_AXES = 'scale';
+export const ATTRIBUTE_PLUGIN = 'plugins';
 
 /** CARTESIAN AXIS TYPES */
 export const CARTESIAN_AXIS_TYPE_CATEGORY = 'category';
