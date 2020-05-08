@@ -28,6 +28,18 @@ export default class Chart extends LightningElement {
     this._uuid = v;
   }
 
+  // callback used for knowing when chart js is loaded in the dom
+  // convenient to define new charts, new axes type and new plugins
+  _chartjsLoadedCallback;
+  @api
+  get chartjsloadedCallback() {
+    return this._chartjsLoadedCallback;
+  }
+  set chartjsloadedCallback(v) {
+    this._chartjsLoadedCallback = v;
+    this._callChartjsloadedCallback();
+  }
+
   _canvasOnchange;
   @api
   get canvasOnchange() {
@@ -327,6 +339,7 @@ export default class Chart extends LightningElement {
     loadScript(this, ChartJS).then(
       () => {
         this._chartjsLoaded = true;
+        this._callChartjsloadedCallback();
         this._reactivityManager.throttleRegisteredJob();
       },
       reason => {
@@ -388,6 +401,15 @@ export default class Chart extends LightningElement {
       this._details &&
       this._type /* && this.isConnected*/
     );
+  }
+
+  _callChartjsloadedCallback() {
+    if (
+      this._chartjsLoaded === true &&
+      typeof this._chartjsLoadedCallback === 'function'
+    ) {
+      this._chartjsLoadedCallback();
+    }
   }
 
   _listenerHandlers = {
