@@ -12,6 +12,7 @@ The Charts are the main containers of your component. They have different attrib
 | --- | --- | --- | ---
 |type | string | `bar` | The type of chart. The options are: `line`, `bar`, `radar`, `doughnut`, `pie`, `polarArea`, `bubble` and `scatter`
 | uuid | string | A random uuid | UUID used to identify uniquely the chart
+| chartjsloadedCallback | function |  | Called when Chartjs is loaded.
 | canvasOnchange | function |  | Allows to define a callback for an event (parameter) of type `change` binded to the canvas.
 | canvasOnclick | function |  | Allows to define a callback for an event (parameter) of type `click` binded to the canvas.
 | canvasOnmouseover | function |  | Allows to define a callback for an event (parameter) of type `mouseover` binded to the canvas.
