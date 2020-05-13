@@ -6,7 +6,9 @@ name: CI
 # events but only for the master branch
 on:
   pull_request:
-    branches: [master]
+    branches:
+      - master
+      - 'release/**'
 
 jobs:
   formatting-and-linting:
