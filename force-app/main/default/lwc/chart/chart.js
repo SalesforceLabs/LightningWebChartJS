@@ -30,7 +30,6 @@ export default class Chart extends LightningElement {
 
   // callback used for knowing when chart js is loaded in the dom
   // convenient to define new charts, new axes type and new plugins
-  _chartjsLoadedCallback;
   @api
   get chartjsloadedCallback() {
     return this._chartjsLoadedCallback;
@@ -40,7 +39,6 @@ export default class Chart extends LightningElement {
     this._callChartjsloadedCallback();
   }
 
-  _canvasOnchange;
   @api
   get canvasOnchange() {
     return this._canvasOnchange;
@@ -51,7 +49,7 @@ export default class Chart extends LightningElement {
     this._canvasOnchange = v;
     this.getCanvas().addEventListener('change', this._canvasOnchange);
   }
-  _canvasOnclick;
+
   @api
   get canvasOnclick() {
     return this._canvasOnclick;
@@ -65,7 +63,7 @@ export default class Chart extends LightningElement {
     this._canvasOnclick = v;
     this.getCanvas().addEventListener('click', this._canvasOnclick);
   }
-  _canvasOnmouseover;
+
   @api
   get canvasOnmouseover() {
     return this._canvasOnmouseover;
@@ -76,7 +74,7 @@ export default class Chart extends LightningElement {
     this._canvasOnmouseover = v;
     this.getCanvas().addEventListener('mouseover', this._canvasOnmouseover);
   }
-  _canvasOnmouseout;
+
   @api
   get canvasOnmouseout() {
     return this._canvasOnmouseout;
