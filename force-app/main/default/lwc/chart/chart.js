@@ -290,6 +290,13 @@ export default class Chart extends LightningElement {
     return res;
   }
 
+  @api
+  get plugins() {
+    return this._payload.plugins;
+  }
+  set plugins(v) {
+    this._payload.plugins = v;
+  }
   constructor() {
     super();
     this._baseChartInitialized = false;
