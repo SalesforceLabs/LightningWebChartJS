@@ -297,6 +297,17 @@ export default class Chart extends LightningElement {
   set plugins(v) {
     this._payload.plugins = v;
   }
+
+  @api
+  get option() {
+    return this._option;
+  }
+  set option(v) {
+    this._option = v;
+    // No deep merge here, simply override. Last event occuring is applying
+    this._payload = Object.assign(this._payload, this._option); // Order is important here to keep the proxy property
+  }
+
   constructor() {
     super();
     this._baseChartInitialized = false;
