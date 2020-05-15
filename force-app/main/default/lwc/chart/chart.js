@@ -295,7 +295,7 @@ export default class Chart extends LightningElement {
     return this._payload.plugins;
   }
   set plugins(v) {
-    this._payload.plugins = v;
+    this._payload.plugins = sanitize(v);
   }
 
   @api
@@ -303,7 +303,7 @@ export default class Chart extends LightningElement {
     return this._option;
   }
   set option(v) {
-    this._option = v;
+    this._option = sanitize(v);
     // No deep merge here, simply override. Last event occuring is applying
     this._payload = Object.assign(this._payload, this._option); // Order is important here to keep the proxy property
   }
