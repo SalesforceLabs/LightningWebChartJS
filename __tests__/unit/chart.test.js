@@ -170,6 +170,11 @@ describe('Chart: property', () => {
       expect(element.chartjsloadedCallback).toEqual(chartjsCb);
     });
   });
+
+  test('options are merged with inner payload', () => {
+    element.option = { test: 'works' };
+    expect(element.option).toMatchObject({ test: 'works' });
+  });
 });
 
 describe('Chart: methods', () => {
