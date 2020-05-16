@@ -122,7 +122,8 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('devicepixelratio', 'foo', { pointHoverBorderColor: 'foo' }),
   ChartOptionMock('events', 'foo', { events: 'foo' }),
   ChartOptionMock('callbackClick', 'foo', { onClick: 'foo' }),
-  ChartOptionMock('callbackHover', 'foo', { onHover: 'foo' })
+  ChartOptionMock('callbackHover', 'foo', { onHover: 'foo' }),
+  ChartOptionMock('plugins', 'test', { plugins: 'test' })
   //ChartOptionMock('type', BAR_CHART_TYPE, { type: BAR_CHART_TYPE }),
 ];
 
