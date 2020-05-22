@@ -66,7 +66,7 @@ function testChartOptions(
 
         element[item.propertyName] = item.propertyValue;
 
-        await expect(element[item.propertyName]).toBe(item.propertyValue);
+        await expect(element[item.propertyName]).toEqual(item.propertyValue);
         await expect(typeof detail).toBe('object');
         await expect(detail.payload).toMatchObject(item.expectedProperty);
       });
