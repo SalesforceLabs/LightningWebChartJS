@@ -580,5 +580,51 @@
         &lt;/c-chart&gt;
       </code>
     </c-sample-app-item>
+
+    <!-- Cartesian axis with options attribute -->
+    <c-sample-app-item>
+      <c-chart slot="chartExample" type="bar" responsive="true">
+        <c-dataset
+          labels='["Blue", "Orange", "Yellow", "Green", "Light Blue", "Purple"]'
+        >
+          <c-data
+            label="# of Items"
+            detail="[12, 19, 7, 9, 5, 15]"
+            backgroundcolor='[
+                "rgba(82, 183, 216, 0.2)",
+                "rgba(225, 96, 50, 0.2)",
+                "rgba(255, 176, 59, 0.2)",
+                "rgba(84, 167, 123, 0.2)",
+                "rgba(79, 210, 210, 0.2)",
+                "rgba(226, 135, 178, 0.2)"
+              ]'
+          ></c-data>
+        </c-dataset>
+        <c-title text="Chart using options attribute"></c-title>
+        <c-cartesian-category-axis
+          axis="x"
+          options='\{"position":"top"\}'
+        ></c-cartesian-category-axis>
+      </c-chart>
+      <code slot="chartCode" lang="html">
+        &lt;c-chart slot=&quot;chartExample&quot; type=&quot;bar&quot;
+        responsive=&quot;true&quot;&gt;<br />
+        &emsp;&lt;c-dataset labels=&#39;[&quot;Blue&quot;, &quot;Orange&quot;,
+        &quot;Yellow&quot;, &quot;Green&quot;, &quot;Light Blue&quot;,
+        &quot;Purple&quot;]&#39;&gt;<br />
+        &emsp;&emsp;&lt;c-data label=&quot;# of Items&quot; detail=&quot;[12,
+        19, 7, 9, 5, 15]&quot; backgroundcolor=&#39;[&quot;rgba(82, 183, 216,
+        0.2)&quot;, &quot;rgba(225, 96, 50, 0.2)&quot;, &quot;rgba(255, 176, 59,
+        0.2)&quot;, &quot;rgba(84, 167, 123, 0.2)&quot;, &quot;rgba(79, 210,
+        210, 0.2)&quot;, &quot;rgba(226, 135, 178,
+        0.2)&quot;]&#39;&gt;&lt;/c-data&gt;<br />
+        &emsp;&lt;/c-dataset&gt;<br />
+        &emsp;&lt;c-title text=&quot;Chart using options
+        attribute&quot;&gt;&lt;/c-title&gt;<br />
+        &emsp;&lt;c-cartesian-category-axis axis=&quot;x&quot;
+        options=&#39;\&#123;&quot;position&quot;:&quot;top&quot;\&#125;&#39;&gt;&lt;/c-cartesian-category-axis&gt;<br />
+        &lt;/c-chart&gt;
+      </code>
+    </c-sample-app-item>
   </div>
 </template>
