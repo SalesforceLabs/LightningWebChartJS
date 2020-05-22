@@ -46,10 +46,16 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('callbackAfterupdate', 'foo', {
     callbacks: { afterUpdate: 'foo' }
   }),
-  ChartOptionMock('options', { foo: 'bar' }, { foo: 'bar' }),
+  ChartOptionMock('options', { foo: 'bar' }, { foo: 'bar' })
 ];
 
 describe('c-base-axis', () => {
   testAttribute(BaseAxis, TEST_DATA_PROPERTIES);
-  testOptionsAttributeMerge(BaseAxis, 'weight', 'foo', {weight: 'bar'}, 'bar');
+  testOptionsAttributeMerge(
+    BaseAxis,
+    'weight',
+    'foo',
+    { weight: 'bar' },
+    'bar'
+  );
 });
