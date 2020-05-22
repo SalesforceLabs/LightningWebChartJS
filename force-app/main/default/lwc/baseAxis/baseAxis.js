@@ -1,5 +1,6 @@
 import BaseAttribute from 'c/baseAttribute';
 import { api } from 'lwc';
+import { sanitize } from 'c/utils';
 
 /**
  * https://www.chartjs.org/docs/latest/axes/
@@ -159,6 +160,16 @@ export default class BaseAxis extends BaseAttribute {
   set callbackAfterupdate(v) {
     this._content.callbacks = this._content.callbacks || {};
     this._content.callbacks.afterUpdate = v;
+  }
+
+  @api
+  get options() {
+    return this._options;
+  }
+  set options(v) {
+    this._options = sanitize(v);
+    // No deep merge here, simply override. Last event occuring is applying
+    this._content = Object.assign(this._content, this._options); // Order is important here to keep the proxy property
   }
 
   constructor() {
