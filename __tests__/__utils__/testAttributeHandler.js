@@ -74,10 +74,38 @@ function testChartOptions(
   );
 }
 
+/**
+ * Test how the options attribute is merged with the rest of attributes. There is not deep merge
+ * so the existing values should be overwritten.
+ * @param {className} constructor
+ * @param {string} attributeName 
+ * @param {object} previousValue 
+ * @param {object} optionsObject 
+ * @param {object} newValue 
+ */
+function testOptionsAttributeMerge(constructor, attributeName, previousValue, optionsObject, newValue){
+  test(`Options overwrite previous value in attribute`, async () => {
+    const element = createElement('x-test', { is: constructor });
+    document.body.appendChild(element);
+
+    element[attributeName] = previousValue;
+    element.options = optionsObject;
+
+    await expect(element).toBeDefined();
+    await expect(element[attributeName]).toBe(newValue);
+
+    document.body.removeChild(element);
+  });
+}
+
 global.testAttribute = (constructor, listChartOptionMock, eventName) => {
   testDOMElementInteraction(constructor);
   testChartOptions(constructor, listChartOptionMock, eventName);
 };
+
+global.testOptionsAttributeMerge = (constructor, attributeName, previousValue, optionsObject, newValue) => {
+  testOptionsAttributeMerge(constructor, attributeName, previousValue, optionsObject, newValue);
+}
 
 global.flushPromises = () => {
   // eslint-disable-next-line no-undef
