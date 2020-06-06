@@ -580,5 +580,57 @@
         &lt;/c-chart&gt;
       </code>
     </c-sample-app-item>
+
+    <!-- Stacked Bar chart -->
+    <c-sample-app-item>
+      <c-chart slot="chartExample" type="bar" responsive="true">
+        <c-dataset
+          labels='["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7"]'
+        >
+          <c-data
+            label="Neutral"
+            detail="[40, 47, 44, 38, 27, 31, 25]"
+            backgroundcolor="rgba(50, 150, 237, 1)"
+            stack="1"
+          ></c-data>
+          <c-data
+            label="Warning"
+            detail="[10, 12, 7, 5, 4, 6, 8]"
+            backgroundcolor="rgba(119, 185, 242, 1)"
+            stack="1"
+          ></c-data>
+          <c-data
+            label="Error"
+            detail="[17, 11, 22, 18, 12, 7, 5]"
+            backgroundcolor="rgba(157, 83, 242, 1)"
+            stack="1"
+          ></c-data>
+        </c-dataset>
+        <c-cartesian-axis axis="x" stacked="true"> </c-cartesian-axis>
+        <c-cartesian-axis axis="y" stacked="true"></c-cartesian-axis>
+      </c-chart>
+      <code slot="chartCode" lang="html">
+        &lt;c-chart type=&quot;bar&quot; responsive=&quot;true&quot;&gt;<br />
+        &emsp;&lt;c-dataset labels=&#39;[&quot;Item 1&quot;,&quot;Item
+        2&quot;,&quot;Item 3&quot;,&quot;Item 4&quot;, &quot;Item
+        5&quot;,&quot;Item 6&quot;,&quot;Item 7&quot;]&#39;&gt;<br />
+        &emsp;&emsp;&lt;c-data label=&quot;Neutral&quot; detail=&quot;[40, 47,
+        44, 38, 27, 31, 25]&quot; backgroundcolor=&#39;rgba(50, 150, 237,
+        1)&#39; stack=&quot;1&quot;&gt;&lt;/c-data&gt;<br />
+        &emsp;&emsp;&lt;c-data label=&quot;Warning&quot; detail=&quot;[10, 12,
+        7, 5, 4, 6, 8]&quot; backgroundcolor=&#39;rgba(119, 185, 242, 1)&#39;
+        stack=&quot;1&quot;&gt;&lt;/c-data&gt;<br />
+        &emsp;&emsp;&lt;c-data label=&quot;Error&quot; detail=&quot;[17, 11, 22,
+        18, 12, 7, 5]&quot; backgroundcolor=&#39;rgba(157, 83, 242, 1)&#39;
+        stack=&quot;1&quot;&gt;&lt;/c-data&gt;<br />
+        &emsp;&lt;/c-dataset&gt;<br />
+        &emsp;&lt;c-cartesian-axis axis=&quot;x&quot; stacked=&quot;true&quot;
+        &gt;<br />
+        &emsp;&lt;/c-cartesian-axis&gt;<br />
+        &emsp;&lt;c-cartesian-axis axis=&quot;y&quot;
+        stacked=&quot;true&quot;&gt;&lt;/c-cartesian-axis&gt;<br />
+        &lt;/c-chart&gt;
+      </code>
+    </c-sample-app-item>
   </div>
 </template>

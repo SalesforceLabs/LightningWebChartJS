@@ -108,6 +108,7 @@ const TEST_DATA_PROPERTIES = [
     yAxes: [{ gridLines: { offsetGridLines: 1 } }]
   }),
   ChartOptionMock('gridZ', 1, { yAxes: [{ gridLines: { z: 1 } }] }),
+  ChartOptionMock('stacked', true, { yAxes: [{ stacked: true }] }),
   ChartOptionMock('axis', 'x', { xAxes: [{}] })
 ];
 

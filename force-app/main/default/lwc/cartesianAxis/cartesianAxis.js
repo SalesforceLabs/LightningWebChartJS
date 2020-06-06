@@ -337,6 +337,14 @@ export default class CartesianAxis extends BaseAxis {
     this._content.gridLines.z = Number(v);
   }
 
+  @api
+  get stacked() {
+    return this._content.stacked;
+  }
+  set stacked(v) {
+    this._content.stacked = Boolean(v);
+  }
+
   constructor() {
     super();
     this._axis = 'yAxes';
