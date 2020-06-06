@@ -52,6 +52,7 @@ Data components are included inside Datasets. They represent different sets of d
 | rotation | number | 0 | Bubble rotation (in degrees). | Bubble
 | showLine | boolean | undefined | If false, the line is not drawn for this dataset. | Line
 | spanGaps | boolean | undefined | If true, lines will be drawn between points with no or null data. If false, points with NaN data will create a break in the line. | Line, Radar
+| stack | string | undefined | The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack). | Bar
 | steppedLine | boolean/string | false | The following values are supported for steppedLine: (false, true, 'before', 'after', 'middle') | Line
 | weight | number | 1 | The relative thickness of the dataset. Providing a value for weight will cause the pie or doughnut dataset to be drawn with a thickness relative to the sum of all the dataset weight values. | Doughnut, Pie
 | xAxisID | string | first x axis | The ID of the x axis to plot this dataset on. | Line, Bar
