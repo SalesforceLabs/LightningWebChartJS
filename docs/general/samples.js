@@ -10051,6 +10051,56 @@ class Chart extends BaseLightningElement {
     this._uuid = v;
   }
 
+  get chartjsloadedCallback() {
+    return this._chartjsLoadedCallback;
+  }
+
+  set chartjsloadedCallback(v) {
+    this._chartjsLoadedCallback = v;
+
+    this._callChartjsloadedCallback();
+  }
+
+  get canvasOnchange() {
+    return this._canvasOnchange;
+  }
+
+  set canvasOnchange(v) {
+    this.getCanvas().removeEventListener('mouseover', this._canvasOnchange);
+    this._canvasOnchange = v;
+    this.getCanvas().addEventListener('change', this._canvasOnchange);
+  }
+
+  get canvasOnclick() {
+    return this._canvasOnclick;
+  }
+
+  set canvasOnclick(v) {
+    this.getCanvas().removeEventListener('mouseover', this._canvas_canvasOnclickOnmouseover);
+    this._canvasOnclick = v;
+    this.getCanvas().addEventListener('click', this._canvasOnclick);
+  }
+
+  get canvasOnmouseover() {
+    return this._canvasOnmouseover;
+  }
+
+  set canvasOnmouseover(v) {
+    this.getCanvas().removeEventListener('mouseover', this._canvasOnmouseover);
+    this._canvasOnmouseover = v;
+    this.getCanvas().addEventListener('mouseover', this._canvasOnmouseover);
+  }
+
+  get canvasOnmouseout() {
+    return this._canvasOnmouseout;
+  }
+
+  set canvasOnmouseout(v) {
+    this.getCanvas().removeEventListener('mouseover', this._canvasOnmouseout);
+    this._canvasOnmouseout = v;
+    this.getCanvas().addEventListener('mouseout', this._canvasOnmouseout);
+  }
+
   get responsive() {
     return this._payload.responsive;
   }
@@ -10192,51 +10242,63 @@ class Chart extends BaseLightningElement {
   }
 
   toBase64ImageChart() {
+    let res = null;
+
     if (this._chart) {
-      return this._chart.toBase64Image();
+      res = this._chart.toBase64Image();
     }
 
-    return null;
+    return res;
   }
 
   generateLegendChart() {
+    let res = null;
+
     if (this._chart) {
-      return this._chart.generateLegend();
+      res = this._chart.generateLegend();
     }
 
-    return null;
+    return res;
   }
 
   getElementAtEventChart(e) {
+    let res = null;
+
     if (this._chart) {
-      return this._chart.getElementAtEvent(e);
+      res = this._chart.getElementAtEvent(e);
     }
 
-    return null;
+    return res;
   }
 
   getElementsAtEventChart(e) {
+    let res = null;
+
     if (this._chart) {
-      return this._chart.getElementsAtEvent(e);
+      res = this._chart.getElementsAtEvent(e);
     }
 
-    return null;
+    return res;
   }
 
   getDatasetAtEventChart(e) {
+    let res = null;
+
     if (this._chart) {
-      return this._chart.getDatasetAtEvent(e);
+      res = this._chart.getDatasetAtEvent(e);
     }
 
-    return null;
+    return res;
   }
 
   getDatasetMetaChart(index) {
+    let res = null;
+
     if (this._chart) {
-      return this._chart.getDatasetMeta(index);
+      res = this._chart.getDatasetMeta(index);
     }
 
-    return null;
+    return res;
   }
 
   constructor() {
@@ -10245,6 +10307,11 @@ class Chart extends BaseLightningElement {
     this.height = void 0;
     this.stylecss = void 0;
     this._uuid = nanoid(11);
+    this._chartjsLoadedCallback = void 0;
+    this._canvasOnchange = void 0;
+    this._canvasOnclick = void 0;
+    this._canvasOnmouseover = void 0;
+    this._canvasOnmouseout = void 0;
     this.ariaLabel = void 0;
     this._listenerHandlers = {
       handleOption: evt => {
@@ -10274,16 +10341,17 @@ class Chart extends BaseLightningElement {
         } = evt.detail;
 
         if (option === ATTRIBUTE_DATA) {
-          this._details = payload;
+          this._details = null;
+          this.destroyChart();
         } else {
           if (option === ATTRIBUTE_TITLE) {
-            this.ariaLabel = payload.text;
+            this.ariaLabel = `${this._type} chart`;
           }
 
-          this._configService.updateConfig(payload, option);
-        }
+          this._configService.removeConfig(payload, option);
 
-        this._reactivityManager.throttleRegisteredJob();
+          this._reactivityManager.throttleRegisteredJob();
+        }
       }
     };
     this._baseChartInitialized = false;
@@ -10318,9 +10386,11 @@ class Chart extends BaseLightningElement {
     loadScript(this, ChartJS).then(() => {
       this._chartjsLoaded = true;
 
+      this._callChartjsloadedCallback();
+
       this._reactivityManager.throttleRegisteredJob();
     }, reason => {
-      console.error('[LWCC] Error loading Chart.js', reason);
+      this.errorCallback(reason);
     });
   }
 
@@ -10337,14 +10407,12 @@ class Chart extends BaseLightningElement {
   }
 
   getCanvas() {
-    let canvas = this.template.querySelector('canvas');
-
-    if (!canvas) {
-      canvas = document.createElement('canvas');
-      this.template.querySelector('div').appendChild(canvas);
+    if (!this._canvas) {
+      this._canvas = document.createElement('canvas');
+      this.template.querySelector('div').appendChild(this._canvas);
     }
 
-    return canvas.getContext('2d');
+    return this._canvas;
   }
 
   drawChart() {
@@ -10354,7 +10422,7 @@ class Chart extends BaseLightningElement {
       this._configService.updateConfig(this._payload, null);
 
       if (!this._chart || !this._chart.ctx) {
-        this._chart = new window.Chart(this.getCanvas(), {
+        this._chart = new window.Chart(this.getCanvas().getContext('2d'), {
           type: this._type,
           data: this._details,
           options: this._configService.getConfig()
@@ -10374,6 +10442,12 @@ class Chart extends BaseLightningElement {
     return this._chartjsLoaded && this._details && this._type;
   }
 
+  _callChartjsloadedCallback() {
+    if (this._chartjsLoaded === true && typeof this._chartjsLoadedCallback === 'function') {
+      this._chartjsLoadedCallback();
+    }
+  }
+
 }
 
 registerDecorators(Chart, {
@@ -10388,6 +10462,21 @@ registerDecorators(Chart, {
       config: 0
     },
     uuid: {
+      config: 3
+    },
+    chartjsloadedCallback: {
+      config: 3
+    },
+    canvasOnchange: {
+      config: 3
+    },
+    canvasOnclick: {
+      config: 3
+    },
+    canvasOnmouseover: {
+      config: 3
+    },
+    canvasOnmouseout: {
       config: 3
     },
     responsive: {
@@ -10422,7 +10511,7 @@ registerDecorators(Chart, {
     }
   },
   publicMethods: ["destroyChart", "updateChart", "resetChart", "renderChart", "stopChart", "resizeChart", "clearChart", "toBase64ImageChart", "generateLegendChart", "getElementAtEventChart", "getElementsAtEventChart", "getDatasetAtEventChart", "getDatasetMetaChart"],
-  fields: ["_uuid", "ariaLabel", "_listenerHandlers"]
+  fields: ["_uuid", "_chartjsLoadedCallback", "_canvasOnchange", "_canvasOnclick", "_canvasOnmouseover", "_canvasOnmouseout", "ariaLabel", "_listenerHandlers"]
 });
 
 var _cChart = registerComponent(Chart, {
@@ -10457,20 +10546,18 @@ class BaseAttribute extends BaseLightningElement {
     this._payload = this._reactivityManager.getReactivityProxy();
   }
 
-  renderedCallback() {
+  connectedCallback() {
     this._parent = this.template.host.parentNode;
   }
 
   disconnectedCallback() {
-    if (this._parent) {
-      this._parent.dispatchEvent(new CustomEvent(DISCONNECT_EVENT_NAME, {
-        bubbles: true,
-        detail: {
-          option: this._option,
-          payload: this._payload
-        }
-      }));
-    }
+    this._parent.dispatchEvent(new CustomEvent(DISCONNECT_EVENT_NAME, {
+      bubbles: true,
+      detail: {
+        option: this._option,
+        payload: this._payload
+      }
+    }));
   }
 
   dispatchOption() {
@@ -10543,44 +10630,20 @@ var _cDataset = registerComponent(Dataset, {
 });
 
 class Data extends BaseAttribute$1 {
-  get label() {
-    return this._payload.label;
-  }
-
-  set label(v) {
-    this._payload.label = v;
-  }
-
-  get yaxisid() {
-    return this._payload.yAxisID;
-  }
-
-  set yaxisid(v) {
-    this._payload.yAxisID = v;
-  }
-
-  get xaxisid() {
-    return this._payload.xAxisID;
-  }
-
-  set xaxisid(v) {
-    this._payload.xAxisID = v;
-  }
-
-  get detail() {
-    return this._payload.data;
-  }
-
-  set detail(v) {
-    this._payload.data = sanitize(v);
-  }
-
   get backgroundcolor() {
     return this._payload.backgroundColor;
   }
 
   set backgroundcolor(v) {
     this._payload.backgroundColor = sanitize(v);
+  }
+
+  get bordercapstyle() {
+    return this._payload.borderCapStyle;
+  }
+
+  set bordercapstyle(v) {
+    this._payload.borderCapStyle = v;
   }
 
   get bordercolor() {
@@ -10591,12 +10654,92 @@ class Data extends BaseAttribute$1 {
     this._payload.borderColor = sanitize(v);
   }
 
+  get borderdash() {
+    return this._payload.borderDash;
+  }
+
+  set borderdash(v) {
+    this._payload.borderDash = v;
+  }
+
+  get borderdashoffset() {
+    return this._payload.borderDashOffset;
+  }
+
+  set borderdashoffset(v) {
+    this._payload.borderDashOffset = v;
+  }
+
+  get borderjoinstyle() {
+    return this._payload.borderJoinStyle;
+  }
+
+  set borderjoinstyle(v) {
+    this._payload.borderJoinStyle = v;
+  }
+
   get borderwidth() {
     return this._payload.borderWidth;
   }
 
   set borderwidth(v) {
     this._payload.borderWidth = v;
+  }
+
+  get hoverbackgroundcolor() {
+    return this._payload.hoverBackgroundColor;
+  }
+
+  set hoverbackgroundcolor(v) {
+    this._payload.hoverBackgroundColor = sanitize(v);
+  }
+
+  get hoverbordercapstyle() {
+    return this._payload.hoverBorderCapStyle;
+  }
+
+  set hoverbordercapstyle(v) {
+    this._payload.hoverBorderCapStyle = v;
+  }
+
+  get hoverbordercolor() {
+    return this._payload.hoverBorderColor;
+  }
+
+  set hoverbordercolor(v) {
+    this._payload.hoverBorderColor = sanitize(v);
+  }
+
+  get hoverborderdash() {
+    return this._payload.hoverBorderDash;
+  }
+
+  set hoverborderdash(v) {
+    this._payload.hoverBorderDash = v;
+  }
+
+  get hoverborderdashoffset() {
+    return this._payload.hoverBorderDashOffset;
+  }
+
+  set hoverborderdashoffset(v) {
+    this._payload.hoverBorderDashOffset = v;
+  }
+
+  get hoverborderjoinstyle() {
+    return this._payload.hoverBorderJoinStyle;
+  }
+
+  set hoverborderjoinstyle(v) {
+    this._payload.hoverBorderJoinStyle = v;
+  }
+
+  get hoverborderwidth() {
+    return this._payload.hoverBorderWidth;
+  }
+
+  set hoverborderwidth(v) {
+    this._payload.hoverBorderWidth = v;
   }
 
   get fill() {
@@ -10607,20 +10750,52 @@ class Data extends BaseAttribute$1 {
     this._payload.fill = v;
   }
 
-  get order() {
-    return this._payload.order;
+  get label() {
+    return this._payload.label;
   }
 
-  set order(v) {
-    this._payload.order = Number.parseInt(v, 10);
+  set label(v) {
+    this._payload.label = v;
   }
 
-  get type() {
-    return this._payload.type;
+  get linetension() {
+    return this._payload.lineTension;
   }
 
-  set type(v) {
-    this._payload.type = v;
+  set linetension(v) {
+    this._payload.lineTension = v;
+  }
+
+  get pointbackgroundcolor() {
+    return this._payload.pointBackgroundColor;
+  }
+
+  set pointbackgroundcolor(v) {
+    this._payload.pointBackgroundColor = sanitize(v);
+  }
+
+  get pointbordercolor() {
+    return this._payload.pointBorderColor;
+  }
+
+  set pointbordercolor(v) {
+    this._payload.pointBorderColor = sanitize(v);
+  }
+
+  get pointborderwidth() {
+    return this._payload.pointBorderWidth;
+  }
+
+  set pointborderwidth(v) {
+    this._payload.pointBorderWidth = v;
+  }
+
+  get pointhitradius() {
+    return this._payload.pointHitRadius;
+  }
+
+  set pointhitradius(v) {
+    this._payload.pointHitRadius = v;
   }
 
   get pointhoverbackgroundcolor() {
@@ -10628,7 +10803,7 @@ class Data extends BaseAttribute$1 {
   }
 
   set pointhoverbackgroundcolor(v) {
-    this._payload.pointHoverBackgroundColor = v;
+    this._payload.pointHoverBackgroundColor = sanitize(v);
   }
 
   get pointhoverbordercolor() {
@@ -10636,7 +10811,7 @@ class Data extends BaseAttribute$1 {
   }
 
   set pointhoverbordercolor(v) {
-    this._payload.pointHoverBorderColor = v;
+    this._payload.pointHoverBorderColor = sanitize(v);
   }
 
   get pointhoverborderwidth() {
@@ -10655,6 +10830,174 @@ class Data extends BaseAttribute$1 {
     this._payload.pointHoverRadius = v;
   }
 
+  get pointradius() {
+    return this._payload.pointRadius;
+  }
+
+  set pointradius(v) {
+    this._payload.pointRadius = v;
+  }
+
+  get pointrotation() {
+    return this._payload.pointRotation;
+  }
+
+  set pointrotation(v) {
+    this._payload.pointRotation = v;
+  }
+
+  get pointstyle() {
+    return this._payload.pointStyle;
+  }
+
+  set pointstyle(v) {
+    this._payload.pointStyle = v;
+  }
+
+  get spangaps() {
+    return this._payload.spanGaps;
+  }
+
+  set spangaps(v) {
+    this._payload.spanGaps = v;
+  }
+
+  get stack() {
+    return this._payload.stack;
+  }
+
+  set stack(v) {
+    this._payload.stack = v;
+  }
+
+  get cubicinterpolationmode() {
+    return this._payload.cubicInterpolationMode;
+  }
+
+  set cubicinterpolationmode(v) {
+    this._payload.cubicInterpolationMode = v;
+  }
+
+  get clip() {
+    return this._payload.clip;
+  }
+
+  set clip(v) {
+    this._payload.clip = sanitize(v);
+  }
+
+  get showline() {
+    return this._payload.showLine;
+  }
+
+  set showline(v) {
+    this._payload.showLine = v;
+  }
+
+  get steppedline() {
+    return this._payload.steppedLine;
+  }
+
+  set steppedline(v) {
+    this._payload.steppedLine = v;
+  }
+
+  get xaxisid() {
+    return this._payload.xAxisID;
+  }
+
+  set xaxisid(v) {
+    this._payload.xAxisID = v;
+  }
+
+  get yaxisid() {
+    return this._payload.yAxisID;
+  }
+
+  set yaxisid(v) {
+    this._payload.yAxisID = v;
+  }
+
+  get borderskipped() {
+    return this._payload.borderSkipped;
+  }
+
+  set borderskipped(v) {
+    this._payload.borderSkipped = v;
+  }
+
+  get borderalign() {
+    return this._payload.borderAlign;
+  }
+
+  set borderalign(v) {
+    this._payload.borderAlign = v;
+  }
+
+  get weight() {
+    return this._payload.weight;
+  }
+
+  set weight(v) {
+    this._payload.weight = v;
+  }
+
+  get hoverradius() {
+    return this._payload.hoverRadius;
+  }
+
+  set hoverradius(v) {
+    this._payload.hoverRadius = v;
+  }
+
+  get hitradius() {
+    return this._payload.hitRadius;
+  }
+
+  set hitradius(v) {
+    this._payload.hitRadius = v;
+  }
+
+  get rotation() {
+    return this._payload.rotation;
+  }
+
+  set rotation(v) {
+    this._payload.rotation = v;
+  }
+
+  get radius() {
+    return this._payload.radius;
+  }
+
+  set radius(v) {
+    this._payload.radius = v;
+  }
+
+  get type() {
+    return this._payload.type;
+  }
+
+  set type(v) {
+    this._payload.type = v;
+  }
+
+  get detail() {
+    return this._payload.data;
+  }
+
+  set detail(v) {
+    this._payload.data = sanitize(v);
+  }
+
+  get order() {
+    return this._payload.order;
+  }
+
+  set order(v) {
+    this._payload.order = Number.parseInt(v, 10);
+  }
+
   constructor() {
     super();
     this._eventName = DATA_EVENT_NAME;
@@ -10666,34 +11009,67 @@ class Data extends BaseAttribute$1 {
 
 registerDecorators(Data, {
   publicProps: {
-    label: {
-      config: 3
-    },
-    yaxisid: {
-      config: 3
-    },
-    xaxisid: {
-      config: 3
-    },
-    detail: {
-      config: 3
-    },
     backgroundcolor: {
+      config: 3
+    },
+    bordercapstyle: {
       config: 3
     },
     bordercolor: {
       config: 3
     },
+    borderdash: {
+      config: 3
+    },
+    borderdashoffset: {
+      config: 3
+    },
+    borderjoinstyle: {
+      config: 3
+    },
     borderwidth: {
+      config: 3
+    },
+    hoverbackgroundcolor: {
+      config: 3
+    },
+    hoverbordercapstyle: {
+      config: 3
+    },
+    hoverbordercolor: {
+      config: 3
+    },
+    hoverborderdash: {
+      config: 3
+    },
+    hoverborderdashoffset: {
+      config: 3
+    },
+    hoverborderjoinstyle: {
+      config: 3
+    },
+    hoverborderwidth: {
       config: 3
     },
     fill: {
       config: 3
     },
-    order: {
+    label: {
       config: 3
     },
-    type: {
+    linetension: {
+      config: 3
+    },
+    pointbackgroundcolor: {
+      config: 3
+    },
+    pointbordercolor: {
+      config: 3
+    },
+    pointborderwidth: {
+      config: 3
+    },
+    pointhitradius: {
       config: 3
     },
     pointhoverbackgroundcolor: {
@@ -10706,6 +11082,69 @@ registerDecorators(Data, {
       config: 3
     },
     pointhoverradius: {
+      config: 3
+    },
+    pointradius: {
+      config: 3
+    },
+    pointrotation: {
+      config: 3
+    },
+    pointstyle: {
+      config: 3
+    },
+    spangaps: {
+      config: 3
+    },
+    stack: {
+      config: 3
+    },
+    cubicinterpolationmode: {
+      config: 3
+    },
+    clip: {
+      config: 3
+    },
+    showline: {
+      config: 3
+    },
+    steppedline: {
+      config: 3
+    },
+    xaxisid: {
+      config: 3
+    },
+    yaxisid: {
+      config: 3
+    },
+    borderskipped: {
+      config: 3
+    },
+    borderalign: {
+      config: 3
+    },
+    weight: {
+      config: 3
+    },
+    hoverradius: {
+      config: 3
+    },
+    hitradius: {
+      config: 3
+    },
+    rotation: {
+      config: 3
+    },
+    radius: {
+      config: 3
+    },
+    type: {
+      config: 3
+    },
+    detail: {
+      config: 3
+    },
+    order: {
       config: 3
     }
   }
@@ -11667,6 +12106,14 @@ class CartesianAxis extends BaseAxis$1 {
     this._content.gridLines.z = Number(v);
   }
 
+  get stacked() {
+    return this._content.stacked;
+  }
+
+  set stacked(v) {
+    this._content.stacked = Boolean(v);
+  }
+
   constructor() {
     super();
     this._axis = 'yAxes';
@@ -11798,6 +12245,9 @@ registerDecorators(CartesianAxis, {
       config: 3
     },
     gridZ: {
+      config: 3
+    },
+    stacked: {
       config: 3
     }
   }
@@ -12808,7 +13258,7 @@ function tmpl$3($api, $cmp, $slotset, $ctx) {
     styleMap: {
       "textAlign": "center"
     },
-    key: 215
+    key: 233
   }, [api_custom_element("c-sample-app-item", _cSampleAppItem, {
     key: 35
   }, [api_custom_element("c-chart", _cChart, {
@@ -13582,6 +14032,82 @@ function tmpl$3($api, $cmp, $slotset, $ctx) {
     key: 211
   }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"y\" ticks-stepsize=\"15\" position=\"right\" title-display=\"true\" title-labelstring=\"Linear axis\"></c-cartesian-linear-axis>"), api_element("br", {
     key: 212
+  }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 232
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
+    },
+    props: {
+      "type": "bar",
+      "responsive": "true"
+    },
+    key: 221
+  }, [api_custom_element("c-dataset", _cDataset, {
+    props: {
+      "labels": "[\"Item 1\", \"Item 2\", \"Item 3\", \"Item 4\", \"Item 5\", \"Item 6\", \"Item 7\"]"
+    },
+    key: 218
+  }, [api_custom_element("c-data", _cData, {
+    props: {
+      "label": "Neutral",
+      "detail": "[40, 47, 44, 38, 27, 31, 25]",
+      "backgroundcolor": "rgba(50, 150, 237, 1)",
+      "stack": "1"
+    },
+    key: 215
+  }, []), api_custom_element("c-data", _cData, {
+    props: {
+      "label": "Warning",
+      "detail": "[10, 12, 7, 5, 4, 6, 8]",
+      "backgroundcolor": "rgba(119, 185, 242, 1)",
+      "stack": "1"
+    },
+    key: 216
+  }, []), api_custom_element("c-data", _cData, {
+    props: {
+      "label": "Error",
+      "detail": "[17, 11, 22, 18, 12, 7, 5]",
+      "backgroundcolor": "rgba(157, 83, 242, 1)",
+      "stack": "1"
+    },
+    key: 217
+  }, [])]), api_custom_element("c-cartesian-axis", _cCartesianAxis, {
+    props: {
+      "axis": "x",
+      "stacked": "true"
+    },
+    key: 219
+  }, []), api_custom_element("c-cartesian-axis", _cCartesianAxis, {
+    props: {
+      "axis": "y",
+      "stacked": "true"
+    },
+    key: 220
+  }, [])]), api_element("code", {
+    attrs: {
+      "slot": "chartCode",
+      "lang": "html"
+    },
+    key: 231
+  }, [api_text("<c-chart type=\"bar\" responsive=\"true\">"), api_element("br", {
+    key: 222
+  }, []), api_text("\u2003<c-dataset labels='[\"Item 1\",\"Item 2\",\"Item 3\",\"Item 4\", \"Item 5\",\"Item 6\",\"Item 7\"]'>"), api_element("br", {
+    key: 223
+  }, []), api_text("\u2003\u2003<c-data label=\"Neutral\" detail=\"[40, 47, 44, 38, 27, 31, 25]\" backgroundcolor='rgba(50, 150, 237, 1)' stack=\"1\"></c-data>"), api_element("br", {
+    key: 224
+  }, []), api_text("\u2003\u2003<c-data label=\"Warning\" detail=\"[10, 12, 7, 5, 4, 6, 8]\" backgroundcolor='rgba(119, 185, 242, 1)' stack=\"1\"></c-data>"), api_element("br", {
+    key: 225
+  }, []), api_text("\u2003\u2003<c-data label=\"Error\" detail=\"[17, 11, 22, 18, 12, 7, 5]\" backgroundcolor='rgba(157, 83, 242, 1)' stack=\"1\"></c-data>"), api_element("br", {
+    key: 226
+  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+    key: 227
+  }, []), api_text("\u2003<c-cartesian-axis axis=\"x\" stacked=\"true\" >"), api_element("br", {
+    key: 228
+  }, []), api_text("\u2003</c-cartesian-axis>"), api_element("br", {
+    key: 229
+  }, []), api_text("\u2003<c-cartesian-axis axis=\"y\" stacked=\"true\"></c-cartesian-axis>"), api_element("br", {
+    key: 230
   }, []), api_text("</c-chart>")])])])];
 }
 
@@ -13599,23 +14125,13 @@ tmpl$3.stylesheetTokens = {
 class SampleApp extends BaseLightningElement {
   constructor(...args) {
     super(...args);
-    this.filterTypes = void 0;
+    this.filterTypes = [];
   }
 
   renderedCallback() {
-    if (!this.filterTypes) {
-      this.initializeChartTypesFilter();
+    if (this.filterTypes.length === 0) {
+      this.filterTypes = [...new Set([...this.template.querySelectorAll('c-chart')].map(chart => chart.type))];
     }
-  }
-
-  initializeChartTypesFilter() {
-    const items = [];
-    this.template.querySelectorAll('c-chart').forEach(chart => {
-      if (!items.includes(chart.type)) {
-        items.push(chart.type);
-      }
-    });
-    this.filterTypes = items;
   }
 
   displayAllCharts() {
