@@ -12,24 +12,22 @@ export default class BaseAttribute extends LightningElement {
   }
 
   // Attach parent to handle disconnectedCallback gracefully
-  renderedCallback() {
+  connectedCallback() {
     this._parent = this.template.host.parentNode;
   }
 
   // disconnectedCallback is called after having remove template
   // need to call the disconnect from on the parent
   disconnectedCallback() {
-    if (this._parent) {
-      this._parent.dispatchEvent(
-        new CustomEvent(DISCONNECT_EVENT_NAME, {
-          bubbles: true,
-          detail: {
-            option: this._option,
-            payload: this._payload
-          }
-        })
-      );
-    }
+    this._parent.dispatchEvent(
+      new CustomEvent(DISCONNECT_EVENT_NAME, {
+        bubbles: true,
+        detail: {
+          option: this._option,
+          payload: this._payload
+        }
+      })
+    );
   }
 
   // dispatch the _eventName event to the parent
