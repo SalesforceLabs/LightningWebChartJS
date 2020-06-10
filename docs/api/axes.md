@@ -21,8 +21,8 @@ Some characteristics of the axes in Chart.js 2 are:
 | Attribute name | Type | Default | Description
 | --- | --- | --- | ---
 | display | boolean|string | `true` | Controls the axis global visibility (visible when true, hidden when false). When display: 'auto', the axis is visible only if at least one associated dataset is visible
-| callbacks | object |  | Callback functions to hook into the axis lifecycle.[more...](https://www.chartjs.org/docs/latest/axes/#callbacks)
 | weight | number | 0 | The weight used to sort the axis. Higher weights are further away from the chart area.
+| tickCallback | function |  | Callback used for the ticks definition. Commonly used, for example, to change the tick marks in order to include information about the data type. Parameters: value, index, values. [more...](https://www.chartjs.org/docs/latest/axes/labelling.html#creating-custom-tick-formats)
 | callbackBeforeupdate | function |  | Callback called before the update process starts. Parameters: axis
 | callbackBeforesetdimensions | function |  | Callback that runs before dimensions are set. Parameters: axis
 | callbackAfterSetDimensions | function |  | Callback that runs after dimensions are set. Parameters: axis

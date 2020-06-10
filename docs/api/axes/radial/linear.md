@@ -41,18 +41,18 @@ The linear scale is used to chart numerical data. As the name suggests, linear i
 | pointlabelsFontsize | number | 10 | font size in pixels
 | pointlabelsFontstyle | string | `normal` | Font style to use when rendering point labels
 | pointlabelsLineheight | number / string | 1.2 | Height of an individual line of text ([See MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height))
-| ticksBackdropcolor | Color | `rgba(255, 255, 255, 0.75)` | Color of label backdrops
-| ticksBackdroppaddingx | number | 2 | Horizontal padding of label backdrop
-| ticksBackdroppaddingy | number | 2 | Vertical padding of label backdrop
-| ticksBeginatzero | boolean | FALSE | if true, scale will include 0 if it is not already included
-| ticksMin | number |  | User defined minimum number for the scale, overrides minimum value from data. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
-| ticksMax | number |  | User defined maximum number for the scale, overrides maximum value from data. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
-| ticksMaxtickslimit | number | 11 | Maximum number of ticks and gridlines to show
-| ticksPrecision | number |  | if defined and stepSize is not specified, the step size will be rounded to this many decimal places
-| ticksStepsize | number |  | User defined fixed step size for the scale. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#step-size)
-| ticksSuggestedmax | number |  | Adjustment used when calculating the maximum data value. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
-| ticksSuggestedmin | number |  | Adjustment used when calculating the minimum data value. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
-| ticksShowlabelbackdrop | boolean | TRUE | If true, draw a background behind the tick labels
+| tickBackdropcolor | Color | `rgba(255, 255, 255, 0.75)` | Color of label backdrops
+| tickBackdroppaddingx | number | 2 | Horizontal padding of label backdrop
+| tickBackdroppaddingy | number | 2 | Vertical padding of label backdrop
+| tickBeginatzero | boolean | FALSE | if true, scale will include 0 if it is not already included
+| tickMin | number |  | User defined minimum number for the scale, overrides minimum value from data. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
+| tickMax | number |  | User defined maximum number for the scale, overrides maximum value from data. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
+| tickMaxtickslimit | number | 11 | Maximum number of ticks and gridlines to show
+| tickPrecision | number |  | if defined and stepSize is not specified, the step size will be rounded to this many decimal places
+| tickStepsize | number |  | User defined fixed step size for the scale. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#step-size)
+| tickSuggestedmax | number |  | Adjustment used when calculating the maximum data value. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
+| tickSuggestedmin | number |  | Adjustment used when calculating the minimum data value. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
+| tickShowlabelbackdrop | boolean | TRUE | If true, draw a background behind the tick labels
 
 ## Usage
 

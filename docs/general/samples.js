@@ -11578,6 +11578,16 @@ class BaseAxis extends BaseAttribute$1 {
     this._content.weight = v;
   }
 
+  get tickCallback() {
+    this._content.ticks = this._content.ticks || {};
+    return this._content.ticks.callback;
+  }
+
+  set tickCallback(v) {
+    this._content.ticks = this._content.ticks || {};
+    this._content.ticks.callback = v;
+  }
+
   get callbackBeforeupdate() {
     this._content.callbacks = this._content.callbacks || {};
     return this._content.callbacks.beforeUpdate;
@@ -11733,6 +11743,9 @@ registerDecorators(BaseAxis, {
     weight: {
       config: 3
     },
+    tickCallback: {
+      config: 3
+    },
     callbackBeforeupdate: {
       config: 3
     },
@@ -11834,83 +11847,83 @@ class CartesianAxis extends BaseAxis$1 {
     this._content.id = v;
   }
 
-  get ticksMin() {
+  get tickMin() {
     return this._content.ticks.min;
   }
 
-  set ticksMin(v) {
+  set tickMin(v) {
     this._content.ticks.min = Number(v) || v;
   }
 
-  get ticksMax() {
+  get tickMax() {
     return this._content.ticks.max;
   }
 
-  set ticksMax(v) {
+  set tickMax(v) {
     this._content.ticks.max = Number(v) || v;
   }
 
-  get ticksSamplesize() {
+  get tickSamplesize() {
     return this._content.ticks.sampleSize;
   }
 
-  set ticksSamplesize(v) {
+  set tickSamplesize(v) {
     this._content.ticks.sampleSize = Number(v);
   }
 
-  get ticksAutoskip() {
+  get tickAutoskip() {
     return this._content.ticks.autoSkip;
   }
 
-  set ticksAutoskip(v) {
+  set tickAutoskip(v) {
     this._content.ticks.autoSkip = v;
   }
 
-  get ticksAutoskippadding() {
+  get tickAutoskippadding() {
     return this._content.ticks.autoSkipPadding;
   }
 
-  set ticksAutoskippadding(v) {
+  set tickAutoskippadding(v) {
     this._content.ticks.autoSkipPadding = Number(v);
   }
 
-  get ticksLabeloffset() {
+  get tickLabeloffset() {
     return this._content.ticks.labelOffset;
   }
 
-  set ticksLabeloffset(v) {
+  set tickLabeloffset(v) {
     this._content.ticks.labelOffset = Number(v);
   }
 
-  get ticksMaxrotation() {
+  get tickMaxrotation() {
     return this._content.ticks.maxRotation;
   }
 
-  set ticksMaxrotation(v) {
+  set tickMaxrotation(v) {
     this._content.ticks.maxRotation = Number(v);
   }
 
-  get ticksMinrotation() {
+  get tickMinrotation() {
     return this._content.ticks.minRotation;
   }
 
-  set ticksMinrotation(v) {
+  set tickMinrotation(v) {
     this._content.ticks.minRotation = Number(v);
   }
 
-  get ticksMirror() {
+  get tickMirror() {
     return this._content.ticks.mirror;
   }
 
-  set ticksMirror(v) {
+  set tickMirror(v) {
     this._content.ticks.mirror = v;
   }
 
-  get ticksPadding() {
+  get tickPadding() {
     return this._content.ticks.padding;
   }
 
-  set ticksPadding(v) {
+  set tickPadding(v) {
     this._content.ticks.padding = Number(v);
   }
 
@@ -12145,34 +12158,34 @@ registerDecorators(CartesianAxis, {
     id: {
       config: 3
     },
-    ticksMin: {
+    tickMin: {
       config: 3
     },
-    ticksMax: {
+    tickMax: {
       config: 3
     },
-    ticksSamplesize: {
+    tickSamplesize: {
       config: 3
     },
-    ticksAutoskip: {
+    tickAutoskip: {
       config: 3
     },
-    ticksAutoskippadding: {
+    tickAutoskippadding: {
       config: 3
     },
-    ticksLabeloffset: {
+    tickLabeloffset: {
       config: 3
     },
-    ticksMaxrotation: {
+    tickMaxrotation: {
       config: 3
     },
-    ticksMinrotation: {
+    tickMinrotation: {
       config: 3
     },
-    ticksMirror: {
+    tickMirror: {
       config: 3
     },
-    ticksPadding: {
+    tickPadding: {
       config: 3
     },
     titleDisplay: {
@@ -12258,11 +12271,11 @@ var _cCartesianAxis = registerComponent(CartesianAxis, {
 });
 
 class CartesianCategoryAxis extends _cCartesianAxis {
-  get ticksLabels() {
+  get tickLabels() {
     return this._content.ticks.labels;
   }
 
-  set ticksLabels(v) {
+  set tickLabels(v) {
     this._content.ticks.labels = v;
   }
 
@@ -12275,7 +12288,7 @@ class CartesianCategoryAxis extends _cCartesianAxis {
 
 registerDecorators(CartesianCategoryAxis, {
   publicProps: {
-    ticksLabels: {
+    tickLabels: {
       config: 3
     }
   }
@@ -13037,51 +13050,51 @@ var _cLineConfiguration = registerComponent(LineConfiguration, {
 });
 
 class CartesianLinearAxis extends _cCartesianAxis {
-  get ticksBeginatzero() {
+  get tickBeginatzero() {
     return this._content.ticks.beginAtZero;
   }
 
-  set ticksBeginatzero(v) {
+  set tickBeginatzero(v) {
     this._content.ticks.beginAtZero = Boolean(v);
   }
 
-  get ticksMaxtickslimit() {
+  get tickMaxtickslimit() {
     return this._content.ticks.maxTicksLimit;
   }
 
-  set ticksMaxtickslimit(v) {
+  set tickMaxtickslimit(v) {
     this._content.ticks.maxTicksLimit = Number(v);
   }
 
-  get ticksPrecision() {
+  get tickPrecision() {
     return this._content.ticks.precision;
   }
 
-  set ticksPrecision(v) {
+  set tickPrecision(v) {
     this._content.ticks.precision = v;
   }
 
-  get ticksStepsize() {
+  get tickStepsize() {
     return this._content.ticks.stepSize;
   }
 
-  set ticksStepsize(v) {
+  set tickStepsize(v) {
     this._content.ticks.stepSize = Number(v);
   }
 
-  get ticksSuggestedmax() {
+  get tickSuggestedmax() {
     return this._content.ticks.suggestedMax;
   }
 
-  set ticksSuggestedmax(v) {
+  set tickSuggestedmax(v) {
     this._content.ticks.suggestedMax = v;
   }
 
-  get ticksSuggestedmin() {
+  get tickSuggestedmin() {
     return this._content.ticks.suggestedMin;
   }
 
-  set ticksSuggestedmin(v) {
+  set tickSuggestedmin(v) {
     this._content.ticks.suggestedMin = v;
   }
 
@@ -13094,22 +13107,22 @@ class CartesianLinearAxis extends _cCartesianAxis {
 
 registerDecorators(CartesianLinearAxis, {
   publicProps: {
-    ticksBeginatzero: {
+    tickBeginatzero: {
       config: 3
     },
-    ticksMaxtickslimit: {
+    tickMaxtickslimit: {
       config: 3
     },
-    ticksPrecision: {
+    tickPrecision: {
       config: 3
     },
-    ticksStepsize: {
+    tickStepsize: {
       config: 3
     },
-    ticksSuggestedmax: {
+    tickSuggestedmax: {
       config: 3
     },
-    ticksSuggestedmin: {
+    tickSuggestedmin: {
       config: 3
     }
   }
@@ -13467,7 +13480,7 @@ function tmpl$3($api, $cmp, $slotset, $ctx) {
     props: {
       "axis": "y",
       "position": "right",
-      "ticksMin": "-10",
+      "tickMin": "-10",
       "titleDisplay": "true",
       "titleLabelstring": "yAxis items",
       "gridZerolinecolor": "rgba(225, 96, 50, 1",
@@ -13502,7 +13515,7 @@ function tmpl$3($api, $cmp, $slotset, $ctx) {
     key: 66
   }, []), api_text("\u2003<c-cartesian-axis axis=\"x\" position=\"top\" type=\"category\"></c-cartesian-axis>"), api_element("br", {
     key: 67
-  }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"y\" position=\"right\" ticks-min=\"-10\" title-display=\"true\""), api_element("br", {
+  }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"y\" position=\"right\" tick-min=\"-10\" title-display=\"true\""), api_element("br", {
     key: 68
   }, []), api_text("\u2003\u2003title-labelstring=\"yAxis items\" grid-zerolinecolor=\"rgba(225, 96, 50, 1\" grid-zerolinewidth=\"3\">"), api_element("br", {
     key: 69
@@ -13994,7 +14007,7 @@ function tmpl$3($api, $cmp, $slotset, $ctx) {
   }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
     props: {
       "axis": "y",
-      "ticksStepsize": "15",
+      "tickStepsize": "15",
       "position": "right",
       "titleDisplay": "true",
       "titleLabelstring": "Linear axis"
@@ -14030,7 +14043,7 @@ function tmpl$3($api, $cmp, $slotset, $ctx) {
     key: 210
   }, []), api_text("\u2003</c-cartesian-category-axis>"), api_element("br", {
     key: 211
-  }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"y\" ticks-stepsize=\"15\" position=\"right\" title-display=\"true\" title-labelstring=\"Linear axis\"></c-cartesian-linear-axis>"), api_element("br", {
+  }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"y\" tick-stepsize=\"15\" position=\"right\" title-display=\"true\" title-labelstring=\"Linear axis\"></c-cartesian-linear-axis>"), api_element("br", {
     key: 212
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
     key: 232

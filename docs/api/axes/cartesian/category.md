@@ -10,7 +10,7 @@ CartesianCategoryAxis inherits all the properties from [CartesianAxis]({{ "/docs
 
 | Attribute name | Type | Default | Description
 | --- | --- | --- | ---
-| ticksLabels | string[] | | An array of labels to display
+| tickLabels | string[] | | An array of labels to display
 
 ## Usage
 
