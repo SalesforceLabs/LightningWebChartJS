@@ -16,19 +16,15 @@ jobs:
       - name: 'Checkout source code'
         uses: actions/checkout@v2
 
-      # Cache node_modules to speed up the process
-      - name: Restore node_modules cache
-        id: cache-npm
-        uses: actions/cache@v1
+      - uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       # Install npm dependencies for Prettier and Jest
       - name: 'Install npm dependencies'
-        if: steps.cache-npm.outputs.cache-hit != 'true'
         run: npm install
 
       # Prettier formatting
@@ -38,6 +34,16 @@ jobs:
       # ESlint
       - name: 'Lint Lightning Web Components'
         run: npm run lint:lwc
+
+      # Unit tests
+      - name: 'Unit test Lightning Web Components'
+        run: npm run test:unit:coverage
+
+      # Upload LWC code coverage data
+      - name: 'Upload LWC code coverage'
+        uses: codecov/codecov-action@v1
+        with:
+          flag: lwc
 
       # Install PMD
       - name: Install PMD
@@ -57,21 +63,6 @@ jobs:
           mkdir sfdx-cli
           tar xJf sfdx-linux-amd64.tar.xz -C sfdx-cli --strip-components 1
           ./sfdx-cli/install
-
-      # Cache node_modules to speed up the process
-      - name: Restore node_modules cache
-        id: cache-npm
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      # Install npm dependencies for Prettier and Jest
-      - name: 'Install npm dependencies'
-        if: steps.cache-npm.outputs.cache-hit != 'true'
-        run: npm install
 
       # Checkout the code in the pull request
       - name: Checkout
@@ -103,16 +94,6 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           flag: apex
-
-      # Unit tests
-      - name: 'Unit test Lightning Web Components'
-        run: npm run test:unit:coverage
-
-      # Upload LWC code coverage data
-      - name: 'Upload LWC code coverage'
-        uses: codecov/codecov-action@v1
-        with:
-          flag: lwc
 
       # Housekeeping
       - name: 'Delete scratch org'
