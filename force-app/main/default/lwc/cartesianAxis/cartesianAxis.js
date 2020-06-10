@@ -62,82 +62,82 @@ export default class CartesianAxis extends BaseAxis {
 
   // Ticks Configuration: https://www.chartjs.org/docs/latest/axes/cartesian/#tick-configuration
   @api
-  get ticksMin() {
+  get tickMin() {
     return this._content.ticks.min;
   }
-  set ticksMin(v) {
+  set tickMin(v) {
     this._content.ticks.min = Number(v) || v;
   }
 
   @api
-  get ticksMax() {
+  get tickMax() {
     return this._content.ticks.max;
   }
-  set ticksMax(v) {
+  set tickMax(v) {
     this._content.ticks.max = Number(v) || v;
   }
 
   @api
-  get ticksSamplesize() {
+  get tickSamplesize() {
     return this._content.ticks.sampleSize;
   }
-  set ticksSamplesize(v) {
+  set tickSamplesize(v) {
     this._content.ticks.sampleSize = Number(v);
   }
 
   @api
-  get ticksAutoskip() {
+  get tickAutoskip() {
     return this._content.ticks.autoSkip;
   }
-  set ticksAutoskip(v) {
+  set tickAutoskip(v) {
     this._content.ticks.autoSkip = v;
   }
 
   @api
-  get ticksAutoskippadding() {
+  get tickAutoskippadding() {
     return this._content.ticks.autoSkipPadding;
   }
-  set ticksAutoskippadding(v) {
+  set tickAutoskippadding(v) {
     this._content.ticks.autoSkipPadding = Number(v);
   }
 
   @api
-  get ticksLabeloffset() {
+  get tickLabeloffset() {
     return this._content.ticks.labelOffset;
   }
-  set ticksLabeloffset(v) {
+  set tickLabeloffset(v) {
     this._content.ticks.labelOffset = Number(v);
   }
 
   @api
-  get ticksMaxrotation() {
+  get tickMaxrotation() {
     return this._content.ticks.maxRotation;
   }
-  set ticksMaxrotation(v) {
+  set tickMaxrotation(v) {
     this._content.ticks.maxRotation = Number(v);
   }
 
   @api
-  get ticksMinrotation() {
+  get tickMinrotation() {
     return this._content.ticks.minRotation;
   }
-  set ticksMinrotation(v) {
+  set tickMinrotation(v) {
     this._content.ticks.minRotation = Number(v);
   }
 
   @api
-  get ticksMirror() {
+  get tickMirror() {
     return this._content.ticks.mirror;
   }
-  set ticksMirror(v) {
+  set tickMirror(v) {
     this._content.ticks.mirror = v;
   }
 
   @api
-  get ticksPadding() {
+  get tickPadding() {
     return this._content.ticks.padding;
   }
-  set ticksPadding(v) {
+  set tickPadding(v) {
     this._content.ticks.padding = Number(v);
   }
 

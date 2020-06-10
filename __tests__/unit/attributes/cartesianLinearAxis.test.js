@@ -1,22 +1,22 @@
 import CartesianLinearAxis from 'c/cartesianLinearAxis';
 
 const TEST_DATA_PROPERTIES = [
-  ChartOptionMock('ticksBeginatzero', true, {
+  ChartOptionMock('tickBeginatzero', true, {
     yAxes: [{ ticks: { beginAtZero: true } }]
   }),
-  ChartOptionMock('ticksMaxtickslimit', 1, {
+  ChartOptionMock('tickMaxtickslimit', 1, {
     yAxes: [{ ticks: { maxTicksLimit: 1 } }]
   }),
-  ChartOptionMock('ticksPrecision', 'foo', {
+  ChartOptionMock('tickPrecision', 'foo', {
     yAxes: [{ ticks: { precision: 'foo' } }]
   }),
-  ChartOptionMock('ticksStepsize', 1, {
+  ChartOptionMock('tickStepsize', 1, {
     yAxes: [{ ticks: { stepSize: 1 } }]
   }),
-  ChartOptionMock('ticksSuggestedmax', '1', {
+  ChartOptionMock('tickSuggestedmax', '1', {
     yAxes: [{ ticks: { suggestedMax: '1' } }]
   }),
-  ChartOptionMock('ticksSuggestedmin', '1', {
+  ChartOptionMock('tickSuggestedmin', '1', {
     yAxes: [{ ticks: { suggestedMin: '1' } }]
   })
 ];

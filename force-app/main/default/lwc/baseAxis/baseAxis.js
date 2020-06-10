@@ -22,6 +22,16 @@ export default class BaseAxis extends BaseAttribute {
   }
 
   @api
+  get tickCallback() {
+    this._content.ticks = this._content.ticks || {};
+    return this._content.ticks.callback;
+  }
+  set tickCallback(v) {
+    this._content.ticks = this._content.ticks || {};
+    this._content.ticks.callback = v;
+  }
+
+  @api
   get callbackBeforeupdate() {
     this._content.callbacks = this._content.callbacks || {};
     return this._content.callbacks.beforeUpdate;

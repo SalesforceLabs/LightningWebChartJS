@@ -1,7 +1,7 @@
 import CartesianCategoryAxis from 'c/cartesianCategoryAxis';
 
 const TEST_DATA_PROPERTIES = [
-  ChartOptionMock('ticksLabels', 'foo', {
+  ChartOptionMock('tickLabels', 'foo', {
     yAxes: [{ ticks: { labels: 'foo' } }]
   })
 ];

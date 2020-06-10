@@ -8,34 +8,34 @@ const TEST_DATA_PROPERTIES = [
   }),
   ChartOptionMock('offset', 'foo', { yAxes: [{ offset: 'foo' }] }),
   ChartOptionMock('id', 'foo', { yAxes: [{ id: 'foo' }] }),
-  ChartOptionMock('ticksMin', 'foo', {
+  ChartOptionMock('tickMin', 'foo', {
     yAxes: [{ ticks: { min: 'foo' } }]
   }),
-  ChartOptionMock('ticksMax', 'foo', {
+  ChartOptionMock('tickMax', 'foo', {
     yAxes: [{ ticks: { max: 'foo' } }]
   }),
-  ChartOptionMock('ticksSamplesize', 1, {
+  ChartOptionMock('tickSamplesize', 1, {
     yAxes: [{ ticks: { sampleSize: 1 } }]
   }),
-  ChartOptionMock('ticksAutoskip', 'foo', {
+  ChartOptionMock('tickAutoskip', 'foo', {
     yAxes: [{ ticks: { autoSkip: 'foo' } }]
   }),
-  ChartOptionMock('ticksAutoskippadding', 1, {
+  ChartOptionMock('tickAutoskippadding', 1, {
     yAxes: [{ ticks: { autoSkipPadding: 1 } }]
   }),
-  ChartOptionMock('ticksLabeloffset', 1, {
+  ChartOptionMock('tickLabeloffset', 1, {
     yAxes: [{ ticks: { labelOffset: 1 } }]
   }),
-  ChartOptionMock('ticksMaxrotation', 1, {
+  ChartOptionMock('tickMaxrotation', 1, {
     yAxes: [{ ticks: { maxRotation: 1 } }]
   }),
-  ChartOptionMock('ticksMinrotation', 1, {
+  ChartOptionMock('tickMinrotation', 1, {
     yAxes: [{ ticks: { minRotation: 1 } }]
   }),
-  ChartOptionMock('ticksMirror', 'foo', {
+  ChartOptionMock('tickMirror', 'foo', {
     yAxes: [{ ticks: { mirror: 'foo' } }]
   }),
-  ChartOptionMock('ticksPadding', 1, {
+  ChartOptionMock('tickPadding', 1, {
     yAxes: [{ ticks: { padding: 1 } }]
   }),
   ChartOptionMock('titleDisplay', 'foo', {
