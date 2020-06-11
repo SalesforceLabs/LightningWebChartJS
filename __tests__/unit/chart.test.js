@@ -1,7 +1,17 @@
 import { createElement } from 'lwc';
 //import { loadScript } from 'lightning/platformResourceLoader';
 
-import { BAR_CHART_TYPE, LINE_CHART_TYPE } from 'c/constants';
+import {
+  BAR_CHART_TYPE,
+  BUBBLE_CHART_TYPE,
+  DOUGHNUT_CHART_TYPE,
+  HORIZONTALBAR_CHART_TYPE,
+  LINE_CHART_TYPE,
+  PIE_CHART_TYPE,
+  POLARAREA_CHART_TYPE,
+  RADAR_CHART_TYPE,
+  SCATTER_CHART_TYPE
+} from 'c/constants';
 
 import Chart from 'c/chart';
 import DataSet from 'c/dataset';
@@ -35,8 +45,14 @@ jest.mock(
 
 const CHARTS = [
   { class: Chart, type: BAR_CHART_TYPE },
-  { class: Chart, type: LINE_CHART_TYPE }
-  // TODO other type
+  { class: Chart, type: BUBBLE_CHART_TYPE },
+  { class: Chart, type: DOUGHNUT_CHART_TYPE },
+  { class: Chart, type: HORIZONTALBAR_CHART_TYPE },
+  { class: Chart, type: LINE_CHART_TYPE },
+  { class: Chart, type: PIE_CHART_TYPE },
+  { class: Chart, type: POLARAREA_CHART_TYPE },
+  { class: Chart, type: RADAR_CHART_TYPE },
+  { class: Chart, type: SCATTER_CHART_TYPE }
 ];
 
 describe('Chart: ChartJs library', () => {
@@ -111,7 +127,7 @@ describe.each(CHARTS)('DOM Tests for individual charts', chart => {
 });
 
 const TEST_DATA_PROPERTIES = [
-  //ChartOptionMock('uuid', 10, { uuid: 10 }),
+  ChartOptionMock('uuid', 10, { uuid: 10 }),
   ChartOptionMock('responsive', true, { responsive: true }),
   ChartOptionMock('responsiveanimationduration', 'foo', {
     responsiveAnimationDuration: 'foo'
@@ -122,8 +138,8 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('devicepixelratio', 'foo', { pointHoverBorderColor: 'foo' }),
   ChartOptionMock('events', 'foo', { events: 'foo' }),
   ChartOptionMock('callbackClick', 'foo', { onClick: 'foo' }),
-  ChartOptionMock('callbackHover', 'foo', { onHover: 'foo' })
-  //ChartOptionMock('type', BAR_CHART_TYPE, { type: BAR_CHART_TYPE }),
+  ChartOptionMock('callbackHover', 'foo', { onHover: 'foo' }),
+  ChartOptionMock('type', BAR_CHART_TYPE, { type: BAR_CHART_TYPE })
 ];
 
 describe('Chart: property', () => {

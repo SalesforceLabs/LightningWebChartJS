@@ -26,6 +26,7 @@ export const CARTESIAN_AXIS_TYPE_TIME = 'time';
 export const BAR_CHART_TYPE = 'bar';
 export const BUBBLE_CHART_TYPE = 'bubble';
 export const DOUGHNUT_CHART_TYPE = 'doughnut';
+export const HORIZONTALBAR_CHART_TYPE = 'horizontalBar';
 export const LINE_CHART_TYPE = 'line';
 export const PIE_CHART_TYPE = 'pie';
 export const POLARAREA_CHART_TYPE = 'polarArea';
