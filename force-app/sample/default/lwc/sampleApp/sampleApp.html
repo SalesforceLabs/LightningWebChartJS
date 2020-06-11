@@ -632,5 +632,43 @@
         &lt;/c-chart&gt;
       </code>
     </c-sample-app-item>
+
+    <!-- Horizontal Bar chart -->
+    <c-sample-app-item>
+      <c-chart slot="chartExample" type="horizontalBar" responsive="true">
+        <c-dataset
+          labels='["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7"]'
+        >
+          <c-data
+            label="# of Something"
+            detail="[40, 47, 44, 38, 27, 31, 25]"
+            backgroundcolor="rgba(255, 176, 59, 1)"
+          ></c-data>
+        </c-dataset>
+        <c-title text="Horizontal Bar Chart"></c-title>
+        <c-legend position="top"></c-legend>
+        <c-cartesian-category-axis
+          axis="y"
+          position="left"
+        ></c-cartesian-category-axis>
+      </c-chart>
+      <code slot="chartCode" lang="html">
+        &lt;c-chart type=&quot;horizontalBar&quot;
+        responsive=&quot;true&quot;&gt;<br />
+        &emsp;&lt;c-dataset labels=&#39;[&quot;Item 1&quot;, &quot;Item 2&quot;,
+        &quot;Item 3&quot;, &quot;Item 4&quot;, &quot;Item 5&quot;, &quot;Item
+        6&quot;, &quot;Item 7&quot;]&#39;&gt;<br />
+        &emsp;&emsp;&lt;c-data label=&quot;# of Something&quot;
+        detail=&quot;[40, 47, 44, 38, 27, 31, 25]&quot;
+        backgroundcolor=&quot;rgba(255, 176, 59, 1)&quot;&gt;&lt;/c-data&gt;<br />
+        &emsp;&lt;/c-dataset&gt;<br />
+        &emsp;&lt;c-title text=&quot;Horizontal Bar
+        Chart&quot;&gt;&lt;/c-title&gt;<br />
+        &emsp;&lt;c-legend position=&quot;top&quot;&gt;&lt;/c-legend&gt;<br />
+        &emsp;&lt;c-cartesian-category-axis axis=&quot;y&quot;
+        position=&quot;left&quot;&gt;&lt;/c-cartesian-category-axis&gt;<br />
+        &lt;/c-chart&gt;
+      </code>
+    </c-sample-app-item>
   </div>
 </template>
