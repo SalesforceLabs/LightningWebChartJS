@@ -85,7 +85,7 @@ sfdx force:auth:web:login -d -a myhuborg
 3. Clone the lwcc repository:
 
 ```
-git clone https://github.com/scolladon/lwcc
+git clone https://github.com/SalesforceLabs/LightningWebChartJS.git
 cd lwcc
 ```
 
