@@ -5,38 +5,35 @@
 	
 <div align="center">
 	<h3>Simple yet flexible charting Lightning Web Component using Chart.js for admins & developers</h3>
-	<a href="https://github.com/scolladon/lwcc/network/members">
+	<a href="https://github.com/SalesforceLabs/LightningWebChartJS/network/members">
     		<img alt="forks on github"
-		src="https://img.shields.io/github/forks/scolladon/lwcc?style=flat-square&logoColor=blue">
+		src="https://img.shields.io/github/forks/SalesforceLabs/LightningWebChartJS?style=flat-square&logoColor=blue">
   	</a>
-  	<a href="https://github.com/scolladon/lwcc/stargazers">
+  	<a href="https://github.com/SalesforceLabs/LightningWebChartJS/stargazers">
     		<img alt="stars on github"
-		src="https://img.shields.io/github/stars/scolladon/lwcc?style=flat-square">
+		src="https://img.shields.io/github/stars/SalesforceLabs/LightningWebChartJS?style=flat-square">
   	</a>
-  	<a href="https://github.com/scolladon/lwcc/watchers">
+  	<a href="https://github.com/SalesforceLabs/LightningWebChartJS/watchers">
     		<img alt="watchers"
-		src="https://img.shields.io/github/watchers/scolladon/lwcc?style=flat-square">
+		src="https://img.shields.io/github/watchers/SalesforceLabs/LightningWebChartJS?style=flat-square">
   	</a>
-  	<a href="https://github.com/scolladon/lwcc/issues">
+  	<a href="https://github.com/SalesforceLabs/LightningWebChartJS/issues">
     		<img alt="issues"
-		src="https://img.shields.io/github/issues-raw/scolladon/lwcc?style=flat-square">
+		src="https://img.shields.io/github/issues-raw/SalesforceLabs/LightningWebChartJS?style=flat-square">
   	</a>
-	<a href="https://codecov.io/gh/scolladon/lwcc">
-		<img alt="coverage" src="https://codecov.io/gh/scolladon/lwcc/branch/master/graph/badge.svg" />
-	</a>
 </div>
 
 ## Documentation
 
-- [Getting started](https://scolladon.github.io/lwcc/)
-- [API Documentation](https://scolladon.github.io/lwcc/docs/api.html)
-  - [Chart](https://scolladon.github.io/lwcc/docs/api/chart.html)
-  - [Data](https://scolladon.github.io/lwcc/docs/api/data.html)
-  - [Attributes](https://scolladon.github.io/lwcc/docs/api/attributes.html)
-  - [Axes](https://scolladon.github.io/lwcc/docs/api/axes.html)
-- [Samples](https://scolladon.github.io/lwcc/docs/general/samples.html)
-- [About the project](https://scolladon.github.io/lwcc/docs/general/about.html)
-- [Playground](https://scolladon.github.io/lwcc/docs/general/playground.html)
+- [Getting started](https://salesforcelabs.github.io/LightningWebChartJS/)
+- [API Documentation](https://salesforcelabs.github.io/LightningWebChartJS/docs/api.html)
+  - [Chart](https://salesforcelabs.github.io/LightningWebChartJS/docs/api/chart.html)
+  - [Data](https://salesforcelabs.github.io/LightningWebChartJS/docs/api/data.html)
+  - [Attributes](https://salesforcelabs.github.io/LightningWebChartJS/docs/api/attributes.html)
+  - [Axes](https://salesforcelabs.github.io/LightningWebChartJS/docs/api/axes.html)
+- [Samples](https://salesforcelabs.github.io/LightningWebChartJS/docs/general/samples.html)
+- [About the project](https://salesforcelabs.github.io/LightningWebChartJS/docs/general/about.html)
+- [Playground](https://salesforcelabs.github.io/LightningWebChartJS/docs/general/playground.html)
 
 ## Contributing
 
