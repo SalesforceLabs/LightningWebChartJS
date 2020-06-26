@@ -28,7 +28,7 @@
 - [Getting started](https://salesforcelabs.github.io/LightningWebChartJS/)
 - [API Documentation](https://salesforcelabs.github.io/LightningWebChartJS/docs/api.html)
   - [Chart](https://salesforcelabs.github.io/LightningWebChartJS/docs/api/chart.html)
-  - [Data](https://salesforcelabs.github.io/LightningWebChartJS/docs/api/data.html)
+  - [Data](https://salesforcelabs.github.io/LightningWebChartJS/docs/api/dataset/data.html)
   - [Attributes](https://salesforcelabs.github.io/LightningWebChartJS/docs/api/attributes.html)
   - [Axes](https://salesforcelabs.github.io/LightningWebChartJS/docs/api/axes.html)
 - [Samples](https://salesforcelabs.github.io/LightningWebChartJS/docs/general/samples.html)
