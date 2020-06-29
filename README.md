@@ -21,6 +21,10 @@
     		<img alt="issues"
 		src="https://img.shields.io/github/issues-raw/SalesforceLabs/LightningWebChartJS?style=flat-square">
   	</a>
+	<a href="https://opensource.org/licenses/MIT">
+		<img alt="licenses"
+		     src="https://img.shields.io/badge/License-MIT-yellow.svg">
+	</a>
 </div>
 
 ## Documentation
