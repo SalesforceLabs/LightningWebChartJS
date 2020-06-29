@@ -39,12 +39,6 @@ jobs:
       - name: 'Unit test Lightning Web Components'
         run: npm run test:unit:coverage
 
-      # Upload LWC code coverage data
-      - name: 'Upload LWC code coverage'
-        uses: codecov/codecov-action@v1
-        with:
-          flag: lwc
-
       # Install PMD
       - name: Install PMD
         run: wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.22.0/pmd-bin-6.22.0.zip && unzip pmd-bin-6.22.0.zip
@@ -88,12 +82,6 @@ jobs:
       # Run Apex tests in scratch org
       - name: 'Run Apex tests'
         run: npm run test:apex:coverage
-
-      # Upload Apex code coverage data
-      - name: 'Upload Apex code coverage'
-        uses: codecov/codecov-action@v1
-        with:
-          flag: apex
 
       # Housekeeping
       - name: 'Delete scratch org'
