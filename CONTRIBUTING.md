@@ -20,7 +20,7 @@ Before you start, familiarize yourself with [Lightning Web Components](https://l
 ### 1) Download the repository
 
 ```bash
-git clone git@github.com:scolladon/lwcc.git
+git clone git@github.com:SalesforceLabs/LightningWebChartJS.git
 ```
 
 ### 2) Install Dependencies
@@ -92,12 +92,12 @@ generally follows the same pattern each time:
 
 ### Fork the LWC repo
 
-[Fork][fork-a-repo] the [scolladon/lwcc](https://github.com/scolladon/lwcc) repo. Clone your fork in your local workspace and [configure][configuring-a-remote-for-a-fork] your remote repository settings.
+[Fork][fork-a-repo] the [SalesforceLabs/LightningWebChartJS](https://github.com/SalesforceLabs/LightningWebChartJS) repo. Clone your fork in your local workspace and [configure][configuring-a-remote-for-a-fork] your remote repository settings.
 
 ```bash
-git clone git@github.com:<YOUR-USERNAME>/lwcc.git
+git clone git@github.com:<YOUR-USERNAME>/LightningWebChartJS.git
 cd lwcc
-git remote add upstream git@github.com:scolladon/lwcc.git
+git remote add upstream git@github.com:SalesforceLabs/LightningWebChartJS.git
 ```
 
 ### Create a feature branch
