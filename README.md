@@ -25,6 +25,10 @@
 		<img alt="licenses"
 		     src="https://img.shields.io/badge/License-MIT-yellow.svg">
 	</a>
+	<a href="https://github.com/chartjs/awesome">
+		<img alt="awesome"
+		     src="https://awesome.re/badge-flat2.svg">
+	</a>
 </div>
 
 ## Documentation
