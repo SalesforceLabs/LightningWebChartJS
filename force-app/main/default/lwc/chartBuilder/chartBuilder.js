@@ -79,9 +79,6 @@ export default class ChartBuilder extends LightningElement {
       this.error = false;
     } catch (error) {
       this.errorCallback(error);
-      this._details = null;
-      this.detailsLabels = null;
-      this.dimensionsLabels = null;
     }
     this.isLoaded = true;
     return this._details;
@@ -137,6 +134,9 @@ export default class ChartBuilder extends LightningElement {
   errorCallback(error, stack) {
     this.error = error;
     this.stack = stack;
+    this._details = null;
+    this._detailsLabels = null;
+    this.dimensionsLabels = null;
   }
 
   handleError(evt) {
