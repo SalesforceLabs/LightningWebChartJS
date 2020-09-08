@@ -64,21 +64,23 @@ public inherited sharing virtual class SOQLDataProvider extends ChartDataProvide
       );
     }
 
-    final List<ChartDataProvider.ChartData> chartDatas = new List<ChartDataProvider.ChartData>();
     // When building the chart in the app builder and using :recordId in the query
     // The context is not set and :recordId is undefined
     // In this case we can't get not data but it is still possible to build the chart in the App Builder
     if (this.query.contains(UNDEFINED_RECORDID)) {
-      return chartDatas;
-    }
-    for (AggregateResult aResult : Database.query(this.query)) {
-      ChartDataProvider.ChartData aChartData = new ChartDataProvider.ChartData();
-      aChartData.label = (String) aResult.get(LABEL_ALIAS);
-      aChartData.detail = new List<Object>{ aResult.get(VALUE_ALIAS) };
-      chartDatas.Add(aChartData);
+      return new List<ChartDataProvider.ChartData>();
     }
 
-    return chartDatas;
+    final ChartDataProvider.ChartData aChartData = new ChartDataProvider.ChartData();
+    aChartData.labels = new List<String>();
+    aChartData.detail = new List<Object>();
+
+    for (AggregateResult aResult : Database.query(this.query)) {
+      aChartData.labels.add((String) aResult.get(LABEL_ALIAS));
+      aChartData.detail.add(aResult.get(VALUE_ALIAS));
+    }
+
+    return new List<ChartDataProvider.ChartData>{ aChartData };
   }
 
   public class SOQLDataProviderException extends Exception {

@@ -37,6 +37,7 @@ export default class ChartBuilder extends LightningElement {
   @api
   fill = false;
 
+  dimensionsLabels = [];
   _detailsLabels = [];
   @api
   get detailsLabels() {
@@ -44,7 +45,7 @@ export default class ChartBuilder extends LightningElement {
   }
   set detailsLabels(v) {
     try {
-      this._detailsLabels = JSON.parse(v);
+      this._detailsLabels = Array.isArray(v) ? v : JSON.parse(v);
     } catch (e) {
       this._detailsLabels = [];
     }
@@ -57,18 +58,21 @@ export default class ChartBuilder extends LightningElement {
   _details = [];
   @api
   get details() {
-    if (!this._details) {
-      return null;
-    }
-    let data;
+    return this._details;
+  }
+  set details(v) {
     try {
+      const data = v ? (Array.isArray(v) ? v : JSON.parse(v)) : [];
       // Build the data structure to use to iterate
       // and create data component in the template
       const palette = ChartBuilder.DEFAULT_PALETTE[this.colorPalette];
-      data = this._details.map((x, i) => {
+      this.dimensionsLabels = [...new Set(data.map(x => x.labels).flat())];
+      this._details = data.map((x, i) => {
         const val = { ...x };
+        val.labels = this._detailsLabels[i];
         val.uuid = val.uuid || nanoid(4);
-        val.bgColor = val.bgColor || palette[i % palette.length];
+        val.bgColor =
+          val.bgColor || val.detail.map((_, j) => palette[j % palette.length]);
         val.fill = this.fill;
         return val;
       });
@@ -76,14 +80,11 @@ export default class ChartBuilder extends LightningElement {
     } catch (error) {
       this.errorCallback(error);
       this._details = null;
-      data = null;
+      this.detailsLabels = null;
+      this.dimensionsLabels = null;
     }
-    return data;
-  }
-  set details(v) {
-    // Ensure value is clean from the AppBuilder
-    this._details = v ? (Array.isArray(v) ? v : JSON.parse(v)) : [];
     this.isLoaded = true;
+    return this._details;
   }
 
   _soql;

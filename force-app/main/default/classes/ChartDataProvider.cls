@@ -25,7 +25,7 @@ public inherited sharing abstract class ChartDataProvider {
      * @description contains the label for this data
      */
     @AuraEnabled
-    public String label;
+    public List<String> labels;
 
     /*******************************************************************************************************
      * @description contains the values for this data

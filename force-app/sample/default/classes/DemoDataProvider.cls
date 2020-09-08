@@ -20,14 +20,14 @@ public inherited sharing class DemoDataProvider extends ChartDataProvider {
   public override List<ChartDataProvider.ChartData> getData() {
     final List<ChartDataProvider.ChartData> chartDatas = new List<ChartDataProvider.ChartData>();
     ChartDataProvider.ChartData aChartData = new ChartDataProvider.ChartData();
-    aChartData.label = DEMO_LABEL;
+    aChartData.labels = DEMO_LABEL;
     aChartData.detail = DEMO_DATA;
     aChartData.bgColor = DEMO_COLOR;
     chartDatas.add(aChartData);
     return chartDatas;
   }
 
-  public static final String DEMO_LABEL = '';
+  public static final List<String> DEMO_LABEL = new List<String>{ '' };
   public static final List<Decimal> DEMO_DATA = new List<Decimal>{
     10,
     20,
