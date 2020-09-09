@@ -8,6 +8,14 @@ import {
 } from 'c/constants';
 import getChartData from '@salesforce/apex/ChartBuilderController.getChartData';
 
+const RADIAL_TYPE = [POLARAREA_CHART_TYPE, RADAR_CHART_TYPE];
+
+const DIMENSIONABLE_TYPES = [
+  DOUGHNUT_CHART_TYPE,
+  PIE_CHART_TYPE,
+  ...RADIAL_TYPE
+];
+
 export default class ChartBuilder extends LightningElement {
   containerClass = ChartBuilder.DEFAULT_CSS_CLASS;
 
@@ -131,16 +139,11 @@ export default class ChartBuilder extends LightningElement {
   }
 
   get isRadial() {
-    return [POLARAREA_CHART_TYPE, RADAR_CHART_TYPE].includes(this.type);
+    return RADIAL_TYPE.includes(this.type);
   }
 
   get isDimensionable() {
-    return [
-      DOUGHNUT_CHART_TYPE,
-      PIE_CHART_TYPE,
-      POLARAREA_CHART_TYPE,
-      RADAR_CHART_TYPE
-    ].includes(this.type);
+    return DIMENSIONABLE_TYPES.includes(this.type);
   }
 
   isLoaded = false;
