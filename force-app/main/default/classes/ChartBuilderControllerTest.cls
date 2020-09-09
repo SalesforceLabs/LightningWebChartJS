@@ -68,9 +68,9 @@ private class ChartBuilderControllerTest {
     );
     Test.stopTest();
     System.assertEquals(
-      ChartDataProviderTest.TEST_LABEL,
+      ChartDataProviderTest.TEST_LABELS,
       chartDatas[0].labels,
-      'chartDatas.label must equals ' + ChartDataProviderTest.TEST_LABEL
+      'chartDatas.label must equals ' + ChartDataProviderTest.TEST_LABELS
     );
     System.assertEquals(
       ChartDataProviderTest.TEST_DATA,

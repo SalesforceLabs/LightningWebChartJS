@@ -20,9 +20,9 @@ public class ChartDataProviderTest {
     final List<ChartDataProvider.ChartData> chartDatas = aChartDataProvider.getData();
     Test.stopTest();
     System.assertEquals(
-      TEST_LABEL,
+      TEST_LABELS,
       chartDatas[0].labels,
-      'chartDatas.label must equals ' + TEST_LABEL
+      'chartDatas.label must equals ' + TEST_LABELS
     );
     System.assertEquals(
       TEST_DATA,
@@ -46,14 +46,14 @@ public class ChartDataProviderTest {
     public override List<ChartDataProvider.ChartData> getData() {
       final List<ChartDataProvider.ChartData> chartDatas = new List<ChartDataProvider.ChartData>();
       ChartDataProvider.ChartData aChartData = new ChartDataProvider.ChartData();
-      aChartData.labels = TEST_LABEL;
+      aChartData.labels = TEST_LABELS;
       aChartData.detail = TEST_DATA;
       aChartData.bgColor = TEST_COLOR;
       chartDatas.add(aChartData);
       return chartDatas;
     }
   }
-  public static final List<String> TEST_LABEL = new List<String>{ 'test' };
+  public static final List<String> TEST_LABELS = new List<String>{ 'test' };
   public static final List<Decimal> TEST_DATA = new List<Decimal>{ 42 };
   public static final String TEST_COLOR = 'test';
 }
