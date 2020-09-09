@@ -1,6 +1,11 @@
 import { LightningElement, api } from 'lwc';
 import { nanoid } from 'c/nanoid';
-import { POLARAREA_CHART_TYPE, RADAR_CHART_TYPE } from 'c/constants';
+import {
+  POLARAREA_CHART_TYPE,
+  RADAR_CHART_TYPE,
+  PIE_CHART_TYPE,
+  DOUGHNUT_CHART_TYPE
+} from 'c/constants';
 import getChartData from '@salesforce/apex/ChartBuilderController.getChartData';
 
 export default class ChartBuilder extends LightningElement {
@@ -71,8 +76,11 @@ export default class ChartBuilder extends LightningElement {
         const val = { ...x };
         val.labels = this._detailsLabels[i];
         val.uuid = val.uuid || nanoid(4);
+        // Filter on type (pie doughnut radar polar area)
         val.bgColor =
-          val.bgColor || val.detail.map((_, j) => palette[j % palette.length]);
+          val.bgColor || this.isDimensionable
+            ? val.detail.map((_, j) => palette[j % palette.length])
+            : palette[i % palette.length];
         val.fill = this.fill;
         return val;
       });
@@ -81,7 +89,6 @@ export default class ChartBuilder extends LightningElement {
       this.errorCallback(error);
     }
     this.isLoaded = true;
-    return this._details;
   }
 
   _soql;
@@ -125,6 +132,15 @@ export default class ChartBuilder extends LightningElement {
 
   get isRadial() {
     return [POLARAREA_CHART_TYPE, RADAR_CHART_TYPE].includes(this.type);
+  }
+
+  get isDimensionable() {
+    return [
+      DOUGHNUT_CHART_TYPE,
+      PIE_CHART_TYPE,
+      POLARAREA_CHART_TYPE,
+      RADAR_CHART_TYPE
+    ].includes(this.type);
   }
 
   isLoaded = false;
