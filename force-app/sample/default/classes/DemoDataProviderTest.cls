@@ -21,7 +21,7 @@ private class DemoDataProviderTest {
     Test.stopTest();
     System.assertEquals(
       DemoDataProvider.DEMO_LABEL,
-      chartDatas[0].label,
+      chartDatas[0].labels,
       'chartDatas.label must equals ' + DemoDataProvider.DEMO_LABEL
     );
     System.assertEquals(

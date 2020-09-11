@@ -58,7 +58,7 @@ describe('call server and get chart data when', () => {
     element.handler = 'FakeHandler';
 
     return flushPromises().then(() => {
-      expect(element.details).toMatchObject([]);
+      expect(element.details).toBeNull();
     });
   });
 });

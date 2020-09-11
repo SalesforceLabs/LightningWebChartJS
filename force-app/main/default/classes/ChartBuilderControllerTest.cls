@@ -23,8 +23,8 @@ private class ChartBuilderControllerTest {
     );
     Test.stopTest();
     System.assertEquals(
-      OPPORTUNITY_STAGE_NAME,
-      chartDatas[0].label,
+      new List<String>{ OPPORTUNITY_STAGE_NAME },
+      chartDatas[0].labels,
       'chartDatas.label must equals ' + OPPORTUNITY_STAGE_NAME
     );
     System.assertEquals(
@@ -68,9 +68,9 @@ private class ChartBuilderControllerTest {
     );
     Test.stopTest();
     System.assertEquals(
-      ChartDataProviderTest.TEST_LABEL,
-      chartDatas[0].label,
-      'chartDatas.label must equals ' + ChartDataProviderTest.TEST_LABEL
+      ChartDataProviderTest.TEST_LABELS,
+      chartDatas[0].labels,
+      'chartDatas.label must equals ' + ChartDataProviderTest.TEST_LABELS
     );
     System.assertEquals(
       ChartDataProviderTest.TEST_DATA,

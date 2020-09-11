@@ -146,8 +146,8 @@ private class SOQLDataProviderTest {
     final List<ChartDataProvider.ChartData> chartDatas = aSOQLDataProvider.getData();
     Test.stopTest();
     System.assertEquals(
-      OPPORTUNITY_STAGE_NAME,
-      chartDatas[0].label,
+      new List<String>{ OPPORTUNITY_STAGE_NAME },
+      chartDatas[0].labels,
       'chartDatas.label must equals ' + OPPORTUNITY_STAGE_NAME
     );
     System.assertEquals(

@@ -10,11 +10,11 @@
           stylecss={styleCss}
           onlwccerror={handleError}
         >
-          <c-dataset labels={detailsLabels}>
+          <c-dataset labels={dimensionsLabels}>
             <template for:each={details} for:item="data">
               <c-data
                 key={data.uuid}
-                label={data.label}
+                label={data.labels}
                 detail={data.detail}
                 fill={data.fill}
                 bordercolor={data.bgColor}
@@ -35,7 +35,7 @@
           <template if:false={isRadial}>
             <c-cartesian-linear-axis
               axis="y"
-              ticks-beginatzero="true"
+              tick-beginatzero="true"
             ></c-cartesian-linear-axis>
           </template>
           <template if:true={isRadial}>

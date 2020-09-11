@@ -1,7 +1,20 @@
 import { LightningElement, api } from 'lwc';
 import { nanoid } from 'c/nanoid';
-import { POLARAREA_CHART_TYPE, RADAR_CHART_TYPE } from 'c/constants';
+import {
+  POLARAREA_CHART_TYPE,
+  RADAR_CHART_TYPE,
+  PIE_CHART_TYPE,
+  DOUGHNUT_CHART_TYPE
+} from 'c/constants';
 import getChartData from '@salesforce/apex/ChartBuilderController.getChartData';
+
+const RADIAL_TYPE = [POLARAREA_CHART_TYPE, RADAR_CHART_TYPE];
+
+const DIMENSIONABLE_TYPES = [
+  DOUGHNUT_CHART_TYPE,
+  PIE_CHART_TYPE,
+  ...RADIAL_TYPE
+];
 
 export default class ChartBuilder extends LightningElement {
   containerClass = ChartBuilder.DEFAULT_CSS_CLASS;
@@ -37,6 +50,7 @@ export default class ChartBuilder extends LightningElement {
   @api
   fill = false;
 
+  dimensionsLabels = [];
   _detailsLabels = [];
   @api
   get detailsLabels() {
@@ -44,7 +58,7 @@ export default class ChartBuilder extends LightningElement {
   }
   set detailsLabels(v) {
     try {
-      this._detailsLabels = JSON.parse(v);
+      this._detailsLabels = Array.isArray(v) ? v : JSON.parse(v);
     } catch (e) {
       this._detailsLabels = [];
     }
@@ -57,32 +71,31 @@ export default class ChartBuilder extends LightningElement {
   _details = [];
   @api
   get details() {
-    if (!this._details) {
-      return null;
-    }
-    let data;
+    return this._details;
+  }
+  set details(v) {
     try {
+      const data = v ? (Array.isArray(v) ? v : JSON.parse(v)) : [];
       // Build the data structure to use to iterate
       // and create data component in the template
       const palette = ChartBuilder.DEFAULT_PALETTE[this.colorPalette];
-      data = this._details.map((x, i) => {
+      this.dimensionsLabels = [...new Set(data.map(x => x.labels).flat())];
+      this._details = data.map((x, i) => {
         const val = { ...x };
+        val.labels = this._detailsLabels[i];
         val.uuid = val.uuid || nanoid(4);
-        val.bgColor = val.bgColor || palette[i % palette.length];
+        // Filter on type (pie doughnut radar polar area)
+        val.bgColor =
+          val.bgColor || this.isDimensionable
+            ? val.detail.map((_, j) => palette[j % palette.length])
+            : palette[i % palette.length];
         val.fill = this.fill;
         return val;
       });
       this.error = false;
     } catch (error) {
       this.errorCallback(error);
-      this._details = null;
-      data = null;
     }
-    return data;
-  }
-  set details(v) {
-    // Ensure value is clean from the AppBuilder
-    this._details = v ? (Array.isArray(v) ? v : JSON.parse(v)) : [];
     this.isLoaded = true;
   }
 
@@ -126,7 +139,11 @@ export default class ChartBuilder extends LightningElement {
   }
 
   get isRadial() {
-    return [POLARAREA_CHART_TYPE, RADAR_CHART_TYPE].includes(this.type);
+    return RADIAL_TYPE.includes(this.type);
+  }
+
+  get isDimensionable() {
+    return DIMENSIONABLE_TYPES.includes(this.type);
   }
 
   isLoaded = false;
@@ -136,6 +153,9 @@ export default class ChartBuilder extends LightningElement {
   errorCallback(error, stack) {
     this.error = error;
     this.stack = stack;
+    this._details = null;
+    this._detailsLabels = null;
+    this.dimensionsLabels = null;
   }
 
   handleError(evt) {
