@@ -1,5 +1,11 @@
 {
   "orgName": "LWCC",
   "edition": "Developer",
-  "features": []
+  "language": "en_US",
+  "features": ["Communities"],
+  "settings": {
+    "orgPreferenceSettings": {
+      "networksEnabled": true
+    }
+  }
 }
