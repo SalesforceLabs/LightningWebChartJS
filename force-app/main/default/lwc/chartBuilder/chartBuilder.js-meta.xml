@@ -91,7 +91,7 @@
         description="Define the chart values in a JSON array of object"
         required="false"
         default=""
-        placeholder="[{&quot;label&quot;:&quot;Data 1&quot;, &quot;detail&quot;:[1, 1]},{&quot;label&quot;:&quot;Data 2&quot;, &quot;detail&quot;:[2, 2]},...]"
+        placeholder="[{&quot;labels&quot;:&quot;Data 1&quot;, &quot;detail&quot;:[1, 1]},{&quot;labels&quot;:&quot;Data 2&quot;, &quot;detail&quot;:[2, 2]},...]"
         type="String"
       />
       <property
