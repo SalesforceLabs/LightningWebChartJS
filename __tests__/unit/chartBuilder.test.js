@@ -44,9 +44,11 @@ describe('call server and get chart data when', () => {
     element.handler = 'FakeHandler';
 
     return flushPromises().then(() => {
-      // Validate parameters of mocked Apex call
-      expect(element.details).toMatchObject(MOCK_GETCHARTDATA);
-      expect(element.handler).toEqual(element.handler);
+      flushPromises().then(() => {
+        // Validate parameters of mocked Apex call
+        expect(element.details).toMatchObject(MOCK_GETCHARTDATA);
+        expect(element.handler).toEqual(element.handler);
+      });
     });
   });
 
@@ -109,7 +111,7 @@ describe('test property', () => {
   });
 });
 
-const MOCK_GETCHARTDATA = [{ label: 'test', detail: [10] }];
+const MOCK_GETCHARTDATA = [{ labels: 'test', detail: [10] }];
 // Sample error for imperative Apex call
 const APEX_ERROR = {
   body: { message: 'An internal server error has occurred' },
