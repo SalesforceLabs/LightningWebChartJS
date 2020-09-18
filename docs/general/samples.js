@@ -9904,6 +9904,7 @@ const ATTRIBUTE_TITLE = 'title';
 const ATTRIBUTE_TOOLTIPS = 'tooltips';
 const CARTESIAN_AXIS_TYPE_CATEGORY = 'category';
 const CARTESIAN_AXIS_TYPE_LINEAR = 'linear';
+const CARTESIAN_AXIS_TYPE_TIME = 'time';
 
 var _tmpl$2 = void 0;
 
@@ -13205,6 +13206,159 @@ var _cArcConfiguration = registerComponent(ArcConfiguration, {
   tmpl: _tmpl$2
 });
 
+class CartesianTimeAxis extends _cCartesianAxis {
+  get adapterDate() {
+    return this._content.adapters.date;
+  }
+
+  set adapterDate(v) {
+    this._content.adapters.date = v;
+  }
+
+  get distribution() {
+    return this._content.distribution;
+  }
+
+  set distribution(v) {
+    this._content.distribution = v;
+  }
+
+  get bounds() {
+    return this._content.bounds;
+  }
+
+  set bounds(v) {
+    this._content.bounds = v;
+  }
+
+  get tickSource() {
+    return this._content.ticks.source;
+  }
+
+  set tickSource(v) {
+    this._content.ticks.source = v;
+  }
+
+  get timeDisplayformats() {
+    return this._content.time.displayFormats;
+  }
+
+  set timeDisplayformats(v) {
+    this._content.time.displayFormats = v;
+  }
+
+  get timeIsoweekday() {
+    return this._content.time.isoWeekday;
+  }
+
+  set timeIsoweekday(v) {
+    this._content.time.isoWeekday = Boolean(v);
+  }
+
+  get timeParser() {
+    return this._content.time.parser;
+  }
+
+  set timeParser(v) {
+    this._content.time.parser = v;
+  }
+
+  get timeRound() {
+    return this._content.time.round;
+  }
+
+  set timeRound(v) {
+    this._content.time.round = v;
+  }
+
+  get timeTooltipformat() {
+    return this._content.time.tooltipFormat;
+  }
+
+  set timeTooltipformat(v) {
+    this._content.time.tooltipFormat = v;
+  }
+
+  get timeUnit() {
+    return this._content.time.unit;
+  }
+
+  set timeUnit(v) {
+    this._content.time.unit = v;
+  }
+
+  get timeStepsize() {
+    return this._content.time.stepSize;
+  }
+
+  set timeStepsize(v) {
+    this._content.time.stepSize = Number(v);
+  }
+
+  get timeMinunit() {
+    return this._content.time.minUnit;
+  }
+
+  set timeMinunit(v) {
+    this._content.time.minUnit = v;
+  }
+
+  constructor() {
+    super();
+    this._timeMinunit = void 0;
+    this._content.type = CARTESIAN_AXIS_TYPE_TIME;
+    this._content.adapters = {};
+    this._content.time = {};
+  }
+
+}
+
+registerDecorators(CartesianTimeAxis, {
+  publicProps: {
+    adapterDate: {
+      config: 3
+    },
+    distribution: {
+      config: 3
+    },
+    bounds: {
+      config: 3
+    },
+    tickSource: {
+      config: 3
+    },
+    timeDisplayformats: {
+      config: 3
+    },
+    timeIsoweekday: {
+      config: 3
+    },
+    timeParser: {
+      config: 3
+    },
+    timeRound: {
+      config: 3
+    },
+    timeTooltipformat: {
+      config: 3
+    },
+    timeUnit: {
+      config: 3
+    },
+    timeStepsize: {
+      config: 3
+    },
+    timeMinunit: {
+      config: 3
+    }
+  },
+  fields: ["_timeMinunit"]
+});
+
+var _cCartesianTimeAxis = registerComponent(CartesianTimeAxis, {
+  tmpl: _tmpl$2
+});
+
 function tmpl$3($api, $cmp, $slotset, $ctx) {
   const {
     t: api_text,
@@ -13271,7 +13425,7 @@ function tmpl$3($api, $cmp, $slotset, $ctx) {
     styleMap: {
       "textAlign": "center"
     },
-    key: 233
+    key: 269
   }, [api_custom_element("c-sample-app-item", _cSampleAppItem, {
     key: 35
   }, [api_custom_element("c-chart", _cChart, {
@@ -14046,7 +14200,7 @@ function tmpl$3($api, $cmp, $slotset, $ctx) {
   }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"y\" tick-stepsize=\"15\" position=\"right\" title-display=\"true\" title-labelstring=\"Linear axis\"></c-cartesian-linear-axis>"), api_element("br", {
     key: 212
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 232
+    key: 233
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -14055,7 +14209,7 @@ function tmpl$3($api, $cmp, $slotset, $ctx) {
       "type": "bar",
       "responsive": "true"
     },
-    key: 221
+    key: 222
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"Item 1\", \"Item 2\", \"Item 3\", \"Item 4\", \"Item 5\", \"Item 6\", \"Item 7\"]"
@@ -14085,42 +14239,187 @@ function tmpl$3($api, $cmp, $slotset, $ctx) {
       "stack": "1"
     },
     key: 217
-  }, [])]), api_custom_element("c-cartesian-axis", _cCartesianAxis, {
+  }, [])]), api_custom_element("c-title", _cTitle, {
+    props: {
+      "text": "Stacked Bar Chart"
+    },
+    key: 219
+  }, []), api_custom_element("c-cartesian-axis", _cCartesianAxis, {
     props: {
       "axis": "x",
       "stacked": "true"
     },
-    key: 219
+    key: 220
   }, []), api_custom_element("c-cartesian-axis", _cCartesianAxis, {
     props: {
       "axis": "y",
       "stacked": "true"
     },
-    key: 220
+    key: 221
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 231
+    key: 232
   }, [api_text("<c-chart type=\"bar\" responsive=\"true\">"), api_element("br", {
-    key: 222
-  }, []), api_text("\u2003<c-dataset labels='[\"Item 1\",\"Item 2\",\"Item 3\",\"Item 4\", \"Item 5\",\"Item 6\",\"Item 7\"]'>"), api_element("br", {
     key: 223
-  }, []), api_text("\u2003\u2003<c-data label=\"Neutral\" detail=\"[40, 47, 44, 38, 27, 31, 25]\" backgroundcolor='rgba(50, 150, 237, 1)' stack=\"1\"></c-data>"), api_element("br", {
+  }, []), api_text("\u2003<c-dataset labels='[\"Item 1\",\"Item 2\",\"Item 3\",\"Item 4\", \"Item 5\",\"Item 6\",\"Item 7\"]'>"), api_element("br", {
     key: 224
-  }, []), api_text("\u2003\u2003<c-data label=\"Warning\" detail=\"[10, 12, 7, 5, 4, 6, 8]\" backgroundcolor='rgba(119, 185, 242, 1)' stack=\"1\"></c-data>"), api_element("br", {
+  }, []), api_text("\u2003\u2003<c-data label=\"Neutral\" detail=\"[40, 47, 44, 38, 27, 31, 25]\" backgroundcolor='rgba(50, 150, 237, 1)' stack=\"1\"></c-data>"), api_element("br", {
     key: 225
-  }, []), api_text("\u2003\u2003<c-data label=\"Error\" detail=\"[17, 11, 22, 18, 12, 7, 5]\" backgroundcolor='rgba(157, 83, 242, 1)' stack=\"1\"></c-data>"), api_element("br", {
+  }, []), api_text("\u2003\u2003<c-data label=\"Warning\" detail=\"[10, 12, 7, 5, 4, 6, 8]\" backgroundcolor='rgba(119, 185, 242, 1)' stack=\"1\"></c-data>"), api_element("br", {
     key: 226
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("\u2003\u2003<c-data label=\"Error\" detail=\"[17, 11, 22, 18, 12, 7, 5]\" backgroundcolor='rgba(157, 83, 242, 1)' stack=\"1\"></c-data>"), api_element("br", {
     key: 227
-  }, []), api_text("\u2003<c-cartesian-axis axis=\"x\" stacked=\"true\" >"), api_element("br", {
+  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
     key: 228
-  }, []), api_text("\u2003</c-cartesian-axis>"), api_element("br", {
+  }, []), api_text("\u2003<c-cartesian-axis axis=\"x\" stacked=\"true\" >"), api_element("br", {
     key: 229
-  }, []), api_text("\u2003<c-cartesian-axis axis=\"y\" stacked=\"true\"></c-cartesian-axis>"), api_element("br", {
+  }, []), api_text("\u2003</c-cartesian-axis>"), api_element("br", {
     key: 230
+  }, []), api_text("\u2003<c-cartesian-axis axis=\"y\" stacked=\"true\"></c-cartesian-axis>"), api_element("br", {
+    key: 231
+  }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 250
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
+    },
+    props: {
+      "type": "horizontalBar",
+      "responsive": "true"
+    },
+    key: 240
+  }, [api_custom_element("c-dataset", _cDataset, {
+    props: {
+      "labels": "[\"Group 1\", \"Group 2\", \"Group 3\", \"Group 4\", \"Group 5\", \"Group 6\"]"
+    },
+    key: 235
+  }, [api_custom_element("c-data", _cData, {
+    props: {
+      "label": "# of Items",
+      "detail": "[12, 19, 7, 9, 5, 15]",
+      "backgroundcolor": "rgba(255, 176, 59, 1)",
+      "bordercolor": "rgba(255, 176, 59, 1)",
+      "borderwidth": "1"
+    },
+    key: 234
+  }, [])]), api_custom_element("c-title", _cTitle, {
+    props: {
+      "text": "Horizontal Chart"
+    },
+    key: 236
+  }, []), api_custom_element("c-legend", _cLegend, {
+    props: {
+      "position": "bottom"
+    },
+    key: 237
+  }, []), api_custom_element("c-cartesian-category-axis", _cCartesianCategoryAxis, {
+    props: {
+      "axis": "y",
+      "position": "left"
+    },
+    key: 238
+  }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
+    props: {
+      "axis": "x",
+      "tickBeginatzero": "true"
+    },
+    key: 239
+  }, [])]), api_element("code", {
+    attrs: {
+      "slot": "chartCode",
+      "lang": "html"
+    },
+    key: 249
+  }, [api_text("<c-chart type=\"horizontalBar\" responsive=\"true\">"), api_element("br", {
+    key: 241
+  }, []), api_text("\u2003<c-dataset labels='[\"Group 1\", \"Group 2\", \"Group 3\", \"Group 4\", \"Group 5\", \"Group 6\"]'>"), api_element("br", {
+    key: 242
+  }, []), api_text("\u2003\u2003<c-data label=\"# of Items\" detail=\"[12, 19, 7, 9, 5, 15]\" backgroundcolor=\"rgba(255, 176, 59, 1)\" bordercolor=\"rgba(255, 176, 59, 1)\" borderwidth=\"1\"></c-data>"), api_element("br", {
+    key: 243
+  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+    key: 244
+  }, []), api_text("\u2003<c-title text=\"Horizontal Chart\"></c-title>"), api_element("br", {
+    key: 245
+  }, []), api_text("\u2003<c-legend position=\"bottom\"></c-legend>"), api_element("br", {
+    key: 246
+  }, []), api_text("\u2003<c-cartesian-category-axis axis=\"y\" position=\"left\"></c-cartesian-category-axis>"), api_element("br", {
+    key: 247
+  }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"x\" tick-beginatzero=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+    key: 248
+  }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 268
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
+    },
+    props: {
+      "type": "line",
+      "responsive": "true"
+    },
+    key: 256
+  }, [api_custom_element("c-dataset", _cDataset, {
+    key: 252
+  }, [api_custom_element("c-data", _cData, {
+    props: {
+      "label": "Stock price",
+      "detail": "[\\{\"y\":30,\"x\":\"2020-08-20T00:00:00.000Z\"\\},\\{\"y\":25,\"x\":\"2020-08-21T00:00:00.000Z\"\\},\\{\"y\":50,\"x\":\"2020-08-23T00:00:00.000Z\"\\},\\{\"y\":70,\"x\":\"2020-08-29T00:00:00.000Z\"\\}]",
+      "bordercolor": "rgba(119, 185, 242, 1)",
+      "backgroundcolor": "rgba(119, 185, 242, 1)",
+      "borderwidth": "1",
+      "fill": "false"
+    },
+    key: 251
+  }, [])]), api_custom_element("c-title", _cTitle, {
+    props: {
+      "text": "Linear Time Chart"
+    },
+    key: 253
+  }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
+    props: {
+      "axis": "y",
+      "position": "left",
+      "display": "true",
+      "tickBeginatzero": "true"
+    },
+    key: 254
+  }, []), api_custom_element("c-cartesian-time-axis", _cCartesianTimeAxis, {
+    props: {
+      "axis": "x",
+      "timeUnit": "day",
+      "display": "true",
+      "tickSource": "data",
+      "bounds": "ticks"
+    },
+    key: 255
+  }, [])]), api_element("code", {
+    attrs: {
+      "slot": "chartCode",
+      "lang": "html"
+    },
+    key: 267
+  }, [api_text("<c-chart type=\"line\" responsive=\"true\">"), api_element("br", {
+    key: 257
+  }, []), api_text("\u2003<c-dataset>"), api_element("br", {
+    key: 258
+  }, []), api_text("\u2003\u2003<c-data label=\"Stock price\" bordercolor=\"rgba(119, 185, 242, 1)\" backgroundcolor=\"rgba(119, 185, 242, 1)\" borderwidth=\"1\" fill=\"false\""), api_element("br", {
+    key: 259
+  }, []), api_text("\u2003\u2003\u2003detail='[\\{\"y\":30,\"x\":\"2020-08-20T00:00:00.000Z\"\\},\\{\"y\":25,\"x\":\"2020-08-21T00:00:00.000Z\"\\},\\{\"y\":50,\"x\":\"2020-08-23T00:00:00.000Z\"\\},\\{\"y\":70,\"x\":\"2020-08-29T00:00:00.000Z\"\\}]'>"), api_element("br", {
+    key: 260
+  }, []), api_text("\u2003\u2003</c-data>"), api_element("br", {
+    key: 261
+  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+    key: 262
+  }, []), api_text("\u2003<c-title text=\"Linear Time Chart\"></c-title>"), api_element("br", {
+    key: 263
+  }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"y\" position=\"left\" display=\"true\" tick-beginatzero=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+    key: 264
+  }, []), api_text("\u2003<c-cartesian-time-axis axis=\"x\" time-unit=\"day\" display=\"true\" tick-source=\"data\" bounds=\"ticks\">"), api_element("br", {
+    key: 265
+  }, []), api_text("\u2003</c-cartesian-time-axis>"), api_element("br", {
+    key: 266
   }, []), api_text("</c-chart>")])])])];
 }
 
