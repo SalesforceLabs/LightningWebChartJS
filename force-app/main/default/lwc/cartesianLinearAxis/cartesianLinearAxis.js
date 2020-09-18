@@ -7,50 +7,50 @@ import { CARTESIAN_AXIS_TYPE_LINEAR } from 'c/constants';
  */
 export default class CartesianLinearAxis extends CartesianAxis {
   @api
-  get tickBeginatzero() {
+  get ticksBeginatzero() {
     return this._content.ticks.beginAtZero;
   }
-  set tickBeginatzero(v) {
+  set ticksBeginatzero(v) {
     this._content.ticks.beginAtZero = Boolean(v);
   }
 
   @api
-  get tickMaxtickslimit() {
+  get ticksMaxtickslimit() {
     return this._content.ticks.maxTicksLimit;
   }
-  set tickMaxtickslimit(v) {
+  set ticksMaxtickslimit(v) {
     this._content.ticks.maxTicksLimit = Number(v);
   }
 
   @api
-  get tickPrecision() {
+  get ticksPrecision() {
     return this._content.ticks.precision;
   }
-  set tickPrecision(v) {
+  set ticksPrecision(v) {
     this._content.ticks.precision = v;
   }
 
   @api
-  get tickStepsize() {
+  get ticksStepsize() {
     return this._content.ticks.stepSize;
   }
-  set tickStepsize(v) {
+  set ticksStepsize(v) {
     this._content.ticks.stepSize = Number(v);
   }
 
   @api
-  get tickSuggestedmax() {
+  get ticksSuggestedmax() {
     return this._content.ticks.suggestedMax;
   }
-  set tickSuggestedmax(v) {
+  set ticksSuggestedmax(v) {
     this._content.ticks.suggestedMax = v;
   }
 
   @api
-  get tickSuggestedmin() {
+  get ticksSuggestedmin() {
     return this._content.ticks.suggestedMin;
   }
-  set tickSuggestedmin(v) {
+  set ticksSuggestedmin(v) {
     this._content.ticks.suggestedMin = v;
   }
 

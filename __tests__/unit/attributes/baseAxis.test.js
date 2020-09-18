@@ -3,7 +3,7 @@ import BaseAxis from 'c/baseAxis';
 const TEST_DATA_PROPERTIES = [
   ChartOptionMock('display', true, { display: true }),
   ChartOptionMock('weight', 'foo', { weight: 'foo' }),
-  ChartOptionMock('tickCallback', 'foo', {
+  ChartOptionMock('ticksCallback', 'foo', {
     ticks: { callback: 'foo' }
   }),
   ChartOptionMock('callbackBeforeupdate', 'foo', {
