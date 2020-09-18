@@ -7,10 +7,10 @@ import { CARTESIAN_AXIS_TYPE_CATEGORY } from 'c/constants';
  */
 export default class CartesianCategoryAxis extends CartesianAxis {
   @api
-  get tickLabels() {
+  get ticksLabels() {
     return this._content.ticks.labels;
   }
-  set tickLabels(v) {
+  set ticksLabels(v) {
     this._content.ticks.labels = v;
   }
 

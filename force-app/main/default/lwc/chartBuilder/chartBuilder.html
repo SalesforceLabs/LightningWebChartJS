@@ -35,12 +35,12 @@
           <template if:false={isRadial}>
             <c-cartesian-linear-axis
               axis="y"
-              tick-beginatzero="true"
+              ticks-beginatzero="true"
             ></c-cartesian-linear-axis>
           </template>
           <template if:true={isRadial}>
             <c-radial-linear-axis
-              tick-beginatzero="true"
+              ticks-beginatzero="true"
             ></c-radial-linear-axis>
           </template>
         </c-chart>
