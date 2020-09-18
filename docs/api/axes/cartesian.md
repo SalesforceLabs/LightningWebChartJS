@@ -18,16 +18,16 @@ Axes that follow a cartesian grid are known as 'Cartesian Axes'. Cartesian axes 
 | offset | boolean | FALSE | If true, extra space is added to the both edges and the axis is scaled to fit into the chart area. This is set to true for a bar chart by default
 | id | string |  | The ID is used to link datasets and scale axes together. 
 | stacked | boolean |  | User defined if the bar chart is stacked. 
-| tickMin | number |  | User defined minimum value for the scale, overrides minimum value from data
-| tickMax | number |  | User defined maximum value for the scale, overrides maximum value from data
-| tickSamplesize | number | tick.length | The number of ticks to examine when deciding how many labels will fit. Setting a smaller value will be faster, but may be less accurate when there is large variability in label length
-| tickAutoskip | boolean | TRUE | If true, automatically calculates how many labels can be shown and hides labels accordingly. Labels will be rotated up to maxRotation before skipping any. Turn autoSkip off to show all labels no matter what
-| tickAutoskippadding | number | 0 | Padding between the ticks on the horizontal axis when autoSkip is enabled
-| tickLabeloffset | number | 0 | Distance in pixels to offset the label from the centre point of the tick (in the x direction for the x axis, and the y direction for the y axis). Note: this can cause labels at the edges to be cropped by the edge of the canvas
-| tickMaxrotation | number | 50 | Maximum rotation for tick labels when rotating to condense labels. Note: Rotation doesn`t occur until necessary. Note: Only applicable to horizontal scales
-| tickMinrotation | number | 0 | Minimum rotation for tick labels. Note: Only applicable to horizontal scales
-| tickMirror | boolean | FALSE | Flips tick labels around axis, displaying the labels inside the chart instead of outside. Note: Only applicable to vertical scales
-| tickPadding | number | 0 | Padding between the tick label and the axis. When set on a vertical axis, this applies in the horizontal (X) direction. When set on a horizontal axis, this applies in the vertical (Y) direction
+| ticksMin | number |  | User defined minimum value for the scale, overrides minimum value from data
+| ticksMax | number |  | User defined maximum value for the scale, overrides maximum value from data
+| ticksSamplesize | number | tick.length | The number of ticks to examine when deciding how many labels will fit. Setting a smaller value will be faster, but may be less accurate when there is large variability in label length
+| ticksAutoskip | boolean | TRUE | If true, automatically calculates how many labels can be shown and hides labels accordingly. Labels will be rotated up to maxRotation before skipping any. Turn autoSkip off to show all labels no matter what
+| ticksAutoskippadding | number | 0 | Padding between the ticks on the horizontal axis when autoSkip is enabled
+| ticksLabeloffset | number | 0 | Distance in pixels to offset the label from the centre point of the tick (in the x direction for the x axis, and the y direction for the y axis). Note: this can cause labels at the edges to be cropped by the edge of the canvas
+| ticksMaxrotation | number | 50 | Maximum rotation for tick labels when rotating to condense labels. Note: Rotation doesn`t occur until necessary. Note: Only applicable to horizontal scales
+| ticksMinrotation | number | 0 | Minimum rotation for tick labels. Note: Only applicable to horizontal scales
+| ticksMirror | boolean | FALSE | Flips tick labels around axis, displaying the labels inside the chart instead of outside. Note: Only applicable to vertical scales
+| ticksPadding | number | 0 | Padding between the tick label and the axis. When set on a vertical axis, this applies in the horizontal (X) direction. When set on a horizontal axis, this applies in the vertical (Y) direction
 | gridDisplay | boolean | TRUE | If false, do not display grid lines for this axis
 | gridCircular | boolean | FALSE | If true, gridlines are circular (on radar chart only)
 | gridColor | Color|Color[] | `rgba(0, 0, 0, 0.1)` | The color of the grid lines. If specified as an array, the first color applies to the first grid line, the second to the second grid line and so on
