@@ -50,7 +50,7 @@ export default class ChartBuilder extends LightningElement {
   @api
   fill = false;
 
-  dimensionsLabels = [];
+  dimensionsLabels;
   _detailsLabels = [];
   @api
   get detailsLabels() {
@@ -68,6 +68,7 @@ export default class ChartBuilder extends LightningElement {
   // It is set either directly via the app builder
   // or by the soql setter which call the imperative apex method
   // or by the handler setter which call the imperative apex method
+  _throttlingDetails = false;
   _details = [];
   @api
   get details() {
@@ -75,24 +76,33 @@ export default class ChartBuilder extends LightningElement {
   }
   set details(v) {
     try {
-      const data = v ? (Array.isArray(v) ? v : JSON.parse(v)) : [];
-      // Build the data structure to use to iterate
-      // and create data component in the template
-      const palette = ChartBuilder.DEFAULT_PALETTE[this.colorPalette];
-      this.dimensionsLabels = [...new Set(data.map(x => x.labels).flat())];
-      this._details = data.map((x, i) => {
-        const val = { ...x };
-        val.labels = this._detailsLabels[i];
-        val.uuid = val.uuid || nanoid(4);
-        // Filter on type (pie doughnut radar polar area)
-        val.bgColor =
-          val.bgColor || this.isDimensionable
-            ? val.detail.map((_, j) => palette[j % palette.length])
-            : palette[i % palette.length];
-        val.fill = this.fill;
-        return val;
-      });
-      this.error = false;
+      const data = v ? (Array.isArray(v) ? v : JSON.parse(v)) : null;
+      if (!data || this._throttlingDetails) return;
+
+      this._throttlingDetails = true;
+      Promise.resolve()
+        .then(() => {
+          this._throttlingDetails = false;
+
+          // Build the data structure to use to iterate
+          // and create data component in the template
+          const palette = ChartBuilder.DEFAULT_PALETTE[this.colorPalette];
+          this.dimensionsLabels = this.dimensionsLabels || [
+            ...new Set(data.map(x => x.labels).flat())
+          ];
+          this._details = data.map((x, i) => ({
+            detail: x.detail,
+            labels: this._detailsLabels[i],
+            uuid: x.uuid || nanoid(4),
+            bgColor:
+              x.bgColor || this.isDimensionable
+                ? x.detail.map((_, j) => palette[j % palette.length])
+                : palette[i % palette.length],
+            fill: this.fill
+          }));
+          this.error = false;
+        })
+        .catch(error => this.errorCallback(error));
     } catch (error) {
       this.errorCallback(error);
     }

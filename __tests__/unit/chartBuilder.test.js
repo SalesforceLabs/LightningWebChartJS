@@ -27,12 +27,13 @@ describe('call server and get chart data when', () => {
     const element = createElement('c-chartBuilder', { is: ChartBuilder });
     document.body.appendChild(element);
 
+    element.detailsLabels = MOCK_GETCHARTDATA[0].labels;
     element.soql =
       'SELECT StageName label, Sum(Amount) value FROM Opportunity WHERE IsClosed = false WITH SECURITY ENFORCED Group By StageName LIMIT 10';
 
     return flushPromises().then(() => {
       // Validate parameters of mocked Apex call
-      expect(element.details).toMatchObject(MOCK_GETCHARTDATA);
+      expect(element.details).toMatchObject(RESULT_GETCHARTDATA);
     });
   });
 
@@ -42,11 +43,14 @@ describe('call server and get chart data when', () => {
     document.body.appendChild(element);
 
     element.handler = 'FakeHandler';
+    element.detailsLabels = MOCK_GETCHARTDATA[0].labels;
 
     return flushPromises().then(() => {
-      // Validate parameters of mocked Apex call
-      expect(element.details).toMatchObject(MOCK_GETCHARTDATA);
-      expect(element.handler).toEqual(element.handler);
+      flushPromises().then(() => {
+        // Validate parameters of mocked Apex call
+        expect(element.details).toMatchObject(RESULT_GETCHARTDATA);
+        expect(element.handler).toEqual(element.handler);
+      });
     });
   });
 
@@ -109,7 +113,13 @@ describe('test property', () => {
   });
 });
 
-const MOCK_GETCHARTDATA = [{ label: 'test', detail: [10] }];
+const MOCK_GETCHARTDATA = [{ labels: ['test'], detail: [10] }];
+const RESULT_GETCHARTDATA = [
+  {
+    labels: MOCK_GETCHARTDATA[0].labels[0],
+    detail: MOCK_GETCHARTDATA[0].detail
+  }
+];
 // Sample error for imperative Apex call
 const APEX_ERROR = {
   body: { message: 'An internal server error has occurred' },
