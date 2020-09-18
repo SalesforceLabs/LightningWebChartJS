@@ -10,20 +10,20 @@ The time scale is used to display times and dates. When building its ticks, it w
 
 ## API
 
-| Attribute name | Type | Default value
-| --- | --- | ---
-| adapterDate | object | {}
-| distribution | string | `linear`
-| bounds | string | `data`
-| tickSource | string | `auto`
-| timeDisplayformats | object |
-| timeIsoweekday | boolean | false
-| timeParser | string|function |
-| timeRound | string | false
-| timeTooltipformat | string |
-| timeUnit | string | false
-| timeStepsize | number | 1
-| timeMinunit | string | `millisecond`
+| Attribute name | Type | Default value | Description
+| --- | --- | --- | ---
+| adapterDate | object | {} | Options for adapter for external date library if that adapter needs or supports options
+| distribution | string | `linear` | How data is plotted. [more...](#scale-distribution)
+| bounds | string | `data` | Determines the scale bounds. [more...](#scale-bounds)
+| tickSource | string | `auto` | How ticks are generated. [more...](#ticks-source)
+| timeDisplayformats | object | | Sets how different time units are displayed. [more...](#display-formats)
+| timeIsoweekday | boolean | false | If true and the unit is set to 'week', then the first day of the week will be Monday. Otherwise, it will be Sunday.
+| timeParser | string|function | Custom parser for dates. [more...](#parser)
+| timeRound | string | false | If defined, dates will be rounded to the start of this unit. See [Time Units](#time-units) below for the allowed units.
+| timeTooltipformat | string | | The Moment.js format string to use for the tooltip.
+| timeUnit | string | false | If defined, will force the unit to be a certain type. See [Time Units](#time-units) section below for details.
+| timeStepsize | number | 1 | The number of units between grid lines.
+| timeMinunit | string | `millisecond` | The minimum display format to be used for a time unit.
 
 ### Date Adapters
 The time scale requires both a date library and corresponding adapter to be present. By default, Chart.js includes an adapter for Moment.js. You may wish to exclude moment and choose from other available adapters instead.
