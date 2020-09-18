@@ -17,7 +17,7 @@
   </targets>
   <targetConfigs>
     <targetConfig
-      targets="lightning__AppPage,lightning__HomePage,lightning__RecordPage, lightningCommunity__Default"
+      targets="lightning__AppPage,lightning__HomePage,lightning__RecordPage"
     >
 
     <property
@@ -102,6 +102,109 @@
         default=""
         placeholder="SELECT StageName label, SUM(Amount) value FROM Opportunity WHERE IsClosed = false AND AccountId = :recordId WITH SECURITY_ENFORCED GROUP BY StageName LIMIT 10"
         type="String"
+      />
+      <property
+        name="handler"
+        label="Custom Data Provider"
+        description="Define the Custom Data Provider class hander name to fetch the data. It must extends &quot;ChartDataProvider&quot;"
+        required="false"
+        default=""
+        type="String"
+        datasource="apex://CustomDataProviderDataSourceProvider"
+      />
+    </targetConfig>
+
+    <targetConfig targets="lightningCommunity__Default">
+      <property
+        name="type"
+        label="Type"
+        description="Define the chart type"
+        required="true"
+        default="line"
+        placeholder="Chart type"
+        type="String"
+        datasource="line,bar,radar,doughnut,pie,polarArea,bubble,scatter"
+      />
+      <property
+        name="title"
+        label="Title"
+        description="Define the chart title"
+        required="false"
+        default="Chart"
+        placeholder="Chart title"
+        type="String"
+      />
+      <property
+        name="legendPosition"
+        label="Legend Position"
+        description="Define where the legend will be displayed"
+        required="false"
+        default="top"
+        placeholder="top"
+        type="String"
+        datasource="top,bottom,right,left"
+      />
+      <property
+        name="styleCss"
+        label="CSS Style"
+        description="Provide inline custom css style for chart container"
+        required="false"
+        default=""
+        placeholder=""
+        type="String"
+      />
+      <property
+        name="colorPalette"
+        label="Color palette to use"
+        description="Choose the slds color palette to use (https://www.lightningdesignsystem.com/guidelines/charts/#Chart-Color)"
+        required="false"
+        default="default"
+        placeholder=""
+        type="String"
+        datasource="default,colorsafe,light,bluegrass,sunrise,water,watermelon"
+      />
+      <property
+        name="fill"
+        label="Fill the chart ?"
+        description="Check this property fo fill the chart"
+        required="false"
+        default="false"
+        type="Boolean"
+      />
+      <property
+        name="detailsLabels"
+        label="Dataset Labels"
+        description="Display the label for each values set in the dataset in a JSON array of string"
+        required="false"
+        default="[]"
+        placeholder="[&quot;Label 1&quot;,&quot;Label 2&quot;],..."
+        type="String"
+      />
+      <property
+        name="details"
+        label="Dataset"
+        description="Define the chart values in a JSON array of object"
+        required="false"
+        default=""
+        placeholder="[{&quot;label&quot;:&quot;Data 1&quot;, &quot;detail&quot;:[1, 1]},{&quot;label&quot;:&quot;Data 2&quot;, &quot;detail&quot;:[2, 2]},...]"
+        type="String"
+      />
+      <property
+        name="soql"
+        label="SOQL"
+        description="Define a SOQL to be used to fetch the data (only aggregate query). Use label alias for the label and value alias for the value"
+        required="false"
+        default=""
+        placeholder="SELECT StageName label, SUM(Amount) value FROM Opportunity WHERE IsClosed = false AND AccountId = :recordId WITH SECURITY_ENFORCED GROUP BY StageName LIMIT 10"
+        type="String"
+      />
+      <property
+        name="recordId"
+        label="Record ID"
+        description="The id of the current record in Lightning Communities"
+        type="String"
+        placeholder="{!recordId}"
+        default="{!recordId}"
       />
       <property
         name="handler"
