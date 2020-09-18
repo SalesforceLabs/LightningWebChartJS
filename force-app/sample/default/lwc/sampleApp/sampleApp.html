@@ -606,6 +606,7 @@
             stack="1"
           ></c-data>
         </c-dataset>
+        <c-title text="Stacked Bar Chart"></c-title>
         <c-cartesian-axis axis="x" stacked="true"> </c-cartesian-axis>
         <c-cartesian-axis axis="y" stacked="true"></c-cartesian-axis>
       </c-chart>
@@ -629,6 +630,104 @@
         &emsp;&lt;/c-cartesian-axis&gt;<br />
         &emsp;&lt;c-cartesian-axis axis=&quot;y&quot;
         stacked=&quot;true&quot;&gt;&lt;/c-cartesian-axis&gt;<br />
+        &lt;/c-chart&gt;
+      </code>
+    </c-sample-app-item>
+
+    <!-- Horizontal Bar chart -->
+    <c-sample-app-item>
+      <c-chart slot="chartExample" type="horizontalBar" responsive="true">
+        <c-dataset
+          labels='["Group 1", "Group 2", "Group 3", "Group 4", "Group 5", "Group 6"]'
+        >
+          <c-data
+            label="# of Items"
+            detail="[12, 19, 7, 9, 5, 15]"
+            backgroundcolor="rgba(255, 176, 59, 1)"
+            bordercolor="rgba(255, 176, 59, 1)"
+            borderwidth="1"
+          ></c-data>
+        </c-dataset>
+        <c-title text="Horizontal Chart"></c-title>
+        <c-legend position="bottom"></c-legend>
+        <c-cartesian-category-axis
+          axis="y"
+          position="left"
+        ></c-cartesian-category-axis>
+        <c-cartesian-linear-axis
+          axis="x"
+          tick-beginatzero="true"
+        ></c-cartesian-linear-axis>
+      </c-chart>
+      <code slot="chartCode" lang="html">
+        &lt;c-chart type=&quot;horizontalBar&quot;
+        responsive=&quot;true&quot;&gt;<br />
+        &emsp;&lt;c-dataset labels=&apos;[&quot;Group 1&quot;, &quot;Group
+        2&quot;, &quot;Group 3&quot;, &quot;Group 4&quot;, &quot;Group 5&quot;,
+        &quot;Group 6&quot;]&apos;&gt;<br />
+        &emsp;&emsp;&lt;c-data label=&quot;# of Items&quot; detail=&quot;[12,
+        19, 7, 9, 5, 15]&quot; backgroundcolor=&quot;rgba(255, 176, 59, 1)&quot;
+        bordercolor=&quot;rgba(255, 176, 59, 1)&quot;
+        borderwidth=&quot;1&quot;&gt;&lt;/c-data&gt;<br />
+        &emsp;&lt;/c-dataset&gt;<br />
+        &emsp;&lt;c-title text=&quot;Horizontal
+        Chart&quot;&gt;&lt;/c-title&gt;<br />
+        &emsp;&lt;c-legend position=&quot;bottom&quot;&gt;&lt;/c-legend&gt;<br />
+        &emsp;&lt;c-cartesian-category-axis axis=&quot;y&quot;
+        position=&quot;left&quot;&gt;&lt;/c-cartesian-category-axis&gt;<br />
+        &emsp;&lt;c-cartesian-linear-axis axis=&quot;x&quot;
+        tick-beginatzero=&quot;true&quot;&gt;&lt;/c-cartesian-linear-axis&gt;<br />
+        &lt;/c-chart&gt;
+      </code>
+    </c-sample-app-item>
+
+    <!-- Time chart -->
+    <c-sample-app-item>
+      <c-chart slot="chartExample" type="line" responsive="true">
+        <c-dataset>
+          <c-data
+            label="Stock price"
+            detail='[\{"y":30,"x":"2020-08-20T00:00:00.000Z"\},\{"y":25,"x":"2020-08-21T00:00:00.000Z"\},\{"y":50,"x":"2020-08-23T00:00:00.000Z"\},\{"y":70,"x":"2020-08-29T00:00:00.000Z"\}]'
+            bordercolor="rgba(119, 185, 242, 1)"
+            backgroundcolor="rgba(119, 185, 242, 1)"
+            borderwidth="1"
+            fill="false"
+          ></c-data>
+        </c-dataset>
+        <c-title text="Linear Time Chart"></c-title>
+        <c-cartesian-linear-axis
+          axis="y"
+          position="left"
+          display="true"
+          tick-beginatzero="true"
+        ></c-cartesian-linear-axis>
+        <c-cartesian-time-axis
+          axis="x"
+          time-unit="day"
+          display="true"
+          tick-source="data"
+          bounds="ticks"
+        ></c-cartesian-time-axis>
+      </c-chart>
+      <code slot="chartCode" lang="html">
+        &lt;c-chart type=&quot;line&quot; responsive=&quot;true&quot;&gt;<br />
+        &emsp;&lt;c-dataset&gt;<br />
+        &emsp;&emsp;&lt;c-data label=&quot;Stock price&quot;
+        bordercolor=&quot;rgba(119, 185, 242, 1)&quot;
+        backgroundcolor=&quot;rgba(119, 185, 242, 1)&quot;
+        borderwidth=&quot;1&quot; fill=&quot;false&quot;<br />
+        &emsp;&emsp;&emsp;detail=&apos;[\&#123;&quot;y&quot;:30,&quot;x&quot;:&quot;2020-08-20T00:00:00.000Z&quot;\&#125;,\&#123;&quot;y&quot;:25,&quot;x&quot;:&quot;2020-08-21T00:00:00.000Z&quot;\&#125;,\&#123;&quot;y&quot;:50,&quot;x&quot;:&quot;2020-08-23T00:00:00.000Z&quot;\&#125;,\&#123;&quot;y&quot;:70,&quot;x&quot;:&quot;2020-08-29T00:00:00.000Z&quot;\&#125;]&apos;&gt;<br />
+        &emsp;&emsp;&lt;/c-data&gt;<br />
+        &emsp;&lt;/c-dataset&gt;<br />
+        &emsp;&lt;c-title text=&quot;Linear Time
+        Chart&quot;&gt;&lt;/c-title&gt;<br />
+        &emsp;&lt;c-cartesian-linear-axis axis=&quot;y&quot;
+        position=&quot;left&quot; display=&quot;true&quot;
+        tick-beginatzero=&quot;true&quot;&gt;&lt;/c-cartesian-linear-axis&gt;<br />
+        &emsp;&lt;c-cartesian-time-axis axis=&quot;x&quot;
+        time-unit=&quot;day&quot; display=&quot;true&quot;
+        tick-source=&quot;data&quot; bounds=&quot;ticks&quot;&gt;<br />
+        &emsp;&lt;/c-cartesian-time-axis&gt;<br />
         &lt;/c-chart&gt;
       </code>
     </c-sample-app-item>
