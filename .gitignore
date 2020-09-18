@@ -80,6 +80,9 @@ mm.log
 # The Welkin Suite specific
 **/.localHistory
 
+# LWC
+**/jsconfig.json
+
 # Other
 *.sfuo
 .tern-project
