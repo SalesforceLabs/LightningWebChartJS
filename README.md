@@ -1,6 +1,10 @@
 <div align="center">
 	<img src="assets/images/lwcc_logo.png" width="256">
 	<h1>Lightning Web Chart.js Component</h1>
+	<a href="https://githubsfdeploy.herokuapp.com?owner=SalesforceLabs&repo=LightningWebChartJS">
+	<img alt="Deploy to Salesforce"
+		src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
+	</a>
 </div>
 	
 <div align="center">
