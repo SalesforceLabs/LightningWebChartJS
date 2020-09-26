@@ -26,15 +26,23 @@ module.exports = {
     copy({
       targets: [
         {
-          src: 'force-app/main/default/staticresources/',
+          src: 'lwcc-app/library/components/chartjs/staticresources/',
           dest: path.resolve(__dirname, './dist/')
         },
         {
-          src: 'force-app/main/default/lwc/*',
+          src: 'lwcc-app/library/components/chartjs/lwc/*',
           dest: path.resolve(__dirname, './src/modules/c')
         },
         {
-          src: 'force-app/sample/default/lwc/*',
+          src: 'lwcc-app/library/components/external/lwc/*',
+          dest: path.resolve(__dirname, './src/modules/c')
+        },
+        {
+          src: 'lwcc-app/library/components/internal/lwc/*',
+          dest: path.resolve(__dirname, './src/modules/c')
+        },
+        {
+          src: 'lwcc-app/library/samples/lwc/*',
           dest: path.resolve(__dirname, './src/modules/c')
         }
       ]

@@ -45,7 +45,7 @@ jobs:
 
       # Execute PMD
       - name: Execute PMD
-        run: pmd-bin-6.22.0/bin/run.sh pmd -minimumpriority 2 -d force-app -R apex-ruleset.xml -f text -l apex
+        run: pmd-bin-6.22.0/bin/run.sh pmd -minimumpriority 2 -d lwcc-app -R apex-ruleset.xml -f text -l apex
 
   scratch-org-test:
     runs-on: ubuntu-latest

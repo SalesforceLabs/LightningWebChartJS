@@ -23,7 +23,7 @@ jest.mock(
             reject('Could not load script');
           } else {
             global.window = {};
-            global.window.Chart = require(`../../force-app/main/default/staticresources/chartjs_v280.js`);
+            global.window.Chart = require(`../../lwcc-app/library/components/chartjs/staticresources/chartjs_v280.js`);
             resolve();
           }
         });
@@ -66,7 +66,7 @@ describe('Chart: ChartJs library', () => {
 });
 
 // TODO: For each type of Chart: test that can be created, that contains canvas and that elements can be inserted
-describe.each(CHARTS)('DOM Tests for individual charts', chart => {
+describe.each(CHARTS)('DOM Tests for individual charts', (chart) => {
   const chartName = chart.class.prototype.constructor.name;
   const element = createElement('x-chart', {
     is: chart.class
@@ -129,7 +129,7 @@ const TEST_DATA_PROPERTIES = [
 describe('Chart: property', () => {
   const element = createElement('x-chart', { is: Chart });
   document.body.appendChild(element);
-  describe.each(TEST_DATA_PROPERTIES)('matches options', item => {
+  describe.each(TEST_DATA_PROPERTIES)('matches options', (item) => {
     test(`${item.propertyName}`, async () => {
       element[item.propertyName] = item.propertyValue;
 
@@ -250,7 +250,7 @@ describe('Chart: methods', () => {
   });
   test('getElementAtEventChart', async () => {
     let el = null;
-    chart.canvasOnclick = evt => {
+    chart.canvasOnclick = (evt) => {
       el = chart.getElementAtEventChart(evt);
     };
     const canvas = chart.shadowRoot.querySelector('canvas');
@@ -261,7 +261,7 @@ describe('Chart: methods', () => {
   });
   test('getElementsAtEventChart', async () => {
     let el = null;
-    chart.canvasOnclick = evt => {
+    chart.canvasOnclick = (evt) => {
       el = chart.getElementsAtEventChart(evt);
     };
     const canvas = chart.shadowRoot.querySelector('canvas');
@@ -272,7 +272,7 @@ describe('Chart: methods', () => {
   });
   test('getDatasetAtEventChart', async () => {
     let el = null;
-    chart.canvasOnclick = evt => {
+    chart.canvasOnclick = (evt) => {
       el = chart.getDatasetAtEventChart(evt);
     };
     const canvas = chart.shadowRoot.querySelector('canvas');
