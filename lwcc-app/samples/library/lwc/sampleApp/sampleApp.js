@@ -8,7 +8,7 @@ export default class SampleApp extends LightningElement {
       this.filterTypes = [
         ...new Set(
           [...this.template.querySelectorAll('c-chart')].map(
-            (chart) => chart.type
+            chart => chart.type
           )
         )
       ];
@@ -16,13 +16,13 @@ export default class SampleApp extends LightningElement {
   }
 
   displayAllCharts() {
-    this.template.querySelectorAll('c-chart').forEach((item) => {
+    this.template.querySelectorAll('c-chart').forEach(item => {
       item.closest('c-sample-app-item').classList.remove('slds-hide');
     });
   }
 
   displayFilteredCharts(event) {
-    this.template.querySelectorAll('c-chart').forEach((item) => {
+    this.template.querySelectorAll('c-chart').forEach(item => {
       const parent = item.closest('c-sample-app-item');
       if (!parent) return;
       if (item.type.toUpperCase() === event.target.innerText) {

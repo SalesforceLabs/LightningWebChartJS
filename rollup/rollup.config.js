@@ -26,23 +26,27 @@ module.exports = {
     copy({
       targets: [
         {
-          src: 'lwcc-app/library/components/chartjs/staticresources/',
+          src: 'lwcc-app/library/chartjs/staticresources/',
           dest: path.resolve(__dirname, './dist/')
         },
         {
-          src: 'lwcc-app/library/components/chartjs/lwc/*',
+          src: 'lwcc-app/library/chartjs/lwc/*',
           dest: path.resolve(__dirname, './src/modules/c')
         },
         {
-          src: 'lwcc-app/library/components/external/lwc/*',
+          src: 'lwcc-app/library/external/lwc/*',
           dest: path.resolve(__dirname, './src/modules/c')
         },
         {
-          src: 'lwcc-app/library/components/internal/lwc/*',
+          src: 'lwcc-app/library/internal/lwc/*',
           dest: path.resolve(__dirname, './src/modules/c')
         },
         {
-          src: 'lwcc-app/library/samples/lwc/*',
+          src: 'lwcc-app/samples/common/lwc/*',
+          dest: path.resolve(__dirname, './src/modules/c')
+        },
+        {
+          src: 'lwcc-app/samples/library/lwc/*',
           dest: path.resolve(__dirname, './src/modules/c')
         }
       ]

@@ -19,8 +19,8 @@ describe('c-sample-app-item', () => {
             'button.slds-button.slds-button_neutral'
           )
         ];
-        buttons.forEach((button) => button.click());
-        buttons.reverse().forEach((button) => button.click());
+        buttons.forEach(button => button.click());
+        buttons.reverse().forEach(button => button.click());
       })
       .then(() => {
         // Verify that property is correctly incremented.
