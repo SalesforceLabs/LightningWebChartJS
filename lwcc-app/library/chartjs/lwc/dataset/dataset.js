@@ -50,14 +50,14 @@ export default class Dataset extends BaseAttribute {
 
   _listenerHandlers = {
     // Capture child data event and store it using the uuid of the child
-    handleDataChange: evt => {
+    handleDataChange: (evt) => {
       evt.stopPropagation();
       this._details[evt.detail.payload.uuid] = evt.detail.payload;
       this._payload.datasets = Object.values(this._details);
     },
 
     // Capture child diqconnect event and remove child uuid from map
-    handleDataDeletion: evt => {
+    handleDataDeletion: (evt) => {
       evt.stopPropagation();
       delete this._details[evt.detail.payload.uuid];
       this._payload.datasets = Object.values(this._details);

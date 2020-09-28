@@ -88,7 +88,7 @@ export default class ChartBuilder extends LightningElement {
           // and create data component in the template
           const palette = ChartBuilder.DEFAULT_PALETTE[this.colorPalette];
           this.dimensionsLabels = this.dimensionsLabels || [
-            ...new Set(data.map(x => x.labels).flat())
+            ...new Set(data.map((x) => x.labels).flat())
           ];
           this._details = data.map((x, i) => ({
             detail: x.detail,
@@ -102,7 +102,7 @@ export default class ChartBuilder extends LightningElement {
           }));
           this.error = false;
         })
-        .catch(error => this.errorCallback(error));
+        .catch((error) => this.errorCallback(error));
     } catch (error) {
       this.errorCallback(error);
     }
@@ -176,11 +176,11 @@ export default class ChartBuilder extends LightningElement {
   _getChartDataHandler(handlerName, input) {
     this.isLoaded = false;
     getChartData({ chartDataProviderType: handlerName, ctx: input })
-      .then(result => {
+      .then((result) => {
         // eslint-disable-next-line @lwc/lwc/no-api-reassignments
         this.details = result;
       })
-      .catch(error => {
+      .catch((error) => {
         this.errorCallback(error.body.message);
       });
   }
