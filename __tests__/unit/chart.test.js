@@ -23,7 +23,7 @@ jest.mock(
             reject('Could not load script');
           } else {
             global.window = {};
-            global.window.Chart = require(`../../lwcc-app/library/components/chartjs/staticresources/chartjs_v280.js`);
+            global.window.Chart = require(`../../lwcc-app/library/chartjs/staticresources/chartjs_v280.js`);
             resolve();
           }
         });
