@@ -179,9 +179,8 @@ export default class Chart extends LightningElement {
   }
 
   get chartStyle() {
-    return `width: ${this.width}; height: ${this.height}; ${
-      this.stylecss || ''
-    }`;
+    return `width: ${this.width}; height: ${this.height}; ${this.stylecss ||
+      ''}`;
   }
 
   ariaLabel;
@@ -343,7 +342,7 @@ export default class Chart extends LightningElement {
         this._callChartjsloadedCallback();
         this._reactivityManager.throttleRegisteredJob();
       },
-      (reason) => {
+      reason => {
         this.errorCallback(reason);
       }
     );
@@ -415,7 +414,7 @@ export default class Chart extends LightningElement {
 
   _listenerHandlers = {
     // store option and throttle a drawChart
-    handleOption: (evt) => {
+    handleOption: evt => {
       evt.stopPropagation();
       const { payload, option } = evt.detail;
       if (option === ATTRIBUTE_DATA) {
@@ -430,7 +429,7 @@ export default class Chart extends LightningElement {
       this._reactivityManager.throttleRegisteredJob();
     },
     // remove option and throttle a drawChart
-    handleDisconnect: (evt) => {
+    handleDisconnect: evt => {
       evt.stopPropagation();
       const { payload, option } = evt.detail;
       if (option === ATTRIBUTE_DATA) {
