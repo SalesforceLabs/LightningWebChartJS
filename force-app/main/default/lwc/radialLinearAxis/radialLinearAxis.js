@@ -1,5 +1,6 @@
 import RadialAxis from 'c/radialAxis';
 import { api } from 'lwc';
+import { parseBoolean } from 'c/utils';
 
 /**
  * https://www.chartjs.org/docs/latest/axes/radial/linear.html
@@ -12,7 +13,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.angleLines.display;
   }
   set anglelineDisplay(v) {
-    this._payload.angleLines.display = v;
+    this._payload.angleLines.display = parseBoolean(v);
   }
 
   @api
@@ -54,7 +55,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.gridLines.display;
   }
   set gridlineDisplay(v) {
-    this._payload.gridLines.display = v;
+    this._payload.gridLines.display = parseBoolean(v);
   }
 
   @api
@@ -62,7 +63,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.gridLines.circular;
   }
   set gridlineCircular(v) {
-    this._payload.gridLines.circular = v;
+    this._payload.gridLines.circular = parseBoolean(v);
   }
 
   @api
@@ -102,7 +103,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.gridLines.drawBorder;
   }
   set gridlineDrawborder(v) {
-    this._payload.gridLines.drawBorder = v;
+    this._payload.gridLines.drawBorder = parseBoolean(v);
   }
 
   @api
@@ -110,7 +111,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.gridLines.drawOnChartArea;
   }
   set gridlineDrawonchartarea(v) {
-    this._payload.gridLines.drawOnChartArea = v;
+    this._payload.gridLines.drawOnChartArea = parseBoolean(v);
   }
 
   @api
@@ -118,7 +119,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.gridLines.drawTicks;
   }
   set gridlineDrawticks(v) {
-    this._payload.gridLines.drawTicks = v;
+    this._payload.gridLines.drawTicks = parseBoolean(v);
   }
 
   @api
@@ -166,7 +167,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.gridLines.offsetGridLines;
   }
   set gridlineOffsetGridLines(v) {
-    this._payload.gridLines.offsetGridLines = v;
+    this._payload.gridLines.offsetGridLines = parseBoolean(v);
   }
 
   @api
@@ -184,7 +185,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.pointLabels.display;
   }
   set pointlabelDisplay(v) {
-    this._payload.pointLabels.display = v;
+    this._payload.pointLabels.display = parseBoolean(v);
   }
 
   @api
@@ -266,7 +267,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.ticks.beginAtZero;
   }
   set tickBeginatzero(v) {
-    this._payload.ticks.beginAtZero = v;
+    this._payload.ticks.beginAtZero = parseBoolean(v);
   }
 
   @api
@@ -330,7 +331,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.ticks.showLabelBackdrop;
   }
   set tickShowlabelbackdrop(v) {
-    this._payload.ticks.showLabelBackdrop = v;
+    this._payload.ticks.showLabelBackdrop = parseBoolean(v);
   }
 
   constructor() {

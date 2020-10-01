@@ -1,10 +1,10 @@
 import Tooltip from 'c/tooltip';
 
 const TEST_DATA_PROPERTIES = [
-  ChartOptionMock('enabled', 'foo', { enabled: 'foo' }),
+  ChartOptionMock('enabled', true, { enabled: true }),
   ChartOptionMock('custom', 'foo', { custom: 'foo' }),
   ChartOptionMock('mode', 'foo', { mode: 'foo' }),
-  ChartOptionMock('intersect', 'foo', { intersect: 'foo' }),
+  ChartOptionMock('intersect', true, { intersect: true }),
   ChartOptionMock('position', 'foo', { position: 'foo' }),
   ChartOptionMock('callbackBeforetitle', 'foo', {
     callbacks: { beforeTitle: 'foo' }
@@ -98,10 +98,10 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('multikeybackground', 'foo', {
     multiKeyBackground: 'foo'
   }),
-  ChartOptionMock('displaycolors', 'foo', { displayColors: 'foo' }),
+  ChartOptionMock('displaycolors', true, { displayColors: true }),
   ChartOptionMock('bordercolor', 'foo', { borderColor: 'foo' }),
   ChartOptionMock('borderwidth', 'foo', { borderWidth: 'foo' }),
-  ChartOptionMock('rtl', 'foo', { rtl: 'foo' }),
+  ChartOptionMock('rtl', true, { rtl: true }),
   ChartOptionMock('textdirection', 'foo', { textDirection: 'foo' })
 ];
 

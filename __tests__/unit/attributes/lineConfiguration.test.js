@@ -23,15 +23,15 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('borderjoinstyle', 'foo', {
     line: { borderJoinStyle: 'foo' }
   }),
-  ChartOptionMock('capbezierpoints', 'foo', {
-    line: { capBezierPoints: 'foo' }
+  ChartOptionMock('capbezierpoints', true, {
+    line: { capBezierPoints: true }
   }),
   ChartOptionMock('cubicinterpolationmode', 'foo', {
     line: { cubicInterpolationMode: 'foo' }
   }),
-  ChartOptionMock('fill', 'foo', { line: { fill: 'foo' } }),
-  ChartOptionMock('stepped', 'foo', { line: { stepped: 'foo' } }),
-  ChartOptionMock('spangaps', 'foo', { line: { spanGaps: 'foo' } })
+  ChartOptionMock('fill', true, { line: { fill: true } }),
+  ChartOptionMock('stepped', true, { line: { stepped: true } }),
+  ChartOptionMock('spangaps', true, { line: { spanGaps: true } })
 ];
 
 describe('c-line-configuration', () => {

@@ -1,6 +1,7 @@
 import BaseAttribute from 'c/baseAttribute';
 import { api } from 'lwc';
 import { ATTRIBUTE_ELEMENTS } from 'c/constants';
+import { parseBoolean } from 'c/utils';
 
 export default class LineConfiguration extends BaseAttribute {
   @api
@@ -72,7 +73,7 @@ export default class LineConfiguration extends BaseAttribute {
     return this._payload.line.capBezierPoints;
   }
   set capbezierpoints(v) {
-    this._payload.line.capBezierPoints = v;
+    this._payload.line.capBezierPoints = parseBoolean(v);
   }
 
   @api
@@ -88,7 +89,7 @@ export default class LineConfiguration extends BaseAttribute {
     return this._payload.line.fill;
   }
   set fill(v) {
-    this._payload.line.fill = v;
+    this._payload.line.fill = parseBoolean(v);
   }
 
   @api
@@ -96,7 +97,7 @@ export default class LineConfiguration extends BaseAttribute {
     return this._payload.line.stepped;
   }
   set stepped(v) {
-    this._payload.line.stepped = v;
+    this._payload.line.stepped = parseBoolean(v);
   }
 
   // Radar Chart specific
@@ -105,7 +106,7 @@ export default class LineConfiguration extends BaseAttribute {
     return this._payload.line.spanGaps;
   }
   set spangaps(v) {
-    this._payload.line.spanGaps = v;
+    this._payload.line.spanGaps = parseBoolean(v);
   }
 
   constructor() {

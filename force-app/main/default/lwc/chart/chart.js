@@ -1,7 +1,7 @@
 import { LightningElement, api } from 'lwc';
 import ChartJS from '@salesforce/resourceUrl/chartjs_v280';
 import { loadScript } from 'lightning/platformResourceLoader';
-import { sanitize } from 'c/utils';
+import { parseBoolean, sanitize } from 'c/utils';
 import { nanoid } from 'c/nanoid';
 
 import {
@@ -93,7 +93,7 @@ export default class Chart extends LightningElement {
     return this._payload.responsive;
   }
   set responsive(v) {
-    this._payload.responsive = Boolean(v);
+    this._payload.responsive = parseBoolean(v);
   }
 
   @api
@@ -109,7 +109,7 @@ export default class Chart extends LightningElement {
     return this._payload.maintainAspectRatio;
   }
   set maintainaspectratio(v) {
-    this._payload.maintainAspectRatio = Boolean(v);
+    this._payload.maintainAspectRatio = parseBoolean(v);
   }
 
   @api
@@ -179,8 +179,9 @@ export default class Chart extends LightningElement {
   }
 
   get chartStyle() {
-    return `width: ${this.width}; height: ${this.height}; ${this.stylecss ||
-      ''}`;
+    return `width: ${this.width}; height: ${this.height}; ${
+      this.stylecss || ''
+    }`;
   }
 
   ariaLabel;
@@ -342,7 +343,7 @@ export default class Chart extends LightningElement {
         this._callChartjsloadedCallback();
         this._reactivityManager.throttleRegisteredJob();
       },
-      reason => {
+      (reason) => {
         this.errorCallback(reason);
       }
     );
@@ -414,7 +415,7 @@ export default class Chart extends LightningElement {
 
   _listenerHandlers = {
     // store option and throttle a drawChart
-    handleOption: evt => {
+    handleOption: (evt) => {
       evt.stopPropagation();
       const { payload, option } = evt.detail;
       if (option === ATTRIBUTE_DATA) {
@@ -429,7 +430,7 @@ export default class Chart extends LightningElement {
       this._reactivityManager.throttleRegisteredJob();
     },
     // remove option and throttle a drawChart
-    handleDisconnect: evt => {
+    handleDisconnect: (evt) => {
       evt.stopPropagation();
       const { payload, option } = evt.detail;
       if (option === ATTRIBUTE_DATA) {

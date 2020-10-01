@@ -1,6 +1,7 @@
 import CartesianAxis from 'c/cartesianAxis';
 import { api } from 'lwc';
 import { CARTESIAN_AXIS_TYPE_LINEAR } from 'c/constants';
+import { parseBoolean } from 'c/utils';
 
 /**
  * https://www.chartjs.org/docs/latest/axes/cartesian/linear.html
@@ -11,7 +12,7 @@ export default class CartesianLinearAxis extends CartesianAxis {
     return this._content.ticks.beginAtZero;
   }
   set ticksBeginatzero(v) {
-    this._content.ticks.beginAtZero = Boolean(v);
+    this._content.ticks.beginAtZero = parseBoolean(v);
   }
 
   @api

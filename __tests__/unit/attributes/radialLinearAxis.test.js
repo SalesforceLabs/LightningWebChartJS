@@ -1,8 +1,8 @@
 import RadialLinearAxis from 'c/radialLinearAxis';
 
 const TEST_DATA_PROPERTIES = [
-  ChartOptionMock('anglelineDisplay', 'foo', {
-    angleLines: { display: 'foo' }
+  ChartOptionMock('anglelineDisplay', true, {
+    angleLines: { display: true }
   }),
   ChartOptionMock('anglelineColor', 'foo', {
     angleLines: { color: 'foo' }
@@ -16,11 +16,11 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('anglelineBorderdashoffset', 1, {
     angleLines: { borderDashOffset: 1 }
   }),
-  ChartOptionMock('gridlineDisplay', 'foo', {
-    gridLines: { display: 'foo' }
+  ChartOptionMock('gridlineDisplay', true, {
+    gridLines: { display: true }
   }),
-  ChartOptionMock('gridlineCircular', 'foo', {
-    gridLines: { circular: 'foo' }
+  ChartOptionMock('gridlineCircular', true, {
+    gridLines: { circular: true }
   }),
   ChartOptionMock('gridlineColor', 'foo', {
     gridLines: { color: 'foo' }
@@ -34,14 +34,14 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('gridlineLinewidth', 'foo', {
     gridLines: { lineWidth: 'foo' }
   }),
-  ChartOptionMock('gridlineDrawborder', 'foo', {
-    gridLines: { drawBorder: 'foo' }
+  ChartOptionMock('gridlineDrawborder', true, {
+    gridLines: { drawBorder: true }
   }),
-  ChartOptionMock('gridlineDrawonchartarea', 'foo', {
-    gridLines: { drawOnChartArea: 'foo' }
+  ChartOptionMock('gridlineDrawonchartarea', true, {
+    gridLines: { drawOnChartArea: true }
   }),
-  ChartOptionMock('gridlineDrawticks', 'foo', {
-    gridLines: { drawTicks: 'foo' }
+  ChartOptionMock('gridlineDrawticks', true, {
+    gridLines: { drawTicks: true }
   }),
   ChartOptionMock('gridlineTickmarklength', 1, {
     gridLines: { tickMarkLength: 1 }
@@ -58,12 +58,12 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('gridlineZerolineborderdashoffset', 1, {
     gridLines: { zeroLineBorderDashOffset: 1 }
   }),
-  ChartOptionMock('gridlineOffsetGridLines', 'foo', {
-    gridLines: { offsetGridLines: 'foo' }
+  ChartOptionMock('gridlineOffsetGridLines', true, {
+    gridLines: { offsetGridLines: true }
   }),
   ChartOptionMock('gridlineZ', 1, { gridLines: { z: 1 } }),
-  ChartOptionMock('pointlabelDisplay', 'foo', {
-    pointLabels: { display: 'foo' }
+  ChartOptionMock('pointlabelDisplay', true, {
+    pointLabels: { display: true }
   }),
   ChartOptionMock('pointlabelCallback', 'foo', {
     pointLabels: { callback: 'foo' }
@@ -92,8 +92,8 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('tickBackdroppaddingy', 1, {
     ticks: { backdropPaddingY: 1 }
   }),
-  ChartOptionMock('tickBeginatzero', 'foo', {
-    ticks: { beginAtZero: 'foo' }
+  ChartOptionMock('tickBeginatzero', true, {
+    ticks: { beginAtZero: true }
   }),
   ChartOptionMock('tickMin', 'foo', { ticks: { min: 'foo' } }),
   ChartOptionMock('tickMax', 'foo', { ticks: { max: 'foo' } }),
@@ -112,8 +112,8 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('tickSuggestedmin', 'foo', {
     ticks: { suggestedMin: 'foo' }
   }),
-  ChartOptionMock('tickShowlabelbackdrop', 'foo', {
-    ticks: { showLabelBackdrop: 'foo' }
+  ChartOptionMock('tickShowlabelbackdrop', true, {
+    ticks: { showLabelBackdrop: true }
   })
 ];
 
