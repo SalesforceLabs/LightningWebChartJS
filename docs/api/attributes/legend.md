@@ -12,14 +12,14 @@ The chart legend displays data about the datasets that are appearing on the char
 
 | Attribute name | Type | Default | Description
 | --- | --- | --- | ---
-| display | boolean | TRUE | Is the legend shown?
+| display | boolean | true | Is the legend shown?
 | position | string | 'top' | Position of the legend. Options are: `'top'`, `'left'`, `'bottom'`, `'right'`
 | align | string | 'center' | Alignment of the legend. Options are: `'start'`, `'center'`, `'end'`
-| fullwidth | boolean | TRUE | Marks that this box should take the full width of the canvas (pushing down other boxes). This is unlikely to need to be changed in day-to-day use
+| fullwidth | boolean | true | Marks that this box should take the full width of the canvas (pushing down other boxes). This is unlikely to need to be changed in day-to-day use
 | callbackOnclick | function |  | A callback that is called when a click event is registered on a label item
 | callbackOnhover | function |  | A callback that is called when a 'mousemove' event is registered on top of a label item
 | callbackOnleave | function |  | A callback that is called when a 'mousemove' event is registered outside of a previously hovered label item
-| reverse | boolean | FALSE | Legend will show datasets in reverse order
+| reverse | boolean | false | Legend will show datasets in reverse order
 | rtl | boolean |  | true for rendering the legends from right to left
 | textDirection | string | canvas' default | Determines the direction of the text. Default value is 'ltr` on the canvas for rendering the legend, regardless of the css specified on the canvas
 | labelBoxwidth | number | 40 | Width of coloured box
@@ -30,7 +30,7 @@ The chart legend displays data about the datasets that are appearing on the char
 | labelPadding | number | 10 | Padding between rows of colored boxes
 | callbackGeneratelabels | function |  | Generates legend items for each thing in the legend. Default implementation returns the text + styling for the color box. See [Legend Item](https://www.chartjs.org/docs/latest/configuration/legend.html#legend-item-interface) for details
 | callbackFilter | function | null | Filters legend items out of the legend. Receives 2 parameters, a [Legend Item](https://www.chartjs.org/docs/latest/configuration/legend.html#legend-item-interface) and the chart data
-| labelUsepointstyle | boolean | FALSE | Label style will match corresponding point style (size is based on the mimimum value between boxWidth and fontSize)
+| labelUsepointstyle | boolean | false | Label style will match corresponding point style (size is based on the mimimum value between boxWidth and fontSize)
 
 ### Legend Item Interface
 Items passed to the legend callbackOnclick function must implement the following interface:
