@@ -1,6 +1,7 @@
 import BaseAttribute from 'c/baseAttribute';
 import { api } from 'lwc';
 import { ATTRIBUTE_TOOLTIPS } from 'c/constants';
+import { parseBoolean } from 'c/utils';
 
 export default class Tooltip extends BaseAttribute {
   @api
@@ -8,7 +9,7 @@ export default class Tooltip extends BaseAttribute {
     return this._payload.enabled;
   }
   set enabled(v) {
-    this._payload.enabled = v;
+    this._payload.enabled = parseBoolean(v);
   }
 
   @api
@@ -32,7 +33,7 @@ export default class Tooltip extends BaseAttribute {
     return this._payload.intersect;
   }
   set intersect(v) {
-    this._payload.intersect = v;
+    this._payload.intersect = parseBoolean(v);
   }
 
   @api
@@ -384,7 +385,7 @@ export default class Tooltip extends BaseAttribute {
     return this._payload.displayColors;
   }
   set displaycolors(v) {
-    this._payload.displayColors = v;
+    this._payload.displayColors = parseBoolean(v);
   }
 
   @api
@@ -408,7 +409,7 @@ export default class Tooltip extends BaseAttribute {
     return this._payload.rtl;
   }
   set rtl(v) {
-    this._payload.rtl = v;
+    this._payload.rtl = parseBoolean(v);
   }
 
   @api

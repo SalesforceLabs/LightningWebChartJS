@@ -1,6 +1,7 @@
 import BaseAttribute from 'c/baseAttribute';
 import { api } from 'lwc';
 import { ATTRIBUTE_LEGEND } from 'c/constants';
+import { parseBoolean } from 'c/utils';
 
 /**
  * https://www.chartjs.org/docs/latest/configuration/legend.html
@@ -11,7 +12,7 @@ export default class Legend extends BaseAttribute {
     return this._payload.display;
   }
   set display(v) {
-    this._payload.display = Boolean(v);
+    this._payload.display = parseBoolean(v);
   }
 
   @api
@@ -35,7 +36,7 @@ export default class Legend extends BaseAttribute {
     return this._payload.fullWidth;
   }
   set fullwidth(v) {
-    this._payload.fullWidth = v;
+    this._payload.fullWidth = parseBoolean(v);
   }
 
   @api
@@ -43,7 +44,7 @@ export default class Legend extends BaseAttribute {
     return this._payload.reverse;
   }
   set reverse(v) {
-    this._payload.reverse = v;
+    this._payload.reverse = parseBoolean(v);
   }
 
   @api
@@ -51,7 +52,7 @@ export default class Legend extends BaseAttribute {
     return this._payload.rtl;
   }
   set rtl(v) {
-    this._payload.rtl = v;
+    this._payload.rtl = parseBoolean(v);
   }
 
   @api
@@ -114,7 +115,7 @@ export default class Legend extends BaseAttribute {
     return this._payload.labels.usePointStyle;
   }
   set labelUsepointstyle(v) {
-    this._payload.labels.usePointStyle = v;
+    this._payload.labels.usePointStyle = parseBoolean(v);
   }
 
   @api

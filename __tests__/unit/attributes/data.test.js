@@ -22,7 +22,7 @@ const TEST_DATA_PROPERTIES = [
     hoverBorderJoinStyle: 'foo'
   }),
   ChartOptionMock('hoverborderwidth', 'foo', { hoverBorderWidth: 'foo' }),
-  ChartOptionMock('fill', 'foo', { fill: 'foo' }),
+  ChartOptionMock('fill', true, { fill: true }),
   ChartOptionMock('label', 'foo', { label: 'foo' }),
   ChartOptionMock('order', 10, { order: 10 }),
   ChartOptionMock('linetension', 'foo', { lineTension: 'foo' }),
@@ -45,14 +45,14 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('pointradius', 'foo', { pointRadius: 'foo' }),
   ChartOptionMock('pointrotation', 'foo', { pointRotation: 'foo' }),
   ChartOptionMock('pointstyle', 'foo', { pointStyle: 'foo' }),
-  ChartOptionMock('spangaps', 'foo', { spanGaps: 'foo' }),
+  ChartOptionMock('spangaps', true, { spanGaps: true }),
   ChartOptionMock('stack', '1', { stack: '1' }),
   ChartOptionMock('cubicinterpolationmode', 'foo', {
     cubicInterpolationMode: 'foo'
   }),
   ChartOptionMock('clip', 'foo', { clip: 'foo' }),
-  ChartOptionMock('showline', 'foo', { showLine: 'foo' }),
-  ChartOptionMock('steppedline', 'foo', { steppedLine: 'foo' }),
+  ChartOptionMock('showline', true, { showLine: true }),
+  ChartOptionMock('steppedline', true, { steppedLine: true }),
   ChartOptionMock('xaxisid', 'foo', { xAxisID: 'foo' }),
   ChartOptionMock('yaxisid', 'foo', { yAxisID: 'foo' }),
   ChartOptionMock('borderskipped', 'foo', { borderSkipped: 'foo' }),

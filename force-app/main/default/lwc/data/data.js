@@ -3,7 +3,7 @@ import { api } from 'lwc';
 import { ATTRIBUTE_DATA, DATA_EVENT_NAME } from 'c/constants';
 import { nanoid } from 'c/nanoid';
 
-import { sanitize } from 'c/utils';
+import { parseBoolean, sanitize } from 'c/utils';
 
 export default class Data extends BaseAttribute {
   @api
@@ -109,7 +109,7 @@ export default class Data extends BaseAttribute {
     return this._payload.fill;
   }
   set fill(v) {
-    this._payload.fill = v;
+    this._payload.fill = parseBoolean(v);
   }
   @api
   get label() {
@@ -207,7 +207,7 @@ export default class Data extends BaseAttribute {
     return this._payload.spanGaps;
   }
   set spangaps(v) {
-    this._payload.spanGaps = v;
+    this._payload.spanGaps = parseBoolean(v);
   }
   @api
   get stack() {
@@ -235,14 +235,14 @@ export default class Data extends BaseAttribute {
     return this._payload.showLine;
   }
   set showline(v) {
-    this._payload.showLine = v;
+    this._payload.showLine = parseBoolean(v);
   }
   @api
   get steppedline() {
     return this._payload.steppedLine;
   }
   set steppedline(v) {
-    this._payload.steppedLine = v;
+    this._payload.steppedLine = parseBoolean(v);
   }
   @api
   get xaxisid() {

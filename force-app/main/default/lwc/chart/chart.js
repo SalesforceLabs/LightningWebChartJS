@@ -1,7 +1,7 @@
 import { LightningElement, api } from 'lwc';
 import ChartJS from '@salesforce/resourceUrl/chartjs_v280';
 import { loadScript } from 'lightning/platformResourceLoader';
-import { sanitize } from 'c/utils';
+import { parseBoolean, sanitize } from 'c/utils';
 import { nanoid } from 'c/nanoid';
 
 import {
@@ -93,7 +93,7 @@ export default class Chart extends LightningElement {
     return this._payload.responsive;
   }
   set responsive(v) {
-    this._payload.responsive = Boolean(v);
+    this._payload.responsive = parseBoolean(v);
   }
 
   @api
@@ -109,7 +109,7 @@ export default class Chart extends LightningElement {
     return this._payload.maintainAspectRatio;
   }
   set maintainaspectratio(v) {
-    this._payload.maintainAspectRatio = Boolean(v);
+    this._payload.maintainAspectRatio = parseBoolean(v);
   }
 
   @api

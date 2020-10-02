@@ -1,6 +1,6 @@
 import BaseAttribute from 'c/baseAttribute';
 import { api } from 'lwc';
-
+import { parseBoolean } from 'c/utils';
 /**
  * https://www.chartjs.org/docs/latest/axes/
  */
@@ -10,7 +10,7 @@ export default class BaseAxis extends BaseAttribute {
     return this._content.display;
   }
   set display(v) {
-    this._content.display = Boolean(v);
+    this._content.display = parseBoolean(v);
   }
 
   @api

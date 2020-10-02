@@ -1,6 +1,7 @@
 import BaseAttribute from 'c/baseAttribute';
 import { api } from 'lwc';
 import { ATTRIBUTE_TITLE } from 'c/constants';
+import { parseBoolean } from 'c/utils';
 
 export default class Title extends BaseAttribute {
   @api
@@ -8,7 +9,7 @@ export default class Title extends BaseAttribute {
     return this._payload.display;
   }
   set display(v) {
-    this._payload.display = Boolean(v);
+    this._payload.display = parseBoolean(v);
   }
 
   @api

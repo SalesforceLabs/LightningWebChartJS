@@ -1,6 +1,7 @@
 import CartesianAxis from 'c/cartesianAxis';
 import { api } from 'lwc';
 import { CARTESIAN_AXIS_TYPE_TIME } from 'c/constants';
+import { parseBoolean } from 'c/utils';
 
 /**
  * https://www.chartjs.org/docs/latest/axes/cartesian/time.html
@@ -51,7 +52,7 @@ export default class CartesianTimeAxis extends CartesianAxis {
     return this._content.time.isoWeekday;
   }
   set timeIsoweekday(v) {
-    this._content.time.isoWeekday = Boolean(v);
+    this._content.time.isoWeekday = parseBoolean(v);
   }
 
   @api

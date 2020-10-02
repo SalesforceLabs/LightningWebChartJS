@@ -6,7 +6,7 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('position', 'foo', {
     yAxes: [{ position: 'foo' }]
   }),
-  ChartOptionMock('offset', 'foo', { yAxes: [{ offset: 'foo' }] }),
+  ChartOptionMock('offset', true, { yAxes: [{ offset: true }] }),
   ChartOptionMock('id', 'foo', { yAxes: [{ id: 'foo' }] }),
   ChartOptionMock('ticksMin', 'foo', {
     yAxes: [{ ticks: { min: 'foo' } }]
@@ -17,8 +17,8 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('ticksSamplesize', 1, {
     yAxes: [{ ticks: { sampleSize: 1 } }]
   }),
-  ChartOptionMock('ticksAutoskip', 'foo', {
-    yAxes: [{ ticks: { autoSkip: 'foo' } }]
+  ChartOptionMock('ticksAutoskip', true, {
+    yAxes: [{ ticks: { autoSkip: true } }]
   }),
   ChartOptionMock('ticksAutoskippadding', 1, {
     yAxes: [{ ticks: { autoSkipPadding: 1 } }]
@@ -32,14 +32,14 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('ticksMinrotation', 1, {
     yAxes: [{ ticks: { minRotation: 1 } }]
   }),
-  ChartOptionMock('ticksMirror', 'foo', {
-    yAxes: [{ ticks: { mirror: 'foo' } }]
+  ChartOptionMock('ticksMirror', true, {
+    yAxes: [{ ticks: { mirror: true } }]
   }),
   ChartOptionMock('ticksPadding', 1, {
     yAxes: [{ ticks: { padding: 1 } }]
   }),
-  ChartOptionMock('titleDisplay', 'foo', {
-    yAxes: [{ scaleLabel: { display: 'foo' } }]
+  ChartOptionMock('titleDisplay', true, {
+    yAxes: [{ scaleLabel: { display: true } }]
   }),
   ChartOptionMock('titleLabelstring', 'foo', {
     yAxes: [{ scaleLabel: { labelString: 'foo' } }]
@@ -62,11 +62,11 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('titlePadding', 'foo', {
     yAxes: [{ scaleLabel: { padding: 'foo' } }]
   }),
-  ChartOptionMock('gridDisplay', 'foo', {
-    yAxes: [{ gridLines: { display: 'foo' } }]
+  ChartOptionMock('gridDisplay', true, {
+    yAxes: [{ gridLines: { display: true } }]
   }),
-  ChartOptionMock('gridCircular', 'foo', {
-    yAxes: [{ gridLines: { circular: 'foo' } }]
+  ChartOptionMock('gridCircular', true, {
+    yAxes: [{ gridLines: { circular: true } }]
   }),
   ChartOptionMock('gridColor', 'foo', {
     yAxes: [{ gridLines: { color: 'foo' } }]
@@ -80,14 +80,14 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('gridLinewidth', 'foo', {
     yAxes: [{ gridLines: { lineWidth: 'foo' } }]
   }),
-  ChartOptionMock('gridDrawborder', 'foo', {
-    yAxes: [{ gridLines: { drawBorder: 'foo' } }]
+  ChartOptionMock('gridDrawborder', true, {
+    yAxes: [{ gridLines: { drawBorder: true } }]
   }),
-  ChartOptionMock('gridDrawonchartarea', 'foo', {
-    yAxes: [{ gridLines: { drawOnChartArea: 'foo' } }]
+  ChartOptionMock('gridDrawonchartarea', true, {
+    yAxes: [{ gridLines: { drawOnChartArea: true } }]
   }),
-  ChartOptionMock('gridDrawticks', 'foo', {
-    yAxes: [{ gridLines: { drawTicks: 'foo' } }]
+  ChartOptionMock('gridDrawticks', true, {
+    yAxes: [{ gridLines: { drawTicks: true } }]
   }),
   ChartOptionMock('gridTickmarklength', 1, {
     yAxes: [{ gridLines: { tickMarkLength: 1 } }]

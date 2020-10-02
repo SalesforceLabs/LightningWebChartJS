@@ -4,9 +4,9 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('display', true, { display: true }),
   ChartOptionMock('position', 'foo', { position: 'foo' }),
   ChartOptionMock('align', 'foo', { align: 'foo' }),
-  ChartOptionMock('fullwidth', 'foo', { fullWidth: 'foo' }),
-  ChartOptionMock('reverse', 'foo', { reverse: 'foo' }),
-  ChartOptionMock('rtl', 'foo', { rtl: 'foo' }),
+  ChartOptionMock('fullwidth', true, { fullWidth: true }),
+  ChartOptionMock('reverse', true, { reverse: true }),
+  ChartOptionMock('rtl', true, { rtl: true }),
   ChartOptionMock('textdirection', 'foo', { textDirection: 'foo' }),
   ChartOptionMock('labelBoxwidth', 'foo', {
     labels: { boxWidth: 'foo' }
@@ -26,8 +26,8 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('labelPadding', 'foo', {
     labels: { padding: 'foo' }
   }),
-  ChartOptionMock('labelUsepointstyle', 'foo', {
-    labels: { usePointStyle: 'foo' }
+  ChartOptionMock('labelUsepointstyle', true, {
+    labels: { usePointStyle: true }
   }),
   ChartOptionMock('labelCallbackOnclick', 'foo', {
     labels: { onClick: 'foo' }

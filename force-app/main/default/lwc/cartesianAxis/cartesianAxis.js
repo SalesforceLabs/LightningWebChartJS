@@ -2,6 +2,7 @@ import BaseAxis from 'c/baseAxis';
 import { api } from 'lwc';
 import { ATTRIBUTE_CARTESIAN_AXES } from 'c/constants';
 import { nanoid } from 'c/nanoid';
+import { parseBoolean } from 'c/utils';
 
 /**
  * https://www.chartjs.org/docs/latest/axes/cartesian/
@@ -49,7 +50,7 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.offset;
   }
   set offset(v) {
-    this._content.offset = v;
+    this._content.offset = parseBoolean(v);
   }
 
   @api
@@ -90,7 +91,7 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.ticks.autoSkip;
   }
   set ticksAutoskip(v) {
-    this._content.ticks.autoSkip = v;
+    this._content.ticks.autoSkip = parseBoolean(v);
   }
 
   @api
@@ -130,7 +131,7 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.ticks.mirror;
   }
   set ticksMirror(v) {
-    this._content.ticks.mirror = v;
+    this._content.ticks.mirror = parseBoolean(v);
   }
 
   @api
@@ -148,7 +149,7 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.scaleLabel.display;
   }
   set titleDisplay(v) {
-    this._content.scaleLabel.display = v;
+    this._content.scaleLabel.display = parseBoolean(v);
   }
 
   @api
@@ -214,7 +215,7 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.gridLines.display;
   }
   set gridDisplay(v) {
-    this._content.gridLines.display = v;
+    this._content.gridLines.display = parseBoolean(v);
   }
 
   @api
@@ -222,7 +223,7 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.gridLines.circular;
   }
   set gridCircular(v) {
-    this._content.gridLines.circular = v;
+    this._content.gridLines.circular = parseBoolean(v);
   }
 
   @api
@@ -262,7 +263,7 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.gridLines.drawBorder;
   }
   set gridDrawborder(v) {
-    this._content.gridLines.drawBorder = v;
+    this._content.gridLines.drawBorder = parseBoolean(v);
   }
 
   @api
@@ -270,7 +271,7 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.gridLines.drawOnChartArea;
   }
   set gridDrawonchartarea(v) {
-    this._content.gridLines.drawOnChartArea = v;
+    this._content.gridLines.drawOnChartArea = parseBoolean(v);
   }
 
   @api
@@ -278,7 +279,7 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.gridLines.drawTicks;
   }
   set gridDrawticks(v) {
-    this._content.gridLines.drawTicks = v;
+    this._content.gridLines.drawTicks = parseBoolean(v);
   }
 
   @api
@@ -326,7 +327,7 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.gridLines.offsetGridLines;
   }
   set gridOffsetgridlines(v) {
-    this._content.gridLines.offsetGridLines = Number(v);
+    this._content.gridLines.offsetGridLines = parseBoolean(v);
   }
 
   @api
@@ -342,7 +343,7 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.stacked;
   }
   set stacked(v) {
-    this._content.stacked = Boolean(v);
+    this._content.stacked = parseBoolean(v);
   }
 
   constructor() {
