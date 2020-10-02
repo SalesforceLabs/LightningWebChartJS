@@ -180,7 +180,9 @@ The SOQL query must respect those constraints :
 
 The query accept to use `:recordId` string placeholder and will replace this with the actual record Id if the component is placed on an object page
 
-Exemple of a well formed query for a Component placed on an account page :
+**IMPORTANT:** The radar, bubble and scatter charts are not currently supported to work with the SOQL property. If you need to create a chart of one of these types, please use a JSON structure or check the [API Documentation](./docs/api.html).
+
+Example of a well formed query for a Component placed on an account page :
 
 ```
 SELECT StageName label, SUM(Amount) value FROM Opportunity WHERE IsClosed = false AND AccountId = :recordId WITH SECURITY_ENFORCED GROUP BY StageName LIMIT 10
@@ -193,6 +195,8 @@ This property is used to execute custom apex handler to provide data.
 The class provided must extend the class `ChartDataProvider`.
 
 The lwc component will pass to the class the recordId (if on an object page)
+
+**IMPORTANT:** The radar, bubble and scatter charts are not currently supported to work with a Custom Data Provider. If you need to create a chart of one of these types, please use a JSON structure or check the [API Documentation](./docs/api.html).
 
 ### LWCC for Developers
 

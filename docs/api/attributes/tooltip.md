@@ -10,10 +10,10 @@ Tooltip inherits all the properties from [BaseAttribute]({{ "/docs/api/attribute
 
 | Attribute name | Type | Default | Description
 | --- | --- | --- | ---
-| enabled | boolean | TRUE | Are on-canvas tooltips enabled?
+| enabled | boolean | true | Are on-canvas tooltips enabled?
 | custom | function | null | See custom [tooltip](https://www.chartjs.org/docs/latest/configuration/tooltip.html#external-custom-tooltips) section
 | mode | string | `nearest` | Sets which elements appear in the tooltip. [more...](https://www.chartjs.org/docs/latest/general/interactions/modes.html#interaction-modes)
-| intersect | boolean | TRUE | If true, the tooltip mode applies only when the mouse position intersects with an element. If false, the mode will be applied at all times
+| intersect | boolean | true | If true, the tooltip mode applies only when the mouse position intersects with an element. If false, the mode will be applied at all times
 | position | string | `average` | The mode for positioning the tooltip. Options are: `average`, `nearest`.
 | itemSort | function |  | Sort tooltip items. [more...](https://www.chartjs.org/docs/latest/configuration/tooltip.html#sort-callback)
 | filter | function |  | Filter tooltip items. [more...](https://www.chartjs.org/docs/latest/configuration/tooltip.html#filter-callback)
@@ -44,7 +44,7 @@ Tooltip inherits all the properties from [BaseAttribute]({{ "/docs/api/attribute
 | caretsize | number | 5 | Size, in px, of the tooltip arrow
 | cornerradius | number | 6 | Radius of tooltip corner curves
 | multikeybackground | Color | `#fff` | Color to draw behind the colored boxes when multiple items are in the tooltip
-| displaycolors | boolean | TRUE | If true, color boxes are shown in the tooltip
+| displaycolors | boolean | true | If true, color boxes are shown in the tooltip
 | bordercolor | Color | `rgba(0, 0, 0, 0)` | Color of the border
 | borderwidth | number | 0 | Size of the border
 | rtl | boolean |  | true for rendering the legends from right to left

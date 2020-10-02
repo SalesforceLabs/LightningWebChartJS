@@ -20,10 +20,10 @@ Line elements are used to represent the line in a line chart.
 | borderdash | number[] | [] | Line dash. [See MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash)
 | borderdashoffset | number | 0 | Line dash offset. [See MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset)
 | borderjoinstyle | string | `'miter'` | Line join style. [See MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin)
-| capbezierpoints | boolean | TRUE | true to keep Bézier control inside the chart, false for no restriction
+| capbezierpoints | boolean | true | true to keep Bézier control inside the chart, false for no restriction
 | cubicinterpolationmode | string | `'default'` | Interpolation mode to apply. [See more...](https://www.chartjs.org/docs/latest/charts/line.html#cubicinterpolationmode)
-| fill | boolean|string | TRUE | How to fill the area under the line. See [area charts](https://www.chartjs.org/docs/latest/charts/area.html#filling-modes)
-| stepped | boolean | FALSE | true to show the line as a stepped line (tension will be ignored)
+| fill | boolean|string | true | How to fill the area under the line. See [area charts](https://www.chartjs.org/docs/latest/charts/area.html#filling-modes)
+| stepped | boolean | false | true to show the line as a stepped line (tension will be ignored)
 | spangaps | boolean | undefined | Only for radar charts. If true, lines will be drawn between points with no or null data. If false, points with NaN data will create a break in the line.
 
 ## Usage
