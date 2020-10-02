@@ -9877,6 +9877,9 @@ function sanitize(attribute) {
 
   return value;
 }
+function parseBoolean(value) {
+  return typeof value == 'string' ? value === 'true' : value;
+}
 
 let nanoid = (t = 21) => {
   let e = '',
@@ -10107,7 +10110,7 @@ class Chart extends BaseLightningElement {
   }
 
   set responsive(v) {
-    this._payload.responsive = Boolean(v);
+    this._payload.responsive = parseBoolean(v);
   }
 
   get responsiveanimationduration() {
@@ -10123,7 +10126,7 @@ class Chart extends BaseLightningElement {
   }
 
   set maintainaspectratio(v) {
-    this._payload.maintainAspectRatio = Boolean(v);
+    this._payload.maintainAspectRatio = parseBoolean(v);
   }
 
   get aspectratio() {
@@ -10748,7 +10751,7 @@ class Data extends BaseAttribute$1 {
   }
 
   set fill(v) {
-    this._payload.fill = v;
+    this._payload.fill = parseBoolean(v);
   }
 
   get label() {
@@ -10860,7 +10863,7 @@ class Data extends BaseAttribute$1 {
   }
 
   set spangaps(v) {
-    this._payload.spanGaps = v;
+    this._payload.spanGaps = parseBoolean(v);
   }
 
   get stack() {
@@ -10892,7 +10895,7 @@ class Data extends BaseAttribute$1 {
   }
 
   set showline(v) {
-    this._payload.showLine = v;
+    this._payload.showLine = parseBoolean(v);
   }
 
   get steppedline() {
@@ -10900,7 +10903,7 @@ class Data extends BaseAttribute$1 {
   }
 
   set steppedline(v) {
-    this._payload.steppedLine = v;
+    this._payload.steppedLine = parseBoolean(v);
   }
 
   get xaxisid() {
@@ -11161,7 +11164,7 @@ class Title extends BaseAttribute$1 {
   }
 
   set display(v) {
-    this._payload.display = Boolean(v);
+    this._payload.display = parseBoolean(v);
   }
 
   get position() {
@@ -11278,7 +11281,7 @@ class Legend extends BaseAttribute$1 {
   }
 
   set display(v) {
-    this._payload.display = Boolean(v);
+    this._payload.display = parseBoolean(v);
   }
 
   get position() {
@@ -11302,7 +11305,7 @@ class Legend extends BaseAttribute$1 {
   }
 
   set fullwidth(v) {
-    this._payload.fullWidth = v;
+    this._payload.fullWidth = parseBoolean(v);
   }
 
   get reverse() {
@@ -11310,7 +11313,7 @@ class Legend extends BaseAttribute$1 {
   }
 
   set reverse(v) {
-    this._payload.reverse = v;
+    this._payload.reverse = parseBoolean(v);
   }
 
   get rtl() {
@@ -11318,7 +11321,7 @@ class Legend extends BaseAttribute$1 {
   }
 
   set rtl(v) {
-    this._payload.rtl = v;
+    this._payload.rtl = parseBoolean(v);
   }
 
   get textdirection() {
@@ -11382,7 +11385,7 @@ class Legend extends BaseAttribute$1 {
   }
 
   set labelUsepointstyle(v) {
-    this._payload.labels.usePointStyle = v;
+    this._payload.labels.usePointStyle = parseBoolean(v);
   }
 
   get labelCallbackOnclick() {
@@ -11568,7 +11571,7 @@ class BaseAxis extends BaseAttribute$1 {
   }
 
   set display(v) {
-    this._content.display = Boolean(v);
+    this._content.display = parseBoolean(v);
   }
 
   get weight() {
@@ -11837,7 +11840,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set offset(v) {
-    this._content.offset = v;
+    this._content.offset = parseBoolean(v);
   }
 
   get id() {
@@ -11877,7 +11880,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set ticksAutoskip(v) {
-    this._content.ticks.autoSkip = v;
+    this._content.ticks.autoSkip = parseBoolean(v);
   }
 
   get ticksAutoskippadding() {
@@ -11917,7 +11920,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set ticksMirror(v) {
-    this._content.ticks.mirror = v;
+    this._content.ticks.mirror = parseBoolean(v);
   }
 
   get ticksPadding() {
@@ -11933,7 +11936,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set titleDisplay(v) {
-    this._content.scaleLabel.display = v;
+    this._content.scaleLabel.display = parseBoolean(v);
   }
 
   get titleLabelstring() {
@@ -11997,7 +12000,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set gridDisplay(v) {
-    this._content.gridLines.display = v;
+    this._content.gridLines.display = parseBoolean(v);
   }
 
   get gridCircular() {
@@ -12005,7 +12008,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set gridCircular(v) {
-    this._content.gridLines.circular = v;
+    this._content.gridLines.circular = parseBoolean(v);
   }
 
   get gridColor() {
@@ -12045,7 +12048,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set gridDrawborder(v) {
-    this._content.gridLines.drawBorder = v;
+    this._content.gridLines.drawBorder = parseBoolean(v);
   }
 
   get gridDrawonchartarea() {
@@ -12053,7 +12056,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set gridDrawonchartarea(v) {
-    this._content.gridLines.drawOnChartArea = v;
+    this._content.gridLines.drawOnChartArea = parseBoolean(v);
   }
 
   get gridDrawticks() {
@@ -12061,7 +12064,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set gridDrawticks(v) {
-    this._content.gridLines.drawTicks = v;
+    this._content.gridLines.drawTicks = parseBoolean(v);
   }
 
   get gridTickmarklength() {
@@ -12109,7 +12112,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set gridOffsetgridlines(v) {
-    this._content.gridLines.offsetGridLines = Number(v);
+    this._content.gridLines.offsetGridLines = parseBoolean(v);
   }
 
   get gridZ() {
@@ -12125,7 +12128,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set stacked(v) {
-    this._content.stacked = Boolean(v);
+    this._content.stacked = parseBoolean(v);
   }
 
   constructor() {
@@ -12305,7 +12308,7 @@ class Tooltip extends BaseAttribute$1 {
   }
 
   set enabled(v) {
-    this._payload.enabled = v;
+    this._payload.enabled = parseBoolean(v);
   }
 
   get custom() {
@@ -12329,7 +12332,7 @@ class Tooltip extends BaseAttribute$1 {
   }
 
   set intersect(v) {
-    this._payload.intersect = v;
+    this._payload.intersect = parseBoolean(v);
   }
 
   get position() {
@@ -12681,7 +12684,7 @@ class Tooltip extends BaseAttribute$1 {
   }
 
   set displaycolors(v) {
-    this._payload.displayColors = v;
+    this._payload.displayColors = parseBoolean(v);
   }
 
   get bordercolor() {
@@ -12705,7 +12708,7 @@ class Tooltip extends BaseAttribute$1 {
   }
 
   set rtl(v) {
-    this._payload.rtl = v;
+    this._payload.rtl = parseBoolean(v);
   }
 
   get textdirection() {
@@ -12959,7 +12962,7 @@ class LineConfiguration extends BaseAttribute$1 {
   }
 
   set capbezierpoints(v) {
-    this._payload.line.capBezierPoints = v;
+    this._payload.line.capBezierPoints = parseBoolean(v);
   }
 
   get cubicinterpolationmode() {
@@ -12975,7 +12978,7 @@ class LineConfiguration extends BaseAttribute$1 {
   }
 
   set fill(v) {
-    this._payload.line.fill = v;
+    this._payload.line.fill = parseBoolean(v);
   }
 
   get stepped() {
@@ -12983,7 +12986,7 @@ class LineConfiguration extends BaseAttribute$1 {
   }
 
   set stepped(v) {
-    this._payload.line.stepped = v;
+    this._payload.line.stepped = parseBoolean(v);
   }
 
   get spangaps() {
@@ -12991,7 +12994,7 @@ class LineConfiguration extends BaseAttribute$1 {
   }
 
   set spangaps(v) {
-    this._payload.line.spanGaps = v;
+    this._payload.line.spanGaps = parseBoolean(v);
   }
 
   constructor() {
@@ -13056,7 +13059,7 @@ class CartesianLinearAxis extends _cCartesianAxis {
   }
 
   set ticksBeginatzero(v) {
-    this._content.ticks.beginAtZero = Boolean(v);
+    this._content.ticks.beginAtZero = parseBoolean(v);
   }
 
   get ticksMaxtickslimit() {
@@ -13252,7 +13255,7 @@ class CartesianTimeAxis extends _cCartesianAxis {
   }
 
   set timeIsoweekday(v) {
-    this._content.time.isoWeekday = Boolean(v);
+    this._content.time.isoWeekday = parseBoolean(v);
   }
 
   get timeParser() {
