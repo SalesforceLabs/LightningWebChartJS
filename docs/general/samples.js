@@ -37,6 +37,7 @@ const {
   getOwnPropertyNames,
   getPrototypeOf,
   hasOwnProperty,
+  isFrozen,
   keys,
   seal,
   setPrototypeOf
@@ -118,6 +119,40 @@ function getPropertyDescriptor(o, p) {
 }
 
 const emptyString = '';
+const AriaPropertyNames = ['ariaActiveDescendant', 'ariaAtomic', 'ariaAutoComplete', 'ariaBusy', 'ariaChecked', 'ariaColCount', 'ariaColIndex', 'ariaColSpan', 'ariaControls', 'ariaCurrent', 'ariaDescribedBy', 'ariaDetails', 'ariaDisabled', 'ariaErrorMessage', 'ariaExpanded', 'ariaFlowTo', 'ariaHasPopup', 'ariaHidden', 'ariaInvalid', 'ariaKeyShortcuts', 'ariaLabel', 'ariaLabelledBy', 'ariaLevel', 'ariaLive', 'ariaModal', 'ariaMultiLine', 'ariaMultiSelectable', 'ariaOrientation', 'ariaOwns', 'ariaPlaceholder', 'ariaPosInSet', 'ariaPressed', 'ariaReadOnly', 'ariaRelevant', 'ariaRequired', 'ariaRoleDescription', 'ariaRowCount', 'ariaRowIndex', 'ariaRowSpan', 'ariaSelected', 'ariaSetSize', 'ariaSort', 'ariaValueMax', 'ariaValueMin', 'ariaValueNow', 'ariaValueText', 'role'];
+const AttrNameToPropNameMap = create(null);
+const PropNameToAttrNameMap = create(null);
+forEach.call(AriaPropertyNames, propName => {
+  const attrName = StringToLowerCase.call(StringReplace.call(propName, /^aria/, 'aria-'));
+  AttrNameToPropNameMap[attrName] = propName;
+  PropNameToAttrNameMap[propName] = attrName;
+});
+
+const _globalThis = function () {
+  if (typeof globalThis === 'object') {
+    return globalThis;
+  }
+
+  let _globalThis;
+
+  try {
+    Object.defineProperty(Object.prototype, '__magic__', {
+      get: function () {
+        return this;
+      },
+      configurable: true
+    });
+    _globalThis = __magic__;
+    delete Object.prototype.__magic__;
+  } catch (ex) {} finally {
+    if (typeof _globalThis === 'undefined') {
+      _globalThis = window;
+    }
+  }
+
+  return _globalThis;
+}();
+
 const hasNativeSymbolsSupport = Symbol('x').toString() === 'Symbol(x)';
 
 function createHiddenField(key, namespace) {
@@ -145,6 +180,25 @@ function getHiddenField(o, field) {
   }
 }
 
+const HTML_ATTRIBUTES_TO_PROPERTY = {
+  accesskey: 'accessKey',
+  readonly: 'readOnly',
+  tabindex: 'tabIndex',
+  bgcolor: 'bgColor',
+  colspan: 'colSpan',
+  rowspan: 'rowSpan',
+  contenteditable: 'contentEditable',
+  crossorigin: 'crossOrigin',
+  datetime: 'dateTime',
+  formaction: 'formAction',
+  ismap: 'isMap',
+  maxlength: 'maxLength',
+  minlength: 'minLength',
+  novalidate: 'noValidate',
+  usemap: 'useMap',
+  for: 'htmlFor'
+};
+keys(HTML_ATTRIBUTES_TO_PROPERTY).forEach(attrName => {});
 const {
   DOCUMENT_POSITION_CONTAINED_BY,
   DOCUMENT_POSITION_CONTAINS,
@@ -301,22 +355,46 @@ const {
   getOwnPropertyNames: getOwnPropertyNames$1,
   getPrototypeOf: getPrototypeOf$1,
   hasOwnProperty: hasOwnProperty$1,
+  isFrozen: isFrozen$1,
   keys: keys$1,
   seal: seal$1,
   setPrototypeOf: setPrototypeOf$1
 } = Object;
-const hasNativeSymbolsSupport$1 = Symbol('x').toString() === 'Symbol(x)';
+const {
+  filter: ArrayFilter$1,
+  find: ArrayFind$1,
+  indexOf: ArrayIndexOf$1,
+  join: ArrayJoin$1,
+  map: ArrayMap$1,
+  push: ArrayPush$1,
+  reduce: ArrayReduce$1,
+  reverse: ArrayReverse$1,
+  slice: ArraySlice$1,
+  splice: ArraySplice$1,
+  unshift: ArrayUnshift$1,
+  forEach: forEach$1
+} = Array.prototype;
+const {
+  charCodeAt: StringCharCodeAt$1,
+  replace: StringReplace$1,
+  slice: StringSlice$1,
+  toLowerCase: StringToLowerCase$1
+} = String.prototype;
+const AriaPropertyNames$1 = ['ariaActiveDescendant', 'ariaAtomic', 'ariaAutoComplete', 'ariaBusy', 'ariaChecked', 'ariaColCount', 'ariaColIndex', 'ariaColSpan', 'ariaControls', 'ariaCurrent', 'ariaDescribedBy', 'ariaDetails', 'ariaDisabled', 'ariaErrorMessage', 'ariaExpanded', 'ariaFlowTo', 'ariaHasPopup', 'ariaHidden', 'ariaInvalid', 'ariaKeyShortcuts', 'ariaLabel', 'ariaLabelledBy', 'ariaLevel', 'ariaLive', 'ariaModal', 'ariaMultiLine', 'ariaMultiSelectable', 'ariaOrientation', 'ariaOwns', 'ariaPlaceholder', 'ariaPosInSet', 'ariaPressed', 'ariaReadOnly', 'ariaRelevant', 'ariaRequired', 'ariaRoleDescription', 'ariaRowCount', 'ariaRowIndex', 'ariaRowSpan', 'ariaSelected', 'ariaSetSize', 'ariaSort', 'ariaValueMax', 'ariaValueMin', 'ariaValueNow', 'ariaValueText', 'role'];
+const AttrNameToPropNameMap$1 = create$1(null);
+const PropNameToAttrNameMap$1 = create$1(null);
+forEach$1.call(AriaPropertyNames$1, propName => {
+  const attrName = StringToLowerCase$1.call(StringReplace$1.call(propName, /^aria/, 'aria-'));
+  AttrNameToPropNameMap$1[attrName] = propName;
+  PropNameToAttrNameMap$1[propName] = attrName;
+});
 
-let _globalThis;
-
-if (typeof globalThis === 'object') {
-  _globalThis = globalThis;
-}
-
-function getGlobalThis() {
-  if (typeof _globalThis === 'object') {
-    return _globalThis;
+const _globalThis$1 = function () {
+  if (typeof globalThis === 'object') {
+    return globalThis;
   }
+
+  let _globalThis;
 
   try {
     Object.defineProperty(Object.prototype, '__magic__', {
@@ -334,9 +412,28 @@ function getGlobalThis() {
   }
 
   return _globalThis;
-}
+}();
 
-const _globalThis$1 = getGlobalThis();
+const hasNativeSymbolsSupport$1 = Symbol('x').toString() === 'Symbol(x)';
+const HTML_ATTRIBUTES_TO_PROPERTY$1 = {
+  accesskey: 'accessKey',
+  readonly: 'readOnly',
+  tabindex: 'tabIndex',
+  bgcolor: 'bgColor',
+  colspan: 'colSpan',
+  rowspan: 'rowSpan',
+  contenteditable: 'contentEditable',
+  crossorigin: 'crossOrigin',
+  datetime: 'dateTime',
+  formaction: 'formAction',
+  ismap: 'isMap',
+  maxlength: 'maxLength',
+  minlength: 'minLength',
+  novalidate: 'noValidate',
+  usemap: 'useMap',
+  for: 'htmlFor'
+};
+keys$1(HTML_ATTRIBUTES_TO_PROPERTY$1).forEach(attrName => {});
 
 if (!_globalThis$1.lwcRuntimeFlags) {
   Object.defineProperty(_globalThis$1, 'lwcRuntimeFlags', {
@@ -393,18 +490,21 @@ function pathComposer(startNode, composed) {
 
   while (!isNull(current)) {
     composedPath.push(current);
-    let assignedSlot = null;
 
     if (current instanceof Element) {
-      assignedSlot = current.assignedSlot;
-    }
+      const assignedSlot = current.assignedSlot;
 
-    if (!isNull(assignedSlot)) {
-      current = assignedSlot;
+      if (!isNull(assignedSlot)) {
+        current = assignedSlot;
+      } else {
+        current = current.parentNode;
+      }
     } else if (current instanceof ShadowRoot && (composed || current !== startRoot)) {
       current = current.host;
-    } else {
+    } else if (current instanceof Node) {
       current = current.parentNode;
+    } else {
+      current = null;
     }
   }
 
@@ -2550,7 +2650,8 @@ function windowRemoveEventListener$1(type, listener, optionsOrCapture) {
   }
 
   const wrapperFn = getEventListenerWrapper(listener);
-  windowRemoveEventListener.call(this, type, wrapperFn || listener, optionsOrCapture);
+  windowRemoveEventListener.call(this, type, wrapperFn, optionsOrCapture);
+  windowRemoveEventListener.call(this, type, listener, optionsOrCapture);
 }
 
 function addEventListener$1(type, listener, optionsOrCapture) {
@@ -2568,7 +2669,8 @@ function removeEventListener$1(type, listener, optionsOrCapture) {
   }
 
   const wrapperFn = getEventListenerWrapper(listener);
-  removeEventListener.call(this, type, wrapperFn || listener, optionsOrCapture);
+  removeEventListener.call(this, type, wrapperFn, optionsOrCapture);
+  removeEventListener.call(this, type, listener, optionsOrCapture);
 }
 
 window.addEventListener = windowAddEventListener$1;
@@ -2588,14 +2690,57 @@ defineProperties(protoToBePatched, {
     configurable: true
   }
 });
+const composedDescriptor = Object.getOwnPropertyDescriptor(Event.prototype, 'composed');
 
 function detect$1() {
+  if (!composedDescriptor) {
+    return false;
+  }
+
+  let clickEvent = new Event('click');
+  const button = document.createElement('button');
+  button.addEventListener('click', event => clickEvent = event);
+  button.click();
+  return !composedDescriptor.get.call(clickEvent);
+}
+
+const originalClickDescriptor = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'click');
+
+function handleClick(event) {
+  Object.defineProperty(event, 'composed', {
+    configurable: true,
+    enumerable: true,
+
+    get() {
+      return true;
+    }
+
+  });
+}
+
+function apply$1() {
+  HTMLElement.prototype.click = function () {
+    addEventListener.call(this, 'click', handleClick);
+
+    try {
+      originalClickDescriptor.value.call(this);
+    } finally {
+      removeEventListener.call(this, 'click', handleClick);
+    }
+  };
+}
+
+if (detect$1()) {
+  apply$1();
+}
+
+function detect$2() {
   return new Event('test', {
     composed: true
   }).composed !== true;
 }
 
-function apply$1() {
+function apply$2() {
   const composedEvents = assign(create(null), {
     beforeinput: 1,
     blur: 1,
@@ -2686,8 +2831,8 @@ function apply$1() {
   });
 }
 
-if (detect$1()) {
-  apply$1();
+if (detect$2()) {
+  apply$2();
 }
 
 const CustomEventConstructor = CustomEvent;
@@ -2710,26 +2855,6 @@ function PatchedCustomEvent(type, eventInitDict) {
 
 PatchedCustomEvent.prototype = CustomEventConstructor.prototype;
 window.CustomEvent = PatchedCustomEvent;
-const originalComposedGetter = Object.getOwnPropertyDescriptor(Event.prototype, 'composed').get;
-Object.defineProperties(FocusEvent.prototype, {
-  composed: {
-    get() {
-      const {
-        isTrusted
-      } = this;
-      const composed = originalComposedGetter.call(this);
-
-      if (isTrusted && composed === false) {
-        return true;
-      }
-
-      return composed;
-    },
-
-    enumerable: true,
-    configurable: true
-  }
-});
 
 if (typeof ClipboardEvent !== 'undefined') {
   const isComposedType = assign(create(null), {
@@ -2752,11 +2877,11 @@ if (typeof ClipboardEvent !== 'undefined') {
   });
 }
 
-function detect$2() {
+function detect$3() {
   return typeof HTMLIFrameElement !== 'undefined';
 }
 
-function apply$2() {
+function apply$3() {
   const desc = getOwnPropertyDescriptor(HTMLIFrameElement.prototype, 'contentWindow');
   const {
     get: originalGetter
@@ -2844,8 +2969,8 @@ function wrapIframeWindow(win) {
   };
 }
 
-if (detect$2()) {
-  apply$2();
+if (detect$3()) {
+  apply$3();
 }
 
 const OriginalMutationObserver = MutationObserver;
@@ -3597,7 +3722,7 @@ function filterSequentiallyFocusableElements(elements) {
   });
 }
 
-const DidAddMouseDownListener = createHiddenField('DidAddMouseDownListener', 'synthetic-shadow');
+const DidAddMouseEventListeners = createHiddenField('DidAddMouseEventListeners', 'synthetic-shadow');
 
 function isVisible(element) {
   const {
@@ -3735,7 +3860,6 @@ function enableKeyboardFocusNavigationRoutines() {
 
 function skipHostHandler(event) {
   if (letBrowserHandleFocus) {
-    enableKeyboardFocusNavigationRoutines();
     return;
   }
 
@@ -3774,7 +3898,6 @@ function skipHostHandler(event) {
 
 function skipShadowHandler(event) {
   if (letBrowserHandleFocus) {
-    enableKeyboardFocusNavigationRoutines();
     return;
   }
 
@@ -3858,12 +3981,13 @@ function ignoreFocus(elm) {
 function bindDocumentMousedownMouseupHandlers(elm) {
   const ownerDocument = getOwnerDocument(elm);
 
-  if (!getHiddenField(ownerDocument, DidAddMouseDownListener)) {
-    setHiddenField(ownerDocument, DidAddMouseDownListener, true);
+  if (!getHiddenField(ownerDocument, DidAddMouseEventListeners)) {
+    setHiddenField(ownerDocument, DidAddMouseEventListeners, true);
     addEventListener.call(ownerDocument, 'mousedown', disableKeyboardFocusNavigationRoutines, true);
     addEventListener.call(ownerDocument, 'mouseup', () => {
       setTimeout(enableKeyboardFocusNavigationRoutines);
     }, true);
+    addEventListener.call(ownerDocument, 'dragstart', enableKeyboardFocusNavigationRoutines, true);
   }
 }
 
@@ -4063,7 +4187,7 @@ function setShadowToken(node, shadowToken) {
   node[ShadowTokenKey] = shadowToken;
 }
 
-defineProperty(Element.prototype, '$shadowToken$', {
+defineProperty(Element.prototype, ShadowTokenKey, {
   set(shadowToken) {
     const oldShadowToken = this[ShadowTokenPrivateKey];
 
@@ -4179,7 +4303,7 @@ defineProperty(Element.prototype, '$domManual$', {
   configurable: true
 });
 
-function detect$3() {
+function detect$4() {
   if ('getKey' in Proxy) {
     return false;
   }
@@ -4196,8 +4320,8 @@ const {
   isArray: isArray$1
 } = Array;
 const {
-  slice: ArraySlice$1,
-  unshift: ArrayUnshift$1,
+  slice: ArraySlice$2,
+  unshift: ArrayUnshift$2,
   shift: ArrayShift
 } = Array.prototype;
 
@@ -4218,8 +4342,8 @@ function ArrayConcatPolyfill(..._args) {
   const O = Object(this);
   const A = [];
   let N = 0;
-  const items = ArraySlice$1.call(arguments);
-  ArrayUnshift$1.call(items, O);
+  const items = ArraySlice$2.call(arguments);
+  ArrayUnshift$2.call(items, O);
 
   while (items.length) {
     const E = ArrayShift.call(items);
@@ -4243,95 +4367,12 @@ function ArrayConcatPolyfill(..._args) {
   return A;
 }
 
-function apply$3() {
+function apply$4() {
   Array.prototype.concat = ArrayConcatPolyfill;
 }
 
-if (detect$3()) {
-  apply$3();
-}
-
-function detect$1$1(propName) {
-  return Object.getOwnPropertyDescriptor(Element.prototype, propName) === undefined;
-}
-
-const {
-  hasAttribute: hasAttribute$1,
-  getAttribute: getAttribute$1,
-  setAttribute: setAttribute$1,
-  setAttributeNS,
-  removeAttribute: removeAttribute$1,
-  removeAttributeNS
-} = Element.prototype;
-const ARIA_REGEX = /^aria/;
-const nodeToAriaPropertyValuesMap = new WeakMap();
-const {
-  hasOwnProperty: hasOwnProperty$2
-} = Object.prototype;
-const {
-  replace: StringReplace$1,
-  toLowerCase: StringToLowerCase$1
-} = String.prototype;
-
-function getAriaPropertyMap(elm) {
-  let map = nodeToAriaPropertyValuesMap.get(elm);
-
-  if (map === undefined) {
-    map = {};
-    nodeToAriaPropertyValuesMap.set(elm, map);
-  }
-
-  return map;
-}
-
-function getNormalizedAriaPropertyValue(value) {
-  return value == null ? null : value + '';
-}
-
-function createAriaPropertyPropertyDescriptor(propName, attrName) {
-  return {
-    get() {
-      const map = getAriaPropertyMap(this);
-
-      if (hasOwnProperty$2.call(map, propName)) {
-        return map[propName];
-      }
-
-      return hasAttribute$1.call(this, attrName) ? getAttribute$1.call(this, attrName) : null;
-    },
-
-    set(newValue) {
-      const normalizedValue = getNormalizedAriaPropertyValue(newValue);
-      const map = getAriaPropertyMap(this);
-      map[propName] = normalizedValue;
-
-      if (newValue === null) {
-        removeAttribute$1.call(this, attrName);
-      } else {
-        setAttribute$1.call(this, attrName, newValue);
-      }
-    },
-
-    configurable: true,
-    enumerable: true
-  };
-}
-
-function patch(propName) {
-  const replaced = StringReplace$1.call(propName, ARIA_REGEX, 'aria-');
-  const attrName = StringToLowerCase$1.call(replaced);
-  const descriptor = createAriaPropertyPropertyDescriptor(propName, attrName);
-  Object.defineProperty(Element.prototype, propName, descriptor);
-}
-
-const ElementPrototypeAriaPropertyNames = ['ariaAutoComplete', 'ariaChecked', 'ariaCurrent', 'ariaDisabled', 'ariaExpanded', 'ariaHasPopup', 'ariaHidden', 'ariaInvalid', 'ariaLabel', 'ariaLevel', 'ariaMultiLine', 'ariaMultiSelectable', 'ariaOrientation', 'ariaPressed', 'ariaReadOnly', 'ariaRequired', 'ariaSelected', 'ariaSort', 'ariaValueMax', 'ariaValueMin', 'ariaValueNow', 'ariaValueText', 'ariaLive', 'ariaRelevant', 'ariaAtomic', 'ariaBusy', 'ariaActiveDescendant', 'ariaControls', 'ariaDescribedBy', 'ariaFlowTo', 'ariaLabelledBy', 'ariaOwns', 'ariaPosInSet', 'ariaSetSize', 'ariaColCount', 'ariaColIndex', 'ariaDetails', 'ariaErrorMessage', 'ariaKeyShortcuts', 'ariaModal', 'ariaPlaceholder', 'ariaRoleDescription', 'ariaRowCount', 'ariaRowIndex', 'ariaRowSpan', 'ariaColSpan', 'role'];
-
-for (let i = 0, len = ElementPrototypeAriaPropertyNames.length; i < len; i += 1) {
-  const propName = ElementPrototypeAriaPropertyNames[i];
-
-  if (detect$1$1(propName)) {
-    patch(propName);
-  }
+if (detect$4()) {
+  apply$4();
 }
 
 function invariant$1(value, msg) {
@@ -4372,7 +4413,8 @@ const {
   getOwnPropertyDescriptor: getOwnPropertyDescriptor$2,
   getOwnPropertyNames: getOwnPropertyNames$2,
   getPrototypeOf: getPrototypeOf$2,
-  hasOwnProperty: hasOwnProperty$1$1,
+  hasOwnProperty: hasOwnProperty$2,
+  isFrozen: isFrozen$2,
   keys: keys$2,
   seal: seal$2,
   setPrototypeOf: setPrototypeOf$2
@@ -4381,24 +4423,24 @@ const {
   isArray: isArray$1$1
 } = Array;
 const {
-  filter: ArrayFilter$1,
-  find: ArrayFind$1,
-  indexOf: ArrayIndexOf$1,
-  join: ArrayJoin$1,
-  map: ArrayMap$1,
-  push: ArrayPush$1,
-  reduce: ArrayReduce$1,
-  reverse: ArrayReverse$1,
+  filter: ArrayFilter$2,
+  find: ArrayFind$2,
+  indexOf: ArrayIndexOf$2,
+  join: ArrayJoin$2,
+  map: ArrayMap$2,
+  push: ArrayPush$2,
+  reduce: ArrayReduce$2,
+  reverse: ArrayReverse$2,
   slice: ArraySlice$1$1,
-  splice: ArraySplice$1,
+  splice: ArraySplice$2,
   unshift: ArrayUnshift$1$1,
-  forEach: forEach$1
+  forEach: forEach$2
 } = Array.prototype;
 const {
-  charCodeAt: StringCharCodeAt$1,
-  replace: StringReplace$1$1,
-  slice: StringSlice$1,
-  toLowerCase: StringToLowerCase$1$1
+  charCodeAt: StringCharCodeAt$2,
+  replace: StringReplace$2,
+  slice: StringSlice$2,
+  toLowerCase: StringToLowerCase$2
 } = String.prototype;
 
 function isUndefined$1(obj) {
@@ -4409,14 +4451,6 @@ function isNull$1(obj) {
   return obj === null;
 }
 
-function isTrue$1$1(obj) {
-  return obj === true;
-}
-
-function isFalse$1$1(obj) {
-  return obj === false;
-}
-
 function isFunction$1(obj) {
   return typeof obj === 'function';
 }
@@ -4425,20 +4459,12 @@ function isObject$1$1(obj) {
   return typeof obj === 'object';
 }
 
-function isString(obj) {
-  return typeof obj === 'string';
-}
-
-function isNumber(obj) {
-  return typeof obj === 'number';
-}
-
 const OtS$1 = {}.toString;
 
 function toString$1(obj) {
   if (obj && obj.toString) {
     if (isArray$1$1(obj)) {
-      return ArrayJoin$1.call(ArrayMap$1.call(obj, toString$1), ',');
+      return ArrayJoin$2.call(ArrayMap$2.call(obj, toString$1), ',');
     }
 
     return obj.toString();
@@ -4449,19 +4475,41 @@ function toString$1(obj) {
   }
 }
 
-function getPropertyDescriptor$1(o, p) {
-  do {
-    const d = getOwnPropertyDescriptor$2(o, p);
-
-    if (!isUndefined$1(d)) {
-      return d;
-    }
-
-    o = getPrototypeOf$2(o);
-  } while (o !== null);
-}
-
 const emptyString$1 = '';
+const AriaPropertyNames$2 = ['ariaActiveDescendant', 'ariaAtomic', 'ariaAutoComplete', 'ariaBusy', 'ariaChecked', 'ariaColCount', 'ariaColIndex', 'ariaColSpan', 'ariaControls', 'ariaCurrent', 'ariaDescribedBy', 'ariaDetails', 'ariaDisabled', 'ariaErrorMessage', 'ariaExpanded', 'ariaFlowTo', 'ariaHasPopup', 'ariaHidden', 'ariaInvalid', 'ariaKeyShortcuts', 'ariaLabel', 'ariaLabelledBy', 'ariaLevel', 'ariaLive', 'ariaModal', 'ariaMultiLine', 'ariaMultiSelectable', 'ariaOrientation', 'ariaOwns', 'ariaPlaceholder', 'ariaPosInSet', 'ariaPressed', 'ariaReadOnly', 'ariaRelevant', 'ariaRequired', 'ariaRoleDescription', 'ariaRowCount', 'ariaRowIndex', 'ariaRowSpan', 'ariaSelected', 'ariaSetSize', 'ariaSort', 'ariaValueMax', 'ariaValueMin', 'ariaValueNow', 'ariaValueText', 'role'];
+const AttrNameToPropNameMap$2 = create$2(null);
+const PropNameToAttrNameMap$2 = create$2(null);
+forEach$2.call(AriaPropertyNames$2, propName => {
+  const attrName = StringToLowerCase$2.call(StringReplace$2.call(propName, /^aria/, 'aria-'));
+  AttrNameToPropNameMap$2[attrName] = propName;
+  PropNameToAttrNameMap$2[propName] = attrName;
+});
+
+const _globalThis$2 = function () {
+  if (typeof globalThis === 'object') {
+    return globalThis;
+  }
+
+  let _globalThis;
+
+  try {
+    Object.defineProperty(Object.prototype, '__magic__', {
+      get: function () {
+        return this;
+      },
+      configurable: true
+    });
+    _globalThis = __magic__;
+    delete Object.prototype.__magic__;
+  } catch (ex) {} finally {
+    if (typeof _globalThis === 'undefined') {
+      _globalThis = window;
+    }
+  }
+
+  return _globalThis;
+}();
+
 const hasNativeSymbolsSupport$3 = Symbol('x').toString() === 'Symbol(x)';
 
 function createHiddenField$1(key, namespace) {
@@ -4489,12 +4537,561 @@ function getHiddenField$1(o, field) {
   }
 }
 
+const HTML_ATTRIBUTES_TO_PROPERTY$2 = {
+  accesskey: 'accessKey',
+  readonly: 'readOnly',
+  tabindex: 'tabIndex',
+  bgcolor: 'bgColor',
+  colspan: 'colSpan',
+  rowspan: 'rowSpan',
+  contenteditable: 'contentEditable',
+  crossorigin: 'crossOrigin',
+  datetime: 'dateTime',
+  formaction: 'formAction',
+  ismap: 'isMap',
+  maxlength: 'maxLength',
+  minlength: 'minLength',
+  novalidate: 'noValidate',
+  usemap: 'useMap',
+  for: 'htmlFor'
+};
+keys$2(HTML_ATTRIBUTES_TO_PROPERTY$2).forEach(attrName => {});
+
+function detect$1$1(propName) {
+  return Object.getOwnPropertyDescriptor(Element.prototype, propName) === undefined;
+}
+
+const nodeToAriaPropertyValuesMap = new WeakMap();
+
+function getAriaPropertyMap(elm) {
+  let map = nodeToAriaPropertyValuesMap.get(elm);
+
+  if (map === undefined) {
+    map = {};
+    nodeToAriaPropertyValuesMap.set(elm, map);
+  }
+
+  return map;
+}
+
+function getNormalizedAriaPropertyValue(value) {
+  return value == null ? null : String(value);
+}
+
+function createAriaPropertyPropertyDescriptor(propName, attrName) {
+  return {
+    get() {
+      const map = getAriaPropertyMap(this);
+
+      if (hasOwnProperty$2.call(map, propName)) {
+        return map[propName];
+      }
+
+      return this.hasAttribute(attrName) ? this.getAttribute(attrName) : null;
+    },
+
+    set(newValue) {
+      const normalizedValue = getNormalizedAriaPropertyValue(newValue);
+      const map = getAriaPropertyMap(this);
+      map[propName] = normalizedValue;
+
+      if (newValue === null) {
+        this.removeAttribute(attrName);
+      } else {
+        this.setAttribute(attrName, newValue);
+      }
+    },
+
+    configurable: true,
+    enumerable: true
+  };
+}
+
+function patch(propName) {
+  const attrName = PropNameToAttrNameMap$2[propName];
+  const descriptor = createAriaPropertyPropertyDescriptor(propName, attrName);
+  Object.defineProperty(Element.prototype, propName, descriptor);
+}
+
+const ElementPrototypeAriaPropertyNames = keys$2(PropNameToAttrNameMap$2);
+
+for (let i = 0, len = ElementPrototypeAriaPropertyNames.length; i < len; i += 1) {
+  const propName = ElementPrototypeAriaPropertyNames[i];
+
+  if (detect$1$1(propName)) {
+    patch(propName);
+  }
+}
+
+function invariant$1$1(value, msg) {
+  if (!value) {
+    throw new Error(`Invariant Violation: ${msg}`);
+  }
+}
+
+function isTrue$1$1(value, msg) {
+  if (!value) {
+    throw new Error(`Assert Violation: ${msg}`);
+  }
+}
+
+function isFalse$2$1(value, msg) {
+  if (value) {
+    throw new Error(`Assert Violation: ${msg}`);
+  }
+}
+
+function fail$1$1(msg) {
+  throw new Error(msg);
+}
+
+var assert$1$1 = Object.freeze({
+  __proto__: null,
+  invariant: invariant$1$1,
+  isTrue: isTrue$1$1,
+  isFalse: isFalse$2$1,
+  fail: fail$1$1
+});
 const {
-  appendChild: appendChild$1,
-  insertBefore: insertBefore$1,
-  removeChild: removeChild$1,
-  replaceChild: replaceChild$1
-} = Node.prototype;
+  assign: assign$1$1,
+  create: create$1$1,
+  defineProperties: defineProperties$1$1,
+  defineProperty: defineProperty$1$1,
+  freeze: freeze$1$1,
+  getOwnPropertyDescriptor: getOwnPropertyDescriptor$1$1,
+  getOwnPropertyNames: getOwnPropertyNames$1$1,
+  getPrototypeOf: getPrototypeOf$1$1,
+  hasOwnProperty: hasOwnProperty$1$1,
+  isFrozen: isFrozen$1$1,
+  keys: keys$1$1,
+  seal: seal$1$1,
+  setPrototypeOf: setPrototypeOf$1$1
+} = Object;
+const {
+  isArray: isArray$2
+} = Array;
+const {
+  filter: ArrayFilter$1$1,
+  find: ArrayFind$1$1,
+  indexOf: ArrayIndexOf$1$1,
+  join: ArrayJoin$1$1,
+  map: ArrayMap$1$1,
+  push: ArrayPush$1$1,
+  reduce: ArrayReduce$1$1,
+  reverse: ArrayReverse$1$1,
+  slice: ArraySlice$2$1,
+  splice: ArraySplice$1$1,
+  unshift: ArrayUnshift$2$1,
+  forEach: forEach$1$1
+} = Array.prototype;
+const {
+  charCodeAt: StringCharCodeAt$1$1,
+  replace: StringReplace$1$1,
+  slice: StringSlice$1$1,
+  toLowerCase: StringToLowerCase$1$1
+} = String.prototype;
+
+function isUndefined$1$1(obj) {
+  return obj === undefined;
+}
+
+function isNull$1$1(obj) {
+  return obj === null;
+}
+
+function isTrue$1$1$1(obj) {
+  return obj === true;
+}
+
+function isFalse$1$1(obj) {
+  return obj === false;
+}
+
+function isFunction$1$1(obj) {
+  return typeof obj === 'function';
+}
+
+function isObject$2(obj) {
+  return typeof obj === 'object';
+}
+
+function isString(obj) {
+  return typeof obj === 'string';
+}
+
+function isNumber(obj) {
+  return typeof obj === 'number';
+}
+
+const OtS$1$1 = {}.toString;
+
+function toString$1$1(obj) {
+  if (obj && obj.toString) {
+    if (isArray$2(obj)) {
+      return ArrayJoin$1$1.call(ArrayMap$1$1.call(obj, toString$1$1), ',');
+    }
+
+    return obj.toString();
+  } else if (typeof obj === 'object') {
+    return OtS$1$1.call(obj);
+  } else {
+    return obj + emptyString$1$1;
+  }
+}
+
+function getPropertyDescriptor$1(o, p) {
+  do {
+    const d = getOwnPropertyDescriptor$1$1(o, p);
+
+    if (!isUndefined$1$1(d)) {
+      return d;
+    }
+
+    o = getPrototypeOf$1$1(o);
+  } while (o !== null);
+}
+
+const emptyString$1$1 = '';
+const AriaPropertyNames$1$1 = ['ariaActiveDescendant', 'ariaAtomic', 'ariaAutoComplete', 'ariaBusy', 'ariaChecked', 'ariaColCount', 'ariaColIndex', 'ariaColSpan', 'ariaControls', 'ariaCurrent', 'ariaDescribedBy', 'ariaDetails', 'ariaDisabled', 'ariaErrorMessage', 'ariaExpanded', 'ariaFlowTo', 'ariaHasPopup', 'ariaHidden', 'ariaInvalid', 'ariaKeyShortcuts', 'ariaLabel', 'ariaLabelledBy', 'ariaLevel', 'ariaLive', 'ariaModal', 'ariaMultiLine', 'ariaMultiSelectable', 'ariaOrientation', 'ariaOwns', 'ariaPlaceholder', 'ariaPosInSet', 'ariaPressed', 'ariaReadOnly', 'ariaRelevant', 'ariaRequired', 'ariaRoleDescription', 'ariaRowCount', 'ariaRowIndex', 'ariaRowSpan', 'ariaSelected', 'ariaSetSize', 'ariaSort', 'ariaValueMax', 'ariaValueMin', 'ariaValueNow', 'ariaValueText', 'role'];
+const AttrNameToPropNameMap$1$1 = create$1$1(null);
+const PropNameToAttrNameMap$1$1 = create$1$1(null);
+forEach$1$1.call(AriaPropertyNames$1$1, propName => {
+  const attrName = StringToLowerCase$1$1.call(StringReplace$1$1.call(propName, /^aria/, 'aria-'));
+  AttrNameToPropNameMap$1$1[attrName] = propName;
+  PropNameToAttrNameMap$1$1[propName] = attrName;
+});
+
+const _globalThis$1$1 = function () {
+  if (typeof globalThis === 'object') {
+    return globalThis;
+  }
+
+  let _globalThis;
+
+  try {
+    Object.defineProperty(Object.prototype, '__magic__', {
+      get: function () {
+        return this;
+      },
+      configurable: true
+    });
+    _globalThis = __magic__;
+    delete Object.prototype.__magic__;
+  } catch (ex) {} finally {
+    if (typeof _globalThis === 'undefined') {
+      _globalThis = window;
+    }
+  }
+
+  return _globalThis;
+}();
+
+const hasNativeSymbolsSupport$1$1 = Symbol('x').toString() === 'Symbol(x)';
+
+function createHiddenField$1$1(key, namespace) {
+  return hasNativeSymbolsSupport$1$1 ? Symbol(key) : `$$lwc-${namespace}-${key}$$`;
+}
+
+const hiddenFieldsMap$1$1 = new WeakMap();
+
+function setHiddenField$1$1(o, field, value) {
+  let valuesByField = hiddenFieldsMap$1$1.get(o);
+
+  if (isUndefined$1$1(valuesByField)) {
+    valuesByField = create$1$1(null);
+    hiddenFieldsMap$1$1.set(o, valuesByField);
+  }
+
+  valuesByField[field] = value;
+}
+
+function getHiddenField$1$1(o, field) {
+  const valuesByField = hiddenFieldsMap$1$1.get(o);
+
+  if (!isUndefined$1$1(valuesByField)) {
+    return valuesByField[field];
+  }
+}
+
+const HTML_ATTRIBUTES_TO_PROPERTY$1$1 = {
+  accesskey: 'accessKey',
+  readonly: 'readOnly',
+  tabindex: 'tabIndex',
+  bgcolor: 'bgColor',
+  colspan: 'colSpan',
+  rowspan: 'rowSpan',
+  contenteditable: 'contentEditable',
+  crossorigin: 'crossOrigin',
+  datetime: 'dateTime',
+  formaction: 'formAction',
+  ismap: 'isMap',
+  maxlength: 'maxLength',
+  minlength: 'minLength',
+  novalidate: 'noValidate',
+  usemap: 'useMap',
+  for: 'htmlFor'
+};
+keys$1$1(HTML_ATTRIBUTES_TO_PROPERTY$1$1).forEach(attrName => {});
+let nextTickCallbackQueue = [];
+const SPACE_CHAR = 32;
+const EmptyObject = seal$1$1(create$1$1(null));
+const EmptyArray = seal$1$1([]);
+
+function flushCallbackQueue() {
+  {
+    if (nextTickCallbackQueue.length === 0) {
+      throw new Error(`Internal Error: If callbackQueue is scheduled, it is because there must be at least one callback on this pending queue.`);
+    }
+  }
+
+  const callbacks = nextTickCallbackQueue;
+  nextTickCallbackQueue = [];
+
+  for (let i = 0, len = callbacks.length; i < len; i += 1) {
+    callbacks[i]();
+  }
+}
+
+function addCallbackToNextTick(callback) {
+  {
+    if (!isFunction$1$1(callback)) {
+      throw new Error(`Internal Error: addCallbackToNextTick() can only accept a function callback`);
+    }
+  }
+
+  if (nextTickCallbackQueue.length === 0) {
+    Promise.resolve().then(flushCallbackQueue);
+  }
+
+  ArrayPush$1$1.call(nextTickCallbackQueue, callback);
+}
+
+const {
+  create: create$1$1$1
+} = Object;
+const {
+  splice: ArraySplice$1$1$1,
+  indexOf: ArrayIndexOf$1$1$1,
+  push: ArrayPush$1$1$1
+} = Array.prototype;
+const TargetToReactiveRecordMap = new WeakMap();
+
+function isUndefined$1$1$1(obj) {
+  return obj === undefined;
+}
+
+function getReactiveRecord(target) {
+  let reactiveRecord = TargetToReactiveRecordMap.get(target);
+
+  if (isUndefined$1$1$1(reactiveRecord)) {
+    const newRecord = create$1$1$1(null);
+    reactiveRecord = newRecord;
+    TargetToReactiveRecordMap.set(target, newRecord);
+  }
+
+  return reactiveRecord;
+}
+
+let currentReactiveObserver = null;
+
+function valueMutated(target, key) {
+  const reactiveRecord = TargetToReactiveRecordMap.get(target);
+
+  if (!isUndefined$1$1$1(reactiveRecord)) {
+    const reactiveObservers = reactiveRecord[key];
+
+    if (!isUndefined$1$1$1(reactiveObservers)) {
+      for (let i = 0, len = reactiveObservers.length; i < len; i += 1) {
+        const ro = reactiveObservers[i];
+        ro.notify();
+      }
+    }
+  }
+}
+
+function valueObserved(target, key) {
+  if (currentReactiveObserver === null) {
+    return;
+  }
+
+  const ro = currentReactiveObserver;
+  const reactiveRecord = getReactiveRecord(target);
+  let reactiveObservers = reactiveRecord[key];
+
+  if (isUndefined$1$1$1(reactiveObservers)) {
+    reactiveObservers = [];
+    reactiveRecord[key] = reactiveObservers;
+  } else if (reactiveObservers[0] === ro) {
+    return;
+  }
+
+  if (ArrayIndexOf$1$1$1.call(reactiveObservers, ro) === -1) {
+    ro.link(reactiveObservers);
+  }
+}
+
+class ReactiveObserver {
+  constructor(callback) {
+    this.listeners = [];
+    this.callback = callback;
+  }
+
+  observe(job) {
+    const inceptionReactiveRecord = currentReactiveObserver;
+    currentReactiveObserver = this;
+    let error;
+
+    try {
+      job();
+    } catch (e) {
+      error = Object(e);
+    } finally {
+      currentReactiveObserver = inceptionReactiveRecord;
+
+      if (error !== undefined) {
+        throw error;
+      }
+    }
+  }
+
+  reset() {
+    const {
+      listeners
+    } = this;
+    const len = listeners.length;
+
+    if (len > 0) {
+      for (let i = 0; i < len; i += 1) {
+        const set = listeners[i];
+        const pos = ArrayIndexOf$1$1$1.call(listeners[i], this);
+        ArraySplice$1$1$1.call(set, pos, 1);
+      }
+
+      listeners.length = 0;
+    }
+  }
+
+  notify() {
+    this.callback.call(undefined, this);
+  }
+
+  link(reactiveObservers) {
+    ArrayPush$1$1$1.call(reactiveObservers, this);
+    ArrayPush$1$1$1.call(this.listeners, reactiveObservers);
+  }
+
+}
+
+function componentValueMutated(vm, key) {
+  valueMutated(vm.component, key);
+}
+
+function componentValueObserved(vm, key) {
+  valueObserved(vm.component, key);
+}
+
+function getComponentTag(vm) {
+  return `<${StringToLowerCase$1$1.call(vm.tagName)}>`;
+}
+
+function getComponentStack(vm) {
+  const stack = [];
+  let prefix = '';
+
+  while (!isNull$1$1(vm.owner)) {
+    ArrayPush$1$1.call(stack, prefix + getComponentTag(vm));
+    vm = vm.owner;
+    prefix += '\t';
+  }
+
+  return ArrayJoin$1$1.call(stack, '\n');
+}
+
+function getErrorComponentStack(vm) {
+  const wcStack = [];
+  let currentVm = vm;
+
+  while (!isNull$1$1(currentVm)) {
+    ArrayPush$1$1.call(wcStack, getComponentTag(currentVm));
+    currentVm = currentVm.owner;
+  }
+
+  return wcStack.reverse().join('\n\t');
+}
+
+function logError(message, vm) {
+  let msg = `[LWC error]: ${message}`;
+
+  if (!isUndefined$1$1(vm)) {
+    msg = `${msg}\n${getComponentStack(vm)}`;
+  }
+
+  try {
+    throw new Error(msg);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+function handleEvent(event, vnode) {
+  const {
+    type
+  } = event;
+  const {
+    data: {
+      on
+    }
+  } = vnode;
+  const handler = on && on[type];
+
+  if (handler) {
+    handler.call(undefined, event);
+  }
+}
+
+function createListener() {
+  return function handler(event) {
+    handleEvent(event, handler.vnode);
+  };
+}
+
+function updateAllEventListeners(oldVnode, vnode) {
+  if (isUndefined$1$1(oldVnode.listener)) {
+    createAllEventListeners(vnode);
+  } else {
+    vnode.listener = oldVnode.listener;
+    vnode.listener.vnode = vnode;
+  }
+}
+
+function createAllEventListeners(vnode) {
+  const {
+    elm,
+    data: {
+      on
+    },
+    owner: {
+      renderer
+    }
+  } = vnode;
+
+  if (isUndefined$1$1(on)) {
+    return;
+  }
+
+  const listener = vnode.listener = createListener();
+  listener.vnode = vnode;
+  let name;
+
+  for (name in on) {
+    renderer.addEventListener(elm, name, listener);
+  }
+}
+
+var modEvents = {
+  update: updateAllEventListeners,
+  create: createAllEventListeners
+};
 const defaultDefHTMLPropertyNames = ['accessKey', 'dir', 'draggable', 'hidden', 'id', 'lang', 'spellcheck', 'tabIndex', 'title'];
 const HTMLPropertyNamesWithLowercasedReflectiveAttributes = ['accessKey', 'readOnly', 'tabIndex', 'bgColor', 'colSpan', 'rowSpan', 'contentEditable', 'dateTime', 'formAction', 'isMap', 'maxLength', 'useMap'];
 
@@ -4502,7 +5099,7 @@ function offsetPropertyErrorMessage(name) {
   return `Using the \`${name}\` property is an anti-pattern because it rounds the value to an integer. Instead, use the \`getBoundingClientRect\` method to obtain fractional values for the size of an element and its position relative to the viewport.`;
 }
 
-const globalHTMLProperties = assign$2(create$2(null), {
+const globalHTMLProperties = assign$1$1(create$1$1(null), {
   accessKey: {
     attribute: 'accesskey'
   },
@@ -4587,31 +5184,26 @@ const globalHTMLProperties = assign$2(create$2(null), {
     attribute: 'role'
   }
 });
-const AttrNameToPropNameMap = create$2(null);
-const PropNameToAttrNameMap = create$2(null);
-forEach$1.call(ElementPrototypeAriaPropertyNames, propName => {
-  const attrName = StringToLowerCase$1$1.call(StringReplace$1$1.call(propName, /^aria/, 'aria-'));
-  AttrNameToPropNameMap[attrName] = propName;
-  PropNameToAttrNameMap[propName] = attrName;
-});
-forEach$1.call(defaultDefHTMLPropertyNames, propName => {
+const AttrNameToPropNameMap$1$1$1 = assign$1$1(create$1$1(null), AttrNameToPropNameMap$1$1);
+const PropNameToAttrNameMap$1$1$1 = assign$1$1(create$1$1(null), PropNameToAttrNameMap$1$1);
+forEach$1$1.call(defaultDefHTMLPropertyNames, propName => {
   const attrName = StringToLowerCase$1$1.call(propName);
-  AttrNameToPropNameMap[attrName] = propName;
-  PropNameToAttrNameMap[propName] = attrName;
+  AttrNameToPropNameMap$1$1$1[attrName] = propName;
+  PropNameToAttrNameMap$1$1$1[propName] = attrName;
 });
-forEach$1.call(HTMLPropertyNamesWithLowercasedReflectiveAttributes, propName => {
+forEach$1$1.call(HTMLPropertyNamesWithLowercasedReflectiveAttributes, propName => {
   const attrName = StringToLowerCase$1$1.call(propName);
-  AttrNameToPropNameMap[attrName] = propName;
-  PropNameToAttrNameMap[propName] = attrName;
+  AttrNameToPropNameMap$1$1$1[attrName] = propName;
+  PropNameToAttrNameMap$1$1$1[propName] = attrName;
 });
 const CAPS_REGEX = /[A-Z]/g;
 
 function getAttrNameFromPropName(propName) {
-  if (isUndefined$1(PropNameToAttrNameMap[propName])) {
-    PropNameToAttrNameMap[propName] = StringReplace$1$1.call(propName, CAPS_REGEX, match => '-' + match.toLowerCase());
+  if (isUndefined$1$1(PropNameToAttrNameMap$1$1$1[propName])) {
+    PropNameToAttrNameMap$1$1$1[propName] = StringReplace$1$1.call(propName, CAPS_REGEX, match => '-' + match.toLowerCase());
   }
 
-  return PropNameToAttrNameMap[propName];
+  return PropNameToAttrNameMap$1$1$1[propName];
 }
 
 let controlledElement = null;
@@ -4631,145 +5223,6 @@ function unlockAttribute(elm, key) {
   controlledAttributeName = key;
 }
 
-let nextTickCallbackQueue = [];
-const SPACE_CHAR = 32;
-const EmptyObject = seal$2(create$2(null));
-const EmptyArray = seal$2([]);
-
-function flushCallbackQueue() {
-  {
-    if (nextTickCallbackQueue.length === 0) {
-      throw new Error(`Internal Error: If callbackQueue is scheduled, it is because there must be at least one callback on this pending queue.`);
-    }
-  }
-
-  const callbacks = nextTickCallbackQueue;
-  nextTickCallbackQueue = [];
-
-  for (let i = 0, len = callbacks.length; i < len; i += 1) {
-    callbacks[i]();
-  }
-}
-
-function addCallbackToNextTick(callback) {
-  {
-    if (!isFunction$1(callback)) {
-      throw new Error(`Internal Error: addCallbackToNextTick() can only accept a function callback`);
-    }
-  }
-
-  if (nextTickCallbackQueue.length === 0) {
-    Promise.resolve().then(flushCallbackQueue);
-  }
-
-  ArrayPush$1.call(nextTickCallbackQueue, callback);
-}
-
-const useSyntheticShadow = hasOwnProperty$1$1.call(Element.prototype, '$shadowToken$');
-
-function getComponentTag(vm) {
-  try {
-    return `<${StringToLowerCase$1$1.call(vm.elm.tagName)}>`;
-  } catch (error) {
-    return '<invalid-tag-name>';
-  }
-}
-
-function getComponentStack(vm) {
-  const stack = [];
-  let prefix = '';
-
-  while (!isNull$1(vm.owner)) {
-    ArrayPush$1.call(stack, prefix + getComponentTag(vm));
-    vm = vm.owner;
-    prefix += '\t';
-  }
-
-  return ArrayJoin$1.call(stack, '\n');
-}
-
-function getErrorComponentStack(vm) {
-  const wcStack = [];
-  let currentVm = vm;
-
-  while (!isNull$1(currentVm)) {
-    ArrayPush$1.call(wcStack, getComponentTag(currentVm));
-    currentVm = currentVm.owner;
-  }
-
-  return wcStack.reverse().join('\n\t');
-}
-
-function logError(message, vm) {
-  let msg = `[LWC error]: ${message}`;
-
-  if (!isUndefined$1(vm)) {
-    msg = `${msg}\n${getComponentStack(vm)}`;
-  }
-
-  try {
-    throw new Error(msg);
-  } catch (e) {
-    console.error(e);
-  }
-}
-
-function handleEvent(event, vnode) {
-  const {
-    type
-  } = event;
-  const {
-    data: {
-      on
-    }
-  } = vnode;
-  const handler = on && on[type];
-
-  if (handler) {
-    handler.call(undefined, event);
-  }
-}
-
-function createListener() {
-  return function handler(event) {
-    handleEvent(event, handler.vnode);
-  };
-}
-
-function updateAllEventListeners(oldVnode, vnode) {
-  if (isUndefined$1(oldVnode.listener)) {
-    createAllEventListeners(vnode);
-  } else {
-    vnode.listener = oldVnode.listener;
-    vnode.listener.vnode = vnode;
-  }
-}
-
-function createAllEventListeners(vnode) {
-  const {
-    data: {
-      on
-    }
-  } = vnode;
-
-  if (isUndefined$1(on)) {
-    return;
-  }
-
-  const elm = vnode.elm;
-  const listener = vnode.listener = createListener();
-  listener.vnode = vnode;
-  let name;
-
-  for (name in on) {
-    elm.addEventListener(name, listener);
-  }
-}
-
-var modEvents = {
-  update: updateAllEventListeners,
-  create: createAllEventListeners
-};
 const xlinkNS = 'http://www.w3.org/1999/xlink';
 const xmlNS = 'http://www.w3.org/XML/1998/namespace';
 const ColonCharCode = 58;
@@ -4778,10 +5231,13 @@ function updateAttrs(oldVnode, vnode) {
   const {
     data: {
       attrs
+    },
+    owner: {
+      renderer
     }
   } = vnode;
 
-  if (isUndefined$1(attrs)) {
+  if (isUndefined$1$1(attrs)) {
     return;
   }
 
@@ -4796,12 +5252,16 @@ function updateAttrs(oldVnode, vnode) {
   }
 
   {
-    assert$1.invariant(isUndefined$1(oldAttrs) || keys$2(oldAttrs).join(',') === keys$2(attrs).join(','), `vnode.data.attrs cannot change shape.`);
+    assert$1$1.invariant(isUndefined$1$1(oldAttrs) || keys$1$1(oldAttrs).join(',') === keys$1$1(attrs).join(','), `vnode.data.attrs cannot change shape.`);
   }
 
   const elm = vnode.elm;
+  const {
+    setAttribute,
+    removeAttribute
+  } = renderer;
   let key;
-  oldAttrs = isUndefined$1(oldAttrs) ? EmptyObject : oldAttrs;
+  oldAttrs = isUndefined$1$1(oldAttrs) ? EmptyObject : oldAttrs;
 
   for (key in attrs) {
     const cur = attrs[key];
@@ -4810,14 +5270,14 @@ function updateAttrs(oldVnode, vnode) {
     if (old !== cur) {
       unlockAttribute(elm, key);
 
-      if (StringCharCodeAt$1.call(key, 3) === ColonCharCode) {
-        elm.setAttributeNS(xmlNS, key, cur);
-      } else if (StringCharCodeAt$1.call(key, 5) === ColonCharCode) {
-        elm.setAttributeNS(xlinkNS, key, cur);
-      } else if (isNull$1(cur)) {
-        elm.removeAttribute(key);
+      if (StringCharCodeAt$1$1.call(key, 3) === ColonCharCode) {
+        setAttribute(elm, key, cur, xmlNS);
+      } else if (StringCharCodeAt$1$1.call(key, 5) === ColonCharCode) {
+        setAttribute(elm, key, cur, xlinkNS);
+      } else if (isNull$1$1(cur)) {
+        removeAttribute(elm, key);
       } else {
-        elm.setAttribute(key, cur);
+        setAttribute(elm, key, cur);
       }
 
       lockAttribute();
@@ -4840,7 +5300,7 @@ function isLiveBindingProp(sel, key) {
 function update(oldVnode, vnode) {
   const props = vnode.data.props;
 
-  if (isUndefined$1(props)) {
+  if (isUndefined$1$1(props)) {
     return;
   }
 
@@ -4851,26 +5311,23 @@ function update(oldVnode, vnode) {
   }
 
   {
-    assert$1.invariant(isUndefined$1(oldProps) || keys$2(oldProps).join(',') === keys$2(props).join(','), 'vnode.data.props cannot change shape.');
+    assert$1$1.invariant(isUndefined$1$1(oldProps) || keys$1$1(oldProps).join(',') === keys$1$1(props).join(','), 'vnode.data.props cannot change shape.');
   }
 
-  const elm = vnode.elm;
-  const isFirstPatch = isUndefined$1(oldProps);
+  const isFirstPatch = isUndefined$1$1(oldProps);
   const {
-    sel
+    elm,
+    sel,
+    owner: {
+      renderer
+    }
   } = vnode;
 
   for (const key in props) {
     const cur = props[key];
 
-    {
-      if (!(key in elm)) {
-        assert$1.fail(`Unknown public property "${key}" of element <${sel}>. This is likely a typo on the corresponding attribute "${getAttrNameFromPropName(key)}".`);
-      }
-    }
-
-    if (isFirstPatch || cur !== (isLiveBindingProp(sel, key) ? elm[key] : oldProps[key])) {
-      elm[key] = cur;
+    if (isFirstPatch || cur !== (isLiveBindingProp(sel, key) ? renderer.getProperty(elm, key) : oldProps[key])) {
+      renderer.setProperty(elm, key, cur);
     }
   }
 }
@@ -4882,7 +5339,7 @@ var modProps = {
   create: vnode => update(emptyVNode$1, vnode),
   update
 };
-const classNameToClassMap = create$2(null);
+const classNameToClassMap = create$1$1(null);
 
 function getMapFromClassName(className) {
   if (className == null) {
@@ -4896,15 +5353,15 @@ function getMapFromClassName(className) {
     return map;
   }
 
-  map = create$2(null);
+  map = create$1$1(null);
   let start = 0;
   let o;
   const len = className.length;
 
   for (o = 0; o < len; o++) {
-    if (StringCharCodeAt$1.call(className, o) === SPACE_CHAR) {
+    if (StringCharCodeAt$1$1.call(className, o) === SPACE_CHAR) {
       if (o > start) {
-        map[StringSlice$1.call(className, start, o)] = true;
+        map[StringSlice$1$1.call(className, start, o)] = true;
       }
 
       start = o + 1;
@@ -4912,13 +5369,13 @@ function getMapFromClassName(className) {
   }
 
   if (o > start) {
-    map[StringSlice$1.call(className, start, o)] = true;
+    map[StringSlice$1$1.call(className, start, o)] = true;
   }
 
   classNameToClassMap[className] = map;
 
   {
-    freeze$2(map);
+    freeze$1$1(map);
   }
 
   return map;
@@ -4929,6 +5386,9 @@ function updateClassAttribute(oldVnode, vnode) {
     elm,
     data: {
       className: newClass
+    },
+    owner: {
+      renderer
     }
   } = vnode;
   const {
@@ -4941,21 +5401,19 @@ function updateClassAttribute(oldVnode, vnode) {
     return;
   }
 
-  const {
-    classList
-  } = elm;
+  const classList = renderer.getClassList(elm);
   const newClassMap = getMapFromClassName(newClass);
   const oldClassMap = getMapFromClassName(oldClass);
   let name;
 
   for (name in oldClassMap) {
-    if (isUndefined$1(newClassMap[name])) {
+    if (isUndefined$1$1(newClassMap[name])) {
       classList.remove(name);
     }
   }
 
   for (name in newClassMap) {
-    if (isUndefined$1(oldClassMap[name])) {
+    if (isUndefined$1$1(oldClassMap[name])) {
       classList.add(name);
     }
   }
@@ -4971,20 +5429,27 @@ var modComputedClassName = {
 
 function updateStyleAttribute(oldVnode, vnode) {
   const {
-    style: newStyle
-  } = vnode.data;
+    elm,
+    data: {
+      style: newStyle
+    },
+    owner: {
+      renderer
+    }
+  } = vnode;
+  const {
+    getStyleDeclaration,
+    removeAttribute
+  } = renderer;
 
   if (oldVnode.data.style === newStyle) {
     return;
   }
 
-  const elm = vnode.elm;
-  const {
-    style
-  } = elm;
+  const style = getStyleDeclaration(elm);
 
   if (!isString(newStyle) || newStyle === '') {
-    removeAttribute$1.call(elm, 'style');
+    removeAttribute(elm, 'style');
   } else {
     style.cssText = newStyle;
   }
@@ -5003,16 +5468,17 @@ function createClassAttribute(vnode) {
     elm,
     data: {
       classMap
+    },
+    owner: {
+      renderer
     }
   } = vnode;
 
-  if (isUndefined$1(classMap)) {
+  if (isUndefined$1$1(classMap)) {
     return;
   }
 
-  const {
-    classList
-  } = elm;
+  const classList = renderer.getClassList(elm);
 
   for (const name in classMap) {
     classList.add(name);
@@ -5028,16 +5494,17 @@ function createStyleAttribute(vnode) {
     elm,
     data: {
       styleMap
+    },
+    owner: {
+      renderer
     }
   } = vnode;
 
-  if (isUndefined$1(styleMap)) {
+  if (isUndefined$1$1(styleMap)) {
     return;
   }
 
-  const {
-    style
-  } = elm;
+  const style = renderer.getStyleDeclaration(elm);
 
   for (const name in styleMap) {
     style[name] = styleMap[name];
@@ -5141,7 +5608,7 @@ function updateDynamicChildren(parentElm, oldCh, newCh) {
       newEndVnode = newCh[--newEndIdx];
     } else if (sameVnode(oldStartVnode, newEndVnode)) {
       patchVnode(oldStartVnode, newEndVnode);
-      newEndVnode.hook.move(oldStartVnode, parentElm, oldEndVnode.elm.nextSibling);
+      newEndVnode.hook.move(oldStartVnode, parentElm, oldEndVnode.owner.renderer.nextSibling(oldEndVnode.elm));
       oldStartVnode = oldCh[++oldStartIdx];
       newEndVnode = newCh[--newEndIdx];
     } else if (sameVnode(oldEndVnode, newStartVnode)) {
@@ -5231,7 +5698,7 @@ function patchVnode(oldVnode, vnode) {
 }
 
 function generateDataDescriptor(options) {
-  return assign$2({
+  return assign$1$1({
     configurable: true,
     enumerable: true,
     writable: true
@@ -5239,7 +5706,7 @@ function generateDataDescriptor(options) {
 }
 
 function generateAccessorDescriptor(options) {
-  return assign$2({
+  return assign$1$1({
     configurable: true,
     enumerable: true
   }, options);
@@ -5257,112 +5724,14 @@ function lockDomMutation() {
   isDomMutationAllowed = false;
 }
 
-function portalRestrictionErrorMessage(name, type) {
-  return `The \`${name}\` ${type} is available only on elements that use the \`lwc:dom="manual"\` directive.`;
+function logMissingPortalError(name, type) {
+  return logError(`The \`${name}\` ${type} is available only on elements that use the \`lwc:dom="manual"\` directive.`);
 }
 
-function getNodeRestrictionsDescriptors(node, options = {}) {
+function patchElementWithRestrictions(elm, options) {
 
-  const originalTextContentDescriptor = getPropertyDescriptor$1(node, 'textContent');
-  const originalNodeValueDescriptor = getPropertyDescriptor$1(node, 'nodeValue');
-  const {
-    appendChild,
-    insertBefore,
-    removeChild,
-    replaceChild
-  } = node;
-  return {
-    appendChild: generateDataDescriptor({
-      value(aChild) {
-        if (this instanceof Element && isFalse$1$1(options.isPortal)) {
-          logError(portalRestrictionErrorMessage('appendChild', 'method'));
-        }
-
-        return appendChild.call(this, aChild);
-      }
-
-    }),
-    insertBefore: generateDataDescriptor({
-      value(newNode, referenceNode) {
-        if (!isDomMutationAllowed && this instanceof Element && isFalse$1$1(options.isPortal)) {
-          logError(portalRestrictionErrorMessage('insertBefore', 'method'));
-        }
-
-        return insertBefore.call(this, newNode, referenceNode);
-      }
-
-    }),
-    removeChild: generateDataDescriptor({
-      value(aChild) {
-        if (!isDomMutationAllowed && this instanceof Element && isFalse$1$1(options.isPortal)) {
-          logError(portalRestrictionErrorMessage('removeChild', 'method'));
-        }
-
-        return removeChild.call(this, aChild);
-      }
-
-    }),
-    replaceChild: generateDataDescriptor({
-      value(newChild, oldChild) {
-        if (this instanceof Element && isFalse$1$1(options.isPortal)) {
-          logError(portalRestrictionErrorMessage('replaceChild', 'method'));
-        }
-
-        return replaceChild.call(this, newChild, oldChild);
-      }
-
-    }),
-    nodeValue: generateAccessorDescriptor({
-      get() {
-        return originalNodeValueDescriptor.get.call(this);
-      },
-
-      set(value) {
-        if (!isDomMutationAllowed && this instanceof Element && isFalse$1$1(options.isPortal)) {
-          logError(portalRestrictionErrorMessage('nodeValue', 'property'));
-        }
-
-        originalNodeValueDescriptor.set.call(this, value);
-      }
-
-    }),
-    textContent: generateAccessorDescriptor({
-      get() {
-        return originalTextContentDescriptor.get.call(this);
-      },
-
-      set(value) {
-        if (this instanceof Element && isFalse$1$1(options.isPortal)) {
-          logError(portalRestrictionErrorMessage('textContent', 'property'));
-        }
-
-        originalTextContentDescriptor.set.call(this, value);
-      }
-
-    })
-  };
-}
-
-function getElementRestrictionsDescriptors(elm, options) {
-
-  const descriptors = getNodeRestrictionsDescriptors(elm, options);
-  const originalInnerHTMLDescriptor = getPropertyDescriptor$1(elm, 'innerHTML');
   const originalOuterHTMLDescriptor = getPropertyDescriptor$1(elm, 'outerHTML');
-  assign$2(descriptors, {
-    innerHTML: generateAccessorDescriptor({
-      get() {
-        return originalInnerHTMLDescriptor.get.call(this);
-      },
-
-      set(value) {
-        if (isFalse$1$1(options.isPortal)) {
-          logError(portalRestrictionErrorMessage('innerHTML', 'property'), getAssociatedVMIfPresent(this));
-        }
-
-        return originalInnerHTMLDescriptor.set.call(this, value);
-      }
-
-    }),
+  const descriptors = {
     outerHTML: generateAccessorDescriptor({
       get() {
         return originalOuterHTMLDescriptor.get.call(this);
@@ -5373,19 +5742,103 @@ function getElementRestrictionsDescriptors(elm, options) {
       }
 
     })
-  });
-  return descriptors;
+  };
+
+  if (isFalse$1$1(options.isPortal)) {
+    const {
+      appendChild,
+      insertBefore,
+      removeChild,
+      replaceChild
+    } = elm;
+    const originalNodeValueDescriptor = getPropertyDescriptor$1(elm, 'nodeValue');
+    const originalInnerHTMLDescriptor = getPropertyDescriptor$1(elm, 'innerHTML');
+    const originalTextContentDescriptor = getPropertyDescriptor$1(elm, 'textContent');
+    assign$1$1(descriptors, {
+      appendChild: generateDataDescriptor({
+        value(aChild) {
+          logMissingPortalError('appendChild', 'method');
+          return appendChild.call(this, aChild);
+        }
+
+      }),
+      insertBefore: generateDataDescriptor({
+        value(newNode, referenceNode) {
+          if (!isDomMutationAllowed) {
+            logMissingPortalError('insertBefore', 'method');
+          }
+
+          return insertBefore.call(this, newNode, referenceNode);
+        }
+
+      }),
+      removeChild: generateDataDescriptor({
+        value(aChild) {
+          if (!isDomMutationAllowed) {
+            logMissingPortalError('removeChild', 'method');
+          }
+
+          return removeChild.call(this, aChild);
+        }
+
+      }),
+      replaceChild: generateDataDescriptor({
+        value(newChild, oldChild) {
+          logMissingPortalError('replaceChild', 'method');
+          return replaceChild.call(this, newChild, oldChild);
+        }
+
+      }),
+      nodeValue: generateAccessorDescriptor({
+        get() {
+          return originalNodeValueDescriptor.get.call(this);
+        },
+
+        set(value) {
+          if (!isDomMutationAllowed) {
+            logMissingPortalError('nodeValue', 'property');
+          }
+
+          originalNodeValueDescriptor.set.call(this, value);
+        }
+
+      }),
+      textContent: generateAccessorDescriptor({
+        get() {
+          return originalTextContentDescriptor.get.call(this);
+        },
+
+        set(value) {
+          logMissingPortalError('textContent', 'property');
+          originalTextContentDescriptor.set.call(this, value);
+        }
+
+      }),
+      innerHTML: generateAccessorDescriptor({
+        get() {
+          return originalInnerHTMLDescriptor.get.call(this);
+        },
+
+        set(value) {
+          logMissingPortalError('innerHTML', 'property');
+          return originalInnerHTMLDescriptor.set.call(this, value);
+        }
+
+      })
+    });
+  }
+
+  defineProperties$1$1(elm, descriptors);
 }
+
+const BLOCKED_SHADOW_ROOT_METHODS = ['cloneNode', 'getElementById', 'getSelection', 'elementsFromPoint', 'dispatchEvent'];
 
 function getShadowRootRestrictionsDescriptors(sr) {
 
-  const originalQuerySelector = sr.querySelector;
-  const originalQuerySelectorAll = sr.querySelectorAll;
   const originalAddEventListener = sr.addEventListener;
-  const descriptors = getNodeRestrictionsDescriptors(sr);
   const originalInnerHTMLDescriptor = getPropertyDescriptor$1(sr, 'innerHTML');
   const originalTextContentDescriptor = getPropertyDescriptor$1(sr, 'textContent');
-  assign$2(descriptors, {
+  const descriptors = {
     innerHTML: generateAccessorDescriptor({
       get() {
         return originalInnerHTMLDescriptor.get.call(this);
@@ -5408,62 +5861,33 @@ function getShadowRootRestrictionsDescriptors(sr) {
     }),
     addEventListener: generateDataDescriptor({
       value(type, listener, options) {
-        const vmBeingRendered = getVMBeingRendered();
-        assert$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${toString$1(sr)} by adding an event listener for "${type}".`);
-        assert$1.invariant(!isUpdatingTemplate, `Updating the template of ${vmBeingRendered} has side effects on the state of ${toString$1(sr)} by adding an event listener for "${type}".`);
-
-        if (!isUndefined$1(options)) {
+        if (!isUndefined$1$1(options)) {
           logError('The `addEventListener` method in `LightningElement` does not support any options.', getAssociatedVMIfPresent(this));
         }
 
         return originalAddEventListener.apply(this, arguments);
       }
 
-    }),
-    querySelector: generateDataDescriptor({
-      value() {
-        const vm = getAssociatedVM(this);
-        assert$1.isFalse(isBeingConstructed(vm), `this.template.querySelector() cannot be called during the construction of the` + `custom element for ${vm} because no content has been rendered yet.`);
-        return originalQuerySelector.apply(this, arguments);
-      }
-
-    }),
-    querySelectorAll: generateDataDescriptor({
-      value() {
-        const vm = getAssociatedVM(this);
-        assert$1.isFalse(isBeingConstructed(vm), `this.template.querySelectorAll() cannot be called during the construction of the` + ` custom element for ${vm} because no content has been rendered yet.`);
-        return originalQuerySelectorAll.apply(this, arguments);
-      }
-
     })
-  });
-  const BlockedShadowRootMethods = {
-    cloneNode: 0,
-    getElementById: 0,
-    getSelection: 0,
-    elementsFromPoint: 0,
-    dispatchEvent: 0
   };
-  forEach$1.call(getOwnPropertyNames$2(BlockedShadowRootMethods), methodName => {
-    const descriptor = generateAccessorDescriptor({
+  forEach$1$1.call(BLOCKED_SHADOW_ROOT_METHODS, methodName => {
+    descriptors[methodName] = generateAccessorDescriptor({
       get() {
         throw new Error(`Disallowed method "${methodName}" in ShadowRoot.`);
       }
 
     });
-    descriptors[methodName] = descriptor;
   });
   return descriptors;
 }
 
 function getCustomElementRestrictionsDescriptors(elm) {
 
-  const descriptors = getNodeRestrictionsDescriptors(elm);
   const originalAddEventListener = elm.addEventListener;
   const originalInnerHTMLDescriptor = getPropertyDescriptor$1(elm, 'innerHTML');
   const originalOuterHTMLDescriptor = getPropertyDescriptor$1(elm, 'outerHTML');
   const originalTextContentDescriptor = getPropertyDescriptor$1(elm, 'textContent');
-  return assign$2(descriptors, {
+  return {
     innerHTML: generateAccessorDescriptor({
       get() {
         return originalInnerHTMLDescriptor.get.call(this);
@@ -5496,11 +5920,7 @@ function getCustomElementRestrictionsDescriptors(elm) {
     }),
     addEventListener: generateDataDescriptor({
       value(type, listener, options) {
-        const vmBeingRendered = getVMBeingRendered();
-        assert$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${toString$1(this)} by adding an event listener for "${type}".`);
-        assert$1.invariant(!isUpdatingTemplate, `Updating the template of ${vmBeingRendered} has side effects on the state of ${toString$1(elm)} by adding an event listener for "${type}".`);
-
-        if (!isUndefined$1(options)) {
+        if (!isUndefined$1$1(options)) {
           logError('The `addEventListener` method in `LightningElement` does not support any options.', getAssociatedVMIfPresent(this));
         }
 
@@ -5508,7 +5928,7 @@ function getCustomElementRestrictionsDescriptors(elm) {
       }
 
     })
-  });
+  };
 }
 
 function getComponentRestrictionsDescriptors() {
@@ -5528,14 +5948,12 @@ function getComponentRestrictionsDescriptors() {
 function getLightningElementPrototypeRestrictionsDescriptors(proto) {
 
   const originalDispatchEvent = proto.dispatchEvent;
-  const originalIsConnectedGetter = getOwnPropertyDescriptor$2(proto, 'isConnected').get;
   const descriptors = {
     dispatchEvent: generateDataDescriptor({
       value(event) {
         const vm = getAssociatedVM(this);
-        assert$1.isFalse(isBeingConstructed(vm), `this.dispatchEvent() should not be called during the construction of the custom` + ` element for ${getComponentTag(vm)} because no one is listening just yet.`);
 
-        if (!isNull$1(event) && isObject$1$1(event)) {
+        if (!isNull$1$1(event) && isObject$2(event)) {
           const {
             type
           } = event;
@@ -5548,20 +5966,9 @@ function getLightningElementPrototypeRestrictionsDescriptors(proto) {
         return originalDispatchEvent.apply(this, arguments);
       }
 
-    }),
-    isConnected: generateAccessorDescriptor({
-      get() {
-        const vm = getAssociatedVM(this);
-        const componentTag = getComponentTag(vm);
-        assert$1.isFalse(isBeingConstructed(vm), `this.isConnected should not be accessed during the construction phase of the custom` + ` element ${componentTag}. The value will always be` + ` false for Lightning Web Components constructed using lwc.createElement().`);
-        assert$1.isFalse(isVMBeingRendered(vm), `this.isConnected should not be accessed during the rendering phase of the custom` + ` element ${componentTag}. The value will always be true.`);
-        assert$1.isFalse(isInvokingRenderedCallback(vm), `this.isConnected should not be accessed during the renderedCallback of the custom` + ` element ${componentTag}. The value will always be true.`);
-        return originalIsConnectedGetter.call(this);
-      }
-
     })
   };
-  forEach$1.call(getOwnPropertyNames$2(globalHTMLProperties), propName => {
+  forEach$1$1.call(getOwnPropertyNames$1$1(globalHTMLProperties), propName => {
     if (propName in proto) {
       return;
     }
@@ -5599,1866 +6006,68 @@ function getLightningElementPrototypeRestrictionsDescriptors(proto) {
   return descriptors;
 }
 
-function patchElementWithRestrictions(elm, options) {
-  defineProperties$2(elm, getElementRestrictionsDescriptors(elm, options));
-}
-
 function patchShadowRootWithRestrictions(sr) {
-  defineProperties$2(sr, getShadowRootRestrictionsDescriptors(sr));
+  defineProperties$1$1(sr, getShadowRootRestrictionsDescriptors(sr));
 }
 
 function patchCustomElementWithRestrictions(elm) {
   const restrictionsDescriptors = getCustomElementRestrictionsDescriptors(elm);
-  const elmProto = getPrototypeOf$2(elm);
-  setPrototypeOf$2(elm, create$2(elmProto, restrictionsDescriptors));
+  const elmProto = getPrototypeOf$1$1(elm);
+  setPrototypeOf$1$1(elm, create$1$1(elmProto, restrictionsDescriptors));
 }
 
 function patchComponentWithRestrictions(cmp) {
-  defineProperties$2(cmp, getComponentRestrictionsDescriptors());
+  defineProperties$1$1(cmp, getComponentRestrictionsDescriptors());
 }
 
 function patchLightningElementPrototypeWithRestrictions(proto) {
-  defineProperties$2(proto, getLightningElementPrototypeRestrictionsDescriptors(proto));
+  defineProperties$1$1(proto, getLightningElementPrototypeRestrictionsDescriptors(proto));
 }
 
-const noop = () => void 0;
+const HTMLElementConstructor = typeof HTMLElement !== 'undefined' ? HTMLElement : function () {};
+const HTMLElementPrototype = HTMLElementConstructor.prototype;
+const HTMLElementOriginalDescriptors = create$1$1(null);
+forEach$1$1.call(keys$1$1(PropNameToAttrNameMap$1$1), propName => {
+  const descriptor = getPropertyDescriptor$1(HTMLElementPrototype, propName);
 
-function observeElementChildNodes(elm) {
-  elm.$domManual$ = true;
-}
-
-function setElementShadowToken(elm, token) {
-  elm.$shadowToken$ = token;
-}
-
-function updateNodeHook(oldVnode, vnode) {
-  const {
-    text
-  } = vnode;
-
-  if (oldVnode.text !== text) {
-    {
-      unlockDomMutation();
-    }
-
-    vnode.elm.nodeValue = text;
-
-    {
-      lockDomMutation();
-    }
-  }
-}
-
-function insertNodeHook(vnode, parentNode, referenceNode) {
-  {
-    unlockDomMutation();
-  }
-
-  parentNode.insertBefore(vnode.elm, referenceNode);
-
-  {
-    lockDomMutation();
-  }
-}
-
-function removeNodeHook(vnode, parentNode) {
-  {
-    unlockDomMutation();
-  }
-
-  parentNode.removeChild(vnode.elm);
-
-  {
-    lockDomMutation();
-  }
-}
-
-function createElmHook(vnode) {
-  modEvents.create(vnode);
-  modAttrs.create(vnode);
-  modProps.create(vnode);
-  modStaticClassName.create(vnode);
-  modStaticStyle.create(vnode);
-  modComputedClassName.create(vnode);
-  modComputedStyle.create(vnode);
-}
-
-var LWCDOMMode;
-
-(function (LWCDOMMode) {
-  LWCDOMMode["manual"] = "manual";
-})(LWCDOMMode || (LWCDOMMode = {}));
-
-function fallbackElmHook(vnode) {
-  const {
-    owner
-  } = vnode;
-  const elm = vnode.elm;
-
-  if (isTrue$1$1(useSyntheticShadow)) {
-    const {
-      data: {
-        context
-      }
-    } = vnode;
-    const {
-      shadowAttribute
-    } = owner.context;
-
-    if (!isUndefined$1(context) && !isUndefined$1(context.lwc) && context.lwc.dom === LWCDOMMode.manual) {
-      observeElementChildNodes(elm);
-    }
-
-    setElementShadowToken(elm, shadowAttribute);
-  }
-
-  {
-    const {
-      data: {
-        context
-      }
-    } = vnode;
-    const isPortal = !isUndefined$1(context) && !isUndefined$1(context.lwc) && context.lwc.dom === LWCDOMMode.manual;
-    patchElementWithRestrictions(elm, {
-      isPortal
-    });
-  }
-}
-
-function updateElmHook(oldVnode, vnode) {
-  modAttrs.update(oldVnode, vnode);
-  modProps.update(oldVnode, vnode);
-  modComputedClassName.update(oldVnode, vnode);
-  modComputedStyle.update(oldVnode, vnode);
-}
-
-function insertCustomElmHook(vnode) {
-  const vm = getAssociatedVM(vnode.elm);
-  appendVM(vm);
-}
-
-function updateChildrenHook(oldVnode, vnode) {
-  const {
-    children,
-    owner
-  } = vnode;
-  const fn = hasDynamicChildren(children) ? updateDynamicChildren : updateStaticChildren;
-  runWithBoundaryProtection(owner, owner.owner, noop, () => {
-    fn(vnode.elm, oldVnode.children, children);
-  }, noop);
-}
-
-function allocateChildrenHook(vnode) {
-  const vm = getAssociatedVM(vnode.elm);
-  const children = vnode.aChildren || vnode.children;
-  vm.aChildren = children;
-
-  if (isTrue$1$1(useSyntheticShadow)) {
-    allocateInSlot(vm, children);
-    vnode.aChildren = children;
-    vnode.children = EmptyArray;
-  }
-}
-
-function createViewModelHook(vnode) {
-  const elm = vnode.elm;
-
-  if (!isUndefined$1(getAssociatedVMIfPresent(elm))) {
-    return;
-  }
-
-  const {
-    mode,
-    ctor,
-    owner
-  } = vnode;
-  const def = getComponentInternalDef(ctor);
-  setElementProto(elm, def);
-
-  if (isTrue$1$1(useSyntheticShadow)) {
-    const {
-      shadowAttribute
-    } = owner.context;
-    setElementShadowToken(elm, shadowAttribute);
-  }
-
-  createVM(elm, def.ctor, {
-    mode,
-    owner
-  });
-
-  {
-    assert$1.isTrue(isArray$1$1(vnode.children), `Invalid vnode for a custom element, it must have children defined.`);
-  }
-}
-
-function createCustomElmHook(vnode) {
-  modEvents.create(vnode);
-  modAttrs.create(vnode);
-  modProps.create(vnode);
-  modStaticClassName.create(vnode);
-  modStaticStyle.create(vnode);
-  modComputedClassName.create(vnode);
-  modComputedStyle.create(vnode);
-}
-
-function createChildrenHook(vnode) {
-  const {
-    elm,
-    children
-  } = vnode;
-
-  for (let j = 0; j < children.length; ++j) {
-    const ch = children[j];
-
-    if (ch != null) {
-      ch.hook.create(ch);
-      ch.hook.insert(ch, elm, null);
-    }
-  }
-}
-
-function rerenderCustomElmHook(vnode) {
-  const vm = getAssociatedVM(vnode.elm);
-
-  {
-    assert$1.isTrue(isArray$1$1(vnode.children), `Invalid vnode for a custom element, it must have children defined.`);
-  }
-
-  rerenderVM(vm);
-}
-
-function updateCustomElmHook(oldVnode, vnode) {
-  modAttrs.update(oldVnode, vnode);
-  modProps.update(oldVnode, vnode);
-  modComputedClassName.update(oldVnode, vnode);
-  modComputedStyle.update(oldVnode, vnode);
-}
-
-function removeElmHook(vnode) {
-  const {
-    children,
-    elm
-  } = vnode;
-
-  for (let j = 0, len = children.length; j < len; ++j) {
-    const ch = children[j];
-
-    if (!isNull$1(ch)) {
-      ch.hook.remove(ch, elm);
-    }
-  }
-}
-
-function removeCustomElmHook(vnode) {
-  removeVM(getAssociatedVM(vnode.elm));
-}
-
-const FromIteration = new WeakMap();
-
-function markAsDynamicChildren(children) {
-  FromIteration.set(children, 1);
-}
-
-function hasDynamicChildren(children) {
-  return FromIteration.has(children);
-}
-
-const CHAR_S$1 = 115;
-const CHAR_V = 118;
-const CHAR_G = 103;
-const NamespaceAttributeForSVG = 'http://www.w3.org/2000/svg';
-const SymbolIterator = Symbol.iterator;
-const TextHook = {
-  create: vnode => {
-    vnode.elm = document.createTextNode(vnode.text);
-    linkNodeToShadow(vnode);
-  },
-  update: updateNodeHook,
-  insert: insertNodeHook,
-  move: insertNodeHook,
-  remove: removeNodeHook
-};
-const ElementHook = {
-  create: vnode => {
-    const {
-      data,
-      sel,
-      clonedElement
-    } = vnode;
-    const {
-      ns
-    } = data;
-
-    if (isUndefined$1(clonedElement)) {
-      vnode.elm = isUndefined$1(ns) ? document.createElement(sel) : document.createElementNS(ns, sel);
-    } else {
-      vnode.elm = clonedElement;
-    }
-
-    linkNodeToShadow(vnode);
-    fallbackElmHook(vnode);
-    createElmHook(vnode);
-  },
-  update: (oldVnode, vnode) => {
-    updateElmHook(oldVnode, vnode);
-    updateChildrenHook(oldVnode, vnode);
-  },
-  insert: (vnode, parentNode, referenceNode) => {
-    insertNodeHook(vnode, parentNode, referenceNode);
-    createChildrenHook(vnode);
-  },
-  move: (vnode, parentNode, referenceNode) => {
-    insertNodeHook(vnode, parentNode, referenceNode);
-  },
-  remove: (vnode, parentNode) => {
-    removeNodeHook(vnode, parentNode);
-    removeElmHook(vnode);
-  }
-};
-const CustomElementHook = {
-  create: vnode => {
-    const {
-      sel
-    } = vnode;
-    vnode.elm = document.createElement(sel);
-    linkNodeToShadow(vnode);
-    createViewModelHook(vnode);
-    allocateChildrenHook(vnode);
-    createCustomElmHook(vnode);
-  },
-  update: (oldVnode, vnode) => {
-    updateCustomElmHook(oldVnode, vnode);
-    allocateChildrenHook(vnode);
-    updateChildrenHook(oldVnode, vnode);
-    rerenderCustomElmHook(vnode);
-  },
-  insert: (vnode, parentNode, referenceNode) => {
-    insertNodeHook(vnode, parentNode, referenceNode);
-    const vm = getAssociatedVM(vnode.elm);
-
-    {
-      assert$1.isTrue(vm.state === VMState.created, `${vm} cannot be recycled.`);
-    }
-
-    runConnectedCallback(vm);
-    createChildrenHook(vnode);
-    insertCustomElmHook(vnode);
-  },
-  move: (vnode, parentNode, referenceNode) => {
-    insertNodeHook(vnode, parentNode, referenceNode);
-  },
-  remove: (vnode, parentNode) => {
-    removeNodeHook(vnode, parentNode);
-    removeCustomElmHook(vnode);
-  }
-};
-
-function linkNodeToShadow(vnode) {
-  vnode.elm.$shadowResolver$ = vnode.owner.cmpRoot.$shadowResolver$;
-}
-
-function addNS(vnode) {
-  const {
-    data,
-    children,
-    sel
-  } = vnode;
-  data.ns = NamespaceAttributeForSVG;
-
-  if (isArray$1$1(children) && sel !== 'foreignObject') {
-    for (let j = 0, n = children.length; j < n; ++j) {
-      const childNode = children[j];
-
-      if (childNode != null && childNode.hook === ElementHook) {
-        addNS(childNode);
-      }
-    }
-  }
-}
-
-function addVNodeToChildLWC(vnode) {
-  ArrayPush$1.call(getVMBeingRendered().velements, vnode);
-}
-
-function h(sel, data, children) {
-  const vmBeingRendered = getVMBeingRendered();
-
-  {
-    assert$1.isTrue(isString(sel), `h() 1st argument sel must be a string.`);
-    assert$1.isTrue(isObject$1$1(data), `h() 2nd argument data must be an object.`);
-    assert$1.isTrue(isArray$1$1(children), `h() 3rd argument children must be an array.`);
-    assert$1.isTrue('key' in data, ` <${sel}> "key" attribute is invalid or missing for ${vmBeingRendered}. Key inside iterator is either undefined or null.`);
-    assert$1.isFalse(data.className && data.classMap, `vnode.data.className and vnode.data.classMap ambiguous declaration.`);
-    assert$1.isFalse(data.styleMap && data.style, `vnode.data.styleMap and vnode.data.style ambiguous declaration.`);
-
-    if (data.style && !isString(data.style)) {
-      logError(`Invalid 'style' attribute passed to <${sel}> is ignored. This attribute must be a string value.`, vmBeingRendered);
-    }
-
-    forEach$1.call(children, childVnode => {
-      if (childVnode != null) {
-        assert$1.isTrue(childVnode && 'sel' in childVnode && 'data' in childVnode && 'children' in childVnode && 'text' in childVnode && 'elm' in childVnode && 'key' in childVnode, `${childVnode} is not a vnode.`);
-      }
-    });
-  }
-
-  const {
-    key
-  } = data;
-  let text, elm;
-  const vnode = {
-    sel,
-    data,
-    children,
-    text,
-    elm,
-    key,
-    hook: ElementHook,
-    owner: vmBeingRendered
-  };
-
-  if (sel.length === 3 && StringCharCodeAt$1.call(sel, 0) === CHAR_S$1 && StringCharCodeAt$1.call(sel, 1) === CHAR_V && StringCharCodeAt$1.call(sel, 2) === CHAR_G) {
-    addNS(vnode);
-  }
-
-  return vnode;
-}
-
-function ti(value) {
-  const shouldNormalize = value > 0 && !(isTrue$1$1(value) || isFalse$1$1(value));
-
-  {
-    const vmBeingRendered = getVMBeingRendered();
-
-    if (shouldNormalize) {
-      logError(`Invalid tabindex value \`${toString$1(value)}\` in template for ${vmBeingRendered}. This attribute must be set to 0 or -1.`, vmBeingRendered);
-    }
-  }
-
-  return shouldNormalize ? 0 : value;
-}
-
-function s(slotName, data, children, slotset) {
-  {
-    assert$1.isTrue(isString(slotName), `s() 1st argument slotName must be a string.`);
-    assert$1.isTrue(isObject$1$1(data), `s() 2nd argument data must be an object.`);
-    assert$1.isTrue(isArray$1$1(children), `h() 3rd argument children must be an array.`);
-  }
-
-  if (!isUndefined$1(slotset) && !isUndefined$1(slotset[slotName]) && slotset[slotName].length !== 0) {
-    children = slotset[slotName];
-  }
-
-  const vnode = h('slot', data, children);
-
-  if (useSyntheticShadow) {
-    sc(children);
-  }
-
-  return vnode;
-}
-
-function c(sel, Ctor, data, children = EmptyArray) {
-  const vmBeingRendered = getVMBeingRendered();
-
-  {
-    assert$1.isTrue(isString(sel), `c() 1st argument sel must be a string.`);
-    assert$1.isTrue(isFunction$1(Ctor), `c() 2nd argument Ctor must be a function.`);
-    assert$1.isTrue(isObject$1$1(data), `c() 3nd argument data must be an object.`);
-    assert$1.isTrue(arguments.length === 3 || isArray$1$1(children), `c() 4nd argument data must be an array.`);
-    assert$1.isFalse(data.className && data.classMap, `vnode.data.className and vnode.data.classMap ambiguous declaration.`);
-    assert$1.isFalse(data.styleMap && data.style, `vnode.data.styleMap and vnode.data.style ambiguous declaration.`);
-
-    if (data.style && !isString(data.style)) {
-      logError(`Invalid 'style' attribute passed to <${sel}> is ignored. This attribute must be a string value.`, vmBeingRendered);
-    }
-
-    if (arguments.length === 4) {
-      forEach$1.call(children, childVnode => {
-        if (childVnode != null) {
-          assert$1.isTrue(childVnode && 'sel' in childVnode && 'data' in childVnode && 'children' in childVnode && 'text' in childVnode && 'elm' in childVnode && 'key' in childVnode, `${childVnode} is not a vnode.`);
-        }
-      });
-    }
-  }
-
-  const {
-    key
-  } = data;
-  let text, elm;
-  const vnode = {
-    sel,
-    data,
-    children,
-    text,
-    elm,
-    key,
-    hook: CustomElementHook,
-    ctor: Ctor,
-    owner: vmBeingRendered,
-    mode: 'open'
-  };
-  addVNodeToChildLWC(vnode);
-  return vnode;
-}
-
-function i(iterable, factory) {
-  const list = [];
-  sc(list);
-  const vmBeingRendered = getVMBeingRendered();
-
-  if (isUndefined$1(iterable) || iterable === null) {
-    {
-      logError(`Invalid template iteration for value "${toString$1(iterable)}" in ${vmBeingRendered}. It must be an Array or an iterable Object.`, vmBeingRendered);
-    }
-
-    return list;
-  }
-
-  {
-    assert$1.isFalse(isUndefined$1(iterable[SymbolIterator]), `Invalid template iteration for value \`${toString$1(iterable)}\` in ${vmBeingRendered}. It must be an array-like object and not \`null\` nor \`undefined\`.`);
-  }
-
-  const iterator = iterable[SymbolIterator]();
-
-  {
-    assert$1.isTrue(iterator && isFunction$1(iterator.next), `Invalid iterator function for "${toString$1(iterable)}" in ${vmBeingRendered}.`);
-  }
-
-  let next = iterator.next();
-  let j = 0;
-  let {
-    value,
-    done: last
-  } = next;
-  let keyMap;
-  let iterationError;
-
-  {
-    keyMap = create$2(null);
-  }
-
-  while (last === false) {
-    next = iterator.next();
-    last = next.done;
-    const vnode = factory(value, j, j === 0, last);
-
-    if (isArray$1$1(vnode)) {
-      ArrayPush$1.apply(list, vnode);
-    } else {
-      ArrayPush$1.call(list, vnode);
-    }
-
-    {
-      const vnodes = isArray$1$1(vnode) ? vnode : [vnode];
-      forEach$1.call(vnodes, childVnode => {
-        if (!isNull$1(childVnode) && isObject$1$1(childVnode) && !isUndefined$1(childVnode.sel)) {
-          const {
-            key
-          } = childVnode;
-
-          if (isString(key) || isNumber(key)) {
-            if (keyMap[key] === 1 && isUndefined$1(iterationError)) {
-              iterationError = `Duplicated "key" attribute value for "<${childVnode.sel}>" in ${vmBeingRendered} for item number ${j}. A key with value "${childVnode.key}" appears more than once in the iteration. Key values must be unique numbers or strings.`;
-            }
-
-            keyMap[key] = 1;
-          } else if (isUndefined$1(iterationError)) {
-            iterationError = `Invalid "key" attribute value in "<${childVnode.sel}>" in ${vmBeingRendered} for item number ${j}. Set a unique "key" value on all iterated child elements.`;
-          }
-        }
-      });
-    }
-
-    j += 1;
-    value = next.value;
-  }
-
-  {
-    if (!isUndefined$1(iterationError)) {
-      logError(iterationError, vmBeingRendered);
-    }
-  }
-
-  return list;
-}
-
-function f(items) {
-  {
-    assert$1.isTrue(isArray$1$1(items), 'flattening api can only work with arrays.');
-  }
-
-  const len = items.length;
-  const flattened = [];
-  sc(flattened);
-
-  for (let j = 0; j < len; j += 1) {
-    const item = items[j];
-
-    if (isArray$1$1(item)) {
-      ArrayPush$1.apply(flattened, item);
-    } else {
-      ArrayPush$1.call(flattened, item);
-    }
-  }
-
-  return flattened;
-}
-
-function t(text) {
-  const data = EmptyObject;
-  let sel, children, key, elm;
-  return {
-    sel,
-    data,
-    children,
-    text,
-    elm,
-    key,
-    hook: TextHook,
-    owner: getVMBeingRendered()
-  };
-}
-
-function d(value) {
-  if (value == null) {
-    return null;
-  }
-
-  return t(value);
-}
-
-function b(fn) {
-  const vmBeingRendered = getVMBeingRendered();
-
-  if (isNull$1(vmBeingRendered)) {
-    throw new Error();
-  }
-
-  const vm = vmBeingRendered;
-  return function (event) {
-    invokeEventListener(vm, fn, vm.component, event);
-  };
-}
-
-function k(compilerKey, obj) {
-  switch (typeof obj) {
-    case 'number':
-    case 'string':
-      return compilerKey + ':' + obj;
-
-    case 'object':
-      {
-        assert$1.fail(`Invalid key value "${obj}" in ${getVMBeingRendered()}. Key must be a string or number.`);
-      }
-
-  }
-}
-
-function gid(id) {
-  const vmBeingRendered = getVMBeingRendered();
-
-  if (isUndefined$1(id) || id === '') {
-    {
-      logError(`Invalid id value "${id}". The id attribute must contain a non-empty string.`, vmBeingRendered);
-    }
-
-    return id;
-  }
-
-  if (isNull$1(id)) {
-    return null;
-  }
-
-  return `${id}-${vmBeingRendered.idx}`;
-}
-
-function fid(url) {
-  const vmBeingRendered = getVMBeingRendered();
-
-  if (isUndefined$1(url) || url === '') {
-    {
-      if (isUndefined$1(url)) {
-        logError(`Undefined url value for "href" or "xlink:href" attribute. Expected a non-empty string.`, vmBeingRendered);
-      }
-    }
-
-    return url;
-  }
-
-  if (isNull$1(url)) {
-    return null;
-  }
-
-  if (/^#/.test(url)) {
-    return `${url}-${vmBeingRendered.idx}`;
-  }
-
-  return url;
-}
-
-const DynamicImportedComponentMap = new Map();
-let dynamicImportedComponentCounter = 0;
-
-function dc(sel, Ctor, data, children) {
-  {
-    assert$1.isTrue(isString(sel), `dc() 1st argument sel must be a string.`);
-    assert$1.isTrue(isObject$1$1(data), `dc() 3nd argument data must be an object.`);
-    assert$1.isTrue(arguments.length === 3 || isArray$1$1(children), `dc() 4nd argument data must be an array.`);
-  }
-
-  if (Ctor == null) {
-    return null;
-  }
-
-  if (!isComponentConstructor(Ctor)) {
-    throw new Error(`Invalid LWC Constructor ${toString$1(Ctor)} for custom element <${sel}>.`);
-  }
-
-  let idx = DynamicImportedComponentMap.get(Ctor);
-
-  if (isUndefined$1(idx)) {
-    idx = dynamicImportedComponentCounter++;
-    DynamicImportedComponentMap.set(Ctor, idx);
-  }
-
-  data.key = `dc:${idx}:${data.key}`;
-  return c(sel, Ctor, data, children);
-}
-
-function sc(vnodes) {
-  {
-    assert$1.isTrue(isArray$1$1(vnodes), 'sc() api can only work with arrays.');
-  }
-
-  markAsDynamicChildren(vnodes);
-  return vnodes;
-}
-
-var api = Object.freeze({
-  __proto__: null,
-  h: h,
-  ti: ti,
-  s: s,
-  c: c,
-  i: i,
-  f: f,
-  t: t,
-  d: d,
-  b: b,
-  k: k,
-  gid: gid,
-  fid: fid,
-  dc: dc,
-  sc: sc
-});
-const signedTemplateSet = new Set();
-
-function defaultEmptyTemplate() {
-  return [];
-}
-
-signedTemplateSet.add(defaultEmptyTemplate);
-
-function isTemplateRegistered(tpl) {
-  return signedTemplateSet.has(tpl);
-}
-
-function registerTemplate(tpl) {
-  signedTemplateSet.add(tpl);
-  return tpl;
-}
-
-function sanitizeAttribute(tagName, namespaceUri, attrName, attrValue) {
-  return attrValue;
-}
-
-const CachedStyleFragments = create$2(null);
-
-function createStyleElement(styleContent) {
-  const elm = document.createElement('style');
-  elm.type = 'text/css';
-  elm.textContent = styleContent;
-  return elm;
-}
-
-function getCachedStyleElement(styleContent) {
-  let fragment = CachedStyleFragments[styleContent];
-
-  if (isUndefined$1(fragment)) {
-    fragment = document.createDocumentFragment();
-    const styleElm = createStyleElement(styleContent);
-    fragment.appendChild(styleElm);
-    CachedStyleFragments[styleContent] = fragment;
-  }
-
-  return fragment.cloneNode(true).firstChild;
-}
-
-const globalStyleParent = document.head || document.body || document;
-const InsertedGlobalStyleContent = create$2(null);
-
-function insertGlobalStyle(styleContent) {
-  if (isUndefined$1(InsertedGlobalStyleContent[styleContent])) {
-    InsertedGlobalStyleContent[styleContent] = true;
-    const elm = createStyleElement(styleContent);
-    globalStyleParent.appendChild(elm);
-  }
-}
-
-function createStyleVNode(elm) {
-  const vnode = h('style', {
-    key: 'style'
-  }, EmptyArray);
-  vnode.clonedElement = elm;
-  return vnode;
-}
-
-function resetStyleAttributes(vm) {
-  const {
-    context,
-    elm
-  } = vm;
-  const oldHostAttribute = context.hostAttribute;
-
-  if (!isUndefined$1(oldHostAttribute)) {
-    removeAttribute$1.call(elm, oldHostAttribute);
-  }
-
-  context.hostAttribute = context.shadowAttribute = undefined;
-}
-
-function applyStyleAttributes(vm, hostAttribute, shadowAttribute) {
-  const {
-    context,
-    elm
-  } = vm;
-  setAttribute$1.call(elm, hostAttribute, '');
-  context.hostAttribute = hostAttribute;
-  context.shadowAttribute = shadowAttribute;
-}
-
-function collectStylesheets(stylesheets, hostSelector, shadowSelector, isNative, aggregatorFn) {
-  forEach$1.call(stylesheets, sheet => {
-    if (isArray$1$1(sheet)) {
-      collectStylesheets(sheet, hostSelector, shadowSelector, isNative, aggregatorFn);
-    } else {
-      aggregatorFn(sheet(hostSelector, shadowSelector, isNative));
-    }
-  });
-}
-
-function evaluateCSS(stylesheets, hostAttribute, shadowAttribute) {
-  {
-    assert$1.isTrue(isArray$1$1(stylesheets), `Invalid stylesheets.`);
-  }
-
-  if (useSyntheticShadow) {
-    const hostSelector = `[${hostAttribute}]`;
-    const shadowSelector = `[${shadowAttribute}]`;
-    collectStylesheets(stylesheets, hostSelector, shadowSelector, false, textContent => {
-      insertGlobalStyle(textContent);
-    });
-    return null;
-  } else {
-    let buffer = '';
-    collectStylesheets(stylesheets, emptyString$1, emptyString$1, true, textContent => {
-      buffer += textContent;
-    });
-    return createStyleVNode(getCachedStyleElement(buffer));
-  }
-}
-
-var GlobalMeasurementPhase;
-
-(function (GlobalMeasurementPhase) {
-  GlobalMeasurementPhase["REHYDRATE"] = "lwc-rehydrate";
-  GlobalMeasurementPhase["HYDRATE"] = "lwc-hydrate";
-})(GlobalMeasurementPhase || (GlobalMeasurementPhase = {}));
-
-const isUserTimingSupported = typeof performance !== 'undefined' && typeof performance.mark === 'function' && typeof performance.clearMarks === 'function' && typeof performance.measure === 'function' && typeof performance.clearMeasures === 'function';
-
-function getMarkName(phase, vm) {
-  return `${getComponentTag(vm)} - ${phase} - ${vm.idx}`;
-}
-
-function getMeasureName(phase, vm) {
-  return `${getComponentTag(vm)} - ${phase}`;
-}
-
-function start(markName) {
-  performance.mark(markName);
-}
-
-function end(measureName, markName) {
-  performance.measure(measureName, markName);
-  performance.clearMarks(markName);
-  performance.clearMarks(measureName);
-}
-
-function noop$1() {}
-
-const startMeasure = !isUserTimingSupported ? noop$1 : function (phase, vm) {
-  const markName = getMarkName(phase, vm);
-  start(markName);
-};
-const endMeasure = !isUserTimingSupported ? noop$1 : function (phase, vm) {
-  const markName = getMarkName(phase, vm);
-  const measureName = getMeasureName(phase, vm);
-  end(measureName, markName);
-};
-const startGlobalMeasure = !isUserTimingSupported ? noop$1 : function (phase, vm) {
-  const markName = isUndefined$1(vm) ? phase : getMarkName(phase, vm);
-  start(markName);
-};
-const endGlobalMeasure = !isUserTimingSupported ? noop$1 : function (phase, vm) {
-  const markName = isUndefined$1(vm) ? phase : getMarkName(phase, vm);
-  end(phase, markName);
-};
-let isUpdatingTemplate = false;
-let vmBeingRendered = null;
-
-function getVMBeingRendered() {
-  return vmBeingRendered;
-}
-
-function setVMBeingRendered(vm) {
-  vmBeingRendered = vm;
-}
-
-function isVMBeingRendered(vm) {
-  return vm === vmBeingRendered;
-}
-
-const EmptySlots = create$2(null);
-
-function validateSlots(vm, html) {
-
-  const {
-    cmpSlots = EmptySlots
-  } = vm;
-  const {
-    slots = EmptyArray
-  } = html;
-
-  for (const slotName in cmpSlots) {
-    assert$1.isTrue(isArray$1$1(cmpSlots[slotName]), `Slots can only be set to an array, instead received ${toString$1(cmpSlots[slotName])} for slot "${slotName}" in ${vm}.`);
-
-    if (slotName !== '' && ArrayIndexOf$1.call(slots, slotName) === -1) {
-      logError(`Ignoring unknown provided slot name "${slotName}" in ${vm}. Check for a typo on the slot attribute.`, vm);
-    }
-  }
-}
-
-function validateFields(vm, html) {
-
-  const {
-    component
-  } = vm;
-  const {
-    ids = []
-  } = html;
-  forEach$1.call(ids, propName => {
-    if (!(propName in component)) {
-      logError(`The template rendered by ${vm} references \`this.${propName}\`, which is not declared. Check for a typo in the template.`, vm);
-    }
-  });
-}
-
-function evaluateTemplate(vm, html) {
-  {
-    assert$1.isTrue(isFunction$1(html), `evaluateTemplate() second argument must be an imported template instead of ${toString$1(html)}`);
-  }
-
-  const isUpdatingTemplateInception = isUpdatingTemplate;
-  const vmOfTemplateBeingUpdatedInception = vmBeingRendered;
-  let vnodes = [];
-  runWithBoundaryProtection(vm, vm.owner, () => {
-    vmBeingRendered = vm;
-
-    {
-      startMeasure('render', vm);
-    }
-  }, () => {
-    const {
-      component,
-      context,
-      cmpSlots,
-      cmpTemplate,
-      tro
-    } = vm;
-    tro.observe(() => {
-      if (html !== cmpTemplate) {
-        if (!isUndefined$1(cmpTemplate)) {
-          resetShadowRoot(vm);
-        }
-
-        if (isUndefined$1(html) || !isTemplateRegistered(html)) {
-          throw new TypeError(`Invalid template returned by the render() method on ${vm}. It must return an imported template (e.g.: \`import html from "./${vm.def.name}.html"\`), instead, it has returned: ${toString$1(html)}.`);
-        }
-
-        vm.cmpTemplate = html;
-        context.tplCache = create$2(null);
-        resetStyleAttributes(vm);
-        const {
-          stylesheets,
-          stylesheetTokens
-        } = html;
-
-        if (isUndefined$1(stylesheets) || stylesheets.length === 0) {
-          context.styleVNode = null;
-        } else if (!isUndefined$1(stylesheetTokens)) {
-          const {
-            hostAttribute,
-            shadowAttribute
-          } = stylesheetTokens;
-          applyStyleAttributes(vm, hostAttribute, shadowAttribute);
-          context.styleVNode = evaluateCSS(stylesheets, hostAttribute, shadowAttribute);
-        }
-
-        if ("development" !== 'production') {
-          validateFields(vm, html);
-        }
-      }
-
-      if ("development" !== 'production') {
-        assert$1.isTrue(isObject$1$1(context.tplCache), `vm.context.tplCache must be an object associated to ${cmpTemplate}.`);
-        validateSlots(vm, html);
-      }
-
-      vm.velements = [];
-      isUpdatingTemplate = true;
-      vnodes = html.call(undefined, api, component, cmpSlots, context.tplCache);
-      const {
-        styleVNode
-      } = context;
-
-      if (!isNull$1(styleVNode)) {
-        ArrayUnshift$1$1.call(vnodes, styleVNode);
-      }
-    });
-  }, () => {
-    isUpdatingTemplate = isUpdatingTemplateInception;
-    vmBeingRendered = vmOfTemplateBeingUpdatedInception;
-
-    {
-      endMeasure('render', vm);
-    }
-  });
-
-  {
-    assert$1.invariant(isArray$1$1(vnodes), `Compiler should produce html functions that always return an array.`);
-  }
-
-  return vnodes;
-}
-
-let isInvokingRender = false;
-let vmBeingConstructed = null;
-
-function isBeingConstructed(vm) {
-  return vmBeingConstructed === vm;
-}
-
-let vmInvokingRenderedCallback = null;
-
-function isInvokingRenderedCallback(vm) {
-  return vmInvokingRenderedCallback === vm;
-}
-
-const noop$2 = () => void 0;
-
-function invokeComponentCallback(vm, fn, args) {
-  const {
-    component,
-    callHook,
-    owner
-  } = vm;
-  let result;
-  runWithBoundaryProtection(vm, owner, noop$2, () => {
-    result = callHook(component, fn, args);
-  }, noop$2);
-  return result;
-}
-
-function invokeComponentConstructor(vm, Ctor) {
-  const vmBeingConstructedInception = vmBeingConstructed;
-  let error;
-
-  {
-    startMeasure('constructor', vm);
-  }
-
-  vmBeingConstructed = vm;
-
-  try {
-    const result = new Ctor();
-
-    if (vmBeingConstructed.component !== result) {
-      throw new TypeError('Invalid component constructor, the class should extend LightningElement.');
-    }
-  } catch (e) {
-    error = Object(e);
-  } finally {
-    {
-      endMeasure('constructor', vm);
-    }
-
-    vmBeingConstructed = vmBeingConstructedInception;
-
-    if (!isUndefined$1(error)) {
-      error.wcStack = getErrorComponentStack(vm);
-      throw error;
-    }
-  }
-}
-
-function invokeComponentRenderMethod(vm) {
-  const {
-    def: {
-      render
-    },
-    callHook,
-    component,
-    owner
-  } = vm;
-  const isRenderBeingInvokedInception = isInvokingRender;
-  const vmBeingRenderedInception = getVMBeingRendered();
-  let html;
-  let renderInvocationSuccessful = false;
-  runWithBoundaryProtection(vm, owner, () => {
-    isInvokingRender = true;
-    setVMBeingRendered(vm);
-  }, () => {
-    vm.tro.observe(() => {
-      html = callHook(component, render);
-      renderInvocationSuccessful = true;
-    });
-  }, () => {
-    isInvokingRender = isRenderBeingInvokedInception;
-    setVMBeingRendered(vmBeingRenderedInception);
-  });
-  return renderInvocationSuccessful ? evaluateTemplate(vm, html) : [];
-}
-
-function invokeComponentRenderedCallback(vm) {
-  const {
-    def: {
-      renderedCallback
-    },
-    component,
-    callHook,
-    owner
-  } = vm;
-
-  if (!isUndefined$1(renderedCallback)) {
-    const vmInvokingRenderedCallbackInception = vmInvokingRenderedCallback;
-    runWithBoundaryProtection(vm, owner, () => {
-      vmInvokingRenderedCallback = vm;
-
-      {
-        startMeasure('renderedCallback', vm);
-      }
-    }, () => {
-      callHook(component, renderedCallback);
-    }, () => {
-      {
-        endMeasure('renderedCallback', vm);
-      }
-
-      vmInvokingRenderedCallback = vmInvokingRenderedCallbackInception;
-    });
-  }
-}
-
-function invokeEventListener(vm, fn, thisValue, event) {
-  const {
-    callHook,
-    owner
-  } = vm;
-  runWithBoundaryProtection(vm, owner, noop$2, () => {
-    if ("development" !== 'production') {
-      assert$1.isTrue(isFunction$1(fn), `Invalid event handler for event '${event.type}' on ${vm}.`);
-    }
-
-    callHook(thisValue, fn, [event]);
-  }, noop$2);
-}
-
-const {
-  create: create$1$1
-} = Object;
-const {
-  splice: ArraySplice$1$1,
-  indexOf: ArrayIndexOf$1$1,
-  push: ArrayPush$1$1
-} = Array.prototype;
-const TargetToReactiveRecordMap = new WeakMap();
-
-function isUndefined$1$1(obj) {
-  return obj === undefined;
-}
-
-function getReactiveRecord(target) {
-  let reactiveRecord = TargetToReactiveRecordMap.get(target);
-
-  if (isUndefined$1$1(reactiveRecord)) {
-    const newRecord = create$1$1(null);
-    reactiveRecord = newRecord;
-    TargetToReactiveRecordMap.set(target, newRecord);
-  }
-
-  return reactiveRecord;
-}
-
-let currentReactiveObserver = null;
-
-function valueMutated(target, key) {
-  const reactiveRecord = TargetToReactiveRecordMap.get(target);
-
-  if (!isUndefined$1$1(reactiveRecord)) {
-    const reactiveObservers = reactiveRecord[key];
-
-    if (!isUndefined$1$1(reactiveObservers)) {
-      for (let i = 0, len = reactiveObservers.length; i < len; i += 1) {
-        const ro = reactiveObservers[i];
-        ro.notify();
-      }
-    }
-  }
-}
-
-function valueObserved(target, key) {
-  if (currentReactiveObserver === null) {
-    return;
-  }
-
-  const ro = currentReactiveObserver;
-  const reactiveRecord = getReactiveRecord(target);
-  let reactiveObservers = reactiveRecord[key];
-
-  if (isUndefined$1$1(reactiveObservers)) {
-    reactiveObservers = [];
-    reactiveRecord[key] = reactiveObservers;
-  } else if (reactiveObservers[0] === ro) {
-    return;
-  }
-
-  if (ArrayIndexOf$1$1.call(reactiveObservers, ro) === -1) {
-    ro.link(reactiveObservers);
-  }
-}
-
-class ReactiveObserver {
-  constructor(callback) {
-    this.listeners = [];
-    this.callback = callback;
-  }
-
-  observe(job) {
-    const inceptionReactiveRecord = currentReactiveObserver;
-    currentReactiveObserver = this;
-    let error;
-
-    try {
-      job();
-    } catch (e) {
-      error = Object(e);
-    } finally {
-      currentReactiveObserver = inceptionReactiveRecord;
-
-      if (error !== undefined) {
-        throw error;
-      }
-    }
-  }
-
-  reset() {
-    const {
-      listeners
-    } = this;
-    const len = listeners.length;
-
-    if (len > 0) {
-      for (let i = 0; i < len; i += 1) {
-        const set = listeners[i];
-        const pos = ArrayIndexOf$1$1.call(listeners[i], this);
-        ArraySplice$1$1.call(set, pos, 1);
-      }
-
-      listeners.length = 0;
-    }
-  }
-
-  notify() {
-    this.callback.call(undefined, this);
-  }
-
-  link(reactiveObservers) {
-    ArrayPush$1$1.call(reactiveObservers, this);
-    ArrayPush$1$1.call(this.listeners, reactiveObservers);
-  }
-
-}
-
-const signedComponentToMetaMap = new Map();
-
-function registerComponent(Ctor, {
-  name,
-  tmpl: template
-}) {
-  signedComponentToMetaMap.set(Ctor, {
-    name,
-    template
-  });
-  return Ctor;
-}
-
-function getComponentRegisteredMeta(Ctor) {
-  return signedComponentToMetaMap.get(Ctor);
-}
-
-function createComponent(uninitializedVm, Ctor) {
-  invokeComponentConstructor(uninitializedVm, Ctor);
-  const initializedVm = uninitializedVm;
-
-  if (isUndefined$1(initializedVm.component)) {
-    throw new ReferenceError(`Invalid construction for ${Ctor}, you must extend LightningElement.`);
-  }
-}
-
-function getTemplateReactiveObserver(vm) {
-  return new ReactiveObserver(() => {
-    const {
-      isDirty
-    } = vm;
-
-    if (isFalse$1$1(isDirty)) {
-      markComponentAsDirty(vm);
-      scheduleRehydration(vm);
-    }
-  });
-}
-
-function renderComponent(vm) {
-  {
-    assert$1.invariant(vm.isDirty, `${vm} is not dirty.`);
-  }
-
-  vm.tro.reset();
-  const vnodes = invokeComponentRenderMethod(vm);
-  vm.isDirty = false;
-  vm.isScheduled = false;
-
-  {
-    assert$1.invariant(isArray$1$1(vnodes), `${vm}.render() should always return an array of vnodes instead of ${vnodes}`);
-  }
-
-  return vnodes;
-}
-
-function markComponentAsDirty(vm) {
-  {
-    const vmBeingRendered = getVMBeingRendered();
-    assert$1.isFalse(vm.isDirty, `markComponentAsDirty() for ${vm} should not be called when the component is already dirty.`);
-    assert$1.isFalse(isInvokingRender, `markComponentAsDirty() for ${vm} cannot be called during rendering of ${vmBeingRendered}.`);
-    assert$1.isFalse(isUpdatingTemplate, `markComponentAsDirty() for ${vm} cannot be called while updating template of ${vmBeingRendered}.`);
-  }
-
-  vm.isDirty = true;
-}
-
-const cmpEventListenerMap = new WeakMap();
-
-function getWrappedComponentsListener(vm, listener) {
-  if (!isFunction$1(listener)) {
-    throw new TypeError();
-  }
-
-  let wrappedListener = cmpEventListenerMap.get(listener);
-
-  if (isUndefined$1(wrappedListener)) {
-    wrappedListener = function (event) {
-      invokeEventListener(vm, listener, undefined, event);
-    };
-
-    cmpEventListenerMap.set(listener, wrappedListener);
-  }
-
-  return wrappedListener;
-}
-
-const HTMLElementOriginalDescriptors = create$2(null);
-forEach$1.call(ElementPrototypeAriaPropertyNames, propName => {
-  const descriptor = getPropertyDescriptor$1(HTMLElement.prototype, propName);
-
-  if (!isUndefined$1(descriptor)) {
+  if (!isUndefined$1$1(descriptor)) {
     HTMLElementOriginalDescriptors[propName] = descriptor;
   }
 });
-forEach$1.call(defaultDefHTMLPropertyNames, propName => {
-  const descriptor = getPropertyDescriptor$1(HTMLElement.prototype, propName);
+forEach$1$1.call(defaultDefHTMLPropertyNames, propName => {
+  const descriptor = getPropertyDescriptor$1(HTMLElementPrototype, propName);
 
-  if (!isUndefined$1(descriptor)) {
+  if (!isUndefined$1$1(descriptor)) {
     HTMLElementOriginalDescriptors[propName] = descriptor;
   }
 });
-
-function componentValueMutated(vm, key) {
-  valueMutated(vm.component, key);
-}
-
-function componentValueObserved(vm, key) {
-  valueObserved(vm.component, key);
-}
-
-const ShadowRootInnerHTMLSetter = getOwnPropertyDescriptor$2(ShadowRoot.prototype, 'innerHTML').set;
-const dispatchEvent$1 = 'EventTarget' in window ? EventTarget.prototype.dispatchEvent : Node.prototype.dispatchEvent;
-
-function buildCustomElementConstructor(Ctor) {
-  var _a;
-
-  const {
-    props,
-    bridge: BaseElement
-  } = getComponentInternalDef(Ctor);
-  const attributeToPropMap = {};
-
-  for (const propName in props) {
-    attributeToPropMap[getAttrNameFromPropName(propName)] = propName;
-  }
-
-  return _a = class extends BaseElement {
-    constructor() {
-      super();
-      createVM(this, Ctor, {
-        mode: 'open',
-        isRoot: true,
-        owner: null
-      });
-    }
-
-    connectedCallback() {
-      connectRootElement(this);
-    }
-
-    disconnectedCallback() {
-      disconnectedRootElement(this);
-    }
-
-    attributeChangedCallback(attrName, oldValue, newValue) {
-      if (oldValue === newValue) {
-        return;
-      }
-
-      const propName = attributeToPropMap[attrName];
-
-      if (isUndefined$1(propName)) {
-        return;
-      }
-
-      if (!isAttributeLocked(this, attrName)) {
-        return;
-      }
-
-      this[propName] = newValue;
-    }
-
-  }, _a.observedAttributes = keys$2(attributeToPropMap), _a;
-}
-
-function createBridgeToElementDescriptor(propName, descriptor) {
-  const {
-    get,
-    set,
-    enumerable,
-    configurable
-  } = descriptor;
-
-  if (!isFunction$1(get)) {
-    {
-      assert$1.fail(`Detected invalid public property descriptor for HTMLElement.prototype.${propName} definition. Missing the standard getter.`);
-    }
-
-    throw new TypeError();
-  }
-
-  if (!isFunction$1(set)) {
-    {
-      assert$1.fail(`Detected invalid public property descriptor for HTMLElement.prototype.${propName} definition. Missing the standard setter.`);
-    }
-
-    throw new TypeError();
-  }
-
-  return {
-    enumerable,
-    configurable,
-
-    get() {
-      const vm = getAssociatedVM(this);
-
-      if (isBeingConstructed(vm)) {
-        {
-          const name = vm.elm.constructor.name;
-          logError(`\`${name}\` constructor can't read the value of property \`${propName}\` because the owner component hasn't set the value yet. Instead, use the \`${name}\` constructor to set a default value for the property.`, vm);
-        }
-
-        return;
-      }
-
-      componentValueObserved(vm, propName);
-      return get.call(vm.elm);
-    },
-
-    set(newValue) {
-      const vm = getAssociatedVM(this);
-
-      {
-        const vmBeingRendered = getVMBeingRendered();
-        assert$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${vm}.${propName}`);
-        assert$1.invariant(!isUpdatingTemplate, `When updating the template of ${vmBeingRendered}, one of the accessors used by the template has side effects on the state of ${vm}.${propName}`);
-        assert$1.isFalse(isBeingConstructed(vm), `Failed to construct '${getComponentTag(vm)}': The result must not have attributes.`);
-        assert$1.invariant(!isObject$1$1(newValue) || isNull$1(newValue), `Invalid value "${newValue}" for "${propName}" of ${vm}. Value cannot be an object, must be a primitive value.`);
-      }
-
-      if (newValue !== vm.cmpProps[propName]) {
-        vm.cmpProps[propName] = newValue;
-        componentValueMutated(vm, propName);
-      }
-
-      return set.call(vm.elm, newValue);
-    }
-
-  };
-}
-
-function getLinkedElement(cmp) {
-  return getAssociatedVM(cmp).elm;
-}
-
-function BaseLightningElementConstructor() {
-  if (isNull$1(vmBeingConstructed)) {
-    throw new ReferenceError('Illegal constructor');
-  }
-
-  {
-    assert$1.invariant(vmBeingConstructed.elm instanceof HTMLElement, `Component creation requires a DOM element to be associated to ${vmBeingConstructed}.`);
-  }
-
-  const vm = vmBeingConstructed;
-  const {
-    elm,
-    mode,
-    def: {
-      ctor
-    }
-  } = vm;
-  const component = this;
-  vm.component = component;
-  vm.tro = getTemplateReactiveObserver(vm);
-  vm.oar = create$2(null);
-
-  if (arguments.length === 1) {
-    const {
-      callHook,
-      setHook,
-      getHook
-    } = arguments[0];
-    vm.callHook = callHook;
-    vm.setHook = setHook;
-    vm.getHook = getHook;
-  }
-
-  const shadowRootOptions = {
-    mode,
-    delegatesFocus: !!ctor.delegatesFocus,
-    '$$lwc-synthetic-mode$$': true
-  };
-  const cmpRoot = elm.attachShadow(shadowRootOptions);
-  associateVM(component, vm);
-  associateVM(cmpRoot, vm);
-  associateVM(elm, vm);
-  vm.cmpRoot = cmpRoot;
-
-  {
-    patchCustomElementWithRestrictions(elm);
-    patchComponentWithRestrictions(component);
-    patchShadowRootWithRestrictions(cmpRoot);
-  }
-
-  return this;
-}
-
-BaseLightningElementConstructor.prototype = {
-  constructor: BaseLightningElementConstructor,
-
-  dispatchEvent(_event) {
-    const elm = getLinkedElement(this);
-    return dispatchEvent$1.apply(elm, arguments);
-  },
-
-  addEventListener(type, listener, options) {
-    const vm = getAssociatedVM(this);
-
-    {
-      const vmBeingRendered = getVMBeingRendered();
-      assert$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${vm} by adding an event listener for "${type}".`);
-      assert$1.invariant(!isUpdatingTemplate, `Updating the template of ${vmBeingRendered} has side effects on the state of ${vm} by adding an event listener for "${type}".`);
-      assert$1.invariant(isFunction$1(listener), `Invalid second argument for this.addEventListener() in ${vm} for event "${type}". Expected an EventListener but received ${listener}.`);
-    }
-
-    const wrappedListener = getWrappedComponentsListener(vm, listener);
-    vm.elm.addEventListener(type, wrappedListener, options);
-  },
-
-  removeEventListener(type, listener, options) {
-    const vm = getAssociatedVM(this);
-    const wrappedListener = getWrappedComponentsListener(vm, listener);
-    vm.elm.removeEventListener(type, wrappedListener, options);
-  },
-
-  setAttributeNS(ns, attrName, _value) {
-    const elm = getLinkedElement(this);
-
-    {
-      const vm = getAssociatedVM(this);
-      assert$1.isFalse(isBeingConstructed(vm), `Failed to construct '${getComponentTag(vm)}': The result must not have attributes.`);
-    }
-
-    unlockAttribute(elm, attrName);
-    elm.setAttributeNS.apply(elm, arguments);
-    lockAttribute();
-  },
-
-  removeAttributeNS(ns, attrName) {
-    const elm = getLinkedElement(this);
-    unlockAttribute(elm, attrName);
-    elm.removeAttributeNS.apply(elm, arguments);
-    lockAttribute();
-  },
-
-  removeAttribute(attrName) {
-    const elm = getLinkedElement(this);
-    unlockAttribute(elm, attrName);
-    elm.removeAttribute.apply(elm, arguments);
-    lockAttribute();
-  },
-
-  setAttribute(attrName, _value) {
-    const elm = getLinkedElement(this);
-
-    {
-      const vm = getAssociatedVM(this);
-      assert$1.isFalse(isBeingConstructed(vm), `Failed to construct '${getComponentTag(vm)}': The result must not have attributes.`);
-    }
-
-    unlockAttribute(elm, attrName);
-    elm.setAttribute.apply(elm, arguments);
-    lockAttribute();
-  },
-
-  getAttribute(attrName) {
-    const elm = getLinkedElement(this);
-    unlockAttribute(elm, attrName);
-    const value = elm.getAttribute.apply(elm, arguments);
-    lockAttribute();
-    return value;
-  },
-
-  getAttributeNS(ns, attrName) {
-    const elm = getLinkedElement(this);
-    unlockAttribute(elm, attrName);
-    const value = elm.getAttributeNS.apply(elm, arguments);
-    lockAttribute();
-    return value;
-  },
-
-  getBoundingClientRect() {
-    const elm = getLinkedElement(this);
-
-    {
-      const vm = getAssociatedVM(this);
-      assert$1.isFalse(isBeingConstructed(vm), `this.getBoundingClientRect() should not be called during the construction of the custom element for ${getComponentTag(vm)} because the element is not yet in the DOM, instead, you can use it in one of the available life-cycle hooks.`);
-    }
-
-    return elm.getBoundingClientRect();
-  },
-
-  querySelector(selectors) {
-    const vm = getAssociatedVM(this);
-
-    {
-      assert$1.isFalse(isBeingConstructed(vm), `this.querySelector() cannot be called during the construction of the custom element for ${getComponentTag(vm)} because no children has been added to this element yet.`);
-    }
-
-    const {
-      elm
-    } = vm;
-    return elm.querySelector(selectors);
-  },
-
-  querySelectorAll(selectors) {
-    const vm = getAssociatedVM(this);
-
-    {
-      assert$1.isFalse(isBeingConstructed(vm), `this.querySelectorAll() cannot be called during the construction of the custom element for ${getComponentTag(vm)} because no children has been added to this element yet.`);
-    }
-
-    const {
-      elm
-    } = vm;
-    return elm.querySelectorAll(selectors);
-  },
-
-  getElementsByTagName(tagNameOrWildCard) {
-    const vm = getAssociatedVM(this);
-
-    {
-      assert$1.isFalse(isBeingConstructed(vm), `this.getElementsByTagName() cannot be called during the construction of the custom element for ${getComponentTag(vm)} because no children has been added to this element yet.`);
-    }
-
-    const {
-      elm
-    } = vm;
-    return elm.getElementsByTagName(tagNameOrWildCard);
-  },
-
-  getElementsByClassName(names) {
-    const vm = getAssociatedVM(this);
-
-    {
-      assert$1.isFalse(isBeingConstructed(vm), `this.getElementsByClassName() cannot be called during the construction of the custom element for ${getComponentTag(vm)} because no children has been added to this element yet.`);
-    }
-
-    const {
-      elm
-    } = vm;
-    return elm.getElementsByClassName(names);
-  },
-
-  get isConnected() {
-    const vm = getAssociatedVM(this);
-    const {
-      elm
-    } = vm;
-    return elm.isConnected;
-  },
-
-  get classList() {
-    {
-      const vm = getAssociatedVM(this);
-      assert$1.isFalse(isBeingConstructed(vm), `Failed to construct ${vm}: The result must not have attributes. Adding or tampering with classname in constructor is not allowed in a web component, use connectedCallback() instead.`);
-    }
-
-    return getLinkedElement(this).classList;
-  },
-
-  get template() {
-    const vm = getAssociatedVM(this);
-    return vm.cmpRoot;
-  },
-
-  get shadowRoot() {
-    return null;
-  },
-
-  render() {
-    const vm = getAssociatedVM(this);
-    return vm.def.template;
-  },
-
-  toString() {
-    const vm = getAssociatedVM(this);
-    return `[object ${vm.def.name}]`;
-  }
-
-};
-const lightningBasedDescriptors = create$2(null);
-
-for (const propName in HTMLElementOriginalDescriptors) {
-  lightningBasedDescriptors[propName] = createBridgeToElementDescriptor(propName, HTMLElementOriginalDescriptors[propName]);
-}
-
-defineProperties$2(BaseLightningElementConstructor.prototype, lightningBasedDescriptors);
-const ComponentConstructorAsCustomElementConstructorMap = new Map();
-
-function getCustomElementConstructor(Ctor) {
-  if (Ctor === BaseLightningElement) {
-    throw new TypeError(`Invalid Constructor. LightningElement base class can't be claimed as a custom element.`);
-  }
-
-  let ce = ComponentConstructorAsCustomElementConstructorMap.get(Ctor);
-
-  if (isUndefined$1(ce)) {
-    ce = buildCustomElementConstructor(Ctor);
-    ComponentConstructorAsCustomElementConstructorMap.set(Ctor, ce);
-  }
-
-  return ce;
-}
-
-defineProperty$2(BaseLightningElementConstructor, 'CustomElementConstructor', {
-  get() {
-    return getCustomElementConstructor(this);
-  }
-
-});
-
-{
-  patchLightningElementPrototypeWithRestrictions(BaseLightningElementConstructor.prototype);
-}
-
-freeze$2(BaseLightningElementConstructor);
-seal$2(BaseLightningElementConstructor.prototype);
-const BaseLightningElement = BaseLightningElementConstructor;
-
-function internalWireFieldDecorator(key) {
-  return {
-    get() {
-      const vm = getAssociatedVM(this);
-      componentValueObserved(vm, key);
-      return vm.cmpFields[key];
-    },
-
-    set(value) {
-      const vm = getAssociatedVM(this);
-      vm.cmpFields[key] = value;
-    },
-
-    enumerable: true,
-    configurable: true
-  };
-}
-
 const {
-  isArray: isArray$2
+  isArray: isArray$1$1$1
 } = Array;
 const {
-  getPrototypeOf: getPrototypeOf$1$1,
+  getPrototypeOf: getPrototypeOf$1$1$1,
   create: ObjectCreate,
   defineProperty: ObjectDefineProperty,
   defineProperties: ObjectDefineProperties,
   isExtensible,
-  getOwnPropertyDescriptor: getOwnPropertyDescriptor$1$1,
-  getOwnPropertyNames: getOwnPropertyNames$1$1,
+  getOwnPropertyDescriptor: getOwnPropertyDescriptor$1$1$1,
+  getOwnPropertyNames: getOwnPropertyNames$1$1$1,
   getOwnPropertySymbols,
   preventExtensions,
-  hasOwnProperty: hasOwnProperty$2$1
+  hasOwnProperty: hasOwnProperty$1$1$1
 } = Object;
 const {
-  push: ArrayPush$2,
+  push: ArrayPush$2$1,
   concat: ArrayConcat,
-  map: ArrayMap$1$1
+  map: ArrayMap$1$1$1
 } = Array.prototype;
-const OtS$1$1 = {}.toString;
+const OtS$1$1$1 = {}.toString;
 
-function toString$1$1(obj) {
+function toString$1$1$1(obj) {
   if (obj && obj.toString) {
     return obj.toString();
   } else if (typeof obj === 'object') {
-    return OtS$1$1.call(obj);
+    return OtS$1$1$1.call(obj);
   } else {
     return obj + '';
   }
@@ -7468,12 +6077,8 @@ function isUndefined$2(obj) {
   return obj === undefined;
 }
 
-function isFunction$1$1(obj) {
+function isFunction$1$1$1(obj) {
   return typeof obj === 'function';
-}
-
-function isObject$2(obj) {
-  return typeof obj === 'object';
 }
 
 const proxyToValueMap = new WeakMap();
@@ -7484,49 +6089,265 @@ function registerProxy(proxy, value) {
 
 const unwrap = replicaOrAny => proxyToValueMap.get(replicaOrAny) || replicaOrAny;
 
-function wrapValue(membrane, value) {
-  return membrane.valueIsObservable(value) ? membrane.getProxy(value) : value;
-}
-
-function unwrapDescriptor(descriptor) {
-  if (hasOwnProperty$2$1.call(descriptor, 'value')) {
-    descriptor.value = unwrap(descriptor.value);
-  }
-
-  return descriptor;
-}
-
-function lockShadowTarget(membrane, shadowTarget, originalTarget) {
-  const targetKeys = ArrayConcat.call(getOwnPropertyNames$1$1(originalTarget), getOwnPropertySymbols(originalTarget));
-  targetKeys.forEach(key => {
-    let descriptor = getOwnPropertyDescriptor$1$1(originalTarget, key);
-
-    if (!descriptor.configurable) {
-      descriptor = wrapDescriptor(membrane, descriptor, wrapValue);
-    }
-
-    ObjectDefineProperty(shadowTarget, key, descriptor);
-  });
-  preventExtensions(shadowTarget);
-}
-
-class ReactiveProxyHandler {
+class BaseProxyHandler {
   constructor(membrane, value) {
     this.originalTarget = value;
     this.membrane = membrane;
   }
 
+  wrapDescriptor(descriptor) {
+    if (hasOwnProperty$1$1$1.call(descriptor, 'value')) {
+      descriptor.value = this.wrapValue(descriptor.value);
+    } else {
+      const {
+        set: originalSet,
+        get: originalGet
+      } = descriptor;
+
+      if (!isUndefined$2(originalGet)) {
+        descriptor.get = this.wrapGetter(originalGet);
+      }
+
+      if (!isUndefined$2(originalSet)) {
+        descriptor.set = this.wrapSetter(originalSet);
+      }
+    }
+
+    return descriptor;
+  }
+
+  copyDescriptorIntoShadowTarget(shadowTarget, key) {
+    const {
+      originalTarget
+    } = this;
+    const originalDescriptor = getOwnPropertyDescriptor$1$1$1(originalTarget, key);
+
+    if (!isUndefined$2(originalDescriptor)) {
+      const wrappedDesc = this.wrapDescriptor(originalDescriptor);
+      ObjectDefineProperty(shadowTarget, key, wrappedDesc);
+    }
+  }
+
+  lockShadowTarget(shadowTarget) {
+    const {
+      originalTarget
+    } = this;
+    const targetKeys = ArrayConcat.call(getOwnPropertyNames$1$1$1(originalTarget), getOwnPropertySymbols(originalTarget));
+    targetKeys.forEach(key => {
+      this.copyDescriptorIntoShadowTarget(shadowTarget, key);
+    });
+    const {
+      membrane: {
+        tagPropertyKey
+      }
+    } = this;
+
+    if (!isUndefined$2(tagPropertyKey) && !hasOwnProperty$1$1$1.call(shadowTarget, tagPropertyKey)) {
+      ObjectDefineProperty(shadowTarget, tagPropertyKey, ObjectCreate(null));
+    }
+
+    preventExtensions(shadowTarget);
+  }
+
+  apply(shadowTarget, thisArg, argArray) {}
+
+  construct(shadowTarget, argArray, newTarget) {}
+
   get(shadowTarget, key) {
     const {
       originalTarget,
-      membrane
+      membrane: {
+        valueObserved
+      }
     } = this;
     const value = originalTarget[key];
-    const {
-      valueObserved
-    } = membrane;
     valueObserved(originalTarget, key);
-    return membrane.getProxy(value);
+    return this.wrapValue(value);
+  }
+
+  has(shadowTarget, key) {
+    const {
+      originalTarget,
+      membrane: {
+        tagPropertyKey,
+        valueObserved
+      }
+    } = this;
+    valueObserved(originalTarget, key);
+    return key in originalTarget || key === tagPropertyKey;
+  }
+
+  ownKeys(shadowTarget) {
+    const {
+      originalTarget,
+      membrane: {
+        tagPropertyKey
+      }
+    } = this;
+    const keys = isUndefined$2(tagPropertyKey) || hasOwnProperty$1$1$1.call(originalTarget, tagPropertyKey) ? [] : [tagPropertyKey];
+    ArrayPush$2$1.apply(keys, getOwnPropertyNames$1$1$1(originalTarget));
+    ArrayPush$2$1.apply(keys, getOwnPropertySymbols(originalTarget));
+    return keys;
+  }
+
+  isExtensible(shadowTarget) {
+    const {
+      originalTarget
+    } = this;
+
+    if (!isExtensible(shadowTarget)) {
+      return false;
+    }
+
+    if (!isExtensible(originalTarget)) {
+      this.lockShadowTarget(shadowTarget);
+      return false;
+    }
+
+    return true;
+  }
+
+  getPrototypeOf(shadowTarget) {
+    const {
+      originalTarget
+    } = this;
+    return getPrototypeOf$1$1$1(originalTarget);
+  }
+
+  getOwnPropertyDescriptor(shadowTarget, key) {
+    const {
+      originalTarget,
+      membrane: {
+        valueObserved,
+        tagPropertyKey
+      }
+    } = this;
+    valueObserved(originalTarget, key);
+    let desc = getOwnPropertyDescriptor$1$1$1(originalTarget, key);
+
+    if (isUndefined$2(desc)) {
+      if (key !== tagPropertyKey) {
+        return undefined;
+      }
+
+      desc = {
+        value: undefined,
+        writable: false,
+        configurable: false,
+        enumerable: false
+      };
+      ObjectDefineProperty(shadowTarget, tagPropertyKey, desc);
+      return desc;
+    }
+
+    if (desc.configurable === false) {
+      this.copyDescriptorIntoShadowTarget(shadowTarget, key);
+    }
+
+    return this.wrapDescriptor(desc);
+  }
+
+}
+
+const getterMap = new WeakMap();
+const setterMap = new WeakMap();
+const reverseGetterMap = new WeakMap();
+const reverseSetterMap = new WeakMap();
+
+class ReactiveProxyHandler extends BaseProxyHandler {
+  wrapValue(value) {
+    return this.membrane.getProxy(value);
+  }
+
+  wrapGetter(originalGet) {
+    const wrappedGetter = getterMap.get(originalGet);
+
+    if (!isUndefined$2(wrappedGetter)) {
+      return wrappedGetter;
+    }
+
+    const handler = this;
+
+    const get = function () {
+      return handler.wrapValue(originalGet.call(unwrap(this)));
+    };
+
+    getterMap.set(originalGet, get);
+    reverseGetterMap.set(get, originalGet);
+    return get;
+  }
+
+  wrapSetter(originalSet) {
+    const wrappedSetter = setterMap.get(originalSet);
+
+    if (!isUndefined$2(wrappedSetter)) {
+      return wrappedSetter;
+    }
+
+    const set = function (v) {
+      originalSet.call(unwrap(this), unwrap(v));
+    };
+
+    setterMap.set(originalSet, set);
+    reverseSetterMap.set(set, originalSet);
+    return set;
+  }
+
+  unwrapDescriptor(descriptor) {
+    if (hasOwnProperty$1$1$1.call(descriptor, 'value')) {
+      descriptor.value = unwrap(descriptor.value);
+    } else {
+      const {
+        set,
+        get
+      } = descriptor;
+
+      if (!isUndefined$2(get)) {
+        descriptor.get = this.unwrapGetter(get);
+      }
+
+      if (!isUndefined$2(set)) {
+        descriptor.set = this.unwrapSetter(set);
+      }
+    }
+
+    return descriptor;
+  }
+
+  unwrapGetter(redGet) {
+    const reverseGetter = reverseGetterMap.get(redGet);
+
+    if (!isUndefined$2(reverseGetter)) {
+      return reverseGetter;
+    }
+
+    const handler = this;
+
+    const get = function () {
+      return unwrap(redGet.call(handler.wrapValue(this)));
+    };
+
+    getterMap.set(get, redGet);
+    reverseGetterMap.set(redGet, get);
+    return get;
+  }
+
+  unwrapSetter(redSet) {
+    const reverseSetter = reverseSetterMap.get(redSet);
+
+    if (!isUndefined$2(reverseSetter)) {
+      return reverseSetter;
+    }
+
+    const handler = this;
+
+    const set = function (v) {
+      redSet.call(handler.wrapValue(this), handler.wrapValue(v));
+    };
+
+    setterMap.set(set, redSet);
+    reverseSetterMap.set(redSet, set);
+    return set;
   }
 
   set(shadowTarget, key, value) {
@@ -7541,7 +6362,7 @@ class ReactiveProxyHandler {
     if (oldValue !== value) {
       originalTarget[key] = value;
       valueMutated(originalTarget, key);
-    } else if (key === 'length' && isArray$2(originalTarget)) {
+    } else if (key === 'length' && isArray$1$1$1(originalTarget)) {
       valueMutated(originalTarget, key);
     }
 
@@ -7560,122 +6381,46 @@ class ReactiveProxyHandler {
     return true;
   }
 
-  apply(shadowTarget, thisArg, argArray) {}
-
-  construct(target, argArray, newTarget) {}
-
-  has(shadowTarget, key) {
-    const {
-      originalTarget,
-      membrane: {
-        valueObserved
-      }
-    } = this;
-    valueObserved(originalTarget, key);
-    return key in originalTarget;
-  }
-
-  ownKeys(shadowTarget) {
-    const {
-      originalTarget
-    } = this;
-    return ArrayConcat.call(getOwnPropertyNames$1$1(originalTarget), getOwnPropertySymbols(originalTarget));
-  }
-
-  isExtensible(shadowTarget) {
-    const shadowIsExtensible = isExtensible(shadowTarget);
-
-    if (!shadowIsExtensible) {
-      return shadowIsExtensible;
-    }
-
-    const {
-      originalTarget,
-      membrane
-    } = this;
-    const targetIsExtensible = isExtensible(originalTarget);
-
-    if (!targetIsExtensible) {
-      lockShadowTarget(membrane, shadowTarget, originalTarget);
-    }
-
-    return targetIsExtensible;
-  }
-
   setPrototypeOf(shadowTarget, prototype) {
     {
-      throw new Error(`Invalid setPrototypeOf invocation for reactive proxy ${toString$1$1(this.originalTarget)}. Prototype of reactive objects cannot be changed.`);
+      throw new Error(`Invalid setPrototypeOf invocation for reactive proxy ${toString$1$1$1(this.originalTarget)}. Prototype of reactive objects cannot be changed.`);
     }
-  }
-
-  getPrototypeOf(shadowTarget) {
-    const {
-      originalTarget
-    } = this;
-    return getPrototypeOf$1$1(originalTarget);
-  }
-
-  getOwnPropertyDescriptor(shadowTarget, key) {
-    const {
-      originalTarget,
-      membrane
-    } = this;
-    const {
-      valueObserved
-    } = this.membrane;
-    valueObserved(originalTarget, key);
-    let desc = getOwnPropertyDescriptor$1$1(originalTarget, key);
-
-    if (isUndefined$2(desc)) {
-      return desc;
-    }
-
-    const shadowDescriptor = getOwnPropertyDescriptor$1$1(shadowTarget, key);
-
-    if (!isUndefined$2(shadowDescriptor)) {
-      return shadowDescriptor;
-    }
-
-    desc = wrapDescriptor(membrane, desc, wrapValue);
-
-    if (!desc.configurable) {
-      ObjectDefineProperty(shadowTarget, key, desc);
-    }
-
-    return desc;
   }
 
   preventExtensions(shadowTarget) {
-    const {
-      originalTarget,
-      membrane
-    } = this;
-    lockShadowTarget(membrane, shadowTarget, originalTarget);
-    preventExtensions(originalTarget);
+    if (isExtensible(shadowTarget)) {
+      const {
+        originalTarget
+      } = this;
+      preventExtensions(originalTarget);
+
+      if (isExtensible(originalTarget)) {
+        return false;
+      }
+
+      this.lockShadowTarget(shadowTarget);
+    }
+
     return true;
   }
 
   defineProperty(shadowTarget, key, descriptor) {
     const {
       originalTarget,
-      membrane
+      membrane: {
+        valueMutated,
+        tagPropertyKey
+      }
     } = this;
-    const {
-      valueMutated
-    } = membrane;
-    const {
-      configurable
-    } = descriptor;
 
-    if (hasOwnProperty$2$1.call(descriptor, 'writable') && !hasOwnProperty$2$1.call(descriptor, 'value')) {
-      const originalDescriptor = getOwnPropertyDescriptor$1$1(originalTarget, key);
-      descriptor.value = originalDescriptor.value;
+    if (key === tagPropertyKey && !hasOwnProperty$1$1$1.call(originalTarget, key)) {
+      return true;
     }
 
-    ObjectDefineProperty(originalTarget, key, unwrapDescriptor(descriptor));
+    ObjectDefineProperty(originalTarget, key, this.unwrapDescriptor(descriptor));
 
-    if (configurable === false) {
-      ObjectDefineProperty(shadowTarget, key, wrapDescriptor(membrane, descriptor, wrapValue));
+    if (descriptor.configurable === false) {
+      this.copyDescriptorIntoShadowTarget(shadowTarget, key);
     }
 
     valueMutated(originalTarget, key);
@@ -7684,27 +6429,51 @@ class ReactiveProxyHandler {
 
 }
 
-function wrapReadOnlyValue(membrane, value) {
-  return membrane.valueIsObservable(value) ? membrane.getReadOnlyProxy(value) : value;
-}
+const getterMap$1 = new WeakMap();
+const setterMap$1 = new WeakMap();
 
-class ReadOnlyHandler {
-  constructor(membrane, value) {
-    this.originalTarget = value;
-    this.membrane = membrane;
+class ReadOnlyHandler extends BaseProxyHandler {
+  wrapValue(value) {
+    return this.membrane.getReadOnlyProxy(value);
   }
 
-  get(shadowTarget, key) {
-    const {
-      membrane,
-      originalTarget
-    } = this;
-    const value = originalTarget[key];
-    const {
-      valueObserved
-    } = membrane;
-    valueObserved(originalTarget, key);
-    return membrane.getReadOnlyProxy(value);
+  wrapGetter(originalGet) {
+    const wrappedGetter = getterMap$1.get(originalGet);
+
+    if (!isUndefined$2(wrappedGetter)) {
+      return wrappedGetter;
+    }
+
+    const handler = this;
+
+    const get = function () {
+      return handler.wrapValue(originalGet.call(unwrap(this)));
+    };
+
+    getterMap$1.set(originalGet, get);
+    return get;
+  }
+
+  wrapSetter(originalSet) {
+    const wrappedSetter = setterMap$1.get(originalSet);
+
+    if (!isUndefined$2(wrappedSetter)) {
+      return wrappedSetter;
+    }
+
+    const handler = this;
+
+    const set = function (v) {
+      {
+        const {
+          originalTarget
+        } = handler;
+        throw new Error(`Invalid mutation: Cannot invoke a setter on "${originalTarget}". "${originalTarget}" is read-only.`);
+      }
+    };
+
+    setterMap$1.set(originalSet, set);
+    return set;
   }
 
   set(shadowTarget, key, value) {
@@ -7725,28 +6494,6 @@ class ReadOnlyHandler {
     }
   }
 
-  apply(shadowTarget, thisArg, argArray) {}
-
-  construct(target, argArray, newTarget) {}
-
-  has(shadowTarget, key) {
-    const {
-      originalTarget,
-      membrane: {
-        valueObserved
-      }
-    } = this;
-    valueObserved(originalTarget, key);
-    return key in originalTarget;
-  }
-
-  ownKeys(shadowTarget) {
-    const {
-      originalTarget
-    } = this;
-    return ArrayConcat.call(getOwnPropertyNames$1$1(originalTarget), getOwnPropertySymbols(originalTarget));
-  }
-
   setPrototypeOf(shadowTarget, prototype) {
     {
       const {
@@ -7754,40 +6501,6 @@ class ReadOnlyHandler {
       } = this;
       throw new Error(`Invalid prototype mutation: Cannot set prototype on "${originalTarget}". "${originalTarget}" prototype is read-only.`);
     }
-  }
-
-  getOwnPropertyDescriptor(shadowTarget, key) {
-    const {
-      originalTarget,
-      membrane
-    } = this;
-    const {
-      valueObserved
-    } = membrane;
-    valueObserved(originalTarget, key);
-    let desc = getOwnPropertyDescriptor$1$1(originalTarget, key);
-
-    if (isUndefined$2(desc)) {
-      return desc;
-    }
-
-    const shadowDescriptor = getOwnPropertyDescriptor$1$1(shadowTarget, key);
-
-    if (!isUndefined$2(shadowDescriptor)) {
-      return shadowDescriptor;
-    }
-
-    desc = wrapDescriptor(membrane, desc, wrapReadOnlyValue);
-
-    if (hasOwnProperty$2$1.call(desc, 'set')) {
-      desc.set = undefined;
-    }
-
-    if (!desc.configurable) {
-      ObjectDefineProperty(shadowTarget, key, desc);
-    }
-
-    return desc;
   }
 
   preventExtensions(shadowTarget) {
@@ -7811,7 +6524,7 @@ class ReadOnlyHandler {
 }
 
 function extract(objectOrArray) {
-  if (isArray$2(objectOrArray)) {
+  if (isArray$1$1$1(objectOrArray)) {
     return objectOrArray.map(item => {
       const original = unwrap(item);
 
@@ -7823,8 +6536,8 @@ function extract(objectOrArray) {
     });
   }
 
-  const obj = ObjectCreate(getPrototypeOf$1$1(objectOrArray));
-  const names = getOwnPropertyNames$1$1(objectOrArray);
+  const obj = ObjectCreate(getPrototypeOf$1$1$1(objectOrArray));
+  const names = getOwnPropertyNames$1$1$1(objectOrArray);
   return ArrayConcat.call(names, getOwnPropertySymbols(objectOrArray)).reduce((seed, key) => {
     const item = objectOrArray[key];
     const original = unwrap(item);
@@ -7884,24 +6597,12 @@ function init() {
 
   const global = getGlobal();
   const devtoolsFormatters = global.devtoolsFormatters || [];
-  ArrayPush$2.call(devtoolsFormatters, formatter);
+  ArrayPush$2$1.call(devtoolsFormatters, formatter);
   global.devtoolsFormatters = devtoolsFormatters;
 }
 
 {
   init();
-}
-
-function createShadowTarget(value) {
-  let shadowTarget = undefined;
-
-  if (isArray$2(value)) {
-    shadowTarget = [];
-  } else if (isObject$2(value)) {
-    shadowTarget = {};
-  }
-
-  return shadowTarget;
 }
 
 const ObjectDotPrototype = Object.prototype;
@@ -7915,12 +6616,12 @@ function defaultValueIsObservable(value) {
     return false;
   }
 
-  if (isArray$2(value)) {
+  if (isArray$1$1$1(value)) {
     return true;
   }
 
-  const proto = getPrototypeOf$1$1(value);
-  return proto === ObjectDotPrototype || proto === null || getPrototypeOf$1$1(proto) === null;
+  const proto = getPrototypeOf$1$1$1(value);
+  return proto === ObjectDotPrototype || proto === null || getPrototypeOf$1$1$1(proto) === null;
 }
 
 const defaultValueObserved = (obj, key) => {};
@@ -7929,29 +6630,8 @@ const defaultValueMutated = (obj, key) => {};
 
 const defaultValueDistortion = value => value;
 
-function wrapDescriptor(membrane, descriptor, getValue) {
-  const {
-    set,
-    get
-  } = descriptor;
-
-  if (hasOwnProperty$2$1.call(descriptor, 'value')) {
-    descriptor.value = getValue(membrane, descriptor.value);
-  } else {
-    if (!isUndefined$2(get)) {
-      descriptor.get = function () {
-        return getValue(membrane, get.call(unwrap(this)));
-      };
-    }
-
-    if (!isUndefined$2(set)) {
-      descriptor.set = function (value) {
-        set.call(unwrap(this), membrane.unwrapProxy(value));
-      };
-    }
-  }
-
-  return descriptor;
+function createShadowTarget(value) {
+  return isArray$1$1$1(value) ? [] : {};
 }
 
 class ReactiveMembrane {
@@ -7967,12 +6647,14 @@ class ReactiveMembrane {
         valueDistortion,
         valueMutated,
         valueObserved,
-        valueIsObservable
+        valueIsObservable,
+        tagPropertyKey
       } = options;
-      this.valueDistortion = isFunction$1$1(valueDistortion) ? valueDistortion : defaultValueDistortion;
-      this.valueMutated = isFunction$1$1(valueMutated) ? valueMutated : defaultValueMutated;
-      this.valueObserved = isFunction$1$1(valueObserved) ? valueObserved : defaultValueObserved;
-      this.valueIsObservable = isFunction$1$1(valueIsObservable) ? valueIsObservable : defaultValueIsObservable;
+      this.valueDistortion = isFunction$1$1$1(valueDistortion) ? valueDistortion : defaultValueDistortion;
+      this.valueMutated = isFunction$1$1$1(valueMutated) ? valueMutated : defaultValueMutated;
+      this.valueObserved = isFunction$1$1$1(valueObserved) ? valueObserved : defaultValueObserved;
+      this.valueIsObservable = isFunction$1$1$1(valueIsObservable) ? valueIsObservable : defaultValueIsObservable;
+      this.tagPropertyKey = tagPropertyKey;
     }
   }
 
@@ -8042,6 +6724,8 @@ class ReactiveMembrane {
 
 }
 
+const lockerLivePropertyKey = Symbol.for('@@lockerLiveValue');
+
 function valueDistortion(value) {
   return value;
 }
@@ -8049,8 +6733,445 @@ function valueDistortion(value) {
 const reactiveMembrane = new ReactiveMembrane({
   valueObserved,
   valueMutated,
-  valueDistortion
+  valueDistortion,
+  tagPropertyKey: lockerLivePropertyKey
 });
+
+function createBridgeToElementDescriptor(propName, descriptor) {
+  const {
+    get,
+    set,
+    enumerable,
+    configurable
+  } = descriptor;
+
+  if (!isFunction$1$1(get)) {
+    {
+      assert$1$1.fail(`Detected invalid public property descriptor for HTMLElement.prototype.${propName} definition. Missing the standard getter.`);
+    }
+
+    throw new TypeError();
+  }
+
+  if (!isFunction$1$1(set)) {
+    {
+      assert$1$1.fail(`Detected invalid public property descriptor for HTMLElement.prototype.${propName} definition. Missing the standard setter.`);
+    }
+
+    throw new TypeError();
+  }
+
+  return {
+    enumerable,
+    configurable,
+
+    get() {
+      const vm = getAssociatedVM(this);
+
+      if (isBeingConstructed(vm)) {
+        {
+          logError(`The value of property \`${propName}\` can't be read from the constructor because the owner component hasn't set the value yet. Instead, use the constructor to set a default value for the property.`, vm);
+        }
+
+        return;
+      }
+
+      componentValueObserved(vm, propName);
+      return get.call(vm.elm);
+    },
+
+    set(newValue) {
+      const vm = getAssociatedVM(this);
+
+      {
+        const vmBeingRendered = getVMBeingRendered();
+        assert$1$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${vm}.${propName}`);
+        assert$1$1.invariant(!isUpdatingTemplate, `When updating the template of ${vmBeingRendered}, one of the accessors used by the template has side effects on the state of ${vm}.${propName}`);
+        assert$1$1.isFalse(isBeingConstructed(vm), `Failed to construct '${getComponentTag(vm)}': The result must not have attributes.`);
+        assert$1$1.invariant(!isObject$2(newValue) || isNull$1$1(newValue), `Invalid value "${newValue}" for "${propName}" of ${vm}. Value cannot be an object, must be a primitive value.`);
+      }
+
+      if (newValue !== vm.cmpProps[propName]) {
+        vm.cmpProps[propName] = newValue;
+        componentValueMutated(vm, propName);
+      }
+
+      return set.call(vm.elm, newValue);
+    }
+
+  };
+}
+
+function BaseLightningElementConstructor() {
+  var _a;
+
+  if (isNull$1$1(vmBeingConstructed)) {
+    throw new ReferenceError('Illegal constructor');
+  }
+
+  const vm = vmBeingConstructed;
+  const {
+    elm,
+    mode,
+    renderer,
+    def: {
+      ctor,
+      bridge
+    }
+  } = vm;
+
+  {
+    (_a = renderer.assertInstanceOfHTMLElement) === null || _a === void 0 ? void 0 : _a.call(renderer, vm.elm, `Component creation requires a DOM element to be associated to ${vm}.`);
+  }
+
+  const component = this;
+  setPrototypeOf$1$1(elm, bridge.prototype);
+  const cmpRoot = renderer.attachShadow(elm, {
+    mode,
+    delegatesFocus: !!ctor.delegatesFocus,
+    '$$lwc-synthetic-mode$$': true
+  });
+  vm.component = this;
+  vm.cmpRoot = cmpRoot;
+
+  if (arguments.length === 1) {
+    const {
+      callHook,
+      setHook,
+      getHook
+    } = arguments[0];
+    vm.callHook = callHook;
+    vm.setHook = setHook;
+    vm.getHook = getHook;
+  }
+
+  defineProperty$1$1(component, lockerLivePropertyKey, EmptyObject);
+  associateVM(component, vm);
+  associateVM(cmpRoot, vm);
+  associateVM(elm, vm);
+
+  {
+    patchCustomElementWithRestrictions(elm);
+    patchComponentWithRestrictions(component);
+    patchShadowRootWithRestrictions(cmpRoot);
+  }
+
+  return this;
+}
+
+BaseLightningElementConstructor.prototype = {
+  constructor: BaseLightningElementConstructor,
+
+  dispatchEvent(event) {
+    const {
+      elm,
+      renderer: {
+        dispatchEvent
+      }
+    } = getAssociatedVM(this);
+    return dispatchEvent(elm, event);
+  },
+
+  addEventListener(type, listener, options) {
+    const vm = getAssociatedVM(this);
+    const {
+      elm,
+      renderer: {
+        addEventListener
+      }
+    } = vm;
+
+    {
+      const vmBeingRendered = getVMBeingRendered();
+      assert$1$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${vm} by adding an event listener for "${type}".`);
+      assert$1$1.invariant(!isUpdatingTemplate, `Updating the template of ${vmBeingRendered} has side effects on the state of ${vm} by adding an event listener for "${type}".`);
+      assert$1$1.invariant(isFunction$1$1(listener), `Invalid second argument for this.addEventListener() in ${vm} for event "${type}". Expected an EventListener but received ${listener}.`);
+    }
+
+    const wrappedListener = getWrappedComponentsListener(vm, listener);
+    addEventListener(elm, type, wrappedListener, options);
+  },
+
+  removeEventListener(type, listener, options) {
+    const vm = getAssociatedVM(this);
+    const {
+      elm,
+      renderer: {
+        removeEventListener
+      }
+    } = vm;
+    const wrappedListener = getWrappedComponentsListener(vm, listener);
+    removeEventListener(elm, type, wrappedListener, options);
+  },
+
+  hasAttribute(name) {
+    const {
+      elm,
+      renderer: {
+        getAttribute
+      }
+    } = getAssociatedVM(this);
+    return !isNull$1$1(getAttribute(elm, name));
+  },
+
+  hasAttributeNS(namespace, name) {
+    const {
+      elm,
+      renderer: {
+        getAttribute
+      }
+    } = getAssociatedVM(this);
+    return !isNull$1$1(getAttribute(elm, name, namespace));
+  },
+
+  removeAttribute(name) {
+    const {
+      elm,
+      renderer: {
+        removeAttribute
+      }
+    } = getAssociatedVM(this);
+    unlockAttribute(elm, name);
+    removeAttribute(elm, name);
+    lockAttribute();
+  },
+
+  removeAttributeNS(namespace, name) {
+    const {
+      elm,
+      renderer: {
+        removeAttribute
+      }
+    } = getAssociatedVM(this);
+    unlockAttribute(elm, name);
+    removeAttribute(elm, name, namespace);
+    lockAttribute();
+  },
+
+  getAttribute(name) {
+    const {
+      elm,
+      renderer: {
+        getAttribute
+      }
+    } = getAssociatedVM(this);
+    return getAttribute(elm, name);
+  },
+
+  getAttributeNS(namespace, name) {
+    const {
+      elm,
+      renderer: {
+        getAttribute
+      }
+    } = getAssociatedVM(this);
+    return getAttribute(elm, name, namespace);
+  },
+
+  setAttribute(name, value) {
+    const vm = getAssociatedVM(this);
+    const {
+      elm,
+      renderer: {
+        setAttribute
+      }
+    } = vm;
+
+    {
+      assert$1$1.isFalse(isBeingConstructed(vm), `Failed to construct '${getComponentTag(vm)}': The result must not have attributes.`);
+    }
+
+    unlockAttribute(elm, name);
+    setAttribute(elm, name, value);
+    lockAttribute();
+  },
+
+  setAttributeNS(namespace, name, value) {
+    const vm = getAssociatedVM(this);
+    const {
+      elm,
+      renderer: {
+        setAttribute
+      }
+    } = vm;
+
+    {
+      assert$1$1.isFalse(isBeingConstructed(vm), `Failed to construct '${getComponentTag(vm)}': The result must not have attributes.`);
+    }
+
+    unlockAttribute(elm, name);
+    setAttribute(elm, name, value, namespace);
+    lockAttribute();
+  },
+
+  getBoundingClientRect() {
+    const vm = getAssociatedVM(this);
+    const {
+      elm,
+      renderer: {
+        getBoundingClientRect
+      }
+    } = vm;
+
+    {
+      assert$1$1.isFalse(isBeingConstructed(vm), `this.getBoundingClientRect() should not be called during the construction of the custom element for ${getComponentTag(vm)} because the element is not yet in the DOM, instead, you can use it in one of the available life-cycle hooks.`);
+    }
+
+    return getBoundingClientRect(elm);
+  },
+
+  querySelector(selectors) {
+    const vm = getAssociatedVM(this);
+    const {
+      elm,
+      renderer: {
+        querySelector
+      }
+    } = vm;
+
+    {
+      assert$1$1.isFalse(isBeingConstructed(vm), `this.querySelector() cannot be called during the construction of the custom element for ${getComponentTag(vm)} because no children has been added to this element yet.`);
+    }
+
+    return querySelector(elm, selectors);
+  },
+
+  querySelectorAll(selectors) {
+    const vm = getAssociatedVM(this);
+    const {
+      elm,
+      renderer: {
+        querySelectorAll
+      }
+    } = vm;
+
+    {
+      assert$1$1.isFalse(isBeingConstructed(vm), `this.querySelectorAll() cannot be called during the construction of the custom element for ${getComponentTag(vm)} because no children has been added to this element yet.`);
+    }
+
+    return querySelectorAll(elm, selectors);
+  },
+
+  getElementsByTagName(tagNameOrWildCard) {
+    const vm = getAssociatedVM(this);
+    const {
+      elm,
+      renderer: {
+        getElementsByTagName
+      }
+    } = vm;
+
+    {
+      assert$1$1.isFalse(isBeingConstructed(vm), `this.getElementsByTagName() cannot be called during the construction of the custom element for ${getComponentTag(vm)} because no children has been added to this element yet.`);
+    }
+
+    return getElementsByTagName(elm, tagNameOrWildCard);
+  },
+
+  getElementsByClassName(names) {
+    const vm = getAssociatedVM(this);
+    const {
+      elm,
+      renderer: {
+        getElementsByClassName
+      }
+    } = vm;
+
+    {
+      assert$1$1.isFalse(isBeingConstructed(vm), `this.getElementsByClassName() cannot be called during the construction of the custom element for ${getComponentTag(vm)} because no children has been added to this element yet.`);
+    }
+
+    return getElementsByClassName(elm, names);
+  },
+
+  get isConnected() {
+    const {
+      elm,
+      renderer: {
+        isConnected
+      }
+    } = getAssociatedVM(this);
+    return isConnected(elm);
+  },
+
+  get classList() {
+    const vm = getAssociatedVM(this);
+    const {
+      elm,
+      renderer: {
+        getClassList
+      }
+    } = vm;
+
+    {
+      assert$1$1.isFalse(isBeingConstructed(vm), `Failed to construct ${vm}: The result must not have attributes. Adding or tampering with classname in constructor is not allowed in a web component, use connectedCallback() instead.`);
+    }
+
+    return getClassList(elm);
+  },
+
+  get template() {
+    const vm = getAssociatedVM(this);
+    return vm.cmpRoot;
+  },
+
+  get shadowRoot() {
+    return null;
+  },
+
+  render() {
+    const vm = getAssociatedVM(this);
+    return vm.def.template;
+  },
+
+  toString() {
+    const vm = getAssociatedVM(this);
+    return `[object ${vm.def.name}]`;
+  }
+
+};
+const lightningBasedDescriptors = create$1$1(null);
+
+for (const propName in HTMLElementOriginalDescriptors) {
+  lightningBasedDescriptors[propName] = createBridgeToElementDescriptor(propName, HTMLElementOriginalDescriptors[propName]);
+}
+
+defineProperties$1$1(BaseLightningElementConstructor.prototype, lightningBasedDescriptors);
+defineProperty$1$1(BaseLightningElementConstructor, 'CustomElementConstructor', {
+  get() {
+    throw new ReferenceError('The current runtime does not support CustomElementConstructor.');
+  },
+
+  configurable: true
+});
+
+{
+  patchLightningElementPrototypeWithRestrictions(BaseLightningElementConstructor.prototype);
+}
+
+const BaseLightningElement = BaseLightningElementConstructor;
+
+function internalWireFieldDecorator(key) {
+  return {
+    get() {
+      const vm = getAssociatedVM(this);
+      componentValueObserved(vm, key);
+      return vm.cmpFields[key];
+    },
+
+    set(value) {
+      const vm = getAssociatedVM(this);
+
+      if (value !== vm.cmpFields[key]) {
+        vm.cmpFields[key] = value;
+        componentValueMutated(vm, key);
+      }
+    },
+
+    enumerable: true,
+    configurable: true
+  };
+}
 
 function internalTrackDecorator(key) {
   return {
@@ -8065,8 +7186,8 @@ function internalTrackDecorator(key) {
 
       {
         const vmBeingRendered = getVMBeingRendered();
-        assert$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${vm}.${toString$1(key)}`);
-        assert$1.invariant(!isUpdatingTemplate, `Updating the template of ${vmBeingRendered} has side effects on the state of ${vm}.${toString$1(key)}`);
+        assert$1$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${vm}.${toString$1$1(key)}`);
+        assert$1$1.invariant(!isUpdatingTemplate, `Updating the template of ${vmBeingRendered} has side effects on the state of ${vm}.${toString$1$1(key)}`);
       }
 
       const reactiveOrAnyValue = reactiveMembrane.getProxy(newValue);
@@ -8083,32 +7204,56 @@ function internalTrackDecorator(key) {
 }
 
 const {
-  assign: assign$1$1,
+  assign: assign$1$1$1,
   create: create$2$1,
-  defineProperties: defineProperties$1$1,
-  defineProperty: defineProperty$1$1,
-  freeze: freeze$1$1,
+  defineProperties: defineProperties$1$1$1,
+  defineProperty: defineProperty$1$1$1,
+  freeze: freeze$1$1$1,
   getOwnPropertyDescriptor: getOwnPropertyDescriptor$2$1,
   getOwnPropertyNames: getOwnPropertyNames$2$1,
   getPrototypeOf: getPrototypeOf$2$1,
-  hasOwnProperty: hasOwnProperty$3,
-  keys: keys$1$1,
-  seal: seal$1$1,
-  setPrototypeOf: setPrototypeOf$1$1
+  hasOwnProperty: hasOwnProperty$2$1,
+  isFrozen: isFrozen$1$1$1,
+  keys: keys$1$1$1,
+  seal: seal$1$1$1,
+  setPrototypeOf: setPrototypeOf$1$1$1
 } = Object;
+const {
+  filter: ArrayFilter$1$1$1,
+  find: ArrayFind$1$1$1,
+  indexOf: ArrayIndexOf$2$1,
+  join: ArrayJoin$1$1$1,
+  map: ArrayMap$2$1,
+  push: ArrayPush$3,
+  reduce: ArrayReduce$1$1$1,
+  reverse: ArrayReverse$1$1$1,
+  slice: ArraySlice$1$1$1,
+  splice: ArraySplice$2$1,
+  unshift: ArrayUnshift$1$1$1,
+  forEach: forEach$1$1$1
+} = Array.prototype;
+const {
+  charCodeAt: StringCharCodeAt$1$1$1,
+  replace: StringReplace$1$1$1,
+  slice: StringSlice$1$1$1,
+  toLowerCase: StringToLowerCase$1$1$1
+} = String.prototype;
 
-const hasNativeSymbolsSupport$1$1 = Symbol('x').toString() === 'Symbol(x)';
+const AriaPropertyNames$1$1$1 = ['ariaActiveDescendant', 'ariaAtomic', 'ariaAutoComplete', 'ariaBusy', 'ariaChecked', 'ariaColCount', 'ariaColIndex', 'ariaColSpan', 'ariaControls', 'ariaCurrent', 'ariaDescribedBy', 'ariaDetails', 'ariaDisabled', 'ariaErrorMessage', 'ariaExpanded', 'ariaFlowTo', 'ariaHasPopup', 'ariaHidden', 'ariaInvalid', 'ariaKeyShortcuts', 'ariaLabel', 'ariaLabelledBy', 'ariaLevel', 'ariaLive', 'ariaModal', 'ariaMultiLine', 'ariaMultiSelectable', 'ariaOrientation', 'ariaOwns', 'ariaPlaceholder', 'ariaPosInSet', 'ariaPressed', 'ariaReadOnly', 'ariaRelevant', 'ariaRequired', 'ariaRoleDescription', 'ariaRowCount', 'ariaRowIndex', 'ariaRowSpan', 'ariaSelected', 'ariaSetSize', 'ariaSort', 'ariaValueMax', 'ariaValueMin', 'ariaValueNow', 'ariaValueText', 'role'];
+const AttrNameToPropNameMap$2$1 = create$2$1(null);
+const PropNameToAttrNameMap$2$1 = create$2$1(null);
+forEach$1$1$1.call(AriaPropertyNames$1$1$1, propName => {
+  const attrName = StringToLowerCase$1$1$1.call(StringReplace$1$1$1.call(propName, /^aria/, 'aria-'));
+  AttrNameToPropNameMap$2$1[attrName] = propName;
+  PropNameToAttrNameMap$2$1[propName] = attrName;
+});
 
-let _globalThis$2;
-
-if (typeof globalThis === 'object') {
-  _globalThis$2 = globalThis;
-}
-
-function getGlobalThis$1() {
-  if (typeof _globalThis$2 === 'object') {
-    return _globalThis$2;
+const _globalThis$1$1$1 = function () {
+  if (typeof globalThis === 'object') {
+    return globalThis;
   }
+
+  let _globalThis;
 
   try {
     Object.defineProperty(Object.prototype, '__magic__', {
@@ -8117,26 +7262,45 @@ function getGlobalThis$1() {
       },
       configurable: true
     });
-    _globalThis$2 = __magic__;
+    _globalThis = __magic__;
     delete Object.prototype.__magic__;
   } catch (ex) {} finally {
-    if (typeof _globalThis$2 === 'undefined') {
-      _globalThis$2 = window;
+    if (typeof _globalThis === 'undefined') {
+      _globalThis = window;
     }
   }
 
-  return _globalThis$2;
-}
+  return _globalThis;
+}();
 
-const _globalThis$1$1 = getGlobalThis$1();
+const hasNativeSymbolsSupport$1$1$1 = Symbol('x').toString() === 'Symbol(x)';
+const HTML_ATTRIBUTES_TO_PROPERTY$1$1$1 = {
+  accesskey: 'accessKey',
+  readonly: 'readOnly',
+  tabindex: 'tabIndex',
+  bgcolor: 'bgColor',
+  colspan: 'colSpan',
+  rowspan: 'rowSpan',
+  contenteditable: 'contentEditable',
+  crossorigin: 'crossOrigin',
+  datetime: 'dateTime',
+  formaction: 'formAction',
+  ismap: 'isMap',
+  maxlength: 'maxLength',
+  minlength: 'minLength',
+  novalidate: 'noValidate',
+  usemap: 'useMap',
+  for: 'htmlFor'
+};
+keys$1$1$1(HTML_ATTRIBUTES_TO_PROPERTY$1$1$1).forEach(attrName => {});
 
-if (!_globalThis$1$1.lwcRuntimeFlags) {
-  Object.defineProperty(_globalThis$1$1, 'lwcRuntimeFlags', {
+if (!_globalThis$1$1$1.lwcRuntimeFlags) {
+  Object.defineProperty(_globalThis$1$1$1, 'lwcRuntimeFlags', {
     value: create$2$1(null)
   });
 }
 
-const runtimeFlags$1 = _globalThis$1$1.lwcRuntimeFlags;
+const runtimeFlags$1 = _globalThis$1$1$1.lwcRuntimeFlags;
 
 function createPublicPropertyDescriptor(key) {
   return {
@@ -8145,8 +7309,7 @@ function createPublicPropertyDescriptor(key) {
 
       if (isBeingConstructed(vm)) {
         {
-          const name = vm.elm.constructor.name;
-          logError(`\`${name}\` constructor can’t read the value of property \`${toString$1(key)}\` because the owner component hasn’t set the value yet. Instead, use the \`${name}\` constructor to set a default value for the property.`, vm);
+          logError(`Can’t read the value of property \`${toString$1$1(key)}\` from the constructor because the owner component hasn’t set the value yet. Instead, use the constructor to set a default value for the property.`, vm);
         }
 
         return;
@@ -8161,8 +7324,8 @@ function createPublicPropertyDescriptor(key) {
 
       {
         const vmBeingRendered = getVMBeingRendered();
-        assert$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${vm}.${toString$1(key)}`);
-        assert$1.invariant(!isUpdatingTemplate, `Updating the template of ${vmBeingRendered} has side effects on the state of ${vm}.${toString$1(key)}`);
+        assert$1$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${vm}.${toString$1$1(key)}`);
+        assert$1$1.invariant(!isUpdatingTemplate, `Updating the template of ${vmBeingRendered} has side effects on the state of ${vm}.${toString$1$1(key)}`);
       }
 
       vm.cmpProps[key] = newValue;
@@ -8180,7 +7343,7 @@ class AccessorReactiveObserver extends ReactiveObserver {
       if (isFalse$1$1(this.debouncing)) {
         this.debouncing = true;
         addCallbackToNextTick(() => {
-          if (isTrue$1$1(this.debouncing)) {
+          if (isTrue$1$1$1(this.debouncing)) {
             const {
               value
             } = this;
@@ -8192,7 +7355,7 @@ class AccessorReactiveObserver extends ReactiveObserver {
             set.call(component, value);
             this.debouncing = false;
 
-            if (isTrue$1$1(vm.isDirty) && isFalse$1$1(dirtyStateBeforeSetterCall) && idx > 0) {
+            if (isTrue$1$1$1(vm.isDirty) && isFalse$1$1(dirtyStateBeforeSetterCall) && idx > 0) {
               rerenderVM(vm);
             }
           }
@@ -8221,9 +7384,9 @@ function createPublicAccessorDescriptor(key, descriptor) {
     configurable
   } = descriptor;
 
-  if (!isFunction$1(get)) {
+  if (!isFunction$1$1(get)) {
     {
-      assert$1.invariant(isFunction$1(get), `Invalid compiler output for public accessor ${toString$1(key)} decorated with @api`);
+      assert$1$1.invariant(isFunction$1$1(get), `Invalid compiler output for public accessor ${toString$1$1(key)} decorated with @api`);
     }
 
     throw new Error();
@@ -8243,15 +7406,15 @@ function createPublicAccessorDescriptor(key, descriptor) {
 
       {
         const vmBeingRendered = getVMBeingRendered();
-        assert$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${vm}.${toString$1(key)}`);
-        assert$1.invariant(!isUpdatingTemplate, `Updating the template of ${vmBeingRendered} has side effects on the state of ${vm}.${toString$1(key)}`);
+        assert$1$1.invariant(!isInvokingRender, `${vmBeingRendered}.render() method has side effects on the state of ${vm}.${toString$1$1(key)}`);
+        assert$1$1.invariant(!isUpdatingTemplate, `Updating the template of ${vmBeingRendered} has side effects on the state of ${vm}.${toString$1$1(key)}`);
       }
 
       if (set) {
         if (runtimeFlags$1.ENABLE_REACTIVE_SETTER) {
           let ro = vm.oar[key];
 
-          if (isUndefined$1(ro)) {
+          if (isUndefined$1$1(ro)) {
             ro = vm.oar[key] = new AccessorReactiveObserver(vm, set);
           }
 
@@ -8263,251 +7426,13 @@ function createPublicAccessorDescriptor(key, descriptor) {
           set.call(this, newValue);
         }
       } else {
-        assert$1.fail(`Invalid attempt to set a new value for property ${toString$1(key)} of ${vm} that does not has a setter decorated with @api.`);
+        assert$1$1.fail(`Invalid attempt to set a new value for property ${toString$1$1(key)} of ${vm} that does not has a setter decorated with @api.`);
       }
     },
 
     enumerable,
     configurable
   };
-}
-
-const DeprecatedWiredElementHost = '$$DeprecatedWiredElementHostKey$$';
-const WireMetaMap = new Map();
-
-function noop$3() {}
-
-function createFieldDataCallback(vm, name) {
-  const {
-    cmpFields
-  } = vm;
-  return value => {
-    if (value !== vm.cmpFields[name]) {
-      cmpFields[name] = value;
-      componentValueMutated(vm, name);
-    }
-  };
-}
-
-function createMethodDataCallback(vm, method) {
-  return value => {
-    invokeComponentCallback(vm, method, [value]);
-  };
-}
-
-function createConfigWatcher(vm, wireDef, callbackWhenConfigIsReady) {
-  const {
-    component
-  } = vm;
-  const {
-    configCallback
-  } = wireDef;
-  let hasPendingConfig = false;
-  const ro = new ReactiveObserver(() => {
-    if (hasPendingConfig === false) {
-      hasPendingConfig = true;
-      Promise.resolve().then(() => {
-        hasPendingConfig = false;
-        ro.reset();
-        callback();
-      });
-    }
-  });
-
-  const callback = () => {
-    let config;
-    ro.observe(() => config = configCallback(component));
-    callbackWhenConfigIsReady(config);
-  };
-
-  return callback;
-}
-
-function createContextWatcher(vm, wireDef, callbackWhenContextIsReady) {
-  const {
-    adapter
-  } = wireDef;
-  const adapterContextToken = getAdapterToken(adapter);
-
-  if (isUndefined$1(adapterContextToken)) {
-    return;
-  }
-
-  const {
-    elm,
-    context: {
-      wiredConnecting,
-      wiredDisconnecting
-    }
-  } = vm;
-  ArrayPush$1.call(wiredConnecting, () => {
-    const internalDomEvent = new CustomEvent(adapterContextToken, {
-      bubbles: true,
-      composed: true,
-
-      detail(newContext, disconnectCallback) {
-        ArrayPush$1.call(wiredDisconnecting, disconnectCallback);
-        callbackWhenContextIsReady(newContext);
-      }
-
-    });
-    dispatchEvent$1.call(elm, internalDomEvent);
-  });
-}
-
-function createConnector(vm, name, wireDef) {
-  const {
-    method,
-    adapter,
-    configCallback,
-    hasParams
-  } = wireDef;
-  const {
-    component
-  } = vm;
-  const dataCallback = isUndefined$1(method) ? createFieldDataCallback(vm, name) : createMethodDataCallback(vm, method);
-  let context;
-  let connector;
-  defineProperty$2(dataCallback, DeprecatedWiredElementHost, {
-    value: vm.elm
-  });
-  runWithBoundaryProtection(vm, vm, noop$3, () => {
-    connector = new adapter(dataCallback);
-  }, noop$3);
-
-  const updateConnectorConfig = config => {
-    runWithBoundaryProtection(vm, vm, noop$3, () => {
-      connector.update(config, context);
-    }, noop$3);
-  };
-
-  let computeConfigAndUpdate = () => {
-    updateConnectorConfig(configCallback(component));
-  };
-
-  if (hasParams) {
-    Promise.resolve().then(() => {
-      computeConfigAndUpdate = createConfigWatcher(vm, wireDef, updateConnectorConfig);
-      computeConfigAndUpdate();
-    });
-  } else {
-    computeConfigAndUpdate();
-  }
-
-  if (!isUndefined$1(adapter.contextSchema)) {
-    createContextWatcher(vm, wireDef, newContext => {
-      if (context !== newContext) {
-        context = newContext;
-        computeConfigAndUpdate();
-      }
-    });
-  }
-
-  return connector;
-}
-
-const AdapterToTokenMap = new Map();
-
-function getAdapterToken(adapter) {
-  return AdapterToTokenMap.get(adapter);
-}
-
-function storeWiredMethodMeta(descriptor, adapter, configCallback, hasParams) {
-  if (adapter.adapter) {
-    adapter = adapter.adapter;
-  }
-
-  const method = descriptor.value;
-  const def = {
-    adapter,
-    method,
-    configCallback,
-    hasParams
-  };
-  WireMetaMap.set(descriptor, def);
-}
-
-function storeWiredFieldMeta(descriptor, adapter, configCallback, hasParams) {
-  if (adapter.adapter) {
-    adapter = adapter.adapter;
-  }
-
-  const def = {
-    adapter,
-    configCallback,
-    hasParams
-  };
-  WireMetaMap.set(descriptor, def);
-}
-
-function installWireAdapters(vm) {
-  const {
-    def: {
-      wire
-    }
-  } = vm;
-
-  if (getOwnPropertyNames$2(wire).length === 0) {
-    {
-      assert$1.fail(`Internal Error: wire adapters should only be installed in instances with at least one wire declaration.`);
-    }
-  } else {
-    const connect = vm.context.wiredConnecting = [];
-    const disconnect = vm.context.wiredDisconnecting = [];
-
-    for (const fieldNameOrMethod in wire) {
-      const descriptor = wire[fieldNameOrMethod];
-      const wireDef = WireMetaMap.get(descriptor);
-
-      {
-        assert$1.invariant(wireDef, `Internal Error: invalid wire definition found.`);
-      }
-
-      if (!isUndefined$1(wireDef)) {
-        const adapterInstance = createConnector(vm, fieldNameOrMethod, wireDef);
-        ArrayPush$1.call(connect, () => adapterInstance.connect());
-        ArrayPush$1.call(disconnect, () => adapterInstance.disconnect());
-      }
-    }
-  }
-}
-
-function connectWireAdapters(vm) {
-  const {
-    context: {
-      wiredConnecting
-    }
-  } = vm;
-
-  if (isUndefined$1(wiredConnecting)) {
-    {
-      assert$1.fail(`Internal Error: wire adapters must be installed in instances with at least one wire declaration.`);
-    }
-  }
-
-  for (let i = 0, len = wiredConnecting.length; i < len; i += 1) {
-    wiredConnecting[i]();
-  }
-}
-
-function disconnectWireAdapters(vm) {
-  const {
-    context: {
-      wiredDisconnecting
-    }
-  } = vm;
-
-  if (isUndefined$1(wiredDisconnecting)) {
-    {
-      assert$1.fail(`Internal Error: wire adapters must be installed in instances with at least one wire declaration.`);
-    }
-  }
-
-  runWithBoundaryProtection(vm, vm, noop$3, () => {
-    for (let i = 0, len = wiredDisconnecting.length; i < len; i += 1) {
-      wiredDisconnecting[i]();
-    }
-  }, noop$3);
 }
 
 function createObservedFieldPropertyDescriptor(key) {
@@ -8543,60 +7468,60 @@ var PropType;
 
 function validateObservedField(Ctor, fieldName, descriptor) {
   {
-    if (!isUndefined$1(descriptor)) {
-      assert$1.fail(`Compiler Error: Invalid field ${fieldName} declaration.`);
+    if (!isUndefined$1$1(descriptor)) {
+      assert$1$1.fail(`Compiler Error: Invalid field ${fieldName} declaration.`);
     }
   }
 }
 
 function validateFieldDecoratedWithTrack(Ctor, fieldName, descriptor) {
   {
-    if (!isUndefined$1(descriptor)) {
-      assert$1.fail(`Compiler Error: Invalid @track ${fieldName} declaration.`);
+    if (!isUndefined$1$1(descriptor)) {
+      assert$1$1.fail(`Compiler Error: Invalid @track ${fieldName} declaration.`);
     }
   }
 }
 
 function validateFieldDecoratedWithWire(Ctor, fieldName, descriptor) {
   {
-    if (!isUndefined$1(descriptor)) {
-      assert$1.fail(`Compiler Error: Invalid @wire(...) ${fieldName} field declaration.`);
+    if (!isUndefined$1$1(descriptor)) {
+      assert$1$1.fail(`Compiler Error: Invalid @wire(...) ${fieldName} field declaration.`);
     }
   }
 }
 
 function validateMethodDecoratedWithWire(Ctor, methodName, descriptor) {
   {
-    if (isUndefined$1(descriptor) || !isFunction$1(descriptor.value) || isFalse$1$1(descriptor.writable)) {
-      assert$1.fail(`Compiler Error: Invalid @wire(...) ${methodName} method declaration.`);
+    if (isUndefined$1$1(descriptor) || !isFunction$1$1(descriptor.value) || isFalse$1$1(descriptor.writable)) {
+      assert$1$1.fail(`Compiler Error: Invalid @wire(...) ${methodName} method declaration.`);
     }
   }
 }
 
 function validateFieldDecoratedWithApi(Ctor, fieldName, descriptor) {
   {
-    if (!isUndefined$1(descriptor)) {
-      assert$1.fail(`Compiler Error: Invalid @api ${fieldName} field declaration.`);
+    if (!isUndefined$1$1(descriptor)) {
+      assert$1$1.fail(`Compiler Error: Invalid @api ${fieldName} field declaration.`);
     }
   }
 }
 
 function validateAccessorDecoratedWithApi(Ctor, fieldName, descriptor) {
   {
-    if (isUndefined$1(descriptor)) {
-      assert$1.fail(`Compiler Error: Invalid @api get ${fieldName} accessor declaration.`);
-    } else if (isFunction$1(descriptor.set)) {
-      assert$1.isTrue(isFunction$1(descriptor.get), `Compiler Error: Missing getter for property ${toString$1(fieldName)} decorated with @api in ${Ctor}. You cannot have a setter without the corresponding getter.`);
-    } else if (!isFunction$1(descriptor.get)) {
-      assert$1.fail(`Compiler Error: Missing @api get ${fieldName} accessor declaration.`);
+    if (isUndefined$1$1(descriptor)) {
+      assert$1$1.fail(`Compiler Error: Invalid @api get ${fieldName} accessor declaration.`);
+    } else if (isFunction$1$1(descriptor.set)) {
+      assert$1$1.isTrue(isFunction$1$1(descriptor.get), `Compiler Error: Missing getter for property ${toString$1$1(fieldName)} decorated with @api in ${Ctor}. You cannot have a setter without the corresponding getter.`);
+    } else if (!isFunction$1$1(descriptor.get)) {
+      assert$1$1.fail(`Compiler Error: Missing @api get ${fieldName} accessor declaration.`);
     }
   }
 }
 
 function validateMethodDecoratedWithApi(Ctor, methodName, descriptor) {
   {
-    if (isUndefined$1(descriptor) || !isFunction$1(descriptor.value) || isFalse$1$1(descriptor.writable)) {
-      assert$1.fail(`Compiler Error: Invalid @api ${methodName} method declaration.`);
+    if (isUndefined$1$1(descriptor) || !isFunction$1$1(descriptor.value) || isFalse$1$1(descriptor.writable)) {
+      assert$1$1.fail(`Compiler Error: Invalid @api ${methodName} method declaration.`);
     }
   }
 }
@@ -8610,26 +7535,26 @@ function registerDecorators(Ctor, meta) {
     track,
     fields
   } = meta;
-  const apiMethods = create$2(null);
-  const apiFields = create$2(null);
-  const wiredMethods = create$2(null);
-  const wiredFields = create$2(null);
-  const observedFields = create$2(null);
-  const apiFieldsConfig = create$2(null);
+  const apiMethods = create$1$1(null);
+  const apiFields = create$1$1(null);
+  const wiredMethods = create$1$1(null);
+  const wiredFields = create$1$1(null);
+  const observedFields = create$1$1(null);
+  const apiFieldsConfig = create$1$1(null);
   let descriptor;
 
-  if (!isUndefined$1(publicProps)) {
+  if (!isUndefined$1$1(publicProps)) {
     for (const fieldName in publicProps) {
       const propConfig = publicProps[fieldName];
       apiFieldsConfig[fieldName] = propConfig.config;
-      descriptor = getOwnPropertyDescriptor$2(proto, fieldName);
+      descriptor = getOwnPropertyDescriptor$1$1(proto, fieldName);
 
       if (propConfig.config > 0) {
         {
           validateAccessorDecoratedWithApi(Ctor, fieldName, descriptor);
         }
 
-        if (isUndefined$1(descriptor)) {
+        if (isUndefined$1$1(descriptor)) {
           throw new Error();
         }
 
@@ -8643,19 +7568,19 @@ function registerDecorators(Ctor, meta) {
       }
 
       apiFields[fieldName] = descriptor;
-      defineProperty$2(proto, fieldName, descriptor);
+      defineProperty$1$1(proto, fieldName, descriptor);
     }
   }
 
-  if (!isUndefined$1(publicMethods)) {
-    forEach$1.call(publicMethods, methodName => {
-      descriptor = getOwnPropertyDescriptor$2(proto, methodName);
+  if (!isUndefined$1$1(publicMethods)) {
+    forEach$1$1.call(publicMethods, methodName => {
+      descriptor = getOwnPropertyDescriptor$1$1(proto, methodName);
 
       {
         validateMethodDecoratedWithApi(Ctor, methodName, descriptor);
       }
 
-      if (isUndefined$1(descriptor)) {
+      if (isUndefined$1$1(descriptor)) {
         throw new Error();
       }
 
@@ -8663,59 +7588,59 @@ function registerDecorators(Ctor, meta) {
     });
   }
 
-  if (!isUndefined$1(wire)) {
+  if (!isUndefined$1$1(wire)) {
     for (const fieldOrMethodName in wire) {
       const {
         adapter,
         method,
         config: configCallback,
-        hasParams
+        dynamic = []
       } = wire[fieldOrMethodName];
-      descriptor = getOwnPropertyDescriptor$2(proto, fieldOrMethodName);
+      descriptor = getOwnPropertyDescriptor$1$1(proto, fieldOrMethodName);
 
       if (method === 1) {
         {
-          assert$1.isTrue(adapter, `@wire on method "${fieldOrMethodName}": adapter id must be truthy.`);
+          assert$1$1.isTrue(adapter, `@wire on method "${fieldOrMethodName}": adapter id must be truthy.`);
           validateMethodDecoratedWithWire(Ctor, fieldOrMethodName, descriptor);
         }
 
-        if (isUndefined$1(descriptor)) {
+        if (isUndefined$1$1(descriptor)) {
           throw new Error();
         }
 
         wiredMethods[fieldOrMethodName] = descriptor;
-        storeWiredMethodMeta(descriptor, adapter, configCallback, hasParams);
+        storeWiredMethodMeta(descriptor, adapter, configCallback, dynamic);
       } else {
         {
-          assert$1.isTrue(adapter, `@wire on field "${fieldOrMethodName}": adapter id must be truthy.`);
+          assert$1$1.isTrue(adapter, `@wire on field "${fieldOrMethodName}": adapter id must be truthy.`);
           validateFieldDecoratedWithWire(Ctor, fieldOrMethodName, descriptor);
         }
 
         descriptor = internalWireFieldDecorator(fieldOrMethodName);
         wiredFields[fieldOrMethodName] = descriptor;
-        storeWiredFieldMeta(descriptor, adapter, configCallback, hasParams);
-        defineProperty$2(proto, fieldOrMethodName, descriptor);
+        storeWiredFieldMeta(descriptor, adapter, configCallback, dynamic);
+        defineProperty$1$1(proto, fieldOrMethodName, descriptor);
       }
     }
   }
 
-  if (!isUndefined$1(track)) {
+  if (!isUndefined$1$1(track)) {
     for (const fieldName in track) {
-      descriptor = getOwnPropertyDescriptor$2(proto, fieldName);
+      descriptor = getOwnPropertyDescriptor$1$1(proto, fieldName);
 
       {
         validateFieldDecoratedWithTrack(Ctor, fieldName, descriptor);
       }
 
       descriptor = internalTrackDecorator(fieldName);
-      defineProperty$2(proto, fieldName, descriptor);
+      defineProperty$1$1(proto, fieldName, descriptor);
     }
   }
 
-  if (!isUndefined$1(fields)) {
+  if (!isUndefined$1$1(fields)) {
     for (let i = 0, n = fields.length; i < n; i++) {
       const fieldName = fields[i];
-      descriptor = getOwnPropertyDescriptor$2(proto, fieldName);
+      descriptor = getOwnPropertyDescriptor$1$1(proto, fieldName);
 
       {
         validateObservedField(Ctor, fieldName, descriptor);
@@ -8753,16 +7678,37 @@ const defaultMeta = {
 
 function getDecoratorsMeta(Ctor) {
   const meta = signedDecoratorToMetaMap.get(Ctor);
-  return isUndefined$1(meta) ? defaultMeta : meta;
+  return isUndefined$1$1(meta) ? defaultMeta : meta;
 }
 
-const cachedGetterByKey = create$2(null);
-const cachedSetterByKey = create$2(null);
+const signedTemplateSet = new Set();
+
+function defaultEmptyTemplate() {
+  return [];
+}
+
+signedTemplateSet.add(defaultEmptyTemplate);
+
+function isTemplateRegistered(tpl) {
+  return signedTemplateSet.has(tpl);
+}
+
+function registerTemplate(tpl) {
+  signedTemplateSet.add(tpl);
+  return tpl;
+}
+
+function sanitizeAttribute(tagName, namespaceUri, attrName, attrValue) {
+  return attrValue;
+}
+
+const cachedGetterByKey = create$1$1(null);
+const cachedSetterByKey = create$1$1(null);
 
 function createGetter(key) {
   let fn = cachedGetterByKey[key];
 
-  if (isUndefined$1(fn)) {
+  if (isUndefined$1$1(fn)) {
     fn = cachedGetterByKey[key] = function () {
       const vm = getAssociatedVM(this);
       const {
@@ -8778,7 +7724,7 @@ function createGetter(key) {
 function createSetter(key) {
   let fn = cachedSetterByKey[key];
 
-  if (isUndefined$1(fn)) {
+  if (isUndefined$1$1(fn)) {
     fn = cachedSetterByKey[key] = function (newValue) {
       const vm = getAssociatedVM(this);
       const {
@@ -8800,30 +7746,30 @@ function createMethodCaller(methodName) {
       component
     } = vm;
     const fn = component[methodName];
-    return callHook(vm.component, fn, ArraySlice$1$1.call(arguments));
+    return callHook(vm.component, fn, ArraySlice$2$1.call(arguments));
   };
 }
 
 function HTMLBridgeElementFactory(SuperClass, props, methods) {
   let HTMLBridgeElement;
 
-  if (isFunction$1(SuperClass)) {
+  if (isFunction$1$1(SuperClass)) {
     HTMLBridgeElement = class extends SuperClass {};
   } else {
     HTMLBridgeElement = function () {
       throw new TypeError('Illegal constructor');
     };
 
-    setPrototypeOf$2(HTMLBridgeElement, SuperClass);
-    setPrototypeOf$2(HTMLBridgeElement.prototype, SuperClass.prototype);
-    defineProperty$2(HTMLBridgeElement.prototype, 'constructor', {
+    setPrototypeOf$1$1(HTMLBridgeElement, SuperClass);
+    setPrototypeOf$1$1(HTMLBridgeElement.prototype, SuperClass.prototype);
+    defineProperty$1$1(HTMLBridgeElement.prototype, 'constructor', {
       writable: true,
       configurable: true,
       value: HTMLBridgeElement
     });
   }
 
-  const descriptors = create$2(null);
+  const descriptors = create$1$1(null);
 
   for (let i = 0, len = props.length; i < len; i += 1) {
     const propName = props[i];
@@ -8844,37 +7790,37 @@ function HTMLBridgeElementFactory(SuperClass, props, methods) {
     };
   }
 
-  defineProperties$2(HTMLBridgeElement.prototype, descriptors);
+  defineProperties$1$1(HTMLBridgeElement.prototype, descriptors);
   return HTMLBridgeElement;
 }
 
-const BaseBridgeElement = HTMLBridgeElementFactory(HTMLElement, getOwnPropertyNames$2(HTMLElementOriginalDescriptors), []);
-freeze$2(BaseBridgeElement);
-seal$2(BaseBridgeElement.prototype);
+const BaseBridgeElement = HTMLBridgeElementFactory(HTMLElementConstructor, getOwnPropertyNames$1$1(HTMLElementOriginalDescriptors), []);
+freeze$1$1(BaseBridgeElement);
+seal$1$1(BaseBridgeElement.prototype);
 
 function resolveCircularModuleDependency(fn) {
   return fn();
 }
 
 function isCircularModuleDependency(obj) {
-  return isFunction$1(obj) && hasOwnProperty$1$1.call(obj, '__circular__');
+  return isFunction$1$1(obj) && hasOwnProperty$1$1.call(obj, '__circular__');
 }
 
 const CtorToDefMap = new WeakMap();
 
-function getCtorProto(Ctor, subclassComponentName) {
-  let proto = getPrototypeOf$2(Ctor);
+function getCtorProto(Ctor) {
+  let proto = getPrototypeOf$1$1(Ctor);
 
-  if (isNull$1(proto)) {
-    throw new ReferenceError(`Invalid prototype chain for ${subclassComponentName}, you must extend LightningElement.`);
+  if (isNull$1$1(proto)) {
+    throw new ReferenceError(`Invalid prototype chain for ${Ctor.name}, you must extend LightningElement.`);
   }
 
   if (isCircularModuleDependency(proto)) {
     const p = resolveCircularModuleDependency(proto);
 
     {
-      if (isNull$1(p)) {
-        throw new ReferenceError(`Circular module dependency for ${subclassComponentName}, must resolve to a constructor that extends LightningElement.`);
+      if (isNull$1$1(p)) {
+        throw new ReferenceError(`Circular module dependency for ${Ctor.name}, must resolve to a constructor that extends LightningElement.`);
       }
     }
 
@@ -8884,18 +7830,12 @@ function getCtorProto(Ctor, subclassComponentName) {
   return proto;
 }
 
-function createComponentDef(Ctor, meta, subclassComponentName) {
+function createComponentDef(Ctor) {
   {
     const ctorName = Ctor.name;
-    assert$1.isTrue(Ctor.constructor, `Missing ${ctorName}.constructor, ${ctorName} should have a "constructor" property.`);
+    assert$1$1.isTrue(Ctor.constructor, `Missing ${ctorName}.constructor, ${ctorName} should have a "constructor" property.`);
   }
 
-  const {
-    name
-  } = meta;
-  let {
-    template
-  } = meta;
   const decoratorsMeta = getDecoratorsMeta(Ctor);
   const {
     apiFields,
@@ -8913,21 +7853,21 @@ function createComponentDef(Ctor, meta, subclassComponentName) {
     errorCallback,
     render
   } = proto;
-  const superProto = getCtorProto(Ctor, subclassComponentName);
-  const superDef = superProto !== BaseLightningElement ? getComponentInternalDef(superProto, subclassComponentName) : lightingElementDef;
-  const SuperBridge = isNull$1(superDef) ? BaseBridgeElement : superDef.bridge;
-  const bridge = HTMLBridgeElementFactory(SuperBridge, keys$2(apiFields), keys$2(apiMethods));
-  const props = assign$2(create$2(null), superDef.props, apiFields);
-  const propsConfig = assign$2(create$2(null), superDef.propsConfig, apiFieldsConfig);
-  const methods = assign$2(create$2(null), superDef.methods, apiMethods);
-  const wire = assign$2(create$2(null), superDef.wire, wiredFields, wiredMethods);
+  const superProto = getCtorProto(Ctor);
+  const superDef = superProto !== BaseLightningElement ? getComponentInternalDef(superProto) : lightingElementDef;
+  const bridge = HTMLBridgeElementFactory(superDef.bridge, keys$1$1(apiFields), keys$1$1(apiMethods));
+  const props = assign$1$1(create$1$1(null), superDef.props, apiFields);
+  const propsConfig = assign$1$1(create$1$1(null), superDef.propsConfig, apiFieldsConfig);
+  const methods = assign$1$1(create$1$1(null), superDef.methods, apiMethods);
+  const wire = assign$1$1(create$1$1(null), superDef.wire, wiredFields, wiredMethods);
   connectedCallback = connectedCallback || superDef.connectedCallback;
   disconnectedCallback = disconnectedCallback || superDef.disconnectedCallback;
   renderedCallback = renderedCallback || superDef.renderedCallback;
   errorCallback = errorCallback || superDef.errorCallback;
   render = render || superDef.render;
-  template = template || superDef.template;
-  defineProperties$2(proto, observedFields);
+  const template = getComponentRegisteredTemplate(Ctor) || superDef.template;
+  const name = Ctor.name || superDef.name;
+  defineProperties$1$1(proto, observedFields);
   const def = {
     ctor: Ctor,
     name,
@@ -8945,14 +7885,14 @@ function createComponentDef(Ctor, meta, subclassComponentName) {
   };
 
   {
-    freeze$2(Ctor.prototype);
+    freeze$1$1(Ctor.prototype);
   }
 
   return def;
 }
 
 function isComponentConstructor(ctor) {
-  if (!isFunction$1(ctor)) {
+  if (!isFunction$1$1(ctor)) {
     return false;
   }
 
@@ -8976,41 +7916,31 @@ function isComponentConstructor(ctor) {
     if (current === BaseLightningElement) {
       return true;
     }
-  } while (!isNull$1(current) && (current = getPrototypeOf$2(current)));
+  } while (!isNull$1$1(current) && (current = getPrototypeOf$1$1(current)));
 
   return false;
 }
 
-function getComponentInternalDef(Ctor, name) {
+function getComponentInternalDef(Ctor) {
   let def = CtorToDefMap.get(Ctor);
 
-  if (isUndefined$1(def)) {
+  if (isUndefined$1$1(def)) {
     if (isCircularModuleDependency(Ctor)) {
-      Ctor = resolveCircularModuleDependency(Ctor);
+      const resolvedCtor = resolveCircularModuleDependency(Ctor);
+      def = getComponentInternalDef(resolvedCtor);
+      CtorToDefMap.set(Ctor, def);
+      return def;
     }
 
     if (!isComponentConstructor(Ctor)) {
       throw new TypeError(`${Ctor} is not a valid component, or does not extends LightningElement from "lwc". You probably forgot to add the extend clause on the class declaration.`);
     }
 
-    let meta = getComponentRegisteredMeta(Ctor);
-
-    if (isUndefined$1(meta)) {
-      meta = {
-        template: undefined,
-        name: Ctor.name
-      };
-    }
-
-    def = createComponentDef(Ctor, meta, name || Ctor.name);
+    def = createComponentDef(Ctor);
     CtorToDefMap.set(Ctor, def);
   }
 
   return def;
-}
-
-function setElementProto(elm, def) {
-  setPrototypeOf$2(elm, def.bridge.prototype);
 }
 
 const lightingElementDef = {
@@ -9024,23 +7954,1326 @@ const lightingElementDef = {
   template: defaultEmptyTemplate,
   render: BaseLightningElement.prototype.render
 };
+var PropDefType;
 
-const Services = create$2(null);
+(function (PropDefType) {
+  PropDefType["any"] = "any";
+})(PropDefType || (PropDefType = {}));
+
+const noop = () => void 0;
+
+function observeElementChildNodes(elm) {
+  elm.$domManual$ = true;
+}
+
+function setElementShadowToken(elm, token) {
+  elm.$shadowToken$ = token;
+}
+
+function updateNodeHook(oldVnode, vnode) {
+  const {
+    elm,
+    text,
+    owner: {
+      renderer
+    }
+  } = vnode;
+
+  if (oldVnode.text !== text) {
+    {
+      unlockDomMutation();
+    }
+
+    renderer.setText(elm, text);
+
+    {
+      lockDomMutation();
+    }
+  }
+}
+
+function insertNodeHook(vnode, parentNode, referenceNode) {
+  const {
+    renderer
+  } = vnode.owner;
+
+  {
+    unlockDomMutation();
+  }
+
+  renderer.insert(vnode.elm, parentNode, referenceNode);
+
+  {
+    lockDomMutation();
+  }
+}
+
+function removeNodeHook(vnode, parentNode) {
+  const {
+    renderer
+  } = vnode.owner;
+
+  {
+    unlockDomMutation();
+  }
+
+  renderer.remove(vnode.elm, parentNode);
+
+  {
+    lockDomMutation();
+  }
+}
+
+function createElmHook(vnode) {
+  modEvents.create(vnode);
+  modAttrs.create(vnode);
+  modProps.create(vnode);
+  modStaticClassName.create(vnode);
+  modStaticStyle.create(vnode);
+  modComputedClassName.create(vnode);
+  modComputedStyle.create(vnode);
+}
+
+var LWCDOMMode;
+
+(function (LWCDOMMode) {
+  LWCDOMMode["manual"] = "manual";
+})(LWCDOMMode || (LWCDOMMode = {}));
+
+function fallbackElmHook(elm, vnode) {
+  const {
+    owner
+  } = vnode;
+
+  if (isTrue$1$1$1(owner.renderer.syntheticShadow)) {
+    const {
+      data: {
+        context
+      }
+    } = vnode;
+    const {
+      shadowAttribute
+    } = owner.context;
+
+    if (!isUndefined$1$1(context) && !isUndefined$1$1(context.lwc) && context.lwc.dom === LWCDOMMode.manual) {
+      observeElementChildNodes(elm);
+    }
+
+    setElementShadowToken(elm, shadowAttribute);
+  }
+
+  {
+    const {
+      data: {
+        context
+      }
+    } = vnode;
+    const isPortal = !isUndefined$1$1(context) && !isUndefined$1$1(context.lwc) && context.lwc.dom === LWCDOMMode.manual;
+    patchElementWithRestrictions(elm, {
+      isPortal
+    });
+  }
+}
+
+function updateElmHook(oldVnode, vnode) {
+  modAttrs.update(oldVnode, vnode);
+  modProps.update(oldVnode, vnode);
+  modComputedClassName.update(oldVnode, vnode);
+  modComputedStyle.update(oldVnode, vnode);
+}
+
+function updateChildrenHook(oldVnode, vnode) {
+  const {
+    children,
+    owner
+  } = vnode;
+  const fn = hasDynamicChildren(children) ? updateDynamicChildren : updateStaticChildren;
+  runWithBoundaryProtection(owner, owner.owner, noop, () => {
+    fn(vnode.elm, oldVnode.children, children);
+  }, noop);
+}
+
+function allocateChildrenHook(vnode, vm) {
+  const children = vnode.aChildren || vnode.children;
+
+  if (isTrue$1$1$1(vm.renderer.syntheticShadow)) {
+    allocateInSlot(vm, children);
+    vnode.aChildren = children;
+    vnode.children = EmptyArray;
+  }
+
+  vm.aChildren = children;
+}
+
+function createViewModelHook(elm, vnode) {
+  if (!isUndefined$1$1(getAssociatedVMIfPresent(elm))) {
+    return;
+  }
+
+  const {
+    sel,
+    mode,
+    ctor,
+    owner
+  } = vnode;
+  const def = getComponentInternalDef(ctor);
+
+  if (isTrue$1$1$1(owner.renderer.syntheticShadow)) {
+    const {
+      shadowAttribute
+    } = owner.context;
+    setElementShadowToken(elm, shadowAttribute);
+  }
+
+  createVM(elm, def, {
+    mode,
+    owner,
+    tagName: sel,
+    renderer: owner.renderer
+  });
+
+  {
+    assert$1$1.isTrue(isArray$2(vnode.children), `Invalid vnode for a custom element, it must have children defined.`);
+  }
+}
+
+function createCustomElmHook(vnode) {
+  modEvents.create(vnode);
+  modAttrs.create(vnode);
+  modProps.create(vnode);
+  modStaticClassName.create(vnode);
+  modStaticStyle.create(vnode);
+  modComputedClassName.create(vnode);
+  modComputedStyle.create(vnode);
+}
+
+function createChildrenHook(vnode) {
+  const {
+    elm,
+    children
+  } = vnode;
+
+  for (let j = 0; j < children.length; ++j) {
+    const ch = children[j];
+
+    if (ch != null) {
+      ch.hook.create(ch);
+      ch.hook.insert(ch, elm, null);
+    }
+  }
+}
+
+function updateCustomElmHook(oldVnode, vnode) {
+  modAttrs.update(oldVnode, vnode);
+  modProps.update(oldVnode, vnode);
+  modComputedClassName.update(oldVnode, vnode);
+  modComputedStyle.update(oldVnode, vnode);
+}
+
+function removeElmHook(vnode) {
+  const {
+    children,
+    elm
+  } = vnode;
+
+  for (let j = 0, len = children.length; j < len; ++j) {
+    const ch = children[j];
+
+    if (!isNull$1$1(ch)) {
+      ch.hook.remove(ch, elm);
+    }
+  }
+}
+
+const FromIteration = new WeakMap();
+
+function markAsDynamicChildren(children) {
+  FromIteration.set(children, 1);
+}
+
+function hasDynamicChildren(children) {
+  return FromIteration.has(children);
+}
+
+function getUpgradableConstructor(tagName, renderer) {
+  tagName = tagName.toLowerCase();
+  let CE = renderer.getCustomElement(tagName);
+
+  if (!isUndefined$1$1(CE)) {
+    return CE;
+  }
+
+  CE = class LWCUpgradableElement extends renderer.HTMLElement {
+    constructor(upgradeCallback) {
+      super();
+
+      if (isFunction$1$1(upgradeCallback)) {
+        upgradeCallback(this);
+      }
+    }
+
+  };
+  renderer.defineCustomElement(tagName, CE);
+  return CE;
+}
+
+const CHAR_S$1 = 115;
+const CHAR_V = 118;
+const CHAR_G = 103;
+const NamespaceAttributeForSVG = 'http://www.w3.org/2000/svg';
+const SymbolIterator = Symbol.iterator;
+const TextHook = {
+  create: vnode => {
+    const {
+      renderer
+    } = vnode.owner;
+    const elm = renderer.createText(vnode.text);
+    linkNodeToShadow(elm, vnode);
+    vnode.elm = elm;
+  },
+  update: updateNodeHook,
+  insert: insertNodeHook,
+  move: insertNodeHook,
+  remove: removeNodeHook
+};
+const ElementHook = {
+  create: vnode => {
+    const {
+      sel,
+      data: {
+        ns
+      },
+      owner: {
+        renderer
+      }
+    } = vnode;
+    const elm = renderer.createElement(sel, ns);
+    linkNodeToShadow(elm, vnode);
+    fallbackElmHook(elm, vnode);
+    vnode.elm = elm;
+    createElmHook(vnode);
+  },
+  update: (oldVnode, vnode) => {
+    updateElmHook(oldVnode, vnode);
+    updateChildrenHook(oldVnode, vnode);
+  },
+  insert: (vnode, parentNode, referenceNode) => {
+    insertNodeHook(vnode, parentNode, referenceNode);
+    createChildrenHook(vnode);
+  },
+  move: (vnode, parentNode, referenceNode) => {
+    insertNodeHook(vnode, parentNode, referenceNode);
+  },
+  remove: (vnode, parentNode) => {
+    removeNodeHook(vnode, parentNode);
+    removeElmHook(vnode);
+  }
+};
+const CustomElementHook = {
+  create: vnode => {
+    const {
+      sel,
+      owner: {
+        renderer
+      }
+    } = vnode;
+    const UpgradableConstructor = getUpgradableConstructor(sel, renderer);
+    const elm = new UpgradableConstructor(elm => {
+      createViewModelHook(elm, vnode);
+    });
+    vnode.elm = elm;
+    linkNodeToShadow(elm, vnode);
+    const vm = getAssociatedVMIfPresent(elm);
+
+    if (vm) {
+      allocateChildrenHook(vnode, vm);
+    } else if (vnode.ctor !== UpgradableConstructor) {
+      throw new TypeError(`Incorrect Component Constructor`);
+    }
+
+    createCustomElmHook(vnode);
+  },
+  update: (oldVnode, vnode) => {
+    updateCustomElmHook(oldVnode, vnode);
+    const vm = getAssociatedVMIfPresent(vnode.elm);
+
+    if (vm) {
+      allocateChildrenHook(vnode, vm);
+    }
+
+    updateChildrenHook(oldVnode, vnode);
+
+    if (vm) {
+      {
+        assert$1$1.isTrue(isArray$2(vnode.children), `Invalid vnode for a custom element, it must have children defined.`);
+      }
+
+      rerenderVM(vm);
+    }
+  },
+  insert: (vnode, parentNode, referenceNode) => {
+    insertNodeHook(vnode, parentNode, referenceNode);
+    const vm = getAssociatedVMIfPresent(vnode.elm);
+
+    if (vm) {
+      {
+        assert$1$1.isTrue(vm.state === VMState.created, `${vm} cannot be recycled.`);
+      }
+
+      runConnectedCallback(vm);
+    }
+
+    createChildrenHook(vnode);
+
+    if (vm) {
+      appendVM(vm);
+    }
+  },
+  move: (vnode, parentNode, referenceNode) => {
+    insertNodeHook(vnode, parentNode, referenceNode);
+  },
+  remove: (vnode, parentNode) => {
+    removeNodeHook(vnode, parentNode);
+    const vm = getAssociatedVMIfPresent(vnode.elm);
+
+    if (vm) {
+      removeVM(vm);
+    }
+  }
+};
+
+function linkNodeToShadow(elm, vnode) {
+  elm.$shadowResolver$ = vnode.owner.cmpRoot.$shadowResolver$;
+}
+
+function addNS(vnode) {
+  const {
+    data,
+    children,
+    sel
+  } = vnode;
+  data.ns = NamespaceAttributeForSVG;
+
+  if (isArray$2(children) && sel !== 'foreignObject') {
+    for (let j = 0, n = children.length; j < n; ++j) {
+      const childNode = children[j];
+
+      if (childNode != null && childNode.hook === ElementHook) {
+        addNS(childNode);
+      }
+    }
+  }
+}
+
+function addVNodeToChildLWC(vnode) {
+  ArrayPush$1$1.call(getVMBeingRendered().velements, vnode);
+}
+
+function h(sel, data, children) {
+  const vmBeingRendered = getVMBeingRendered();
+
+  {
+    assert$1$1.isTrue(isString(sel), `h() 1st argument sel must be a string.`);
+    assert$1$1.isTrue(isObject$2(data), `h() 2nd argument data must be an object.`);
+    assert$1$1.isTrue(isArray$2(children), `h() 3rd argument children must be an array.`);
+    assert$1$1.isTrue('key' in data, ` <${sel}> "key" attribute is invalid or missing for ${vmBeingRendered}. Key inside iterator is either undefined or null.`);
+    assert$1$1.isFalse(data.className && data.classMap, `vnode.data.className and vnode.data.classMap ambiguous declaration.`);
+    assert$1$1.isFalse(data.styleMap && data.style, `vnode.data.styleMap and vnode.data.style ambiguous declaration.`);
+
+    if (data.style && !isString(data.style)) {
+      logError(`Invalid 'style' attribute passed to <${sel}> is ignored. This attribute must be a string value.`, vmBeingRendered);
+    }
+
+    forEach$1$1.call(children, childVnode => {
+      if (childVnode != null) {
+        assert$1$1.isTrue(childVnode && 'sel' in childVnode && 'data' in childVnode && 'children' in childVnode && 'text' in childVnode && 'elm' in childVnode && 'key' in childVnode, `${childVnode} is not a vnode.`);
+      }
+    });
+  }
+
+  const {
+    key
+  } = data;
+  let text, elm;
+  const vnode = {
+    sel,
+    data,
+    children,
+    text,
+    elm,
+    key,
+    hook: ElementHook,
+    owner: vmBeingRendered
+  };
+
+  if (sel.length === 3 && StringCharCodeAt$1$1.call(sel, 0) === CHAR_S$1 && StringCharCodeAt$1$1.call(sel, 1) === CHAR_V && StringCharCodeAt$1$1.call(sel, 2) === CHAR_G) {
+    addNS(vnode);
+  }
+
+  return vnode;
+}
+
+function ti(value) {
+  const shouldNormalize = value > 0 && !(isTrue$1$1$1(value) || isFalse$1$1(value));
+
+  {
+    const vmBeingRendered = getVMBeingRendered();
+
+    if (shouldNormalize) {
+      logError(`Invalid tabindex value \`${toString$1$1(value)}\` in template for ${vmBeingRendered}. This attribute must be set to 0 or -1.`, vmBeingRendered);
+    }
+  }
+
+  return shouldNormalize ? 0 : value;
+}
+
+function s(slotName, data, children, slotset) {
+  {
+    assert$1$1.isTrue(isString(slotName), `s() 1st argument slotName must be a string.`);
+    assert$1$1.isTrue(isObject$2(data), `s() 2nd argument data must be an object.`);
+    assert$1$1.isTrue(isArray$2(children), `h() 3rd argument children must be an array.`);
+  }
+
+  if (!isUndefined$1$1(slotset) && !isUndefined$1$1(slotset[slotName]) && slotset[slotName].length !== 0) {
+    children = slotset[slotName];
+  }
+
+  const vnode = h('slot', data, children);
+
+  if (vnode.owner.renderer.syntheticShadow) {
+    sc(children);
+  }
+
+  return vnode;
+}
+
+function c(sel, Ctor, data, children = EmptyArray) {
+  const vmBeingRendered = getVMBeingRendered();
+
+  {
+    assert$1$1.isTrue(isString(sel), `c() 1st argument sel must be a string.`);
+    assert$1$1.isTrue(isFunction$1$1(Ctor), `c() 2nd argument Ctor must be a function.`);
+    assert$1$1.isTrue(isObject$2(data), `c() 3nd argument data must be an object.`);
+    assert$1$1.isTrue(arguments.length === 3 || isArray$2(children), `c() 4nd argument data must be an array.`);
+    assert$1$1.isFalse(data.className && data.classMap, `vnode.data.className and vnode.data.classMap ambiguous declaration.`);
+    assert$1$1.isFalse(data.styleMap && data.style, `vnode.data.styleMap and vnode.data.style ambiguous declaration.`);
+
+    if (data.style && !isString(data.style)) {
+      logError(`Invalid 'style' attribute passed to <${sel}> is ignored. This attribute must be a string value.`, vmBeingRendered);
+    }
+
+    if (arguments.length === 4) {
+      forEach$1$1.call(children, childVnode => {
+        if (childVnode != null) {
+          assert$1$1.isTrue(childVnode && 'sel' in childVnode && 'data' in childVnode && 'children' in childVnode && 'text' in childVnode && 'elm' in childVnode && 'key' in childVnode, `${childVnode} is not a vnode.`);
+        }
+      });
+    }
+  }
+
+  const {
+    key
+  } = data;
+  let text, elm;
+  const vnode = {
+    sel,
+    data,
+    children,
+    text,
+    elm,
+    key,
+    hook: CustomElementHook,
+    ctor: Ctor,
+    owner: vmBeingRendered,
+    mode: 'open'
+  };
+  addVNodeToChildLWC(vnode);
+  return vnode;
+}
+
+function i(iterable, factory) {
+  const list = [];
+  sc(list);
+  const vmBeingRendered = getVMBeingRendered();
+
+  if (isUndefined$1$1(iterable) || iterable === null) {
+    {
+      logError(`Invalid template iteration for value "${toString$1$1(iterable)}" in ${vmBeingRendered}. It must be an Array or an iterable Object.`, vmBeingRendered);
+    }
+
+    return list;
+  }
+
+  {
+    assert$1$1.isFalse(isUndefined$1$1(iterable[SymbolIterator]), `Invalid template iteration for value \`${toString$1$1(iterable)}\` in ${vmBeingRendered}. It must be an array-like object and not \`null\` nor \`undefined\`.`);
+  }
+
+  const iterator = iterable[SymbolIterator]();
+
+  {
+    assert$1$1.isTrue(iterator && isFunction$1$1(iterator.next), `Invalid iterator function for "${toString$1$1(iterable)}" in ${vmBeingRendered}.`);
+  }
+
+  let next = iterator.next();
+  let j = 0;
+  let {
+    value,
+    done: last
+  } = next;
+  let keyMap;
+  let iterationError;
+
+  {
+    keyMap = create$1$1(null);
+  }
+
+  while (last === false) {
+    next = iterator.next();
+    last = next.done;
+    const vnode = factory(value, j, j === 0, last);
+
+    if (isArray$2(vnode)) {
+      ArrayPush$1$1.apply(list, vnode);
+    } else {
+      ArrayPush$1$1.call(list, vnode);
+    }
+
+    {
+      const vnodes = isArray$2(vnode) ? vnode : [vnode];
+      forEach$1$1.call(vnodes, childVnode => {
+        if (!isNull$1$1(childVnode) && isObject$2(childVnode) && !isUndefined$1$1(childVnode.sel)) {
+          const {
+            key
+          } = childVnode;
+
+          if (isString(key) || isNumber(key)) {
+            if (keyMap[key] === 1 && isUndefined$1$1(iterationError)) {
+              iterationError = `Duplicated "key" attribute value for "<${childVnode.sel}>" in ${vmBeingRendered} for item number ${j}. A key with value "${childVnode.key}" appears more than once in the iteration. Key values must be unique numbers or strings.`;
+            }
+
+            keyMap[key] = 1;
+          } else if (isUndefined$1$1(iterationError)) {
+            iterationError = `Invalid "key" attribute value in "<${childVnode.sel}>" in ${vmBeingRendered} for item number ${j}. Set a unique "key" value on all iterated child elements.`;
+          }
+        }
+      });
+    }
+
+    j += 1;
+    value = next.value;
+  }
+
+  {
+    if (!isUndefined$1$1(iterationError)) {
+      logError(iterationError, vmBeingRendered);
+    }
+  }
+
+  return list;
+}
+
+function f(items) {
+  {
+    assert$1$1.isTrue(isArray$2(items), 'flattening api can only work with arrays.');
+  }
+
+  const len = items.length;
+  const flattened = [];
+  sc(flattened);
+
+  for (let j = 0; j < len; j += 1) {
+    const item = items[j];
+
+    if (isArray$2(item)) {
+      ArrayPush$1$1.apply(flattened, item);
+    } else {
+      ArrayPush$1$1.call(flattened, item);
+    }
+  }
+
+  return flattened;
+}
+
+function t(text) {
+  const data = EmptyObject;
+  let sel, children, key, elm;
+  return {
+    sel,
+    data,
+    children,
+    text,
+    elm,
+    key,
+    hook: TextHook,
+    owner: getVMBeingRendered()
+  };
+}
+
+function d(value) {
+  if (value == null) {
+    return null;
+  }
+
+  return t(value);
+}
+
+function b(fn) {
+  const vmBeingRendered = getVMBeingRendered();
+
+  if (isNull$1$1(vmBeingRendered)) {
+    throw new Error();
+  }
+
+  const vm = vmBeingRendered;
+  return function (event) {
+    invokeEventListener(vm, fn, vm.component, event);
+  };
+}
+
+function k(compilerKey, obj) {
+  switch (typeof obj) {
+    case 'number':
+    case 'string':
+      return compilerKey + ':' + obj;
+
+    case 'object':
+      {
+        assert$1$1.fail(`Invalid key value "${obj}" in ${getVMBeingRendered()}. Key must be a string or number.`);
+      }
+
+  }
+}
+
+function gid(id) {
+  const vmBeingRendered = getVMBeingRendered();
+
+  if (isUndefined$1$1(id) || id === '') {
+    {
+      logError(`Invalid id value "${id}". The id attribute must contain a non-empty string.`, vmBeingRendered);
+    }
+
+    return id;
+  }
+
+  if (isNull$1$1(id)) {
+    return null;
+  }
+
+  return `${id}-${vmBeingRendered.idx}`;
+}
+
+function fid(url) {
+  const vmBeingRendered = getVMBeingRendered();
+
+  if (isUndefined$1$1(url) || url === '') {
+    {
+      if (isUndefined$1$1(url)) {
+        logError(`Undefined url value for "href" or "xlink:href" attribute. Expected a non-empty string.`, vmBeingRendered);
+      }
+    }
+
+    return url;
+  }
+
+  if (isNull$1$1(url)) {
+    return null;
+  }
+
+  if (/^#/.test(url)) {
+    return `${url}-${vmBeingRendered.idx}`;
+  }
+
+  return url;
+}
+
+const DynamicImportedComponentMap = new Map();
+let dynamicImportedComponentCounter = 0;
+
+function dc(sel, Ctor, data, children) {
+  {
+    assert$1$1.isTrue(isString(sel), `dc() 1st argument sel must be a string.`);
+    assert$1$1.isTrue(isObject$2(data), `dc() 3nd argument data must be an object.`);
+    assert$1$1.isTrue(arguments.length === 3 || isArray$2(children), `dc() 4nd argument data must be an array.`);
+  }
+
+  if (Ctor == null) {
+    return null;
+  }
+
+  if (!isComponentConstructor(Ctor)) {
+    throw new Error(`Invalid LWC Constructor ${toString$1$1(Ctor)} for custom element <${sel}>.`);
+  }
+
+  let idx = DynamicImportedComponentMap.get(Ctor);
+
+  if (isUndefined$1$1(idx)) {
+    idx = dynamicImportedComponentCounter++;
+    DynamicImportedComponentMap.set(Ctor, idx);
+  }
+
+  data.key = `dc:${idx}:${data.key}`;
+  return c(sel, Ctor, data, children);
+}
+
+function sc(vnodes) {
+  {
+    assert$1$1.isTrue(isArray$2(vnodes), 'sc() api can only work with arrays.');
+  }
+
+  markAsDynamicChildren(vnodes);
+  return vnodes;
+}
+
+var api$1 = Object.freeze({
+  __proto__: null,
+  h: h,
+  ti: ti,
+  s: s,
+  c: c,
+  i: i,
+  f: f,
+  t: t,
+  d: d,
+  b: b,
+  k: k,
+  gid: gid,
+  fid: fid,
+  dc: dc,
+  sc: sc
+});
+
+function createShadowStyleVNode(content) {
+  return h('style', {
+    key: 'style',
+    attrs: {
+      type: 'text/css'
+    }
+  }, [t(content)]);
+}
+
+function updateSyntheticShadowAttributes(vm, template) {
+  const {
+    elm,
+    context,
+    renderer
+  } = vm;
+  const {
+    stylesheets: newStylesheets,
+    stylesheetTokens: newStylesheetTokens
+  } = template;
+  let newHostAttribute;
+  let newShadowAttribute;
+  const oldHostAttribute = context.hostAttribute;
+
+  if (!isUndefined$1$1(oldHostAttribute)) {
+    renderer.removeAttribute(elm, oldHostAttribute);
+  }
+
+  if (!isUndefined$1$1(newStylesheetTokens) && !isUndefined$1$1(newStylesheets) && newStylesheets.length !== 0) {
+    newHostAttribute = newStylesheetTokens.hostAttribute;
+    newShadowAttribute = newStylesheetTokens.shadowAttribute;
+    renderer.setAttribute(elm, newHostAttribute, '');
+  }
+
+  context.hostAttribute = newHostAttribute;
+  context.shadowAttribute = newShadowAttribute;
+}
+
+function evaluateStylesheetsContent(stylesheets, hostSelector, shadowSelector, nativeShadow) {
+  const content = [];
+
+  for (let i = 0; i < stylesheets.length; i++) {
+    const stylesheet = stylesheets[i];
+
+    if (isArray$2(stylesheet)) {
+      ArrayPush$1$1.apply(content, evaluateStylesheetsContent(stylesheet, hostSelector, shadowSelector, nativeShadow));
+    } else {
+      ArrayPush$1$1.call(content, stylesheet(hostSelector, shadowSelector, nativeShadow));
+    }
+  }
+
+  return content;
+}
+
+function getStylesheetsContent(vm, template) {
+  const {
+    stylesheets,
+    stylesheetTokens: tokens
+  } = template;
+  const {
+    syntheticShadow
+  } = vm.renderer;
+  let content = [];
+
+  if (!isUndefined$1$1(stylesheets) && !isUndefined$1$1(tokens)) {
+    const hostSelector = syntheticShadow ? `[${tokens.hostAttribute}]` : '';
+    const shadowSelector = syntheticShadow ? `[${tokens.shadowAttribute}]` : '';
+    content = evaluateStylesheetsContent(stylesheets, hostSelector, shadowSelector, !syntheticShadow);
+  }
+
+  return content;
+}
+
+function createStylesheet(vm, stylesheets) {
+  const {
+    renderer
+  } = vm;
+
+  if (renderer.syntheticShadow) {
+    for (let i = 0; i < stylesheets.length; i++) {
+      renderer.insertGlobalStylesheet(stylesheets[i]);
+    }
+
+    return null;
+  } else {
+    const shadowStyleSheetContent = ArrayJoin$1$1.call(stylesheets, '\n');
+    return createShadowStyleVNode(shadowStyleSheetContent);
+  }
+}
+
+var GlobalMeasurementPhase;
+
+(function (GlobalMeasurementPhase) {
+  GlobalMeasurementPhase["REHYDRATE"] = "lwc-rehydrate";
+  GlobalMeasurementPhase["HYDRATE"] = "lwc-hydrate";
+})(GlobalMeasurementPhase || (GlobalMeasurementPhase = {}));
+
+const isUserTimingSupported = typeof performance !== 'undefined' && typeof performance.mark === 'function' && typeof performance.clearMarks === 'function' && typeof performance.measure === 'function' && typeof performance.clearMeasures === 'function';
+
+function getMarkName(phase, vm) {
+  return `${getComponentTag(vm)} - ${phase} - ${vm.idx}`;
+}
+
+function getMeasureName(phase, vm) {
+  return `${getComponentTag(vm)} - ${phase}`;
+}
+
+function start(markName) {
+  performance.mark(markName);
+}
+
+function end(measureName, markName) {
+  performance.measure(measureName, markName);
+  performance.clearMarks(markName);
+  performance.clearMarks(measureName);
+}
+
+function noop$1() {}
+
+const startMeasure = !isUserTimingSupported ? noop$1 : function (phase, vm) {
+  const markName = getMarkName(phase, vm);
+  start(markName);
+};
+const endMeasure = !isUserTimingSupported ? noop$1 : function (phase, vm) {
+  const markName = getMarkName(phase, vm);
+  const measureName = getMeasureName(phase, vm);
+  end(measureName, markName);
+};
+const startGlobalMeasure = !isUserTimingSupported ? noop$1 : function (phase, vm) {
+  const markName = isUndefined$1$1(vm) ? phase : getMarkName(phase, vm);
+  start(markName);
+};
+const endGlobalMeasure = !isUserTimingSupported ? noop$1 : function (phase, vm) {
+  const markName = isUndefined$1$1(vm) ? phase : getMarkName(phase, vm);
+  end(phase, markName);
+};
+
+function noop$2(_opId, _phase, _cmpName, _vm_idx) {}
+
+let logOperation = noop$2;
+var OperationId;
+
+(function (OperationId) {
+  OperationId[OperationId["constructor"] = 0] = "constructor";
+  OperationId[OperationId["render"] = 1] = "render";
+  OperationId[OperationId["patch"] = 2] = "patch";
+  OperationId[OperationId["connectedCallback"] = 3] = "connectedCallback";
+  OperationId[OperationId["renderedCallback"] = 4] = "renderedCallback";
+  OperationId[OperationId["disconnectedCallback"] = 5] = "disconnectedCallback";
+  OperationId[OperationId["errorCallback"] = 6] = "errorCallback";
+})(OperationId || (OperationId = {}));
+
+var Phase;
+
+(function (Phase) {
+  Phase[Phase["Start"] = 0] = "Start";
+  Phase[Phase["Stop"] = 1] = "Stop";
+})(Phase || (Phase = {}));
+
+const opIdToMeasurementPhaseMappingArray = ['constructor', 'render', 'patch', 'connectedCallback', 'renderedCallback', 'disconnectedCallback', 'errorCallback'];
+let profilerEnabled = false;
+let logMarks = false;
+let bufferLogging = false;
+
+{
+  profilerEnabled = true;
+  logMarks = true;
+  bufferLogging = false;
+}
+
+function trackProfilerState(callback) {
+  callback(profilerEnabled);
+}
+
+function logOperationStart(opId, vm) {
+  if (logMarks) {
+    startMeasure(opIdToMeasurementPhaseMappingArray[opId], vm);
+  }
+
+  if (bufferLogging) {
+    logOperation(opId, Phase.Start, vm.tagName, vm.idx);
+  }
+}
+
+function logOperationEnd(opId, vm) {
+  if (logMarks) {
+    endMeasure(opIdToMeasurementPhaseMappingArray[opId], vm);
+  }
+
+  if (bufferLogging) {
+    logOperation(opId, Phase.Stop, vm.tagName, vm.idx);
+  }
+}
+let isUpdatingTemplate = false;
+let vmBeingRendered = null;
+
+function getVMBeingRendered() {
+  return vmBeingRendered;
+}
+
+function setVMBeingRendered(vm) {
+  vmBeingRendered = vm;
+}
+
+let profilerEnabled$1 = false;
+trackProfilerState(t => profilerEnabled$1 = t);
+
+function validateSlots(vm, html) {
+
+  const {
+    cmpSlots
+  } = vm;
+  const {
+    slots = EmptyArray
+  } = html;
+
+  for (const slotName in cmpSlots) {
+    assert$1$1.isTrue(isArray$2(cmpSlots[slotName]), `Slots can only be set to an array, instead received ${toString$1$1(cmpSlots[slotName])} for slot "${slotName}" in ${vm}.`);
+
+    if (slotName !== '' && ArrayIndexOf$1$1.call(slots, slotName) === -1) {
+      logError(`Ignoring unknown provided slot name "${slotName}" in ${vm}. Check for a typo on the slot attribute.`, vm);
+    }
+  }
+}
+
+function evaluateTemplate(vm, html) {
+  {
+    assert$1$1.isTrue(isFunction$1$1(html), `evaluateTemplate() second argument must be an imported template instead of ${toString$1$1(html)}`);
+  }
+
+  const isUpdatingTemplateInception = isUpdatingTemplate;
+  const vmOfTemplateBeingUpdatedInception = vmBeingRendered;
+  let vnodes = [];
+  runWithBoundaryProtection(vm, vm.owner, () => {
+    vmBeingRendered = vm;
+
+    if (profilerEnabled$1) {
+      logOperationStart(OperationId.render, vm);
+    }
+  }, () => {
+    const {
+      component,
+      context,
+      cmpSlots,
+      cmpTemplate,
+      tro,
+      renderer
+    } = vm;
+    tro.observe(() => {
+      if (html !== cmpTemplate) {
+        if (!isNull$1$1(cmpTemplate)) {
+          resetShadowRoot(vm);
+        }
+
+        if (!isTemplateRegistered(html)) {
+          throw new TypeError(`Invalid template returned by the render() method on ${vm}. It must return an imported template (e.g.: \`import html from "./${vm.def.name}.html"\`), instead, it has returned: ${toString$1$1(html)}.`);
+        }
+
+        vm.cmpTemplate = html;
+        context.tplCache = create$1$1(null);
+
+        if (renderer.syntheticShadow) {
+          updateSyntheticShadowAttributes(vm, html);
+        }
+
+        const stylesheetsContent = getStylesheetsContent(vm, html);
+        context.styleVNode = stylesheetsContent.length === 0 ? null : createStylesheet(vm, stylesheetsContent);
+      }
+
+      if ("development" !== 'production') {
+        validateSlots(vm, html);
+      }
+
+      vm.velements = [];
+      isUpdatingTemplate = true;
+      vnodes = html.call(undefined, api$1, component, cmpSlots, context.tplCache);
+      const {
+        styleVNode
+      } = context;
+
+      if (!isNull$1$1(styleVNode)) {
+        ArrayUnshift$2$1.call(vnodes, styleVNode);
+      }
+    });
+  }, () => {
+    isUpdatingTemplate = isUpdatingTemplateInception;
+    vmBeingRendered = vmOfTemplateBeingUpdatedInception;
+
+    if (profilerEnabled$1) {
+      logOperationEnd(OperationId.render, vm);
+    }
+  });
+
+  {
+    assert$1$1.invariant(isArray$2(vnodes), `Compiler should produce html functions that always return an array.`);
+  }
+
+  return vnodes;
+}
+
+function addErrorComponentStack(vm, error) {
+  if (!isFrozen$1$1(error) && isUndefined$1$1(error.wcStack)) {
+    const wcStack = getErrorComponentStack(vm);
+    defineProperty$1$1(error, 'wcStack', {
+      get() {
+        return wcStack;
+      }
+
+    });
+  }
+}
+
+let isInvokingRender = false;
+let vmBeingConstructed = null;
+
+function isBeingConstructed(vm) {
+  return vmBeingConstructed === vm;
+}
+
+let profilerEnabled$2 = false;
+trackProfilerState(t => profilerEnabled$2 = t);
+
+const noop$3 = () => void 0;
+
+function invokeComponentCallback(vm, fn, args) {
+  const {
+    component,
+    callHook,
+    owner
+  } = vm;
+  let result;
+  runWithBoundaryProtection(vm, owner, noop$3, () => {
+    result = callHook(component, fn, args);
+  }, noop$3);
+  return result;
+}
+
+function invokeComponentConstructor(vm, Ctor) {
+  const vmBeingConstructedInception = vmBeingConstructed;
+  let error;
+
+  if (profilerEnabled$2) {
+    logOperationStart(OperationId.constructor, vm);
+  }
+
+  vmBeingConstructed = vm;
+
+  try {
+    const result = new Ctor();
+
+    if (vmBeingConstructed.component !== result) {
+      throw new TypeError('Invalid component constructor, the class should extend LightningElement.');
+    }
+  } catch (e) {
+    error = Object(e);
+  } finally {
+    if (profilerEnabled$2) {
+      logOperationEnd(OperationId.constructor, vm);
+    }
+
+    vmBeingConstructed = vmBeingConstructedInception;
+
+    if (!isUndefined$1$1(error)) {
+      addErrorComponentStack(vm, error);
+      throw error;
+    }
+  }
+}
+
+function invokeComponentRenderMethod(vm) {
+  const {
+    def: {
+      render
+    },
+    callHook,
+    component,
+    owner
+  } = vm;
+  const isRenderBeingInvokedInception = isInvokingRender;
+  const vmBeingRenderedInception = getVMBeingRendered();
+  let html;
+  let renderInvocationSuccessful = false;
+  runWithBoundaryProtection(vm, owner, () => {
+    isInvokingRender = true;
+    setVMBeingRendered(vm);
+  }, () => {
+    vm.tro.observe(() => {
+      html = callHook(component, render);
+      renderInvocationSuccessful = true;
+    });
+  }, () => {
+    isInvokingRender = isRenderBeingInvokedInception;
+    setVMBeingRendered(vmBeingRenderedInception);
+  });
+  return renderInvocationSuccessful ? evaluateTemplate(vm, html) : [];
+}
+
+function invokeComponentRenderedCallback(vm) {
+  const {
+    def: {
+      renderedCallback
+    },
+    component,
+    callHook,
+    owner
+  } = vm;
+
+  if (!isUndefined$1$1(renderedCallback)) {
+    runWithBoundaryProtection(vm, owner, () => {
+      if (profilerEnabled$2) {
+        logOperationStart(OperationId.renderedCallback, vm);
+      }
+    }, () => {
+      callHook(component, renderedCallback);
+    }, () => {
+      if (profilerEnabled$2) {
+        logOperationEnd(OperationId.renderedCallback, vm);
+      }
+    });
+  }
+}
+
+function invokeEventListener(vm, fn, thisValue, event) {
+  const {
+    callHook,
+    owner
+  } = vm;
+  runWithBoundaryProtection(vm, owner, noop$3, () => {
+    if ("development" !== 'production') {
+      assert$1$1.isTrue(isFunction$1$1(fn), `Invalid event handler for event '${event.type}' on ${vm}.`);
+    }
+
+    callHook(thisValue, fn, [event]);
+  }, noop$3);
+}
+
+const signedTemplateMap = new Map();
+
+function registerComponent(Ctor, {
+  tmpl
+}) {
+  signedTemplateMap.set(Ctor, tmpl);
+  return Ctor;
+}
+
+function getComponentRegisteredTemplate(Ctor) {
+  return signedTemplateMap.get(Ctor);
+}
+
+function createComponent(vm, Ctor) {
+  invokeComponentConstructor(vm, Ctor);
+
+  if (isUndefined$1$1(vm.component)) {
+    throw new ReferenceError(`Invalid construction for ${Ctor}, you must extend LightningElement.`);
+  }
+}
+
+function getTemplateReactiveObserver(vm) {
+  return new ReactiveObserver(() => {
+    const {
+      isDirty
+    } = vm;
+
+    if (isFalse$1$1(isDirty)) {
+      markComponentAsDirty(vm);
+      scheduleRehydration(vm);
+    }
+  });
+}
+
+function renderComponent(vm) {
+  {
+    assert$1$1.invariant(vm.isDirty, `${vm} is not dirty.`);
+  }
+
+  vm.tro.reset();
+  const vnodes = invokeComponentRenderMethod(vm);
+  vm.isDirty = false;
+  vm.isScheduled = false;
+
+  {
+    assert$1$1.invariant(isArray$2(vnodes), `${vm}.render() should always return an array of vnodes instead of ${vnodes}`);
+  }
+
+  return vnodes;
+}
+
+function markComponentAsDirty(vm) {
+  {
+    const vmBeingRendered = getVMBeingRendered();
+    assert$1$1.isFalse(vm.isDirty, `markComponentAsDirty() for ${vm} should not be called when the component is already dirty.`);
+    assert$1$1.isFalse(isInvokingRender, `markComponentAsDirty() for ${vm} cannot be called during rendering of ${vmBeingRendered}.`);
+    assert$1$1.isFalse(isUpdatingTemplate, `markComponentAsDirty() for ${vm} cannot be called while updating template of ${vmBeingRendered}.`);
+  }
+
+  vm.isDirty = true;
+}
+
+const cmpEventListenerMap = new WeakMap();
+
+function getWrappedComponentsListener(vm, listener) {
+  if (!isFunction$1$1(listener)) {
+    throw new TypeError();
+  }
+
+  let wrappedListener = cmpEventListenerMap.get(listener);
+
+  if (isUndefined$1$1(wrappedListener)) {
+    wrappedListener = function (event) {
+      invokeEventListener(vm, listener, undefined, event);
+    };
+
+    cmpEventListenerMap.set(listener, wrappedListener);
+  }
+
+  return wrappedListener;
+}
+
+const Services = create$1$1(null);
 
 function invokeServiceHook(vm, cbs) {
   {
-    assert$1.isTrue(isArray$1$1(cbs) && cbs.length > 0, `Optimize invokeServiceHook() to be invoked only when needed`);
+    assert$1$1.isTrue(isArray$2(cbs) && cbs.length > 0, `Optimize invokeServiceHook() to be invoked only when needed`);
   }
 
   const {
     component,
-    data,
     def,
     context
   } = vm;
 
   for (let i = 0, len = cbs.length; i < len; ++i) {
-    cbs[i].call(undefined, component, data, def, context);
+    cbs[i].call(undefined, component, {}, def, context);
   }
 }
 
@@ -9052,8 +9285,10 @@ var VMState;
   VMState[VMState["disconnected"] = 2] = "disconnected";
 })(VMState || (VMState = {}));
 
+let profilerEnabled$3 = false;
+trackProfilerState(t => profilerEnabled$3 = t);
 let idx = 0;
-const ViewModelReflection = createHiddenField$1('ViewModel', 'engine');
+const ViewModelReflection = createHiddenField$1$1('ViewModel', 'engine');
 
 function callHook(cmp, fn, args = []) {
   return fn.apply(cmp, args);
@@ -9076,7 +9311,7 @@ function connectRootElement(elm) {
   startGlobalMeasure(GlobalMeasurementPhase.HYDRATE, vm);
 
   if (vm.state === VMState.connected) {
-    disconnectedRootElement(elm);
+    disconnectRootElement(elm);
   }
 
   runConnectedCallback(vm);
@@ -9084,7 +9319,7 @@ function connectRootElement(elm) {
   endGlobalMeasure(GlobalMeasurementPhase.HYDRATE, vm);
 }
 
-function disconnectedRootElement(elm) {
+function disconnectRootElement(elm) {
   const vm = getAssociatedVM(elm);
   resetComponentStateWhenRemoved(vm);
 }
@@ -9117,80 +9352,82 @@ function resetComponentStateWhenRemoved(vm) {
 
 function removeVM(vm) {
   {
-    assert$1.isTrue(vm.state === VMState.connected || vm.state === VMState.disconnected, `${vm} must have been connected.`);
+    assert$1$1.isTrue(vm.state === VMState.connected || vm.state === VMState.disconnected, `${vm} must have been connected.`);
   }
 
   resetComponentStateWhenRemoved(vm);
 }
 
-function createVM(elm, Ctor, options) {
-  {
-    assert$1.invariant(elm instanceof HTMLElement, `VM creation requires a DOM element instead of ${elm}.`);
-  }
-
-  const def = getComponentInternalDef(Ctor);
+function createVM(elm, def, options) {
   const {
-    isRoot,
     mode,
-    owner
+    owner,
+    renderer,
+    tagName
   } = options;
-  idx += 1;
-  const uninitializedVm = {
-    idx,
+  const vm = {
+    elm,
+    def,
+    idx: idx++,
     state: VMState.created,
     isScheduled: false,
     isDirty: true,
-    isRoot: isTrue$1$1(isRoot),
+    tagName,
     mode,
-    def,
     owner,
-    elm,
-    data: EmptyObject,
-    context: create$2(null),
-    cmpProps: create$2(null),
-    cmpFields: create$2(null),
-    cmpSlots: useSyntheticShadow ? create$2(null) : undefined,
-    callHook,
-    setHook,
-    getHook,
+    renderer,
     children: EmptyArray,
     aChildren: EmptyArray,
     velements: EmptyArray,
-    cmpTemplate: undefined,
-    component: undefined,
-    cmpRoot: undefined,
-    tro: undefined,
-    oar: undefined
+    cmpProps: create$1$1(null),
+    cmpFields: create$1$1(null),
+    cmpSlots: create$1$1(null),
+    oar: create$1$1(null),
+    cmpTemplate: null,
+    context: {
+      hostAttribute: undefined,
+      shadowAttribute: undefined,
+      styleVNode: null,
+      tplCache: EmptyObject,
+      wiredConnecting: EmptyArray,
+      wiredDisconnecting: EmptyArray
+    },
+    tro: null,
+    component: null,
+    cmpRoot: null,
+    callHook,
+    setHook,
+    getHook
   };
+  vm.tro = getTemplateReactiveObserver(vm);
 
   {
-    uninitializedVm.toString = () => {
-      return `[object:vm ${def.name} (${uninitializedVm.idx})]`;
+    vm.toString = () => {
+      return `[object:vm ${def.name} (${vm.idx})]`;
     };
   }
 
-  createComponent(uninitializedVm, Ctor);
-  const initializedVm = uninitializedVm;
+  createComponent(vm, def.ctor);
 
-  if (hasWireAdapters(initializedVm)) {
-    installWireAdapters(initializedVm);
+  if (isFalse$1$1(renderer.ssr) && hasWireAdapters(vm)) {
+    installWireAdapters(vm);
   }
 
-  return initializedVm;
+  return vm;
 }
 
 function assertIsVM(obj) {
-  if (isNull$1(obj) || !isObject$1$1(obj) || !('cmpRoot' in obj)) {
+  if (isNull$1$1(obj) || !isObject$2(obj) || !('cmpRoot' in obj)) {
     throw new TypeError(`${obj} is not a VM.`);
   }
 }
 
 function associateVM(obj, vm) {
-  setHiddenField$1(obj, ViewModelReflection, vm);
+  setHiddenField$1$1(obj, ViewModelReflection, vm);
 }
 
 function getAssociatedVM(obj) {
-  const vm = getHiddenField$1(obj, ViewModelReflection);
+  const vm = getHiddenField$1$1(obj, ViewModelReflection);
 
   {
     assertIsVM(vm);
@@ -9200,10 +9437,10 @@ function getAssociatedVM(obj) {
 }
 
 function getAssociatedVMIfPresent(obj) {
-  const maybeVm = getHiddenField$1(obj, ViewModelReflection);
+  const maybeVm = getHiddenField$1$1(obj, ViewModelReflection);
 
   {
-    if (!isUndefined$1(maybeVm)) {
+    if (!isUndefined$1$1(maybeVm)) {
       assertIsVM(maybeVm);
     }
   }
@@ -9212,11 +9449,7 @@ function getAssociatedVMIfPresent(obj) {
 }
 
 function rehydrate(vm) {
-  {
-    assert$1.isTrue(vm.elm instanceof HTMLElement, `rehydration can only happen after ${vm} was patched the first time.`);
-  }
-
-  if (isTrue$1$1(vm.isDirty)) {
+  if (isTrue$1$1$1(vm.isDirty)) {
     const children = renderComponent(vm);
     patchShadowRoot(vm, children);
   }
@@ -9233,14 +9466,14 @@ function patchShadowRoot(vm, newCh) {
     if (oldCh !== newCh) {
       const fn = hasDynamicChildren(newCh) ? updateDynamicChildren : updateStaticChildren;
       runWithBoundaryProtection(vm, vm, () => {
-        {
-          startMeasure('patch', vm);
+        if (profilerEnabled$3) {
+          logOperationStart(OperationId.patch, vm);
         }
       }, () => {
         fn(cmpRoot, oldCh, newCh);
       }, () => {
-        {
-          endMeasure('patch', vm);
+        if (profilerEnabled$3) {
+          logOperationEnd(OperationId.patch, vm);
         }
       });
     }
@@ -9252,6 +9485,10 @@ function patchShadowRoot(vm, newCh) {
 }
 
 function runRenderedCallback(vm) {
+  if (isTrue$1$1$1(vm.renderer.ssr)) {
+    return;
+  }
+
   const {
     rendered
   } = Services;
@@ -9269,7 +9506,7 @@ function flushRehydrationQueue() {
   startGlobalMeasure(GlobalMeasurementPhase.REHYDRATE);
 
   {
-    assert$1.invariant(rehydrateQueue.length, `If rehydrateQueue was scheduled, it is because there must be at least one VM on this pending queue instead of ${rehydrateQueue}.`);
+    assert$1$1.invariant(rehydrateQueue.length, `If rehydrateQueue was scheduled, it is because there must be at least one VM on this pending queue instead of ${rehydrateQueue}.`);
   }
 
   const vms = rehydrateQueue.sort((a, b) => a.idx - b.idx);
@@ -9286,7 +9523,7 @@ function flushRehydrationQueue() {
           addCallbackToNextTick(flushRehydrationQueue);
         }
 
-        ArrayUnshift$1$1.apply(rehydrateQueue, ArraySlice$1$1.call(vms, i + 1));
+        ArrayUnshift$2$1.apply(rehydrateQueue, ArraySlice$2$1.call(vms, i + 1));
       }
 
       endGlobalMeasure(GlobalMeasurementPhase.REHYDRATE);
@@ -9323,26 +9560,26 @@ function runConnectedCallback(vm) {
     connectedCallback
   } = vm.def;
 
-  if (!isUndefined$1(connectedCallback)) {
-    {
-      startMeasure('connectedCallback', vm);
+  if (!isUndefined$1$1(connectedCallback)) {
+    if (profilerEnabled$3) {
+      logOperationStart(OperationId.connectedCallback, vm);
     }
 
     invokeComponentCallback(vm, connectedCallback);
 
-    {
-      endMeasure('connectedCallback', vm);
+    if (profilerEnabled$3) {
+      logOperationEnd(OperationId.connectedCallback, vm);
     }
   }
 }
 
 function hasWireAdapters(vm) {
-  return getOwnPropertyNames$2(vm.def.wire).length > 0;
+  return getOwnPropertyNames$1$1(vm.def.wire).length > 0;
 }
 
 function runDisconnectedCallback(vm) {
   {
-    assert$1.isTrue(vm.state !== VMState.disconnected, `${vm} must be inserted.`);
+    assert$1$1.isTrue(vm.state !== VMState.disconnected, `${vm} must be inserted.`);
   }
 
   if (isFalse$1$1(vm.isDirty)) {
@@ -9366,15 +9603,15 @@ function runDisconnectedCallback(vm) {
     disconnectedCallback
   } = vm.def;
 
-  if (!isUndefined$1(disconnectedCallback)) {
-    {
-      startMeasure('disconnectedCallback', vm);
+  if (!isUndefined$1$1(disconnectedCallback)) {
+    if (profilerEnabled$3) {
+      logOperationStart(OperationId.disconnectedCallback, vm);
     }
 
     invokeComponentCallback(vm, disconnectedCallback);
 
-    {
-      endMeasure('disconnectedCallback', vm);
+    if (profilerEnabled$3) {
+      logOperationEnd(OperationId.disconnectedCallback, vm);
     }
   }
 }
@@ -9385,11 +9622,16 @@ function runShadowChildNodesDisconnectedCallback(vm) {
   } = vm;
 
   for (let i = vCustomElementCollection.length - 1; i >= 0; i -= 1) {
-    const elm = vCustomElementCollection[i].elm;
+    const {
+      elm
+    } = vCustomElementCollection[i];
 
-    if (!isUndefined$1(elm)) {
-      const childVM = getAssociatedVM(elm);
-      resetComponentStateWhenRemoved(childVM);
+    if (!isUndefined$1$1(elm)) {
+      const childVM = getAssociatedVMIfPresent(elm);
+
+      if (!isUndefined$1$1(childVM)) {
+        resetComponentStateWhenRemoved(childVM);
+      }
     }
   }
 }
@@ -9405,8 +9647,8 @@ function recursivelyDisconnectChildren(vnodes) {
   for (let i = 0, len = vnodes.length; i < len; i += 1) {
     const vnode = vnodes[i];
 
-    if (!isNull$1(vnode) && isArray$1$1(vnode.children) && !isUndefined$1(vnode.elm)) {
-      if (isUndefined$1(vnode.ctor)) {
+    if (!isNull$1$1(vnode) && isArray$2(vnode.children) && !isUndefined$1$1(vnode.elm)) {
+      if (isUndefined$1$1(vnode.ctor)) {
         recursivelyDisconnectChildren(vnode.children);
       } else {
         resetComponentStateWhenRemoved(getAssociatedVM(vnode.elm));
@@ -9416,28 +9658,44 @@ function recursivelyDisconnectChildren(vnodes) {
 }
 
 function resetShadowRoot(vm) {
+  const {
+    children,
+    cmpRoot,
+    renderer
+  } = vm;
+
+  for (let i = 0, len = children.length; i < len; i++) {
+    const child = children[i];
+
+    if (!isNull$1$1(child) && !isUndefined$1$1(child.elm)) {
+      renderer.remove(child.elm, cmpRoot);
+    }
+  }
+
   vm.children = EmptyArray;
-  ShadowRootInnerHTMLSetter.call(vm.cmpRoot, '');
   runShadowChildNodesDisconnectedCallback(vm);
+  vm.velements = EmptyArray;
 }
 
 function scheduleRehydration(vm) {
-  if (!vm.isScheduled) {
-    vm.isScheduled = true;
-
-    if (rehydrateQueue.length === 0) {
-      addCallbackToNextTick(flushRehydrationQueue);
-    }
-
-    ArrayPush$1.call(rehydrateQueue, vm);
+  if (isTrue$1$1$1(vm.renderer.ssr) || isTrue$1$1$1(vm.isScheduled)) {
+    return;
   }
+
+  vm.isScheduled = true;
+
+  if (rehydrateQueue.length === 0) {
+    addCallbackToNextTick(flushRehydrationQueue);
+  }
+
+  ArrayPush$1$1.call(rehydrateQueue, vm);
 }
 
 function getErrorBoundaryVM(vm) {
   let currentVm = vm;
 
-  while (!isNull$1(currentVm)) {
-    if (!isUndefined$1(currentVm.def.errorCallback)) {
+  while (!isNull$1$1(currentVm)) {
+    if (!isUndefined$1$1(currentVm.def.errorCallback)) {
       return currentVm;
     }
 
@@ -9445,20 +9703,32 @@ function getErrorBoundaryVM(vm) {
   }
 }
 
+function hasDifferentIdentities(a, b) {
+  if (a === b) {
+    return false;
+  }
+
+  if (isNull$1$1(a) || isNull$1$1(b)) {
+    return true;
+  }
+
+  return a.key !== b.key;
+}
+
 function allocateInSlot(vm, children) {
   {
-    assert$1.invariant(isObject$1$1(vm.cmpSlots), `When doing manual allocation, there must be a cmpSlots object available.`);
+    assert$1$1.invariant(isObject$2(vm.cmpSlots), `When doing manual allocation, there must be a cmpSlots object available.`);
   }
 
   const {
     cmpSlots: oldSlots
   } = vm;
-  const cmpSlots = vm.cmpSlots = create$2(null);
+  const cmpSlots = vm.cmpSlots = create$1$1(null);
 
   for (let i = 0, len = children.length; i < len; i += 1) {
     const vnode = children[i];
 
-    if (isNull$1(vnode)) {
+    if (isNull$1$1(vnode)) {
       continue;
     }
 
@@ -9467,14 +9737,18 @@ function allocateInSlot(vm, children) {
     } = vnode;
     const slotName = data.attrs && data.attrs.slot || '';
     const vnodes = cmpSlots[slotName] = cmpSlots[slotName] || [];
-    vnode.key = `@${slotName}:${vnode.key}`;
-    ArrayPush$1.call(vnodes, vnode);
+
+    if (!isUndefined$1$1(vnode.key)) {
+      vnode.key = `@${slotName}:${vnode.key}`;
+    }
+
+    ArrayPush$1$1.call(vnodes, vnode);
   }
 
   if (isFalse$1$1(vm.isDirty)) {
-    const oldKeys = keys$2(oldSlots);
+    const oldKeys = keys$1$1(oldSlots);
 
-    if (oldKeys.length !== keys$2(cmpSlots).length) {
+    if (oldKeys.length !== keys$1$1(cmpSlots).length) {
       markComponentAsDirty(vm);
       return;
     }
@@ -9482,7 +9756,7 @@ function allocateInSlot(vm, children) {
     for (let i = 0, len = oldKeys.length; i < len; i += 1) {
       const key = oldKeys[i];
 
-      if (isUndefined$1(cmpSlots[key]) || oldSlots[key].length !== cmpSlots[key].length) {
+      if (isUndefined$1$1(cmpSlots[key]) || oldSlots[key].length !== cmpSlots[key].length) {
         markComponentAsDirty(vm);
         return;
       }
@@ -9491,12 +9765,30 @@ function allocateInSlot(vm, children) {
       const vnodes = cmpSlots[key];
 
       for (let j = 0, a = cmpSlots[key].length; j < a; j += 1) {
-        if (oldVNodes[j] !== vnodes[j]) {
+        if (hasDifferentIdentities(oldVNodes[j], vnodes[j])) {
           markComponentAsDirty(vm);
           return;
         }
       }
     }
+
+    const {
+      aChildren
+    } = vm;
+    const slottedNewChildren = [];
+    const slottedOldChildren = [];
+
+    for (let i = 0, len = children.length; i < len; i += 1) {
+      const oldVNode = aChildren[i];
+
+      if (!isNull$1$1(oldVNode) && !isUndefined$1$1(oldVNode) && !isUndefined$1$1(oldVNode.elm)) {
+        const newVNode = children[i];
+        ArrayPush$1$1.call(slottedOldChildren, oldVNode);
+        ArrayPush$1$1.call(slottedNewChildren, newVNode);
+      }
+    }
+
+    updateStaticChildren(vm.elm, slottedOldChildren, slottedNewChildren);
   }
 }
 
@@ -9511,28 +9803,515 @@ function runWithBoundaryProtection(vm, owner, pre, job, post) {
   } finally {
     post();
 
-    if (!isUndefined$1(error)) {
-      error.wcStack = error.wcStack || getErrorComponentStack(vm);
-      const errorBoundaryVm = isNull$1(owner) ? undefined : getErrorBoundaryVM(owner);
+    if (!isUndefined$1$1(error)) {
+      addErrorComponentStack(vm, error);
+      const errorBoundaryVm = isNull$1$1(owner) ? undefined : getErrorBoundaryVM(owner);
 
-      if (isUndefined$1(errorBoundaryVm)) {
+      if (isUndefined$1$1(errorBoundaryVm)) {
         throw error;
       }
 
       resetShadowRoot(vm);
 
-      {
-        startMeasure('errorCallback', errorBoundaryVm);
+      if (profilerEnabled$3) {
+        logOperationStart(OperationId.errorCallback, vm);
       }
 
       const errorCallback = errorBoundaryVm.def.errorCallback;
       invokeComponentCallback(errorBoundaryVm, errorCallback, [error, error.wcStack]);
 
-      {
-        endMeasure('errorCallback', errorBoundaryVm);
+      if (profilerEnabled$3) {
+        logOperationEnd(OperationId.errorCallback, vm);
       }
     }
   }
+}
+
+const DeprecatedWiredElementHost = '$$DeprecatedWiredElementHostKey$$';
+const DeprecatedWiredParamsMeta = '$$DeprecatedWiredParamsMetaKey$$';
+const WireMetaMap = new Map();
+
+function noop$4() {}
+
+class WireContextRegistrationEvent extends CustomEvent {
+  constructor(adapterToken, {
+    setNewContext,
+    setDisconnectedCallback
+  }) {
+    super(adapterToken, {
+      bubbles: true,
+      composed: true
+    });
+    defineProperties$1$1(this, {
+      setNewContext: {
+        value: setNewContext
+      },
+      setDisconnectedCallback: {
+        value: setDisconnectedCallback
+      }
+    });
+  }
+
+}
+
+function createFieldDataCallback(vm, name) {
+  const {
+    cmpFields
+  } = vm;
+  return value => {
+    if (value !== vm.cmpFields[name]) {
+      cmpFields[name] = value;
+      componentValueMutated(vm, name);
+    }
+  };
+}
+
+function createMethodDataCallback(vm, method) {
+  return value => {
+    runWithBoundaryProtection(vm, vm.owner, noop$4, () => {
+      method.call(vm.component, value);
+    }, noop$4);
+  };
+}
+
+function createConfigWatcher(vm, wireDef, callbackWhenConfigIsReady) {
+  const {
+    component
+  } = vm;
+  const {
+    configCallback
+  } = wireDef;
+  let hasPendingConfig = false;
+  const ro = new ReactiveObserver(() => {
+    if (hasPendingConfig === false) {
+      hasPendingConfig = true;
+      Promise.resolve().then(() => {
+        hasPendingConfig = false;
+        ro.reset();
+        callback();
+      });
+    }
+  });
+
+  const callback = () => {
+    let config;
+    ro.observe(() => config = configCallback(component));
+    callbackWhenConfigIsReady(config);
+  };
+
+  return callback;
+}
+
+function createContextWatcher(vm, wireDef, callbackWhenContextIsReady) {
+  const {
+    adapter
+  } = wireDef;
+  const adapterContextToken = getAdapterToken(adapter);
+
+  if (isUndefined$1$1(adapterContextToken)) {
+    return;
+  }
+
+  const {
+    elm,
+    renderer,
+    context: {
+      wiredConnecting,
+      wiredDisconnecting
+    }
+  } = vm;
+  ArrayPush$1$1.call(wiredConnecting, () => {
+    const contextRegistrationEvent = new WireContextRegistrationEvent(adapterContextToken, {
+      setNewContext(newContext) {
+        callbackWhenContextIsReady(newContext);
+      },
+
+      setDisconnectedCallback(disconnectCallback) {
+        ArrayPush$1$1.call(wiredDisconnecting, disconnectCallback);
+      }
+
+    });
+    renderer.dispatchEvent(elm, contextRegistrationEvent);
+  });
+}
+
+function createConnector(vm, name, wireDef) {
+  const {
+    method,
+    adapter,
+    configCallback,
+    dynamic
+  } = wireDef;
+  const hasDynamicParams = dynamic.length > 0;
+  const {
+    component
+  } = vm;
+  const dataCallback = isUndefined$1$1(method) ? createFieldDataCallback(vm, name) : createMethodDataCallback(vm, method);
+  let context;
+  let connector;
+  defineProperty$1$1(dataCallback, DeprecatedWiredElementHost, {
+    value: vm.elm
+  });
+  defineProperty$1$1(dataCallback, DeprecatedWiredParamsMeta, {
+    value: dynamic
+  });
+  runWithBoundaryProtection(vm, vm, noop$4, () => {
+    connector = new adapter(dataCallback);
+  }, noop$4);
+
+  const updateConnectorConfig = config => {
+    runWithBoundaryProtection(vm, vm, noop$4, () => {
+      connector.update(config, context);
+    }, noop$4);
+  };
+
+  let computeConfigAndUpdate = () => {
+    updateConnectorConfig(configCallback(component));
+  };
+
+  if (hasDynamicParams) {
+    Promise.resolve().then(() => {
+      computeConfigAndUpdate = createConfigWatcher(vm, wireDef, updateConnectorConfig);
+      computeConfigAndUpdate();
+    });
+  } else {
+    computeConfigAndUpdate();
+  }
+
+  if (!isUndefined$1$1(adapter.contextSchema)) {
+    createContextWatcher(vm, wireDef, newContext => {
+      if (context !== newContext) {
+        context = newContext;
+        computeConfigAndUpdate();
+      }
+    });
+  }
+
+  return connector;
+}
+
+const AdapterToTokenMap = new Map();
+
+function getAdapterToken(adapter) {
+  return AdapterToTokenMap.get(adapter);
+}
+
+function storeWiredMethodMeta(descriptor, adapter, configCallback, dynamic) {
+  if (adapter.adapter) {
+    adapter = adapter.adapter;
+  }
+
+  const method = descriptor.value;
+  const def = {
+    adapter,
+    method,
+    configCallback,
+    dynamic
+  };
+  WireMetaMap.set(descriptor, def);
+}
+
+function storeWiredFieldMeta(descriptor, adapter, configCallback, dynamic) {
+  if (adapter.adapter) {
+    adapter = adapter.adapter;
+  }
+
+  const def = {
+    adapter,
+    configCallback,
+    dynamic
+  };
+  WireMetaMap.set(descriptor, def);
+}
+
+function installWireAdapters(vm) {
+  const {
+    context,
+    def: {
+      wire
+    }
+  } = vm;
+  const wiredConnecting = context.wiredConnecting = [];
+  const wiredDisconnecting = context.wiredDisconnecting = [];
+
+  for (const fieldNameOrMethod in wire) {
+    const descriptor = wire[fieldNameOrMethod];
+    const wireDef = WireMetaMap.get(descriptor);
+
+    {
+      assert$1$1.invariant(wireDef, `Internal Error: invalid wire definition found.`);
+    }
+
+    if (!isUndefined$1$1(wireDef)) {
+      const adapterInstance = createConnector(vm, fieldNameOrMethod, wireDef);
+      ArrayPush$1$1.call(wiredConnecting, () => adapterInstance.connect());
+      ArrayPush$1$1.call(wiredDisconnecting, () => adapterInstance.disconnect());
+    }
+  }
+}
+
+function connectWireAdapters(vm) {
+  const {
+    wiredConnecting
+  } = vm.context;
+
+  for (let i = 0, len = wiredConnecting.length; i < len; i += 1) {
+    wiredConnecting[i]();
+  }
+}
+
+function disconnectWireAdapters(vm) {
+  const {
+    wiredDisconnecting
+  } = vm.context;
+  runWithBoundaryProtection(vm, vm, noop$4, () => {
+    for (let i = 0, len = wiredDisconnecting.length; i < len; i += 1) {
+      wiredDisconnecting[i]();
+    }
+  }, noop$4);
+}
+
+const globalStylesheets = create$2(null);
+const globalStylesheetsParentElement = document.head || document.body || document;
+let getCustomElement, defineCustomElement, HTMLElementConstructor$1;
+
+function isCustomElementRegistryAvailable() {
+  if (typeof customElements === 'undefined') {
+    return false;
+  }
+
+  try {
+    const HTMLElementAlias = HTMLElement;
+
+    class clazz extends HTMLElementAlias {}
+
+    customElements.define('lwc-test-' + Math.floor(Math.random() * 1000000), clazz);
+    new clazz();
+    return true;
+  } catch (_a) {
+    return false;
+  }
+}
+
+if (isCustomElementRegistryAvailable()) {
+  getCustomElement = customElements.get.bind(customElements);
+  defineCustomElement = customElements.define.bind(customElements);
+  HTMLElementConstructor$1 = HTMLElement;
+} else {
+  const registry = create$2(null);
+  const reverseRegistry = new WeakMap();
+
+  defineCustomElement = function define(name, ctor) {
+    if (name !== StringToLowerCase$2.call(name) || registry[name]) {
+      throw new TypeError(`Invalid Registration`);
+    }
+
+    registry[name] = ctor;
+    reverseRegistry.set(ctor, name);
+  };
+
+  getCustomElement = function get(name) {
+    return registry[name];
+  };
+
+  HTMLElementConstructor$1 = function HTMLElement() {
+    if (!(this instanceof HTMLElement)) {
+      throw new TypeError(`Invalid Invocation`);
+    }
+
+    const {
+      constructor
+    } = this;
+    const name = reverseRegistry.get(constructor);
+
+    if (!name) {
+      throw new TypeError(`Invalid Construction`);
+    }
+
+    const elm = document.createElement(name);
+    setPrototypeOf$2(elm, constructor.prototype);
+    return elm;
+  };
+
+  HTMLElementConstructor$1.prototype = HTMLElement.prototype;
+}
+
+const useSyntheticShadow = hasOwnProperty$2.call(Element.prototype, '$shadowToken$');
+const renderer = {
+  ssr: false,
+  syntheticShadow: useSyntheticShadow,
+
+  createElement(tagName, namespace) {
+    return isUndefined$1(namespace) ? document.createElement(tagName) : document.createElementNS(namespace, tagName);
+  },
+
+  createText(content) {
+    return document.createTextNode(content);
+  },
+
+  insert(node, parent, anchor) {
+    parent.insertBefore(node, anchor);
+  },
+
+  remove(node, parent) {
+    parent.removeChild(node);
+  },
+
+  nextSibling(node) {
+    return node.nextSibling;
+  },
+
+  attachShadow(element, options) {
+    return element.attachShadow(options);
+  },
+
+  setText(node, content) {
+    node.nodeValue = content;
+  },
+
+  getProperty(node, key) {
+    return node[key];
+  },
+
+  setProperty(node, key, value) {
+    {
+      if (node instanceof Element && !(key in node)) {
+        assert$1.fail(`Unknown public property "${key}" of element <${node.tagName}>. This is likely a typo on the corresponding attribute "${getAttrNameFromPropName(key)}".`);
+      }
+    }
+
+    node[key] = value;
+  },
+
+  getAttribute(element, name, namespace) {
+    return isUndefined$1(namespace) ? element.getAttribute(name) : element.getAttributeNS(namespace, name);
+  },
+
+  setAttribute(element, name, value, namespace) {
+    return isUndefined$1(namespace) ? element.setAttribute(name, value) : element.setAttributeNS(namespace, name, value);
+  },
+
+  removeAttribute(element, name, namespace) {
+    if (isUndefined$1(namespace)) {
+      element.removeAttribute(name);
+    } else {
+      element.removeAttributeNS(namespace, name);
+    }
+  },
+
+  addEventListener(target, type, callback, options) {
+    target.addEventListener(type, callback, options);
+  },
+
+  removeEventListener(target, type, callback, options) {
+    target.removeEventListener(type, callback, options);
+  },
+
+  dispatchEvent(target, event) {
+    return target.dispatchEvent(event);
+  },
+
+  getClassList(element) {
+    return element.classList;
+  },
+
+  getStyleDeclaration(element) {
+    return element.style;
+  },
+
+  getBoundingClientRect(element) {
+    return element.getBoundingClientRect();
+  },
+
+  querySelector(element, selectors) {
+    return element.querySelector(selectors);
+  },
+
+  querySelectorAll(element, selectors) {
+    return element.querySelectorAll(selectors);
+  },
+
+  getElementsByTagName(element, tagNameOrWildCard) {
+    return element.getElementsByTagName(tagNameOrWildCard);
+  },
+
+  getElementsByClassName(element, names) {
+    return element.getElementsByClassName(names);
+  },
+
+  isConnected(node) {
+    return node.isConnected;
+  },
+
+  insertGlobalStylesheet(content) {
+    if (!isUndefined$1(globalStylesheets[content])) {
+      return;
+    }
+
+    globalStylesheets[content] = true;
+    const elm = document.createElement('style');
+    elm.type = 'text/css';
+    elm.textContent = content;
+    globalStylesheetsParentElement.appendChild(elm);
+  },
+
+  assertInstanceOfHTMLElement(elm, msg) {
+    assert$1.invariant(elm instanceof HTMLElement, msg);
+  },
+
+  defineCustomElement,
+  getCustomElement,
+  HTMLElement: HTMLElementConstructor$1
+};
+
+function buildCustomElementConstructor(Ctor) {
+  var _a;
+
+  const def = getComponentInternalDef(Ctor);
+  const attributeToPropMap = create$2(null);
+
+  for (const propName in def.props) {
+    attributeToPropMap[getAttrNameFromPropName(propName)] = propName;
+  }
+
+  return _a = class extends def.bridge {
+    constructor() {
+      super();
+      createVM(this, def, {
+        mode: 'open',
+        owner: null,
+        tagName: this.tagName,
+        renderer
+      });
+    }
+
+    connectedCallback() {
+      connectRootElement(this);
+    }
+
+    disconnectedCallback() {
+      disconnectRootElement(this);
+    }
+
+    attributeChangedCallback(attrName, oldValue, newValue) {
+      if (oldValue === newValue) {
+        return;
+      }
+
+      const propName = attributeToPropMap[attrName];
+
+      if (isUndefined$1(propName)) {
+        return;
+      }
+
+      if (!isAttributeLocked(this, attrName)) {
+        return;
+      }
+
+      this[propName] = newValue;
+    }
+
+  }, _a.observedAttributes = keys$2(attributeToPropMap), _a;
 }
 
 const ConnectingSlot = createHiddenField$1('connecting', 'engine');
@@ -9552,6 +10331,12 @@ function callNodeSlot(node, slot) {
   return node;
 }
 
+const {
+  appendChild: appendChild$1,
+  insertBefore: insertBefore$1,
+  removeChild: removeChild$1,
+  replaceChild: replaceChild$1
+} = Node.prototype;
 assign$2(Node.prototype, {
   appendChild(newChild) {
     const appendedNode = appendChild$1.call(this, newChild);
@@ -9585,34 +10370,64 @@ function createElement$1(sel, options) {
   const Ctor = options.is;
 
   if (!isFunction$1(Ctor)) {
-    throw new TypeError(`"createElement" function expects a "is" option with a valid component constructor.`);
+    throw new TypeError(`"createElement" function expects an "is" option with a valid component constructor.`);
   }
 
-  const element = document.createElement(sel);
-
-  if (!isUndefined$1(getAssociatedVMIfPresent(element))) {
-    return element;
-  }
-
-  const def = getComponentInternalDef(Ctor);
-  setElementProto(element, def);
-  createVM(element, def.ctor, {
-    mode: options.mode !== 'closed' ? 'open' : 'closed',
-    isRoot: true,
-    owner: null
+  const UpgradableConstructor = getUpgradableConstructor(sel, renderer);
+  let wasComponentUpgraded = false;
+  const element = new UpgradableConstructor(elm => {
+    const def = getComponentInternalDef(Ctor);
+    createVM(elm, def, {
+      tagName: sel,
+      mode: options.mode !== 'closed' ? 'open' : 'closed',
+      owner: null,
+      renderer
+    });
+    setHiddenField$1(elm, ConnectingSlot, connectRootElement);
+    setHiddenField$1(elm, DisconnectingSlot, disconnectRootElement);
+    wasComponentUpgraded = true;
   });
-  setHiddenField$1(element, ConnectingSlot, connectRootElement);
-  setHiddenField$1(element, DisconnectingSlot, disconnectedRootElement);
+
+  if (!wasComponentUpgraded) {
+    console.error(`Unexpected tag name "${sel}". This name is a registered custom element, preventing LWC to upgrade the element.`);
+  }
+
   return element;
 }
 
+const ComponentConstructorToCustomElementConstructorMap = new Map();
+
+function getCustomElementConstructor(Ctor) {
+  if (Ctor === BaseLightningElement) {
+    throw new TypeError(`Invalid Constructor. LightningElement base class can't be claimed as a custom element.`);
+  }
+
+  let ce = ComponentConstructorToCustomElementConstructorMap.get(Ctor);
+
+  if (isUndefined$1(ce)) {
+    ce = buildCustomElementConstructor(Ctor);
+    ComponentConstructorToCustomElementConstructorMap.set(Ctor, ce);
+  }
+
+  return ce;
+}
+
+defineProperty$2(BaseLightningElement, 'CustomElementConstructor', {
+  get() {
+    return getCustomElementConstructor(this);
+  }
+
+});
+freeze$2(BaseLightningElement);
+seal$2(BaseLightningElement.prototype);
+
 function stylesheet(hostSelector, shadowSelector, nativeShadow) {
-  return ".center" + shadowSelector + " {text-align: center;}\n.link" + shadowSelector + " {border: none;padding: 10px;border-radius: 5px;text-decoration: none;background-color: #ff6000;color: white;margin-left: 33%;margin-right: 33%;display: inline-block;margin-top: 1em;}\n.info" + shadowSelector + " {color: black;background-color: #e4f2f8;margin: auto;padding: 15px 10px;text-align: left;width: 300px;border-radius: 5px;}\n.code" + shadowSelector + " {font-family: monospace;}\n.container" + shadowSelector + " {margin-top: 30px;}\nimg" + shadowSelector + " {max-width: 150px;}\n.greeting" + shadowSelector + " {height: 75px;}\n.slds-button-group" + shadowSelector + " button" + shadowSelector + " {text-transform: uppercase;}\n";
+  return [".center", shadowSelector, " {text-align: center;}\n.link", shadowSelector, " {border: none;padding: 10px;border-radius: 5px;text-decoration: none;background-color: #ff6000;color: white;margin-left: 33%;margin-right: 33%;display: inline-block;margin-top: 1em;}\n.info", shadowSelector, " {color: black;background-color: #e4f2f8;margin: auto;padding: 15px 10px;text-align: left;width: 300px;border-radius: 5px;}\n.code", shadowSelector, " {font-family: monospace;}\n.container", shadowSelector, " {margin-top: 30px;}\nimg", shadowSelector, " {max-width: 150px;}\n.greeting", shadowSelector, " {height: 75px;}\n.slds-button-group", shadowSelector, " button", shadowSelector, " {text-transform: uppercase;}\n"].join('');
 }
 var _implicitStylesheets = [stylesheet];
 
 function stylesheet$1(hostSelector, shadowSelector, nativeShadow) {
-  return ".col" + shadowSelector + " {display: inline-block;width: 30%;margin: 1rem;}\n.slds-text-link:hover" + shadowSelector + " {cursor: pointer;}\npre" + shadowSelector + " {text-align: left;border: 1px solid #dee2e6;border-radius: 10px;padding: 1.2rem;background-color: #364149 !important;color: #fff !important;}\n";
+  return [".col", shadowSelector, " {display: inline-block;width: 30%;margin: 1rem;}\n.slds-text-link:hover", shadowSelector, " {cursor: pointer;}\npre", shadowSelector, " {text-align: left;border: 1px solid #dee2e6;border-radius: 10px;padding: 1.2rem;background-color: #364149 !important;color: #fff !important;}\n"].join('');
 }
 var _implicitStylesheets$1 = [stylesheet$1];
 
@@ -9773,7 +10588,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "slds-backdrop_open": true
     },
     styleMap: {
-      "opacity": "1.0"
+      "opacity": "1"
     },
     key: 20
   }, []) : null];
@@ -9816,7 +10631,7 @@ var _cSampleAppItem = registerComponent(SampleAppItem, {
 });
 
 function stylesheet$2(hostSelector, shadowSelector, nativeShadow) {
-  return "\n" + (nativeShadow ? (":host {display: block;}") : (hostSelector + " {display: block;}")) + "\n";
+  return ["\n", (nativeShadow ? ":host {display: block;}" : [hostSelector, " {display: block;}"].join('')), "\n"].join('');
 }
 var _implicitStylesheets$2 = [stylesheet$2];
 
