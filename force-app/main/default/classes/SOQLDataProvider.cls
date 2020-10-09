@@ -75,9 +75,20 @@ public inherited sharing virtual class SOQLDataProvider extends ChartDataProvide
     aChartData.labels = new List<String>();
     aChartData.detail = new List<Object>();
 
+    final Map<String,List<Object>> hierarchicalData = new Map<String,List<Object>>();
+
     for (AggregateResult aResult : Database.query(this.query)) {
       aChartData.labels.add((String) aResult.get(LABEL_ALIAS));
       aChartData.detail.add(aResult.get(VALUE_ALIAS));
+      final String grouping = this.query.contains(GROUPING_ALIAS) ? aResult.get(GROUPING_ALIAS) : 'default';
+      if(!hierarchicalData.containsKey(grouping)) {
+        hierarchicalData.put(grouping, new List<Object>());
+      }
+      hierarchicalData.get(grouping).add(aResult.get(VALUE_ALIAS));
+    }
+
+    for(String key : hierarchicalData.keySet()) {
+      aChartData.detail.add(hierarchicalData.Get(key));
     }
 
     return new List<ChartDataProvider.ChartData>{ aChartData };
