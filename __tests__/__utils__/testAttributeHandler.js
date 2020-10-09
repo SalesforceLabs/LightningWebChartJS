@@ -5,7 +5,7 @@ import { randomBytes } from 'crypto';
 
 Object.defineProperty(global.self, 'crypto', {
   value: {
-    getRandomValues: arr => randomBytes(arr.length)
+    getRandomValues: (arr) => randomBytes(arr.length)
   }
 });
 
@@ -54,13 +54,13 @@ function testChartOptions(
 ) {
   describe.each(listChartOptionMock)(
     'Exposed property matches ChartJS option',
-    item => {
+    (item) => {
       test(`${item.propertyName}`, async () => {
         const element = createElement('x-test', { is: constructor });
         document.body.appendChild(element);
 
         let detail;
-        document.body.addEventListener(eventName, evt => {
+        document.body.addEventListener(eventName, (evt) => {
           detail = evt.detail;
         });
 
@@ -81,5 +81,5 @@ global.testAttribute = (constructor, listChartOptionMock, eventName) => {
 
 global.flushPromises = () => {
   // eslint-disable-next-line no-undef
-  return new Promise(resolve => setImmediate(resolve));
+  return new Promise((resolve) => setImmediate(resolve));
 };

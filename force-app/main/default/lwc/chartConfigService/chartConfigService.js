@@ -29,7 +29,7 @@ export default class ChartConfigService {
       };
     } else {
       this._config[option] = this._config[option] || {};
-      Object.keys(payload).forEach(attribut => {
+      Object.keys(payload).forEach((attribut) => {
         // If the attribut is an array
         if (Array.isArray(this._config[option][attribut])) {
           if (Array.isArray(payload[attribut])) {
@@ -72,10 +72,10 @@ export default class ChartConfigService {
     // In the scales case we need to remove the uuid related to the scale object
     if (option === ATTRIBUTE_CARTESIAN_AXES) {
       Object.keys(this._config[option])
-        .filter(scale => this._config[option][scale])
-        .forEach(scale => {
+        .filter((scale) => this._config[option][scale])
+        .forEach((scale) => {
           this._config[option][scale] = this._config[option][scale].filter(
-            axis => axis.uuid !== payload[scale][0].uuid
+            (axis) => axis.uuid !== payload[scale][0].uuid
           );
           this._scales[scale] = this._config[option][scale];
         });
@@ -100,16 +100,16 @@ export default class ChartConfigService {
   // - undefined attribute
   // do it recursively and store the result to avoid multiple times the same computation
   static cleanObject(obj) {
-    const validObj = o =>
+    const validObj = (o) =>
       (Object.keys(o).length || (Array.isArray(o) && o.length)) && o;
-    const itemToBool = item => {
+    const itemToBool = (item) => {
       return typeof item !== 'object' || item === null
         ? item
         : // eslint-disable-next-line no-use-before-define
           validObj(clean(item));
     };
 
-    const clean = o =>
+    const clean = (o) =>
       validObj(
         Array.isArray(o)
           ? o.map(itemToBool).filter(Boolean)
