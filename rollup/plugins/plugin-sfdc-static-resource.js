@@ -2,7 +2,7 @@
 
 const STATIC_RESOURCE_ORIGIN = '@salesforce/resourceUrl';
 
-module.exports = targetDir => ({
+module.exports = (targetDir) => ({
   name: 'static-resource',
 
   // https://rollupjs.org/guide/en/#resolveid
