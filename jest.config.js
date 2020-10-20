@@ -1,6 +1,9 @@
 const { jestConfig } = require('@salesforce/sfdx-lwc-jest/config');
+const setupFilesAfterEnv = jestConfig.setupFilesAfterEnv || [];
+setupFilesAfterEnv.push('./__tests__/__utils__/jest-sa11y-setup.js');
 module.exports = {
   ...jestConfig,
+  setupFilesAfterEnv,
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 

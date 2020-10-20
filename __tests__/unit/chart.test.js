@@ -108,6 +108,19 @@ describe.each(CHARTS)('DOM Tests for individual charts', (chart) => {
       expect(queriedElement).toBeDefined();
     });
   });
+  describe('Chart type is accessible', () => {
+    test(`${chartName} ariaLabel is set according sa11y rules`, async () => {
+      const element = createElement('x-chart', {
+        is: chart.class
+      });
+      element.setAttribute('type', chart.type);
+      document.body.appendChild(element);
+
+      return flushPromises().then(() => {
+        expect(element).toBeAccessible();
+      });
+    });
+  });
 });
 
 const TEST_DATA_PROPERTIES = [
