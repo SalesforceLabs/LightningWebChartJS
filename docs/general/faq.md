@@ -15,5 +15,5 @@ Yes, but you might need to encapsulate beforehand the charts in another LWC. Due
 ## Does it support mobile?
 Yes, LWCC is totally responsive so you can create charts to display in different screen sizes. To benefit from a better responsive experience, please consider using the `responsive` attribute in the Chart component.
 
-## SOQL using :recordId do not render in the App Builder?
-Yes, using `:recordId` in the SOQL the LWCC Chart Builder component do not display data in the App builder because SOQL cannot be executed in the App Builder using  because the context is not set to an actual record and then recordId is not populated. 
+## SOQL using :recordId do not render in the App Builder and the Community Builder?
+Yes, using `:recordId` in the SOQL the LWCC Chart Builder component do not display any data in the App builder or Community Builder because the context is not set to an actual record and then recordId is not populated.
