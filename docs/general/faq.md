@@ -6,7 +6,7 @@ LWCC extends the power of Chart.js and supports all the languages, included righ
 ## Where can I use LWCCBuilder?
 The LWCCBuilder component can be dropped into the following type of Salesforce pages: App page, Home page, Record Page, Community Page.
 
-## Can LWCC components be used inside other Lighining Web Componentes?
+## Can LWCC components be used inside other Lighining Web Components?
 Yes, LWCC has been built using Lightning Web Components, so you can include them inside your LWC components. Please keep in mind that the AppExchange version will install in your org a managed package with a custom namespace (lwcc), that cannot be accessed directly from a LWC (this is a Salesforce Platform limitation yet). However, you can enjoy the full LWCC developer experience by cloning the repository, including it in your project and deploying it in your org!
 
 ## Can LWCC components be used inside other Aura Components?
