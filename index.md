@@ -65,6 +65,8 @@ LWCC is a suit of Salesforce Lightning Web Components created to bring you all t
 
 LWCC is available in [AppExchange](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000G12exUAB) to be installed directly into your Salesforce org.
 
+Please keep in mind that the AppExchange version will install in your org a managed package with a custom namespace (lwcc), that cannot be accessed directly from your custom Lightning Web Components (this is a Salesforce Platform limitation yet). You will enjoy the App Builder version, but the Developer Experience for creating custom charts with code might be limited (check out the next installation method to avoid this problem).
+
 ### SFDX
 
 Alternatively, you integrate the LWCC project hosted in GitHub directly into your Salesforce Project

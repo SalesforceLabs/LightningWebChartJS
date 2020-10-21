@@ -6,14 +6,14 @@ LWCC extends the power of Chart.js and supports all the languages, included righ
 ## Where can I use LWCCBuilder?
 The LWCCBuilder component can be dropped into the following type of Salesforce pages: App page, Home page, Record Page, Community Page.
 
-## Can LWCC components be used inside Aura Components?
-Yes, LWCC has been built using Lightning Web Components, so you can include them inside your Aura components.
+## Can LWCC components be used inside other Lighining Web Components?
+Yes, LWCC has been built using Lightning Web Components, so you can include them inside your LWC components. Please keep in mind that the AppExchange version will install in your org a managed package with a custom namespace (lwcc), that cannot be accessed directly from a LWC (this is a Salesforce Platform limitation yet). However, you can enjoy the full LWCC developer experience by cloning the repository, including it in your project and deploying it in your org!
 
-## Can LWCC components be used inside Lighining Web Componentes?
-Yes, LWCC has been built using Lightning Web Components, so you can include them inside your LWC components.
+## Can LWCC components be used inside other Aura Components?
+Yes, but you might need to encapsulate beforehand the charts in another LWC. Due to how the charts are composed in LWC using slots, they cannot be converted into Aura facets. Also, keep in mind that the AppExchange version will install in your org a managed packaged with a custom namespace (lwcc), that cannot be accessed directly from a LWC (this is a Salesforce Platform limitation yet). However, you can enjoy the full LWCC developer experience by cloning the repository, including it in your project and deploying it in your org!
 
 ## Does it support mobile?
 Yes, LWCC is totally responsive so you can create charts to display in different screen sizes. To benefit from a better responsive experience, please consider using the `responsive` attribute in the Chart component.
 
-## SOQL using :recordId do not render in the App Builder?
-Yes, using `:recordId` in the SOQL the LWCC Chart Builder component do not display data in the App builder because SOQL cannot be executed in the App Builder using  because the context is not set to an actual record and then recordId is not populated. 
+## SOQL using :recordId do not render in the App Builder and the Community Builder?
+Yes, using `:recordId` in the SOQL the LWCC Chart Builder component do not display any data in the App builder or Community Builder because the context is not set to an actual record and then recordId is not populated.
