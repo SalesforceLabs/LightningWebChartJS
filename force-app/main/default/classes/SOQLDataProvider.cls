@@ -76,7 +76,7 @@ public inherited sharing virtual class SOQLDataProvider extends ChartDataProvide
     aChartData.detail = new List<Object>();
 
     for (AggregateResult aResult : Database.query(this.query)) {
-      aChartData.labels.add((String) aResult.get(LABEL_ALIAS));
+      aChartData.labels.add('' + aResult.get(LABEL_ALIAS));
       aChartData.detail.add(aResult.get(VALUE_ALIAS));
     }
 
