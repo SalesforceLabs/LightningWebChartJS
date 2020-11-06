@@ -131,7 +131,7 @@ private class SOQLDataProviderTest {
   }
 
   @isTest
-  static void testGetData() {
+  static void testGetDataWithStringLabel() {
     insert new Opportunity(
       CloseDate = date.today().addMonths(2),
       Name = 'test',
@@ -149,6 +149,39 @@ private class SOQLDataProviderTest {
       new List<String>{ OPPORTUNITY_STAGE_NAME },
       chartDatas[0].labels,
       'chartDatas.label must equals ' + OPPORTUNITY_STAGE_NAME
+    );
+    System.assertEquals(
+      OPPORTUNITY_AMOUNT,
+      (Decimal) chartDatas[0].detail[0],
+      'chartDatas.detail must equals ' + OPPORTUNITY_AMOUNT
+    );
+    System.assertEquals(
+      null,
+      chartDatas[0].bgColor,
+      'chartDatas.bgColor must be null'
+    );
+  }
+
+  @isTest
+  static void testGetDataWithDateLabel() {
+    final Date twoMonthFromNow = date.today().addMonths(2);
+    insert new Opportunity(
+      CloseDate = twoMonthFromNow,
+      Name = 'test',
+      StageName = OPPORTUNITY_STAGE_NAME,
+      Amount = OPPORTUNITY_AMOUNT
+    );
+    Test.startTest();
+    final SOQLDataProvider aSOQLDataProvider = new SOQLDataProvider();
+    aSOQLDataProvider.init(
+      'SELECT CloseDate label, SUM(Amount) value FROM Opportunity WHERE IsClosed = false WITH SECURITY_ENFORCED GROUP BY CloseDate LIMIT 10'
+    );
+    final List<ChartDataProvider.ChartData> chartDatas = aSOQLDataProvider.getData();
+    Test.stopTest();
+    System.assertEquals(
+      new List<String>{ '' + twoMonthFromNow },
+      chartDatas[0].labels,
+      'chartDatas.label must equals ' + twoMonthFromNow
     );
     System.assertEquals(
       OPPORTUNITY_AMOUNT,
