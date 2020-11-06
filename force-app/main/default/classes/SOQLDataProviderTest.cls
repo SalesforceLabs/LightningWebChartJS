@@ -195,6 +195,38 @@ private class SOQLDataProviderTest {
     );
   }
 
+  @isTest
+  static void testGetDataWithBooleanLabel() {
+    insert new Opportunity(
+      CloseDate = date.today().addMonths(2),
+      Name = 'test',
+      StageName = OPPORTUNITY_STAGE_NAME,
+      Amount = OPPORTUNITY_AMOUNT
+    );
+    Test.startTest();
+    final SOQLDataProvider aSOQLDataProvider = new SOQLDataProvider();
+    aSOQLDataProvider.init(
+      'SELECT IsClosed label, SUM(Amount) value FROM Opportunity WITH SECURITY_ENFORCED GROUP BY IsClosed LIMIT 10'
+    );
+    final List<ChartDataProvider.ChartData> chartDatas = aSOQLDataProvider.getData();
+    Test.stopTest();
+    System.assertEquals(
+      new List<String>{ 'false' },
+      chartDatas[0].labels,
+      'chartDatas.label must equals false'
+    );
+    System.assertEquals(
+      OPPORTUNITY_AMOUNT,
+      (Decimal) chartDatas[0].detail[0],
+      'chartDatas.detail must equals ' + OPPORTUNITY_AMOUNT
+    );
+    System.assertEquals(
+      null,
+      chartDatas[0].bgColor,
+      'chartDatas.bgColor must be null'
+    );
+  }
+
   public static final String OPPORTUNITY_STAGE_NAME = 'Prospecting';
   public static final Decimal OPPORTUNITY_AMOUNT = 20;
 }
