@@ -1070,66 +1070,6 @@ StaticHTMLCollection.prototype = create(HTMLCollection.prototype, {
     }
 
   },
-  forEach: {
-    writable: true,
-    enumerable: true,
-    configurable: true,
-
-    value(cb, thisArg) {
-      forEach.call(getHiddenField(this, Items$1), cb, thisArg);
-    }
-
-  },
-  entries: {
-    writable: true,
-    enumerable: true,
-    configurable: true,
-
-    value() {
-      return ArrayMap.call(getHiddenField(this, Items$1), (v, i) => [i, v]);
-    }
-
-  },
-  keys: {
-    writable: true,
-    enumerable: true,
-    configurable: true,
-
-    value() {
-      return ArrayMap.call(getHiddenField(this, Items$1), (v, i) => i);
-    }
-
-  },
-  values: {
-    writable: true,
-    enumerable: true,
-    configurable: true,
-
-    value() {
-      return getHiddenField(this, Items$1);
-    }
-
-  },
-  [Symbol.iterator]: {
-    writable: true,
-    configurable: true,
-
-    value() {
-      let nextIndex = 0;
-      return {
-        next: () => {
-          const items = getHiddenField(this, Items$1);
-          return nextIndex < items.length ? {
-            value: items[nextIndex++],
-            done: false
-          } : {
-            done: true
-          };
-        }
-      };
-    }
-
-  },
   [Symbol.toStringTag]: {
     configurable: true,
 
@@ -5581,7 +5521,8 @@ function updateDynamicChildren(parentElm, oldCh, newCh) {
   let oldEndIdx = oldCh.length - 1;
   let oldStartVnode = oldCh[0];
   let oldEndVnode = oldCh[oldEndIdx];
-  let newEndIdx = newCh.length - 1;
+  const newChEnd = newCh.length - 1;
+  let newEndIdx = newChEnd;
   let newStartVnode = newCh[0];
   let newEndVnode = newCh[newEndIdx];
   let oldKeyToIdx;
@@ -5648,7 +5589,13 @@ function updateDynamicChildren(parentElm, oldCh, newCh) {
 
   if (oldStartIdx <= oldEndIdx || newStartIdx <= newEndIdx) {
     if (oldStartIdx > oldEndIdx) {
-      const n = newCh[newEndIdx + 1];
+      let i = newEndIdx;
+      let n;
+
+      do {
+        n = newCh[++i];
+      } while (!isVNode(n) && i < newChEnd);
+
       before = isVNode(n) ? n.elm : null;
       addVnodes(parentElm, before, newCh, newStartIdx, newEndIdx);
     } else {
@@ -5658,18 +5605,22 @@ function updateDynamicChildren(parentElm, oldCh, newCh) {
 }
 
 function updateStaticChildren(parentElm, oldCh, newCh) {
-  const {
-    length
-  } = newCh;
+  const oldChLength = oldCh.length;
+  const newChLength = newCh.length;
 
-  if (oldCh.length === 0) {
-    addVnodes(parentElm, null, newCh, 0, length);
+  if (oldChLength === 0) {
+    addVnodes(parentElm, null, newCh, 0, newChLength);
+    return;
+  }
+
+  if (newChLength === 0) {
+    removeVnodes(parentElm, oldCh, 0, oldChLength);
     return;
   }
 
   let referenceElm = null;
 
-  for (let i = length - 1; i >= 0; i -= 1) {
+  for (let i = newChLength - 1; i >= 0; i -= 1) {
     const vnode = newCh[i];
     const oldVNode = oldCh[i];
 
@@ -8095,14 +8046,13 @@ function updateChildrenHook(oldVnode, vnode) {
 
 function allocateChildrenHook(vnode, vm) {
   const children = vnode.aChildren || vnode.children;
+  vm.aChildren = children;
 
   if (isTrue$1$1$1(vm.renderer.syntheticShadow)) {
     allocateInSlot(vm, children);
     vnode.aChildren = children;
     vnode.children = EmptyArray;
   }
-
-  vm.aChildren = children;
 }
 
 function createViewModelHook(elm, vnode) {
@@ -9703,18 +9653,6 @@ function getErrorBoundaryVM(vm) {
   }
 }
 
-function hasDifferentIdentities(a, b) {
-  if (a === b) {
-    return false;
-  }
-
-  if (isNull$1$1(a) || isNull$1$1(b)) {
-    return true;
-  }
-
-  return a.key !== b.key;
-}
-
 function allocateInSlot(vm, children) {
   {
     assert$1$1.invariant(isObject$2(vm.cmpSlots), `When doing manual allocation, there must be a cmpSlots object available.`);
@@ -9765,30 +9703,12 @@ function allocateInSlot(vm, children) {
       const vnodes = cmpSlots[key];
 
       for (let j = 0, a = cmpSlots[key].length; j < a; j += 1) {
-        if (hasDifferentIdentities(oldVNodes[j], vnodes[j])) {
+        if (oldVNodes[j] !== vnodes[j]) {
           markComponentAsDirty(vm);
           return;
         }
       }
     }
-
-    const {
-      aChildren
-    } = vm;
-    const slottedNewChildren = [];
-    const slottedOldChildren = [];
-
-    for (let i = 0, len = children.length; i < len; i += 1) {
-      const oldVNode = aChildren[i];
-
-      if (!isNull$1$1(oldVNode) && !isUndefined$1$1(oldVNode) && !isUndefined$1$1(oldVNode.elm)) {
-        const newVNode = children[i];
-        ArrayPush$1$1.call(slottedOldChildren, oldVNode);
-        ArrayPush$1$1.call(slottedNewChildren, newVNode);
-      }
-    }
-
-    updateStaticChildren(vm.elm, slottedOldChildren, slottedNewChildren);
   }
 }
 
