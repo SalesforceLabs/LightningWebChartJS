@@ -179,9 +179,9 @@ private class SOQLDataProviderTest {
     final List<ChartDataProvider.ChartData> chartDatas = aSOQLDataProvider.getData();
     Test.stopTest();
     System.assertEquals(
-      new List<String>{ '' + twoMonthFromNow },
+      new List<String>{ twoMonthFromNow.format() },
       chartDatas[0].labels,
-      'chartDatas.label must equals ' + twoMonthFromNow
+      'chartDatas.label must equals ' + twoMonthFromNow.format()
     );
     System.assertEquals(
       OPPORTUNITY_AMOUNT,
