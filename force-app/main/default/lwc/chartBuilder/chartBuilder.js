@@ -9,12 +9,9 @@ import {
 import getChartData from '@salesforce/apex/ChartBuilderController.getChartData';
 
 const RADIAL_TYPE = [POLARAREA_CHART_TYPE, RADAR_CHART_TYPE];
+const CIRCULAR_TYPE = [DOUGHNUT_CHART_TYPE, PIE_CHART_TYPE];
 
-const DIMENSIONABLE_TYPES = [
-  DOUGHNUT_CHART_TYPE,
-  PIE_CHART_TYPE,
-  ...RADIAL_TYPE
-];
+const DIMENSIONABLE_TYPES = [...CIRCULAR_TYPE, ...RADIAL_TYPE];
 
 export default class ChartBuilder extends LightningElement {
   containerClass = ChartBuilder.DEFAULT_CSS_CLASS;
@@ -146,6 +143,10 @@ export default class ChartBuilder extends LightningElement {
       // pass the custom handler to the getData service from the server
       this._getChartDataHandler(this._handler, this.recordId);
     }
+  }
+
+  get isCircular() {
+    return CIRCULAR_TYPE.includes(this.type);
   }
 
   get isRadial() {
