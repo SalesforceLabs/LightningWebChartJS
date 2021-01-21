@@ -140,19 +140,26 @@ code {
 .samples-container code{
   color: #fff !important;
 }
-pre > code {
+
+pre > code,
+.language-js .s1,
+.language-js .s2,
+.language-js .o {
   color: #fff !important;
 }
 
-pre .nt, .highlight .nt{
+pre .nt, .highlight .nt,
+.language-js .highlight .k {
   color: #e83e8c !important;
 }
 
-pre .na, .highlight .na{
+pre .na, .highlight .na,
+.language-js .highlight .kd {
   color: #3ec6e8 !important;
 }
 
-pre .s, .highlight .s{
+pre .s, .highlight .s, 
+.language-js .highlight .nx {
   color: #e8c379 !important;
 }
 

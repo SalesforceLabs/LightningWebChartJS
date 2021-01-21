@@ -17,3 +17,44 @@ Yes, LWCC is totally responsive so you can create charts to display in different
 
 ## SOQL using :recordId do not render in the App Builder and the Community Builder?
 Yes, using `:recordId` in the SOQL the LWCC Chart Builder component do not display any data in the App builder or Community Builder because the context is not set to an actual record and then recordId is not populated.
+
+## How can I use the callbacks in LWC?
+Some components can expose attributes of type `function` which allows you perform some dynamic transformations before returning an error. One example could be to display a custom message for a tooltip in a Cartesian Cateegory Axis. To do this, you can simply bind a function the same way you bind any other variable:
+
+*myComponent.html*
+```html
+<template>
+    ...
+    <c-cartesian-category-axis axis="x" ticks-callback={handleTicksCallback}></c-cartesian-category-axis>
+    ...
+</template>
+```
+*myComponent.js*
+```js
+...
+export default class MyComponent extends LightningElement {
+
+    // This is your callback function, binded to the cartesianCategoryAxis.ticksCallback property
+    handleTicksCallback(tooltipItem){
+        return `Custom title for ${tooltipItem[0].label} is here!`;
+    }
+}
+```
+
+## How can I use the callbacks in LWC and access properties of the current component?
+Following the example above, you will get an `undefined` value if you want to access an attribute of your component from your callback function. This is because the [scope](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) of `this` will change when the callback function is called, so the attributes of your component won't be accessible anymore.
+
+To fix this, you can simply change the definition of the callback from a [function declaration to a function expression](https://developer.mozilla.org/en-US/docs/web/JavaScript/Reference/Operators/function) using [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+By using the arrow functions, the callback will keep the scope of `this` to the component context.
+
+*myComponent.js*
+```js
+...
+export default class MyComponent extends LightningElement {
+    salutation = 'Hey!';
+
+    handleTicksCallback = (tooltipItem) => {
+        return `${this.salutation} Custom title for ${tooltipItem[0].label} is here!`;
+    }
+}
+```
