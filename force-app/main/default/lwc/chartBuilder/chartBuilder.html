@@ -22,11 +22,13 @@
               ></c-data>
             </template>
           </c-dataset>
-          <c-title
-            text={title}
-            fontfamily="'Salesforce Sans', Arial, sans-serif"
-            fontcolor="rgb(8, 7, 7)"
-          ></c-title>
+          <template if:true={title}>
+            <c-title
+              text={title}
+              fontfamily="'Salesforce Sans', Arial, sans-serif"
+              fontcolor="rgb(8, 7, 7)"
+            ></c-title>
+          </template>
           <c-legend
             position={legendPosition}
             label-fontfamily="'Salesforce Sans', Arial, sans-serif"
