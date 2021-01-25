@@ -22,26 +22,30 @@
               ></c-data>
             </template>
           </c-dataset>
-          <c-title
-            text={title}
-            fontfamily="'Salesforce Sans', Arial, sans-serif"
-            fontcolor="rgb(8, 7, 7)"
-          ></c-title>
+          <template if:true={title}>
+            <c-title
+              text={title}
+              fontfamily="'Salesforce Sans', Arial, sans-serif"
+              fontcolor="rgb(8, 7, 7)"
+            ></c-title>
+          </template>
           <c-legend
             position={legendPosition}
             label-fontfamily="'Salesforce Sans', Arial, sans-serif"
             label-fontcolor="rgb(8, 7, 7)"
           ></c-legend>
-          <template if:false={isRadial}>
-            <c-cartesian-linear-axis
-              axis="y"
-              ticks-beginatzero="true"
-            ></c-cartesian-linear-axis>
-          </template>
-          <template if:true={isRadial}>
-            <c-radial-linear-axis
-              ticks-beginatzero="true"
-            ></c-radial-linear-axis>
+          <template if:false={isCircular}>
+            <template if:false={isRadial}>
+              <c-cartesian-linear-axis
+                axis="y"
+                ticks-beginatzero="true"
+              ></c-cartesian-linear-axis>
+            </template>
+            <template if:true={isRadial}>
+              <c-radial-linear-axis
+                ticks-beginatzero="true"
+              ></c-radial-linear-axis>
+            </template>
           </template>
         </c-chart>
       </template>
