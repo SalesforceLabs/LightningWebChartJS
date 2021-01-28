@@ -1,6 +1,8 @@
 @isTest
 private class ChartBuilderControllerTest {
-  static final String OPPORTUNITY_STAGE_NAME = 'Prospecting';
+  static final String OPPORTUNITY_STAGE_NAME = Opportunity.StageName.getDescribe()
+      .getPicklistValues()[0]
+    .getValue();
   static final Decimal OPPORTUNITY_AMOUNT = 20;
   static final String ASSERT_FALSE_MESSAGE = 'Exception thrown should prevent code to reach this point';
 
@@ -16,21 +18,28 @@ private class ChartBuilderControllerTest {
 
   @isTest
   static void testControllerWithSOQL() {
+    Opportunity op = [
+      SELECT Amount, IsClosed, StageName
+      FROM Opportunity
+      LIMIT 1
+    ];
     Test.startTest();
     final List<ChartDataProvider.ChartData> chartDatas = ChartBuilderController.getChartData(
       SOQLDataProvider.class.getName(),
-      'SELECT StageName label, SUM(Amount) value FROM Opportunity WHERE IsClosed = false WITH SECURITY_ENFORCED GROUP BY StageName LIMIT 10'
+      'SELECT StageName label, SUM(Amount) value FROM Opportunity WHERE IsClosed = ' +
+      op.IsClosed +
+      ' WITH SECURITY_ENFORCED GROUP BY StageName LIMIT 10'
     );
     Test.stopTest();
     System.assertEquals(
-      new List<String>{ OPPORTUNITY_STAGE_NAME },
+      new List<String>{ op.StageName },
       chartDatas[0].labels,
-      'chartDatas.label must equals ' + OPPORTUNITY_STAGE_NAME
+      'chartDatas.label must equals ' + op.StageName
     );
     System.assertEquals(
-      OPPORTUNITY_AMOUNT,
+      op.Amount,
       (Decimal) chartDatas[0].detail[0],
-      'chartDatas.detail must equals ' + OPPORTUNITY_AMOUNT
+      'chartDatas.detail must equals ' + op.Amount
     );
     System.assertEquals(
       null,
