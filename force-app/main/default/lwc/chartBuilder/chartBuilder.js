@@ -79,17 +79,13 @@ export default class ChartBuilder extends LightningElement {
       this._throttlingDetails = true;
       Promise.resolve()
         .then(() => {
-          this._throttlingDetails = false;
-
           // Build the data structure to use to iterate
           // and create data component in the template
           const palette = ChartBuilder.DEFAULT_PALETTE[this.colorPalette];
-          this.dimensionsLabels = this.dimensionsLabels || [
-            ...new Set(data.map((x) => x.labels).flat())
-          ];
+          this.dimensionsLabels = this._detailsLabels;
           this._details = data.map((x, i) => ({
             detail: x.detail,
-            labels: this._detailsLabels[i],
+            labels: x.labels,
             uuid: x.uuid || nanoid(4),
             bgColor:
               x.bgColor || this.isDimensionable
@@ -99,7 +95,8 @@ export default class ChartBuilder extends LightningElement {
           }));
           this.error = false;
         })
-        .catch((error) => this.errorCallback(error));
+        .catch((error) => this.errorCallback(error))
+        .finally(() => (this._throttlingDetails = false));
     } catch (error) {
       this.errorCallback(error);
     }
@@ -178,8 +175,41 @@ export default class ChartBuilder extends LightningElement {
     this.isLoaded = false;
     getChartData({ chartDataProviderType: handlerName, ctx: input })
       .then((result) => {
-        // eslint-disable-next-line @lwc/lwc/no-api-reassignments
-        this.details = result;
+        try {
+          const data = result
+            ? Array.isArray(result)
+              ? result
+              : JSON.parse(result)
+            : null;
+          if (!data || this._throttlingDetails) return;
+
+          this._throttlingDetails = true;
+          Promise.resolve()
+            .then(() => {
+              // Build the data structure to use to iterate
+              // and create data component in the template
+              const palette = ChartBuilder.DEFAULT_PALETTE[this.colorPalette];
+              this.dimensionsLabels = this.dimensionsLabels || [
+                ...new Set(data.map((x) => x.labels).flat())
+              ];
+              this._details = data.map((x, i) => ({
+                detail: x.detail,
+                labels: this._detailsLabels[i],
+                uuid: x.uuid || nanoid(4),
+                bgColor:
+                  x.bgColor || this.isDimensionable
+                    ? x.detail.map((_, j) => palette[j % palette.length])
+                    : palette[i % palette.length],
+                fill: this.fill
+              }));
+              this.error = false;
+            })
+            .catch((error) => this.errorCallback(error))
+            .finally(() => (this._throttlingDetails = false));
+        } catch (error) {
+          this.errorCallback(error);
+        }
+        this.isLoaded = true;
       })
       .catch((error) => {
         this.errorCallback(error.body.message);
