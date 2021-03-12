@@ -65,7 +65,8 @@
               axis="y"
               ticks-beginatzero="true"
               stacked="true"
-            ></c-cartesian-linear-axis>
+            >
+            </c-cartesian-linear-axis>
             <c-legend position="bottom"></c-legend>
           </c-chart>
         </div>
@@ -136,7 +137,8 @@
               axis="x"
               ticks-beginatzero="true"
               stacked="true"
-            ></c-cartesian-linear-axis>
+            >
+            </c-cartesian-linear-axis>
             <c-legend position="bottom"></c-legend>
           </c-chart>
         </div>
@@ -211,6 +213,115 @@
       >
         <div class="slds-card">
           <c-chart type="doughnut" responsive="true">
+            <c-dataset labels={chart.datasetLabels}>
+              <template for:each={chart.datasets} for:item="item">
+                <c-data
+                  key={item.label}
+                  label={item.label}
+                  detail={item.detail}
+                  backgroundcolor={item.backgroundcolor}
+                  fill={item.fill}
+                ></c-data>
+              </template>
+            </c-dataset>
+            <c-title text={chart.title}></c-title>
+            <c-legend position="bottom"></c-legend>
+          </c-chart>
+        </div>
+      </div>
+    </template>
+
+    <!-- Half Dougnut Charts -->
+    <template for:each={pieCharts} for:item="chart">
+      <div
+        key={chart.title}
+        class="slds-col slds-size_1-of-4 slds-var-p-around_small"
+      >
+        <div class="slds-card">
+          <c-chart
+            type="doughnut"
+            responsive="true"
+            rotation={rotation}
+            circumference={circumference}
+          >
+            <c-dataset labels={chart.datasetLabels}>
+              <template for:each={chart.datasets} for:item="item">
+                <c-data
+                  key={item.label}
+                  label={item.label}
+                  detail={item.detail}
+                  backgroundcolor={item.backgroundcolor}
+                  fill={item.fill}
+                ></c-data>
+              </template>
+            </c-dataset>
+            <c-title text={chart.title}></c-title>
+            <c-legend position="bottom"></c-legend>
+          </c-chart>
+        </div>
+      </div>
+    </template>
+
+    <!-- Bubble Charts -->
+    <template for:each={bubbleCharts} for:item="chart">
+      <div
+        key={chart.title}
+        class="slds-col slds-size_1-of-4 slds-var-p-around_small"
+      >
+        <div class="slds-card">
+          <c-chart type="bubble" responsive="true">
+            <c-dataset labels={chart.datasetLabels}>
+              <template for:each={chart.datasets} for:item="item">
+                <c-data
+                  key={item.label}
+                  label={item.label}
+                  detail={item.detail}
+                  backgroundcolor={item.backgroundcolor}
+                  fill={item.fill}
+                ></c-data>
+              </template>
+            </c-dataset>
+            <c-title text={chart.title}></c-title>
+            <c-legend position="bottom"></c-legend>
+          </c-chart>
+        </div>
+      </div>
+    </template>
+
+    <!-- Radar Charts -->
+    <template for:each={radarCharts} for:item="chart">
+      <div
+        key={chart.title}
+        class="slds-col slds-size_1-of-4 slds-var-p-around_small"
+      >
+        <div class="slds-card">
+          <c-chart type="radar" responsive="true">
+            <c-dataset labels={chart.datasetLabels}>
+              <template for:each={chart.datasets} for:item="item">
+                <c-data
+                  key={item.label}
+                  label={item.label}
+                  detail={item.detail}
+                  backgroundcolor={item.backgroundcolor}
+                  fill="true"
+                ></c-data>
+              </template>
+            </c-dataset>
+            <c-title text={chart.title}></c-title>
+            <c-legend position="bottom"></c-legend>
+          </c-chart>
+        </div>
+      </div>
+    </template>
+
+    <!-- PolarArea Charts -->
+    <template for:each={polarAreaCharts} for:item="chart">
+      <div
+        key={chart.title}
+        class="slds-col slds-size_1-of-4 slds-var-p-around_small"
+      >
+        <div class="slds-card">
+          <c-chart type="polarArea" responsive="true">
             <c-dataset labels={chart.datasetLabels}>
               <template for:each={chart.datasets} for:item="item">
                 <c-data
