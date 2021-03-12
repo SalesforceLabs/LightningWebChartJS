@@ -1,0 +1,232 @@
+<template>
+  <!-- Bar single dataset-->
+  <div class="slds-grid slds-wrap">
+    <!-- Bar Charts -->
+    <template for:each={barCharts} for:item="chart">
+      <div
+        key={chart.title}
+        class="slds-col slds-size_1-of-4 slds-var-p-around_small"
+      >
+        <div class="slds-card">
+          <c-chart type="bar" responsive="true">
+            <c-dataset labels={chart.datasetLabels}>
+              <template for:each={chart.datasets} for:item="item">
+                <c-data
+                  key={item.label}
+                  label={item.label}
+                  detail={item.detail}
+                  backgroundcolor={item.backgroundcolor}
+                  fill={item.fill}
+                ></c-data>
+              </template>
+            </c-dataset>
+            <c-title text={chart.title}></c-title>
+            <c-cartesian-category-axis
+              axis="x"
+              position="top"
+            ></c-cartesian-category-axis>
+            <c-cartesian-linear-axis
+              axis="y"
+              ticks-beginatzero="true"
+            ></c-cartesian-linear-axis>
+            <c-legend position="bottom"></c-legend>
+          </c-chart>
+        </div>
+      </div>
+    </template>
+
+    <!-- Stacked Bar Charts -->
+    <template for:each={barCharts} for:item="chart">
+      <div
+        key={chart.title}
+        class="slds-col slds-size_1-of-4 slds-var-p-around_small"
+      >
+        <div class="slds-card">
+          <c-chart type="bar" responsive="true">
+            <c-dataset labels={chart.datasetLabels}>
+              <template for:each={chart.datasets} for:item="item">
+                <c-data
+                  key={item.label}
+                  label={item.label}
+                  detail={item.detail}
+                  backgroundcolor={item.backgroundcolor}
+                  fill={item.fill}
+                  stack="1"
+                ></c-data>
+              </template>
+            </c-dataset>
+            <c-title text={chart.title}></c-title>
+            <c-cartesian-category-axis
+              axis="x"
+              position="top"
+              stacked="true"
+            ></c-cartesian-category-axis>
+            <c-cartesian-linear-axis
+              axis="y"
+              ticks-beginatzero="true"
+              stacked="true"
+            ></c-cartesian-linear-axis>
+            <c-legend position="bottom"></c-legend>
+          </c-chart>
+        </div>
+      </div>
+    </template>
+
+    <!-- HorizontalBar Charts -->
+    <template for:each={horizontalBarCharts} for:item="chart">
+      <div
+        key={chart.title}
+        class="slds-col slds-size_1-of-4 slds-var-p-around_small"
+      >
+        <div class="slds-card">
+          <c-chart type="horizontalBar" responsive="true">
+            <c-dataset labels={chart.datasetLabels}>
+              <template for:each={chart.datasets} for:item="item">
+                <c-data
+                  key={item.label}
+                  label={item.label}
+                  detail={item.detail}
+                  backgroundcolor={item.backgroundcolor}
+                  fill={item.fill}
+                ></c-data>
+              </template>
+            </c-dataset>
+            <c-title text={chart.title}></c-title>
+            <c-cartesian-category-axis
+              axis="y"
+              position="top"
+            ></c-cartesian-category-axis>
+            <c-cartesian-linear-axis
+              axis="x"
+              ticks-beginatzero="true"
+            ></c-cartesian-linear-axis>
+            <c-legend position="bottom"></c-legend>
+          </c-chart>
+        </div>
+      </div>
+    </template>
+
+    <!-- HorizontalBar Charts -->
+    <template for:each={horizontalBarCharts} for:item="chart">
+      <div
+        key={chart.title}
+        class="slds-col slds-size_1-of-4 slds-var-p-around_small"
+      >
+        <div class="slds-card">
+          <c-chart type="horizontalBar" responsive="true">
+            <c-dataset labels={chart.datasetLabels}>
+              <template for:each={chart.datasets} for:item="item">
+                <c-data
+                  key={item.label}
+                  label={item.label}
+                  detail={item.detail}
+                  backgroundcolor={item.backgroundcolor}
+                  fill={item.fill}
+                  stack="1"
+                ></c-data>
+              </template>
+            </c-dataset>
+            <c-title text={chart.title}></c-title>
+            <c-cartesian-category-axis
+              axis="y"
+              position="top"
+              stacked="true"
+            ></c-cartesian-category-axis>
+            <c-cartesian-linear-axis
+              axis="x"
+              ticks-beginatzero="true"
+              stacked="true"
+            ></c-cartesian-linear-axis>
+            <c-legend position="bottom"></c-legend>
+          </c-chart>
+        </div>
+      </div>
+    </template>
+
+    <!-- Line Charts -->
+    <template for:each={lineCharts} for:item="chart">
+      <div
+        key={chart.title}
+        class="slds-col slds-size_1-of-4 slds-var-p-around_small"
+      >
+        <div class="slds-card">
+          <c-chart type="line" responsive="true">
+            <c-dataset labels={chart.datasetLabels}>
+              <template for:each={chart.datasets} for:item="item">
+                <c-data
+                  key={item.label}
+                  label={item.label}
+                  detail={item.detail}
+                  backgroundcolor={item.backgroundcolor}
+                  fill={item.fill}
+                ></c-data>
+              </template>
+            </c-dataset>
+            <c-title text={chart.title}></c-title>
+            <c-cartesian-category-axis
+              axis="x"
+              position="top"
+            ></c-cartesian-category-axis>
+            <c-cartesian-linear-axis
+              axis="y"
+              ticks-beginatzero="true"
+            ></c-cartesian-linear-axis>
+            <c-legend position="bottom"></c-legend>
+          </c-chart>
+        </div>
+      </div>
+    </template>
+
+    <!-- Pie Charts -->
+    <template for:each={pieCharts} for:item="chart">
+      <div
+        key={chart.title}
+        class="slds-col slds-size_1-of-4 slds-var-p-around_small"
+      >
+        <div class="slds-card">
+          <c-chart type="pie" responsive="true">
+            <c-dataset labels={chart.datasetLabels}>
+              <template for:each={chart.datasets} for:item="item">
+                <c-data
+                  key={item.label}
+                  label={item.label}
+                  detail={item.detail}
+                  backgroundcolor={item.backgroundcolor}
+                  fill={item.fill}
+                ></c-data>
+              </template>
+            </c-dataset>
+            <c-title text={chart.title}></c-title>
+            <c-legend position="bottom"></c-legend>
+          </c-chart>
+        </div>
+      </div>
+    </template>
+
+    <!-- Dougnut Charts -->
+    <template for:each={pieCharts} for:item="chart">
+      <div
+        key={chart.title}
+        class="slds-col slds-size_1-of-4 slds-var-p-around_small"
+      >
+        <div class="slds-card">
+          <c-chart type="doughnut" responsive="true">
+            <c-dataset labels={chart.datasetLabels}>
+              <template for:each={chart.datasets} for:item="item">
+                <c-data
+                  key={item.label}
+                  label={item.label}
+                  detail={item.detail}
+                  backgroundcolor={item.backgroundcolor}
+                  fill={item.fill}
+                ></c-data>
+              </template>
+            </c-dataset>
+            <c-title text={chart.title}></c-title>
+            <c-legend position="bottom"></c-legend>
+          </c-chart>
+        </div>
+      </div>
+    </template>
+  </div>
+</template>
