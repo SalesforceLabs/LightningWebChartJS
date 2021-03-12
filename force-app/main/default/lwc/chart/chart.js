@@ -18,6 +18,13 @@ export default class Chart extends LightningElement {
   @api width;
   @api height;
   @api stylecss;
+  @api
+  get conf() {
+    return this._chart;
+  }
+  set conf(v) {
+    this._chart = v;
+  }
 
   _uuid = nanoid(11);
   @api
@@ -158,6 +165,39 @@ export default class Chart extends LightningElement {
   }
   set callbackHover(v) {
     this._payload.onHover = v;
+  }
+
+  /**
+   * https://www.chartjs.org/docs/latest/charts/doughnut.html#config-options
+   */
+  @api
+  get cutoutpercentage() {
+    return this._payload.cutoutPercentage;
+  }
+  set cutoutpercentage(v) {
+    this._payload.cutoutPercentage = v;
+  }
+
+  /**
+   * https://www.chartjs.org/docs/latest/charts/doughnut.html#config-options
+   */
+  @api
+  get circumference() {
+    return this._payload.circumference;
+  }
+  set circumference(v) {
+    this._payload.circumference = v;
+  }
+
+  /**
+   * https://www.chartjs.org/docs/latest/charts/doughnut.html#config-options
+   */
+  @api
+  get rotation() {
+    return this._payload.rotation;
+  }
+  set rotation(v) {
+    this._payload.rotation = v;
   }
 
   @api
