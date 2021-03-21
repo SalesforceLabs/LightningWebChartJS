@@ -18,7 +18,10 @@
     "test:unit:coverage": "sfdx-lwc-jest --coverage -- --runInBand",
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
-    "build:playground": "rollup --config ./rollup/rollup.config.js"
+    "build:playground": "rollup --config ./rollup/rollup.config.js",
+    "pre-commit": "lint-staged && npm run lint",
+    "pre-push": "npm run test:coverage",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@lwc/engine": "^1.17.5",
@@ -39,12 +42,6 @@
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-cleanup": "^3.2.1",
     "rollup-plugin-copy": "^3.4.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm run lint",
-      "pre-push": "npm run test:coverage"
-    }
   },
   "lint-staged": {
     "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}": [
