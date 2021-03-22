@@ -87,16 +87,18 @@ export default class ChartBuilder extends LightningElement {
           this.dimensionsLabels = this.dimensionsLabels || [
             ...new Set(data.map((x) => x.labels).flat())
           ];
-          this._details = data.map((x, i) => ({
-            detail: x.detail,
-            labels: this._detailsLabels[i],
-            uuid: x.uuid || nanoid(4),
-            bgColor:
-              x.bgColor || this.isDimensionable
-                ? x.detail.map((_, j) => palette[j % palette.length])
-                : palette[i % palette.length],
-            fill: this.fill
-          }));
+          this._details = data
+            .filter((x) => !!x.detail)
+            .map((x, i) => ({
+              detail: x.detail,
+              labels: this._detailsLabels[i],
+              uuid: x.uuid || nanoid(4),
+              bgColor:
+                x.bgColor || this.isDimensionable
+                  ? x.detail.map((_, j) => palette[j % palette.length])
+                  : palette[i % palette.length],
+              fill: this.fill
+            }));
           this.error = false;
         })
         .catch((error) => this.errorCallback(error));

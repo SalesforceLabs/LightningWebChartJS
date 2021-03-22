@@ -111,6 +111,35 @@ describe('test property', () => {
     // Validate parameters of mocked Apex call
     expect(element.soql).toEqual(`'${ChartBuilder.FAKE_ID}'`);
   });
+
+  test('details success', () => {
+    const element = createElement('c-chartBuilder', { is: ChartBuilder });
+    document.body.appendChild(element);
+    const data = [
+      { labels: 'Item1', detail: [1, 2] },
+      { labels: 'Item2', detail: [9, 8] }
+    ];
+    element.details = JSON.stringify(data);
+
+    return flushPromises().then(() => {
+      expect(element.details.length).toEqual(data.length);
+    });
+  });
+
+  test('details success with undefined data removed', () => {
+    const element = createElement('c-chartBuilder', { is: ChartBuilder });
+    document.body.appendChild(element);
+    const data = [
+      { labels: 'Item1', detail: [1, 2] },
+      { labels: 'Item2', detail: [9, 8] },
+      { labels: 'Item3' }
+    ];
+    element.details = JSON.stringify(data);
+
+    return flushPromises().then(() => {
+      expect(element.details.length).toEqual(2);
+    });
+  });
 });
 
 const MOCK_GETCHARTDATA = [{ labels: ['test'], detail: [10] }];
