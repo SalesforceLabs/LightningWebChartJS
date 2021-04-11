@@ -1,29 +1,11 @@
-# This is a basic workflow to help you get started with Actions
-
+# Main CI workflow for new PRs
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   pull_request:
     branches: [master]
 
 jobs:
-  commit-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: wagoid/commitlint-github-action@v2
-
-  pr-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: amannn/action-semantic-pull-request@v1.2.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   code-formatting-and-linting:
     runs-on: ubuntu-latest
     steps:
