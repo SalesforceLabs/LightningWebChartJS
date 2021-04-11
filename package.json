@@ -21,9 +21,12 @@
     "build:playground": "rollup --config ./rollup/rollup.config.js",
     "pre-commit": "lint-staged && npm run lint",
     "pre-push": "npm run test:coverage",
+    "commit-message": "npx commitlint --edit",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-angular": "^12.1.1",
     "@lwc/engine": "^1.17.5",
     "@lwc/rollup-plugin": "^1.17.5",
     "@lwc/synthetic-shadow": "^1.17.5",
