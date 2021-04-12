@@ -91,3 +91,6 @@ TestsResultsCache.xml
 
 tests/
 _site/
+
+# direnv
+.envrc

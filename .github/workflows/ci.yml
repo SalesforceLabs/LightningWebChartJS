@@ -1,15 +1,12 @@
-# This is a basic workflow to help you get started with Actions
-
+# Main CI workflow for new PRs
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   pull_request:
     branches: [master]
 
 jobs:
-  formatting-and-linting:
+  code-formatting-and-linting:
     runs-on: ubuntu-latest
     steps:
       # Checkout the code in the pull request
@@ -49,6 +46,7 @@ jobs:
 
   scratch-org-test:
     runs-on: ubuntu-latest
+    needs: code-formatting-and-linting
     steps:
       # Install Salesforce CLI
       - name: Install Salesforce CLI
