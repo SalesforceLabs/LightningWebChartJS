@@ -79,29 +79,28 @@ export default class ChartBuilder extends LightningElement {
       this._throttlingDetails = true;
       Promise.resolve()
         .then(() => {
-          this._throttlingDetails = false;
-
           // Build the data structure to use to iterate
           // and create data component in the template
           const palette = ChartBuilder.DEFAULT_PALETTE[this.colorPalette];
           this.dimensionsLabels = this.dimensionsLabels || [
             ...new Set(data.map((x) => x.labels).flat())
           ];
-          this._details = data
-            .filter((x) => !!x.detail)
-            .map((x, i) => ({
-              detail: x.detail,
-              labels: this._detailsLabels[i],
-              uuid: x.uuid || nanoid(4),
-              bgColor:
-                x.bgColor || this.isDimensionable
-                  ? x.detail.map((_, j) => palette[j % palette.length])
-                  : palette[i % palette.length],
-              fill: this.fill
-            }));
+          this._details = [...this._detailsLabels].map((x, i) => ({
+            labels: this._detailsLabels[i],
+            uuid: x.uuid || nanoid(4),
+            fill: this.fill,
+            detail: data.map((item) => item.detail?.[i]),
+            bgColor:
+              x.bgColor || this.isDimensionable
+                ? x.detail.map((_, j) => palette[j % palette.length])
+                : palette[i % palette.length]
+          }));
           this.error = false;
         })
-        .catch((error) => this.errorCallback(error));
+        .catch((error) => this.errorCallback(error))
+        .finally(() => {
+          this._throttlingDetails = false;
+        });
     } catch (error) {
       this.errorCallback(error);
     }
