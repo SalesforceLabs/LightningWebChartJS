@@ -50,6 +50,14 @@
         datasource="top,bottom,right,left"
       />
       <property
+        name="showLegend"
+        label="Show Legend"
+        description="Toggle display of the legend on or off"
+        required="false"
+        default="true"
+        type="Boolean"
+      />
+      <property
         name="styleCss"
         label="CSS Style"
         description="Provide inline custom css style for chart container"
@@ -143,6 +151,14 @@
         placeholder="top"
         type="String"
         datasource="top,bottom,right,left"
+      />
+      <property
+        name="showLegend"
+        label="Show Legend"
+        description="Toggle display of the legend on or off"
+        required="false"
+        default="true"
+        type="Boolean"
       />
       <property
         name="styleCss"

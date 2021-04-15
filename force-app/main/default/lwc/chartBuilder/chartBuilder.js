@@ -42,6 +42,9 @@ export default class ChartBuilder extends LightningElement {
   legendPosition;
 
   @api
+  showLegend;
+
+  @api
   colorPalette = 'default';
 
   @api
