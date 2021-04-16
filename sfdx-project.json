@@ -6,7 +6,7 @@
     },
     {
       "path": "force-app/sample",
-      "default": true
+      "default": false
     }
   ],
   "namespace": "",
