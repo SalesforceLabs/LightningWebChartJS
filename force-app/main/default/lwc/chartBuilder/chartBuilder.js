@@ -92,7 +92,7 @@ export default class ChartBuilder extends LightningElement {
             detail: data.map((item) => item.detail?.[i]),
             bgColor:
               x.bgColor || this.isDimensionable
-                ? x.detail.map((_, j) => palette[j % palette.length])
+                ? x.detail?.map((_, j) => palette[j % palette.length])
                 : palette[i % palette.length]
           }));
           this.error = false;
