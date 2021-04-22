@@ -89,3 +89,9 @@ tests/
 
 # Github pages
 _site/
+
+# Husky
+.husky/
+
+# direnv
+.envrc
