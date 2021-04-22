@@ -1,7 +1,7 @@
 # Cartesian Axis
 `class CartesianAxis extends BaseAxis`
 
-https://www.chartjs.org/docs/latest/axes/cartesian/
+https://www.chartjs.org/docs/2.7.3/axes/cartesian/
 
 CartesianAxis inherits all the properties from [BaseAxis]({{ "/docs/api/axes.html" | relative_url }})
 

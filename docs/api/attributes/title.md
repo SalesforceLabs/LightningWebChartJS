@@ -1,7 +1,7 @@
 # Title Attribute
 `class Title extends BaseAttribute`
 
-https://www.chartjs.org/docs/latest/configuration/title.html
+https://www.chartjs.org/docs/2.7.3/configuration/title.html
 
 Title inherits all the properties from [BaseAttribute]({{ "/docs/api/attributes.html" | relative_url }})
 
@@ -12,7 +12,7 @@ The chart title defines text to draw at the top of the chart
 | Attribute name | Type | Default | Description
 | --- | --- | --- | ---
 | display | boolean | false | Is the title shown?
-| position | string | `top` | Position of title. more... (https://www.chartjs.org/docs/latest/configuration/title.html#position)
+| position | string | `top` | Position of title. more... (https://www.chartjs.org/docs/2.7.3/configuration/title.html#position)
 | fontsize | number | 12 | Font size
 | fontfamily | string | `"'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'“` | Font family for the title text
 | fontcolor | string | `#666` | Font color

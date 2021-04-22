@@ -1,7 +1,7 @@
 # Rectangle Configuration Attribute
 `class RectangleConfiguration extends BaseAttribute`
 
-https://www.chartjs.org/docs/latest/configuration/elements.html#rectangle-configuration
+https://www.chartjs.org/docs/2.7.3/configuration/elements.html#rectangle-configuration
 
 
 RectangleConfiguration inherits all the properties from [BaseAttribute]({{ "/docs/api/attributes.html" | relative_url }})

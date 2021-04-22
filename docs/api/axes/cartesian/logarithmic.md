@@ -1,7 +1,7 @@
 # Cartesian Logarithmic Axis
 `class CartesianLogarithmicAxis extends CartesianAxis`
 
-https://www.chartjs.org/docs/latest/axes/cartesian/logarithmic.html
+https://www.chartjs.org/docs/2.7.3/axes/cartesian/logarithmic.html
 
 CartesianLogarithmicAxis inherits all the properties from [CartesianAxis]({{ "/docs/api/axes/cartesian.html" | relative_url }}) and exposes Cartesian logarithmic axis configuration fields
 

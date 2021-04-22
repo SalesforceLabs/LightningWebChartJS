@@ -1,7 +1,7 @@
 # Layout Attribute
 `class Layout extends BaseAttribute`
 
-https://www.chartjs.org/docs/latest/configuration/layout.html
+https://www.chartjs.org/docs/2.7.3/configuration/layout.html
 
 Layout inherits all the properties from [BaseAttribute]({{ "/docs/api/attributes.html" | relative_url }})
 This components allows you to configure the layout of the chart

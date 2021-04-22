@@ -1,7 +1,7 @@
 # Cartesian Time Axis
 `class CartesianTimeAxis extends CartesianAxis`
 
-https://www.chartjs.org/docs/latest/axes/cartesian/time.html
+https://www.chartjs.org/docs/2.7.3/axes/cartesian/time.html
 
 CartesianTimeAxis inherits all the properties from [CartesianAxis]({{ "/docs/api/axes/cartesian.html" | relative_url }})
 
