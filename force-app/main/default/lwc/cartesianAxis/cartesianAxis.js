@@ -53,11 +53,22 @@ export default class CartesianAxis extends BaseAxis {
     this._content.offset = parseBoolean(v);
   }
 
+  /**
+   * @deprecated Property replaced by axisid
+   */
   @api
   get id() {
     return this._content.id;
   }
   set id(v) {
+    // Do nothing
+  }
+
+  @api
+  get axisid() {
+    return this._content.id;
+  }
+  set axisid(v) {
     this._content.id = v;
   }
 
