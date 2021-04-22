@@ -731,5 +731,81 @@
         &lt;/c-chart&gt;
       </code>
     </c-sample-app-item>
+
+    <!-- Multiple axes -->
+    <c-sample-app-item>
+      <c-chart slot="chartExample" type="line" responsive="true">
+        <c-dataset labels='["A", "B", "C", "D", "E"]'>
+          <c-data
+            yaxisid="left"
+            label="Left dataset"
+            backgroundcolor="rgba(82, 183, 216, 1)"
+            bordercolor="rgba(82, 183, 216, 0.2)"
+            detail="[10, 9, 4, 3, 6]"
+            fill="false"
+          ></c-data>
+          <c-data
+            yaxisid="right"
+            label="Right dataset"
+            detail="[3, 2, 1, 5, 0]"
+            backgroundcolor="rgba(84, 167, 123, 1)"
+            bordercolor="rgba(84, 167, 123, 0.2)"
+            fill="false"
+          ></c-data>
+        </c-dataset>
+        <c-title text="Multiple axes with different scales"></c-title>
+        <c-cartesian-axis
+          axis="x"
+          position="bottom"
+          type="category"
+        ></c-cartesian-axis>
+        <c-cartesian-linear-axis
+          axisid="left"
+          axis="y"
+          position="left"
+          ticks-stepsize="3"
+          title-labelstring="Left axis"
+          title-display="true"
+        ></c-cartesian-linear-axis>
+        <c-cartesian-linear-axis
+          axisid="right"
+          axis="y"
+          position="right"
+          ticks-stepsize="1"
+          title-labelstring="Right axis"
+          title-display="true"
+        ></c-cartesian-linear-axis>
+      </c-chart>
+      <code slot="chartCode" lang="html">
+        &lt;c-chart type=&quot;line&quot; responsive=&quot;true&quot;&gt;<br />
+        &emsp;&lt;c-dataset labels=&apos;[&quot;A&quot;, &quot;B&quot;,
+        &quot;C&quot;, &quot;D&quot;, &quot;E&quot;]&apos;&gt;<br />
+        &emsp;&emsp;&lt;c-data yaxisid=&quot;left&quot; label=&quot;Left
+        dataset&quot; detail=&quot;[10, 9, 4, 3, 6]&quot;
+        backgroundcolor=&quot;rgba(82, 183, 216, 1)&quot;<br />
+        &emsp;&emsp;&emsp;bordercolor=&quot;rgba(82, 183, 216, 0.2)&quot;
+        fill=&quot;false&quot;&gt;&lt;/c-data&gt;<br />
+        &emsp;&emsp;&lt;c-data yaxisid=&quot;right&quot; label=&quot;Right
+        dataset&quot; detail=&quot;[3, 2, 1, 5, 0]&quot;
+        backgroundcolor=&quot;rgba(84, 167, 123, 1)&quot;<br />
+        &emsp;&emsp;&emsp;bordercolor=&quot;rgba(84, 167, 123, 0.2)&quot;
+        fill=&quot;false&quot;&gt;&lt;/c-data&gt;<br />
+        &emsp;&lt;/c-dataset&gt;<br />
+        &emsp;&lt;c-title text=&quot;Multiple axes with different
+        scales&quot;&gt;&lt;/c-title&gt;<br />
+        &emsp;&lt;c-cartesian-axis axis=&quot;x&quot;
+        position=&quot;bottom&quot;
+        type=&quot;category&quot;&gt;&lt;/c-cartesian-axis&gt;<br />
+        &emsp;&lt;c-cartesian-linear-axis axisid=&quot;left&quot;
+        axis=&quot;y&quot; position=&quot;left&quot;
+        ticks-stepsize=&quot;3&quot; title-labelstring=&quot;Left axis&quot;<br />
+        &emsp;&emsp;title-display=&quot;true&quot;&gt;&lt;/c-cartesian-linear-axis&gt;<br />
+        &emsp;&lt;c-cartesian-linear-axis axisid=&quot;right&quot;
+        axis=&quot;y&quot; position=&quot;right&quot;
+        ticks-stepsize=&quot;1&quot; title-labelstring=&quot;Right axis&quot;<br />
+        &emsp;&emsp;title-display=&quot;true&quot;&gt;&lt;/c-cartesian-linear-axis&gt;<br />
+        &lt;/c-chart&gt;
+      </code>
+    </c-sample-app-item>
   </div>
 </template>
