@@ -16,7 +16,8 @@ Axes that follow a cartesian grid are known as 'Cartesian Axes'. Cartesian axes 
 | type | string |  | Type of scale being employed. Custom scales can be created and registered with a string key. This allows changing the type of an axis for a chart
 | position | string |  | Position of the axis in the chart. Possible values are: `top`, `left`, `bottom`, `right`
 | offset | boolean | false | If true, extra space is added to the both edges and the axis is scaled to fit into the chart area. This is set to true for a bar chart by default
-| id | string |  | The ID is used to link datasets and scale axes together. 
+| id | string |  | (Deprecated) The property has been replaced by `axisid`
+| axisid | string |  | The Id used to link datasets and scale axes together. The value should match the `xAxisID` or `yAxisID` property of a Data component
 | stacked | boolean |  | User defined if the bar chart is stacked. 
 | ticksMin | number |  | User defined minimum value for the scale, overrides minimum value from data
 | ticksMax | number |  | User defined maximum value for the scale, overrides maximum value from data
