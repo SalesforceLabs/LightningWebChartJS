@@ -36,6 +36,23 @@ describe('c-chart-config-service', () => {
       chartConfigService.getConfig()[ATTRIBUTE_CARTESIAN_AXES]
     ).toMatchObject(testSubject);
   });
+  test(`Update scales config with multiple scales on same axis`, () => {
+    const chartConfigService = new ChartConfigService();
+    const firstAxis = { uuid: 1, gridLines: { offsetGridLines: 10 } };
+    const secondAxis = { uuid: 2, gridLines: { offsetGridLines: 20 } };
+    chartConfigService.updateConfig(
+      { yAxes: [firstAxis] },
+      ATTRIBUTE_CARTESIAN_AXES
+    );
+    chartConfigService.updateConfig(
+      { yAxes: [secondAxis] },
+      ATTRIBUTE_CARTESIAN_AXES
+    );
+    const testSubject = { yAxes: [firstAxis, secondAxis] };
+    expect(
+      chartConfigService.getConfig()[ATTRIBUTE_CARTESIAN_AXES]
+    ).toMatchObject(testSubject);
+  });
   test(`Update config with new object`, () => {
     const chartConfigService = new ChartConfigService();
     const testSubject = { test: { attribut: 'val' } };

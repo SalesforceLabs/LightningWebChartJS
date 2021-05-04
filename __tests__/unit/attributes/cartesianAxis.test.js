@@ -7,7 +7,7 @@ const TEST_DATA_PROPERTIES = [
     yAxes: [{ position: 'foo' }]
   }),
   ChartOptionMock('offset', true, { yAxes: [{ offset: true }] }),
-  ChartOptionMock('id', 'foo', { yAxes: [{ id: 'foo' }] }),
+  ChartOptionMock('axisid', 'foo', { yAxes: [{ id: 'foo' }] }),
   ChartOptionMock('ticksMin', 'foo', {
     yAxes: [{ ticks: { min: 'foo' } }]
   }),

@@ -61,6 +61,15 @@ export default class ChartConfigService {
         } else {
           // the attribut is an object we don't know
           this._config[option][attribut] = payload[attribut]; // store it
+
+          // If this is a scale object with data, add it to the scales property
+          if (
+            Object.prototype.hasOwnProperty.call(this._scales, attribut) &&
+            payload[attribut] !== undefined
+          ) {
+            this._scales[attribut][payload[attribut][0].uuid] =
+              payload[attribut][0];
+          }
         }
       });
     }
