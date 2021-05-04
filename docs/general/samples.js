@@ -11111,6 +11111,10 @@ class ChartConfigService {
           this._config[option][attribut] = _objectSpread(_objectSpread({}, this._config[option][attribut]), payload[attribut]);
         } else {
           this._config[option][attribut] = payload[attribut];
+
+          if (Object.prototype.hasOwnProperty.call(this._scales, attribut) && payload[attribut] !== undefined) {
+            this._scales[attribut][payload[attribut][0].uuid] = payload[attribut][0];
+          }
         }
       });
     }
@@ -13010,7 +13014,13 @@ class CartesianAxis extends BaseAxis$1 {
     return this._content.id;
   }
 
-  set id(v) {
+  set id(v) {}
+
+  get axisid() {
+    return this._content.id;
+  }
+
+  set axisid(v) {
     this._content.id = v;
   }
 
@@ -13323,6 +13333,9 @@ registerDecorators(CartesianAxis, {
       config: 3
     },
     id: {
+      config: 3
+    },
+    axisid: {
       config: 3
     },
     ticksMin: {
@@ -14591,7 +14604,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
     styleMap: {
       "textAlign": "center"
     },
-    key: 269
+    key: 292
   }, [api_custom_element("c-sample-app-item", _cSampleAppItem, {
     key: 35
   }, [api_custom_element("c-chart", _cChart, {
@@ -15586,6 +15599,106 @@ function tmpl($api, $cmp, $slotset, $ctx) {
     key: 265
   }, []), api_text("\u2003</c-cartesian-time-axis>"), api_element("br", {
     key: 266
+  }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
+    key: 291
+  }, [api_custom_element("c-chart", _cChart, {
+    attrs: {
+      "slot": "chartExample"
+    },
+    props: {
+      "type": "line",
+      "responsive": "true"
+    },
+    key: 276
+  }, [api_custom_element("c-dataset", _cDataset, {
+    props: {
+      "labels": "[\"A\", \"B\", \"C\", \"D\", \"E\"]"
+    },
+    key: 271
+  }, [api_custom_element("c-data", _cData, {
+    props: {
+      "yaxisid": "left",
+      "label": "Left dataset",
+      "backgroundcolor": "rgba(82, 183, 216, 1)",
+      "bordercolor": "rgba(82, 183, 216, 0.2)",
+      "detail": "[10, 9, 4, 3, 6]",
+      "fill": "false"
+    },
+    key: 269
+  }, []), api_custom_element("c-data", _cData, {
+    props: {
+      "yaxisid": "right",
+      "label": "Right dataset",
+      "detail": "[3, 2, 1, 5, 0]",
+      "backgroundcolor": "rgba(84, 167, 123, 1)",
+      "bordercolor": "rgba(84, 167, 123, 0.2)",
+      "fill": "false"
+    },
+    key: 270
+  }, [])]), api_custom_element("c-title", _cTitle, {
+    props: {
+      "text": "Multiple axes with different scales"
+    },
+    key: 272
+  }, []), api_custom_element("c-cartesian-axis", _cCartesianAxis, {
+    props: {
+      "axis": "x",
+      "position": "bottom",
+      "type": "category"
+    },
+    key: 273
+  }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
+    props: {
+      "axisid": "left",
+      "axis": "y",
+      "position": "left",
+      "ticksStepsize": "3",
+      "titleLabelstring": "Left axis",
+      "titleDisplay": "true"
+    },
+    key: 274
+  }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
+    props: {
+      "axisid": "right",
+      "axis": "y",
+      "position": "right",
+      "ticksStepsize": "1",
+      "titleLabelstring": "Right axis",
+      "titleDisplay": "true"
+    },
+    key: 275
+  }, [])]), api_element("code", {
+    attrs: {
+      "slot": "chartCode",
+      "lang": "html"
+    },
+    key: 290
+  }, [api_text("<c-chart type=\"line\" responsive=\"true\">"), api_element("br", {
+    key: 277
+  }, []), api_text("\u2003<c-dataset labels='[\"A\", \"B\", \"C\", \"D\", \"E\"]'>"), api_element("br", {
+    key: 278
+  }, []), api_text("\u2003\u2003<c-data yaxisid=\"left\" label=\"Left dataset\" detail=\"[10, 9, 4, 3, 6]\" backgroundcolor=\"rgba(82, 183, 216, 1)\""), api_element("br", {
+    key: 279
+  }, []), api_text("\u2003\u2003\u2003bordercolor=\"rgba(82, 183, 216, 0.2)\" fill=\"false\"></c-data>"), api_element("br", {
+    key: 280
+  }, []), api_text("\u2003\u2003<c-data yaxisid=\"right\" label=\"Right dataset\" detail=\"[3, 2, 1, 5, 0]\" backgroundcolor=\"rgba(84, 167, 123, 1)\""), api_element("br", {
+    key: 281
+  }, []), api_text("\u2003\u2003\u2003bordercolor=\"rgba(84, 167, 123, 0.2)\" fill=\"false\"></c-data>"), api_element("br", {
+    key: 282
+  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+    key: 283
+  }, []), api_text("\u2003<c-title text=\"Multiple axes with different scales\"></c-title>"), api_element("br", {
+    key: 284
+  }, []), api_text("\u2003<c-cartesian-axis axis=\"x\" position=\"bottom\" type=\"category\"></c-cartesian-axis>"), api_element("br", {
+    key: 285
+  }, []), api_text("\u2003<c-cartesian-linear-axis axisid=\"left\" axis=\"y\" position=\"left\" ticks-stepsize=\"3\" title-labelstring=\"Left axis\""), api_element("br", {
+    key: 286
+  }, []), api_text("\u2003\u2003title-display=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+    key: 287
+  }, []), api_text("\u2003<c-cartesian-linear-axis axisid=\"right\" axis=\"y\" position=\"right\" ticks-stepsize=\"1\" title-labelstring=\"Right axis\""), api_element("br", {
+    key: 288
+  }, []), api_text("\u2003\u2003title-display=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+    key: 289
   }, []), api_text("</c-chart>")])])])];
 }
 
