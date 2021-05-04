@@ -1,7 +1,7 @@
 # Point Configuration Attribute
 `class PointConfiguration extends BaseAttribute`
 
-https://www.chartjs.org/docs/latest/configuration/elements.html#point-configuration
+https://www.chartjs.org/docs/2.7.3/configuration/elements.html#point-configuration
 
 PointConfiguration inherits all the properties from [BaseAttribute]({{ "/docs/api/attributes.html" | relative_url }})
 

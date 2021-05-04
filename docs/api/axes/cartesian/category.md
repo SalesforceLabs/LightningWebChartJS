@@ -1,7 +1,7 @@
 # Cartesian Category Axis
 `class CartesianCategoryAxis extends CartesianAxis`
 
-https://www.chartjs.org/docs/latest/axes/cartesian/category.html
+https://www.chartjs.org/docs/2.7.3/axes/cartesian/category.html
 
 CartesianCategoryAxis inherits all the properties from [CartesianAxis]({{ "/docs/api/axes/cartesian.html" | relative_url }})
 

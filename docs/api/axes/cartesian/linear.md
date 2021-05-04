@@ -1,7 +1,7 @@
 # Cartesian Linear Axis
 `class CartesianLinearAxis extends CartesianAxis`
 
-https://www.chartjs.org/docs/latest/axes/cartesian/linear.html
+https://www.chartjs.org/docs/2.7.3/axes/cartesian/linear.html
 
 CartesianLinearAxis inherits all the properties from [CartesianAxis]({{ "/docs/api/axes/cartesian.html" | relative_url }})
 
@@ -15,9 +15,9 @@ The linear scale is use to chart numerical data. It can be placed on either the 
 | ticksBeginatzero | boolean |  | if true, scale will include 0 if it is not already included
 | ticksMaxtickslimit | number | 11 | Maximum number of ticks and gridlines to show
 | ticksPrecision | number |  | if defined and stepSize is not specified, the step size will be rounded to this many decimal places
-| ticksStepsize | number |  | User defined fixed step size for the scale. [more...](https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#step-size)
-| ticksSuggestedmax | number |  | Adjustment used when calculating the maximum data value. [more...](https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#axis-range-settings)
-| ticksSuggestedmin | number |  | Adjustment used when calculating the minimum data value. [more...](https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#axis-range-settings)
+| ticksStepsize | number |  | User defined fixed step size for the scale. [more...](https://www.chartjs.org/docs/2.7.3/axes/cartesian/linear.html#step-size)
+| ticksSuggestedmax | number |  | Adjustment used when calculating the maximum data value. [more...](https://www.chartjs.org/docs/2.7.3/axes/cartesian/linear.html#axis-range-settings)
+| ticksSuggestedmin | number |  | Adjustment used when calculating the minimum data value. [more...](https://www.chartjs.org/docs/2.7.3/axes/cartesian/linear.html#axis-range-settings)
 
 ## Usage
 

@@ -1,7 +1,7 @@
 # Data
 `class Data extends BaseAttribute`
 
-https://www.chartjs.org/docs/latest/general/
+https://www.chartjs.org/docs/2.7.3/general/
 
 Data inherits all the properties from [BaseAttribute]({{ "/docs/api/attributes.html" | relative_url }})
 

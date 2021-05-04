@@ -1,7 +1,7 @@
 # Radial Linear Axis
 `class RadialLinearAxis extends RadialAxis`
 
-https://www.chartjs.org/docs/latest/axes/radial/linear.html
+https://www.chartjs.org/docs/2.7.3/axes/radial/linear.html
 
 
 RadialLinearAxis inherits all the properties from [RadialAxis]({{ "/docs/api/axes/radial.html" | relative_url }})
@@ -45,13 +45,13 @@ The linear scale is used to chart numerical data. As the name suggests, linear i
 | tickBackdroppaddingx | number | 2 | Horizontal padding of label backdrop
 | tickBackdroppaddingy | number | 2 | Vertical padding of label backdrop
 | tickBeginatzero | boolean | false | if true, scale will include 0 if it is not already included
-| tickMin | number |  | User defined minimum number for the scale, overrides minimum value from data. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
-| tickMax | number |  | User defined maximum number for the scale, overrides maximum value from data. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
+| tickMin | number |  | User defined minimum number for the scale, overrides minimum value from data. [See more...](https://www.chartjs.org/docs/2.7.3/axes/radial/linear.html#axis-range-settings)
+| tickMax | number |  | User defined maximum number for the scale, overrides maximum value from data. [See more...](https://www.chartjs.org/docs/2.7.3/axes/radial/linear.html#axis-range-settings)
 | tickMaxtickslimit | number | 11 | Maximum number of ticks and gridlines to show
 | tickPrecision | number |  | if defined and stepSize is not specified, the step size will be rounded to this many decimal places
-| tickStepsize | number |  | User defined fixed step size for the scale. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#step-size)
-| tickSuggestedmax | number |  | Adjustment used when calculating the maximum data value. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
-| tickSuggestedmin | number |  | Adjustment used when calculating the minimum data value. [See more...](https://www.chartjs.org/docs/latest/axes/radial/linear.html#axis-range-settings)
+| tickStepsize | number |  | User defined fixed step size for the scale. [See more...](https://www.chartjs.org/docs/2.7.3/axes/radial/linear.html#step-size)
+| tickSuggestedmax | number |  | Adjustment used when calculating the maximum data value. [See more...](https://www.chartjs.org/docs/2.7.3/axes/radial/linear.html#axis-range-settings)
+| tickSuggestedmin | number |  | Adjustment used when calculating the minimum data value. [See more...](https://www.chartjs.org/docs/2.7.3/axes/radial/linear.html#axis-range-settings)
 | tickShowlabelbackdrop | boolean | true | If true, draw a background behind the tick labels
 
 ## Usage

@@ -1,7 +1,7 @@
 # Radial Axis
 `class RadialAxis extends BaseAxis`
 
-https://www.chartjs.org/docs/latest/axes/radial/
+https://www.chartjs.org/docs/2.7.3/axes/radial/
 
 RadialAxis inherits all the properties from [BaseAxis]({{ "/docs/api/axes.html" | relative_url }})
 

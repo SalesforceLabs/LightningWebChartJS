@@ -1,7 +1,7 @@
 # Animation Attribute
 `class Animation extends BaseAttribute`
 
-https://www.chartjs.org/docs/latest/configuration/animations.html
+https://www.chartjs.org/docs/2.7.3/configuration/animations.html
 
 Animation inherits all the properties from [BaseAttribute]({{ "/docs/api/attributes.html" | relative_url }})
 
@@ -12,9 +12,9 @@ Chart.js animates charts out of the box. A number of options are provided to con
 | Attribute name | Type | Default | Description
 | --- | --- | --- | ---
 | duration | number | 1000 | The number of milliseconds an animation takes
-| easing | string | `easeOutQuart` | Easing function to use. [more...](https://www.chartjs.org/docs/latest/configuration/animations.html#easing)
-| callbackOnprogress | function | `null` | Callback called on each step of an animation. [more...](https://www.chartjs.org/docs/latest/configuration/animations.html#animation-callbacks)
-| callbackOncomplete | function | `null` | Callback called at the end of an animation. [more...](https://www.chartjs.org/docs/latest/configuration/animations.html#animation-callbacks)
+| easing | string | `easeOutQuart` | Easing function to use. [more...](https://www.chartjs.org/docs/2.7.3/configuration/animations.html#easing)
+| callbackOnprogress | function | `null` | Callback called on each step of an animation. [more...](https://www.chartjs.org/docs/2.7.3/configuration/animations.html#animation-callbacks)
+| callbackOncomplete | function | `null` | Callback called at the end of an animation. [more...](https://www.chartjs.org/docs/2.7.3/configuration/animations.html#animation-callbacks)
 
 ### Easing
 Available options are: `linear`, `easeInQuad`, `easeOutQuad`, `easeInOutQuad`, `easeInCubic`, `easeOutCubic`, `easeInOutCubic`, `easeInQuart`, `easeOutQuart`, `easeInOutQuart`, `easeInQuint`, `easeOutQuint`, `easeInOutQuint`, `easeInSine`, `easeOutSine`, `easeInOutSine`, `easeInExpo`, `easeOutExpo`, `easeInOutExpo`, `easeInCirc`, `easeOutCirc`, `easeInOutCirc`, `easeInElastic`, `easeOutElastic`, `easeInOutElastic`, `easeInBack`, `easeOutBack`, `easeInOutBack`, `easeInBounce`, `easeOutBounce` and `easeInOutBounce`

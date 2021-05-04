@@ -1,7 +1,7 @@
 # Arc Configuration Attribute
 `class ArcConfiguration extends BaseAttribute`
 
-https://www.chartjs.org/docs/latest/configuration/elements.html#arc-configuration
+https://www.chartjs.org/docs/2.7.3/configuration/elements.html#arc-configuration
 
 ArcConfiguration inherits all the properties from [BaseAttribute]({{ "/docs/api/attributes.html" | relative_url }})
 Arcs are used in the polar area, doughnut and pie charts. This components allows you to define the options of the arcs that will be shared by all the datasets.

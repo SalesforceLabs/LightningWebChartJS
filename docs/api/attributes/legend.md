@@ -1,7 +1,7 @@
 # Legend Attribute
 `class Legend extends BaseAttribute`
 
-https://www.chartjs.org/docs/latest/configuration/legend.html
+https://www.chartjs.org/docs/2.7.3/configuration/legend.html
 
 
 Legend inherits all the properties from [BaseAttribute]({{ "/docs/api/attributes.html" | relative_url }})
@@ -28,8 +28,8 @@ The chart legend displays data about the datasets that are appearing on the char
 | labelFontcolor | Color | '#666' | Color of text
 | labelFontfamily | string | "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif" | Font family of legend text
 | labelPadding | number | 10 | Padding between rows of colored boxes
-| callbackGeneratelabels | function |  | Generates legend items for each thing in the legend. Default implementation returns the text + styling for the color box. See [Legend Item](https://www.chartjs.org/docs/latest/configuration/legend.html#legend-item-interface) for details
-| callbackFilter | function | null | Filters legend items out of the legend. Receives 2 parameters, a [Legend Item](https://www.chartjs.org/docs/latest/configuration/legend.html#legend-item-interface) and the chart data
+| callbackGeneratelabels | function |  | Generates legend items for each thing in the legend. Default implementation returns the text + styling for the color box. See [Legend Item](https://www.chartjs.org/docs/2.7.3/configuration/legend.html#legend-item-interface) for details
+| callbackFilter | function | null | Filters legend items out of the legend. Receives 2 parameters, a [Legend Item](https://www.chartjs.org/docs/2.7.3/configuration/legend.html#legend-item-interface) and the chart data
 | labelUsepointstyle | boolean | false | Label style will match corresponding point style (size is based on the mimimum value between boxWidth and fontSize)
 
 ### Legend Item Interface
