@@ -79,7 +79,7 @@ If this value is a number, it is applied to all sides of the rectangle (left, to
 
 ```html
 <c-chart>
-  <c-datset>
+  <c-dataset>
     <c-data
       label="data"
       detail="[28, 48, 40, 19, 96, 27, 100]"
