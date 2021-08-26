@@ -78,7 +78,8 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.ticks.min;
   }
   set ticksMin(v) {
-    this._content.ticks.min = Number(v) || v;
+    const numberValue = Number(v);
+    this._content.ticks.min = numberValue === 0 ? 0 : numberValue || v;
   }
 
   @api
@@ -86,7 +87,8 @@ export default class CartesianAxis extends BaseAxis {
     return this._content.ticks.max;
   }
   set ticksMax(v) {
-    this._content.ticks.max = Number(v) || v;
+    const numberValue = Number(v);
+    this._content.ticks.max = numberValue === 0 ? 0 : numberValue || v;
   }
 
   @api
