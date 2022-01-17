@@ -13,6 +13,7 @@ jobs:
         with:
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v2
+        continue-on-error: true
 
   pr-lint:
     runs-on: ubuntu-latest
