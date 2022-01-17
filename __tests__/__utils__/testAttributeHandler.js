@@ -81,5 +81,5 @@ global.testAttribute = (constructor, listChartOptionMock, eventName) => {
 
 global.flushPromises = () => {
   // eslint-disable-next-line no-undef
-  return new Promise((resolve) => setImmediate(resolve));
+  return new Promise(process.nextTick);
 };
