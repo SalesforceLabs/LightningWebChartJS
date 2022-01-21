@@ -4127,7 +4127,8 @@ function getTextNodeInnerText(textNode) {
 
   selection.removeAllRanges();
   selection.addRange(range);
-  return selection.toString();
+  const selectionText = selection.toString();
+  return selectionText ? selectionText : textNode.textContent || '';
 }
 
 const nodeIsElement = node => node.nodeType === ELEMENT_NODE;
@@ -10768,291 +10769,11 @@ freeze(BaseLightningElement);
 seal(BaseLightningElement.prototype);
 
 function stylesheet$2(hostSelector, shadowSelector, nativeShadow) {
-  return [".center", shadowSelector, " {text-align: center;}\n.link", shadowSelector, " {border: none;padding: 10px;border-radius: 5px;text-decoration: none;background-color: #ff6000;color: white;margin-left: 33%;margin-right: 33%;display: inline-block;margin-top: 1em;}\n.info", shadowSelector, " {color: black;background-color: #e4f2f8;margin: auto;padding: 15px 10px;text-align: left;width: 300px;border-radius: 5px;}\n.code", shadowSelector, " {font-family: monospace;}\n.container", shadowSelector, " {margin-top: 30px;}\nimg", shadowSelector, " {max-width: 150px;}\n.greeting", shadowSelector, " {height: 75px;}\n.slds-button-group", shadowSelector, " button", shadowSelector, " {text-transform: uppercase;}\n"].join('');
+  return [".center", shadowSelector, " {text-align: center;}.link", shadowSelector, " {border: none;padding: 10px;border-radius: 5px;text-decoration: none;background-color: #ff6000;color: white;margin-left: 33%;margin-right: 33%;display: inline-block;margin-top: 1em;}.info", shadowSelector, " {color: black;background-color: #e4f2f8;margin: auto;padding: 15px 10px;text-align: left;width: 300px;border-radius: 5px;}.code", shadowSelector, " {font-family: monospace;}.container", shadowSelector, " {margin-top: 30px;}img", shadowSelector, " {max-width: 150px;}.greeting", shadowSelector, " {height: 75px;}.slds-button-group", shadowSelector, " button", shadowSelector, " {text-transform: uppercase;}"].join('');
 }
 var _implicitStylesheets$2 = [stylesheet$2];
 
-function stylesheet$1(hostSelector, shadowSelector, nativeShadow) {
-  return [".col", shadowSelector, " {display: inline-block;width: 30%;margin: 1rem;}\n.slds-text-link:hover", shadowSelector, " {cursor: pointer;}\npre", shadowSelector, " {text-align: left;border: 1px solid #dee2e6;border-radius: 10px;padding: 1.2rem;background-color: #364149 !important;color: #fff !important;}\n"].join('');
-}
-var _implicitStylesheets$1 = [stylesheet$1];
-
-function tmpl$3($api, $cmp, $slotset, $ctx) {
-  const {
-    t: api_text,
-    s: api_slot,
-    h: api_element,
-    b: api_bind,
-    gid: api_scoped_id
-  } = $api;
-  const {
-    _m0,
-    _m1,
-    _m2
-  } = $ctx;
-  return [api_element("article", {
-    classMap: {
-      "slds-card": true,
-      "col": true
-    },
-    key: 6
-  }, [api_element("div", {
-    classMap: {
-      "slds-card__body": true,
-      "slds-card__body_inner": true,
-      "slds-p-horizontal_x-large": true
-    },
-    key: 2
-  }, [api_element("div", {
-    classMap: {
-      "chart": true
-    },
-    key: 1
-  }, [api_slot("chartExample", {
-    attrs: {
-      "name": "chartExample"
-    },
-    key: 0
-  }, [api_text("Chart example")], $slotset)])]), api_element("footer", {
-    classMap: {
-      "slds-card__footer": true
-    },
-    key: 5
-  }, [api_element("p", {
-    classMap: {
-      "slds-card__footer-action": true,
-      "slds-text-link": true
-    },
-    key: 4,
-    on: {
-      "click": _m0 || ($ctx._m0 = api_bind($cmp.openModal))
-    }
-  }, [api_text("Source code"), api_element("span", {
-    classMap: {
-      "slds-assistive-text": true
-    },
-    key: 3
-  }, [api_text("Source code")])])])]), $cmp.isModalOpen ? api_element("section", {
-    classMap: {
-      "slds-modal": true,
-      "slds-fade-in-open": true
-    },
-    attrs: {
-      "role": "dialog",
-      "tabindex": "-1",
-      "aria-label": "Meaningful description of the modal content",
-      "aria-modal": "true",
-      "aria-describedby": `${api_scoped_id("modal-content-id-1")}`
-    },
-    key: 19
-  }, [api_element("div", {
-    classMap: {
-      "slds-modal__container": true
-    },
-    styleMap: {
-      "width": "90%",
-      "maxWidth": "unset"
-    },
-    key: 18
-  }, [api_element("header", {
-    classMap: {
-      "slds-modal__header": true,
-      "slds-modal__header_empty": true
-    },
-    key: 11
-  }, [api_element("button", {
-    classMap: {
-      "slds-button": true,
-      "slds-button_icon": true,
-      "slds-modal__close": true,
-      "slds-button_icon-inverse": true
-    },
-    attrs: {
-      "title": "Close"
-    },
-    key: 10,
-    on: {
-      "click": _m1 || ($ctx._m1 = api_bind($cmp.closeModal))
-    }
-  }, [api_element("svg", {
-    classMap: {
-      "slds-button__icon": true,
-      "slds-button__icon_large": true
-    },
-    attrs: {
-      "aria-hidden": "true"
-    },
-    key: 8
-  }, [api_element("use", {
-    attrs: {
-      "xlink:href": sanitizeAttribute("use", "http://www.w3.org/2000/svg", "xlink:href", "/assets/icons/utility-sprite/svg/symbols.svg#close")
-    },
-    key: 7
-  }, [])]), api_element("span", {
-    classMap: {
-      "slds-assistive-text": true
-    },
-    key: 9
-  }, [api_text("Close")])])]), api_element("div", {
-    classMap: {
-      "slds-modal__content": true,
-      "slds-p-around_medium": true
-    },
-    attrs: {
-      "id": api_scoped_id("modal-content-id-1")
-    },
-    key: 15
-  }, [api_element("div", {
-    classMap: {
-      "code": true
-    },
-    key: 14
-  }, [api_element("pre", {
-    key: 13
-  }, [api_slot("chartCode", {
-    attrs: {
-      "name": "chartCode"
-    },
-    key: 12
-  }, [api_text("Code example")], $slotset)])])]), api_element("footer", {
-    classMap: {
-      "slds-modal__footer": true
-    },
-    key: 17
-  }, [api_element("button", {
-    classMap: {
-      "slds-button": true,
-      "slds-button_neutral": true
-    },
-    key: 16,
-    on: {
-      "click": _m2 || ($ctx._m2 = api_bind($cmp.closeModal))
-    }
-  }, [api_text("Close")])])])]) : null, $cmp.isModalOpen ? api_element("div", {
-    classMap: {
-      "slds-backdrop": true,
-      "slds-backdrop_open": true
-    },
-    styleMap: {
-      "opacity": "1"
-    },
-    key: 20
-  }, []) : null];
-}
-
-var _tmpl$4 = registerTemplate(tmpl$3);
-tmpl$3.slots = ["chartExample", "chartCode"];
-tmpl$3.stylesheets = [];
-
-if (_implicitStylesheets$1) {
-  tmpl$3.stylesheets.push.apply(tmpl$3.stylesheets, _implicitStylesheets$1);
-}
-tmpl$3.stylesheetTokens = {
-  hostAttribute: "c-sampleAppItem_sampleAppItem-host",
-  shadowAttribute: "c-sampleAppItem_sampleAppItem"
-};
-
-class SampleAppItem extends BaseLightningElement {
-  constructor(...args) {
-    super(...args);
-    this.isModalOpen = false;
-  }
-
-  closeModal() {
-    this.isModalOpen = false;
-  }
-
-  openModal() {
-    this.isModalOpen = true;
-  }
-
-}
-
-registerDecorators(SampleAppItem, {
-  fields: ["isModalOpen"]
-});
-
-var _cSampleAppItem = registerComponent(SampleAppItem, {
-  tmpl: _tmpl$4
-});
-
-function stylesheet(hostSelector, shadowSelector, nativeShadow) {
-  return ["\n", (nativeShadow ? ":host {display: block;}" : [hostSelector, " {display: block;}"].join('')), "\n"].join('');
-}
-var _implicitStylesheets = [stylesheet];
-
-function tmpl$2($api, $cmp, $slotset, $ctx) {
-  const {
-    h: api_element,
-    s: api_slot
-  } = $api;
-  return [api_element("div", {
-    style: $cmp.chartStyle,
-    attrs: {
-      "role": "img",
-      "aria-label": $cmp.ariaLabel
-    },
-    context: {
-      lwc: {
-        dom: "manual"
-      }
-    },
-    key: 0
-  }, []), api_slot("", {
-    key: 1
-  }, [], $slotset)];
-}
-
-var _tmpl$3 = registerTemplate(tmpl$2);
-tmpl$2.slots = [""];
-tmpl$2.stylesheets = [];
-
-if (_implicitStylesheets) {
-  tmpl$2.stylesheets.push.apply(tmpl$2.stylesheets, _implicitStylesheets);
-}
-tmpl$2.stylesheetTokens = {
-  hostAttribute: "c-chart_chart-host",
-  shadowAttribute: "c-chart_chart"
-};
-
-var ChartJS = './staticresources/chartjs_v280.js';
-
-function loadScript(ctx, url) {
-  return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = url;
-    script.onload = resolve;
-    script.onerror = reject;
-    document.body.appendChild(script);
-  });
-}
-
-function sanitize(attribute) {
-  let value = attribute;
-
-  if (value) {
-    try {
-      value = JSON.parse(value.replace(/\\/g, ''));
-    } catch (e) {}
-  }
-
-  return value;
-}
-function parseBoolean(value) {
-  return typeof value == 'string' ? value === 'true' : value;
-}
-
-let nanoid = (t = 21) => {
-  let e = '',
-      r = crypto.getRandomValues(new Uint8Array(t));
-
-  for (; t--;) {
-    let n = 63 & r[t];
-    e += n < 36 ? n.toString(36) : n < 62 ? (n - 26).toString(36).toUpperCase() : n < 63 ? '_' : '-';
-  }
-
-  return e;
-};
+var _tmpl$4 = void 0;
 
 const LWCC = 'lwcc';
 const DATA_EVENT_NAME = `${LWCC}data`;
@@ -11069,105 +10790,6 @@ const ATTRIBUTE_TOOLTIPS = 'tooltips';
 const CARTESIAN_AXIS_TYPE_CATEGORY = 'category';
 const CARTESIAN_AXIS_TYPE_LINEAR = 'linear';
 const CARTESIAN_AXIS_TYPE_TIME = 'time';
-
-var _tmpl$2 = void 0;
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-class ChartConfigService {
-  constructor() {
-    this._config = _objectSpread({}, ChartConfigService.DEFAULT_CONFIGURATION);
-    this._scales = {
-      xAxes: {},
-      yAxes: {}
-    };
-    this._dirty = true;
-  }
-
-  updateConfig(payload, option) {
-    this._dirty = true;
-
-    if (!option) {
-      this._config = _objectSpread(_objectSpread({}, this._config), payload);
-    } else {
-      this._config[option] = this._config[option] || {};
-      Object.keys(payload).forEach(attribut => {
-        if (Array.isArray(this._config[option][attribut])) {
-          if (Array.isArray(payload[attribut])) {
-            if (Object.prototype.hasOwnProperty.call(this._scales, attribut)) {
-              this._scales[attribut][payload[attribut][0].uuid] = payload[attribut][0];
-              this._config[option][attribut] = Object.values(this._scales[attribut]);
-            } else {
-              this._config[option][attribut].push(...payload[attribut]);
-            }
-          } else {
-            this._config[option][attribut].push(payload[attribut]);
-          }
-        } else if (typeof this._config[option][attribut] === 'object' && this._config[option][attribut] !== null) {
-          this._config[option][attribut] = _objectSpread(_objectSpread({}, this._config[option][attribut]), payload[attribut]);
-        } else {
-          this._config[option][attribut] = payload[attribut];
-
-          if (Object.prototype.hasOwnProperty.call(this._scales, attribut) && payload[attribut] !== undefined) {
-            this._scales[attribut][payload[attribut][0].uuid] = payload[attribut][0];
-          }
-        }
-      });
-    }
-  }
-
-  removeConfig(payload, option) {
-    this._dirty = true;
-
-    if (option === ATTRIBUTE_CARTESIAN_AXES) {
-      Object.keys(this._config[option]).filter(scale => this._config[option][scale]).forEach(scale => {
-        this._config[option][scale] = this._config[option][scale].filter(axis => axis.uuid !== payload[scale][0].uuid);
-        this._scales[scale] = this._config[option][scale];
-      });
-    } else {
-      this._config[option] = undefined;
-    }
-  }
-
-  getConfig() {
-    if (this._dirty) {
-      this._cleanConfig = ChartConfigService.cleanObject(this._config);
-      this._dirty = false;
-    }
-
-    return this._cleanConfig;
-  }
-
-  static cleanObject(obj) {
-    const validObj = o => (Object.keys(o).length || Array.isArray(o) && o.length) && o;
-
-    const itemToBool = item => {
-      return typeof item !== 'object' || item === null ? item : validObj(clean(item));
-    };
-
-    const clean = o => validObj(Array.isArray(o) ? o.map(itemToBool).filter(Boolean) : Object.entries(o).reduce((a, [key, val]) => {
-      const newVal = itemToBool(val);
-      if (newVal !== undefined && newVal !== null && typeof val === typeof newVal) a[key] = newVal;
-      return a;
-    }, {}));
-
-    return clean(obj);
-  }
-
-}
-
-ChartConfigService.DEFAULT_CONFIGURATION = {
-  legend: {
-    display: false
-  }
-};
-var ChartConfigService$1 = registerComponent(ChartConfigService, {
-  tmpl: _tmpl$2
-});
 
 class ReactivityManager {
   constructor() {
@@ -11210,501 +10832,8 @@ class ReactivityManager {
 }
 
 var ReactivityManager$1 = registerComponent(ReactivityManager, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
-
-class Chart extends BaseLightningElement {
-  get uuid() {
-    return this._uuid;
-  }
-
-  set uuid(v) {
-    this._uuid = v;
-  }
-
-  get chartjsloadedCallback() {
-    return this._chartjsLoadedCallback;
-  }
-
-  set chartjsloadedCallback(v) {
-    this._chartjsLoadedCallback = v;
-
-    this._callChartjsloadedCallback();
-  }
-
-  get canvasOnchange() {
-    return this._canvasOnchange;
-  }
-
-  set canvasOnchange(v) {
-    this.getCanvas().removeEventListener('mouseover', this._canvasOnchange);
-    this._canvasOnchange = v;
-    this.getCanvas().addEventListener('change', this._canvasOnchange);
-  }
-
-  get canvasOnclick() {
-    return this._canvasOnclick;
-  }
-
-  set canvasOnclick(v) {
-    this.getCanvas().removeEventListener('mouseover', this._canvas_canvasOnclickOnmouseover);
-    this._canvasOnclick = v;
-    this.getCanvas().addEventListener('click', this._canvasOnclick);
-  }
-
-  get canvasOnmouseover() {
-    return this._canvasOnmouseover;
-  }
-
-  set canvasOnmouseover(v) {
-    this.getCanvas().removeEventListener('mouseover', this._canvasOnmouseover);
-    this._canvasOnmouseover = v;
-    this.getCanvas().addEventListener('mouseover', this._canvasOnmouseover);
-  }
-
-  get canvasOnmouseout() {
-    return this._canvasOnmouseout;
-  }
-
-  set canvasOnmouseout(v) {
-    this.getCanvas().removeEventListener('mouseover', this._canvasOnmouseout);
-    this._canvasOnmouseout = v;
-    this.getCanvas().addEventListener('mouseout', this._canvasOnmouseout);
-  }
-
-  get responsive() {
-    return this._payload.responsive;
-  }
-
-  set responsive(v) {
-    this._payload.responsive = parseBoolean(v);
-  }
-
-  get responsiveanimationduration() {
-    return this._payload.responsiveAnimationDuration;
-  }
-
-  set responsiveanimationduration(v) {
-    this._payload.responsiveAnimationDuration = v;
-  }
-
-  get maintainaspectratio() {
-    return this._payload.maintainAspectRatio;
-  }
-
-  set maintainaspectratio(v) {
-    this._payload.maintainAspectRatio = parseBoolean(v);
-  }
-
-  get aspectratio() {
-    return this._payload.aspectRatio;
-  }
-
-  set aspectratio(v) {
-    this._payload.aspectRatio = v;
-  }
-
-  get callbackResize() {
-    return this._payload.onResize;
-  }
-
-  set callbackResize(v) {
-    this._payload.onResize = v;
-  }
-
-  get devicepixelratio() {
-    return this._payload.pointHoverBorderColor;
-  }
-
-  set devicepixelratio(v) {
-    this._payload.pointHoverBorderColor = v;
-  }
-
-  get events() {
-    return this._payload.events;
-  }
-
-  set events(v) {
-    this._payload.events = sanitize(v);
-  }
-
-  get callbackClick() {
-    return this._payload.onClick;
-  }
-
-  set callbackClick(v) {
-    this._payload.onClick = v;
-  }
-
-  get callbackHover() {
-    return this._payload.onHover;
-  }
-
-  set callbackHover(v) {
-    this._payload.onHover = v;
-  }
-
-  get type() {
-    return this._type;
-  }
-
-  set type(v) {
-    if (v !== this._type) {
-      this._type = v;
-      this.ariaLabel = this._payload[ATTRIBUTE_TITLE] && this._payload[ATTRIBUTE_TITLE].text ? this._payload[ATTRIBUTE_TITLE].text : `${this._type} chart`;
-      this.destroyChart();
-
-      this._reactivityManager.throttleRegisteredJob();
-    }
-  }
-
-  get chartStyle() {
-    return `width: ${this.width}; height: ${this.height}; ${this.stylecss || ''}`;
-  }
-
-  destroyChart() {
-    if (this._chart) {
-      this._chart.destroy();
-
-      this._chart = null;
-    }
-  }
-
-  updateChart(duration, lazy) {
-    if (this._chart) {
-      this._chart.update(duration, lazy);
-    }
-  }
-
-  resetChart() {
-    if (this._chart) {
-      this._chart.reset();
-    }
-  }
-
-  renderChart(duration, lazy) {
-    if (this._chart) {
-      this._chart.render(duration, lazy);
-    }
-  }
-
-  stopChart() {
-    if (this._chart) {
-      this._chart.stop();
-    }
-
-    return this;
-  }
-
-  resizeChart() {
-    if (this._chart) {
-      this._chart.resize();
-    }
-
-    return this;
-  }
-
-  clearChart() {
-    if (this._chart) {
-      this._chart.clear();
-    }
-
-    return this;
-  }
-
-  toBase64ImageChart() {
-    let res = null;
-
-    if (this._chart) {
-      res = this._chart.toBase64Image();
-    }
-
-    return res;
-  }
-
-  generateLegendChart() {
-    let res = null;
-
-    if (this._chart) {
-      res = this._chart.generateLegend();
-    }
-
-    return res;
-  }
-
-  getElementAtEventChart(e) {
-    let res = null;
-
-    if (this._chart) {
-      res = this._chart.getElementAtEvent(e);
-    }
-
-    return res;
-  }
-
-  getElementsAtEventChart(e) {
-    let res = null;
-
-    if (this._chart) {
-      res = this._chart.getElementsAtEvent(e);
-    }
-
-    return res;
-  }
-
-  getDatasetAtEventChart(e) {
-    let res = null;
-
-    if (this._chart) {
-      res = this._chart.getDatasetAtEvent(e);
-    }
-
-    return res;
-  }
-
-  getDatasetMetaChart(index) {
-    let res = null;
-
-    if (this._chart) {
-      res = this._chart.getDatasetMeta(index);
-    }
-
-    return res;
-  }
-
-  constructor() {
-    super();
-    this.width = void 0;
-    this.height = void 0;
-    this.stylecss = void 0;
-    this._uuid = nanoid(11);
-    this._chartjsLoadedCallback = void 0;
-    this._canvasOnchange = void 0;
-    this._canvasOnclick = void 0;
-    this._canvasOnmouseover = void 0;
-    this._canvasOnmouseout = void 0;
-    this.ariaLabel = void 0;
-    this._listenerHandlers = {
-      handleOption: evt => {
-        evt.stopPropagation();
-        const {
-          payload,
-          option
-        } = evt.detail;
-
-        if (option === ATTRIBUTE_DATA) {
-          this._details = payload;
-        } else {
-          if (option === ATTRIBUTE_TITLE) {
-            this.ariaLabel = payload.text;
-          }
-
-          this._configService.updateConfig(payload, option);
-        }
-
-        this._reactivityManager.throttleRegisteredJob();
-      },
-      handleDisconnect: evt => {
-        evt.stopPropagation();
-        const {
-          payload,
-          option
-        } = evt.detail;
-
-        if (option === ATTRIBUTE_DATA) {
-          this._details = null;
-          this.destroyChart();
-        } else {
-          if (option === ATTRIBUTE_TITLE) {
-            this.ariaLabel = `${this._type} chart`;
-          }
-
-          this._configService.removeConfig(payload, option);
-
-          this._reactivityManager.throttleRegisteredJob();
-        }
-      }
-    };
-    this._baseChartInitialized = false;
-    this._chartjsLoaded = false;
-    this._configService = new ChartConfigService$1();
-    this._details = null;
-    this._chart = null;
-    this._reactivityManager = new ReactivityManager$1();
-
-    this._reactivityManager.registerJob(() => this.drawChart());
-
-    this._payload = this._reactivityManager.getReactivityProxy();
-  }
-
-  connectedCallback() {
-    this.addEventListener(OPTION_EVENT_NAME, this._listenerHandlers.handleOption);
-    this.addEventListener(DISCONNECT_EVENT_NAME, this._listenerHandlers.handleDisconnect);
-  }
-
-  disconnectedCallback() {
-    this.removeEventListener(OPTION_EVENT_NAME, this._listenerHandlers.handleOption);
-    this.removeEventListener(DISCONNECT_EVENT_NAME, this._listenerHandlers.handleDisconnect);
-    this.destroyChart();
-  }
-
-  renderedCallback() {
-    if (this._baseChartInitialized) {
-      return;
-    }
-
-    this._baseChartInitialized = true;
-    loadScript(this, ChartJS).then(() => {
-      this._chartjsLoaded = true;
-
-      this._callChartjsloadedCallback();
-
-      this._reactivityManager.throttleRegisteredJob();
-    }, reason => {
-      this.errorCallback(reason);
-    });
-  }
-
-  errorCallback(error, stack) {
-    this.destroyChart();
-    this.dispatchEvent(new CustomEvent(ERROR_EVENT_NAME, {
-      bubbles: true,
-      detail: {
-        uuid: this.uuid,
-        error: error,
-        stack: stack
-      }
-    }));
-  }
-
-  getCanvas() {
-    if (!this._canvas) {
-      this._canvas = document.createElement('canvas');
-      this.template.querySelector('div').appendChild(this._canvas);
-    }
-
-    return this._canvas;
-  }
-
-  drawChart() {
-    if (!this._isReadyToDraw()) return;
-
-    try {
-      this._configService.updateConfig(this._payload, null);
-
-      if (!this._chart || !this._chart.ctx) {
-        this._chart = new window.Chart(this.getCanvas().getContext('2d'), {
-          type: this._type,
-          data: this._details,
-          options: this._configService.getConfig()
-        });
-      } else {
-        this._chart.data = this._details;
-        this._chart.options = this._configService.getConfig();
-
-        this._chart.update();
-      }
-    } catch (error) {
-      this.errorCallback(error, error.stack);
-    }
-  }
-
-  _isReadyToDraw() {
-    return this._chartjsLoaded && this._details && this._type;
-  }
-
-  _callChartjsloadedCallback() {
-    if (this._chartjsLoaded === true && typeof this._chartjsLoadedCallback === 'function') {
-      this._chartjsLoadedCallback();
-    }
-  }
-
-}
-
-registerDecorators(Chart, {
-  publicProps: {
-    width: {
-      config: 0
-    },
-    height: {
-      config: 0
-    },
-    stylecss: {
-      config: 0
-    },
-    uuid: {
-      config: 3
-    },
-    chartjsloadedCallback: {
-      config: 3
-    },
-    canvasOnchange: {
-      config: 3
-    },
-    canvasOnclick: {
-      config: 3
-    },
-    canvasOnmouseover: {
-      config: 3
-    },
-    canvasOnmouseout: {
-      config: 3
-    },
-    responsive: {
-      config: 3
-    },
-    responsiveanimationduration: {
-      config: 3
-    },
-    maintainaspectratio: {
-      config: 3
-    },
-    aspectratio: {
-      config: 3
-    },
-    callbackResize: {
-      config: 3
-    },
-    devicepixelratio: {
-      config: 3
-    },
-    events: {
-      config: 3
-    },
-    callbackClick: {
-      config: 3
-    },
-    callbackHover: {
-      config: 3
-    },
-    type: {
-      config: 3
-    }
-  },
-  publicMethods: ["destroyChart", "updateChart", "resetChart", "renderChart", "stopChart", "resizeChart", "clearChart", "toBase64ImageChart", "generateLegendChart", "getElementAtEventChart", "getElementsAtEventChart", "getDatasetAtEventChart", "getDatasetMetaChart"],
-  fields: ["_uuid", "_chartjsLoadedCallback", "_canvasOnchange", "_canvasOnclick", "_canvasOnmouseover", "_canvasOnmouseout", "ariaLabel", "_listenerHandlers"]
-});
-
-var _cChart = registerComponent(Chart, {
-  tmpl: _tmpl$3
-});
-
-function tmpl$1($api, $cmp, $slotset, $ctx) {
-  const {
-    s: api_slot
-  } = $api;
-  return [api_slot("", {
-    key: 0
-  }, [], $slotset)];
-}
-
-var _tmpl$1 = registerTemplate(tmpl$1);
-tmpl$1.slots = [""];
-tmpl$1.stylesheets = [];
-tmpl$1.stylesheetTokens = {
-  hostAttribute: "c-dataset_dataset-host",
-  shadowAttribute: "c-dataset_dataset"
-};
 
 class BaseAttribute extends BaseLightningElement {
   constructor() {
@@ -11744,61 +10873,35 @@ class BaseAttribute extends BaseLightningElement {
 }
 
 var BaseAttribute$1 = registerComponent(BaseAttribute, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
 
-class Dataset extends BaseAttribute$1 {
-  get labels() {
-    return this._payload.labels;
+let nanoid = (t = 21) => {
+  let e = '',
+      r = crypto.getRandomValues(new Uint8Array(t));
+
+  for (; t--;) {
+    let n = 63 & r[t];
+    e += n < 36 ? n.toString(36) : n < 62 ? (n - 26).toString(36).toUpperCase() : n < 63 ? '_' : '-';
   }
 
-  set labels(v) {
-    this._payload.labels = sanitize(v);
+  return e;
+};
+
+function sanitize(attribute) {
+  let value = attribute;
+
+  if (value) {
+    try {
+      value = JSON.parse(value.replace(/\\/g, ''));
+    } catch (e) {}
   }
 
-  constructor() {
-    super();
-    this._listenerHandlers = {
-      handleDataChange: evt => {
-        evt.stopPropagation();
-        this._details[evt.detail.payload.uuid] = evt.detail.payload;
-        this._payload.datasets = Object.values(this._details);
-      },
-      handleDataDeletion: evt => {
-        evt.stopPropagation();
-        delete this._details[evt.detail.payload.uuid];
-        this._payload.datasets = Object.values(this._details);
-      }
-    };
-    this._details = {};
-    this._payload.datasets = [];
-    this._option = ATTRIBUTE_DATA;
-  }
-
-  connectedCallback() {
-    this.addEventListener(DATA_EVENT_NAME, this._listenerHandlers.handleDataChange);
-    this.addEventListener(DISCONNECT_EVENT_NAME, this._listenerHandlers.handleDataDeletion);
-  }
-
-  disconnectedCallback() {
-    this.removeEventListener(DATA_EVENT_NAME, this._listenerHandlers.handleDataChange);
-    this.removeEventListener(DISCONNECT_EVENT_NAME, this._listenerHandlers.handleDataDeletion);
-  }
-
+  return value;
 }
-
-registerDecorators(Dataset, {
-  publicProps: {
-    labels: {
-      config: 3
-    }
-  },
-  fields: ["_listenerHandlers"]
-});
-
-var _cDataset = registerComponent(Dataset, {
-  tmpl: _tmpl$1
-});
+function parseBoolean(value) {
+  return typeof value == 'string' ? value === 'true' : value;
+}
 
 class Data extends BaseAttribute$1 {
   get backgroundcolor() {
@@ -12322,7 +11425,74 @@ registerDecorators(Data, {
 });
 
 var _cData = registerComponent(Data, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
+});
+
+function tmpl$3($api, $cmp, $slotset, $ctx) {
+  const {s: api_slot} = $api;
+  return [api_slot("", {
+    key: 0
+  }, [], $slotset)];
+}
+var _tmpl$3 = registerTemplate(tmpl$3);
+tmpl$3.slots = [""];
+tmpl$3.stylesheets = [];
+tmpl$3.stylesheetTokens = {
+  hostAttribute: "c-dataset_dataset-host",
+  shadowAttribute: "c-dataset_dataset"
+};
+
+class Dataset extends BaseAttribute$1 {
+  get labels() {
+    return this._payload.labels;
+  }
+
+  set labels(v) {
+    this._payload.labels = sanitize(v);
+  }
+
+  constructor() {
+    super();
+    this._listenerHandlers = {
+      handleDataChange: evt => {
+        evt.stopPropagation();
+        this._details[evt.detail.payload.uuid] = evt.detail.payload;
+        this._payload.datasets = Object.values(this._details);
+      },
+      handleDataDeletion: evt => {
+        evt.stopPropagation();
+        delete this._details[evt.detail.payload.uuid];
+        this._payload.datasets = Object.values(this._details);
+      }
+    };
+    this._details = {};
+    this._payload.datasets = [];
+    this._option = ATTRIBUTE_DATA;
+  }
+
+  connectedCallback() {
+    this.addEventListener(DATA_EVENT_NAME, this._listenerHandlers.handleDataChange);
+    this.addEventListener(DISCONNECT_EVENT_NAME, this._listenerHandlers.handleDataDeletion);
+  }
+
+  disconnectedCallback() {
+    this.removeEventListener(DATA_EVENT_NAME, this._listenerHandlers.handleDataChange);
+    this.removeEventListener(DISCONNECT_EVENT_NAME, this._listenerHandlers.handleDataDeletion);
+  }
+
+}
+
+registerDecorators(Dataset, {
+  publicProps: {
+    labels: {
+      config: 3
+    }
+  },
+  fields: ["_listenerHandlers"]
+});
+
+var _cDataset = registerComponent(Dataset, {
+  tmpl: _tmpl$3
 });
 
 class Title extends BaseAttribute$1 {
@@ -12439,7 +11609,7 @@ registerDecorators(Title, {
 });
 
 var _cTitle = registerComponent(Title, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
 
 class Legend extends BaseAttribute$1 {
@@ -12668,7 +11838,7 @@ registerDecorators(Legend, {
 });
 
 var _cLegend = registerComponent(Legend, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
 
 class Animation extends BaseAttribute$1 {
@@ -12729,7 +11899,7 @@ registerDecorators(Animation, {
 });
 
 var _cAnimation = registerComponent(Animation, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
 
 class BaseAxis extends BaseAttribute$1 {
@@ -12963,7 +12133,7 @@ registerDecorators(BaseAxis, {
 });
 
 var BaseAxis$1 = registerComponent(BaseAxis, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
 
 class CartesianAxis extends BaseAxis$1 {
@@ -13447,7 +12617,7 @@ registerDecorators(CartesianAxis, {
 });
 
 var _cCartesianAxis = registerComponent(CartesianAxis, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
 
 class CartesianCategoryAxis extends _cCartesianAxis {
@@ -13475,7 +12645,824 @@ registerDecorators(CartesianCategoryAxis, {
 });
 
 var _cCartesianCategoryAxis = registerComponent(CartesianCategoryAxis, {
+  tmpl: _tmpl$4
+});
+
+function stylesheet$1(hostSelector, shadowSelector, nativeShadow) {
+  return (nativeShadow ? ":host {display: block;}" : [hostSelector, " {display: block;}"].join(''));
+}
+var _implicitStylesheets$1 = [stylesheet$1];
+
+function tmpl$2($api, $cmp, $slotset, $ctx) {
+  const {h: api_element, s: api_slot} = $api;
+  return [api_element("div", {
+    style: $cmp.chartStyle,
+    attrs: {
+      "role": "img",
+      "aria-label": $cmp.ariaLabel
+    },
+    context: {
+      lwc: {
+        dom: "manual"
+      }
+    },
+    key: 0
+  }, []), api_slot("", {
+    key: 1
+  }, [], $slotset)];
+}
+var _tmpl$2 = registerTemplate(tmpl$2);
+tmpl$2.slots = [""];
+tmpl$2.stylesheets = [];
+
+
+if (_implicitStylesheets$1) {
+  tmpl$2.stylesheets.push.apply(tmpl$2.stylesheets, _implicitStylesheets$1);
+}
+tmpl$2.stylesheetTokens = {
+  hostAttribute: "c-chart_chart-host",
+  shadowAttribute: "c-chart_chart"
+};
+
+var ChartJS = './staticresources/chartjs_v280.js';
+
+function loadScript(ctx, url) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = url;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.body.appendChild(script);
+  });
+}
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+class ChartConfigService {
+  constructor() {
+    this._config = _objectSpread({}, ChartConfigService.DEFAULT_CONFIGURATION);
+    this._scales = {
+      xAxes: {},
+      yAxes: {}
+    };
+    this._dirty = true;
+  }
+
+  updateConfig(payload, option) {
+    this._dirty = true;
+
+    if (!option) {
+      this._config = _objectSpread(_objectSpread({}, this._config), payload);
+    } else {
+      this._config[option] = this._config[option] || {};
+      Object.keys(payload).forEach(attribut => {
+        if (Array.isArray(this._config[option][attribut])) {
+          if (Array.isArray(payload[attribut])) {
+            if (Object.prototype.hasOwnProperty.call(this._scales, attribut)) {
+              this._scales[attribut][payload[attribut][0].uuid] = payload[attribut][0];
+              this._config[option][attribut] = Object.values(this._scales[attribut]);
+            } else {
+              this._config[option][attribut].push(...payload[attribut]);
+            }
+          } else {
+            this._config[option][attribut].push(payload[attribut]);
+          }
+        } else if (typeof this._config[option][attribut] === 'object' && this._config[option][attribut] !== null) {
+          this._config[option][attribut] = _objectSpread(_objectSpread({}, this._config[option][attribut]), payload[attribut]);
+        } else {
+          this._config[option][attribut] = payload[attribut];
+
+          if (Object.prototype.hasOwnProperty.call(this._scales, attribut) && payload[attribut] !== undefined) {
+            this._scales[attribut][payload[attribut][0].uuid] = payload[attribut][0];
+          }
+        }
+      });
+    }
+  }
+
+  removeConfig(payload, option) {
+    this._dirty = true;
+
+    if (option === ATTRIBUTE_CARTESIAN_AXES) {
+      Object.keys(this._config[option]).filter(scale => this._config[option][scale]).forEach(scale => {
+        this._config[option][scale] = this._config[option][scale].filter(axis => axis.uuid !== payload[scale][0].uuid);
+        this._scales[scale] = this._config[option][scale];
+      });
+    } else {
+      this._config[option] = undefined;
+    }
+  }
+
+  getConfig() {
+    if (this._dirty) {
+      this._cleanConfig = ChartConfigService.cleanObject(this._config);
+      this._dirty = false;
+    }
+
+    return this._cleanConfig;
+  }
+
+  static cleanObject(obj) {
+    const validObj = o => (Object.keys(o).length || Array.isArray(o) && o.length) && o;
+
+    const itemToBool = item => {
+      return typeof item !== 'object' || item === null ? item : validObj(clean(item));
+    };
+
+    const clean = o => validObj(Array.isArray(o) ? o.map(itemToBool).filter(Boolean) : Object.entries(o).reduce((a, [key, val]) => {
+      const newVal = itemToBool(val);
+      if (newVal !== undefined && newVal !== null && typeof val === typeof newVal) a[key] = newVal;
+      return a;
+    }, {}));
+
+    return clean(obj);
+  }
+
+}
+
+ChartConfigService.DEFAULT_CONFIGURATION = {
+  legend: {
+    display: false
+  }
+};
+var ChartConfigService$1 = registerComponent(ChartConfigService, {
+  tmpl: _tmpl$4
+});
+
+class Chart extends BaseLightningElement {
+  get uuid() {
+    return this._uuid;
+  }
+
+  set uuid(v) {
+    this._uuid = v;
+  }
+
+  get chartjsloadedCallback() {
+    return this._chartjsLoadedCallback;
+  }
+
+  set chartjsloadedCallback(v) {
+    this._chartjsLoadedCallback = v;
+
+    this._callChartjsloadedCallback();
+  }
+
+  get canvasOnchange() {
+    return this._canvasOnchange;
+  }
+
+  set canvasOnchange(v) {
+    this.getCanvas().removeEventListener('mouseover', this._canvasOnchange);
+    this._canvasOnchange = v;
+    this.getCanvas().addEventListener('change', this._canvasOnchange);
+  }
+
+  get canvasOnclick() {
+    return this._canvasOnclick;
+  }
+
+  set canvasOnclick(v) {
+    this.getCanvas().removeEventListener('mouseover', this._canvas_canvasOnclickOnmouseover);
+    this._canvasOnclick = v;
+    this.getCanvas().addEventListener('click', this._canvasOnclick);
+  }
+
+  get canvasOnmouseover() {
+    return this._canvasOnmouseover;
+  }
+
+  set canvasOnmouseover(v) {
+    this.getCanvas().removeEventListener('mouseover', this._canvasOnmouseover);
+    this._canvasOnmouseover = v;
+    this.getCanvas().addEventListener('mouseover', this._canvasOnmouseover);
+  }
+
+  get canvasOnmouseout() {
+    return this._canvasOnmouseout;
+  }
+
+  set canvasOnmouseout(v) {
+    this.getCanvas().removeEventListener('mouseover', this._canvasOnmouseout);
+    this._canvasOnmouseout = v;
+    this.getCanvas().addEventListener('mouseout', this._canvasOnmouseout);
+  }
+
+  get responsive() {
+    return this._payload.responsive;
+  }
+
+  set responsive(v) {
+    this._payload.responsive = parseBoolean(v);
+  }
+
+  get responsiveanimationduration() {
+    return this._payload.responsiveAnimationDuration;
+  }
+
+  set responsiveanimationduration(v) {
+    this._payload.responsiveAnimationDuration = v;
+  }
+
+  get maintainaspectratio() {
+    return this._payload.maintainAspectRatio;
+  }
+
+  set maintainaspectratio(v) {
+    this._payload.maintainAspectRatio = parseBoolean(v);
+  }
+
+  get aspectratio() {
+    return this._payload.aspectRatio;
+  }
+
+  set aspectratio(v) {
+    this._payload.aspectRatio = v;
+  }
+
+  get callbackResize() {
+    return this._payload.onResize;
+  }
+
+  set callbackResize(v) {
+    this._payload.onResize = v;
+  }
+
+  get devicepixelratio() {
+    return this._payload.pointHoverBorderColor;
+  }
+
+  set devicepixelratio(v) {
+    this._payload.pointHoverBorderColor = v;
+  }
+
+  get events() {
+    return this._payload.events;
+  }
+
+  set events(v) {
+    this._payload.events = sanitize(v);
+  }
+
+  get callbackClick() {
+    return this._payload.onClick;
+  }
+
+  set callbackClick(v) {
+    this._payload.onClick = v;
+  }
+
+  get callbackHover() {
+    return this._payload.onHover;
+  }
+
+  set callbackHover(v) {
+    this._payload.onHover = v;
+  }
+
+  get type() {
+    return this._type;
+  }
+
+  set type(v) {
+    if (v !== this._type) {
+      this._type = v;
+      this.ariaLabel = this._payload[ATTRIBUTE_TITLE] && this._payload[ATTRIBUTE_TITLE].text ? this._payload[ATTRIBUTE_TITLE].text : `${this._type} chart`;
+      this.destroyChart();
+
+      this._reactivityManager.throttleRegisteredJob();
+    }
+  }
+
+  get chartStyle() {
+    return `width: ${this.width}; height: ${this.height}; ${this.stylecss || ''}`;
+  }
+
+  destroyChart() {
+    if (this._chart) {
+      this._chart.destroy();
+
+      this._chart = null;
+    }
+  }
+
+  updateChart(duration, lazy) {
+    if (this._chart) {
+      this._chart.update(duration, lazy);
+    }
+  }
+
+  resetChart() {
+    if (this._chart) {
+      this._chart.reset();
+    }
+  }
+
+  renderChart(duration, lazy) {
+    if (this._chart) {
+      this._chart.render(duration, lazy);
+    }
+  }
+
+  stopChart() {
+    if (this._chart) {
+      this._chart.stop();
+    }
+
+    return this;
+  }
+
+  resizeChart() {
+    if (this._chart) {
+      this._chart.resize();
+    }
+
+    return this;
+  }
+
+  clearChart() {
+    if (this._chart) {
+      this._chart.clear();
+    }
+
+    return this;
+  }
+
+  toBase64ImageChart() {
+    let res = null;
+
+    if (this._chart) {
+      res = this._chart.toBase64Image();
+    }
+
+    return res;
+  }
+
+  generateLegendChart() {
+    let res = null;
+
+    if (this._chart) {
+      res = this._chart.generateLegend();
+    }
+
+    return res;
+  }
+
+  getElementAtEventChart(e) {
+    let res = null;
+
+    if (this._chart) {
+      res = this._chart.getElementAtEvent(e);
+    }
+
+    return res;
+  }
+
+  getElementsAtEventChart(e) {
+    let res = null;
+
+    if (this._chart) {
+      res = this._chart.getElementsAtEvent(e);
+    }
+
+    return res;
+  }
+
+  getDatasetAtEventChart(e) {
+    let res = null;
+
+    if (this._chart) {
+      res = this._chart.getDatasetAtEvent(e);
+    }
+
+    return res;
+  }
+
+  getDatasetMetaChart(index) {
+    let res = null;
+
+    if (this._chart) {
+      res = this._chart.getDatasetMeta(index);
+    }
+
+    return res;
+  }
+
+  constructor() {
+    super();
+    this.width = void 0;
+    this.height = void 0;
+    this.stylecss = void 0;
+    this._uuid = nanoid(11);
+    this._chartjsLoadedCallback = void 0;
+    this._canvasOnchange = void 0;
+    this._canvasOnclick = void 0;
+    this._canvasOnmouseover = void 0;
+    this._canvasOnmouseout = void 0;
+    this.ariaLabel = void 0;
+    this._listenerHandlers = {
+      handleOption: evt => {
+        evt.stopPropagation();
+        const {
+          payload,
+          option
+        } = evt.detail;
+
+        if (option === ATTRIBUTE_DATA) {
+          this._details = payload;
+        } else {
+          if (option === ATTRIBUTE_TITLE) {
+            this.ariaLabel = payload.text;
+          }
+
+          this._configService.updateConfig(payload, option);
+        }
+
+        this._reactivityManager.throttleRegisteredJob();
+      },
+      handleDisconnect: evt => {
+        evt.stopPropagation();
+        const {
+          payload,
+          option
+        } = evt.detail;
+
+        if (option === ATTRIBUTE_DATA) {
+          this._details = null;
+          this.destroyChart();
+        } else {
+          if (option === ATTRIBUTE_TITLE) {
+            this.ariaLabel = `${this._type} chart`;
+          }
+
+          this._configService.removeConfig(payload, option);
+
+          this._reactivityManager.throttleRegisteredJob();
+        }
+      }
+    };
+    this._baseChartInitialized = false;
+    this._chartjsLoaded = false;
+    this._configService = new ChartConfigService$1();
+    this._details = null;
+    this._chart = null;
+    this._reactivityManager = new ReactivityManager$1();
+
+    this._reactivityManager.registerJob(() => this.drawChart());
+
+    this._payload = this._reactivityManager.getReactivityProxy();
+  }
+
+  connectedCallback() {
+    this.addEventListener(OPTION_EVENT_NAME, this._listenerHandlers.handleOption);
+    this.addEventListener(DISCONNECT_EVENT_NAME, this._listenerHandlers.handleDisconnect);
+  }
+
+  disconnectedCallback() {
+    this.removeEventListener(OPTION_EVENT_NAME, this._listenerHandlers.handleOption);
+    this.removeEventListener(DISCONNECT_EVENT_NAME, this._listenerHandlers.handleDisconnect);
+    this.destroyChart();
+  }
+
+  renderedCallback() {
+    if (this._baseChartInitialized) {
+      return;
+    }
+
+    this._baseChartInitialized = true;
+    loadScript(this, ChartJS).then(() => {
+      this._chartjsLoaded = true;
+
+      this._callChartjsloadedCallback();
+
+      this._reactivityManager.throttleRegisteredJob();
+    }, reason => {
+      this.errorCallback(reason);
+    });
+  }
+
+  errorCallback(error, stack) {
+    this.destroyChart();
+    this.dispatchEvent(new CustomEvent(ERROR_EVENT_NAME, {
+      bubbles: true,
+      detail: {
+        uuid: this.uuid,
+        error: error,
+        stack: stack
+      }
+    }));
+  }
+
+  getCanvas() {
+    if (!this._canvas) {
+      this._canvas = document.createElement('canvas');
+      this.template.querySelector('div').appendChild(this._canvas);
+    }
+
+    return this._canvas;
+  }
+
+  drawChart() {
+    if (!this._isReadyToDraw()) return;
+
+    try {
+      this._configService.updateConfig(this._payload, null);
+
+      if (!this._chart || !this._chart.ctx) {
+        this._chart = new window.Chart(this.getCanvas().getContext('2d'), {
+          type: this._type,
+          data: this._details,
+          options: this._configService.getConfig()
+        });
+      } else {
+        this._chart.data = this._details;
+        this._chart.options = this._configService.getConfig();
+
+        this._chart.update();
+      }
+    } catch (error) {
+      this.errorCallback(error, error.stack);
+    }
+  }
+
+  _isReadyToDraw() {
+    return this._chartjsLoaded && this._details && this._type;
+  }
+
+  _callChartjsloadedCallback() {
+    if (this._chartjsLoaded === true && typeof this._chartjsLoadedCallback === 'function') {
+      this._chartjsLoadedCallback();
+    }
+  }
+
+}
+
+registerDecorators(Chart, {
+  publicProps: {
+    width: {
+      config: 0
+    },
+    height: {
+      config: 0
+    },
+    stylecss: {
+      config: 0
+    },
+    uuid: {
+      config: 3
+    },
+    chartjsloadedCallback: {
+      config: 3
+    },
+    canvasOnchange: {
+      config: 3
+    },
+    canvasOnclick: {
+      config: 3
+    },
+    canvasOnmouseover: {
+      config: 3
+    },
+    canvasOnmouseout: {
+      config: 3
+    },
+    responsive: {
+      config: 3
+    },
+    responsiveanimationduration: {
+      config: 3
+    },
+    maintainaspectratio: {
+      config: 3
+    },
+    aspectratio: {
+      config: 3
+    },
+    callbackResize: {
+      config: 3
+    },
+    devicepixelratio: {
+      config: 3
+    },
+    events: {
+      config: 3
+    },
+    callbackClick: {
+      config: 3
+    },
+    callbackHover: {
+      config: 3
+    },
+    type: {
+      config: 3
+    }
+  },
+  publicMethods: ["destroyChart", "updateChart", "resetChart", "renderChart", "stopChart", "resizeChart", "clearChart", "toBase64ImageChart", "generateLegendChart", "getElementAtEventChart", "getElementsAtEventChart", "getDatasetAtEventChart", "getDatasetMetaChart"],
+  fields: ["_uuid", "_chartjsLoadedCallback", "_canvasOnchange", "_canvasOnclick", "_canvasOnmouseover", "_canvasOnmouseout", "ariaLabel", "_listenerHandlers"]
+});
+
+var _cChart = registerComponent(Chart, {
   tmpl: _tmpl$2
+});
+
+function stylesheet(hostSelector, shadowSelector, nativeShadow) {
+  return [".col", shadowSelector, " {display: inline-block;width: 30%;margin: 1rem;}.slds-text-link:hover", shadowSelector, " {cursor: pointer;}pre", shadowSelector, " {text-align: left;border: 1px solid #dee2e6;border-radius: 10px;padding: 1.2rem;background-color: #364149 !important;color: #fff !important;}"].join('');
+}
+var _implicitStylesheets = [stylesheet];
+
+function tmpl$1($api, $cmp, $slotset, $ctx) {
+  const {t: api_text, s: api_slot, h: api_element, b: api_bind, gid: api_scoped_id} = $api;
+  const {_m0, _m1, _m2} = $ctx;
+  return [api_element("article", {
+    classMap: {
+      "slds-card": true,
+      "col": true
+    },
+    key: 0
+  }, [api_element("div", {
+    classMap: {
+      "slds-card__body": true,
+      "slds-card__body_inner": true,
+      "slds-p-horizontal_x-large": true
+    },
+    key: 1
+  }, [api_element("div", {
+    classMap: {
+      "chart": true
+    },
+    key: 2
+  }, [api_slot("chartExample", {
+    attrs: {
+      "name": "chartExample"
+    },
+    key: 3
+  }, [api_text("Chart example")], $slotset)])]), api_element("footer", {
+    classMap: {
+      "slds-card__footer": true
+    },
+    key: 4
+  }, [api_element("p", {
+    classMap: {
+      "slds-card__footer-action": true,
+      "slds-text-link": true
+    },
+    key: 5,
+    on: {
+      "click": _m0 || ($ctx._m0 = api_bind($cmp.openModal))
+    }
+  }, [api_text("Source code"), api_element("span", {
+    classMap: {
+      "slds-assistive-text": true
+    },
+    key: 6
+  }, [api_text("Source code")])])])]), $cmp.isModalOpen ? api_element("section", {
+    classMap: {
+      "slds-modal": true,
+      "slds-fade-in-open": true
+    },
+    attrs: {
+      "role": "dialog",
+      "tabindex": "-1",
+      "aria-label": "Meaningful description of the modal content",
+      "aria-modal": "true",
+      "aria-describedby": api_scoped_id("modal-content-id-1")
+    },
+    key: 7
+  }, [api_element("div", {
+    classMap: {
+      "slds-modal__container": true
+    },
+    styleMap: {
+      "width": "90%",
+      "max-width": "unset"
+    },
+    key: 8
+  }, [api_element("header", {
+    classMap: {
+      "slds-modal__header": true,
+      "slds-modal__header_empty": true
+    },
+    key: 9
+  }, [api_element("button", {
+    classMap: {
+      "slds-button": true,
+      "slds-button_icon": true,
+      "slds-modal__close": true,
+      "slds-button_icon-inverse": true
+    },
+    attrs: {
+      "title": "Close"
+    },
+    key: 10,
+    on: {
+      "click": _m1 || ($ctx._m1 = api_bind($cmp.closeModal))
+    }
+  }, [api_element("svg", {
+    classMap: {
+      "slds-button__icon": true,
+      "slds-button__icon_large": true
+    },
+    attrs: {
+      "aria-hidden": "true"
+    },
+    key: 11,
+    svg: true
+  }, [api_element("use", {
+    attrs: {
+      "xlink:href": sanitizeAttribute("use", "http://www.w3.org/2000/svg", "xlink:href", "/assets/icons/utility-sprite/svg/symbols.svg#close")
+    },
+    key: 12,
+    svg: true
+  }, [])]), api_element("span", {
+    classMap: {
+      "slds-assistive-text": true
+    },
+    key: 13
+  }, [api_text("Close")])])]), api_element("div", {
+    classMap: {
+      "slds-modal__content": true,
+      "slds-p-around_medium": true
+    },
+    attrs: {
+      "id": api_scoped_id("modal-content-id-1")
+    },
+    key: 14
+  }, [api_element("div", {
+    classMap: {
+      "code": true
+    },
+    key: 15
+  }, [api_element("pre", {
+    key: 16
+  }, [api_slot("chartCode", {
+    attrs: {
+      "name": "chartCode"
+    },
+    key: 17
+  }, [api_text("Code example")], $slotset)])])]), api_element("footer", {
+    classMap: {
+      "slds-modal__footer": true
+    },
+    key: 18
+  }, [api_element("button", {
+    classMap: {
+      "slds-button": true,
+      "slds-button_neutral": true
+    },
+    key: 19,
+    on: {
+      "click": _m2 || ($ctx._m2 = api_bind($cmp.closeModal))
+    }
+  }, [api_text("Close")])])])]) : null, $cmp.isModalOpen ? api_element("div", {
+    classMap: {
+      "slds-backdrop": true,
+      "slds-backdrop_open": true
+    },
+    styleMap: {
+      "opacity": "1"
+    },
+    key: 20
+  }, []) : null];
+}
+var _tmpl$1 = registerTemplate(tmpl$1);
+tmpl$1.slots = ["chartCode", "chartExample"];
+tmpl$1.stylesheets = [];
+
+
+if (_implicitStylesheets) {
+  tmpl$1.stylesheets.push.apply(tmpl$1.stylesheets, _implicitStylesheets);
+}
+tmpl$1.stylesheetTokens = {
+  hostAttribute: "c-sampleAppItem_sampleAppItem-host",
+  shadowAttribute: "c-sampleAppItem_sampleAppItem"
+};
+
+class SampleAppItem extends BaseLightningElement {
+  constructor(...args) {
+    super(...args);
+    this.isModalOpen = false;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+}
+
+registerDecorators(SampleAppItem, {
+  fields: ["isModalOpen"]
+});
+
+var _cSampleAppItem = registerComponent(SampleAppItem, {
+  tmpl: _tmpl$1
 });
 
 class Tooltip extends BaseAttribute$1 {
@@ -14065,7 +14052,7 @@ registerDecorators(Tooltip, {
 });
 
 var _cTooltip = registerComponent(Tooltip, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
 
 class LineConfiguration extends BaseAttribute$1 {
@@ -14226,7 +14213,7 @@ registerDecorators(LineConfiguration, {
 });
 
 var _cLineConfiguration = registerComponent(LineConfiguration, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
 
 class CartesianLinearAxis extends _cCartesianAxis {
@@ -14309,7 +14296,7 @@ registerDecorators(CartesianLinearAxis, {
 });
 
 var _cCartesianLinearAxis = registerComponent(CartesianLinearAxis, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
 
 class ArcConfiguration extends BaseAttribute$1 {
@@ -14382,7 +14369,7 @@ registerDecorators(ArcConfiguration, {
 });
 
 var _cArcConfiguration = registerComponent(ArcConfiguration, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
 
 class CartesianTimeAxis extends _cCartesianAxis {
@@ -14535,36 +14522,24 @@ registerDecorators(CartesianTimeAxis, {
 });
 
 var _cCartesianTimeAxis = registerComponent(CartesianTimeAxis, {
-  tmpl: _tmpl$2
+  tmpl: _tmpl$4
 });
 
 function tmpl($api, $cmp, $slotset, $ctx) {
-  const {
-    t: api_text,
-    b: api_bind,
-    h: api_element,
-    d: api_dynamic,
-    k: api_key,
-    i: api_iterator,
-    f: api_flatten,
-    c: api_custom_element
-  } = $api;
-  const {
-    _m0,
-    _m1
-  } = $ctx;
+  const {b: api_bind, t: api_text, h: api_element, k: api_key, d: api_dynamic, i: api_iterator, f: api_flatten, c: api_custom_element} = $api;
+  const {_m0, _m1} = $ctx;
   return [api_element("div", {
     classMap: {
       "slds-grid": true
     },
-    key: 4
+    key: 0
   }, [api_element("div", {
     classMap: {
       "slds-col": true,
       "slds-size_1-of-1": true,
       "slds-p-bottom_medium": true
     },
-    key: 3
+    key: 1
   }, [api_element("div", {
     classMap: {
       "slds-button-group": true,
@@ -14579,7 +14554,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "slds-button": true,
       "slds-button_neutral": true
     },
-    key: 0,
+    key: 3,
     on: {
       "click": _m0 || ($ctx._m0 = api_bind($cmp.displayAllCharts))
     }
@@ -14592,7 +14567,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       attrs: {
         "data-value": item
       },
-      key: api_key(1, item),
+      key: api_key(4, item),
       on: {
         "click": _m1 || ($ctx._m1 = api_bind($cmp.displayFilteredCharts))
       }
@@ -14602,11 +14577,11 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "container": true
     },
     styleMap: {
-      "textAlign": "center"
+      "text-align": "center"
     },
-    key: 292
+    key: 5
   }, [api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 35
+    key: 6
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -14617,12 +14592,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "stylecss": "position: relative; margin: auto;",
       "events": "[\"click\"]"
     },
-    key: 11
+    key: 7
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"Blue\", \"Orange\", \"Yellow\", \"Green\", \"Light Blue\", \"Purple\"]"
     },
-    key: 6
+    key: 8
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "# of Votes",
@@ -14631,81 +14606,81 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "bordercolor": "[\n                  \"rgba(82, 183, 216, 1)\",\n                  \"rgba(225, 96, 50, 1)\",\n                  \"rgba(255, 176, 59, 1)\",\n                  \"rgba(84, 167, 123, 1)\",\n                  \"rgba(79, 210, 210, 1)\",\n                  \"rgba(226, 135, 178, 1)\"\n              ]",
       "borderwidth": "1"
     },
-    key: 5
+    key: 9
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Bar Chart"
     },
-    key: 7
+    key: 10
   }, []), api_custom_element("c-legend", _cLegend, {
     props: {
       "position": "right"
     },
-    key: 8
+    key: 11
   }, []), api_custom_element("c-animation", _cAnimation, {
     props: {
       "duration": "2000",
       "easing": "easeInBounce"
     },
-    key: 9
+    key: 12
   }, []), api_custom_element("c-cartesian-category-axis", _cCartesianCategoryAxis, {
     props: {
       "axis": "x",
       "position": "top"
     },
-    key: 10
+    key: 13
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 34
-  }, [api_text("<c-chart type=\"bar\" responsive=\"true\" stylecss=\"position: relative; margin: auto;\" events='[\"click\"]'>"), api_element("br", {
-    key: 12
-  }, []), api_text("\u2003<c-dataset labels='[\"Blue\", \"Orange\", \"Yellow\", \"Green\", \"Light Blue\", \"Purple\"]'>"), api_element("br", {
-    key: 13
-  }, []), api_text("\u2003\u2003<c-data label=\"# of Votes\" detail=\"[12, 19, 7, 9, 5, 15]\" backgroundcolor='["), api_element("br", {
     key: 14
-  }, []), api_text("\u2003\u2003\u2003\"rgba(82, 183, 216, 0.2)\","), api_element("br", {
+  }, [api_text("<c-chart type=\"bar\" responsive=\"true\" stylecss=\"position: relative; margin: auto;\" events='[\"click\"]'>"), api_element("br", {
     key: 15
-  }, []), api_text("\u2003\u2003\u2003\"rgba(225, 96, 50, 0.2)\","), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"Blue\", \"Orange\", \"Yellow\", \"Green\", \"Light Blue\", \"Purple\"]'>"), api_element("br", {
     key: 16
-  }, []), api_text("\u2003\u2003\u2003\"rgba(255, 176, 59, 0.2)\","), api_element("br", {
+  }, []), api_text("  <c-data label=\"# of Votes\" detail=\"[12, 19, 7, 9, 5, 15]\" backgroundcolor='["), api_element("br", {
     key: 17
-  }, []), api_text("\u2003\u2003\u2003\"rgba(84, 167, 123, 0.2)\","), api_element("br", {
+  }, []), api_text("   \"rgba(82, 183, 216, 0.2)\","), api_element("br", {
     key: 18
-  }, []), api_text("\u2003\u2003\u2003\"rgba(79, 210, 210, 0.2)\","), api_element("br", {
+  }, []), api_text("   \"rgba(225, 96, 50, 0.2)\","), api_element("br", {
     key: 19
-  }, []), api_text("\u2003\u2003\u2003\"rgba(226, 135, 178, 0.2)\""), api_element("br", {
+  }, []), api_text("   \"rgba(255, 176, 59, 0.2)\","), api_element("br", {
     key: 20
-  }, []), api_text("\u2003\u2003\u2003]' bordercolor='["), api_element("br", {
+  }, []), api_text("   \"rgba(84, 167, 123, 0.2)\","), api_element("br", {
     key: 21
-  }, []), api_text("\u2003\u2003\u2003\u2003\"rgba(82, 183, 216, 1)\","), api_element("br", {
+  }, []), api_text("   \"rgba(79, 210, 210, 0.2)\","), api_element("br", {
     key: 22
-  }, []), api_text("\u2003\u2003\u2003\u2003\"rgba(225, 96, 50, 1)\","), api_element("br", {
+  }, []), api_text("   \"rgba(226, 135, 178, 0.2)\""), api_element("br", {
     key: 23
-  }, []), api_text("\u2003\u2003\u2003\u2003\"rgba(255, 176, 59, 1)\","), api_element("br", {
+  }, []), api_text("   ]' bordercolor='["), api_element("br", {
     key: 24
-  }, []), api_text("\u2003\u2003\u2003\u2003\"rgba(84, 167, 123, 1)\","), api_element("br", {
+  }, []), api_text("    \"rgba(82, 183, 216, 1)\","), api_element("br", {
     key: 25
-  }, []), api_text("\u2003\u2003\u2003\u2003\"rgba(79, 210, 210, 1)\","), api_element("br", {
+  }, []), api_text("    \"rgba(225, 96, 50, 1)\","), api_element("br", {
     key: 26
-  }, []), api_text("\u2003\u2003\u2003\u2003\"rgba(226, 135, 178, 1)\""), api_element("br", {
+  }, []), api_text("    \"rgba(255, 176, 59, 1)\","), api_element("br", {
     key: 27
-  }, []), api_text("\u2003\u2003\u2003]' borderwidth=\"1\"></c-data>"), api_element("br", {
+  }, []), api_text("    \"rgba(84, 167, 123, 1)\","), api_element("br", {
     key: 28
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("    \"rgba(79, 210, 210, 1)\","), api_element("br", {
     key: 29
-  }, []), api_text("\u2003<c-title text=\"Bar Chart\"></c-title>"), api_element("br", {
+  }, []), api_text("    \"rgba(226, 135, 178, 1)\""), api_element("br", {
     key: 30
-  }, []), api_text("\u2003<c-legend position=\"right\"></c-legend>"), api_element("br", {
+  }, []), api_text("   ]' borderwidth=\"1\"></c-data>"), api_element("br", {
     key: 31
-  }, []), api_text("\u2003<c-animation duration=\"2000\" easing=\"easeInBounce\"> </c-animation>"), api_element("br", {
+  }, []), api_text(" </c-dataset>"), api_element("br", {
     key: 32
-  }, []), api_text("\u2003<c-cartesian-category-axis axis=\"x\" position=\"top\"></c-cartesian-category-axis>"), api_element("br", {
+  }, []), api_text(" <c-title text=\"Bar Chart\"></c-title>"), api_element("br", {
     key: 33
+  }, []), api_text(" <c-legend position=\"right\"></c-legend>"), api_element("br", {
+    key: 34
+  }, []), api_text(" <c-animation duration=\"2000\" easing=\"easeInBounce\"> </c-animation>"), api_element("br", {
+    key: 35
+  }, []), api_text(" <c-cartesian-category-axis axis=\"x\" position=\"top\"></c-cartesian-category-axis>"), api_element("br", {
+    key: 36
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 47
+    key: 37
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -14714,12 +14689,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "line",
       "responsive": "true"
     },
-    key: 39
+    key: 38
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]"
     },
-    key: 37
+    key: 39
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "My First dataset",
@@ -14727,32 +14702,32 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "bordercolor": "rgba(119, 185, 242, 1)",
       "backgroundcolor": "rgba(119, 185, 242, 0.2)"
     },
-    key: 36
+    key: 40
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Line Chart"
     },
-    key: 38
+    key: 41
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 46
-  }, [api_text("<c-chart type=\"line\" responsive=\"true\">"), api_element("br", {
-    key: 40
-  }, []), api_text("\u2003<c-dataset labels='[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]'>"), api_element("br", {
-    key: 41
-  }, []), api_text("\u2003\u2003<c-data label=\"My First dataset\" detail=\"[10, 30, 46, 2, 8, 50, 0]\" bordercolor=\"rgba(119, 185, 242, 1)\""), api_element("br", {
     key: 42
-  }, []), api_text("\u2003\u2003backgroundcolor=\"rgba(119, 185, 242, 0.2)\"></c-data>"), api_element("br", {
+  }, [api_text("<c-chart type=\"line\" responsive=\"true\">"), api_element("br", {
     key: 43
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]'>"), api_element("br", {
     key: 44
-  }, []), api_text("\u2003<c-title text=\"Line Chart\"></c-title>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"My First dataset\" detail=\"[10, 30, 46, 2, 8, 50, 0]\" bordercolor=\"rgba(119, 185, 242, 1)\""), api_element("br", {
     key: 45
+  }, []), api_text("  backgroundcolor=\"rgba(119, 185, 242, 0.2)\"></c-data>"), api_element("br", {
+    key: 46
+  }, []), api_text(" </c-dataset>"), api_element("br", {
+    key: 47
+  }, []), api_text(" <c-title text=\"Line Chart\"></c-title>"), api_element("br", {
+    key: 48
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 72
+    key: 49
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -14761,12 +14736,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "line",
       "responsive": "true"
     },
-    key: 56
+    key: 50
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]"
     },
-    key: 50
+    key: 51
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "My First dataset",
@@ -14775,7 +14750,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "detail": "[10, 30, 46, 2, 8, 50, 0]",
       "fill": "false"
     },
-    key: 48
+    key: 52
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "My Second dataset",
@@ -14784,31 +14759,31 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "bordercolor": "rgba(84, 167, 123, 0.2)",
       "fill": "false"
     },
-    key: 49
+    key: 53
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Line Chart"
     },
-    key: 51
+    key: 54
   }, []), api_custom_element("c-tooltip", _cTooltip, {
     props: {
       "position": "nearest",
       "mode": "index",
       "enabled": "true"
     },
-    key: 52
+    key: 55
   }, []), api_custom_element("c-line-configuration", _cLineConfiguration, {
     props: {
       "tension": "0.4"
     },
-    key: 53
+    key: 56
   }, []), api_custom_element("c-cartesian-axis", _cCartesianAxis, {
     props: {
       "axis": "x",
       "position": "top",
       "type": "category"
     },
-    key: 54
+    key: 57
   }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
     props: {
       "axis": "y",
@@ -14819,43 +14794,43 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "gridZerolinecolor": "rgba(225, 96, 50, 1",
       "gridZerolinewidth": "3"
     },
-    key: 55
+    key: 58
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 71
-  }, [api_text("<c-chart type=\"line\" responsive=\"true\">"), api_element("br", {
-    key: 57
-  }, []), api_text("\u2003<c-dataset labels='[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]'>"), api_element("br", {
-    key: 58
-  }, []), api_text("\u2003\u2003<c-data label=\"My First dataset\" backgroundcolor=\"rgba(82, 183, 216, 1)\" bordercolor=\"rgba(82, 183, 216, 0.2)\""), api_element("br", {
     key: 59
-  }, []), api_text("\u2003\u2003detail=\"[10, 30, 46, 2, 8, 50, 0]\" fill=\"false\"></c-data>"), api_element("br", {
+  }, [api_text("<c-chart type=\"line\" responsive=\"true\">"), api_element("br", {
     key: 60
-  }, []), api_text("\u2003\u2003<c-data label=\"My Second dataset\" detail=\"[7, 49, 46, 13, 25, 30, 22]\" backgroundcolor=\"rgba(84, 167, 123, 1)\""), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]'>"), api_element("br", {
     key: 61
-  }, []), api_text("\u2003\u2003bordercolor=\"rgba(84, 167, 123, 0.2)\" fill=\"false\"></c-data>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"My First dataset\" backgroundcolor=\"rgba(82, 183, 216, 1)\" bordercolor=\"rgba(82, 183, 216, 0.2)\""), api_element("br", {
     key: 62
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("  detail=\"[10, 30, 46, 2, 8, 50, 0]\" fill=\"false\"></c-data>"), api_element("br", {
     key: 63
-  }, []), api_text("\u2003<c-title text=\"Line Chart\"></c-title>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"My Second dataset\" detail=\"[7, 49, 46, 13, 25, 30, 22]\" backgroundcolor=\"rgba(84, 167, 123, 1)\""), api_element("br", {
     key: 64
-  }, []), api_text("\u2003<c-tooltip position=\"nearest\" mode=\"index\" enabled=\"true\"></c-tooltip>"), api_element("br", {
+  }, []), api_text("  bordercolor=\"rgba(84, 167, 123, 0.2)\" fill=\"false\"></c-data>"), api_element("br", {
     key: 65
-  }, []), api_text("\u2003<c-line-configuration tension=\"0.4\"></c-line-configuration>"), api_element("br", {
+  }, []), api_text(" </c-dataset>"), api_element("br", {
     key: 66
-  }, []), api_text("\u2003<c-cartesian-axis axis=\"x\" position=\"top\" type=\"category\"></c-cartesian-axis>"), api_element("br", {
+  }, []), api_text(" <c-title text=\"Line Chart\"></c-title>"), api_element("br", {
     key: 67
-  }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"y\" position=\"right\" ticks-min=\"-10\" title-display=\"true\""), api_element("br", {
+  }, []), api_text(" <c-tooltip position=\"nearest\" mode=\"index\" enabled=\"true\"></c-tooltip>"), api_element("br", {
     key: 68
-  }, []), api_text("\u2003\u2003title-labelstring=\"yAxis items\" grid-zerolinecolor=\"rgba(225, 96, 50, 1\" grid-zerolinewidth=\"3\">"), api_element("br", {
+  }, []), api_text(" <c-line-configuration tension=\"0.4\"></c-line-configuration>"), api_element("br", {
     key: 69
-  }, []), api_text("\u2003</c-cartesian-linear-axis>"), api_element("br", {
+  }, []), api_text(" <c-cartesian-axis axis=\"x\" position=\"top\" type=\"category\"></c-cartesian-axis>"), api_element("br", {
     key: 70
+  }, []), api_text(" <c-cartesian-linear-axis axis=\"y\" position=\"right\" ticks-min=\"-10\" title-display=\"true\""), api_element("br", {
+    key: 71
+  }, []), api_text("  title-labelstring=\"yAxis items\" grid-zerolinecolor=\"rgba(225, 96, 50, 1\" grid-zerolinewidth=\"3\">"), api_element("br", {
+    key: 72
+  }, []), api_text(" </c-cartesian-linear-axis>"), api_element("br", {
+    key: 73
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 90
+    key: 74
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -14864,59 +14839,59 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "pie",
       "responsive": "true"
     },
-    key: 77
+    key: 75
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]"
     },
-    key: 74
+    key: 76
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "# of Tomatoes",
       "detail": "[12, 19, 3, 5]",
       "backgroundcolor": "[\n              \"rgba(206, 103, 22, 1)\",\n              \"rgba(245, 150, 35, 1)\",\n              \"rgba(245, 192, 98, 1)\",\n              \"rgba(245, 222, 152, 1)\"\n          ]"
     },
-    key: 73
+    key: 77
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Pie Chart"
     },
-    key: 75
+    key: 78
   }, []), api_custom_element("c-legend", _cLegend, {
     props: {
       "position": "right"
     },
-    key: 76
+    key: 79
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 89
-  }, [api_text("<c-chart type=\"pie\" responsive=\"true\">"), api_element("br", {
-    key: 78
-  }, []), api_text("\u2003<c-dataset labels='[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]'>"), api_element("br", {
-    key: 79
-  }, []), api_text("\u2003\u2003<c-data label=\"# of Tomatoes\" detail=\"[12, 19, 3, 5]\" backgroundcolor='["), api_element("br", {
     key: 80
-  }, []), api_text("\u2003\u2003\u2003\"rgba(206, 103, 22, 1)\","), api_element("br", {
+  }, [api_text("<c-chart type=\"pie\" responsive=\"true\">"), api_element("br", {
     key: 81
-  }, []), api_text("\u2003\u2003\u2003\"rgba(245, 150, 35, 1)\","), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]'>"), api_element("br", {
     key: 82
-  }, []), api_text("\u2003\u2003\u2003\"rgba(245, 192, 98, 1)\","), api_element("br", {
+  }, []), api_text("  <c-data label=\"# of Tomatoes\" detail=\"[12, 19, 3, 5]\" backgroundcolor='["), api_element("br", {
     key: 83
-  }, []), api_text("\u2003\u2003\u2003\"rgba(245, 222, 152, 1)\""), api_element("br", {
+  }, []), api_text("   \"rgba(206, 103, 22, 1)\","), api_element("br", {
     key: 84
-  }, []), api_text("\u2003\u2003]'></c-data>"), api_element("br", {
+  }, []), api_text("   \"rgba(245, 150, 35, 1)\","), api_element("br", {
     key: 85
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("   \"rgba(245, 192, 98, 1)\","), api_element("br", {
     key: 86
-  }, []), api_text("\u2003<c-title text=\"Pie Chart\"></c-title>"), api_element("br", {
+  }, []), api_text("   \"rgba(245, 222, 152, 1)\""), api_element("br", {
     key: 87
-  }, []), api_text("\u2003<c-legend position=\"right\"></c-legend>"), api_element("br", {
+  }, []), api_text("  ]'></c-data>"), api_element("br", {
     key: 88
+  }, []), api_text(" </c-dataset>"), api_element("br", {
+    key: 89
+  }, []), api_text(" <c-title text=\"Pie Chart\"></c-title>"), api_element("br", {
+    key: 90
+  }, []), api_text(" <c-legend position=\"right\"></c-legend>"), api_element("br", {
+    key: 91
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 110
+    key: 92
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -14925,66 +14900,66 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "doughnut",
       "responsive": "true"
     },
-    key: 96
+    key: 93
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]"
     },
-    key: 92
+    key: 94
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "# of Tomatoes",
       "detail": "[12, 19, 3, 5]",
       "backgroundcolor": "[\n              \"rgba(14, 110, 206, 1)\",\n              \"rgba(45, 156, 237, 1)\",\n              \"rgba(104, 206, 238, 1)\",\n              \"rgba(150, 242, 238, 1)\"\n          ]"
     },
-    key: 91
+    key: 95
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Doughnut Chart"
     },
-    key: 93
+    key: 96
   }, []), api_custom_element("c-legend", _cLegend, {
     props: {
       "position": "left"
     },
-    key: 94
+    key: 97
   }, []), api_custom_element("c-arc-configuration", _cArcConfiguration, {
     props: {
       "bordercolor": "rgba(7, 62, 146, 0.7)"
     },
-    key: 95
+    key: 98
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 109
-  }, [api_text("<c-chart type=\"doughnut\" responsive=\"true\">"), api_element("br", {
-    key: 97
-  }, []), api_text("\u2003<c-dataset labels='[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]'>"), api_element("br", {
-    key: 98
-  }, []), api_text("\u2003\u2003<c-data label=\"# of Tomatoes\" detail=\"[12, 19, 3, 5]\" backgroundcolor='["), api_element("br", {
     key: 99
-  }, []), api_text("\u2003\u2003\u2003\"rgba(14, 110, 206, 1)\","), api_element("br", {
+  }, [api_text("<c-chart type=\"doughnut\" responsive=\"true\">"), api_element("br", {
     key: 100
-  }, []), api_text("\u2003\u2003\u2003\"rgba(45, 156, 237, 1)\","), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]'>"), api_element("br", {
     key: 101
-  }, []), api_text("\u2003\u2003\u2003\"rgba(104, 206, 238, 1)\","), api_element("br", {
+  }, []), api_text("  <c-data label=\"# of Tomatoes\" detail=\"[12, 19, 3, 5]\" backgroundcolor='["), api_element("br", {
     key: 102
-  }, []), api_text("\u2003\u2003\u2003\"rgba(150, 242, 238, 1)\""), api_element("br", {
+  }, []), api_text("   \"rgba(14, 110, 206, 1)\","), api_element("br", {
     key: 103
-  }, []), api_text("\u2003\u2003]'></c-data>"), api_element("br", {
+  }, []), api_text("   \"rgba(45, 156, 237, 1)\","), api_element("br", {
     key: 104
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("   \"rgba(104, 206, 238, 1)\","), api_element("br", {
     key: 105
-  }, []), api_text("\u2003<c-title text=\"Doughnut Chart\"></c-title>"), api_element("br", {
+  }, []), api_text("   \"rgba(150, 242, 238, 1)\""), api_element("br", {
     key: 106
-  }, []), api_text("\u2003<c-legend position=\"left\"></c-legend>"), api_element("br", {
+  }, []), api_text("  ]'></c-data>"), api_element("br", {
     key: 107
-  }, []), api_text("\u2003<c-arc-configuration bordercolor=\"rgba(7, 62, 146, 0.7)\"></c-arc-configuration>"), api_element("br", {
+  }, []), api_text(" </c-dataset>"), api_element("br", {
     key: 108
+  }, []), api_text(" <c-title text=\"Doughnut Chart\"></c-title>"), api_element("br", {
+    key: 109
+  }, []), api_text(" <c-legend position=\"left\"></c-legend>"), api_element("br", {
+    key: 110
+  }, []), api_text(" <c-arc-configuration bordercolor=\"rgba(7, 62, 146, 0.7)\"></c-arc-configuration>"), api_element("br", {
+    key: 111
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 131
+    key: 112
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -14993,7 +14968,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "bubble",
       "responsive": "true"
     },
-    key: 117
+    key: 113
   }, [api_custom_element("c-dataset", _cDataset, {
     key: 114
   }, [api_custom_element("c-data", _cData, {
@@ -15002,63 +14977,63 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "detail": "[\\{\"x\": 3,\"y\": 7,\"r\": 10\\}, \\{\"x\": 5,\"y\": 4,\"r\": 5\\}, \\{\"x\": 3,\"y\": 4,\"r\": 5\\}]",
       "backgroundcolor": "rgba(82, 183, 216, 1)"
     },
-    key: 111
+    key: 115
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "Paul",
       "detail": "[\\{\"x\": 2,\"y\": 2,\"r\": 2\\}, \\{\"x\": 6,\"y\": 5,\"r\": 10\\}, \\{\"x\": 4,\"y\": 2,\"r\": 5\\}]",
       "backgroundcolor": "rgba(225, 96, 50, 1)"
     },
-    key: 112
+    key: 116
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "Ringo",
       "detail": "[\\{\"x\": 1,\"y\": 3,\"r\": 10\\}, \\{\"x\": 3,\"y\": 3,\"r\": 10\\}, \\{\"x\": 6,\"y\": 4,\"r\": 10\\}]",
       "backgroundcolor": "rgba(255, 176, 59, 1)"
     },
-    key: 113
+    key: 117
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Bubble Chart"
     },
-    key: 115
+    key: 118
   }, []), api_custom_element("c-legend", _cLegend, {
     props: {
       "position": "bottom"
     },
-    key: 116
+    key: 119
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 130
-  }, [api_text("<c-chart type=\"bubble\" responsive=\"true\">"), api_element("br", {
-    key: 118
-  }, []), api_text("\u2003<c-dataset>"), api_element("br", {
-    key: 119
-  }, []), api_text("\u2003\u2003<c-data label=\"John\" detail='[\\{\"x\": 3,\"y\": 7,\"r\": 10\\}, \\{\"x\": 5,\"y\": 4,\"r\": 5\\}, \\{\"x\": 3,\"y\": 4,\"r\": 5\\}]'"), api_element("br", {
     key: 120
-  }, []), api_text("\u2003\u2003backgroundcolor=\"rgba(82, 183, 216, 1)\"></c-data>"), api_element("br", {
+  }, [api_text("<c-chart type=\"bubble\" responsive=\"true\">"), api_element("br", {
     key: 121
-  }, []), api_text("\u2003\u2003<c-data label=\"Paul\" detail='[\\{\"x\": 2,\"y\": 2,\"r\": 2\\}, \\{\"x\": 6,\"y\": 5,\"r\": 10\\}, \\{\"x\": 4,\"y\": 2,\"r\": 5\\}]'"), api_element("br", {
+  }, []), api_text(" <c-dataset>"), api_element("br", {
     key: 122
-  }, []), api_text("\u2003\u2003backgroundcolor=\"rgba(225, 96, 50, 1)\"></c-data>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"John\" detail='[\\{\"x\": 3,\"y\": 7,\"r\": 10\\}, \\{\"x\": 5,\"y\": 4,\"r\": 5\\}, \\{\"x\": 3,\"y\": 4,\"r\": 5\\}]'"), api_element("br", {
     key: 123
-  }, []), api_text("\u2003\u2003<c-data label=\"Ringo\""), api_element("br", {
+  }, []), api_text("  backgroundcolor=\"rgba(82, 183, 216, 1)\"></c-data>"), api_element("br", {
     key: 124
-  }, []), api_text("\u2003\u2003detail='[\\{\"x\": 1,\"y\": 3,\"r\": 10\\}, \\{\"x\": 3,\"y\": 3,\"r\": 10\\}, \\{\"x\": 6,\"y\": 4,\"r\": 10\\}]'"), api_element("br", {
+  }, []), api_text("  <c-data label=\"Paul\" detail='[\\{\"x\": 2,\"y\": 2,\"r\": 2\\}, \\{\"x\": 6,\"y\": 5,\"r\": 10\\}, \\{\"x\": 4,\"y\": 2,\"r\": 5\\}]'"), api_element("br", {
     key: 125
-  }, []), api_text("\u2003\u2003backgroundcolor=\"rgba(255, 176, 59, 1)\"></c-data>"), api_element("br", {
+  }, []), api_text("  backgroundcolor=\"rgba(225, 96, 50, 1)\"></c-data>"), api_element("br", {
     key: 126
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"Ringo\""), api_element("br", {
     key: 127
-  }, []), api_text("\u2003<c-title text=\"Bubble Chart\"></c-title>"), api_element("br", {
+  }, []), api_text("  detail='[\\{\"x\": 1,\"y\": 3,\"r\": 10\\}, \\{\"x\": 3,\"y\": 3,\"r\": 10\\}, \\{\"x\": 6,\"y\": 4,\"r\": 10\\}]'"), api_element("br", {
     key: 128
-  }, []), api_text("\u2003<c-legend position=\"bottom\"></c-legend>"), api_element("br", {
+  }, []), api_text("  backgroundcolor=\"rgba(255, 176, 59, 1)\"></c-data>"), api_element("br", {
     key: 129
+  }, []), api_text(" </c-dataset>"), api_element("br", {
+    key: 130
+  }, []), api_text(" <c-title text=\"Bubble Chart\"></c-title>"), api_element("br", {
+    key: 131
+  }, []), api_text(" <c-legend position=\"bottom\"></c-legend>"), api_element("br", {
+    key: 132
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 146
+    key: 133
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -15067,12 +15042,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "scatter",
       "responsive": "true"
     },
-    key: 136
+    key: 134
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]"
     },
-    key: 133
+    key: 135
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "My First dataset",
@@ -15081,43 +15056,43 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "bordercolor": "rgba(255, 176, 59, 1)",
       "fill": "false"
     },
-    key: 132
+    key: 136
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Scatter Chart"
     },
-    key: 134
+    key: 137
   }, []), api_custom_element("c-tooltip", _cTooltip, {
     props: {
       "position": "nearest",
       "mode": "index",
       "enabled": "true"
     },
-    key: 135
+    key: 138
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 145
-  }, [api_text("<c-chart slot=\"chartExample\" type=\"scatter\" responsive=\"true\">"), api_element("br", {
-    key: 137
-  }, []), api_text("\u2003<c-dataset labels='[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]'>"), api_element("br", {
-    key: 138
-  }, []), api_text("\u2003\u2003<c-data label=\"My First dataset\""), api_element("br", {
     key: 139
-  }, []), api_text("\u2003\u2003detail='[\\{\"x\":10,\"y\":5\\}, \\{\"x\":30,\"y\":10\\}, \\{\"x\":46,\"y\":12\\}, \\{\"x\":2,\"y\":20\\}, \\{\"x\":8,\"y\":15\\}, \\{\"x\":50,\"y\":10\\}, \\{\"x\":0,\"y\":25\\}]'"), api_element("br", {
+  }, [api_text("<c-chart slot=\"chartExample\" type=\"scatter\" responsive=\"true\">"), api_element("br", {
     key: 140
-  }, []), api_text("\u2003\u2003backgroundcolor=\"rgba(255, 176, 59, 1)\" bordercolor=\"rgba(255, 176, 59, 1)\" fill=\"false\"></c-data>"), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]'>"), api_element("br", {
     key: 141
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"My First dataset\""), api_element("br", {
     key: 142
-  }, []), api_text("\u2003<c-title text=\"Scatter Chart\"></c-title>"), api_element("br", {
+  }, []), api_text("  detail='[\\{\"x\":10,\"y\":5\\}, \\{\"x\":30,\"y\":10\\}, \\{\"x\":46,\"y\":12\\}, \\{\"x\":2,\"y\":20\\}, \\{\"x\":8,\"y\":15\\}, \\{\"x\":50,\"y\":10\\}, \\{\"x\":0,\"y\":25\\}]'"), api_element("br", {
     key: 143
-  }, []), api_text("\u2003<c-tooltip position=\"nearest\" mode=\"index\" enabled=\"true\"></c-tooltip>"), api_element("br", {
+  }, []), api_text("  backgroundcolor=\"rgba(255, 176, 59, 1)\" bordercolor=\"rgba(255, 176, 59, 1)\" fill=\"false\"></c-data>"), api_element("br", {
     key: 144
+  }, []), api_text(" </c-dataset>"), api_element("br", {
+    key: 145
+  }, []), api_text(" <c-title text=\"Scatter Chart\"></c-title>"), api_element("br", {
+    key: 146
+  }, []), api_text(" <c-tooltip position=\"nearest\" mode=\"index\" enabled=\"true\"></c-tooltip>"), api_element("br", {
+    key: 147
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 163
+    key: 148
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -15126,12 +15101,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "bar",
       "responsive": "true"
     },
-    key: 152
+    key: 149
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]"
     },
-    key: 149
+    key: 150
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "My First dataset",
@@ -15141,7 +15116,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "fill": "false",
       "order": "2"
     },
-    key: 147
+    key: 151
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "My Second dataset",
@@ -15152,45 +15127,45 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "order": "1",
       "type": "line"
     },
-    key: 148
+    key: 152
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Mix Chart"
     },
-    key: 150
+    key: 153
   }, []), api_custom_element("c-tooltip", _cTooltip, {
     props: {
       "position": "nearest",
       "mode": "index",
       "enabled": "true"
     },
-    key: 151
+    key: 154
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 162
-  }, [api_text("<c-chart type=\"bar\" responsive=\"true\">"), api_element("br", {
-    key: 153
-  }, []), api_text("\u2003<c-dataset labels='[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]'>"), api_element("br", {
-    key: 154
-  }, []), api_text("\u2003\u2003<c-data label=\"My First dataset\" detail=\"[10, 30, 46, 2, 8, 50, 0]\" backgroundcolor=\"rgba(82, 183, 216, 1)\""), api_element("br", {
     key: 155
-  }, []), api_text("\u2003\u2003bordercolor=\"rgba(82, 183, 216, 1)\" fill=\"false\" order=\"2\"></c-data>"), api_element("br", {
+  }, [api_text("<c-chart type=\"bar\" responsive=\"true\">"), api_element("br", {
     key: 156
-  }, []), api_text("\u2003\u2003<c-data label=\"My Second dataset\" detail=\"[7, 49, 46, 13, 25, 30, 22]\" backgroundcolor=\"rgba(255, 176, 59, 1)\""), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"]'>"), api_element("br", {
     key: 157
-  }, []), api_text("\u2003\u2003bordercolor=\"rgba(255, 176, 59, 1)\" fill=\"false\" order=\"1\" type=\"line\"></c-data>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"My First dataset\" detail=\"[10, 30, 46, 2, 8, 50, 0]\" backgroundcolor=\"rgba(82, 183, 216, 1)\""), api_element("br", {
     key: 158
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("  bordercolor=\"rgba(82, 183, 216, 1)\" fill=\"false\" order=\"2\"></c-data>"), api_element("br", {
     key: 159
-  }, []), api_text("\u2003<c-title text=\"Mix Chart\"></c-title>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"My Second dataset\" detail=\"[7, 49, 46, 13, 25, 30, 22]\" backgroundcolor=\"rgba(255, 176, 59, 1)\""), api_element("br", {
     key: 160
-  }, []), api_text("\u2003<c-tooltip position=\"nearest\" mode=\"index\" enabled=\"true\"></c-tooltip>"), api_element("br", {
+  }, []), api_text("  bordercolor=\"rgba(255, 176, 59, 1)\" fill=\"false\" order=\"1\" type=\"line\"></c-data>"), api_element("br", {
     key: 161
+  }, []), api_text(" </c-dataset>"), api_element("br", {
+    key: 162
+  }, []), api_text(" <c-title text=\"Mix Chart\"></c-title>"), api_element("br", {
+    key: 163
+  }, []), api_text(" <c-tooltip position=\"nearest\" mode=\"index\" enabled=\"true\"></c-tooltip>"), api_element("br", {
+    key: 164
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 179
+    key: 165
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -15198,12 +15173,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
     props: {
       "type": "radar"
     },
-    key: 168
+    key: 166
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"Eating\", \"Drinking\", \"Sleeping\", \"Designing\", \"Coding\", \"Cycling\", \"Running\"]"
     },
-    key: 166
+    key: 167
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "My First dataset",
@@ -15213,7 +15188,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "pointhoverbackgroundcolor": "#000",
       "pointhoverbordercolor": "#000"
     },
-    key: 164
+    key: 168
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "My Second dataset",
@@ -15221,38 +15196,38 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "backgroundcolor": "rgba(255, 176, 59, 0.2)",
       "bordercolor": "rgba(255, 176, 59, 1)"
     },
-    key: 165
+    key: 169
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Radar Chart"
     },
-    key: 167
+    key: 170
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 178
-  }, [api_text("<c-chart type=\"radar\">"), api_element("br", {
-    key: 169
-  }, []), api_text("\u2003<c-dataset labels='[\"Eating\", \"Drinking\", \"Sleeping\", \"Designing\", \"Coding\", \"Cycling\", \"Running\"]'>"), api_element("br", {
-    key: 170
-  }, []), api_text("\u2003\u2003<c-data label=\"My First dataset\" detail=\"[65, 59, 90, 81, 56, 55, 40]\""), api_element("br", {
     key: 171
-  }, []), api_text("\u2003\u2003backgroundcolor=\"rgba(82, 183, 216, 0.2)\" bordercolor=\"rgba(82, 183, 216, 1)\""), api_element("br", {
+  }, [api_text("<c-chart type=\"radar\">"), api_element("br", {
     key: 172
-  }, []), api_text("\u2003\u2003pointhoverbackgroundcolor=\"#000\" pointhoverbordercolor=\"#000\"></c-data>"), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"Eating\", \"Drinking\", \"Sleeping\", \"Designing\", \"Coding\", \"Cycling\", \"Running\"]'>"), api_element("br", {
     key: 173
-  }, []), api_text("\u2003\u2003<c-data label=\"My Second dataset\" detail=\"[28, 48, 40, 19, 96, 27, 100]\""), api_element("br", {
+  }, []), api_text("  <c-data label=\"My First dataset\" detail=\"[65, 59, 90, 81, 56, 55, 40]\""), api_element("br", {
     key: 174
-  }, []), api_text("\u2003\u2003backgroundcolor=\"rgba(255, 176, 59, 0.2)\" bordercolor=\"rgba(255, 176, 59, 1)\"></c-data>"), api_element("br", {
+  }, []), api_text("  backgroundcolor=\"rgba(82, 183, 216, 0.2)\" bordercolor=\"rgba(82, 183, 216, 1)\""), api_element("br", {
     key: 175
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("  pointhoverbackgroundcolor=\"#000\" pointhoverbordercolor=\"#000\"></c-data>"), api_element("br", {
     key: 176
-  }, []), api_text("\u2003<c-title text=\"Radar Chart\"></c-title>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"My Second dataset\" detail=\"[28, 48, 40, 19, 96, 27, 100]\""), api_element("br", {
     key: 177
+  }, []), api_text("  backgroundcolor=\"rgba(255, 176, 59, 0.2)\" bordercolor=\"rgba(255, 176, 59, 1)\"></c-data>"), api_element("br", {
+    key: 178
+  }, []), api_text(" </c-dataset>"), api_element("br", {
+    key: 179
+  }, []), api_text(" <c-title text=\"Radar Chart\"></c-title>"), api_element("br", {
+    key: 180
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 193
+    key: 181
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -15260,12 +15235,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
     props: {
       "type": "polarArea"
     },
-    key: 183
+    key: 182
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"Eating\", \"Drinking\", \"Sleeping\"]"
     },
-    key: 181
+    key: 183
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "My First dataset",
@@ -15273,36 +15248,36 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "backgroundcolor": "[\"rgba(119, 185, 242, .75)\", \"rgba(195, 152, 245, .75)\",\"rgba(78, 212, 205, .75)\"]",
       "bordercolor": "[\"rgba(119, 185, 242, 1)\", \"rgba(195, 152, 245, 1)\",\"rgba(78, 212, 205, 1)\"]"
     },
-    key: 180
+    key: 184
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Polar Area Chart"
     },
-    key: 182
+    key: 185
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 192
-  }, [api_text("<c-chart type=\"polarArea\">"), api_element("br", {
-    key: 184
-  }, []), api_text("\u2003<c-dataset labels='[\"Eating\", \"Drinking\", \"Sleeping\"]'>"), api_element("br", {
-    key: 185
-  }, []), api_text("\u2003\u2003<c-data label=\"My First dataset\" detail=\"[41, 38, 35]\""), api_element("br", {
     key: 186
-  }, []), api_text("\u2003\u2003backgroundcolor='[\"rgba(119, 185, 242, .75)\", \"rgba(195, 152, 245, .75)\",\"rgba(78, 212, 205, .75)\"]'"), api_element("br", {
+  }, [api_text("<c-chart type=\"polarArea\">"), api_element("br", {
     key: 187
-  }, []), api_text("\u2003\u2003bordercolor='[\"rgba(119, 185, 242, 1)\", \"rgba(195, 152, 245, 1)\",\"rgba(78, 212, 205, 1)\"]'>"), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"Eating\", \"Drinking\", \"Sleeping\"]'>"), api_element("br", {
     key: 188
-  }, []), api_text("\u2003\u2003</c-data>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"My First dataset\" detail=\"[41, 38, 35]\""), api_element("br", {
     key: 189
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("  backgroundcolor='[\"rgba(119, 185, 242, .75)\", \"rgba(195, 152, 245, .75)\",\"rgba(78, 212, 205, .75)\"]'"), api_element("br", {
     key: 190
-  }, []), api_text("\u2003<c-title text=\"Polar Area Chart\"></c-title>"), api_element("br", {
+  }, []), api_text("  bordercolor='[\"rgba(119, 185, 242, 1)\", \"rgba(195, 152, 245, 1)\",\"rgba(78, 212, 205, 1)\"]'>"), api_element("br", {
     key: 191
+  }, []), api_text("  </c-data>"), api_element("br", {
+    key: 192
+  }, []), api_text(" </c-dataset>"), api_element("br", {
+    key: 193
+  }, []), api_text(" <c-title text=\"Polar Area Chart\"></c-title>"), api_element("br", {
+    key: 194
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 214
+    key: 195
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -15311,24 +15286,24 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "bar",
       "responsive": "true"
     },
-    key: 199
+    key: 196
   }, [api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Category"
     },
-    key: 194
+    key: 197
   }, []), api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]"
     },
-    key: 196
+    key: 198
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "# of tomatoes",
       "detail": "[12, 19, 3, 5]",
       "backgroundcolor": "[\n            \"rgba(82, 183, 216, 1)\",\n            \"rgba(225, 96, 50, 1)\",\n            \"rgba(255, 176, 59, 1)\",\n            \"rgba(84, 167, 123, 1)\"\n          ]"
     },
-    key: 195
+    key: 199
   }, [])]), api_custom_element("c-cartesian-category-axis", _cCartesianCategoryAxis, {
     props: {
       "axis": "x",
@@ -15336,7 +15311,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "titleDisplay": "true",
       "titleLabelstring": "Category axis"
     },
-    key: 197
+    key: 200
   }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
     props: {
       "axis": "y",
@@ -15345,41 +15320,41 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "titleDisplay": "true",
       "titleLabelstring": "Linear axis"
     },
-    key: 198
+    key: 201
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 213
-  }, [api_text("<c-chart type=\"bar\" responsive=\"true\">"), api_element("br", {
-    key: 200
-  }, []), api_text("\u2003<c-title text=\"Category\"></c-title>"), api_element("br", {
-    key: 201
-  }, []), api_text("\u2003<c-dataset labels='[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]'>"), api_element("br", {
     key: 202
-  }, []), api_text("\u2003\u2003<c-data label=\"# of tomatoes\" detail=\"[12, 19, 3, 5]\" backgroundcolor='["), api_element("br", {
+  }, [api_text("<c-chart type=\"bar\" responsive=\"true\">"), api_element("br", {
     key: 203
-  }, []), api_text("\u2003\u2003\"rgba(82, 183, 216, 1)\","), api_element("br", {
+  }, []), api_text(" <c-title text=\"Category\"></c-title>"), api_element("br", {
     key: 204
-  }, []), api_text("\u2003\u2003\"rgba(225, 96, 50, 1)\","), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"OK\", \"WARNING\", \"CRITICAL\", \"UNKNOWN\"]'>"), api_element("br", {
     key: 205
-  }, []), api_text("\u2003\u2003\"rgba(255, 176, 59, 1)\","), api_element("br", {
+  }, []), api_text("  <c-data label=\"# of tomatoes\" detail=\"[12, 19, 3, 5]\" backgroundcolor='["), api_element("br", {
     key: 206
-  }, []), api_text("\u2003\u2003\"rgba(84, 167, 123, 1)\""), api_element("br", {
+  }, []), api_text("  \"rgba(82, 183, 216, 1)\","), api_element("br", {
     key: 207
-  }, []), api_text("\u2003\u2003]'></c-data>"), api_element("br", {
+  }, []), api_text("  \"rgba(225, 96, 50, 1)\","), api_element("br", {
     key: 208
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("  \"rgba(255, 176, 59, 1)\","), api_element("br", {
     key: 209
-  }, []), api_text("\u2003<c-cartesian-category-axis axis=\"x\" position=\"top\" title-display=\"true\" title-labelstring=\"Category axis\">"), api_element("br", {
+  }, []), api_text("  \"rgba(84, 167, 123, 1)\""), api_element("br", {
     key: 210
-  }, []), api_text("\u2003</c-cartesian-category-axis>"), api_element("br", {
+  }, []), api_text("  ]'></c-data>"), api_element("br", {
     key: 211
-  }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"y\" ticks-stepsize=\"15\" position=\"right\" title-display=\"true\" title-labelstring=\"Linear axis\"></c-cartesian-linear-axis>"), api_element("br", {
+  }, []), api_text(" </c-dataset>"), api_element("br", {
     key: 212
+  }, []), api_text(" <c-cartesian-category-axis axis=\"x\" position=\"top\" title-display=\"true\" title-labelstring=\"Category axis\">"), api_element("br", {
+    key: 213
+  }, []), api_text(" </c-cartesian-category-axis>"), api_element("br", {
+    key: 214
+  }, []), api_text(" <c-cartesian-linear-axis axis=\"y\" ticks-stepsize=\"15\" position=\"right\" title-display=\"true\" title-labelstring=\"Linear axis\"></c-cartesian-linear-axis>"), api_element("br", {
+    key: 215
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 233
+    key: 216
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -15388,7 +15363,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "bar",
       "responsive": "true"
     },
-    key: 222
+    key: 217
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"Item 1\", \"Item 2\", \"Item 3\", \"Item 4\", \"Item 5\", \"Item 6\", \"Item 7\"]"
@@ -15401,7 +15376,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "backgroundcolor": "rgba(50, 150, 237, 1)",
       "stack": "1"
     },
-    key: 215
+    key: 219
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "Warning",
@@ -15409,7 +15384,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "backgroundcolor": "rgba(119, 185, 242, 1)",
       "stack": "1"
     },
-    key: 216
+    key: 220
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "label": "Error",
@@ -15417,50 +15392,50 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "backgroundcolor": "rgba(157, 83, 242, 1)",
       "stack": "1"
     },
-    key: 217
+    key: 221
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Stacked Bar Chart"
     },
-    key: 219
+    key: 222
   }, []), api_custom_element("c-cartesian-axis", _cCartesianAxis, {
     props: {
       "axis": "x",
       "stacked": "true"
     },
-    key: 220
+    key: 223
   }, []), api_custom_element("c-cartesian-axis", _cCartesianAxis, {
     props: {
       "axis": "y",
       "stacked": "true"
     },
-    key: 221
+    key: 224
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 232
-  }, [api_text("<c-chart type=\"bar\" responsive=\"true\">"), api_element("br", {
-    key: 223
-  }, []), api_text("\u2003<c-dataset labels='[\"Item 1\",\"Item 2\",\"Item 3\",\"Item 4\", \"Item 5\",\"Item 6\",\"Item 7\"]'>"), api_element("br", {
-    key: 224
-  }, []), api_text("\u2003\u2003<c-data label=\"Neutral\" detail=\"[40, 47, 44, 38, 27, 31, 25]\" backgroundcolor='rgba(50, 150, 237, 1)' stack=\"1\"></c-data>"), api_element("br", {
     key: 225
-  }, []), api_text("\u2003\u2003<c-data label=\"Warning\" detail=\"[10, 12, 7, 5, 4, 6, 8]\" backgroundcolor='rgba(119, 185, 242, 1)' stack=\"1\"></c-data>"), api_element("br", {
+  }, [api_text("<c-chart type=\"bar\" responsive=\"true\">"), api_element("br", {
     key: 226
-  }, []), api_text("\u2003\u2003<c-data label=\"Error\" detail=\"[17, 11, 22, 18, 12, 7, 5]\" backgroundcolor='rgba(157, 83, 242, 1)' stack=\"1\"></c-data>"), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"Item 1\",\"Item 2\",\"Item 3\",\"Item 4\", \"Item 5\",\"Item 6\",\"Item 7\"]'>"), api_element("br", {
     key: 227
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"Neutral\" detail=\"[40, 47, 44, 38, 27, 31, 25]\" backgroundcolor='rgba(50, 150, 237, 1)' stack=\"1\"></c-data>"), api_element("br", {
     key: 228
-  }, []), api_text("\u2003<c-cartesian-axis axis=\"x\" stacked=\"true\" >"), api_element("br", {
+  }, []), api_text("  <c-data label=\"Warning\" detail=\"[10, 12, 7, 5, 4, 6, 8]\" backgroundcolor='rgba(119, 185, 242, 1)' stack=\"1\"></c-data>"), api_element("br", {
     key: 229
-  }, []), api_text("\u2003</c-cartesian-axis>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"Error\" detail=\"[17, 11, 22, 18, 12, 7, 5]\" backgroundcolor='rgba(157, 83, 242, 1)' stack=\"1\"></c-data>"), api_element("br", {
     key: 230
-  }, []), api_text("\u2003<c-cartesian-axis axis=\"y\" stacked=\"true\"></c-cartesian-axis>"), api_element("br", {
+  }, []), api_text(" </c-dataset>"), api_element("br", {
     key: 231
+  }, []), api_text(" <c-cartesian-axis axis=\"x\" stacked=\"true\" >"), api_element("br", {
+    key: 232
+  }, []), api_text(" </c-cartesian-axis>"), api_element("br", {
+    key: 233
+  }, []), api_text(" <c-cartesian-axis axis=\"y\" stacked=\"true\"></c-cartesian-axis>"), api_element("br", {
+    key: 234
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 250
+    key: 235
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -15469,12 +15444,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "horizontalBar",
       "responsive": "true"
     },
-    key: 240
+    key: 236
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"Group 1\", \"Group 2\", \"Group 3\", \"Group 4\", \"Group 5\", \"Group 6\"]"
     },
-    key: 235
+    key: 237
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "# of Items",
@@ -15483,53 +15458,53 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "bordercolor": "rgba(255, 176, 59, 1)",
       "borderwidth": "1"
     },
-    key: 234
+    key: 238
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Horizontal Chart"
     },
-    key: 236
+    key: 239
   }, []), api_custom_element("c-legend", _cLegend, {
     props: {
       "position": "bottom"
     },
-    key: 237
+    key: 240
   }, []), api_custom_element("c-cartesian-category-axis", _cCartesianCategoryAxis, {
     props: {
       "axis": "y",
       "position": "left"
     },
-    key: 238
+    key: 241
   }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
     props: {
       "axis": "x",
       "ticksBeginatzero": "true"
     },
-    key: 239
+    key: 242
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 249
-  }, [api_text("<c-chart type=\"horizontalBar\" responsive=\"true\">"), api_element("br", {
-    key: 241
-  }, []), api_text("\u2003<c-dataset labels='[\"Group 1\", \"Group 2\", \"Group 3\", \"Group 4\", \"Group 5\", \"Group 6\"]'>"), api_element("br", {
-    key: 242
-  }, []), api_text("\u2003\u2003<c-data label=\"# of Items\" detail=\"[12, 19, 7, 9, 5, 15]\" backgroundcolor=\"rgba(255, 176, 59, 1)\" bordercolor=\"rgba(255, 176, 59, 1)\" borderwidth=\"1\"></c-data>"), api_element("br", {
     key: 243
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, [api_text("<c-chart type=\"horizontalBar\" responsive=\"true\">"), api_element("br", {
     key: 244
-  }, []), api_text("\u2003<c-title text=\"Horizontal Chart\"></c-title>"), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"Group 1\", \"Group 2\", \"Group 3\", \"Group 4\", \"Group 5\", \"Group 6\"]'>"), api_element("br", {
     key: 245
-  }, []), api_text("\u2003<c-legend position=\"bottom\"></c-legend>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"# of Items\" detail=\"[12, 19, 7, 9, 5, 15]\" backgroundcolor=\"rgba(255, 176, 59, 1)\" bordercolor=\"rgba(255, 176, 59, 1)\" borderwidth=\"1\"></c-data>"), api_element("br", {
     key: 246
-  }, []), api_text("\u2003<c-cartesian-category-axis axis=\"y\" position=\"left\"></c-cartesian-category-axis>"), api_element("br", {
+  }, []), api_text(" </c-dataset>"), api_element("br", {
     key: 247
-  }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"x\" ticks-beginatzero=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+  }, []), api_text(" <c-title text=\"Horizontal Chart\"></c-title>"), api_element("br", {
     key: 248
+  }, []), api_text(" <c-legend position=\"bottom\"></c-legend>"), api_element("br", {
+    key: 249
+  }, []), api_text(" <c-cartesian-category-axis axis=\"y\" position=\"left\"></c-cartesian-category-axis>"), api_element("br", {
+    key: 250
+  }, []), api_text(" <c-cartesian-linear-axis axis=\"x\" ticks-beginatzero=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+    key: 251
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 268
+    key: 252
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -15538,9 +15513,9 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "line",
       "responsive": "true"
     },
-    key: 256
+    key: 253
   }, [api_custom_element("c-dataset", _cDataset, {
-    key: 252
+    key: 254
   }, [api_custom_element("c-data", _cData, {
     props: {
       "label": "Stock price",
@@ -15550,12 +15525,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "borderwidth": "1",
       "fill": "false"
     },
-    key: 251
+    key: 255
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Linear Time Chart"
     },
-    key: 253
+    key: 256
   }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
     props: {
       "axis": "y",
@@ -15563,7 +15538,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "display": "true",
       "ticksBeginatzero": "true"
     },
-    key: 254
+    key: 257
   }, []), api_custom_element("c-cartesian-time-axis", _cCartesianTimeAxis, {
     props: {
       "axis": "x",
@@ -15572,35 +15547,35 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "tickSource": "data",
       "bounds": "ticks"
     },
-    key: 255
+    key: 258
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 267
-  }, [api_text("<c-chart type=\"line\" responsive=\"true\">"), api_element("br", {
-    key: 257
-  }, []), api_text("\u2003<c-dataset>"), api_element("br", {
-    key: 258
-  }, []), api_text("\u2003\u2003<c-data label=\"Stock price\" bordercolor=\"rgba(119, 185, 242, 1)\" backgroundcolor=\"rgba(119, 185, 242, 1)\" borderwidth=\"1\" fill=\"false\""), api_element("br", {
     key: 259
-  }, []), api_text("\u2003\u2003\u2003detail='[\\{\"y\":30,\"x\":\"2020-08-20T00:00:00.000Z\"\\},\\{\"y\":25,\"x\":\"2020-08-21T00:00:00.000Z\"\\},\\{\"y\":50,\"x\":\"2020-08-23T00:00:00.000Z\"\\},\\{\"y\":70,\"x\":\"2020-08-29T00:00:00.000Z\"\\}]'>"), api_element("br", {
+  }, [api_text("<c-chart type=\"line\" responsive=\"true\">"), api_element("br", {
     key: 260
-  }, []), api_text("\u2003\u2003</c-data>"), api_element("br", {
+  }, []), api_text(" <c-dataset>"), api_element("br", {
     key: 261
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("  <c-data label=\"Stock price\" bordercolor=\"rgba(119, 185, 242, 1)\" backgroundcolor=\"rgba(119, 185, 242, 1)\" borderwidth=\"1\" fill=\"false\""), api_element("br", {
     key: 262
-  }, []), api_text("\u2003<c-title text=\"Linear Time Chart\"></c-title>"), api_element("br", {
+  }, []), api_text("   detail='[\\{\"y\":30,\"x\":\"2020-08-20T00:00:00.000Z\"\\},\\{\"y\":25,\"x\":\"2020-08-21T00:00:00.000Z\"\\},\\{\"y\":50,\"x\":\"2020-08-23T00:00:00.000Z\"\\},\\{\"y\":70,\"x\":\"2020-08-29T00:00:00.000Z\"\\}]'>"), api_element("br", {
     key: 263
-  }, []), api_text("\u2003<c-cartesian-linear-axis axis=\"y\" position=\"left\" display=\"true\" ticks-beginatzero=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+  }, []), api_text("  </c-data>"), api_element("br", {
     key: 264
-  }, []), api_text("\u2003<c-cartesian-time-axis axis=\"x\" time-unit=\"day\" display=\"true\" tick-source=\"data\" bounds=\"ticks\">"), api_element("br", {
+  }, []), api_text(" </c-dataset>"), api_element("br", {
     key: 265
-  }, []), api_text("\u2003</c-cartesian-time-axis>"), api_element("br", {
+  }, []), api_text(" <c-title text=\"Linear Time Chart\"></c-title>"), api_element("br", {
     key: 266
+  }, []), api_text(" <c-cartesian-linear-axis axis=\"y\" position=\"left\" display=\"true\" ticks-beginatzero=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+    key: 267
+  }, []), api_text(" <c-cartesian-time-axis axis=\"x\" time-unit=\"day\" display=\"true\" tick-source=\"data\" bounds=\"ticks\">"), api_element("br", {
+    key: 268
+  }, []), api_text(" </c-cartesian-time-axis>"), api_element("br", {
+    key: 269
   }, []), api_text("</c-chart>")])]), api_custom_element("c-sample-app-item", _cSampleAppItem, {
-    key: 291
+    key: 270
   }, [api_custom_element("c-chart", _cChart, {
     attrs: {
       "slot": "chartExample"
@@ -15609,12 +15584,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "type": "line",
       "responsive": "true"
     },
-    key: 276
+    key: 271
   }, [api_custom_element("c-dataset", _cDataset, {
     props: {
       "labels": "[\"A\", \"B\", \"C\", \"D\", \"E\"]"
     },
-    key: 271
+    key: 272
   }, [api_custom_element("c-data", _cData, {
     props: {
       "yaxisid": "left",
@@ -15624,7 +15599,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "detail": "[10, 9, 4, 3, 6]",
       "fill": "false"
     },
-    key: 269
+    key: 273
   }, []), api_custom_element("c-data", _cData, {
     props: {
       "yaxisid": "right",
@@ -15634,19 +15609,19 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "bordercolor": "rgba(84, 167, 123, 0.2)",
       "fill": "false"
     },
-    key: 270
+    key: 274
   }, [])]), api_custom_element("c-title", _cTitle, {
     props: {
       "text": "Multiple axes with different scales"
     },
-    key: 272
+    key: 275
   }, []), api_custom_element("c-cartesian-axis", _cCartesianAxis, {
     props: {
       "axis": "x",
       "position": "bottom",
       "type": "category"
     },
-    key: 273
+    key: 276
   }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
     props: {
       "axisid": "left",
@@ -15656,7 +15631,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "titleLabelstring": "Left axis",
       "titleDisplay": "true"
     },
-    key: 274
+    key: 277
   }, []), api_custom_element("c-cartesian-linear-axis", _cCartesianLinearAxis, {
     props: {
       "axisid": "right",
@@ -15666,44 +15641,44 @@ function tmpl($api, $cmp, $slotset, $ctx) {
       "titleLabelstring": "Right axis",
       "titleDisplay": "true"
     },
-    key: 275
+    key: 278
   }, [])]), api_element("code", {
     attrs: {
       "slot": "chartCode",
       "lang": "html"
     },
-    key: 290
-  }, [api_text("<c-chart type=\"line\" responsive=\"true\">"), api_element("br", {
-    key: 277
-  }, []), api_text("\u2003<c-dataset labels='[\"A\", \"B\", \"C\", \"D\", \"E\"]'>"), api_element("br", {
-    key: 278
-  }, []), api_text("\u2003\u2003<c-data yaxisid=\"left\" label=\"Left dataset\" detail=\"[10, 9, 4, 3, 6]\" backgroundcolor=\"rgba(82, 183, 216, 1)\""), api_element("br", {
     key: 279
-  }, []), api_text("\u2003\u2003\u2003bordercolor=\"rgba(82, 183, 216, 0.2)\" fill=\"false\"></c-data>"), api_element("br", {
+  }, [api_text("<c-chart type=\"line\" responsive=\"true\">"), api_element("br", {
     key: 280
-  }, []), api_text("\u2003\u2003<c-data yaxisid=\"right\" label=\"Right dataset\" detail=\"[3, 2, 1, 5, 0]\" backgroundcolor=\"rgba(84, 167, 123, 1)\""), api_element("br", {
+  }, []), api_text(" <c-dataset labels='[\"A\", \"B\", \"C\", \"D\", \"E\"]'>"), api_element("br", {
     key: 281
-  }, []), api_text("\u2003\u2003\u2003bordercolor=\"rgba(84, 167, 123, 0.2)\" fill=\"false\"></c-data>"), api_element("br", {
+  }, []), api_text("  <c-data yaxisid=\"left\" label=\"Left dataset\" detail=\"[10, 9, 4, 3, 6]\" backgroundcolor=\"rgba(82, 183, 216, 1)\""), api_element("br", {
     key: 282
-  }, []), api_text("\u2003</c-dataset>"), api_element("br", {
+  }, []), api_text("   bordercolor=\"rgba(82, 183, 216, 0.2)\" fill=\"false\"></c-data>"), api_element("br", {
     key: 283
-  }, []), api_text("\u2003<c-title text=\"Multiple axes with different scales\"></c-title>"), api_element("br", {
+  }, []), api_text("  <c-data yaxisid=\"right\" label=\"Right dataset\" detail=\"[3, 2, 1, 5, 0]\" backgroundcolor=\"rgba(84, 167, 123, 1)\""), api_element("br", {
     key: 284
-  }, []), api_text("\u2003<c-cartesian-axis axis=\"x\" position=\"bottom\" type=\"category\"></c-cartesian-axis>"), api_element("br", {
+  }, []), api_text("   bordercolor=\"rgba(84, 167, 123, 0.2)\" fill=\"false\"></c-data>"), api_element("br", {
     key: 285
-  }, []), api_text("\u2003<c-cartesian-linear-axis axisid=\"left\" axis=\"y\" position=\"left\" ticks-stepsize=\"3\" title-labelstring=\"Left axis\""), api_element("br", {
+  }, []), api_text(" </c-dataset>"), api_element("br", {
     key: 286
-  }, []), api_text("\u2003\u2003title-display=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+  }, []), api_text(" <c-title text=\"Multiple axes with different scales\"></c-title>"), api_element("br", {
     key: 287
-  }, []), api_text("\u2003<c-cartesian-linear-axis axisid=\"right\" axis=\"y\" position=\"right\" ticks-stepsize=\"1\" title-labelstring=\"Right axis\""), api_element("br", {
+  }, []), api_text(" <c-cartesian-axis axis=\"x\" position=\"bottom\" type=\"category\"></c-cartesian-axis>"), api_element("br", {
     key: 288
-  }, []), api_text("\u2003\u2003title-display=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+  }, []), api_text(" <c-cartesian-linear-axis axisid=\"left\" axis=\"y\" position=\"left\" ticks-stepsize=\"3\" title-labelstring=\"Left axis\""), api_element("br", {
     key: 289
+  }, []), api_text("  title-display=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+    key: 290
+  }, []), api_text(" <c-cartesian-linear-axis axisid=\"right\" axis=\"y\" position=\"right\" ticks-stepsize=\"1\" title-labelstring=\"Right axis\""), api_element("br", {
+    key: 291
+  }, []), api_text("  title-display=\"true\"></c-cartesian-linear-axis>"), api_element("br", {
+    key: 292
   }, []), api_text("</c-chart>")])])])];
 }
-
 var _tmpl = registerTemplate(tmpl);
 tmpl.stylesheets = [];
+
 
 if (_implicitStylesheets$2) {
   tmpl.stylesheets.push.apply(tmpl.stylesheets, _implicitStylesheets$2);
