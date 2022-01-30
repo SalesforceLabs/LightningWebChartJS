@@ -4,7 +4,7 @@
  *
  * @description Demo Chart Data Provider class. Used to get demo values for chart
  */
-public inherited sharing class DemoDataProvider extends ChartDataProvider {
+global inherited sharing class DemoDataProvider extends ChartDataProvider {
   /*******************************************************************************************************
    * @description Not used for this class
    * @param initParameter Object

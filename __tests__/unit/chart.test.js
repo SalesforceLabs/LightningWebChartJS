@@ -102,9 +102,8 @@ describe.each(CHARTS)('DOM Tests for individual charts', (chart) => {
       });
       element.appendChild(attribute);
 
-      const queriedElement = element.shadowRoot.querySelector(
-        attributeIdentifier
-      );
+      const queriedElement =
+        element.shadowRoot.querySelector(attributeIdentifier);
       expect(queriedElement).toBeDefined();
     });
   });
