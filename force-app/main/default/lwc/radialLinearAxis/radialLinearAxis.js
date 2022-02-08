@@ -275,7 +275,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.ticks.min;
   }
   set tickMin(v) {
-    this._payload.ticks.min = v;
+    this._payload.ticks.min = Number(v);
   }
 
   @api
@@ -283,7 +283,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.ticks.max;
   }
   set tickMax(v) {
-    this._payload.ticks.max = v;
+    this._payload.ticks.max = Number(v);
   }
 
   @api
@@ -299,7 +299,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.ticks.precision;
   }
   set tickPrecision(v) {
-    this._payload.ticks.precision = v;
+    this._payload.ticks.precision = Number(v);
   }
 
   @api
@@ -307,7 +307,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.ticks.stepSize;
   }
   set tickStepsize(v) {
-    this._payload.ticks.stepSize = v;
+    this._payload.ticks.stepSize = Number(v);
   }
 
   @api
@@ -315,7 +315,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.ticks.suggestedMax;
   }
   set tickSuggestedmax(v) {
-    this._payload.ticks.suggestedMax = v;
+    this._payload.ticks.suggestedMax = Number(v);
   }
 
   @api
@@ -323,7 +323,7 @@ export default class RadialLinearAxis extends RadialAxis {
     return this._payload.ticks.suggestedMin;
   }
   set tickSuggestedmin(v) {
-    this._payload.ticks.suggestedMin = v;
+    this._payload.ticks.suggestedMin = Number(v);
   }
 
   @api

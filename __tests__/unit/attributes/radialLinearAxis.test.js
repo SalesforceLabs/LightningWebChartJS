@@ -95,22 +95,22 @@ const TEST_DATA_PROPERTIES = [
   ChartOptionMock('tickBeginatzero', true, {
     ticks: { beginAtZero: true }
   }),
-  ChartOptionMock('tickMin', 'foo', { ticks: { min: 'foo' } }),
-  ChartOptionMock('tickMax', 'foo', { ticks: { max: 'foo' } }),
+  ChartOptionMock('tickMin', 1, { ticks: { min: 1 } }),
+  ChartOptionMock('tickMax', 1, { ticks: { max: 1 } }),
   ChartOptionMock('tickMaxtickslimit', 1, {
     ticks: { maxTicksLimit: 1 }
   }),
-  ChartOptionMock('tickPrecision', 'foo', {
-    ticks: { precision: 'foo' }
+  ChartOptionMock('tickPrecision', 1, {
+    ticks: { precision: 1 }
   }),
-  ChartOptionMock('tickStepsize', 'foo', {
-    ticks: { stepSize: 'foo' }
+  ChartOptionMock('tickStepsize', 1, {
+    ticks: { stepSize: 1 }
   }),
-  ChartOptionMock('tickSuggestedmax', 'foo', {
-    ticks: { suggestedMax: 'foo' }
+  ChartOptionMock('tickSuggestedmax', 1, {
+    ticks: { suggestedMax: 1 }
   }),
-  ChartOptionMock('tickSuggestedmin', 'foo', {
-    ticks: { suggestedMin: 'foo' }
+  ChartOptionMock('tickSuggestedmin', 1, {
+    ticks: { suggestedMin: 1 }
   }),
   ChartOptionMock('tickShowlabelbackdrop', true, {
     ticks: { showLabelBackdrop: true }
