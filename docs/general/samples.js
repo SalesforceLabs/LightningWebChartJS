@@ -12199,7 +12199,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set ticksMin(v) {
-    this._content.ticks.min = Number(v) || v;
+    this._content.ticks.min = Number(v);
   }
 
   get ticksMax() {
@@ -12207,7 +12207,7 @@ class CartesianAxis extends BaseAxis$1 {
   }
 
   set ticksMax(v) {
-    this._content.ticks.max = Number(v) || v;
+    this._content.ticks.max = Number(v);
   }
 
   get ticksSamplesize() {
