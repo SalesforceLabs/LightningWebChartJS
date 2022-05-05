@@ -8,11 +8,11 @@ const TEST_DATA_PROPERTIES = [
   }),
   ChartOptionMock('offset', true, { yAxes: [{ offset: true }] }),
   ChartOptionMock('axisid', 'foo', { yAxes: [{ id: 'foo' }] }),
-  ChartOptionMock('ticksMin', 'foo', {
-    yAxes: [{ ticks: { min: 'foo' } }]
+  ChartOptionMock('ticksMin', 1, {
+    yAxes: [{ ticks: { min: 1 } }]
   }),
-  ChartOptionMock('ticksMax', 'foo', {
-    yAxes: [{ ticks: { max: 'foo' } }]
+  ChartOptionMock('ticksMax', 1, {
+    yAxes: [{ ticks: { max: 1 } }]
   }),
   ChartOptionMock('ticksSamplesize', 1, {
     yAxes: [{ ticks: { sampleSize: 1 } }]
