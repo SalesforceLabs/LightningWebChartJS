@@ -69,7 +69,7 @@ export default class PointConfiguration extends BaseAttribute {
 
   constructor() {
     super();
-    this._payload.point = {};
+    this._payload.point = this._reactivityManager.getReactivityProxy();
     this._option = ATTRIBUTE_ELEMENTS;
   }
 }

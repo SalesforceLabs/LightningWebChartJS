@@ -40,7 +40,7 @@ export default class Layout extends BaseAttribute {
 
   constructor() {
     super();
-    this._payload.padding = {};
+    this._payload.padding = this._reactivityManager.getReactivityProxy();
     this._option = ATTRIBUTE_LAYOUT;
   }
 }

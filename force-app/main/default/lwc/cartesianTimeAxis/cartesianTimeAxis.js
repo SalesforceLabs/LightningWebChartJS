@@ -106,7 +106,7 @@ export default class CartesianTimeAxis extends CartesianAxis {
   constructor() {
     super();
     this._content.type = CARTESIAN_AXIS_TYPE_TIME;
-    this._content.adapters = {};
-    this._content.time = {};
+    this._content.adapters = this._reactivityManager.getReactivityProxy();
+    this._content.time = this._reactivityManager.getReactivityProxy();
   }
 }

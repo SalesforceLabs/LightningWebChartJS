@@ -423,6 +423,6 @@ export default class Tooltip extends BaseAttribute {
   constructor() {
     super();
     this._option = ATTRIBUTE_TOOLTIPS;
-    this._payload.callbacks = {};
+    this._payload.callbacks = this._reactivityManager.getReactivityProxy();
   }
 }

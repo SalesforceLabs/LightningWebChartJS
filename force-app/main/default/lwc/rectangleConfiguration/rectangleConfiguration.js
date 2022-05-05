@@ -37,7 +37,7 @@ export default class RectangleConfiguration extends BaseAttribute {
 
   constructor() {
     super();
-    this._payload.rectangle = {};
+    this._payload.rectangle = this._reactivityManager.getReactivityProxy();
     this._option = ATTRIBUTE_ELEMENTS;
   }
 }

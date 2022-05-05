@@ -160,7 +160,7 @@ export default class Legend extends BaseAttribute {
   constructor() {
     super();
     this._payload.display = true;
-    this._payload.labels = {};
+    this._payload.labels = this._reactivityManager.getReactivityProxy();
     this._option = ATTRIBUTE_LEGEND;
   }
 }

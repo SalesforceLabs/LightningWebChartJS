@@ -45,7 +45,7 @@ export default class ArcConfiguration extends BaseAttribute {
 
   constructor() {
     super();
-    this._payload.arc = {};
+    this._payload.arc = this._reactivityManager.getReactivityProxy();
     this._option = ATTRIBUTE_ELEMENTS;
   }
 }

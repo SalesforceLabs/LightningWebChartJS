@@ -111,7 +111,7 @@ export default class LineConfiguration extends BaseAttribute {
 
   constructor() {
     super();
-    this._payload.line = {};
+    this._payload.line = this._reactivityManager.getReactivityProxy();
     this._option = ATTRIBUTE_ELEMENTS;
   }
 }
