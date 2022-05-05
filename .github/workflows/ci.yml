@@ -2,16 +2,26 @@
 name: CI
 
 on:
-  pull_request_target:
+  pull_request:
     branches: [master]
 
 jobs:
+  commit-lint:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout and lint commits
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v4
+        continue-on-error: true
+
   code-formatting-and-linting:
     runs-on: ubuntu-latest
     steps:
       # Checkout the code in the pull request
       - name: 'Checkout source code'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - uses: actions/cache@v2
         with:
@@ -46,6 +56,7 @@ jobs:
 
   scratch-org-test:
     runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
     needs: code-formatting-and-linting
     steps:
       # Install Salesforce CLI
@@ -58,7 +69,7 @@ jobs:
 
       # Checkout the code in the pull request
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Store secret for dev hub
       - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
