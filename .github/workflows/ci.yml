@@ -2,10 +2,20 @@
 name: CI
 
 on:
-  pull_request_target:
+  pull_request:
     branches: [master]
 
 jobs:
+  commit-lint:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout and lint commits
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v4
+        continue-on-error: true
+
   code-formatting-and-linting:
     runs-on: ubuntu-latest
     steps:
@@ -46,6 +56,7 @@ jobs:
 
   scratch-org-test:
     runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
     needs: code-formatting-and-linting
     steps:
       # Install Salesforce CLI

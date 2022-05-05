@@ -6,15 +6,6 @@ on:
     types: [edited, opened, reopened, synchronize]
 
 jobs:
-  commit-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: wagoid/commitlint-github-action@v4
-        continue-on-error: true
-
   pr-lint:
     runs-on: ubuntu-latest
     steps:
