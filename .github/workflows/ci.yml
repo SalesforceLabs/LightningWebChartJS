@@ -2,7 +2,7 @@
 name: CI
 
 on:
-  pull_request:
+  pull_request_target:
     branches: [master]
 
 jobs:
@@ -12,6 +12,8 @@ jobs:
       # Checkout the code in the pull request
       - name: 'Checkout source code'
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - uses: actions/cache@v2
         with:
@@ -59,6 +61,8 @@ jobs:
       # Checkout the code in the pull request
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       # Store secret for dev hub
       - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
