@@ -11769,7 +11769,7 @@ class Legend extends BaseAttribute$1 {
   constructor() {
     super();
     this._payload.display = true;
-    this._payload.labels = {};
+    this._payload.labels = this._reactivityManager.getReactivityProxy();
     this._option = ATTRIBUTE_LEGEND;
   }
 
@@ -12480,9 +12480,9 @@ class CartesianAxis extends BaseAxis$1 {
     this._payload[this._axis] = [{}];
     this._content = this._payload[this._axis][0];
     this._content.uuid = nanoid(10);
-    this._content.gridLines = {};
-    this._content.scaleLabel = {};
-    this._content.ticks = {};
+    this._content.gridLines = this._reactivityManager.getReactivityProxy();
+    this._content.scaleLabel = this._reactivityManager.getReactivityProxy();
+    this._content.ticks = this._reactivityManager.getReactivityProxy();
     this._option = ATTRIBUTE_CARTESIAN_AXES;
   }
 
@@ -13885,7 +13885,7 @@ class Tooltip extends BaseAttribute$1 {
   constructor() {
     super();
     this._option = ATTRIBUTE_TOOLTIPS;
-    this._payload.callbacks = {};
+    this._payload.callbacks = this._reactivityManager.getReactivityProxy();
   }
 
 }
@@ -14162,7 +14162,7 @@ class LineConfiguration extends BaseAttribute$1 {
 
   constructor() {
     super();
-    this._payload.line = {};
+    this._payload.line = this._reactivityManager.getReactivityProxy();
     this._option = ATTRIBUTE_ELEMENTS;
   }
 
@@ -14342,7 +14342,7 @@ class ArcConfiguration extends BaseAttribute$1 {
 
   constructor() {
     super();
-    this._payload.arc = {};
+    this._payload.arc = this._reactivityManager.getReactivityProxy();
     this._option = ATTRIBUTE_ELEMENTS;
   }
 
@@ -14473,8 +14473,8 @@ class CartesianTimeAxis extends _cCartesianAxis {
     super();
     this._timeMinunit = void 0;
     this._content.type = CARTESIAN_AXIS_TYPE_TIME;
-    this._content.adapters = {};
-    this._content.time = {};
+    this._content.adapters = this._reactivityManager.getReactivityProxy();
+    this._content.time = this._reactivityManager.getReactivityProxy();
   }
 
 }
