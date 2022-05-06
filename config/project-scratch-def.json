@@ -4,8 +4,8 @@
   "language": "en_US",
   "features": ["Communities"],
   "settings": {
-    "orgPreferenceSettings": {
-      "networksEnabled": true
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
     }
   }
 }
