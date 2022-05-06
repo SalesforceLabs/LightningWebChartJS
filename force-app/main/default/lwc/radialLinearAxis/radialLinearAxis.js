@@ -336,9 +336,9 @@ export default class RadialLinearAxis extends RadialAxis {
 
   constructor() {
     super();
-    this._payload.angleLines = {};
-    this._payload.gridLines = {};
-    this._payload.pointLabels = {};
-    this._payload.ticks = {};
+    this._payload.angleLines = this._reactivityManager.getReactivityProxy();
+    this._payload.gridLines = this._reactivityManager.getReactivityProxy();
+    this._payload.pointLabels = this._reactivityManager.getReactivityProxy();
+    this._payload.ticks = this._reactivityManager.getReactivityProxy();
   }
 }

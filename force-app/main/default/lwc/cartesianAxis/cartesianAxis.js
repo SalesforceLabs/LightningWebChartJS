@@ -363,9 +363,9 @@ export default class CartesianAxis extends BaseAxis {
     this._payload[this._axis] = [{}];
     this._content = this._payload[this._axis][0];
     this._content.uuid = nanoid(10);
-    this._content.gridLines = {};
-    this._content.scaleLabel = {};
-    this._content.ticks = {};
+    this._content.gridLines = this._reactivityManager.getReactivityProxy();
+    this._content.scaleLabel = this._reactivityManager.getReactivityProxy();
+    this._content.ticks = this._reactivityManager.getReactivityProxy();
     this._option = ATTRIBUTE_CARTESIAN_AXES;
   }
 }
