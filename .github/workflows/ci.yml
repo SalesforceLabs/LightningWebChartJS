@@ -48,11 +48,11 @@ jobs:
 
       # Install PMD
       - name: Install PMD
-        run: wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.22.0/pmd-bin-6.22.0.zip && unzip pmd-bin-6.22.0.zip
+        run: wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.45.0/pmd-bin-6.45.0.zip && unzip pmd-bin-6.45.0.zip
 
       # Execute PMD
       - name: Execute PMD
-        run: pmd-bin-6.22.0/bin/run.sh pmd -minimumpriority 2 -d force-app -R apex-ruleset.xml -f text -l apex
+        run: pmd-bin-6.45.0/bin/run.sh pmd --minimum-priority 2 -d force-app -R apex-ruleset.xml -f text -l apex
 
   scratch-org-test:
     runs-on: ubuntu-latest
