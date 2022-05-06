@@ -15,6 +15,7 @@ describe('c-sample-app-item', () => {
     return Promise.resolve()
       .then(() => {
         const buttons = [
+          // eslint-disable-next-line @locker/locker/distorted-element-shadow-root-getter
           ...element.shadowRoot.querySelectorAll(
             'button.slds-button.slds-button_neutral'
           )
@@ -25,6 +26,7 @@ describe('c-sample-app-item', () => {
       .then(() => {
         // Verify that property is correctly incremented.
         expect(
+          // eslint-disable-next-line @locker/locker/distorted-element-shadow-root-getter
           element.shadowRoot.querySelector('c-sample-app-item')
         ).not.toBeNull();
       });
