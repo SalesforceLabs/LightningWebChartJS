@@ -58,3 +58,8 @@ export default class MyComponent extends LightningElement {
     }
 }
 ```
+
+## Does LWCC work with Lightning Web Security (LWS)?
+The LWCC components are compliant with the LWS specifications. We've included a ESLint validation to ensure that no errors are returned.
+However, as the LWCC solution relies on the Chart.js library, there might be some cases where LWS blocks Chart.js.
+Unfortunately, there's nothing we can do at the moment to make the external library compliant with LWS.
