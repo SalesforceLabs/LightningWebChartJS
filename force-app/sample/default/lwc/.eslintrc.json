@@ -1,3 +1,7 @@
 {
-  "extends": ["@salesforce/eslint-config-lwc/recommended"]
+  "extends": [
+    "eslint:recommended",
+    "@salesforce/eslint-config-lwc/recommended",
+    "@locker/eslint-config-locker/recommended"
+  ]
 }

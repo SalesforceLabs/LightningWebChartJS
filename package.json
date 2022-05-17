@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "npm run lint:lwc && npm run lint:apex",
     "lint:lwc": "eslint force-app/main/default/lwc && eslint force-app/sample/default/lwc",
-    "lint:apex": "pmd pmd -minimumpriority 2 -d force-app -R apex-ruleset.xml -f text -l apex",
+    "lint:apex": "pmd pmd --minimum-priority 2 -d force-app -R apex-ruleset.xml -f text -l apex",
     "test": "npm run test:unit && npm run test:apex",
     "test:clear:cache": "sfdx-lwc-jest -- --clearCache",
     "test:coverage": "npm run test:unit:coverage && npm run test:apex:coverage",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-angular": "^12.1.1",
+    "@locker/eslint-config-locker": "^0.16.9",
     "@lwc/engine": "^1.17.5",
     "@lwc/rollup-plugin": "^1.17.5",
     "@lwc/synthetic-shadow": "^1.17.5",
@@ -39,7 +40,7 @@
     "@salesforce/eslint-config-lwc": "^0.11.0",
     "@salesforce/sfdx-lwc-jest": "^1.1.0",
     "conventional-github-releaser": "^3.1.5",
-    "eslint": "^7.22.0",
+    "eslint": "^7.32.0",
     "husky": "^5.2.0",
     "jest-canvas-mock": "^2.3.1",
     "lint-staged": "^10.5.4",

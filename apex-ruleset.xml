@@ -257,20 +257,20 @@
 
     <!-- Performance -->
     <rule
-    ref="category/apex/performance.xml/AvoidDmlStatementsInLoops"
-    message="Avoid DML Statements inside loops"
+    ref="category/apex/performance.xml/AvoidDebugStatements"
+    message="Avoid debug statements"
   >
         <priority>1</priority>
     </rule>
     <rule
-    ref="category/apex/performance.xml/AvoidSoqlInLoops"
-    message="Avoid Soql queries inside loops"
+    ref="category/apex/performance.xml/EagerlyLoadedDescribeSObjectResult"
+    message="DescribeSObjectResult could have been loaded eagerly via SObjectType.getDescribe()"
   >
-        <priority>1</priority>
+        <priority>4</priority>
     </rule>
     <rule
-    ref="category/apex/performance.xml/AvoidSoslInLoops"
-    message="Avoid Sosl queries inside loops"
+    ref="category/apex/performance.xml/OperationWithLimitsInLoop"
+    message="Avoid operations with limits inside loops"
   >
         <priority>1</priority>
     </rule>

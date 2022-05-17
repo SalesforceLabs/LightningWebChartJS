@@ -94,3 +94,6 @@ _site/
 
 # direnv
 .envrc
+
+# SFDX Local Development Server
+.localdevserver/

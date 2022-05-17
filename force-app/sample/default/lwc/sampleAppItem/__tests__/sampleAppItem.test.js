@@ -9,6 +9,7 @@ describe('c-sample-app-item', () => {
     });
     document.body.appendChild(element);
 
+    // eslint-disable-next-line @locker/locker/distorted-element-shadow-root-getter
     const openModal = element.shadowRoot.querySelector(
       'p.slds-card__footer-action.slds-text-link'
     );
@@ -19,8 +20,10 @@ describe('c-sample-app-item', () => {
     return Promise.resolve()
       .then(() => {
         // Verify that property is correctly incremented.
+        // eslint-disable-next-line @locker/locker/distorted-element-shadow-root-getter
         expect(element.shadowRoot.querySelector('section')).not.toBeNull();
 
+        // eslint-disable-next-line @locker/locker/distorted-element-shadow-root-getter
         const closeModal = element.shadowRoot.querySelector(
           'button.slds-button.slds-button_neutral'
         );
@@ -28,6 +31,7 @@ describe('c-sample-app-item', () => {
       })
       .then(() => {
         // Verify that property is correctly incremented.
+        // eslint-disable-next-line @locker/locker/distorted-element-shadow-root-getter
         expect(element.shadowRoot.querySelector('section')).toBeNull();
       });
   });
