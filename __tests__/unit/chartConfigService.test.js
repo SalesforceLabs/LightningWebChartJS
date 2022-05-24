@@ -2,10 +2,17 @@ import ChartConfigService from 'c/chartConfigService';
 import { ATTRIBUTE_CARTESIAN_AXES } from 'c/constants';
 
 describe('c-chart-config-service', () => {
+  test(`Get new instance of default configuration`, () => {
+    const firstInstance = ChartConfigService.defaultConfiguration();
+    const secondInstance = ChartConfigService.defaultConfiguration();
+
+    expect(firstInstance).toStrictEqual(secondInstance); // Objects should have the same type and structure
+    expect(firstInstance).not.toBe(secondInstance); // Objects should not be a shallow copy but a new instance
+  });
   test(`Default configuration`, () => {
     const chartConfigService = new ChartConfigService();
     expect(chartConfigService.getConfig()).toEqual(
-      ChartConfigService.DEFAULT_CONFIGURATION
+      ChartConfigService.defaultConfiguration()
     );
   });
   test(`Update config with null option`, () => {
@@ -74,7 +81,7 @@ describe('c-chart-config-service', () => {
     chartConfigService.updateConfig(testSubject, ATTRIBUTE_CARTESIAN_AXES);
     chartConfigService.removeConfig(testSubject, ATTRIBUTE_CARTESIAN_AXES);
     expect(chartConfigService.getConfig()).toEqual(
-      ChartConfigService.DEFAULT_CONFIGURATION
+      ChartConfigService.defaultConfiguration()
     );
   });
   test(`Remove configuration`, () => {
@@ -83,14 +90,14 @@ describe('c-chart-config-service', () => {
     chartConfigService.updateConfig(testSubject, 'test');
     chartConfigService.removeConfig(testSubject, 'test');
     expect(chartConfigService.getConfig()).toEqual(
-      ChartConfigService.DEFAULT_CONFIGURATION
+      ChartConfigService.defaultConfiguration()
     );
   });
 
   test(`Clean basic object`, () => {
     expect(
-      ChartConfigService.cleanObject(ChartConfigService.DEFAULT_CONFIGURATION)
-    ).toEqual(ChartConfigService.DEFAULT_CONFIGURATION);
+      ChartConfigService.cleanObject(ChartConfigService.defaultConfiguration())
+    ).toEqual(ChartConfigService.defaultConfiguration());
   });
   test(`Clean object with array`, () => {
     const testSubject = { array: [10, 20, 30] };

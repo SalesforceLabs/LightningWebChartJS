@@ -1,14 +1,16 @@
 import { ATTRIBUTE_CARTESIAN_AXES } from 'c/constants';
 
 export default class ChartConfigService {
-  static DEFAULT_CONFIGURATION = {
-    legend: {
-      display: false
-    }
-  };
+  static defaultConfiguration() {
+    return {
+      legend: {
+        display: false
+      }
+    };
+  }
 
   constructor() {
-    this._config = { ...ChartConfigService.DEFAULT_CONFIGURATION }; // clone default configuration
+    this._config = ChartConfigService.defaultConfiguration(); // clone default configuration
     this._scales = {
       xAxes: {},
       yAxes: {}
