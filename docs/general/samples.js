@@ -12703,8 +12703,16 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 class ChartConfigService {
+  static defaultConfiguration() {
+    return {
+      legend: {
+        display: false
+      }
+    };
+  }
+
   constructor() {
-    this._config = _objectSpread({}, ChartConfigService.DEFAULT_CONFIGURATION);
+    this._config = ChartConfigService.defaultConfiguration();
     this._scales = {
       xAxes: {},
       yAxes: {}
@@ -12784,11 +12792,6 @@ class ChartConfigService {
 
 }
 
-ChartConfigService.DEFAULT_CONFIGURATION = {
-  legend: {
-    display: false
-  }
-};
 var ChartConfigService$1 = registerComponent(ChartConfigService, {
   tmpl: _tmpl$4
 });
